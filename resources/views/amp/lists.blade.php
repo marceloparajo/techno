@@ -34,24 +34,38 @@
     </head>
 
     <body>
-        <amp-analytics type="googleanalytics">
-            <script type="application/json">
-                {
-                    "vars": {
-                        "account": "{{ $analytics_data['client'] }}"
-                    },
-                    "triggers": {
-                        "trackPageviewWithCustomUrl": {
-                              "on": "visible",
-                              "request": "pageview",
-                              "vars": {
-                                "documentLocation": "{{ $analytics_data['url'] }}"
-                              }
+        @if (env('ANALYTICS_SHOW', false))
+            <amp-analytics type="googleanalytics">
+                <script type="application/json">
+                    {
+                        "vars": {
+                            "account": "{{ $analytics_data['client'] }}"
+                        },
+                        "triggers": {
+                            "trackPageviewWithCustomUrl": {
+                                  "on": "visible",
+                                  "request": "pageview",
+                                  "vars": {
+                                    "documentLocation": "{{ $analytics_data['url'] }}"
+                                  }
+                            }
                         }
                     }
-                }
-            </script>
-        </amp-analytics>
+                </script>
+            </amp-analytics>
+        @endif
+
+        @if (env('NAVEGG_ENABLE', false))
+            <amp-analytics type="navegg" id="navegg56362">
+                <script type="application/json">
+                    {
+                        "vars": {
+                            "account": "56362"
+                        }
+                    }
+                </script>
+            </amp-analytics>
+        @endif
 
         @include('amp.partials.main-header')
 

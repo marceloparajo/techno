@@ -12,7 +12,10 @@ namespace App\Http\Controllers;
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Routing\Route;
+use Illuminate\View\View;
 
 class AuthorsController extends Controller
 {
@@ -39,16 +42,15 @@ class AuthorsController extends Controller
 
     /**
      * @param Route $route
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @return Factory|View
+     * @throws FileNotFoundException
      */
     public function show(Route $route, BloquesHelper $bloquesHelper)
     {
         $username = $route->parameter('username');
         $payload = $this->apiHelper->getPostsFromAuthor($username);
 
-        //dd($payload);
-        if (is_null($payload->DATA))
+        if (is_null($payload->DATA) || count($payload->DATA) <= 0)
             abort(404);
 
         $author = $payload->DATA['author'];

@@ -141,21 +141,11 @@ class NewsController extends Controller
         $cursor_pos = 0;
 
         // Busco <p> que sean hijos de ROOT (para agregar contenido dinámico luego)
-        $paragraphs = $this->_getParagraphs($body);
+        $paragraphs = $this->_getParagraphs($body, 0, 2);
 
         if (count($paragraphs) >= 2) {
 
             $relacionadas = $noticia['relacionadas'];
-
-            // Primera relacionada
-            if (count($relacionadas) > 0) {
-                $item = $relacionadas[0];
-                $pos = $this->_getLastPosOfParagraph($body, $paragraphs[0]);
-                $view = ViewFacade::make('news.show.partials.noticia-relacionada', ['image' => $item['image']['srcs']['thumb'], 'title' => $item['title'], 'url' => $item['permalink'], 'type' => $type]);
-                $html = $view->render();
-                $body = substr_replace($body, $html, $pos, 0);
-                $cursor_pos = $pos + strlen($html);
-            }
 
             // Inline (ads)
             $paragraphs = $this->_getParagraphs($body, $cursor_pos);
@@ -212,6 +202,7 @@ class NewsController extends Controller
     /**
      * @param String $body
      * @param Int $from
+     * @param Int $jump
      * @return array
      */
     protected function _getParagraphs(String $body, Int $from = 0, Int $jump = 0)

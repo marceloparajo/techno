@@ -3,11 +3,11 @@
 
 
 <div class="row m-0">
-	<div class="col-12 pf-header-top pr-1 pl-1 pr-lg-3 pl-lg-3">
+	<div class="col-12 pf-header-top pr-1 pl-1 pr-lg-3 pl-lg-3 bg-white">
 		<div class="d-flex justify-content-end justify-content-sm-between m-0">
-			<div class="time-top d-none d-sm-flex">{{strftime("%A, %B %e, %Y") }}</div>
+			<div class="time-top d-none d-sm-flex px-lg-0">{{strftime("%A, %B %e, %Y") }}</div>
 			<div class="text-right">
-				<a href="https://www.perfil.com" target="_blank"><img src="{{ asset('img/logo_perfil_light.png') }}" alt="Perfil" ></a>
+				<a href="https://www.perfil.com" target="_blank"><img src="{{ asset('img/logo_perfil.svg') }}" alt="Perfil" ></a>
 			</div>
 		</div>
 	</div>
@@ -17,7 +17,7 @@
 
 <div class="container-fluid m-0 py-0 bat-header sticky-top shadow-sm">
 	<div class="container px-0 d-flex flex-column flex-xl-row py-0 elheader">
-		<nav class="navbar navbar-expand-xl navbar-light bg-white w-100 justify-content-start justify-content-xl-between mainnavbar" id="header-navbar">
+		<nav class="navbar navbar-expand-xl navbar-light bg-white w-100 justify-content-start justify-content-xl-between mainnavbar py-lg-1" id="header-navbar">
 
 
 
@@ -98,10 +98,10 @@
 
 
 			<div class="social-header text-right d-none d-lg-flex justify-content-end pt-1">
-				<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" class="d-block link-social-facebook ml-4 bg-transparent text-white p-1"><i class="fab fa-facebook-f"></i></a>
-				<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" class="d-block link-social-instagram ml-4 bg-transparent text-white p-1"><i class="d-block fab fa-instagram"></i></a>
-				<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" class="d-block link-social-twitter ml-4 bg-transparent text-white p-1"><i class="fab fa-twitter"></i></a>
-				<a href="{{ route('feeds.lastposts') }}" target="_blank" class="d-block link-social-rss ml-4 bg-transparent text-white p-1"><i class="fa fa-rss"></i></a>
+				<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" class="d-block link-social-facebook ml-4 bg-transparent text-white px-1"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" class="d-block link-social-instagram ml-4 bg-transparent text-white px-1-1"><i class="d-block fab fa-instagram"></i></a>
+				<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" class="d-block link-social-twitter ml-4 bg-transparent text-white px-1"><i class="fab fa-twitter"></i></a>
+				<a href="{{ route('feeds.lastposts') }}" target="_blank" class="d-block link-social-rss ml-4 bg-transparent text-white px-1"><i class="fa fa-rss"></i></a>
 			</div>
 
 		</div>

@@ -60,30 +60,22 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 @section('body')
 	<div class="container-fluid">
+		<div class="container d-flex position-relative p-0">
 
+			<!-- banners skycraper -->
+			<div class="ad-160x600-left position-relative">
+				<div id="" style="top:5em;margin-bottom:1em;" class="ads-space sticky-top" data-id="sticky_160x600x-pos-" data-w="160" data-h="600" data-loaded="false" data-reload="true"></div>
+			</div>
+			<div class="ad-160x600-right position-relative">
+				<div id="" style="top:5em;margin-bottom:1em;" class="ads-space sticky-top float-right text-right" data-id="sticky_160x600x-pos-" data-w="160" data-h="600" data-loaded="false" data-reload="true"></div>
+			</div>
+			<!-- //banners-skycrapper -->
 
-	<div class="container d-flex position-relative p-0">
+			<div class="container col-article p-0">
+				<div class="row m-0">
+					<div class="noticia-cuerpo p-1 pt-2 pt-lg-3 pr-lg-4">
+						<div class="d-flex flex-column-reverse flex-md-column">
 
-
-		<!-- banners skycraper -->
-
-
-		<div class="ad-160x600-left position-relative">
-			<div id="" style="top:5em;margin-bottom:1em;" class="ads-space sticky-top" data-id="sticky_160x600x-pos-" data-w="160" data-h="600" data-loaded="false" data-reload="true"></div>
-		</div>
-		<div class="ad-160x600-right position-relative">
-			<div id="" style="top:5em;margin-bottom:1em;" class="ads-space sticky-top float-right text-right" data-id="sticky_160x600x-pos-" data-w="160" data-h="600" data-loaded="false" data-reload="true"></div>
-		</div>
-		<!-- //banners-skycrapper -->
-
-
-
-		<div class="container col-article p-0">
-			<div class="row m-0">
-				<div class="noticia-cuerpo p-1 pt-2 pt-lg-3 pr-lg-4">
-					<div class="d-flex flex-column-reverse flex-md-column">
-
-						<div>
 							{{-- Fecha y Canal --}}
 							<div class="mt-md-3 px-md-3">
 								<h3 class="text-center text-secondary pb-1">{{ strtoupper($noticia['channel']['name']) }}  | <span>{{ $noticia['date_available_human'] }}</span></h3>
@@ -104,127 +96,103 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 								{{-- Author --}}
 								@if ($noticia['signed'])
 									@php
-										$displayAuthor =  ($noticia['signed'])? "block":'none';
+										$displayAuthor =  ($noticia['signed']) ? "block":'none';
 									@endphp
-									
 								@endif
+
 								@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 								@include('news.show.partials.social-top')
 							</div>
-						</div>
 
-						<div>
-						{{-- Imagenes --}}
 							@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])
 						</div>
 
-					</div>
-
-
 						{{-- Cuerpo --}}
 						<div class="new-body mt-3">
+							<div class="position-absolute botones-redes">
+								<div class="boton-redes-sociales position-sticky">
+									<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+										<i class="fas fa-share-alt"></i>
+									</a>
 
-
-
-
-<div class="position-absolute botones-redes">
-	<div class="boton-redes-sociales position-sticky">
-		<div>
-		  <a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-		  	<i class="fas fa-share-alt"></i>
-		  </a>
-		</div>
-		<div class="collapse" id="collapseExample">
-			<ul>
-				<li><a href="http://pinterest.com/pin/create/button/?url={{ $noticia['permalink'] }}&media={{ $noticia['main_image']['src'] }}&description={{ urlencode($noticia['title']) }}" class="pinterest" target="_blank"><i class="fab fa-pinterest"></i></a></li>
-				<li><a href="whatsapp://send?text={{ urlencode($noticia['title']) . ' ' . $noticia['permalink'] }}" data-action="share/whatsapp/share" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-				<li> <a class="twitter" href="https://twitter.com/intent/tweet?text={{ urlencode($noticia['title']) }}&url={{ $noticia['permalink'] }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
-				<li><a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ $noticia['permalink'] }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-			</ul>
-
-		</div>
-	</div>
-</div>
-
-
+									<div class="collapse" id="collapseExample">
+										<ul>
+											<li><a href="http://pinterest.com/pin/create/button/?url={{ $noticia['permalink'] }}&media={{ $noticia['main_image']['src'] }}&description={{ urlencode($noticia['title']) }}" class="pinterest" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+											<li><a href="whatsapp://send?text={{ urlencode($noticia['title']) . ' ' . $noticia['permalink'] }}" data-action="share/whatsapp/share" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+											<li> <a class="twitter" href="https://twitter.com/intent/tweet?text={{ urlencode($noticia['title']) }}&url={{ $noticia['permalink'] }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+											<li><a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ $noticia['permalink'] }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
 
 							<div class="col-12 px-1" id="news-body" style="overflow-x: hidden;">
-
-
-						<div class="col-12 p-0 text-center mt-2">
-							<div id="" class="ads-space text-center d-none d-lg-block d-xl-none" data-id="468x60x-pos-" data-w="468" data-h="60" data-loaded="false" data-reload="false"></div>
-							<div id="" class="ads-space text-center d-none d-xl-block" data-id="728x90x-pos-" data-w="728" data-h="90" data-loaded="false" data-reload="false"></div>
-						</div>
-
-
-
+								<div class="col-12 p-0 text-center mt-2">
+									<div id="" class="ads-space text-center d-none d-lg-block d-xl-none" data-id="468x60x-pos-" data-w="468" data-h="60" data-loaded="false" data-reload="false"></div>
+									<div id="" class="ads-space text-center d-none d-xl-block" data-id="728x90x-pos-" data-w="728" data-h="90" data-loaded="false" data-reload="false"></div>
+								</div>
 
 								{!! $body !!}
 
-							{{-- Credit --}}
-							@if (! $noticia['signed'] && $noticia['credit'] != '')
-								<p>{{ __('by') }} {{ $noticia['credit'] }}</p>
-							@endif
+								{{-- Credit --}}
+								@if (! $noticia['signed'] && $noticia['credit'] != '')
+									<p>{{ __('by') }} {{ $noticia['credit'] }}</p>
+								@endif
 
-							{{-- Embed Code --}}
-							@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code'))
-							{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
-							@endif
+								{{-- Embed Code --}}
+								@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code'))
+									{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
+								@endif
 
 								{{-- Gallery --}}
-								@if (count($noticia['gallery']) > 0)
-								<div class="col-12 border p-3">
-									<h3>{{ __('Image Gallery') }}</h3>
-									<div id="gallery-thumbnails" class="bottom-gallery">
-										@foreach ($noticia['gallery'] as $image)
-											<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
-												<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}">
-											</a>
-										@endforeach
+								@if (count($noticia['gallery']) > 1)
+									<div class="col-12 border p-3">
+										<h3>{{ __('Image Gallery') }}</h3>
+										<div id="gallery-thumbnails" class="bottom-gallery">
+											@foreach ($noticia['gallery'] as $image)
+												<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
+													<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}">
+												</a>
+											@endforeach
+										</div>
 									</div>
-								</div>
-							@endif
+								@endif
 
-							{{-- @include('news.show.partials.social-bottom') --}}
+								@include('partials.teads')
 
-							@include('partials.teads')
+								<div id="" class="ads-space" data-id="interscroller" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>
 
-							<div id="" class="ads-space" data-id="interscroller" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>
-
-
-							{{-- Tags --}}
-							@include('news.show.partials.news-tags')
-
+								@include('news.show.partials.news-tags')
+							</div>
 						</div>
-					</div>
 
-					@if ($noticia['signed'])
-						@include('news.show.partials.author-bottom', ['author' => $noticia['author']])
-					@endif
+						@if ($noticia['signed'])
+							@include('news.show.partials.author-bottom', ['author' => $noticia['author']])
+						@endif
 
-					{{-- Noticias sugeridas de otros sitios/revistas --}}
-                    @include('news.show.partials.suggested-site-news')
+						{{-- Noticias sugeridas de otros sitios/revistas --}}
+						@include('news.show.partials.suggested-site-news')
 
-                    {{-- Más Noticias (para los crawlers) --}}
-                    @include('news.show.partials.more-news-crawlers')
+						{{-- Más Noticias (para los crawlers) --}}
+						@include('news.show.partials.more-news-crawlers')
 
-
-					<div class="col-12 p-0 d-lg-none text-center mt-2">
-						<div id="" class="ads-space text-center d-lg-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false"></div>
-					</div>
-					<div class="comments">
-						<div class="col-12">
-							<h4>{{ __('comments') }}</h4>
-							<div class="fb-comments" data-href="{{ $noticia['permalink'] }}" data-numposts="10" data-width="100%"></div>
+						<div class="col-12 p-0 d-lg-none text-center mt-2">
+							<div id="" class="ads-space text-center d-lg-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false"></div>
 						</div>
-					</div>
-					<div class="col-12 p-0 d-lg-none text-center mt-2">
-						<div id="" class="ads-space text-center d-lg-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false">
+						<div class="comments">
+							<div class="col-12">
+								<h4>{{ __('comments') }}</h4>
+								<div class="fb-comments" data-href="{{ $noticia['permalink'] }}" data-numposts="10" data-width="100%"></div>
+							</div>
 						</div>
+						<div class="col-12 p-0 d-lg-none text-center mt-2">
+							<div id="" class="ads-space text-center d-lg-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false">
+							</div>
+						</div>
+
+						@include('partials.outbrain-news')
+
 					</div>
-					{{-- @include('partials.taboola-news') --}}
-					@include('partials.outbrain-news')
-				</div>
 
 					{{-- Sidebar --}}
 					<div class="d-flex pf-sidebar">
@@ -232,37 +200,13 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 					</div>
 				</div>
 			</div>
-
 		</div>
-
-	</div><!-- container-fluid -->
+	</div>
 
 	@if (env('APP_MODE_PREVIEW', false))
 		<a href="http://cmspress.perfil.com/admin/galerias/editar/{{ $noticia['id'] }}" target="_blank" class="float-button">
 			<i class="fa fa-edit"></i>
 		</a>
 	@endif
-@endsection
 
-@section('templates')
-
-	<script type="text/template" id="tpl-relacionadas" data-showme="@if (count($noticia['relacionadas']) > 0) true @else false @endif">
-		<div class="row noticias-relacionadas">
-			<div class="col-12 top">
-			  <h6>{{ __('related news') }}</h6>
-			</div>
-			<div class="col-12 news">
-
-				@foreach (array_slice($noticia['relacionadas'], 0, 4) as $article)
-					<div class="{{ $noticia['relacionadasGroupClass'] }}">
-						<a href="{{ $article['permalink'] }}" title="Ver {{ $article['title'] }}">
-							<!-- <img data-src="{{ $article['image']['srcs']['small'] }}" class="img-fluid lazyload" alt="{{ $article['title'] }}"> -->
-							{!! $imageHelper->getLazyImages( $article['image']['srcs']['small'], 540, $article['image']['caption'],'img-fluid', '540x304') !!}
-						</a>
-						<h2><a href="{{ $article['permalink'] }}">{{ $article['title'] }}</a></h2>
-					</div>
-				@endforeach
-			</div>
-		</div>
-	</script>
 @endsection

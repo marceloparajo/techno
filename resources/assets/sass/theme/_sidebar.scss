@@ -41,7 +41,7 @@
 .most-viewed,
 .most-viewed-alter {
 	.card-body {
-		padding: 10px!important;
+		padding: 0!important;
 		.title {					
 			font-size: 1.1rem;
 			font-weight: bold;
@@ -50,7 +50,7 @@
 			text-transform: uppercase;
 			padding: 5px 10px;
 			font-family:$font-destacada;
-			background: $miscelanea;
+			background: $negro;
 			.in-other-lang {
 				font-weight: normal;
 				font-size: 0.8em;
@@ -61,7 +61,7 @@
 			}
 			a {
 				background:none;
-				color: #fff;
+				color: white;				
 			}
 		}
 		ul {
@@ -69,45 +69,85 @@
 			padding: 0;
 			li {
 				list-style: none;
-				border-bottom: 1px solid #e1e1e1;
-				padding: 7px 0;
+				padding: 0;
+				border-top: 1px solid #ccc;
+				height: 80px;
+				transition: ease 0.3s;
 				a {
+					display: block;
+					position: relative;
+					width: 100%;
+					overflow: hidden;
+					height: 80px;
 					figure {
-						width: 37%;
+						width: 90%;
 						display: inline-block;
 						vertical-align: top;
 						margin: 0;
+						height: 80px;
+						overflow: hidden;
+						position: absolute;
+						left: -90%;
+						transition: ease 0.3s;
 						img { 
-							width:100%
+							width:100%;
 						}
 					}
 					.position {
-						vertical-align: top;
+						position: absolute;
+						z-index: 9;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						width: 10%;
 						color: white;
-						display: inline-flex;
-						vertical-align: top;
 						font-size: 24px;
 						font-family: $font-general;
-						padding: 1% 2% 13%;
-						background: rgba(0,118,186,1);
-						background: -moz-linear-gradient(top, rgba(0,118,186,1) 0%, rgba(0,118,186,1) 31%, rgba(255,255,255,1) 100%);
-						background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,118,186,1)), color-stop(31%, rgba(255,238,46,1)), color-stop(100%, rgba(255,255,255,1)));
-						background: -webkit-linear-gradient(top, rgba(0,118,186,1) 0%, rgba(0,118,186,1) 31%, rgba(255,255,255,1) 100%);
-						background: -o-linear-gradient(top, rgba(0,118,186,1) 0%, rgba(0,118,186,1) 31%, rgba(255,255,255,1) 100%);
-						background: -ms-linear-gradient(top, rgba(0,118,186,1) 0%, rgba(0,118,186,1) 31%, rgba(255,255,255,1) 100%);
-						background: linear-gradient(to bottom, rgba(0,118,186,1) 0%, rgba(0,118,186,1) 31%, rgba(255,255,255,1) 100%);
-						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$miscelanea', endColorstr='#ffffff', GradientType=0 );
+						text-align: center;
+						background: white;
+						transition: ease 0.3s;
+						span {
+							display: block;
+							width: 100%;
+							position: absolute;
+							top: 0;
+							bottom: 0;
+						}
 					}
 					h5{
-						margin: 0 3%;
-						font-weight: 400;
-						font-size: 17px;
-						line-height: 20px;
+						margin: 0;
+						font-weight: 600;
+						font-size: 16px;
+						line-height: 18px;
 						display: inline-block;
-						width: 45%;
+						width: 85%;
 						font-family: $font-general;
+						position: absolute;
+						top: 10px;
+						left: 13%;
+						bottom: 0;
+						transition: ease 0.3s;
+						color: $negro;
 					}
 				}
+				&:hover {
+					background: #ccc;
+					a {
+						.position {
+							left: 90%
+						}
+						figure {
+							left: 0;
+							img {
+								filter: brightness(100%);
+							}
+						}
+						h5 {
+							left: 100%;
+						}
+					}
+				}
+				/*
 				&:first-child { 
 					a {
 						display: flex;
@@ -123,9 +163,13 @@
 							line-height: 1.2em;
 							margin: 0 1% 0 0;
 							font-weight: 400;
-						}					
+						}
+						figure {
+							height: auto;
+						}			
 					}
 				}
+				*/
 			}
 		}
 
@@ -133,9 +177,70 @@
 			text-decoration: none;
 		}
 	}
+	@include media-breakpoint-down(md) {
+		.card-body {
+			ul {
+				li {
+					a {
+						figure {
+							width: 30%;
+							height: 80px;
+							left: 10%;
+							right: auto;
+							img {
+								height: 80px;
+								width: auto;
+								max-width: none!important;
+								margin-left: 50%;
+								transform: translateX(-50%);
+							}
+						}
+						h5 {
+							width: 55%;
+							left: 45%;
+						}				
+					}
+					&:hover {
+						background: #fff;
+						a {
+							.position {
+								left: 0;
+							}
+							figure {
+								left: 10%;
+							}
+							h5 {
+								left: 45%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
 	@include media-breakpoint-down(sm) {
 		.card-body {
 			padding: 0!important;
+			ul {
+				li {
+					a {
+						.position {
+							width: 7%;
+						}
+						figure {
+							left: 7%;
+						}
+						h5 {
+							width: 58%;
+							left: 38%;
+							top: 5px;
+							font-weight: 400;
+							font-size: 15px;
+							line-height: 17px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -146,16 +251,16 @@
 			.title {
 				background-image: url('img/logo_perfil.svg');
 				background-repeat: no-repeat;
-				background-position: 0 0;
-				background-size: 50%;
+				background-position: 10px 10px;
+				background-size: 154px 35px;
 				background-color: #fff;
 				width: 100%;
-				height: 40px;
+				height: 50px;
 				position: relative;
 				a {
 					display: block;
 					width: 100%;
-					height: 40px;
+					height: 50px;
 					text-indent: -9999px;
 				}
 				&:after {

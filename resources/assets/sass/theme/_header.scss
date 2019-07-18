@@ -32,11 +32,11 @@
 
 
 .pf-header-top {
-	background-color: #333;
-	color: $pf_font_color_inverse;
+	color: $pf_font_color_headline;
 	padding: 2px 5px;
+	border-bottom: 1px solid #f1f3f5;
 	img {
-		width: 90px;
+		width: 80px;
 		height: auto;
 	}
 	a {
@@ -44,7 +44,7 @@
 	}
 	.time-top {    
 		padding: 3px 20px;
-		color: #fff;
+		color: $pf_font_color_headline;
 		font-size: 11px;
 	}
 }
@@ -408,5 +408,5 @@ ul.canales {
 	padding-bottom: 0;
 }
 .menudetemas {
-	background: $hover;
+	background: #000;
 }

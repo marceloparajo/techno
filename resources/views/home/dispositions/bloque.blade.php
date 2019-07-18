@@ -1,9 +1,9 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 0)
 
-<section class="container-fluid bloque-de-notas mb-4">
+<section class="container-fluid bloque-de-notas mb-4 mt-lg-2">
 
-	<div class="container d-flex p-0 bg-white flex-column">
+	<div class="container d-flex p-0 bg-white flex-column pt-lg-3">
 
 		<div class="row mx-0" >
 
@@ -18,10 +18,10 @@
 							@if ($new['hat'] != '')
 								<h3>{{ $new['hat'] }}</h3>
 							@else
-								<h3 class="text-secondary">{{ strtoupper($new['channel']['name']) }} <span>{{ $new['date_available_human']}}</span></h3>
+								<h3>{{ strtoupper($new['channel']['name']) }} </h3>
 							@endif
 							<h2 class="mb-2 px-2 px-lg-0">{{ $new['home_title'] }}</h2>
-							<h4><span>{{ $new['date_available_human']}}</span> {{ $new['headline'] }}</h4>
+							<h4>{{ $new['headline'] }}</h4>
 							@if ($new['signed'])
 								<h5 class="firma-home px-2 px-lg-0">{{ __('by') }} {{ $new['author']['fullname'] }}</h5>
 							@endif
@@ -40,7 +40,7 @@
 								@if ($new['hat'] != '')
 									<h3>{{ $new['hat'] }}</h3>
 								@else
-									<h3 class="text-secondary">{{ strtoupper($new['channel']['name']) }} <span>{{ $new['date_available_human']}}</span></h3>
+									<h3>{{ strtoupper($new['channel']['name']) }}</h3>
 								@endif
 							</figure>
 
@@ -48,10 +48,10 @@
 								@if ($new['hat'] != '')
 									<h3>{{ $new['hat'] }}</h3>
 								@else
-									<h3 class="text-secondary">{{ strtoupper($new['channel']['name']) }} <span>{{ $new['date_available_human']}}</span></h3>
+									<h3>{{ strtoupper($new['channel']['name']) }}</h3>
 								@endif
 								<h2 class="mb-2">{{ $new['home_title'] }}</h2>
-								<h4><span>{{ $new['date_available_human']}}</span> {{ $new['headline'] }}</h4>
+								<h4>{{ $new['headline'] }}</h4>
 								@if ($new['signed'])
 									<h5 class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</h5>
 								@endif
@@ -81,14 +81,14 @@
 					<a href="{{ $new['permalink'] }}">
 						<figure>
 							{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
-							<h4><span>{{ $new['date_available_human']}}</span> {{ $new['headline'] }}</h4>
+							<h4>{{ $new['headline'] }}</h4>
 						</figure>
 
 						<div class="meta-content px-2 px-sm-0">
 							@if ($new['hat'] != '')
 								<h3>{{ $new['hat'] }}</h3>
 							@else
-								<h3 class="text-secondary">{{ strtoupper($new['channel']['name']) }} <span>{{ $new['date_available_human']}}</span></h3>
+								<h3>{{ strtoupper($new['channel']['name']) }} </h3>
 							@endif
 							<h2 class="mb-2">{{ $new['home_title'] }}</h2>
 							@if ($new['signed'])
