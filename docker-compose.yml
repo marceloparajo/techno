@@ -1,0 +1,34 @@
+version: '3'
+services:
+
+  #PHP
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        uid: ${UID}
+    image: batimes-site-app
+    container_name: batimes-site
+    environment:
+      APACHE_RUN_USER: #${UID}
+      APACHE_RUN_GROUP: #${UID}
+      VIRTUAL_HOST: dev-batimes.perfil.com
+    restart: unless-stopped
+    expose:
+      - "80"
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - webapps-network
+
+#Network
+networks:
+  webapps-network:
+    external:
+      name: webapps-network
+
+#Volumes
+volumes:
+  dbdata:
+    driver: local

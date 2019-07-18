@@ -1,0 +1,253 @@
+.pf-channel-show {
+	.col-ads-left, .col-ads-right {
+		flex: 0 0 10%;
+		min-width: 160px;
+		padding: 0;
+		z-index: 1;
+	}
+	.col-articles {
+		flex: 0 0 80%;
+
+		@include media-breakpoint-down(xl) {
+			flex: 0 0 86%;
+		}
+
+		@include media-breakpoint-down(lg) {
+			flex: inherit;
+		}
+	}
+
+	.pf-title-container {
+		background-color: $miscelanea;
+		border-bottom: 3px solid $negro;
+		.pf-title {
+			padding-top: 20px;
+			h1 {
+				color: white;
+				font-size: 1.5rem;
+				font-weight: 400;
+				margin: 0;
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+				@include media-breakpoint-down(xs) {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.contiene-nota {
+		.nota-article {
+			width: 100%;
+			a {
+				figure {
+					width: 100%;
+					height: auto;
+					overflow: hidden;
+					margin: 0;
+					img {
+						display: block;
+						width: 100%;
+						height: auto;
+					}
+				}
+				.data-nota {
+					h3.hat {
+						font:{
+							family: $font-general;
+							size: 14px;
+							weight: 700;
+						}
+						text-transform: uppercase;
+						background: $miscelanea;
+						color: white;
+						display: inline-block;
+						padding: 5px;
+					}
+					h2 {
+						font: {
+							family: $font-destacada;
+							weight: 700;
+							size: 1.5em;
+						}
+						letter-spacing: -.02em;
+						color: $negro;
+					}
+					h4 {
+						font: {
+							family: $font-general;
+							weight: 400;
+							size: 1em;
+						}
+						color: $negro;
+						.date-time {
+							color: $secondary;
+						}
+						&.author {
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+			@include media-breakpoint-down(sm) {
+				a {
+					.data-nota {
+						h4 {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		&.standard-nota {
+			.nota-article {
+				a {
+					.data-nota {
+						transform: translateY(-26px);
+					}
+				}
+			}
+		}
+		&.biggest-nota {
+			.nota-article {
+				a {
+					.data-nota {
+						transform: translateY(-26px);
+					}
+				}
+			}
+			@include media-breakpoint-up(xl) {
+				.nota-article {
+					position: relative;
+					a {
+						.data-nota {
+							position: absolute;
+							bottom: 10px;
+							left: 20px;
+							right: 20px;
+							transform: translateY(-1px);
+							h2 {
+								padding: 20px 10px 10px 10px;
+								background: white;
+								margin: 0;
+							}
+							h4 {
+								padding:0 10px 10px 10px;
+								background: white;
+								margin: 0;
+							}
+							h3 {
+								transform: translateY(20px);
+								margin-left: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.biggest-standard-nota {
+			.nota-article {
+				position: relative;
+				a {
+					.data-nota {
+						position: absolute;
+						bottom: 10px;
+						left: 20px;
+						right: 20px;
+						transform: translateY(-1px);
+						h2 {
+							padding: 20px 10px 10px 10px;
+							background: white;
+							margin: 0;
+						}
+						h4 {
+							padding: 10px;
+							background: white;
+							margin: 0;
+						}
+						h3 {
+							transform: translateY(20px);
+							margin-left: 10px;
+						}
+					}
+				}
+				@include media-breakpoint-up(xl) {
+					a {
+						.data-nota {
+							position: static;
+							transform: translateY(-26px);
+							h3 {
+								margin-left: 0;
+								transform: translateY(0);
+							}
+							h2 {
+								background: transparent;
+								padding: 0 0 10px 0;
+							}
+							h4 {
+								background: transparent;
+								padding: 0 0 10px 0;
+							}
+						}
+					}
+				}
+				@include media-breakpoint-down(sm) {
+					a {
+						.data-nota {
+							position: static;
+							transform: translateY(-26px);
+							h3 {
+								margin-left: 0;
+								transform: translateY(0);
+							}
+							h2 {
+								background: transparent;
+								padding: 0;
+							}
+							h4 {
+								background: transparent;
+								padding: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// ***** Responsive *****
+
+@include media-breakpoint-down(xs) {
+	.pf-hat {
+		left: 0;
+	}
+
+	.pf-hat::before {
+		display: none;
+	}
+}
+
+.ads-space-channel {
+	background-image: linear-gradient(135deg, #fafafa 25%, #eee 25%, #eee 50%, #fafafa 50%, #fafafa 75%, #eee 75%, #eee 100%);
+	background-size: 14.66px 13.67px;
+	&:before {
+		content: "Espacio de publicidad";
+		text-transform: uppercase;
+		padding: 5px 0;
+		margin: 0 0 5px 0;
+		text-align: center;
+		background: #eee;
+		color: #ccc;
+		font-size: 12px;
+		font-family: $font-general;
+		display: block;
+		clear: both;
+	}
+	&:after {
+		content: "";
+		display: block;
+		height: 10px;
+		clear:both;
+	}
+}

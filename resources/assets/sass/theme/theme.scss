@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Source+Sans+Pro:400,400i,700,700i');
+@import '../../fonts/fontawesome/scss/fontawesome';
+@import '../../fonts/fontawesome/scss/regular';
+@import '../../fonts/fontawesome/scss/brands';
+@import '../../fonts/fontawesome/scss/solid';
+@import "general";
+@import "header";
+@import "footer";
+@import "sidebar";
+@import "home/_destacada";
+@import "home/_especial";
+@import "home/_cobertura";
+@import "home/_bloque";
+@import "home/_catastrofe";
+@import "home/_columnistas";
+@import "news/show";
+@import "news/redes-sociales-articulo";
+@import "news/_mas-en-perfil";
+@import "channels/show";
+@import "social";
+@import "social-sharing";
+
+@import "tests";

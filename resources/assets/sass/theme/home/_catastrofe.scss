@@ -1,0 +1,70 @@
+.catastrofe {
+	background: $negro;
+	padding: 15px 0 5px 0;
+	margin-bottom: 20px;
+	article {
+		position: relative;
+		margin-bottom: 10px;
+		a {
+			figure {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			.meta-contenido {
+				text-align: center;
+				h3 {
+					font:{
+						family: $font-general;
+						size: 14px;
+						weight: normal;
+					}
+					background: $miscelanea;
+					color: white;
+					margin-top: 0;
+					display: inline-block;
+					text-transform: uppercase;
+					padding: 5px 10px;
+				}
+				h2 {
+					font:{
+						family: $font-destacada;
+						size: 1.5em;
+						weight: 700;
+					}
+					color: white;
+					margin-bottom:0;
+					padding:0 10px 20px 10px;
+				}
+				h4 {
+					display: none;
+				}
+				@include media-breakpoint-up(md) {
+					h2 {
+						font-size: 2em;
+					}
+				}
+				@include media-breakpoint-up(lg) {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background: white;
+					h2 {
+						font-size: 3em;
+						transform: translateY(-20px);
+						color: $negro;
+						padding: 0;
+					}
+					h3 {
+						transform: translateY(-20px);
+					}
+				}
+			}
+		}
+	}
+}

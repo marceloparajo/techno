@@ -1,0 +1,204 @@
+.pf-sidebar {
+	width: 100%;
+	flex-direction: column;
+	@include media-breakpoint-up(lg) {
+		flex: 0 0 320px;
+		padding: 30px 0;
+	}
+	@include media-breakpoint-up(xl) {
+		flex: 0 0 340px;
+		padding: 0 20px;
+	}
+.card { width: 100%}
+	.minuto-de-noticias {
+		.card-body {
+			 padding: 1rem;
+			 background: $dark;
+			.hat {
+				 font-size: 1.1rem;
+					font-weight: bold;
+					color: white;
+					border-left:4px solid $secondary;
+					text-transform: uppercase;
+					padding: 5px 10px;
+					font-family:$font-destacada;
+					background: $dark;
+					display: block;
+			}
+			.article-content {
+				padding: 10px;
+				h2 {
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+.most-viewed,
+.most-viewed-alter {
+	.card-body {
+		padding: 10px!important;
+		.title {					
+			font-size: 1.1rem;
+			font-weight: bold;
+			color: white;
+			border-left: $miscelanea-light;
+			text-transform: uppercase;
+			padding: 5px 10px;
+			font-family:$font-destacada;
+			background: $miscelanea;
+			.in-other-lang {
+				font-weight: normal;
+				font-size: 0.8em;
+				float: right;
+				@include media-breakpoint-only(md) {
+					display: none;
+				}
+			}
+			a {
+				background:none;
+				color: #fff;
+			}
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				list-style: none;
+				border-bottom: 1px solid #e1e1e1;
+				padding: 7px 0;
+				a {
+					figure {
+						width: 37%;
+						display: inline-block;
+						vertical-align: top;
+						margin: 0;
+						img { 
+							width:100%
+						}
+					}
+					.position {
+						vertical-align: top;
+						color: white;
+						display: inline-flex;
+						vertical-align: top;
+						font-size: 24px;
+						font-family: $font-general;
+						padding: 1% 2% 13%;
+						background: rgba(0,118,186,1);
+						background: -moz-linear-gradient(top, rgba(0,118,186,1) 0%, rgba(0,118,186,1) 31%, rgba(255,255,255,1) 100%);
+						background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,118,186,1)), color-stop(31%, rgba(255,238,46,1)), color-stop(100%, rgba(255,255,255,1)));
+						background: -webkit-linear-gradient(top, rgba(0,118,186,1) 0%, rgba(0,118,186,1) 31%, rgba(255,255,255,1) 100%);
+						background: -o-linear-gradient(top, rgba(0,118,186,1) 0%, rgba(0,118,186,1) 31%, rgba(255,255,255,1) 100%);
+						background: -ms-linear-gradient(top, rgba(0,118,186,1) 0%, rgba(0,118,186,1) 31%, rgba(255,255,255,1) 100%);
+						background: linear-gradient(to bottom, rgba(0,118,186,1) 0%, rgba(0,118,186,1) 31%, rgba(255,255,255,1) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$miscelanea', endColorstr='#ffffff', GradientType=0 );
+					}
+					h5{
+						margin: 0 3%;
+						font-weight: 400;
+						font-size: 17px;
+						line-height: 20px;
+						display: inline-block;
+						width: 45%;
+						font-family: $font-general;
+					}
+				}
+				&:first-child { 
+					a {
+						display: flex;
+						justify-content: space-between;
+						figure { 
+							flex: 0 0 90%;
+							margin-bottom: 0px;
+						}
+						h5 {
+							width: 100%;
+							padding: 2% 0;
+							font-size: 1.4em;
+							line-height: 1.2em;
+							margin: 0 1% 0 0;
+							font-weight: 400;
+						}					
+					}
+				}
+			}
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		.card-body {
+			padding: 0!important;
+		}
+	}
+}
+
+.perfilcom {
+	.most-viewed-alter {
+		.card-body {
+			.title {
+				background-image: url('img/logo_perfil.svg');
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				background-size: 50%;
+				background-color: #fff;
+				width: 100%;
+				height: 40px;
+				position: relative;
+				a {
+					display: block;
+					width: 100%;
+					height: 40px;
+					text-indent: -9999px;
+				}
+				&:after {
+					content: "in spanish";
+					position: absolute;
+					right: 10px;
+					top: 10px;
+					display: block;
+					color: #ccc;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+
+ @include media-breakpoint-up(xl) {
+	.pf-sidebar {
+		padding: 1rem;
+	}
+}
+
+/*Tasboola Sidebar*/
+
+.trc_rbox { background: #fff;}
+.thumbnails-rr { padding: 3%;}
+.trc_rbox_outer { margin-top: 15px; }
+.trc_rbox_header_span {
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: white;
+	border-left:4px solid $dark;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	font-family:$font-destacada;
+	background: $miscelanea;
+	display: block;
+}
+.article.card {
+	padding: 0;
+	.card-body {
+		padding: 0;
+	}
+}

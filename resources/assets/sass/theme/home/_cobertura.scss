@@ -1,0 +1,170 @@
+.cobertura {
+	h5 {
+		color: white;
+		font-family: $font-destacada;
+		font-weight: 700;
+		font-size: 26px;
+		img {
+			height: 40px;
+			width: auto;
+			margin: 5px 0;
+		}
+		span {
+			font-size: 20px;
+			font-weight: 400;
+			text-transform: uppercase;
+			padding-bottom: 5px;
+		}
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+	.cobertura-nota {
+		width: 100%;
+		figure {
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: auto;
+				transition: ease 0.3s;
+			}
+		}
+		.meta-content {
+			h2 {
+				font:{
+					family: $font-destacada;
+					size: 1.5rem;
+					weight: 700;
+				}
+				color: white;
+				letter-spacing: -0.02em;
+			}
+			h4 {
+				display: none;
+			}
+		}
+		&:hover {
+			figure {
+				img {
+					filter: brightness(110%);
+				}
+			}
+		}
+		&.chica {
+			.meta-content {
+				h2 {
+					font-size: 1.3em;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		h5 {
+			font-size: 30px;
+		}
+		article {
+			figure {
+				margin-bottom: 5px;
+			}
+			.meta-content {
+				color: $white;
+				h2 {
+					font: $font-destacada;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.nota-a {
+			.cobertura-nota {
+				h4 {
+					font: $font-general;
+					display: block;
+					font-size: 13px;
+					span {
+						color: $secondary;
+					}
+					&.firma-home {
+						text-transform: uppercase;;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		.nota-b {
+			.cobertura-nota {
+				position: relative;
+				.meta-content {
+					position: absolute;
+					bottom: 10px;
+					right: 20px;
+					left: 20px;
+					background: white;
+					padding: 7px 15px;
+					h4 {
+						display: none;
+					}
+					h2 {
+						color: $negro;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down(md) {
+		.nota-b {
+			.cobertura-nota {
+				position: relative;
+				.meta-content {
+					position: absolute;
+					bottom: 10px;
+					right: 20px;
+					left: 20px;
+					background: white;
+					padding: 7px 15px;
+					h2 {
+						color: $negro;
+					}
+				}
+			}
+		}
+	}	
+	@include media-breakpoint-down(sm) {
+		h5 {
+			font-size: 1.3rem;
+		}
+		.nota-a,
+		.nota-b {
+			.cobertura-nota {
+				position: relative;
+				.meta-content {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					left: 0;
+					background: rgba(255,255,255,0.8);
+					padding: 3px 10px;
+					h2 {
+						color: $hover;
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		h5 {
+			padding: 0 15px;
+			font-size: 1.2rem;
+		}
+	}	
+	.bn-stick {
+	    position: sticky;
+	    margin: auto;
+	    top: 2.7em;
+	    z-index: 9;
+	    margin-bottom: 5px;
+	}
+}

@@ -1,0 +1,162 @@
+
+.mas-en-perfil {
+	.titulo {
+		font:{
+			family: $font-general;
+			size: 18px;
+			weight: 700;
+		}
+		color: $pf_font_color;
+		text-transform: uppercase;
+		padding: 20px 0;
+		a {
+		    align-items: center;
+			.img-mas-en-perfil {
+				width: auto;
+				height: 34px;
+				margin-left: 10px;
+			}
+		}
+		.in-other-lang {
+			font-weight: normal;
+			font-size: .8em;
+			color: #999;
+		}
+	}
+}
+.mas-en-perfil-notas {
+	.sitio-externo {
+		padding-top: 10px;
+		a {
+			figure {
+				width: 100%;
+				overflow: hidden;
+				height: 0;
+				padding-top: 56.25%;
+				margin: 0 0 5px 0;
+				img {
+					display: block;
+					width: 100%;
+					height: auto;
+					transition: ease 0.3s;
+					margin-top: -56.25%;
+				}
+			}
+			h2 {
+				font: {
+					family: $font-general;
+					size: 18px;
+					weight: 700;
+				}
+				text-align: center;
+				padding: 0 10px;
+				color: $pf_font_color;
+				padding-bottom: 15px;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		.logo-revista {
+			height: 25px;
+			width: 100%;
+			margin:0;
+			display: block;
+			background-image: url('/img/revistas.png');
+			background-repeat: no-repeat;
+		}
+		&.marieclaire {
+			background-color: white;
+			.logo-revista {
+				background-position: 14px -9px;
+			}
+		}
+		&.rouge {
+			background-color: #17191b;
+			a {
+				h2 {
+					color: white;
+				}
+			}
+			.logo-revista {
+				background-position: 10px -97px
+			}
+		}
+		&.noticias {
+			background-color: #4db2ec;
+			.logo-revista {
+				background-position: 10px -66px
+			}
+		}
+		&.caras {
+			background-color: #dc3545;
+			a {
+				h2 {
+					color: white;
+				}
+			}
+			.logo-revista {
+				background-position: 10px -38px
+			}
+		}
+		&.parabrisas {
+			background-color: #ff0002;
+			a {
+				h2 {
+					color: white;
+				}
+			}
+			.logo-revista {
+				background-position: 10px -130px 
+			}
+		}
+	}
+}
+
+.previous_news {
+	h4 {
+		font: {
+			family: $font-general;
+    		size: 20px;
+    		weight: 700;
+    	}
+    	color: #313133;
+    	text-transform: uppercase;
+    	padding: 20px 0 5px 0;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 20px 0;
+		li {
+			font: {
+				weight: 400;
+				size: 16px;
+				family: $font-general;
+			}
+			margin-left: 20px;
+			line-height: 1.1em;
+			margin-bottom: 10px;
+			&:before {
+				font-family: "Font Awesome 5 Free"; 
+				font-weight: 900; 
+				content: "\f531";
+				font-size: 12px;
+				width: 20px;
+				height: auto;
+				display: inline-block;
+				float: left;
+				color: #ccc;
+				padding-top: 3px;
+				margin-left: -20px;
+			}
+			a {
+				color: $hover;
+				&:hover {
+					text-decoration: none;
+					color: $miscelanea;
+				}
+			}
+		}
+	}
+}

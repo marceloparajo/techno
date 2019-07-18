@@ -1,0 +1,72 @@
+.sticky-social {
+  left: 0;
+  position: fixed;
+  top: 150px;
+
+  a {
+    background: #333;
+    color: #fff;
+    display: block;
+    height: 35px;
+    font: 16px "Open Sans", sans-serif;
+    line-height: 35px;
+    position: relative;
+    text-align: center;
+    width: 35px;
+
+    span {
+      line-height: 35px;
+      left: -120px;
+      position: absolute;
+      text-align:center;
+      width:120px;
+    }
+  }
+
+  a:hover span {
+    left: 100%;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a[class*="facebook"],
+  a[class*="facebook"]:hover,
+  a[class*="facebook"] span { background: $pf_facebook_color; }
+
+  a[class*="twitter"],
+  a[class*="twitter"]:hover,
+  a[class*="twitter"] span { background: $pf_twitter_color; }
+
+  a[class*="gplus"],
+  a[class*="gplus"]:hover,
+  a[class*="gplus"] span { background: $pf_google_color; }
+
+  a[class*="linkedin"],
+  a[class*="linkedin"]:hover,
+  a[class*="linkedin"] span { background: $pf_linkedin_color; }
+
+  a[class*="instagrem"],
+  a[class*="instagrem"]:hover,
+  a[class*="instagrem"] span { background: $pf_instagram_color; }
+
+  a[class*="pinterest"],
+  a[class*="pinterest"]:hover,
+  a[class*="pinterest"] span { background: $pf_pinterest_color; }
+
+  a[class*="flickr"],
+  a[class*="flickr"]:hover,
+  a[class*="flickr"] span { background: $pf_flickr_color; }
+
+  a[class*="tumblr"],
+  a[class*="tumblr"]:hover,
+  a[class*="tumblr"] span { background: $pf_tumblr_color; }
+
+  a[class*="whatsapp"],
+  a[class*="whatsapp"]:hover,
+  a[class*="whatsapp"] span { background: $pf_whatsapp_color; }
+
+}

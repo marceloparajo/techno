@@ -1,0 +1,67 @@
+.pf-disp-bloque-inferior {
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  h2 {
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .card-columns {
+    column-count: 1;
+
+    @include media-breakpoint-up(sm) {
+      column-count: 2;
+    }
+
+    @include media-breakpoint-up(lg) {
+      column-count: 2;
+    }
+
+    @include media-breakpoint-up(xl) {
+      column-count: 3;
+    }
+
+  }
+
+  .headline {
+    color: $pf_font_color_headline;
+    font-size: 1.2em;
+  }
+
+  .article {
+    border-radius: 0;
+    border-bottom: 2px solid $pf_main_color_2;
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+
+    .card-img-top {
+      border-radius: 0;
+    }
+  }
+
+  .row {
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+
+  .col-articles {
+    flex: 0 0 80%;
+
+    @include media-breakpoint-down(lg) {
+      flex: inherit;
+    }
+  }
+
+  .col-ads-left, .col-ads-right {
+    flex: 0 0 10%;
+    padding: 0;
+  }
+
+
+}

@@ -1,0 +1,64 @@
+.pf-disp-mosaico {
+  background-color: $pf_b_mosaico_bg;
+  margin-bottom: 20px;
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .article {
+    background-size: cover;
+    background-position: center;
+    color: $pf_font_color_inverse;
+     min-height: 250px;
+    padding: 0 0 10px 0;
+    -webkit-box-shadow: -6px 11px 22px -13px rgba(0,0,0,0.58);
+    -moz-box-shadow: -6px 11px 22px -13px rgba(0,0,0,0.58);
+    box-shadow: -6px 11px 22px -13px rgba(0,0,0,0.58);
+
+    h2 {
+      font-size: 20px;
+      margin: 0 30px;
+      padding: 1% 0;
+    }
+
+    .hat {
+      align-self: flex-start;
+      background-color: $pf_main_color_3;
+       color:  $pf_articles_hat;
+       font-size: 13px;
+         letter-spacing: 1px;
+       text-transform: uppercase;
+       padding: 5px 10px;
+       font-family: 'Oswald', sans-serif;
+       font-weight: 700;
+    }
+
+    .headline {
+      color: #cacaca !important;
+      margin: 0 30px;
+      padding-bottom: 1.5%;
+    }
+
+    .separator {
+      border: 1px solid #cacaca;
+      margin: 10px 0;
+      width: 100%;
+    }
+
+
+
+  }
+
+  .article.pf-first-element {
+    min-height: 500px;
+
+    h2 {
+      font-size: 36px;
+    }
+  }
+}

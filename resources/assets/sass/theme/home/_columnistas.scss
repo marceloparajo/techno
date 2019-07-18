@@ -1,0 +1,132 @@
+.columnistas-home {
+	h5 {
+		font:{
+			family: $font-destacada;
+			size: 20px;
+			weight: 700;
+		}
+		line-height: 30px;
+		color: $negro;
+		text-transform: uppercase;
+		margin-top: 10px;
+		border-bottom: 3px solid rgba(0,0,0,0.1);
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 6px;
+		}
+	}
+	.columna {
+		a {
+			text-align: center;
+			img {
+				width: 70px;
+				height: 70px;
+			}
+			h2 {
+				font: {
+					family: $font-destacada;
+					size: 18px;
+					weight: 700;
+				}
+			}
+			h4 {
+				font:{
+					family: $font-destacada;
+					size: 13px;
+					height: 400;
+				}
+				text-transform: uppercase;
+			}
+			@include media-breakpoint-down(sm) {
+				text-align: left;
+				width: 100%;
+				display: block;
+				padding: 10px 0;
+				border-bottom: 1px solid rgba(0,0,0,0.1);
+				img {
+					float: left;
+					width: 60px;
+					height: 60px;
+				}
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			min-height: 180px;
+		}
+		&.editores {
+			a {
+				margin-bottom: 20px;
+				figure {
+					width: 100%;
+					height: auto;
+					margin:0 0 5px 0;
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+			@include media-breakpoint-down(sm) {
+				a {
+					border-bottom: none;
+					text-align: left;
+					width: 100%;
+					display: block;
+					padding: 5px 0;
+					border-bottom: 1px solid rgba(0,0,0,0.1);
+					margin-bottom: 0;
+					figure {
+						float: left;
+						width: 33%;
+						height: auto;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.banner-vertical {
+		text-align: center;
+		top: 3em;
+    	justify-content: space-around;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 3.5rem;
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			width: 300px;
+			text-align: right;
+			margin-left: 30px;
+		}
+		@include media-breakpoint-up(lg) {
+			align-items: flex-start;
+
+		}
+	}
+}
+.carousel-indicators li{
+	background-color: rgba(0,0,0,0.2);
+	bottom: -10px!important;
+	&.active {
+		background-color: $miscelanea-light;
+	}
+}
+.carousel-inner:after {
+	content: "";
+	display: block;
+	width: auto;
+	height: 10px;
+}
+#carouselColumnistas {
+	padding-bottom: 20px;
+}
+#carouselEditoriales {
+	padding-bottom: 20px;
+	@include media-breakpoint-down(sm) {
+		margin-top: 0;
+		padding-top: 0;
+	}
+}
