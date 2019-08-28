@@ -1,6 +1,5 @@
+
 /*
-@media (max-width: 992px) {
-*/
 @include media-breakpoint-down(lg) {
     .navbar-collapse {
         position: absolute;
@@ -28,39 +27,51 @@
         left: 0;
     }
 }
+*/
 
 
-
-.pf-header-top {
-	color: $pf_font_color_headline;
-	padding: 2px 5px;
-	border-bottom: 1px solid #f1f3f5;
-	img {
-		width: 80px;
-		height: auto;
-	}
-	a {
-		color: $pf_font_color_inverse;
-	}
-	.time-top {    
-		padding: 3px 20px;
-		color: $pf_font_color_headline;
-		font-size: 11px;
-	}
+.navbar-collapse {
+    position: absolute;
+    background: white;
+    top: 60px;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 90%;
+    transition: all 0.5s ease;
+    display: block;
+    height: 0;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+		-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+		box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+		visibility: hidden;
+		ul {
+			display: none;
+		}
+}
+.navbar-collapse.collapsing {
+    height: auto !important;
+    margin-right: 50%;
+    transition: all 0.5s ease;
+    display: block;
+    ul {
+    	display: none;
+    }
+}
+.navbar-collapse.show {
+    top: 60px;
+    visibility: visible;
+    height: auto;
+    ul {
+    	display: block;
+    }
 }
 
 
-.pf-header-details {
-	background-color: white;
-	padding: 5px;
-	box-shadow: 0 1px 8px -2px gray;
-	img {
-		width: 250px;
-		height: auto;
-	}
-}
-.bat-header {
-	font-family: $font-destacada;
+
+.perfil-header {
+	font-family: $font-general;
 	background:{
 		color: white;
 		position: center;
@@ -73,7 +84,7 @@
 		img {
 			margin-top: auto;
 			transition: width 0.5s;
-			width: 220px;
+			width: 170px;
 		}
 	}
 	.descripcion-site {
@@ -81,7 +92,7 @@
 		ul {
 			li {
 				font:{
-					family: $font-destacada;
+					family: $font-general;
 					size: 17px;
 					weight: 400;
 				}
@@ -103,7 +114,7 @@
 	}
 	.suscribite {
 		font:{
-			family: $font-destacada;
+			family: $font-general;
 			size: 18px;
 			weight: 400;
 		}
@@ -117,15 +128,15 @@
 	}
 	@include media-breakpoint-up(xl) {
 		.logo {
-			padding: 7px 5px;
+			padding: 5px;
 			img {
-				width: 260px;
+				width: 170px;
 			}
 		}
 		.logo-alt {
 			padding: 5px;
 			img {
-				width: 220px;
+				width: 170px;
 			}
 		}
 	}
@@ -142,10 +153,10 @@
 			transition: ease 0.3s;
 		}
 		&:hover {
-			color: $light;
+			color: $azul-dark;
 			text-decoration: none;
 			i {
-				color: $light;
+				color: $azul-dark;
 			}
 		}
 	}
@@ -188,24 +199,23 @@
 	}
 }
 ul.temas {
-	font-family: $font-destacada;
+	font-family: $font-general;
 	li.nav-item {
 		text-align: center;
 		a {
 			font:{
-				family: $font-destacada;
-				size: 15px;
+				family: $font-general;
+				size: 14px;
 				weight: 400;
 			}
-			letter-spacing:0.03em;
-			color: white;
+			color: #222;
 			&:hover {
-				color: white!important;
+				color: $azul-dark!important;
 			}
 			&:after {
 				content: "\00b7";
 				font-size: 20px;
-				margin: 0 20px;
+				margin: 0 10px;
 				line-height: 12px;
 			}
 		}
@@ -229,7 +239,7 @@ ul.temas {
 	}
 }
 ul.canales {  
-	font-family: $font-destacada;
+	font-family: $font-general;
 	li.nav-item {
 		text-align: left;
 		padding: 0;
@@ -297,13 +307,9 @@ ul.canales {
 // RESPONSIVE //
 
 
+
 @include media-breakpoint-up(xl) {
-	.pf-header-top {
-		.time-top {
-			font-size: 12px;
-			padding: 3px 20px;
-		}
-	}
+/*
 	.navbar-toggle { 
 		display:none
 	}
@@ -351,10 +357,12 @@ ul.canales {
 			width: auto; 
 			padding-left: 18px; 
 			li { 
-				display: inline-block;
 				a {
 					padding: 5px 18px;
 					font-size: 14px; 
+				}
+				&:nth-child(n+7) {
+					display: none;
 				}
 			}
 		}
@@ -371,21 +379,24 @@ ul.canales {
 }
 
 .navbar-toggler {
-	font-size: 14px;
-	margin-top: 8px;
-	margin-right: 15px;
+	margin-top: 5px;
+	margin-right: 0;
 	margin-bottom: 8px;
 	background-color: transparent;
-	color:$secondary;
+	color:$negro!important;
 	padding: 5px 3px 3px 5px!important;
-	-webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.4);
-	-moz-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.4);
-	box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.4);
+	border: none;
+	&:focus {
+		outline: none;
+	}
 	.navbar-toggler-icon {
-		font-size: 0.8em!important;
+		font-size: 1em!important;
 		padding: 0!important;
 		font-weight: 900!important;
-		color: $secondary;
+		color: $negro!important;
+	}
+	@include media-breakpoint-up(xl) {
+		display: block!important;
 	}
 }
 @include media-breakpoint-down(lg) {
@@ -407,6 +418,59 @@ ul.canales {
 	padding-top: 0;
 	padding-bottom: 0;
 }
+
+ul.menu-destacado {
+	padding: 9px 0 0 0;
+	margin: 0;
+	list-style: none;
+	font-family: $font-general;
+	li {
+		display: inline-block;
+		float: left;
+		padding: 0;
+		margin: 0;
+		text-transform: uppercase;
+		a {
+			display: block;
+			padding: 10px;
+		}
+	}
+}
+
+
 .menudetemas {
-	background: #000;
+	background: #eaeaea;
+}
+
+.header-meta {
+	.header-fecha {
+		font:{
+			family:$font-general;
+			size: .7rem;
+			weight: normal;
+		}
+		text-transform: uppercase;
+		padding-top: 5px;
+	}
+	.radio-perfil {
+		a {
+			img {
+				width: 120px;
+				height: auto;
+			}
+			.fas {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: #fff;
+				border: 1px solid #ededed;
+				text-align: center;
+				box-sizing: border-box;
+				font-size: 10px;
+				line-height: 18px;
+				margin: 5px;
+				padding-left: 2px;
+			}
+		}
+	}
 }

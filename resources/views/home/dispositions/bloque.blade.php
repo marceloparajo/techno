@@ -1,11 +1,11 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 0)
 
-<section class="container-fluid bloque-de-notas mb-4 mt-lg-2">
+<section class="container-fluid bloque-de-notas mb-4 mt-lg-2 px-0">
 
 	<div class="container d-flex p-0 bg-white flex-column pt-lg-3">
 
-		<div class="row mx-0" >
+		<div class="row" >
 
 			@foreach(array_slice($news, 0, 1) as $key => $new)
 				<article class="bloque primera py-0 col-12 col-lg-6 px-0 px-md-3">

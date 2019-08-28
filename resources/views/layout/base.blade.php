@@ -99,7 +99,7 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
         @endif
     </head>
 
-    <body class="@yield('body-class', '') bg-light">
+    <body class="@yield('body-class', '') bg-white">
         <div class="container-fluid m-0 p-0">
             @include('layout.header')
 

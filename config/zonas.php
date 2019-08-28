@@ -9,11 +9,19 @@
 return [
 
     [
+        'id' => 'alerta',
+        'template' => 'alerta'
+    ],
+    [
         'id' => 'destacada-superior',
         'template' => 'destacada-medio'
     ],
     [
         'id' => 'bloque-superior',
+        'template' => 'bloque'
+    ],
+    [
+        'id' => 'bloque-medio',
         'template' => 'bloque'
     ],
     [
@@ -25,12 +33,32 @@ return [
         'template' => 'destacada-medio'
     ],
     [
+        'id' => 'destacada-inferior',
+        'template' => 'destacada-medio'
+    ],
+    [
         'id' => 'cobertura',
         'template' => 'cobertura'
     ],
     [
         'id' => 'especial',
         'template' => 'especial'
+    ],
+    [
+        'id' => 'cobertura-extra',
+        'template' => 'cobertura'
+    ],
+    [
+        'id' => 'cobertura-moderada',
+        'template' => 'cobertura'
+    ],
+    [
+        'id' => 'cobertura-general',
+        'template' => 'cobertura'
+    ],
+    [
+        'id' => 'bloomberg',
+        'template' => 'cobertura'
     ],
     [
         'id' => 'catastrofe',

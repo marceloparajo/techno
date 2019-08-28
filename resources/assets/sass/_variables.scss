@@ -72,11 +72,18 @@ $pf_a_color_hover: $pf_main_color;
 $negro: #0a0a0a; 
 $link: #7b7b7b;
 $hover: #990033;
-$miscelanea: #0076ba;
-$miscelanea-light: #3391c8;
 $dark:#343a40;
 $light: #f8f9fa;
 $secondary: #6c757d;
-$font-destacada: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
 $font-general: 'Source Sans Pro',Helvetica,Arial,Sans-serif;
 $font-cuerpo: Georgia,'Times New Roman',Times,Serif;
+
+
+
+/** PERFIL **/
+$font-destacada: 'Faustina', Georgia, 'Times New Roman', Times, serif;
+$azul: #6286B1;
+$miscelanea: $azul;
+$miscelanea-light: #d0dbe4;
+$azul-light: #d0dbe4;
+$azul-dark: #445e7c;

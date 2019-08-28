@@ -68,3 +68,37 @@
 		}
 	}
 }
+
+.alerta {
+	background-color: $azul-dark;
+	padding: 0;
+	.container {
+		background: $azul;
+		article {
+			a {
+				font-family: $font-destacada;
+				h2 {
+					color: white;
+					font-size: 1.5rem;
+					line-height: 1.6em;
+					white-space: nowrap;
+    			overflow: hidden;
+					span.hat {
+						margin: 0 5px 0 0;
+						color: $azul-light;
+					}
+					.laalerta {
+						background: rgba(0,0,0,0.3);
+						padding: 4px 10px;
+						margin: 0 10px 0 0;
+						text-transform: uppercase;
+						.fas {
+							font-size: 1.4rem;
+							margin: 0 5px 0 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

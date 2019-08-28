@@ -9,6 +9,7 @@
 		padding-bottom: 20px;
 	}
 	.tres-notas {
+		display: flex;
 		.banner-horizontal {
 			top: 2.7em;
 			z-index: 9;
@@ -92,7 +93,6 @@
 							weight: 700;
 						}
 						color: $negro;
-						letter-spacing: -0.02em;
 					}
 					h4 {
 						font:{
@@ -137,6 +137,10 @@
 				}
 			}
 			&.main-destacada {
+				flex: 1 1 0;
+				position: relative;
+				width: 100%;
+				min-height: 1px;
 				@include media-breakpoint-up(lg) {
 					a {
 						.meta-content {
@@ -164,7 +168,7 @@
 							h5 {
 								transform: translateY(-15px);
 							}
-						    -webkit-box-shadow: 0 30px 20px -20px rgba(0, 0, 0, 0.2);
+						   -webkit-box-shadow: 0 30px 20px -20px rgba(0, 0, 0, 0.2);
 							box-shadow: 0 30px 20pxpx -20px rgba(0, 0, 0, 0.2);
 						}
 					}
@@ -219,7 +223,6 @@
 							h2 {
 								color: white;
 								padding: 0 15px;
-								letter-spacing: 0;
 							}
 							h3 {
 								background: $miscelanea;
@@ -262,7 +265,6 @@
 							h2 {
 								color: white;
 								font-size: 1.4em;
-								letter-spacing: 0.02em;
 							}
 						}
 						&:hover {
@@ -329,11 +331,16 @@
 			top: 2.8em;
 			@include media-breakpoint-up(lg) {
 				align-items: flex-start;
-		    	justify-content: space-around;
+	    	justify-content: space-around;
 				position: -webkit-sticky;
 				position: sticky;
 				top: 3.5rem;
+				display: flex;
 			}
+		}
+		.dos-notas {
+			flex-basis: 300px;
+			margin-left: 30px;
 		}
 	}
 }
@@ -361,4 +368,32 @@
 }
 .banner-vertical {
 	margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container.maincontainer.conmega {
+	.editorial {
+		.tres-notas {
+			>.row {
+				margin-right: 0;
+			}
+			.dos-notas {
+				margin-right: 10px;
+			}
+		}
+		.banner-vertical {
+			display: none;
+		}
+	}
 }
