@@ -1,37 +1,13 @@
 .destacada {
 	display: flex;
 	justify-content: space-around;
-	flex-direction: column;
 	padding: 0;
-	&>.container {
-		background: white;
-		margin-bottom: 20px;
-		padding-bottom: 20px;
-	}
+	align-items: flex-start;
 	.tres-notas {
 		display: flex;
-		.banner-horizontal {
-			top: 2.7em;
-			z-index: 9;
-			margin-bottom: 15px;
-			width: 100%;
-			.ads-space {
-				margin: auto;
-				width: 790%;
-				height: 90px;
-				display: block;
-			}
-			@include media-breakpoint-up(lg) {
-				position: sticky;
-				border-top: 10px solid white;
-				border-bottom: 10px solid white;
-				background: white;
-				margin: auto;
-				-webkit-box-shadow: 0px 15px 10px -10px rgba(0,0,0,0.3);
-				-moz-box-shadow: 0px 15px 10px -10px rgba(0,0,0,0.3);
-				box-shadow: 0px 15px 10px -10px rgba(0,0,0,0.3);
-			}
-		}
+		flex: 1 1 0;
+		flex-wrap: wrap;
+		max-width: 100%;
 		article {
 			a {
 				figure {
@@ -85,6 +61,7 @@
 						letter-spacing: 0.05em;
 						text-transform: uppercase;
 						transition: ease 0.5s;
+						margin-bottom: .2rem;
 					}
 					h2 {
 						font: {
@@ -93,6 +70,7 @@
 							weight: 700;
 						}
 						color: $negro;
+						line-height: 1.1em;
 					}
 					h4 {
 						font:{
@@ -147,8 +125,8 @@
 							width: auto;
 							position: absolute;
 							bottom: 0;
-							left: 50px;
-							right: 50px;
+							left: 0;
+							right: 0;
 							background: white;
 							padding: 10px 20px;
 							text-align: center;
@@ -156,6 +134,7 @@
 							transform: translateY(1px);
 							h3 {
 								transform: translateY(-30px);
+								margin-bottom: .5rem;
 							}
 							h2 {
 								transform: translateY(-30px);
@@ -170,6 +149,14 @@
 							}
 						   -webkit-box-shadow: 0 30px 20px -20px rgba(0, 0, 0, 0.2);
 							box-shadow: 0 30px 20pxpx -20px rgba(0, 0, 0, 0.2);
+						}
+					}
+				}
+				@include media-breakpoint-up(xl) {
+					a {
+						.meta-content {
+							left: 30px;
+							right: 30px;
 						}
 					}
 				}
@@ -198,8 +185,39 @@
 					}
 				}
 			}
-			&.cuarta {
-				@include media-breakpoint-up(lg) {
+			@include media-breakpoint-down(sm) {
+				a {
+					.meta-content {
+						h2 {
+							padding: 0 10px;
+						}
+						h4 {
+							display: none;
+						}
+					}
+				}
+				&.main-destacada {
+					a {
+						.meta-content {
+							margin-bottom: -40px;
+						}
+					}
+				}
+			}
+		}
+		.dos-notas {
+			flex-basis: 300px;
+			margin-left: 30px;
+		}
+		.dos-horizontales {
+			flex-basis: 100%;
+			display: flex;
+			margin: 0;
+			@include media-breakpoint-up(xl) {
+				margin: 30px 0 0 0;
+				.cuarta {
+					flex-basis: 300px;
+					margin-right: 30px;
 					position: relative;
 					a {
 						figure {
@@ -209,6 +227,7 @@
 							h4 {
 								display: none;
 							}
+							margin: 0;
 						}
 						.meta-content {
 							position: absolute;
@@ -216,9 +235,9 @@
 							right: 0;
 							bottom: 0;
 							top: 0;
-							padding: 0 16px 0 10px;
+							padding: 0 16px 0 0;
 							opacity: 1;
-							transform: translateY(1px);
+							transform: translateY(0);
 							transition: ease 0.5s;
 							h2 {
 								color: white;
@@ -244,23 +263,31 @@
 					}
 				}
 			}
-			&.quinta {
-				@include media-breakpoint-up(lg) {
+			.quinta {
+				@include media-breakpoint-up(xl) {
+					flex: 1 1 0;
+					display: flex;
 					a {
-						background: $miscelanea;
+						background: $azul;
+						transition: .3s ease;
+						min-height: 100%;
+						display: flex;
 						figure {
-							width: 47%;
+							flex-basis: 300px;
+							margin: 0 30px 0 0;
 							position: relative;
-							margin-bottom: 0;
+							height: 100%;
 						}
 						.meta-content {
-							transform: translateY(1px);
-							width: 53%;
+							flex: 1 1 0;
 							color: #fff;
-							padding: 15px;
+							padding: 0 15px 0 0;
+							margin: 0;
+							transform: translateY(0);
 							h3 {
 								background: #000;
 								color: white;
+								transform: translateX(-30px);
 							}
 							h2 {
 								color: white;
@@ -268,7 +295,7 @@
 							}
 						}
 						&:hover {
-							background: $miscelanea-light;
+							background: $azul-dark;
 							.meta-content {
 								h3 {
 									opacity: 1;
@@ -287,93 +314,55 @@
 					}
 				}
 			}
-			@include media-breakpoint-down(sm) {
+		}
+		@include media-breakpoint-down(lg) {
+			article.main-destacada {
 				a {
 					.meta-content {
-						h2 {
-							padding: 0 10px;
-						}
-						h4 {
-							display: none;
-						}
-					}
-				}
-				&.main-destacada {
-					a {
-						.meta-content {
-							margin-bottom: -40px;
-						}
+						position: relative;
 					}
 				}
 			}
-			/*
-			&.col-12.col-md-6.px-0.px-md-2 {
-				@include media-breakpoint-up(lg){
-					a {
-						&:after {
-							width: 20%; 
-							height: 5px; 
-							content: ""; 
-							background: $miscelanea; 
-							display: block;
-							margin: 10px auto 0 auto;
-							transform: translateY(-20px);
-						}
-					}
-				}
-			}
-			*/
 		}
-		.banner-vertical {
-			width: 300px;
-			text-align: right;
-			margin-left: 30px;
-			top: 2.8em;
-			@include media-breakpoint-up(lg) {
-				align-items: flex-start;
-	    	justify-content: space-around;
-				position: -webkit-sticky;
-				position: sticky;
-				top: 3.5rem;
+		@include media-breakpoint-down(lg) {
+			flex-direction: column;
+			article.main-destacada {
+				flex: auto;
+			}
+			.dos-notas {
+				flex-basis: 100%;
+				margin: 20px 0;
 				display: flex;
+				justify-content: space-between;
+				article {
+					width: 48%;
+				}
+			}
+			.dos-horizontales {
+				justify-content: space-between;
+				article {
+					width: 48%;
+				}
 			}
 		}
-		.dos-notas {
-			flex-basis: 300px;
-			margin-left: 30px;
+	}
+	.banner-vertical {
+		flex-basis: 300px;
+		text-align: right;
+		margin-left: 30px;
+		@include media-breakpoint-up(lg) {
+			align-items: flex-start;
+    	justify-content: space-around;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 3.5rem;
+			display: flex;
 		}
 	}
-}
-
-
-.ad-160x600-left {
-	display: none;
-	width: 180px;
-	margin-left: -180px;
-	@include media-breakpoint-up(xxxl) {
-		display: block;
+	@include media-breakpoint-down(md) {
+		flex-direction: column;
 	}
 }
-.ad-160x600-right {
-	display: none;
-	width: 180px;
-	margin-left: auto;
-	-webkit-box-ordinal-group: 2;
-	-ms-flex-order: 1;
-	order: 1;
-	margin-right: -180px;
-	@include media-breakpoint-up(xxxl) {
-		display: block;
-	}
-}
-.banner-vertical {
-	margin-top: 5px;
-}
-
-
-
-
-
 
 
 
@@ -384,16 +373,10 @@
 
 .container.maincontainer.conmega {
 	.editorial {
-		.tres-notas {
-			>.row {
-				margin-right: 0;
+		.destacada {
+			.banner-vertical {
+				display: none;
 			}
-			.dos-notas {
-				margin-right: 10px;
-			}
-		}
-		.banner-vertical {
-			display: none;
 		}
 	}
 }

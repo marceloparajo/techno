@@ -23,7 +23,7 @@
 @section('body')
 
 
-	<div class="container maincontainer">
+	<div class="container maincontainer px-2 pt-3">
 
 		<div class="editorial">
 			@foreach($home_content as $key => $value)
@@ -39,7 +39,7 @@
 
 
 		<!-- megalateral -->
-		<div class="megalateral mt-3">
+		<div class="megalateral">
 			<div class="container megalateral-b"> 
 				<div class="ads-space-home text-center megalateral-ad-250x600 col-12 col-md-6 col-lg-4 col-xxl-3 mt-3 mt-md-0 pt-md-3 px-0 px-md-3">
 					<div id="" class="ads-space mx-auto text-center" data-id="250x600x-pos-" data-w="250" data-h="600" data-loaded="false" data-reload="true"></div>

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Faustina:400,700&display=swap|Source+Sans+Pro:400,400i,700,700i);@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Crimson+Pro:400,400i,600,600i&display=swap|Source+Sans+Pro:400,400i,700,700i);@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@charset "UTF-8";
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -3649,10 +3649,10 @@
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1020px;
-  --breakpoint-xl: 1200px;
+  --breakpoint-xl: 1280px;
   --breakpoint-xxl: 1360px;
   --breakpoint-xxxl: 1690px;
-  --font-family-sans-serif: "Open Sans", sans-serif;
+  --font-family-sans-serif: "Source Sans Pro", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -3691,7 +3691,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -4228,7 +4228,7 @@ pre code {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .container {
     max-width: 1140px;
   }
@@ -5326,7 +5326,7 @@ pre code {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -6321,7 +6321,7 @@ pre code {
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1279.98px) {
   .table-responsive-xl {
     display: block;
     width: 100%;
@@ -9041,7 +9041,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1279.98px) {
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
@@ -9049,7 +9049,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .navbar-expand-xl {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -10590,7 +10590,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -10715,7 +10715,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -11560,7 +11560,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .d-xl-none {
     display: none !important;
   }
@@ -12537,7 +12537,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .flex-xl-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
@@ -13167,7 +13167,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .float-xl-left {
     float: left !important;
   }
@@ -14598,7 +14598,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .m-xl-0 {
     margin: 0 !important;
   }
@@ -15612,7 +15612,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .text-xl-left {
     text-align: left !important;
   }
@@ -20965,6 +20965,16 @@ readers do not read off random characters that represent icons */
   font-weight: 900;
 }
 
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 a {
   color: #7b7b7b;
 }
@@ -21095,7 +21105,13 @@ a:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
+  .container {
+    max-width: 990px;
+  }
+}
+
+@media (min-width: 1280px) {
   .container {
     max-width: 1300px;
   }
@@ -21204,22 +21220,37 @@ a:hover {
   width: 250px;
   height: 600px;
   display: none;
-  background: #f60;
   -ms-flex-preferred-size: 250px;
       flex-basis: 250px;
   position: -webkit-sticky;
   position: sticky;
   top: 4.5rem;
+  background: #f60;
+}
+
+.maincontainer .megalateral .megalateral-b {
+  width: 250px;
 }
 
 .maincontainer .editorial {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
+  max-width: 100%;
 }
 
-.maincontainer.conmega .megalateral {
-  display: block;
+@media (min-width: 1020px) {
+  .maincontainer.conmega .megalateral {
+    display: block;
+  }
+
+  .maincontainer.conmega .editorial {
+    padding-right: 25px;
+  }
+}
+
+pf-disp-bloque-inferior {
+  display: none;
 }
 
 /*
@@ -21359,7 +21390,7 @@ a:hover {
   text-decoration: none;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .perfil-header .logo {
     padding: 5px;
   }
@@ -21471,7 +21502,7 @@ ul.temas li.nav-item:last-child a:after {
   display: none;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1279.98px) {
   ul.temas li.nav-item {
     width: 100%;
     clear: both;
@@ -21523,7 +21554,7 @@ ul.canales li.nav-item a:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   ul.canales li.nav-item {
     text-align: center;
     padding: 0 5px;
@@ -21554,7 +21585,7 @@ ul.canales li.nav-item a:hover {
   margin: 5px 2px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   /*
 	.navbar-toggle { 
 		display:none
@@ -21645,16 +21676,9 @@ ul.canales li.nav-item a:hover {
   color: #0a0a0a !important;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .navbar-toggler {
     display: block !important;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .elheader,
-  .elmenu {
-    max-width: 100% !important;
   }
 }
 
@@ -21663,7 +21687,7 @@ ul.canales li.nav-item a:hover {
   padding-bottom: 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .mainnavbar {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -21809,7 +21833,7 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .pf-sidebar {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 340px;
@@ -21834,7 +21858,7 @@ footer .footer-revistas li a:hover {
   border-left: 4px solid #6c757d;
   text-transform: uppercase;
   padding: 5px 10px;
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   background: #343a40;
   display: block;
 }
@@ -21860,7 +21884,7 @@ footer .footer-revistas li a:hover {
   border-left: #d0dbe4;
   text-transform: uppercase;
   padding: 5px 10px;
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   background: #0a0a0a;
 }
 
@@ -22127,7 +22151,7 @@ footer .footer-revistas li a:hover {
   font-size: 14px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .pf-sidebar {
     padding: 1rem;
   }
@@ -22154,7 +22178,7 @@ footer .footer-revistas li a:hover {
   border-left: 4px solid #343a40;
   text-transform: uppercase;
   padding: 5px 10px;
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   background: #6286B1;
   display: block;
 }
@@ -22173,70 +22197,22 @@ footer .footer-revistas li a:hover {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   padding: 0;
-}
-
-.destacada > .container {
-  background: white;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .destacada .tres-notas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.destacada .tres-notas .banner-horizontal {
-  top: 2.7em;
-  z-index: 9;
-  margin-bottom: 15px;
-  width: 100%;
-}
-
-.destacada .tres-notas .banner-horizontal .ads-space {
-  margin: auto;
-  width: 790%;
-  height: 90px;
-  display: block;
-}
-
-@media (min-width: 1020px) {
-  .destacada .tres-notas .banner-horizontal {
-    position: -webkit-sticky;
-    position: sticky;
-    border-top: 10px solid white;
-    border-bottom: 10px solid white;
-    background: white;
-    margin: auto;
-    -webkit-box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
-  }
-}
-
-.destacada .tres-notas article {
-  /*
-			&.col-12.col-md-6.px-0.px-md-2 {
-				@include media-breakpoint-up(lg){
-					a {
-						&:after {
-							width: 20%; 
-							height: 5px; 
-							content: ""; 
-							background: $miscelanea; 
-							display: block;
-							margin: 10px auto 0 auto;
-							transform: translateY(-20px);
-						}
-					}
-				}
-			}
-			*/
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .destacada .tres-notas article a figure {
@@ -22297,13 +22273,15 @@ footer .footer-revistas li a:hover {
   text-transform: uppercase;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
+  margin-bottom: .2rem;
 }
 
 .destacada .tres-notas article a .meta-content h2 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 1.4em;
   font-weight: 700;
   color: #0a0a0a;
+  line-height: 1.1em;
 }
 
 .destacada .tres-notas article a .meta-content h4 {
@@ -22354,8 +22332,8 @@ footer .footer-revistas li a:hover {
     width: auto;
     position: absolute;
     bottom: 0;
-    left: 50px;
-    right: 50px;
+    left: 0;
+    right: 0;
     background: white;
     padding: 10px 20px;
     text-align: center;
@@ -22369,6 +22347,7 @@ footer .footer-revistas li a:hover {
   .destacada .tres-notas article.main-destacada a .meta-content h3 {
     -webkit-transform: translateY(-30px);
             transform: translateY(-30px);
+    margin-bottom: .5rem;
   }
 
   .destacada .tres-notas article.main-destacada a .meta-content h2 {
@@ -22389,6 +22368,13 @@ footer .footer-revistas li a:hover {
   }
 }
 
+@media (min-width: 1280px) {
+  .destacada .tres-notas article.main-destacada a .meta-content {
+    left: 30px;
+    right: 30px;
+  }
+}
+
 .destacada .tres-notas article.main-destacada:hover a figure img {
   -webkit-transform: none;
           transform: none;
@@ -22406,101 +22392,6 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (min-width: 1020px) {
-  .destacada .tres-notas article.cuarta {
-    position: relative;
-  }
-
-  .destacada .tres-notas article.cuarta a figure img {
-    -webkit-filter: brightness(30%);
-            filter: brightness(30%);
-  }
-
-  .destacada .tres-notas article.cuarta a figure h4 {
-    display: none;
-  }
-
-  .destacada .tres-notas article.cuarta a .meta-content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    padding: 0 16px 0 10px;
-    opacity: 1;
-    -webkit-transform: translateY(1px);
-            transform: translateY(1px);
-    -webkit-transition: ease 0.5s;
-    transition: ease 0.5s;
-  }
-
-  .destacada .tres-notas article.cuarta a .meta-content h2 {
-    color: white;
-    padding: 0 15px;
-  }
-
-  .destacada .tres-notas article.cuarta a .meta-content h3 {
-    background: #6286B1;
-  }
-
-  .destacada .tres-notas article.cuarta a:hover .meta-content {
-    opacity: 0;
-  }
-
-  .destacada .tres-notas article.cuarta a:hover .meta-content h3 {
-    opacity: 1;
-  }
-
-  .destacada .tres-notas article.cuarta a:hover figure img {
-    -webkit-filter: brightness(100%);
-            filter: brightness(100%);
-  }
-}
-
-@media (min-width: 1020px) {
-  .destacada .tres-notas article.quinta a {
-    background: #6286B1;
-  }
-
-  .destacada .tres-notas article.quinta a figure {
-    width: 47%;
-    position: relative;
-    margin-bottom: 0;
-  }
-
-  .destacada .tres-notas article.quinta a .meta-content {
-    -webkit-transform: translateY(1px);
-            transform: translateY(1px);
-    width: 53%;
-    color: #fff;
-    padding: 15px;
-  }
-
-  .destacada .tres-notas article.quinta a .meta-content h3 {
-    background: #000;
-    color: white;
-  }
-
-  .destacada .tres-notas article.quinta a .meta-content h2 {
-    color: white;
-    font-size: 1.4em;
-  }
-
-  .destacada .tres-notas article.quinta a:hover {
-    background: #d0dbe4;
-  }
-
-  .destacada .tres-notas article.quinta a:hover .meta-content h3 {
-    opacity: 1;
-  }
-}
-
-@media (min-width: 1200px) {
-  .destacada .tres-notas article.quinta a .meta-content h2 {
-    font-size: 1.6em;
-  }
-}
-
 @media (max-width: 767.98px) {
   .destacada .tres-notas article a .meta-content h2 {
     padding: 0 10px;
@@ -22515,15 +22406,205 @@ footer .footer-revistas li a:hover {
   }
 }
 
-.destacada .tres-notas .banner-vertical {
-  width: 300px;
+.destacada .tres-notas .dos-notas {
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  margin-left: 30px;
+}
+
+.destacada .tres-notas .dos-horizontales {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+@media (min-width: 1280px) {
+  .destacada .tres-notas .dos-horizontales {
+    margin: 30px 0 0 0;
+  }
+
+  .destacada .tres-notas .dos-horizontales .cuarta {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    margin-right: 30px;
+    position: relative;
+  }
+
+  .destacada .tres-notas .dos-horizontales .cuarta a figure {
+    margin: 0;
+  }
+
+  .destacada .tres-notas .dos-horizontales .cuarta a figure img {
+    -webkit-filter: brightness(30%);
+            filter: brightness(30%);
+  }
+
+  .destacada .tres-notas .dos-horizontales .cuarta a figure h4 {
+    display: none;
+  }
+
+  .destacada .tres-notas .dos-horizontales .cuarta a .meta-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding: 0 16px 0 0;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: ease 0.5s;
+    transition: ease 0.5s;
+  }
+
+  .destacada .tres-notas .dos-horizontales .cuarta a .meta-content h2 {
+    color: white;
+    padding: 0 15px;
+  }
+
+  .destacada .tres-notas .dos-horizontales .cuarta a .meta-content h3 {
+    background: #6286B1;
+  }
+
+  .destacada .tres-notas .dos-horizontales .cuarta a:hover .meta-content {
+    opacity: 0;
+  }
+
+  .destacada .tres-notas .dos-horizontales .cuarta a:hover .meta-content h3 {
+    opacity: 1;
+  }
+
+  .destacada .tres-notas .dos-horizontales .cuarta a:hover figure img {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+}
+
+@media (min-width: 1280px) {
+  .destacada .tres-notas .dos-horizontales .quinta {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .destacada .tres-notas .dos-horizontales .quinta a {
+    background: #6286B1;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .destacada .tres-notas .dos-horizontales .quinta a figure {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    margin: 0 30px 0 0;
+    position: relative;
+    height: 100%;
+  }
+
+  .destacada .tres-notas .dos-horizontales .quinta a .meta-content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    color: #fff;
+    padding: 0 15px 0 0;
+    margin: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  .destacada .tres-notas .dos-horizontales .quinta a .meta-content h3 {
+    background: #000;
+    color: white;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+
+  .destacada .tres-notas .dos-horizontales .quinta a .meta-content h2 {
+    color: white;
+    font-size: 1.4em;
+  }
+
+  .destacada .tres-notas .dos-horizontales .quinta a:hover {
+    background: #445e7c;
+  }
+
+  .destacada .tres-notas .dos-horizontales .quinta a:hover .meta-content h3 {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .destacada .tres-notas .dos-horizontales .quinta a .meta-content h2 {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .destacada .tres-notas article.main-destacada a .meta-content {
+    position: relative;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .destacada .tres-notas {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .destacada .tres-notas article.main-destacada {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+
+  .destacada .tres-notas .dos-notas {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .destacada .tres-notas .dos-notas article {
+    width: 48%;
+  }
+
+  .destacada .tres-notas .dos-horizontales {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .destacada .tres-notas .dos-horizontales article {
+    width: 48%;
+  }
+}
+
+.destacada .banner-vertical {
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
   text-align: right;
   margin-left: 30px;
-  top: 2.8em;
 }
 
 @media (min-width: 1020px) {
-  .destacada .tres-notas .banner-vertical {
+  .destacada .banner-vertical {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -22538,53 +22619,16 @@ footer .footer-revistas li a:hover {
   }
 }
 
-.destacada .tres-notas .dos-notas {
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
-  margin-left: 30px;
-}
-
-.ad-160x600-left {
-  display: none;
-  width: 180px;
-  margin-left: -180px;
-}
-
-@media (min-width: 1690px) {
-  .ad-160x600-left {
-    display: block;
+@media (max-width: 1019.98px) {
+  .destacada {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-.ad-160x600-right {
-  display: none;
-  width: 180px;
-  margin-left: auto;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-  margin-right: -180px;
-}
-
-@media (min-width: 1690px) {
-  .ad-160x600-right {
-    display: block;
-  }
-}
-
-.banner-vertical {
-  margin-top: 5px;
-}
-
-.container.maincontainer.conmega .editorial .tres-notas > .row {
-  margin-right: 0;
-}
-
-.container.maincontainer.conmega .editorial .tres-notas .dos-notas {
-  margin-right: 10px;
-}
-
-.container.maincontainer.conmega .editorial .banner-vertical {
+.container.maincontainer.conmega .editorial .destacada .banner-vertical {
   display: none;
 }
 
@@ -22653,7 +22697,7 @@ footer .footer-revistas li a:hover {
 
 .especial article a .meta-contenido h2 {
   color: white;
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 1.3em;
   font-weight: 700;
 }
@@ -22670,7 +22714,7 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .especial article a .meta-contenido h2 {
     font-size: 1.5em;
   }
@@ -22697,7 +22741,7 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .especial article a .meta-contenido h4 {
     display: block;
   }
@@ -22760,7 +22804,7 @@ footer .footer-revistas li a:hover {
 
 .cobertura h5 {
   color: white;
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
   font-size: 26px;
   display: -webkit-box;
@@ -22772,6 +22816,7 @@ footer .footer-revistas li a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  text-transform: uppercase;
 }
 
 .cobertura h5 img {
@@ -22805,7 +22850,7 @@ footer .footer-revistas li a:hover {
 }
 
 .cobertura .cobertura-nota .meta-content h2 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
@@ -22839,11 +22884,11 @@ footer .footer-revistas li a:hover {
   }
 
   .cobertura article .meta-content h2 {
-    font: "Faustina", Georgia, "Times New Roman", Times, serif;
+    font: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .cobertura .nota-a .cobertura-nota h4 {
     font: "Source Sans Pro", Helvetica, Arial, Sans-serif;
     display: block;
@@ -22986,8 +23031,9 @@ footer .footer-revistas li a:hover {
 }
 
 .bloque .meta-content {
-  -webkit-transform: translateY(-26px);
-          transform: translateY(-26px);
+  /*
+		transform: translateY(-26px);
+		*/
 }
 
 .bloque .meta-content h3 {
@@ -22995,14 +23041,13 @@ footer .footer-revistas li a:hover {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  background: #6286B1;
-  color: white;
+  color: #6286B1;
   display: inline-block;
-  padding: 5px;
+  padding: 0;
 }
 
 .bloque .meta-content h2 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
   font-size: 1.5em;
   color: #0a0a0a;
@@ -23032,7 +23077,7 @@ footer .footer-revistas li a:hover {
 .bloque.bloquextres a .meta-content h3 {
   padding: 0;
   background: transparent;
-  color: #990033;
+  color: #6286B1;
   margin-bottom: 0;
 }
 
@@ -23052,7 +23097,6 @@ footer .footer-revistas li a:hover {
   background: #6286B1;
   color: white;
   padding: 5px;
-  color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -23088,7 +23132,7 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .bloque.bloquextres a .meta-content h3 {
     display: none;
   }
@@ -23137,7 +23181,7 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .bloque.primera a .meta-content h2 {
     font-size: 2em;
   }
@@ -23157,7 +23201,37 @@ footer .footer-revistas li a:hover {
           filter: brightness(100%);
 }
 
-.bloque-de-notas .container .banner-horizontal {
+@media (min-width: 1280px) {
+  .tres-notas-irregulares .nota-b article.bloque {
+    position: relative;
+  }
+
+  .tres-notas-irregulares .nota-b article.bloque a .meta-content {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 5px 10px;
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .tres-notas-irregulares .nota-b article.bloque a .meta-content h3 {
+    background-color: transparent;
+    padding: 0;
+    color: #6286B1;
+    margin-bottom: 5px;
+  }
+
+  .tres-notas-irregulares .nota-b article.bloque a .meta-content h4 {
+    display: none;
+  }
+}
+
+.bloque-de-notas .banner-horizontal {
   position: -webkit-sticky;
   position: sticky;
   border-top: 10px solid white;
@@ -23169,12 +23243,20 @@ footer .footer-revistas li a:hover {
   margin-bottom: 15px;
   -webkit-box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
+  display: none;
 }
 
-.bloque-de-notas .container .banner-horizontal .ads-space {
+.bloque-de-notas .banner-horizontal > div,
+.bloque-de-notas .banner-horizontal > iframe {
   width: 970px;
   margin: 0 auto;
   display: block;
+}
+
+@media (min-width: 1020px) {
+  .bloque-de-notas .banner-horizontal {
+    display: block;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -23202,6 +23284,80 @@ footer .footer-revistas li a:hover {
     display: block;
     height: 10px;
     clear: both;
+  }
+}
+
+.conmega #eplAdDiv970x90x1,
+.conmega #eplAdDiv970x90x2,
+.conmega #eplAdDiv970x90x3,
+.conmega #eplAdDiv970x90x4,
+.conmega #eplAdDiv970x90x5,
+.conmega #eplAdDiv970x90x6,
+.conmega #eplAdDiv970x90x7,
+.conmega #eplAdDiv970x90x8,
+.conmega #eplAdDiv970x90x9 .bn-stick {
+  display: none;
+}
+
+.conmega #eplAdDiv970x90x1 > div,
+.conmega #eplAdDiv970x90x1 > iframe,
+.conmega #eplAdDiv970x90x2 > div,
+.conmega #eplAdDiv970x90x2 > iframe,
+.conmega #eplAdDiv970x90x3 > div,
+.conmega #eplAdDiv970x90x3 > iframe,
+.conmega #eplAdDiv970x90x4 > div,
+.conmega #eplAdDiv970x90x4 > iframe,
+.conmega #eplAdDiv970x90x5 > div,
+.conmega #eplAdDiv970x90x5 > iframe,
+.conmega #eplAdDiv970x90x6 > div,
+.conmega #eplAdDiv970x90x6 > iframe,
+.conmega #eplAdDiv970x90x7 > div,
+.conmega #eplAdDiv970x90x7 > iframe,
+.conmega #eplAdDiv970x90x8 > div,
+.conmega #eplAdDiv970x90x8 > iframe,
+.conmega #eplAdDiv970x90x9 .bn-stick > div,
+.conmega #eplAdDiv970x90x9 .bn-stick > iframe {
+  display: none;
+}
+
+@media only screen and (min-width: 1290px) {
+  .conmega #eplAdDiv970x90x1,
+  .conmega #eplAdDiv970x90x2,
+  .conmega #eplAdDiv970x90x3,
+  .conmega #eplAdDiv970x90x4,
+  .conmega #eplAdDiv970x90x5,
+  .conmega #eplAdDiv970x90x6,
+  .conmega #eplAdDiv970x90x7,
+  .conmega #eplAdDiv970x90x8,
+  .conmega #eplAdDiv970x90x9 .bn-stick {
+    display: block;
+  }
+
+  .conmega #eplAdDiv970x90x1 > div,
+  .conmega #eplAdDiv970x90x1 > iframe,
+  .conmega #eplAdDiv970x90x2 > div,
+  .conmega #eplAdDiv970x90x2 > iframe,
+  .conmega #eplAdDiv970x90x3 > div,
+  .conmega #eplAdDiv970x90x3 > iframe,
+  .conmega #eplAdDiv970x90x4 > div,
+  .conmega #eplAdDiv970x90x4 > iframe,
+  .conmega #eplAdDiv970x90x5 > div,
+  .conmega #eplAdDiv970x90x5 > iframe,
+  .conmega #eplAdDiv970x90x6 > div,
+  .conmega #eplAdDiv970x90x6 > iframe,
+  .conmega #eplAdDiv970x90x7 > div,
+  .conmega #eplAdDiv970x90x7 > iframe,
+  .conmega #eplAdDiv970x90x8 > div,
+  .conmega #eplAdDiv970x90x8 > iframe,
+  .conmega #eplAdDiv970x90x9 .bn-stick > div,
+  .conmega #eplAdDiv970x90x9 .bn-stick > iframe {
+    display: block;
+  }
+}
+
+@media (min-width: 1280px) {
+  .conmega .bloque.bloquextres a .meta-content h4 {
+    display: none;
   }
 }
 
@@ -23244,7 +23400,7 @@ footer .footer-revistas li a:hover {
 }
 
 .catastrofe article a .meta-contenido h2 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 1.5em;
   font-weight: 700;
   color: white;
@@ -23295,7 +23451,7 @@ footer .footer-revistas li a:hover {
 }
 
 .alerta .container article a {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
 }
 
 .alerta .container article a h2 {
@@ -23324,7 +23480,7 @@ footer .footer-revistas li a:hover {
 }
 
 .columnistas-home h5 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
@@ -23353,13 +23509,13 @@ footer .footer-revistas li a:hover {
 }
 
 .columnistas-home .columna a h2 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
   font-weight: 700;
 }
 
 .columnistas-home .columna a h4 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 13px;
   font-height: 400;
   text-transform: uppercase;
@@ -23492,7 +23648,7 @@ footer .footer-revistas li a:hover {
 }
 
 .las-mas-leidas h5 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -23533,7 +23689,7 @@ footer .footer-revistas li a:hover {
 }
 
 .las-mas-leidas ul li a h2 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: -0.01em;
@@ -23795,7 +23951,7 @@ footer .footer-revistas li a:hover {
 }
 
 .pf-new-show .col-article .headgroup h1 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -23841,7 +23997,7 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .pf-new-show .col-article .headgroup h1 {
     font-size: 4rem;
   }
@@ -24007,7 +24163,7 @@ footer .footer-revistas li a:hover {
   margin: -0.1rem 0 -1rem;
   float: left;
   line-height: 1em;
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
 }
 
 .pf-new-show .col-article .new-body p a {
@@ -24022,7 +24178,7 @@ footer .footer-revistas li a:hover {
 
 .pf-new-show .col-article .new-body p strong,
 .pf-new-show .col-article .new-body p b {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 1em;
 }
 
@@ -24091,7 +24247,7 @@ footer .footer-revistas li a:hover {
   line-height: 1;
   position: relative;
   text-align: center;
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
 }
 
 .pf-new-show .col-article .new-body blockquote {
@@ -24104,7 +24260,7 @@ footer .footer-revistas li a:hover {
 }
 
 .pf-new-show .col-article .new-body blockquote p {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-size: 1.6em;
   line-height: 1.2em;
   color: #6286B1;
@@ -24192,7 +24348,7 @@ footer .footer-revistas li a:hover {
   font-weight: 700;
   color: #6286B1;
   text-transform: uppercase;
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   line-height: 1em;
 }
 
@@ -24296,7 +24452,7 @@ footer .footer-revistas li a:hover {
 }
 
 .pf-new-show .col-article .new-body .noticia-relacionada .content-related h5 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -24323,7 +24479,7 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (min-width: 1020px) and (max-width: 1199.98px) {
+@media (min-width: 1020px) and (max-width: 1279.98px) {
   .pf-new-show .col-article .new-body .noticia-relacionada .banner-related {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -24346,7 +24502,7 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (min-width: 1020px) and (max-width: 1199.98px) {
+@media (min-width: 1020px) and (max-width: 1279.98px) {
   .pf-new-show .col-article .new-body .noticia-relacionada {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -24404,7 +24560,7 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .pf-new-show .col-article .new-body p,
   .pf-new-show .col-article .new-body ol li,
   .pf-new-show .col-article .new-body ul li {
@@ -24978,7 +25134,7 @@ footer .footer-revistas li a:hover {
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1279.98px) {
   .pf-channel-show .col-articles {
     -webkit-box-flex: inherit;
         -ms-flex: inherit;
@@ -25039,7 +25195,7 @@ footer .footer-revistas li a:hover {
 }
 
 .pf-channel-show .contiene-nota .nota-article a .data-nota h2 {
-  font-family: "Faustina", Georgia, "Times New Roman", Times, serif;
+  font-family: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
   font-size: 1.5em;
   letter-spacing: -.02em;
@@ -25077,7 +25233,7 @@ footer .footer-revistas li a:hover {
           transform: translateY(-26px);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .pf-channel-show .contiene-nota.biggest-nota .nota-article {
     position: relative;
   }
@@ -25141,7 +25297,7 @@ footer .footer-revistas li a:hover {
   margin-left: 10px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .pf-channel-show .contiene-nota.biggest-standard-nota .nota-article a .data-nota {
     position: static;
     -webkit-transform: translateY(-26px);
