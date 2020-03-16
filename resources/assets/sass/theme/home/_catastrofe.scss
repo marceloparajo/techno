@@ -72,17 +72,23 @@
 .alerta {
 	background-color: $azul-dark;
 	padding: 0;
+	transform: translateY(-15px);
 	.container {
 		background: $azul;
+		margin-top: 0;
+		margin-bottom: 0;
 		article {
 			a {
 				font-family: $font-destacada;
+				letter-spacing: -0.02em;
 				h2 {
 					color: white;
 					font-size: 1.5rem;
-					line-height: 1.6em;
+					line-height: 1.4em;
 					white-space: nowrap;
-    			overflow: hidden;
+    				overflow: hidden;
+    				display: flex;
+    				margin: 0;
 					span.hat {
 						margin: 0 5px 0 0;
 						color: $azul-light;
@@ -92,6 +98,7 @@
 						padding: 4px 10px;
 						margin: 0 10px 0 0;
 						text-transform: uppercase;
+						line-height: 1.2em;
 						.fas {
 							font-size: 1.4rem;
 							margin: 0 5px 0 0;

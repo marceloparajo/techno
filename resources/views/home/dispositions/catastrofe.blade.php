@@ -18,9 +18,15 @@
 				</a>
 			</article>
 			@endforeach
+
+{{--
 			<div id="" class="d-md-none ads-space text-center" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false"></div>
 			<div id="" class="d-none d-md-block d-lg-none ads-space text-center" data-id="468x60x-pos-" data-w="468" data-h="60" data-loaded="false" data-reload="false"></div>
 			<div id="" class="d-none d-lg-block ads-space text-center mb-5" data-id="970x90x-pos-" data-w="970" data-h="90" data-loaded="false" data-reload="false"></div>
+
+--}}
+			
 		</div>
+
 	</div>
 @endif

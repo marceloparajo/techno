@@ -1,6 +1,109 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 0)
 
+
+
+
+	<div class="container-fluid ">
+		<div class="container bloque-superior">
+
+			<div class="caja-contenido">
+				<div class="columna-a">
+					@foreach(array_slice($news, 0, 2) as $key => $new)
+					<article class="bloque superior">
+						<a href="{{ $new['permalink'] }}">
+							<figure>
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+								<h4>{{ $new['headline'] }}</h4>
+							</figure>
+
+							<div class="meta-content">
+								<h2>
+									@if ($new['hat'] != '')
+										<span class="hat">{{ $new['hat'] }} </span>
+									@endif
+									{{ $new['home_title'] }}
+								</h2>
+								@if ($new['signed'])
+									<h5 class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</h5>
+								@endif
+							</div>
+						</a>
+					</article>
+					@endforeach
+				</div>
+				<div class="columna-b">
+
+					<div class="d-flex justify-content-center w-100 mb-1">
+						<div id="" class="ads-space text-center d-block" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
+					</div>
+
+
+					@foreach(array_slice($news, 6, 2) as $key => $new)
+					<article class="bloque superior">
+						<a href="{{ $new['permalink'] }}">
+							<figure>
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+								<h4>{{ $new['headline'] }}</h4>
+							</figure>
+
+							<div class="meta-content">
+								<h2>
+									@if ($new['hat'] != '')
+										<span class="hat">{{ $new['hat'] }} </span>
+									@endif
+									{{ $new['home_title'] }}
+								</h2>
+								@if ($new['signed'])
+									<h5 class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</h5>
+								@endif
+							</div>
+						</a>
+					</article>
+					@endforeach
+
+
+
+				</div>
+			</div>
+
+			<div class="caja-right">
+
+					@foreach(array_slice($news, 2, 4) as $key => $new)
+					<article class="bloque superior">
+						<a href="{{ $new['permalink'] }}">
+							<figure>
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+								<h4>{{ $new['headline'] }}</h4>
+							</figure>
+
+							<div class="meta-content">
+								<h2>
+									@if ($new['hat'] != '')
+										<span class="hat">{{ $new['hat'] }} </span>
+									@endif
+									{{ $new['home_title'] }}
+								</h2>
+								@if ($new['signed'])
+									<h5 class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</h5>
+								@endif
+							</div>
+						</a>
+					</article>
+					@endforeach
+			</div>
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
 <section class=" container bloque-de-notas mt-3 px-0">
 
 		<div class="row pb-4 d-flex flex-column flex-md-row" >

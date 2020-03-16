@@ -23,12 +23,12 @@
 @section('body')
 
 
-	<div class="container maincontainer px-2 pt-3">
+	<div class="row maincontainer px-0 px-sm-2 pt-3">
 
 		<div class="editorial">
 			@foreach($home_content as $key => $value)
 				@if ($key != 'sidebar')
-					<section id="row {{ $key }} m-0">
+					<section id="{{ $key }}" class="row mx-0">
 						@foreach($value as $item)
 							@include('home.dispositions.' . $item['template'], ['news' => $item['news']])
 						@endforeach
