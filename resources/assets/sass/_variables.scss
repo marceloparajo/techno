@@ -4,7 +4,7 @@ $body-bg: #fff;
 $body-bg-2: #333;
 
 // Typography
-$font-family-sans-serif: "Open Sans", sans-serif;
+$font-family-sans-serif: "Source Sans Pro", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 $font-condensed: "Oswald", sans-serif;
@@ -70,13 +70,21 @@ $pf_a_color_hover: $pf_main_color;
 
 
 $negro: #0a0a0a; 
-$link: #7b7b7b;
-$hover: #990033;
-$miscelanea: #0076ba;
-$miscelanea-light: #3391c8;
 $dark:#343a40;
 $light: #f8f9fa;
 $secondary: #6c757d;
-$font-destacada: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
 $font-general: 'Source Sans Pro',Helvetica,Arial,Sans-serif;
-$font-cuerpo: Georgia,'Times New Roman',Times,Serif;
+$font-cuerpo:  'Crimson Pro', 'Times New Roman', Times, Georgia, Serif;
+
+
+
+/** PERFIL **/
+$font-destacada: 'Crimson Pro', 'Times New Roman', Times, Georgia, serif;
+$azul: #6286B1;
+$miscelanea: $azul;
+$miscelanea-light: #d0dbe4;
+$azul-light: #d0dbe4;
+$azul-dark: #445e7c;
+$link: $azul;
+$hover: $azul-dark;
+$linea: #e5e5e5;

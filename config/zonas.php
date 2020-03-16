@@ -9,11 +9,19 @@
 return [
 
     [
+        'id' => 'alerta',
+        'template' => 'alerta'
+    ],
+    [
         'id' => 'destacada-superior',
-        'template' => 'destacada-medio'
+        'template' => 'destacada'
     ],
     [
         'id' => 'bloque-superior',
+        'template' => 'bloque-superior'
+    ],
+    [
+        'id' => 'bloque-medio',
         'template' => 'bloque'
     ],
     [
@@ -22,15 +30,39 @@ return [
     ],
     [
         'id' => 'destacada-medio',
-        'template' => 'destacada-medio'
+        'template' => 'destacada'
+    ],
+    [
+        'id' => 'destacada-inferior',
+        'template' => 'destacada'
     ],
     [
         'id' => 'cobertura',
         'template' => 'cobertura'
     ],
     [
-        'id' => 'especial',
+        'id' => 'especiales',
         'template' => 'especial'
+    ],
+    [
+        'id' => 'cobertura-extra',
+        'template' => 'cobertura'
+    ],
+    [
+        'id' => 'cobertura-moderada',
+        'template' => 'cobertura-moderada'
+    ],
+    [
+        'id' => 'cobertura-general',
+        'template' => 'cobertura'
+    ],
+    [
+        'id' => 'bloomberg',
+        'template' => 'bloomberg'
+    ],
+    [
+        'id' => 'cobertura-clubmed',
+        'template' => 'cobertura'
     ],
     [
         'id' => 'catastrofe',
@@ -71,6 +103,18 @@ return [
     [
         'id' => 'sugeridas-perfil',
         'template' => 'sugeridas-perfil'
+    ],
+    [
+        'id' => 'deportes',
+        'template' => 'secciones'
+    ],
+    [
+        'id' => 'espectaculos',
+        'template' => 'secciones'
+    ],
+    [
+        'id' => 'mujer',
+        'template' => 'secciones'
     ],
 
 

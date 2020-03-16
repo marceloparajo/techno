@@ -1,9 +1,8 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
-@if (isset($news) && count($news) > 0)
+@if (isset($news) && count($news) > 2)
 
-	@if (isset($news[2]))
 
-		<section class="container-fluid cobertura bg-dark py-2 mb-4">
+		<section class="container-fluid cobertura moderada bg-dark py-2 mb-4">
 
 
 			<div class="row bn-stick bg-dark">
@@ -12,12 +11,14 @@
 					<div id="" class="ads-space text-center mt-2 mb-3" data-id="970x90x-pos-" data-w="970" data-h="90" data-loaded="false" data-reload="false"></div>
 				</div>
 			</div>
-
 			<div class="container">
 
 				<h5>{{ $news[0]['hat'] ?? '' }}</h5>
 
 				<div class="row">
+
+				@if (count($news) === 3)
+
 					<div class="col-12 col-md-6 col-lg-4 col-xl-3 nota-a order-1 order-xl-0">
 						<article class="cobertura-nota">
 							<a href="{{ $news[1]['permalink'] }}">
@@ -67,15 +68,63 @@
 						</article>
 					</div>
 
+				@elseif (count($news) === 4)
 
-				</div>
+					@foreach(array_slice($news, 0, 4) as $key => $new)
+
+						<article class="cobertura-nota-porcuatro">
+							<a href="{{ $new['permalink'] }}">
+								<figure>
+									{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+								</figure>
+								<div class="meta-content">
+									<h2>{{ $new['home_title'] }}</h2>
+									<h4><span>{{ $new['date_available_human']}}</span> {{ $new['headline'] }}</h4>
+									@if ($new['signed'])
+										<h4 class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</h4>
+									@endif
+								</div>
+							</a>
+						</article>
+
+					@endforeach
+			
+				@else
+
+					@foreach(array_slice($news, 0, 5) as $key => $new)
+						@if($key == 0)
+						<div class="col-12 col-lg-8 col-xl-4 nota-b order-0 order-lg-1">
+						@elseif($key == 1)
+						<div class="col-12 col-md-6 col-lg-4 col-xl-2 nota-c order-1 order-lg-0">
+						@else
+						<div class="col-12 col-md-6 col-lg-4 col-xl-2 nota-a order-2">
+						@endif
+						<article class="cobertura-nota-porcinco">
+							<a href="{{ $new['permalink'] }}">
+								<figure>
+									{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+								</figure>
+								<div class="meta-content">
+									<h2>{{ $new['home_title'] }}</h2>
+									<h4><span>{{ $new['date_available_human']}}</span> {{ $new['headline'] }}</h4>
+									@if ($new['signed'])
+										<h4 class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</h4>
+									@endif
+								</div>
+							</a>
+						</article>
+					</div>
+					@endforeach
+			
+				@endif
+
+				</div><!-- row -->
 
 			</div>
 
 
-
 		</section>
 
-	@endif
+
 
 @endif

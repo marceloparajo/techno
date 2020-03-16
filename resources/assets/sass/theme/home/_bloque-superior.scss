@@ -1,0 +1,271 @@
+.bloque-superior {
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+	align-items: flex-start;
+	flex-direction: column;
+	.caja-contenido {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 0;
+		.columna-a {
+			display: flex;
+			flex: 1 1 0;
+			flex-basis: 100%;
+			flex-direction: column;
+			article {
+				margin-bottom: 15px;
+				a {
+					figure {
+						margin: 0 0 10px 0;
+					}
+					.meta-content {
+						padding: 0 10px;
+					}
+				}
+				&:last-of-type {
+					padding-top: 10px;
+					border-top: 1px solid $linea;
+					a {
+						display: flex;
+						justify-content: space-between;
+						figure {
+							flex-basis: 33%;
+							margin: 0;
+						}
+						.meta-content {
+							transform: translateY(-5px);
+							flex-basis: 65%;
+							padding: 0;
+							h2 {
+								font-size: 1.2em;
+							}
+						}
+					}
+				}
+			}
+		}
+		.columna-b {
+			display: flex;
+			flex-direction: column;
+			flex-basis: 100%;
+			article {
+				padding: 10px 0 0 0;
+				border-top: 1px solid $linea;
+				margin: 0 0 15px 0;
+				a {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					figure {
+						flex-basis: 33%;
+					}
+					.meta-content {
+						flex-basis: 65%;
+						h2 {
+							font-size: 1.2em;
+						}
+					}
+				}
+			}
+		}
+	}
+	.caja-right {
+		flex-basis: 100%;
+		display: flex;
+		flex-direction: column;
+		article {
+			flex-basis: 100%;
+			margin: 0 0 10px 0;
+			padding: 10px 0 0 0;
+			border-top: 1px solid $linea;
+			a {
+				display: flex;
+				justify-content: space-between;
+				figure {
+					flex-basis: 33%;
+				}
+				.meta-content {
+					flex-basis: 65%;
+					h2 {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+	}
+	article {
+		a {
+			.meta-content {
+				h2 {
+					font-size: 1.4em;
+					line-height: 1.03em;
+					.hat {
+						color: $azul;
+						&:after {
+							content: " \2223 ";
+							font-size: .8em;
+							font-weight: bold;
+							font-family: $font-general;
+							color: $azul;
+							display: inline-block;
+							transform: translateY(-2px);
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		.caja-contenido {
+			.columna-a {
+				article {
+					a {
+						.meta-content {
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.caja-contenido {
+			flex-direction: row;
+			.columna-a {
+				flex: 1 1 0;
+				flex-direction: column;
+				article {
+					margin: 0 0 10px 0;
+				}
+			}
+			.columna-b {
+				flex-basis: 300px;
+				margin: 0 0 0 20px;
+				article {
+					padding-top: 10px;
+					border-top: 1px solid $linea;
+					a {
+						figure {
+							display: none;
+						}
+						.meta-content {
+							h2 {
+								font-size: 1.2em;
+							}
+						}
+					}
+				}
+			}
+		}
+		.caja-right {
+			margin: 15px 0 0 0;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			article {
+				flex-basis: 23%;
+				a {
+					flex-direction: column;
+					figure {
+						flex-basis: 100%;
+					}
+					.meta-content {
+						flex-basis: 100%;
+						padding: 6px 0 0 0;
+						h2 {
+							font-size: 1.1em;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		flex-direction: row;
+		.caja-right {
+			display: flex;
+			flex-basis: 300px;
+			margin: 0 0 0 20px;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			article {
+				flex-basis: 48%;
+				margin: 0 0 20px 0;
+				.meta-content {
+					padding: 10px 0 0 0;
+					h2 {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+		.caja-contenido {
+			flex-direction: row;
+			.columna-a {
+				flex: 1 1 0;
+				flex-direction: column;
+				article {
+					margin-bottom: 10px;
+					flex-basis: auto;
+				}
+			}
+			.columna-b {
+				flex-basis: 300px;
+				margin: 0 0 0 20px;
+				article {
+					margin: 0;
+					a {
+						display: flex;
+						figure {
+							display: block;
+							flex-basis: 30%;
+						}
+						.meta-content {
+							flex-basis: 70%;
+							padding: 0 0 0 10px;
+							transform: translateY(-5px);
+							h2 {
+								font-size: 1.2em;
+								line-height: 1.03em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.caja-right {
+			flex-basis: 500px;
+		}
+		.caja-contenido {
+			flex-direction: row;
+			.columna-a {
+				justify-content: flex-start;
+			}
+			.columna-b {
+				flex-basis: 300px;
+				margin-left: 20px;
+				article {
+					margin: 0;
+					a {
+						display: flex;
+						figure {
+							flex-basis: 30%;
+							display: none;
+						}
+						.meta-content {
+							flex: 1 1 0;
+							padding: 0;
+							h2 {
+								font-size: 1.2em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
