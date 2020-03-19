@@ -2,12 +2,13 @@
 
 @if (isset($news) && count($news) > 0)
 	<div class="container-fluid alerta">
-		<div class="container px-0">
+		<div class="container">
 			@foreach (array_slice($news, 0, 1) as $new)
 		
 			<article>
+				<span class="laalerta"><i class="fas fa-exclamation-circle"></i></span>
 				<a href="{{ $new['permalink'] }}">
-					<h2><span class="laalerta"><i class="fas fa-exclamation-circle"></i> Alerta</span>
+					<h2>
 						@if ($new['hat'] != '')
 							<span class="hat">{{ $new['hat'] }} </span>
 						@endif

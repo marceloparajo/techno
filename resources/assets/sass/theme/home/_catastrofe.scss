@@ -1,67 +1,202 @@
 .catastrofe {
 	background: $negro;
-	padding: 15px 0 5px 0;
+	padding: 15px 15px 5px 15px;
 	margin-bottom: 20px;
-	article {
-		position: relative;
-		margin-bottom: 10px;
-		a {
-			figure {
-				width: 100%;
-				height: 100%;
-				overflow: hidden;
-				img {
-					width: 100%;
-					height: auto;
+	.catastrofe-todas {
+		article {
+			position: relative;
+			margin-bottom: 10px;
+			&.catastrofe-grande {
+				a {
+					figure {
+						width: 100%;
+						height: 100%;
+						overflow: hidden;
+						margin: 0 0 10px 0;
+						img {
+							width: 100%;
+							height: auto;
+						}
+					}
+					.meta-content {
+						padding:0 10px;
+						h2 {
+							font:{
+								family: $font-destacada;
+								size: 1.5em;
+								weight: 400;
+							}
+							color: white;
+							letter-spacing: -0.01em;
+							margin: 0 0 10px 0;
+							line-height: 1.03em;
+							.hat {
+								color: $azul;
+								font-size: 0.98em;
+								font-weight: 600;
+								&:after {
+									content: " \2223 ";
+									font-size: .8em;
+									font-weight: normal;
+									font-family: $font-general;
+									color: $azul;
+									display: inline-block;
+									transform: translateY(-2px);
+								}
+							}
+						}
+						h4 {
+							color: $linea;
+							font: {
+								family: $font-general;
+								size: 16px;
+								weight: 400;
+							}
+							line-height: 1.2em;
+							display: none;
+						}
+					}
 				}
 			}
-			.meta-contenido {
-				text-align: center;
-				h3 {
-					font:{
-						family: $font-general;
-						size: 14px;
-						weight: normal;
+			&.catastrofe-chica {
+				padding-top: 10px;
+				border-top: 1px solid $dark;
+				a {
+					display: flex;
+					justify-content: space-between;
+					figure {
+						flex-basis: 33%;
+						margin: 0;
 					}
-					background: $miscelanea;
-					color: white;
-					margin-top: 0;
-					display: inline-block;
-					text-transform: uppercase;
-					padding: 5px 10px;
-				}
-				h2 {
-					font:{
-						family: $font-destacada;
-						size: 1.5em;
-						weight: 700;
+					.meta-content {
+						flex-basis: 65%;
+						transform: translateY(-3px);
+						padding-right: 10px;
+						h2 {
+							font:{
+								family: $font-destacada;
+								size: 1.2em;
+								weight: 400;
+							}
+							line-height: 1.08em;
+							color: white;
+							letter-spacing: -0.01em;
+							margin-bottom:0;
+							.hat {
+								color: $azul;
+								&:after {
+									content: " \2223 ";
+									font-size: .8em;
+									font-weight: normal;
+									font-family: $font-general;
+									color: $azul;
+									display: inline-block;
+									transform: translateY(-2px);
+								}
+							}
+						}
+						h4 {
+							display: none;
+						}
 					}
-					color: white;
-					margin-bottom:0;
-					padding:0 10px 20px 10px;
 				}
-				h4 {
-					display: none;
-				}
-				@include media-breakpoint-up(md) {
-					h2 {
-						font-size: 2em;
+			}
+		}
+		@include media-breakpoint-up(md) {
+			.catastrofe-tres {
+				display: flex;
+				justify-content: space-between;
+			}
+			article {
+				&.catastrofe-grande {
+					a {
+						position: relative;
+						width: 100%;
+						display: block;
+						figure {
+							width: 80%;
+							margin: 0 0 0 auto;
+						}
+						.meta-content {
+							position: absolute;
+							top: 0;
+							left: 0;
+							bottom: 0;
+							width: 80%;
+							padding-right: 40%;
+							padding-top: 10px;
+							background: linear-gradient(to right, #0a0a0a 0%, #0a0a0a 35%, transparent 100%);
+							// background: linear-gradient(to right,  rgba(10,10,10,1) 0%,rgba(10,10,10,0.70) 79%,rgba(10,10,10,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', endColorstr='#000a0a0a',GradientType=1 ); /* IE6-9 */
+							h2 {
+								font-size: 1.8em;
+							}
+							h4 {
+								display: block;
+							}
+						}
 					}
 				}
-				@include media-breakpoint-up(lg) {
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					background: white;
-					h2 {
-						font-size: 3em;
-						transform: translateY(-20px);
-						color: $negro;
-						padding: 0;
+				&.catastrofe-chica {
+					flex-basis: 32%;
+					a {
+						flex-direction: column;
+						figure {
+							flex-basis: 100%;
+							margin: 0 0 10px 0;
+						}
+						.meta-content {
+							flex-basis: 100%;
+							margin: 0;
+						}
 					}
-					h3 {
-						transform: translateY(-20px);
+				}
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			article {
+				&.catastrofe-grande {
+					a {
+						.meta-content {
+							h2 {
+								font-size: 2.4em;
+							}
+						}
+					}
+				}
+			}
+		}
+		@include media-breakpoint-up(xl) {
+			position: relative;
+			article {
+				&.catastrofe-grande {
+					a {
+						.meta-content {
+							padding-left: 0;
+							h2 {
+								font-size: 3em;
+							}
+						}
+					}
+				}
+			}
+			.catastrofe-tres {
+				position: absolute;
+				width: 30%;
+				bottom: 0;
+				flex-direction: column;
+				.catastrofe-chica {
+					margin: 0;
+					a {
+						flex-direction: row;
+						justify-content: space-between;
+						figure {
+							flex-basis: 30%;
+						}
+						.meta-content {
+							flex-basis: 67%;
+							transform: translateY(-3px);
+						}
 					}
 				}
 			}
@@ -73,10 +208,39 @@
 	background-color: $azul-dark;
 	padding: 0;
 	transform: translateY(-15px);
+	margin-bottom: -15px;
 	.container {
 		background: $azul;
 		margin-top: 0;
 		margin-bottom: 0;
+		padding: 5px 10px;
+		article {
+			display: flex;
+			justify-content: flex-start;
+			padding-top: 3px;
+			.laalerta {
+				margin: 0 10px 0 0;
+				.fas {
+					font-size: 24px;
+					color: #fff;
+				}
+			}
+			a {
+				font-family: $font-destacada;
+				letter-spacing: -0.03em;
+				h2 {
+					color: white;
+					font-size: 1.2rem;
+					line-height: 1.05em;
+					span.hat {
+						margin: 0 5px 0 0;
+						color: $azul-light;
+					}
+				}
+			}
+		}
+
+		/*
 		article {
 			a {
 				font-family: $font-destacada;
@@ -103,6 +267,18 @@
 							font-size: 1.4rem;
 							margin: 0 5px 0 0;
 						}
+					}
+				}
+			}
+		}
+		*/
+	}
+	@include media-breakpoint-up(md) {
+		.container {
+			article {
+				a {
+					h2 {
+						font-size: 1.4rem;
 					}
 				}
 			}

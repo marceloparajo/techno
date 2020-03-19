@@ -150,6 +150,7 @@
 							display: none;
 						}
 						.meta-content {
+							flex-basis: 100%;
 							h2 {
 								font-size: 1.2em;
 							}
@@ -238,15 +239,24 @@
 	@include media-breakpoint-up(xl) {
 		.caja-right {
 			flex-basis: 500px;
+			border-bottom: 1px solid $linea-oscura;
+			align-self: stretch;
+			article {
+				margin: 0;
+			}
 		}
 		.caja-contenido {
 			flex-direction: row;
+			align-self: stretch;
 			.columna-a {
 				justify-content: flex-start;
+				align-self: stretch;
+				border-bottom: 1px solid $linea-oscura;
 			}
 			.columna-b {
 				flex-basis: 300px;
 				margin-left: 20px;
+				border-bottom: 1px solid $linea-oscura;
 				article {
 					margin: 0;
 					a {

@@ -39,7 +39,7 @@
 					</div>
 
 
-					@foreach(array_slice($news, 6, 2) as $key => $new)
+					@foreach(array_slice($news, 2, 3) as $key => $new)
 					<article class="bloque superior">
 						<a href="{{ $new['permalink'] }}">
 							<figure>
@@ -69,7 +69,7 @@
 
 			<div class="caja-right">
 
-					@foreach(array_slice($news, 2, 4) as $key => $new)
+					@foreach(array_slice($news, 5, 4) as $key => $new)
 					<article class="bloque superior">
 						<a href="{{ $new['permalink'] }}">
 							<figure>

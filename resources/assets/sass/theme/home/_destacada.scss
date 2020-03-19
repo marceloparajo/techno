@@ -57,7 +57,7 @@
 							}
 							color: $negro;
 							line-height: 1.1em;
-							letter-spacing: -0.02em;
+							letter-spacing: -0.03em;
 							transition: ease .3s;
 							.hat {
 								color: $azul;
@@ -334,23 +334,29 @@
 							}
 						}
 					}
+					border-bottom: 1px solid $linea-oscura;
+					align-self: stretch;
 				}
 				.columna-b {
 					flex-basis: 300px;
+					border-bottom: 1px solid $linea-oscura;
+					align-self: stretch;
 				}
 				.columna-c {
 					margin: 0 -10px 0 10px;
 					flex-basis: 200px;
 					flex-direction: column;
+					border-bottom: 1px solid $linea-oscura;
+					align-self: stretch;
 					article {
 						width: 100%;
+						margin-bottom: 20px;
 						a {
 							figure {
 								display: none;
 							}
 						}
 						&:first-of-type {
-							margin-bottom: 10px;
 							a {
 								figure {
 									display: flex;

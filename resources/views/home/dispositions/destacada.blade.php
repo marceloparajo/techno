@@ -29,6 +29,9 @@
 								</div>
 							</a>
 						</article>
+						
+						@if ( count($news) > 2)
+
 						<article class="destacadita">
 							<a href="{{ $news[2]['permalink'] }}">
 								<figure>
@@ -48,6 +51,8 @@
 								</div>
 							</a>
 						</article>
+
+						@endif
 
 						<div class="row text-center my-2 d-flex d-md-none justify-content-center w-100">
 							<div id="" class="ads-space text-center d-block d-md-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>

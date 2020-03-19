@@ -21,7 +21,7 @@
 
 				<div class="d-flex justify-content-start">
 
-		            <div class="elisologo pl-2">
+		            <div class="elisologo pl-2 pl-sm-0">
 		            	<div id="hamburguesa" class="hamburguer" onclick="myFunction(this)">
 							<div class="bar1"></div>
 							<div class="bar2"></div>
@@ -126,9 +126,9 @@
 
 
 			<div class="social-header text-right d-none d-lg-flex justify-content-end pt-2">
-				<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" class="d-block link-social-facebook ml-4 bg-transparent px-1"><i class="fab fa-facebook-f"></i></a>
-				<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" class="d-block link-social-instagram ml-4 bg-transparent px-1-1"><i class="d-block fab fa-instagram"></i></a>
-				<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" class="d-block link-social-twitter ml-4 bg-transparent px-1"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" class="d-block link-social-facebook ml-4 bg-transparent px-1"><i class="fa fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" class="d-block link-social-instagram ml-4 bg-transparent px-1-1"><i class="d-block fa fa-instagram"></i></a>
+				<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" class="d-block link-social-twitter ml-4 bg-transparent px-1"><i class="fa fa-twitter"></i></a>
 				<a href="{{ route('feeds.lastposts') }}" target="_blank" class="d-block link-social-rss ml-4 bg-transparent px-1"><i class="fa fa-rss"></i></a>
 			</div>
 
