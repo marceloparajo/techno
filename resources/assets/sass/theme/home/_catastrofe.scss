@@ -20,6 +20,17 @@
 					}
 					.meta-content {
 						padding:0 10px;
+						h3 {
+							font:{
+								family: $font-general;
+								size: 14px;
+								height: 700;
+							}
+							color: $azul;
+							margin: 0;
+							text-transform: uppercase;
+							padding: 0;
+						}
 						h2 {
 							font:{
 								family: $font-destacada;
@@ -35,7 +46,7 @@
 								font-size: 0.98em;
 								font-weight: 600;
 								&:after {
-									content: " \2223 ";
+									content: " / ";
 									font-size: .8em;
 									font-weight: normal;
 									font-family: $font-general;
@@ -72,6 +83,17 @@
 						flex-basis: 65%;
 						transform: translateY(-3px);
 						padding-right: 10px;
+						h3 {
+							font:{
+								family: $font-general;
+								size: 14px;
+								height: 700;
+							}
+							color: $azul;
+							margin: 0;
+							text-transform: uppercase;
+							padding: 0;
+						}
 						h2 {
 							font:{
 								family: $font-destacada;
@@ -85,7 +107,7 @@
 							.hat {
 								color: $azul;
 								&:after {
-									content: " \2223 ";
+									content: " / ";
 									font-size: .8em;
 									font-weight: normal;
 									font-family: $font-general;

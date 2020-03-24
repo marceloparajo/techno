@@ -34,7 +34,7 @@
 							margin: 0;
 						}
 						.meta-content {
-							transform: translateY(-5px);
+							transform: translateY(-2px);
 							flex-basis: 65%;
 							padding: 0;
 							h2 {
@@ -90,6 +90,71 @@
 					h2 {
 						font-size: 1.2em;
 					}
+					h4 {
+						color: $dark;
+						display: none;
+					}
+				}
+			}
+			&:first-of-type {
+				a {
+					flex-direction: column;
+					justify-content: auto;
+					figure {
+						flex-basis: 100%;
+					}
+					.meta-content {
+						flex-basis: 100%;
+						padding: 5px 10px;
+						h4 {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cuatro-notas {
+		display: flex;
+		flex-direction: column;
+		article {
+			width: 100%;
+			a {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 10px 0 0 0;
+				margin: 0 0 10px 0;
+				border-top: 1px solid $linea;
+				figure {
+					flex-basis: 33%;
+				}
+				.meta-content {
+					flex-basis: 65%;
+					h2 {
+						font-size: 1.2em;
+						line-height: 1.03em;
+						letter-spacing: -0.02em;
+					}
+					h4 {
+						color: $dark;
+					}
+				}
+			}
+			&:first-of-type {
+				a {
+					flex-direction: column;
+					justify-content: auto;
+					figure {
+						flex-basis: 100%;
+					}
+					.meta-content {
+						flex-basis: 100%;
+						padding: 5px 10px;
+						h4 {
+							display: block;
+						}
+					}
 				}
 			}
 		}
@@ -103,7 +168,7 @@
 					.hat {
 						color: $azul;
 						&:after {
-							content: " \2223 ";
+							content: " / ";
 							font-size: .8em;
 							font-weight: bold;
 							font-family: $font-general;
@@ -124,6 +189,24 @@
 						.meta-content {
 							padding: 0;
 						}
+					}
+				}
+			}
+		}
+		.caja-right {
+			article:first-of-type {
+				a {
+					.meta-content {
+						padding: 0;
+					}
+				}
+			}
+		}
+		.cuatro-notas {
+			article:first-of-type {
+				a {
+					.meta-content {
+						padding: 0;
 					}
 				}
 			}
@@ -177,6 +260,31 @@
 						h2 {
 							font-size: 1.1em;
 						}
+						h4 {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		.cuatro-notas {
+			flex-direction: row;
+			justify-content: space-between;
+			article {
+				flex-basis: 23%;
+				a {
+					flex-direction: column;
+					figure {
+						flex-basis: 100%;
+					}
+					.meta-content {
+						flex-basis: 100%;
+						h2 {
+							font-size: 1.1em;
+						}
+						h4 {
+							display: none;
+						}
 					}
 				}
 			}
@@ -198,6 +306,9 @@
 					h2 {
 						font-size: 1.2em;
 					}
+					h4 {
+						display: none;
+					}
 				}
 			}
 		}
@@ -209,6 +320,16 @@
 				article {
 					margin-bottom: 10px;
 					flex-basis: auto;
+					&:last-of-type {
+						a {
+							figure {
+								display: none;
+							}
+							.meta-content {
+								flex-basis: 100%;
+							}
+						}
+					}
 				}
 			}
 			.columna-b {
@@ -218,14 +339,10 @@
 					margin: 0;
 					a {
 						display: flex;
-						figure {
-							display: block;
-							flex-basis: 30%;
-						}
 						.meta-content {
-							flex-basis: 70%;
-							padding: 0 0 0 10px;
-							transform: translateY(-5px);
+							flex-basis: 100%;
+							padding: 0;
+							transform: translateY(0);
 							h2 {
 								font-size: 1.2em;
 								line-height: 1.03em;
@@ -243,6 +360,22 @@
 			align-self: stretch;
 			article {
 				margin: 0;
+				a {
+					.meta-content {
+						h4 {
+							display: block;
+						}
+					}
+				}
+				&:nth-child(n+3) {
+					a {
+						.meta-content {
+							h4 {
+								display: none;
+							}
+						}
+					}
+				}
 			}
 		}
 		.caja-contenido {
@@ -252,28 +385,21 @@
 				justify-content: flex-start;
 				align-self: stretch;
 				border-bottom: 1px solid $linea-oscura;
-			}
-			.columna-b {
-				flex-basis: 300px;
-				margin-left: 20px;
-				border-bottom: 1px solid $linea-oscura;
 				article {
-					margin: 0;
-					a {
-						display: flex;
-						figure {
-							flex-basis: 30%;
-							display: none;
-						}
-						.meta-content {
-							flex: 1 1 0;
-							padding: 0;
-							h2 {
-								font-size: 1.2em;
+					&:last-of-type {
+						a {
+							figure {
+								display: block;
+							}
+							.meta-content {
+								flex-basis: 65%;
 							}
 						}
 					}
 				}
+			}
+			.columna-b {
+				border-bottom: 1px solid $linea-oscura;
 			}
 		}
 	}

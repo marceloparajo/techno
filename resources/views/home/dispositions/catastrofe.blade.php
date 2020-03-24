@@ -11,10 +11,10 @@
 						{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-big-wide'], 1140, $new['main_image']['caption'],'img-fluid','1140x540') !!}
 					</figure>
 					<div class="meta-content">
+						@if ($new['hat'] != '')
+							<h3 class="hat">{{ $new['hat'] }} </h3>
+						@endif
 						<h2>
-							@if ($new['hat'] != '')
-								<span class="hat">{{ $new['hat'] }} </span>
-							@endif
 							{{ $new['home_title'] }}
 						</h2>
 						<h4 class="headline">{{ $new['headline'] }}</h4>
@@ -32,10 +32,10 @@
 								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid','270x152') !!}
 							</figure>
 							<div class="meta-content">
-								<h2>
 									@if ($new['hat'] != '')
-										<span class="hat">{{ $new['hat'] }} </span>
+										<h3 class="hat">{{ $new['hat'] }} </h3>
 									@endif
+								<h2>
 									{{ $new['home_title'] }}
 								</h2>
 								<h4 class="headline">{{ $new['headline'] }}</h4>
