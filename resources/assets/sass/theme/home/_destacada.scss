@@ -324,7 +324,7 @@
 					}
 				}
 				.columna-b {
-					flex-basis: 300px;
+					flex-basis: 306px;
 					article {
 						&:last-of-type {
 							padding-top: 0;
@@ -401,6 +401,7 @@
 				.columna-b {
 					border-bottom: 1px solid $linea-oscura;
 					align-self: stretch;
+					margin-left: 25px;
 					article {
 						a {
 							.meta-content {
@@ -410,19 +411,12 @@
 						&:last-of-type {
 							padding-top: 10px;
 							border-top: 1px solid $linea;
-							a {
-								.meta-content {
-									h4 {
-										display: block;
-									}
-								}
-							}
 						}
 					}
 				}
 				.columna-c {
-					margin: 0 -10px 0 10px;
-					flex-basis: 320px;
+					margin: 0 -10px 0 15px;
+					flex-basis: 326px;
 					flex-direction: column;
 					border-bottom: 1px solid $linea-oscura;
 					align-self: stretch;

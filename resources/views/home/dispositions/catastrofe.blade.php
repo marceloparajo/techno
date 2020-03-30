@@ -18,6 +18,9 @@
 							{{ $new['home_title'] }}
 						</h2>
 						<h4 class="headline">{{ $new['headline'] }}</h4>
+						@if ($new['signed'])
+							<h5 class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</h5>
+						@endif
 					</div>
 				</a>
 			</article>

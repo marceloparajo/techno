@@ -22,11 +22,11 @@ return [
     ],
     [
         'id' => 'bloque-medio',
-        'template' => 'bloque'
+        'template' => 'bloque-superior'
     ],
     [
         'id' => 'bloque-inferior',
-        'template' => 'bloque'
+        'template' => 'bloque-superior'
     ],
     [
         'id' => 'destacada-medio',
@@ -50,7 +50,7 @@ return [
     ],
     [
         'id' => 'cobertura-moderada',
-        'template' => 'cobertura-moderada'
+        'template' => 'cobertura'
     ],
     [
         'id' => 'cobertura-general',
@@ -115,6 +115,14 @@ return [
     [
         'id' => 'mujer',
         'template' => 'secciones'
+    ],
+    [
+        'id' => 'radio',
+        'template' => 'seccionfija'
+    ],
+    [
+        'id' => 'cobertura-radioperfil',
+        'template' => 'seccionfija'
     ],
 
 

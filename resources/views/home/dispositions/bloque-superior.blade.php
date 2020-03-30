@@ -13,7 +13,7 @@
 					<article class="bloque superior">
 						<a href="{{ $new['permalink'] }}">
 							<figure>
-								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
 							</figure>
 
 							<div class="meta-content">
@@ -43,7 +43,7 @@
 					<article class="bloque superior">
 						<a href="{{ $new['permalink'] }}">
 							<figure>
-								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
 								<h4>{{ $new['headline'] }}</h4>
 							</figure>
 
@@ -73,7 +73,7 @@
 					<article class="bloque superior">
 						<a href="{{ $new['permalink'] }}">
 							<figure>
-								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
 								<h4>{{ $new['headline'] }}</h4>
 							</figure>
 
@@ -112,7 +112,7 @@
 					<article class="bloque superior">
 						<a href="{{ $new['permalink'] }}">
 							<figure>
-								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
 								<h4>{{ $new['headline'] }}</h4>
 							</figure>
 
@@ -123,8 +123,8 @@
 								<h2>
 									{{ $new['home_title'] }}
 								</h2>
+								<h4>{{ $new['headline'] }}</h4>
 								@if ($new['signed'])
-									<h4>{{ $new['headline'] }}</h4>
 									<h5 class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</h5>
 								@endif
 							</div>

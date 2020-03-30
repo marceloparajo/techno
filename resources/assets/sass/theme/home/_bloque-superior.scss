@@ -40,6 +40,9 @@
 							h2 {
 								font-size: 1.2em;
 							}
+							h4 {
+								display: none;
+							}
 						}
 					}
 				}
@@ -138,6 +141,7 @@
 					}
 					h4 {
 						color: $dark;
+						display: none;
 					}
 				}
 			}
@@ -165,18 +169,6 @@
 				h2 {
 					font-size: 1.4em;
 					line-height: 1.03em;
-					.hat {
-						color: $azul;
-						&:after {
-							content: " / ";
-							font-size: .8em;
-							font-weight: bold;
-							font-family: $font-general;
-							color: $azul;
-							display: inline-block;
-							transform: translateY(-2px);
-						}
-					}
 				}
 			}
 		}
@@ -265,6 +257,15 @@
 						}
 					}
 				}
+				&:first-of-type {
+					a {
+						.meta-content {
+							h4 {
+								display: none;
+							}
+						}
+					}
+				}
 			}
 		}
 		.cuatro-notas {
@@ -276,6 +277,7 @@
 					flex-direction: column;
 					figure {
 						flex-basis: 100%;
+						margin: 0 0 5px 0;
 					}
 					.meta-content {
 						flex-basis: 100%;
@@ -284,6 +286,15 @@
 						}
 						h4 {
 							display: none;
+						}
+					}
+				}
+				&:first-of-type {
+					a {
+						.meta-content {
+							h4 {
+								display: none;
+							}
 						}
 					}
 				}
@@ -305,9 +316,6 @@
 					padding: 10px 0 0 0;
 					h2 {
 						font-size: 1.2em;
-					}
-					h4 {
-						display: none;
 					}
 				}
 			}
@@ -360,18 +368,11 @@
 			align-self: stretch;
 			article {
 				margin: 0;
-				a {
-					.meta-content {
-						h4 {
-							display: block;
-						}
-					}
-				}
-				&:nth-child(n+3) {
+				&:nth-child(-n+2) {
 					a {
 						.meta-content {
 							h4 {
-								display: none;
+								display: block;
 							}
 						}
 					}
@@ -400,6 +401,31 @@
 			}
 			.columna-b {
 				border-bottom: 1px solid $linea-oscura;
+			}
+		}
+		.cuatro-notas {
+			article {
+				flex-basis: 23.5%;
+				a {
+					border-top: none;
+					.meta-content {
+						h2 {
+							font-size: 1.3em;
+						}
+						h4 {
+							display: block;
+						}
+					}
+				}
+				&:first-of-type {
+					a {
+						.meta-content {
+							h4 {
+								display: block;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
