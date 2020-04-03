@@ -1,6 +1,9 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
-@if (isset($news) && count($news) > 0)
 
+
+
+
+@if (isset($news) && count($news) > 0)
 
 	<div class="container-fluid ">
 
@@ -130,6 +133,7 @@
 
 					</div>
 
+
 				</div>
 
 
@@ -142,6 +146,16 @@
 				</div>
 
 			</div><!-- caja-contenido -->
+
+
+
+
+
+
+			<div class="caja-right">
+				<p style="padding: 20px;font-size:2em;">CONTENIDO SIDEBAR</p>
+			</div>
+
 
 		</div><!-- container-destacada -->
 

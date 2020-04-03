@@ -197,6 +197,9 @@
 			}
 		}
 	}
+	.caja-right {
+		flex-basis: 100%;
+	}
 
 	@include media-breakpoint-up(sm) {
 		.caja-contenido {
@@ -217,8 +220,8 @@
 	@include media-breakpoint-up(md) {
 		.caja-contenido {
 			.container {
+				flex-wrap: wrap;
 				.columna-a {
-					box-shadow: 0 30px 20pxpx -20px rgba(0, 0, 0, 0.2);
 					.main-destacada {
 						a {
 							.meta-content {
@@ -324,7 +327,7 @@
 					}
 				}
 				.columna-b {
-					flex-basis: 306px;
+					flex-basis: 206px;
 					article {
 						&:last-of-type {
 							padding-top: 0;
@@ -343,9 +346,9 @@
 					}
 				}
 				.columna-c {
-					flex-basis: 100%;
 					article {
-						flex-basis: 300px;
+						flex-basis: 31.5%;
+						padding-top: none;
 						a {
 							.meta-content {
 								h2 {
@@ -359,6 +362,12 @@
 					}
 				}
 			}
+		}
+		.caja-right {
+			flex-basis: 300px;
+			margin: 0 0 0 20px;
+			background: #fde;
+			align-self: stretch;
 		}
 	}
 	@include media-breakpoint-up(xl) {
@@ -416,7 +425,7 @@
 				}
 				.columna-c {
 					margin: 0 -10px 0 15px;
-					flex-basis: 326px;
+					flex-basis: 226px;
 					flex-direction: column;
 					border-bottom: 1px solid $linea-oscura;
 					align-self: stretch;
@@ -430,6 +439,11 @@
 							figure {
 								display: none;
 							}
+							.meta-content {
+								h4 {
+									display: none;
+								}
+							}
 						}
 						&:first-of-type {
 							padding-top: 0;
@@ -438,13 +452,9 @@
 								figure {
 									display: flex;
 								}
-							}
-						}
-						&:last-of-type {
-							a {
 								.meta-content {
 									h4 {
-										display: none;
+										display: block;
 									}
 								}
 							}
