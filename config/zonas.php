@@ -122,7 +122,7 @@ return [
     ],
     [
         'id' => 'cobertura-radioperfil',
-        'template' => 'seccionfija'
+        'template' => 'caja-general'
     ],
 
 

@@ -1,18 +1,23 @@
+/** COBERTURA **/
+
 .cobertura {
 	* {
 		box-sizing: border-box;
 	}
 	background: $fondo-gris;
+	margin: 20px 0;
 	.container {
-		h6 {
-			font-family: $font-destacada;
-			font-weight: 600;
-			font-size: 1.5em;
-			text-transform: uppercase;
-			padding: 0 10px;
-		}
 		.row {
+			h6 {
+				font-family: $font-destacada;
+				font-weight: 600;
+				font-size: 1.5em;
+				text-transform: uppercase;
+				padding: 0 10px;
+			}
 			.notas-cobertura {
+				display: flex;
+				flex-direction: column;
 				display: flex;
 				flex-direction: column;
 				.cobertura-nota {
@@ -23,7 +28,7 @@
 						display: flex;
 						justify-content: space-between;
 						figure {
-							width: 33%;
+							flex-basis: 33%;
 							height: auto;
 							img {
 								width: 100%;
@@ -33,7 +38,7 @@
 						}
 						.meta-content {
 							transform: translateY(-2px);
-							width: 65%;
+							flex-basis: 65%;
 							padding-right: 10px;
 							h3 {
 								font-size: 14px;
@@ -55,6 +60,13 @@
 							}
 							h4 {
 								display: none;
+								font: {
+									family: $font-general;
+									size: 1em;
+									weight: normal;
+								}
+								color: $negro;
+								margin: 10px 0 0 0;
 							}
 							h5 {
 								font: {
@@ -66,16 +78,28 @@
 							}
 						}
 					}
-					&:first-of-type {
+					&:hover {
+						figure {
+							img {
+								filter: brightness(110%);
+							}
+						}
+					}
+				}
+				.columna-a {
+					display: flex;
+					flex-direction: column;
+					.cobertura-nota {
 						border-top: none;
+						padding-top: 0;
 						a {
 							flex-direction: column;
 							figure {
-								width: 100%;
+								flex-basis: 100%;
 								margin: 0 0 10px 0;
 							}
 							.meta-content {
-								width: 100%;
+								flex-basis: 100%;
 								padding: 0 10px;
 								h2 {
 									font-size: 1.4em;
@@ -87,10 +111,76 @@
 							}
 						}
 					}
-					&:hover {
-						figure {
-							img {
-								filter: brightness(110%);
+				}
+				.columna-b {
+					display: flex;
+					flex-direction: column;
+				}
+				.columna-c {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		.container {
+			.row {
+				h6 {
+					padding: 0;
+				}
+				.notas-cobertura {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					.columna-a {
+						flex: 1 1 0;
+						.cobertura-nota {
+							a {
+								.meta-content {
+									padding: 0;
+								}
+							}
+						}
+					}
+					.columna-b {
+						flex-direction: column;
+						flex-basis: 31.5%;
+						margin: 0 0 0 20px;
+						.cobertura-nota {
+							a {
+								flex-direction: column;
+								figure {
+									flex-basis: 100%;
+									margin: 0 0 5px 0;
+									display: none;
+								}
+								.meta-content {
+									flex-basis: 100%;
+									padding: 0;
+								}
+							}
+							&:first-of-type {
+								padding-top: 0;
+								border-top: 0;
+							}
+						}
+					}
+					.columna-c {
+						flex-basis: 100%;
+						flex-direction: row;
+						justify-content: space-between;
+						.cobertura-nota {
+							width: 31.5%;
+							a {
+								flex-direction: column;
+								figure {
+									flex-basis: 100%;
+								}
+								.meta-content {
+									flex-basis: 100%;
+								}
 							}
 						}
 					}
@@ -98,6 +188,111 @@
 			}
 		}
 	}
+	@include media-breakpoint-up(md) {
+		.container {
+			.row {
+				.notas-cobertura {
+					.columna-b {
+						.cobertura-nota {
+							&:first-of-type {
+								a {
+									figure {
+										display: block;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+	@include media-breakpoint-up(lg) {
+		.container {
+			.row {
+				.notas-cobertura {
+					.columna-b {
+						flex-basis: 300px;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.container {
+			.row {
+				.notas-cobertura {
+					.columna-a {
+						.cobertura-nota {
+							padding-bottom: 0;
+						}
+					}
+					.columna-b {
+						flex-basis: 486px;
+						flex-direction: row;
+						justify-content: space-between;
+						margin: 0 0 0 20px;
+						.cobertura-nota {
+							flex-basis: 48%;
+							padding: 0;
+							a {
+								.meta-content {
+									h4 {
+										display: block;
+									}
+								}
+							}
+							&:last-of-type {
+								border-top: none;
+								a {
+									figure {
+										display: block;
+									}
+								}
+							}
+						}
+					}
+					.columna-c {
+						flex-basis: 300px;
+						margin: 0 0 0 20px;
+						flex-direction: column;
+						.cobertura-nota {
+							width: 100%;
+							padding-bottom: 0;
+							a {
+								flex-direction: row;
+								justify-content: space-between;
+								figure {
+									flex-basis: 48%;
+									margin: 0;
+								}
+								.meta-content {
+									flex-basis: 48%;
+									h3 {
+										display: none;
+									}
+									h4 {
+										display: none;
+									}
+								}
+							}
+							&:first-of-type {
+								padding-top: 0;
+								border-top: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
 	
 	.bn-stick {
 	    position: sticky;
@@ -138,6 +333,288 @@
 	}
 }
 
+
+
+/** CAJA GENERAL **/
+
+.cajageneral {
+	* {
+		box-sizing: border-box;
+	}
+	.container {
+		.row {
+			display: flex;
+			flex-direction: column;
+			.notas-cajageneral {
+				flex-basis: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				border: 1px solid $linea;
+				margin: 20px 0;
+				.header-cajageneral {
+					width: 100%;
+					height: 50px;
+					background:{
+						repeat: no-repeat;
+						position: 10px 10px;
+					}
+					h6 {
+						text-indent: -9999px;
+					}			
+				}
+				.footer-cajageneral {
+					width: 100%;
+					background-color: #e6e6e6;
+					border-top: 1px solid $linea;
+					height: 40px;
+					background:{
+						color: #e6e6e6;
+						image: url('img/perfil-logo-xs.png');
+						repeat: no-repeat;
+						position: 10px 5px;
+					}
+				}
+				.columna-a {
+					width: 100%;
+					padding: 10px;
+					.caja-nota {
+						width: 100%;
+						padding: 10px 0;
+						border-top: 1px solid $linea;
+						a {
+							display: flex;
+							justify-content: space-between;
+							figure {
+								flex-basis: 33%;
+								margin: 0;
+								img {
+									margin: 0;
+								}
+							}
+							.meta-content {
+								flex-basis: 65%;
+								color: $dark;
+								h3 {
+									display: none;
+								}
+								h4 {
+									display: none;
+								}
+								h2 {
+									font:{
+										family: $font-destacada;
+										size: 1.2em;
+										weight: 600;
+									}
+									line-height: 1.03em; 
+									margin: 0;
+								}
+							}
+						}
+						&:first-of-type {
+							padding-top: 0;
+							border-top: none;
+							a {
+								flex-direction: column;
+								figure {
+									flex-basis: 100%;
+									margin: 0 0 5px 0;
+								}
+								.meta-content {
+									flex-basis: 100%;
+									h2 {
+										font-size: 1.4em;
+										letter-spacing: -0.03em;
+									}
+								}
+							}
+						}
+					}
+				}
+				&.radio-perfil {
+					.header-cajageneral {
+						background:{
+							image: url(img/radio-perfil.png);
+							size: 120px;
+						}
+					}
+					.footer-cajageneral {
+						display: flex;
+						justify-content: flex-end;
+						span {
+							display: inline-block;
+							margin: 5px 10px;
+							font-size: 13px;
+							line-height: 1em;
+							min-width: 90px;
+							text-transform: uppercase;
+							a {
+								color: $dark;
+								display: block;
+								.fas {
+									background: #70b3c8;
+									margin: 0 10px 0 0;
+									float: left;
+									display: block;
+									width: 28px;
+									height: 28px;
+									text-align: center;
+									color: white;
+									border-radius: 50%;
+									line-height: 28px;
+									transition: ease .3s;
+									&.fa-play {
+										padding-left: 3px;
+									}
+								}
+								&:hover {
+									.fas {
+										background-color: #387ab7;
+									}
+								}
+							}
+						}
+					}
+				}
+				&.perfil-educacion {
+					.header-cajageneral {
+						background:{
+							image: url(img/perfil-educacion.png);
+							size: 98px;
+						}
+					}
+					.footer-cajageneral {
+						ul {
+							padding: 10px 10px 0 10px;
+							margin: 0;
+							list-style: none;
+							li {
+								float: right;
+								display: inline-block;
+								text-transform: uppercase;
+								a {
+									color: $dark;
+									&:hover {
+										color: $azul;
+									}
+								}
+								&:after {
+									content: " | ";
+									display: inline-block;
+									margin: 0 10px;
+								}
+								&:first-of-type {
+									&:after {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		.container {
+			.row {
+				.notas-cajageneral {
+					.columna-a {
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						flex-wrap: wrap;
+						.caja-nota {
+							flex-basis: 49%;
+							border-top: none;
+							padding-top: 0;
+							a {
+								flex-direction: column;
+								.meta-content {
+									h2 {
+										letter-spacing: -0.02em;
+									}
+								}
+								figure {
+									margin: 0 0 5px;
+								}
+							}
+							&:first-of-type {
+								flex-basis: 100%;
+								a {
+									.meta-content {
+										h2 {
+											font-size: 1.2em;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-only(md) {
+		.container {
+			.row {
+				.notas-cajageneral {
+					.columna-a {
+						.caja-nota {
+							flex-basis: 25%;
+							padding-left: 8px;
+							border-left: 1px solid $linea;
+							&:first-of-type {
+								flex-basis: 48%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.container {
+			.row {
+				flex-direction: row;
+				justify-content: space-between;
+				.notas-cajageneral {
+					flex-basis: 48%;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.container {
+			.row {
+				.notas-cajageneral {
+					flex-basis: 49%;
+					.columna-a {
+						.caja-nota {
+							flex-basis: 25%;
+							padding-left: 8px;
+							border-left: 1px solid $linea;
+							padding-bottom: 0;
+							flex-direction: row;
+							&:first-of-type {
+								flex-basis: 47%;
+								padding-left: 0;
+								border-left: none;
+								a {
+									.meta-content {
+										h2 {
+											font-size: 1.2em;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 
 .seccionfija {
