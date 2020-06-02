@@ -373,6 +373,32 @@
 						repeat: no-repeat;
 						position: 10px 5px;
 					}
+					ul {
+						padding: 10px 10px 0 10px;
+						margin: 0;
+						list-style: none;
+						li {
+							float: right;
+							display: inline-block;
+							text-transform: uppercase;
+							a {
+								color: $dark;
+								&:hover {
+									color: $azul;
+								}
+							}
+							&:after {
+								content: " | ";
+								display: inline-block;
+								margin: 0 10px;
+							}
+							&:first-of-type {
+								&:after {
+									display: none;
+								}
+							}
+						}
+					}
 				}
 				.columna-a {
 					width: 100%;
@@ -483,32 +509,20 @@
 							size: 98px;
 						}
 					}
-					.footer-cajageneral {
-						ul {
-							padding: 10px 10px 0 10px;
-							margin: 0;
-							list-style: none;
-							li {
-								float: right;
-								display: inline-block;
-								text-transform: uppercase;
-								a {
-									color: $dark;
-									&:hover {
-										color: $azul;
-									}
-								}
-								&:after {
-									content: " | ";
-									display: inline-block;
-									margin: 0 10px;
-								}
-								&:first-of-type {
-									&:after {
-										display: none;
-									}
-								}
-							}
+				}
+				&.marieclaire {
+					.header-cajageneral {
+						background:{
+							image: url(img/marieclaire.png);
+							position: 10px 22px;
+						}
+					}
+				}
+				&.canalnet {
+					.header-cajageneral {
+						background:{
+							image: url(img/canal-net.png);
+							position: 10px 20px;
 						}
 					}
 				}

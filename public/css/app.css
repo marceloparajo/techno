@@ -18397,6 +18397,36 @@ footer .footer-revistas li a:hover {
   background-position: 10px 5px;
 }
 
+.cajageneral .container .row .notas-cajageneral .footer-cajageneral ul {
+  padding: 10px 10px 0 10px;
+  margin: 0;
+  list-style: none;
+}
+
+.cajageneral .container .row .notas-cajageneral .footer-cajageneral ul li {
+  float: right;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.cajageneral .container .row .notas-cajageneral .footer-cajageneral ul li a {
+  color: #343a40;
+}
+
+.cajageneral .container .row .notas-cajageneral .footer-cajageneral ul li a:hover {
+  color: #6286B1;
+}
+
+.cajageneral .container .row .notas-cajageneral .footer-cajageneral ul li:after {
+  content: " | ";
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.cajageneral .container .row .notas-cajageneral .footer-cajageneral ul li:first-of-type:after {
+  display: none;
+}
+
 .cajageneral .container .row .notas-cajageneral .columna-a {
   width: 100%;
   padding: 10px;
@@ -18533,34 +18563,14 @@ footer .footer-revistas li a:hover {
   background-size: 98px;
 }
 
-.cajageneral .container .row .notas-cajageneral.perfil-educacion .footer-cajageneral ul {
-  padding: 10px 10px 0 10px;
-  margin: 0;
-  list-style: none;
+.cajageneral .container .row .notas-cajageneral.marieclaire .header-cajageneral {
+  background-image: url(/images/marieclaire.png?a3d62211b763d052f139cea3fb9254f3);
+  background-position: 10px 22px;
 }
 
-.cajageneral .container .row .notas-cajageneral.perfil-educacion .footer-cajageneral ul li {
-  float: right;
-  display: inline-block;
-  text-transform: uppercase;
-}
-
-.cajageneral .container .row .notas-cajageneral.perfil-educacion .footer-cajageneral ul li a {
-  color: #343a40;
-}
-
-.cajageneral .container .row .notas-cajageneral.perfil-educacion .footer-cajageneral ul li a:hover {
-  color: #6286B1;
-}
-
-.cajageneral .container .row .notas-cajageneral.perfil-educacion .footer-cajageneral ul li:after {
-  content: " | ";
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.cajageneral .container .row .notas-cajageneral.perfil-educacion .footer-cajageneral ul li:first-of-type:after {
-  display: none;
+.cajageneral .container .row .notas-cajageneral.canalnet .header-cajageneral {
+  background-image: url(/images/canal-net.png?61298a7f657d6d096262750f9a97c94e);
+  background-position: 10px 20px;
 }
 
 @media (min-width: 576px) {
