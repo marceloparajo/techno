@@ -80,11 +80,11 @@
 			background: #fff;
 			position: relative;
 			li {
-				padding: 10px;
+				padding: 6px;
 				display: block;
 				box-sizing: border-box;
-				width: 180px;
-				font-size: 16px;
+				width: 160px;
+				font-size: 14px;
 				color: #666;
 				border-left: 1px solid #e0e0e0;
 				border-right: 1px solid #e0e0e0;
@@ -104,7 +104,7 @@
 				}
 				ul {
 					position: absolute;
-					left: 178px;
+					left: 158px;
 					top: -1px;
 					background: #fff;
 					display: block;
@@ -118,7 +118,7 @@
 						li {
 							float: left;
 							border-right: none;
-							width: 180px;
+							width: 160px;
 							&.despliega {
 								padding: 0;
 								border: none;
@@ -167,10 +167,9 @@
 	font-family: $font-general;
 	background:{
 		color: white;
-		position: center;
 	}
 	padding: 4px 0;
-	transition: padding 1s;
+	transition: ease 1s;
 	.logo,
 	.logo-alt {
 		padding: 5px;

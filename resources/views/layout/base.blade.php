@@ -99,21 +99,19 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
         @endif
     </head>
 
-    <body class="@yield('body-class', '') bg-white">
-        <div class="container-fluid m-0 p-0">
-            @include('layout.header')
+    <body class="@yield('body-class', '')">
+        @include('layout.header')
 
-            @yield('body')
+        @yield('body')
 
-            <div id="" class="ads-space" data-id="anuncioprevio" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>
-            @include('layout.footer')
+        <div id="" class="ads-space" data-id="anuncioprevio" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>
+        @include('layout.footer')
 
-            <div class="sticky-bottom-ads d-md-none">
-                <button class="close-button" id="button-close-sticky-ads"><i class="fa fa-times"></i></button>
-                <div id="" class="ads-space text-center" data-id="float-footer" data-w="320" data-h="50" data-loaded="false" data-reload="true"></div>
-            </div>
-            <div id="" class="ads-space text-center d-none d-md-block" data-id="float-footer-desktop" data-w="728" data-h="90" data-loaded="false" data-reload="false"></div>
+        <div class="sticky-bottom-ads d-md-none">
+            <button class="close-button" id="button-close-sticky-ads"><i class="fa fa-times"></i></button>
+            <div id="" class="ads-space text-center" data-id="float-footer" data-w="320" data-h="50" data-loaded="false" data-reload="true"></div>
         </div>
+        <div id="" class="ads-space text-center d-none d-md-block" data-id="float-footer-desktop" data-w="728" data-h="90" data-loaded="false" data-reload="false"></div>
 
         @yield('templates')
 

@@ -1,7 +1,7 @@
 @inject('menuHelper', "App\Http\Helpers\MenuHelper")
 
 <div class="container-fluid header-meta bg-light px-0 d-none d-sm-flex">
-	<div class="container d-flex justify-content-between px-2">
+	<div class="container d-flex justify-content-between px-0">
 		<div class="header-fecha">
 			martes 23 de julio de 2019 | <span class="suscribite"><a href="http://kioscoperfil.com/">Suscribite</a></span>
 		</div>

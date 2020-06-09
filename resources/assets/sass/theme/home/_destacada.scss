@@ -4,114 +4,20 @@
 	padding: 0;
 	align-items: flex-start;
 	margin-bottom: 20px;
+	flex-direction: column;
 	.caja-contenido {
+		margin: 0 auto;
 		flex: 1 1 0;
 		.container {
 			display: flex;
 			width: 100%;
-			article {
-				a {
-					figure {
-						width: 100%;
-						height: auto;
-						overflow: hidden;
-						position: relative;
-						margin: 0 0 5px 0;
-						img {
-							width: 100%;
-							height: auto;
-							transition: ease .3s;
-						}
-						h4 {
-							font:{
-								family: $font-general;
-								size: 16px;
-								weight: normal;
-							}
-							color: white;
-							margin-bottom: 0;
-							position: absolute;
-							left: 0;
-							right: 0;
-							top: 170px;
-							opacity: 0;
-							transition: ease 0.5s;
-							padding: 15px;
-							box-sizing: border-box;
-							.firma-home {
-								font-weight: bold;
-								text-transform: uppercase;
-							}
-						}
-					}
-					.meta-content {
-						width: 100%;
-						text-align: left;
-						padding: 0 10px;
-						margin-bottom: 10px;
-						h3 {
-							font:{
-								family: $font-general;
-								size: 14px;
-								height: 700;
-							}
-							color: $azul;
-							margin: 0 0 5px 0;
-							text-transform: uppercase;
-						}
-						h2 {
-							font: {
-								family: $font-destacada;
-								size: 1.4em;
-								weight: 700;
-							}
-							color: $negro;
-							line-height: 1.1em;
-							letter-spacing: -0.03em;
-							transition: ease .3s;
-						}
-						h4 {
-							font:{
-								family: $font-general;
-								size: 16px;
-								weight: normal;
-							}
-							color: $dark;
-							margin-bottom: 0;
-							display: none;
-						}
-						h5 {
-							font:{
-								family: $font-general;
-								size: 14px;
-								weight: 400;
-							}
-							color: $dark;
-							border-top: 1px solid #d7cec5;
-							display: inline-block;
-							padding-top: 5px;
-							margin-top: 5px;
-						}
-
-					}
-				}
-				&:hover {
-					a {
-						.meta-content {
-							h2 {
-								color: $dark;
-							}
-						}
-					}
-				}
+			.articulo {
 				&.main-destacada {
-					position: relative;
-					width: 100%;
-					min-height: 1px;
-					a {
-						.meta-content {
+					.meta-content {
+						a {
 							h2 {
-								font-size: 1.5em;
+								font-size: 1.8em;
+								line-height: 1em;
 							}
 							h4 {
 								display: block;
@@ -119,8 +25,8 @@
 						}
 					}
 					&:hover {
-						a {
-							figure {
+						figure {
+							a {
 								img {
 									transform: none;
 									filter: brightness(100%);
@@ -129,87 +35,174 @@
 						}
 					}
 				}
+				&.destacadin {
+					display: flex;
+					justify-content: space-between;
+					figure {
+						width: 30%;
+						margin-bottom: 10px;
+					}
+					.meta-content {
+						padding: 0 10px 0 0;
+						width: 68%;
+						h3 {
+							display: none;
+						}
+					}
+					border-bottom: 1px solid $linea;
+				}
 			}
-			.columna-a {
+			.columna-dostercios {
 				display: flex;
 				flex: 1 1 0;
 				flex-wrap: wrap;
 				max-width: 100%;
 			}
-			.columna-b {
+			.columna-tercio {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
-				article {
+				.articulo {
 					&:first-of-type {
-						a {
-							.meta-content {
-								h4 {
-									display: block;
+						.meta-content {
+							a {
+								h2 {
+									font-size: 1.4rem;
 								}
 							}
 						}
 					}
-				}
-			}
-			.columna-c {
-				display: flex;
-				flex-direction: column;
-				margin: 0;
-				article {
-					margin: 0 0 10px 0;
-					padding: 0 10px;
-					transition: ease 0.3s;
-					a {
+					&:nth-child(n+2) {
 						display: flex;
-						flex-direction: row;
-						justify-content: space-between;
+						border-top: 1px solid $linea;
+						padding-top: 10px;
 						figure {
-							flex-basis: 33%;
+							flex-basis:33%;
+							margin-right: 10px;
 						}
 						.meta-content {
-							flex-basis: 65%;
-							margin: 0;
-							padding: 0 10px 0 0;
-							transform: translateY(-3px);
-							h2 {
-								font-size: 1.2em;
-								line-height: 1.03em;
+							flex: 1 1 0;
+							padding: 0;
+						}
+					}
+					&:nth-child(4) {
+						background: $negro;
+						padding: 0;
+						border-top: none;
+						.meta-content {
+							padding: 10px;
+							a {
+								h2 {
+									color: white;
+									font-family: $font-condensada;
+									text-transform: uppercase;
+									font-weight: 400;
+								}
 							}
-							h4 {
-								font-size: 1em;
-								display: none;
-								&.firma-home {
-									border-bottom: 1px solid #e5e5e5;
-									display: inline-block;
+							h5 {
+								color: white;
+								a {
+									color: white;
 								}
 							}
 						}
-					}
-					&:hover {
-						.meta-content {
-							h3 {
-								opacity: 1;
-							}
+						figure {
+							margin-top: auto;
+							margin-bottom: auto;
 						}
 					}
 				}
 			}
 		}
 	}
-	.caja-right {
-		flex-basis: 100%;
+	.container.caja-right {
+		margin: 10px auto;
+		background: #fde;
 	}
 
 	@include media-breakpoint-up(sm) {
 		.caja-contenido {
 			.container {
-				article {
-					a {
+				.columna-dostercios {
+					justify-content: space-between;
+					flex-wrap: wrap;
+					.main-destacada {
+						flex-basis: 100%;
+						a {
+							.meta-content {
+								width: auto;
+								h2 {
+									margin-bottom: 12px;
+									font-size: 2rem;
+								}
+							}
+						}
+					}
+					.destacadin {
+						flex-basis: 48%;
+						display: block;
+						position: relative;
+						figure {
+							width: 100%;
+							margin: 0 0 5px 0;
+						}
 						.meta-content {
+							width: 100%;
+							h3 {
+								display: block;
+							}
+						}
+						&:nth-child(odd) {
+							&:before {
+								content: "";
+								display: block;
+								position: absolute;
+								top: 0;
+								left: 0;
+								bottom: 0;
+								width: 1px;
+								background: $linea;
+								transform: translateX(-10px);
+							}
+						}
+					}
+				}
+				.columna-tercio {
+					flex-direction: row;
+					flex-wrap: wrap;
+					.articulo {
+						flex-basis: 48%;
+						flex-direction: column;
+						&:nth-child(n+2) {
+							display: block;
 							padding: 0;
-							h2 {
-								line-height: 1.03em;
+							border-top: none;
+							.meta-content {
+								padding: 5px 0;
+							}
+						}
+						&:nth-child(n+3) {
+							flex-basis: 32%;
+							.meta-content {
+								a {
+									h2 {
+										font-size: 1.2rem;
+									}
+								}
+							}
+						}
+						&:nth-child(4) {
+							figure {
+								margin-top: 0;
+								margin-bottom: 0;
+							}
+							.meta-content {
+								padding: 5px 10px;
+								a {
+									h3 {
+										display: none;
+									}
+								}
 							}
 						}
 					}
@@ -220,72 +213,67 @@
 	@include media-breakpoint-up(md) {
 		.caja-contenido {
 			.container {
-				flex-wrap: wrap;
-				.columna-a {
-					.main-destacada {
-						a {
-							.meta-content {
-								width: auto;
-								h2 {
-									margin-bottom: 12px;
-									font-size: 1.8em;
-								}
-							}
+				.columna-dostercios {
+					flex: 1 1 0;
+					.articulo.destacadin {
+						&:nth-last-child(-n+2) {
+							margin-bottom: 0;
 						}
 					}
-					.destacadita {
+				}
+				.columna-tercio {
+					flex-basis: 33%;
+					flex-direction: column;
+					margin-left: 15px;
+					padding-left: 15px;
+					border-left: 1px solid $linea;
+					justify-content: flex-start;
+					flex-wrap: nowrap;
+					.articulo {
 						border-top: 1px solid $linea;
 						padding-top: 10px;
-						a {
+						flex-basis: auto;
+						&:first-of-type {
+							padding-top: 0;
+							border-top: none;
 							figure {
 								display: none;
 							}
 							.meta-content {
-								h4 {
-									display: block;
-								}
+								padding-top: 0;
 							}
 						}
-					}
-				}
-				.columna-b {
-					flex-basis: 222px;
-					margin-left: 20px;
-					article {
-						a {
+						&:nth-child(n+3) {
+							flex-basis: auto;
 							.meta-content {
-								h4 {
-									display: block;
+								a {
+									h2 {
+										font-size: 1.4rem;
+									}
 								}
 							}
 						}
-						&:last-of-type {
-							padding-top: 10px;
-							margin-top: 10px;
-							border-top: 1px solid $linea;
-							a {
-								figure {
-									display: none;
-								}
-							}
-						}
-					}
-				}
-				.columna-c {
-					flex-direction: row;
-					article {
-						flex-basis: 31%;
-						a {
-							flex-direction: column;
-							.meta-content{
-								flex-basis: 100%;
-								transform: translateY(0);
-								h4 {
-									display: block;
-								}
-							} 
+						&:nth-child(3) {
+							background: white;
+							padding: 10px;
+							box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+							border-top: none;
 							figure {
-								flex-basis: 100%;
+								display: none;
+							}
+						}
+						&:nth-child(4) {
+							.meta-content {
+								a {
+									h3 {
+										display: block;
+									}
+								}
+							}
+						}
+						&:nth-child(5) {
+							figure {
+								display: none;
 							}
 						}
 					}
@@ -294,68 +282,65 @@
 		}
 	}
 	@include media-breakpoint-up(lg) {
+		flex-direction: row;
 		.caja-contenido {
 			.container {
-				.columna-a {
-					flex-wrap: nowrap;
-					flex-direction: column;
-					article.main-destacada {
-						.meta-content {
-							h2 {
-								font-size: 2em;
-							}
-						}
-					}
-					article.destacadita {
-						a {
-							display: flex;
-							figure {
-								display: block;
-								flex-basis: 30%;
-								margin-right: 10px;
-							}
+				.columna-dostercios {
+					.articulo {
+						&.main-destacada {
+							background: white;
+							box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+							margin: 0 0 20px 0;
 							.meta-content {
-								flex: 1 1 0;
-								h2 {
-									font-size: 1.6em;
-								}
-								h4 {
-									display: none;
+								transform: translateY(-37px);
+								margin-bottom: -20px;
+								padding: 0 15px;
+								a {
+									h2 {
+										font-size: 1.8rem;
+									}
+									h3 {
+										background: $negro;
+										color: white;
+										display: inline-block;
+										padding: 10px 15px;
+										font-weight: normal;
+										margin-left: -15px;
+										margin-bottom: 5px;
+									}
 								}
 							}
 						}
-					}
-				}
-				.columna-b {
-					flex-basis: 206px;
-					article {
-						&:last-of-type {
-							padding-top: 0;
-							border-top: none;
-							a {
-								figure {
-									display: block;
-								}
-								.meta-content {
-									h4 {
-										display: none;
+						&.destacadin {
+							.meta-content {
+								a {
+									h2 {
+										font-size: 1.2rem;
 									}
 								}
 							}
 						}
 					}
 				}
-				.columna-c {
-					article {
-						flex-basis: 31.5%;
-						padding-top: none;
-						a {
-							.meta-content {
+				.columna-tercio {
+					border-bottom: 1px solid $linea;
+					border-left: none;
+					padding: 0;
+					margin: 0 0 0 20px;
+					.articulo {
+						.meta-content {
+							a {
 								h2 {
-									font-size: 1.4em;
+									font-size: 1.2rem;
 								}
-								h4 {
-									font-size: 16px;
+							}
+						}
+						&:nth-child(n+3) {
+							.meta-content {
+								a {
+									h2 {
+										font-size: 1.2rem;
+									}
 								}
 							}
 						}
@@ -363,98 +348,55 @@
 				}
 			}
 		}
-		.caja-right {
+		.container.caja-right {
 			flex-basis: 300px;
 			margin: 0 0 0 20px;
-			background: #fde;
 			align-self: stretch;
 		}
 	}
 	@include media-breakpoint-up(xl) {
 		.caja-contenido {
 			.container {
-				.columna-a {
-					article {
-						a {
-							.meta-content {
-								h4 {
-									display: block;
-								}
-							}
-						}
+				.columna-dostercios {
+					flex-basis: 620px;
+					.articulo {
 						&.main-destacada {
-							a {
-								.meta-content {
+							.meta-content {
+								a {
 									h2 {
-										font-size: 2.2em;
+										font-size: 2.2rem;
 									}
 								}
 							}
 						}
-						&.destacadita {
-							a {
-								figure {
-									display: none;
-								}
-								.meta-content {
-									h4 {
-										display: block;
+						&.destacadin {
+							flex-basis: 300px;
+							.meta-content {
+								a {
+									h2 {
+										font-size: 1.4rem;
 									}
 								}
 							}
 						}
 					}
-					border-bottom: 1px solid $linea-oscura;
 					align-self: stretch;
 				}
-				.columna-b {
-					border-bottom: 1px solid $linea-oscura;
-					align-self: stretch;
-					margin-left: 25px;
-					article {
-						a {
-							.meta-content {
-								margin-bottom: 20px;
-							}
-						}
-						&:last-of-type {
-							padding-top: 10px;
-							border-top: 1px solid $linea;
-						}
-					}
-				}
-				.columna-c {
-					margin: 0 -10px 0 15px;
-					flex-basis: 226px;
-					flex-direction: column;
-					border-bottom: 1px solid $linea-oscura;
-					align-self: stretch;
-					article {
-						width: 100%;
-						flex-basis: auto;
-						margin-bottom: 10px;
-						border-top: 1px solid $linea;
-						padding-top: 10px;
-						a {
-							figure {
-								display: none;
-							}
-							.meta-content {
-								h4 {
-									display: none;
-								}
-							}
-						}
-						&:first-of-type {
-							padding-top: 0;
-							border-top: none;
+				.columna-tercio {
+					flex-basis: 300px;
+					.articulo {
+						.meta-content {
 							a {
-								figure {
-									display: flex;
+								h2 {
+									font-size: 1.4rem;
 								}
-								.meta-content {
-									h4 {
-										display: block;
+							}
+						}
+						&:nth-child(n+3) {
+							.meta-content {
+								a {
+									h2 {
+										font-size: 1.4rem;
 									}
 								}
 							}
@@ -463,38 +405,6 @@
 				}
 			}
 		}		
-	}
-
-	@include media-breakpoint-down(lg) {
-		.caja-contenido {
-			.container {
-				flex-wrap: wrap;
-				.columna-a {
-					margin-bottom: 20px;
-					article.main-destacada {
-						flex: auto;
-						a {
-							.meta-content {
-								position: relative;
-							}
-						}
-					}
-				}
-				.columna-b {
-					margin-bottom: 20px;
-				}
-				.columna-c {
-					padding: 0;
-					justify-content: space-between;
-					article {
-						padding: 0;
-					}
-				}
-			}
-		}
-	}
-	@include media-breakpoint-down(md) {
-		flex-direction: column;
 	}
 }
 

@@ -23,7 +23,7 @@
 @section('body')
 
 
-	<div class="row maincontainer px-0 px-sm-2 pt-3">
+	<div class="row maincontainer px-0 px-sm-2 pt-3 mx-0">
 
 		<div class="editorial">
 			@foreach($home_content as $key => $value)

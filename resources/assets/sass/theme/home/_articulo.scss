@@ -1,0 +1,160 @@
+.articulo {
+	width: 100%;
+	margin: 0 0 10px 0;
+	figure {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		position: relative;
+		margin: 0;
+		a {
+			img {
+				width: 100%;
+				height: auto;
+				transition: ease .3s;
+			}
+			h4 {
+				font:{
+					family: $font-sinserif;
+					size: 1rem;
+					weight: normal;
+				}
+				color: white;
+				margin-bottom: 0;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 170px;
+				opacity: 0;
+				transition: ease 0.5s;
+				padding: 15px;
+				display: none;
+			}
+		}
+	}
+	.meta-content {
+		width: 100%;
+		text-align: left;
+		padding: 5px 10px;
+		a {
+			h3 {
+				font:{
+					family: $font-sinserif;
+					size: .9rem;
+					weight: 600;
+				}
+				color: $azul;
+				text-transform: uppercase;
+				margin: 0;
+			}
+			h2 {
+				font: {
+					family: $font-serif;
+					size: 1.2rem;
+					weight: 600;
+				}
+				color: $negro;
+				line-height: 1em;
+				letter-spacing: -0.03em;
+				transition: ease .3s;
+			}
+			h4 {
+				font:{
+					family: $font-sinserif;
+					size: 15px;
+					weight: normal;
+				}
+				color: $dark;
+				display: none;
+				line-height: 1.3em;
+				letter-spacing: -0.01em;
+			}
+		}
+		h5 {
+			font:{
+				family: $font-sinserif;
+				size: .8rem;
+				weight: 400;
+			}
+			text-transform: uppercase;
+			color: $dark;
+			border-top: 1px solid #d7cec5;
+			display: inline-block;
+			padding-top: 5px;
+			margin-bottom: 0;
+			a {
+				color: $dark;
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+	}
+	&:hover {
+		figure {
+			a {
+				h4 {
+					top: 0;
+					z-index: 9;
+				}
+			}
+		}
+		.meta-content {
+			h2 {
+				color: $dark;
+			}
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		.meta-content {
+			padding: 5px 0;
+			a {
+				h2 {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		margin: 0 0 20px 0;
+		figure {
+			a {
+				h4 {
+					display: block;
+				}
+			}
+		}
+		.meta-content {
+			a {
+				h2 {
+					font-size: 1.3rem;
+				}
+			}
+			h5 {
+				margin-top: 8px;
+			}
+		}
+		&:hover {
+			figure {
+				a {
+					img {
+						filter: brightness(30%);
+					}
+					h4 {
+						top: 0;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.meta-content {
+			a {
+				h2 {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}

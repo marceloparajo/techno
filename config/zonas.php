@@ -12,21 +12,25 @@ return [
         'id' => 'alerta',
         'template' => 'alerta'
     ],
+   [
+        'id' => 'coronavirus-contador',
+        'template' => 'alerta'
+    ],
     [
         'id' => 'destacada-superior',
         'template' => 'destacada'
     ],
     [
         'id' => 'bloque-superior',
-        'template' => 'bloque-superior'
+        'template' => 'bloque'
     ],
     [
         'id' => 'bloque-medio',
-        'template' => 'bloque-superior'
+        'template' => 'bloque'
     ],
     [
         'id' => 'bloque-inferior',
-        'template' => 'bloque-superior'
+        'template' => 'bloque'
     ],
     [
         'id' => 'destacada-medio',
@@ -35,6 +39,14 @@ return [
     [
         'id' => 'destacada-inferior',
         'template' => 'destacada'
+    ],
+    [
+        'id' => 'destacada-extra',
+        'template' => 'destacada'
+    ],
+    [
+        'id' => 'bloque-extra',
+        'template' => 'bloque'
     ],
     [
         'id' => 'cobertura',
