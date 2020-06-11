@@ -8,7 +8,7 @@
 
 
 					<div class="columna-dostercios">
-						@foreach(array_slice($news, 0, 7) as $key => $new)
+						@foreach(array_slice($news, 0, 9) as $key => $new)
 							@if ($key == 3)
 							</div>
 							@endif
@@ -85,6 +85,9 @@
 					</div>
 
 
+{{--
+
+	esto no iría
 
 					<div class="hilera-full trescolumnas">
 						@foreach(array_slice($news, 0, 5) as $key => $new)
@@ -173,7 +176,7 @@
 						@endforeach
 					</div>
 
-
+--}}
 
 
 

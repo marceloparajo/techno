@@ -90,6 +90,7 @@ a {
 		max-width: 100%;
 		@include media-breakpoint-up(xl) {
 			>section {
+				flex-direction: column;
 				>.container {
 					max-width: 1260px;
 				}

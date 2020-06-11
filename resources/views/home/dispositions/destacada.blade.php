@@ -17,7 +17,7 @@
 									<a href="{{ $news[0]['permalink'] }}">
 										{!! $imageHelper->getLazyImages( $news[0]['main_image']['srcs']['small-wide'], 540, $news[0]['main_image']['caption'],'img-fluid','540x304') !!}
 									</a>
-								</figure>
+								</figure>			
 								<div class="meta-content">
 									<a href="{{ $news[0]['permalink'] }}">
 										@if ($news[0]['hat'] != '')
@@ -33,6 +33,7 @@
 									@endif
 								</div>
 						</article>
+
 
 						@foreach(array_slice($news, 0, 2) as $key => $new)<!-- ESTE FOREACH DEBE SER 3,4 -->
 
@@ -206,7 +207,7 @@
 					</div>
 				</div>
 
-				<div class="row text-center my-2 d-flex d-md-none justify-content-center w-100">
+				<div class="row text-center my-2 d-flex d-xl-none justify-content-center w-100">
 					<div id="" class="ads-space text-center d-block d-md-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" >
 						
 					</div>
@@ -220,8 +221,96 @@
 
 
 			<div class="container caja-right">
-				<p style="padding: 20px;font-size:2em;">CONTENIDO SIDEBAR</p>
-			</div>
+
+				<div class="sidebar">
+
+
+
+
+				<div id="" class="ads-space d-none d-lg-block" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
+
+
+
+
+				{{-- CONTENIDO HARCODED -BORRAR --}}
+
+					<div class="podcasts-radio">
+						<header>
+							<div class="titulo">
+								<div class="podcasts"><a href="https://radio.perfil.com/seccion/podcasts?_ga=2.183094944.726575515.1591564606-773308716.1570534419" target="_blank">Podcasts</a></div>
+								<div class="logo-radio">
+									<a href="//radio.perfil.com/" target="_blank"></a>
+								</div>
+							</div>
+						</header>
+						<article class="notaPodcast">
+							<a href="https://radio.perfil.com/noticias/politica/que-me-contas-el-subcomandante-alberto-entro-en-modo-chavez.phtml" target="_self" title="Qué me contás: ¿El Subcomandante Alberto entró en “modo Chávez”?">
+								<figure>
+									<img class="lazy" alt="Alberto Fernández, Néstor Kirchner y Hugo Chávez" src="https://fotos.perfil.com/2020/06/10/trim/150/85/alberto-fernandez-nestor-kirchner-y-hugo-chavez-969431.jpg" style="display: inline-block;">
+								</figure>
+								<div class="content">
+									<h2>Qué me contás: ¿El Subcomandante Alberto entró en “modo Chávez”?</h2>
+									<h5>Por Edi Zunino </h5>
+								</div>
+							</a>
+						</article>
+						<article class="notaPodcast">
+							<a href="https://radio.perfil.com/noticias/actualidad/el-95-de-los-nuevos-casos-de-coronavirus-son-en-buenos-aires.phtml" target="_self" title="El 95% de los nuevos casos de coronavirus son en Buenos Aires">
+					    	<figure>
+					    		<img class="lazy" alt="Coronavirus en Buenos Aires " src="https://fotos.perfil.com/2020/06/10/trim/150/85/coronavirus-en-buenos-aires-969308.jpg" style="display: inline-block;">
+					    	</figure>
+								<div class="content">
+									<h2>El 95% de los nuevos casos de coronavirus son en Buenos Aires</h2>
+									<h5>Por Alejandro Gomel </h5>
+								</div>
+							</a>
+						</article>
+						<article class="notaPodcast">
+							<a href="https://radio.perfil.com/noticias/actualidad/brasil-logra-cosecha-record-de-granos.phtml" target="_self" title="Brasil logra cosecha récord de granos">
+								<figure>
+									<img class="lazy" alt="Cereales en Brasil" src="https://fotos.perfil.com/2020/06/10/trim/150/85/cereales-en-brasil-969400.jpg" style="display: inline-block;">
+								</figure>
+								<div class="content">
+									<h2>Brasil logra cosecha récord de granos</h2>
+									<h5>Por Facundo Mesquida </h5>
+								</div>
+							</a>
+						</article>
+						<article class="notaPodcast">
+							<a href="https://radio.perfil.com/noticias/politica/en-que-coinciden-roberto-lavagna-y-eduardo-duhalde.phtml" target="_self" title="En qué coinciden Roberto Lavagna y Eduardo Duhalde">
+								<figure>
+									<img class="lazy" alt="Eduardo Duhalde y Roberto Lavagna" src="https://fotos.perfil.com/2020/06/10/trim/150/85/eduardo-duhalde-y-roberto-lavagna-969268.jpg" style="display: inline-block;">
+								</figure>
+								<div class="content">
+									<h2>En qué coinciden Roberto Lavagna y Eduardo Duhalde</h2>
+									<h5>Por Gustavo González</h5>
+								</div>
+							</a>
+						</article>
+						<article class="notaPodcast">
+							<a href="https://radio.perfil.com/noticias/actualidad/diez-mil-dolares-por-mes-para-volver-a-entrenar.phtml" target="_self" title="Diez mil dólares por mes para volver a entrenar">
+								<figure>
+									<img class="lazy" alt="Fútbol chileno" src="https://fotos.perfil.com/2020/06/09/trim/150/85/futbol-chileno-969190.jpg" style="display: inline-block;">
+								</figure>
+								<div class="content">
+									<h2>Diez mil dólares por mes para volver a entrenar</h2>
+									<h5>Por Juan Manuel Pons </h5>
+								</div>
+							</a>
+						</article>
+						<footer>
+							<a href="https://radio.perfil.com/seccion/podcasts" target="_blank">Más podcasts</a>
+						</footer>
+					</div>
+
+				{{-- HASTA ACA CONTENIDO HARCODED - BORRAR --}}
+
+
+				<div id="" class="ads-space d-none d-lg-block" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
+
+			</div><!-- sidebar -->
+
+			</div><!-- container caja-right -->
 
 
 		</div><!-- container-destacada -->

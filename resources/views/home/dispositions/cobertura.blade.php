@@ -5,14 +5,6 @@
 
 		<section class="container-fluid cobertura py-2 mb-4">
 
-
-			<div class="row bn-stick">
-				<div class="col-12">
-					<div id="" class="ads-space text-center" data-id="468x60x-pos-" data-w="468" data-h="60" data-loaded="false" data-reload="false"></div>
-					<div id="" class="ads-space text-center mt-2 mb-3" data-id="970x90x-pos-" data-w="970" data-h="90" data-loaded="false" data-reload="false"></div>
-				</div>
-			</div>
-
 			<div class="container">
 
 				<div class="row">
@@ -102,6 +94,14 @@
 						@endif
 
 					</div><!-- notas-cobertura -->
+
+
+					<div class="row">
+						<div class="col-12">
+							<div id="" class="ads-space text-center" data-id="468x60x-pos-" data-w="468" data-h="60" data-loaded="false" data-reload="false"></div>
+							<div id="" class="ads-space text-center mt-2 mb-3" data-id="970x90x-pos-" data-w="970" data-h="90" data-loaded="false" data-reload="false"></div>
+						</div>
+					</div>
 
 					<div id="" class="ads-space text-center d-block d-md-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
 

@@ -1,276 +1,136 @@
-.pf-sidebar {
+.podcasts-radio {
+	background: #1c313a;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 0 0 20px 0;
 	width: 100%;
-	flex-direction: column;
-	@include media-breakpoint-up(lg) {
-		flex: 0 0 320px;
-		padding: 30px 0;
-	}
-	@include media-breakpoint-up(xl) {
-		flex: 0 0 340px;
-		padding: 0 20px;
-	}
-.card { width: 100%}
-	.minuto-de-noticias {
-		.card-body {
-			 padding: 1rem;
-			 background: $dark;
-			.hat {
-				 font-size: 1.1rem;
-					font-weight: bold;
-					color: white;
-					border-left:4px solid $secondary;
-					text-transform: uppercase;
-					padding: 5px 10px;
-					font-family:$font-destacada;
-					background: $dark;
-					display: block;
-			}
-			.article-content {
-				padding: 10px;
-				h2 {
-					font-size: 1.5em;
-				}
-			}
-		}
-	}
-
-}
-
-
-
-.most-viewed,
-.most-viewed-alter {
-	.card-body {
-		padding: 0!important;
-		.title {					
-			font-size: 1.1rem;
-			font-weight: bold;
-			color: white;
-			border-left: $miscelanea-light;
-			text-transform: uppercase;
-			padding: 5px 10px;
-			font-family:$font-destacada;
-			background: $negro;
-			.in-other-lang {
-				font-weight: normal;
-				font-size: 0.8em;
-				float: right;
-				@include media-breakpoint-only(md) {
-					display: none;
-				}
-			}
-			a {
-				background:none;
-				color: white;				
-			}
-		}
-		ul {
-			margin: 0;
-			padding: 0;
-			li {
-				list-style: none;
-				padding: 0;
-				border-top: 1px solid #ccc;
-				height: 80px;
-				transition: ease 0.3s;
+	header {
+		background-color: #161227;
+		width: 100%;
+		.titulo {
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			.podcasts {
+				font-family: $font-serif;
+				font-size: 28px;
+				font-weight: 600;
+				line-height: .9em;
+				letter-spacing: -0.02em;
+				flex: 1 1 0;
+				color: #fff;
+				transform: translateY(4px);
 				a {
-					display: block;
-					position: relative;
-					width: 100%;
-					overflow: hidden;
-					height: 80px;
-					figure {
-						width: 90%;
-						display: inline-block;
-						vertical-align: top;
-						margin: 0;
-						height: 80px;
-						overflow: hidden;
-						position: absolute;
-						left: -90%;
-						transition: ease 0.3s;
-						img { 
-							width:100%;
-						}
-					}
-					.position {
-						position: absolute;
-						z-index: 9;
-						top: 0;
-						bottom: 0;
-						left: 0;
-						width: 10%;
-						color: white;
-						font-size: 24px;
-						font-family: $font-general;
-						text-align: center;
-						background: white;
-						transition: ease 0.3s;
-						span {
-							display: block;
-							width: 100%;
-							position: absolute;
-							top: 0;
-							bottom: 0;
-						}
-					}
-					h5{
-						margin: 0;
-						font-weight: 600;
-						font-size: 16px;
-						line-height: 18px;
-						display: inline-block;
-						width: 85%;
-						font-family: $font-general;
-						position: absolute;
-						top: 10px;
-						left: 13%;
-						bottom: 0;
-						transition: ease 0.3s;
-						color: $negro;
-					}
-				}
-				&:hover {
-					background: #ccc;
-					a {
-						.position {
-							left: 90%
-						}
-						figure {
-							left: 0;
-							img {
-								filter: brightness(100%);
-							}
-						}
-						h5 {
-							left: 100%;
-						}
-					}
-				}
-				/*
-				&:first-child { 
-					a {
-						display: flex;
-						justify-content: space-between;
-						figure { 
-							flex: 0 0 90%;
-							margin-bottom: 0px;
-						}
-						h5 {
-							width: 100%;
-							padding: 2% 0;
-							font-size: 1.4em;
-							line-height: 1.2em;
-							margin: 0 1% 0 0;
-							font-weight: 400;
-						}
-						figure {
-							height: auto;
-						}			
-					}
-				}
-				*/
-			}
-		}
-
-		a:hover {
-			text-decoration: none;
-		}
-	}
-	@include media-breakpoint-down(md) {
-		.card-body {
-			ul {
-				li {
-					a {
-						figure {
-							width: 30%;
-							height: 80px;
-							left: 10%;
-							right: auto;
-							img {
-								height: 80px;
-								width: auto;
-								max-width: none!important;
-								margin-left: 50%;
-								transform: translateX(-50%);
-							}
-						}
-						h5 {
-							width: 55%;
-							left: 45%;
-						}				
-					}
+					color: #fff;
 					&:hover {
-						background: #fff;
-						a {
-							.position {
-								left: 0;
-							}
-							figure {
-								left: 10%;
-							}
-							h5 {
-								left: 45%;
-							}
-						}
+						color: #fff;
 					}
 				}
 			}
-		}
-	}	
-	@include media-breakpoint-down(sm) {
-		.card-body {
-			padding: 0!important;
-			ul {
-				li {
-					a {
-						.position {
-							width: 7%;
-						}
-						figure {
-							left: 7%;
-						}
-						h5 {
-							width: 58%;
-							left: 38%;
-							top: 5px;
-							font-weight: 400;
-							font-size: 15px;
-							line-height: 17px;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-.perfilcom {
-	.most-viewed-alter {
-		.card-body {
-			.title {
-				background-image: url('img/logo_perfil.svg');
+			.logo-radio {
+				display: block;
+				float: right;
+				margin: 0 0 0 10px;
+				flex-basis: 140px;
+				height: 45px;
+				background-image: url('/images/radio-perfil-isologo.png');
+				background-position: 0 0;
 				background-repeat: no-repeat;
-				background-position: 10px 10px;
-				background-size: 154px 35px;
-				background-color: #fff;
-				width: 100%;
-				height: 50px;
-				position: relative;
+				background-size: 140px;
 				a {
 					display: block;
-					width: 100%;
-					height: 50px;
-					text-indent: -9999px;
+					width: 140px;
+					height: 45px;
 				}
-				&:after {
-					content: "in spanish";
-					position: absolute;
-					right: 10px;
-					top: 10px;
-					display: block;
-					color: #ccc;
-					font-size: 14px;
+			}
+			border-bottom: 2px solid #ddd;
+		}
+	}
+	.notaPodcast {
+		width: 100%;
+		padding: 5px 10px;
+		border-bottom: 1px solid #455a64;
+		background: #1c313a;
+		transition: ease .3s;
+		box-sizing: border-box;
+		a {
+			width: 100%;
+			display: flex;
+			figure {
+				width: 30%;
+				height: 50px;
+				float: left;
+				margin: 0 10px 0 0;
+				border-radius: 3px;
+				overflow: hidden;
+			}
+			.content {
+				flex: 1 1 0;
+				color: #fff;
+				h2 {
+					font-size: 16px;
+					line-height: 1.05em;
+					font-weight: 600;
+					letter-spacing: -0.01em;
+					font-family: $font-serif;
+				}
+				h5 {
+					font-size: 12px;
+					font-family: $font-sinserif;
+					line-height: 1em;
+					margin-top: 5px;
+					text-transform: uppercase;
+				}
+			}
+		}
+		&:hover {
+			background: #455a64;
+		}
+		&:after {
+			display: block;
+			content: " ";
+			clear: both;
+			height: 0;
+			margin: 0;
+		}
+	}
+	footer {
+		width: 100%;
+		padding: 10px 0;
+		border-bottom: 1px solid #ddd;
+		margin: 0;
+		a {
+			font-family: $font-sinserif;
+			font-size: 14px;
+			font-weight: normal;
+			letter-spacing: 0.2em;
+			color: #fff;
+			text-transform: uppercase;
+			display: flex;
+			justify-content: flex-end;
+			line-height: 1em;
+			&:after {
+				content: "\f061";
+				font-family: "FontAwesome";
+				display: block;
+				font-size: 20px;
+				margin-left: 10px;
+				margin-right: 10px;
+				transform: translateY(-1px);
+			}
+		}
+	}
+	@media only screen and (max-width: 890px) {
+		flex-direction: column;
+		.notaPodcast {
+			flex-basis: 100%;
+			a {
+				flex-direction: row;
+				figure {
+					flex-basis: 100px;
 				}
 			}
 		}
@@ -278,32 +138,3 @@
 }
 
 
-
- @include media-breakpoint-up(xl) {
-	.pf-sidebar {
-		padding: 1rem;
-	}
-}
-
-/*Tasboola Sidebar*/
-
-.trc_rbox { background: #fff;}
-.thumbnails-rr { padding: 3%;}
-.trc_rbox_outer { margin-top: 15px; }
-.trc_rbox_header_span {
-	font-size: 1.1rem;
-	font-weight: 400;
-	color: white;
-	border-left:4px solid $dark;
-	text-transform: uppercase;
-	padding: 5px 10px;
-	font-family:$font-destacada;
-	background: $miscelanea;
-	display: block;
-}
-.article.card {
-	padding: 0;
-	.card-body {
-		padding: 0;
-	}
-}
