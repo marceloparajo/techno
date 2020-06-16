@@ -234,7 +234,9 @@ class ParseHelper
             'tags_locations_list'   => $locations,
             'tags_themes_list'      => $themes,
             'metadata' => (isset($noticia['metadata'])) ? $noticia['metadata'] : [],
-            'previous_news' => (isset($noticia['previous_news'])) ? $noticia['previous_news'] : []
+            'previous_news' => (isset($noticia['previous_news'])) ? $noticia['previous_news'] : [],
+            'has_video'=> $noticia['has_video']?? false,
+            'has_gallery'=> $noticia['has_gallery']?? false
         ];
     }
 

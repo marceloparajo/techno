@@ -1,0 +1,114 @@
+
+
+.alerta {
+	background-color: $azul-dark;
+	padding: 0;
+	transform: translateY(-15px);
+	margin-bottom: -15px;
+	.container {
+		background: $azul;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 5px 10px;
+		article {
+			display: flex;
+			justify-content: flex-start;
+			padding-top: 3px;
+			.laalerta {
+				margin: 0 10px 0 0;
+				.fas {
+					font-size: 24px;
+					color: #fff;
+				}
+			}
+			a {
+				font-family: $font-serif;
+				letter-spacing: -0.03em;
+				h2 {
+					color: white;
+					font-size: 1.2rem;
+					line-height: 1.05em;
+					span.hat {
+						margin: 0 5px 0 0;
+						color: $azul-light;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.container {
+			article {
+				a {
+					h2 {
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.coronavirus {
+	margin:0 auto;
+	padding: 0 10px;
+	article {
+		font-family: $font-condensada;
+		text-transform: uppercase;
+		border-bottom: 3px solid $dark;
+		padding-bottom: 5px;
+		margin: 0 0 5px 0;
+		a {
+			h2 {
+				color: $dark;
+				font-weight: 400;
+				font-size: 1rem;
+				font-size: 5vw;
+				letter-spacing: -0.01em;
+				margin: 0;
+			}
+			h3 {
+				font-weight: 400;
+				color: #999;
+				font-size: .9rem;
+				font-size: 4.5vw;
+				letter-spacing: -0.01em;
+				margin: 0;
+			}
+		}
+	}
+	@include media-breakpoint-only(sm) {
+		article {
+			a {
+				h2 {
+					font-size: 1.3rem;
+				}
+				h3 {
+					font-size: 1.1rem;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		padding: 0;
+		article {
+			a {
+				padding: 0;
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: flex-end;
+				h2 {
+					display: inline-block;
+					margin: 0 10px 0 0;
+					font-size: 1.3rem;
+				}
+				h3 {
+					display: inline-block;
+					font-size: 1.3rem;
+					margin-bottom: 0;
+				}
+			}			
+		}
+	}
+}

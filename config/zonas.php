@@ -14,7 +14,7 @@ return [
     ],
    [
         'id' => 'coronavirus-contador',
-        'template' => 'alerta'
+        'template' => 'coronavirus'
     ],
     [
         'id' => 'destacada-superior',
