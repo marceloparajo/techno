@@ -1,8 +1,8 @@
 .especial {
-	background-color: $miscelanea;
+	background-color: $black;
 	margin-bottom: 20px;
 	article {
-		background-color: $miscelanea;
+		background-color: $black;
 		transition: ease .3s;
 		text-align: center;
 		padding-top: 15px;
@@ -86,7 +86,7 @@
 			}
 		}
 		&:hover {
-			background: $miscelanea-light;
+			background: $azul;
 			a {
 				figure {
 					img {

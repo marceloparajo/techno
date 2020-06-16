@@ -12,7 +12,7 @@
 			<div class="row bn-stick bg-dark">
 				<div class="col-12">
 					<div id="" class="d-none d-md-block d-lg-none ads-space text-center" data-id="468x60x-pos-" data-w="468" data-h="60" data-loaded="false" data-reload="false"></div>
-					<div id="" class="d-none d-lg-block ads-space text-center mt-2 mb-3" data-id="970x90x-pos-" data-w="970" data-h="90" data-loaded="false" data-reload="false"></div>
+					<div id="" class="ads-space text-center mt-2 mb-3" data-id="970x90x-pos-" data-w="970" data-h="90" data-loaded="false" data-reload="false"></div>
 				</div>
 			</div>
 

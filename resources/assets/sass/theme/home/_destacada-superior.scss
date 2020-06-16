@@ -29,13 +29,13 @@
     .hat {
       align-self: flex-start;
       background-color: $pf_main_color_3;
-       color:  $pf_articles_hat;
-       font-size: 13px;
-         letter-spacing: 1px;
-       text-transform: uppercase;
-       padding: 5px 10px;
-       font-family: 'Oswald', sans-serif;
-       font-weight: 700;
+      color:  $pf_articles_hat;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
     }
 
     .headline {
@@ -49,8 +49,6 @@
       margin: 10px 0;
       width: 100%;
     }
-
-
 
   }
 

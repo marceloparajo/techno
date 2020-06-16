@@ -149,7 +149,7 @@ class shortCodeConverter
 
     /**
      * @param String $text
-     * @return null|string|string[]
+     * @return mixed|String
      */
     protected function _searchRudoVideo(String $text)
     {
@@ -157,8 +157,5 @@ class shortCodeConverter
         $code = '<div class="embed-responsive embed-responsive-16by9 videoContainer"><iframe id="vrudo" class="embed-responsive-item" src="$1"frameborder="0" scrolling="no" allow="autoplay; fullscreen"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start"]></span></iframe></div>';
         return preg_replace($pattern, $code, $text);
     }
-
-
-
 
 }

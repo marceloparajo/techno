@@ -1,0 +1,195 @@
+$azul-bloomberg: #00bbe9;
+
+.bloomberg {
+	h5 {
+		display: block;
+		width: 100%;
+		height: 33px;
+		text-align: right;
+		color: $azul-bloomberg;
+		font:{
+			family: $font-general;
+			size: 18px;
+			weight: bold;
+		}
+		background:{
+			image: url('img/bloomberg-logo-home.png');
+			repeat: no-repeat;
+			position: 0 0;
+		}
+		padding-top: 5px;
+		text-transform: uppercase;
+	}
+	.cobertura-nota {
+		width: 100%;
+		figure {
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: auto;
+				transition: ease 0.3s;
+			}
+		}
+		.meta-content {
+			h2 {
+				font:{
+					family: $font-destacada;
+					size: 1.2rem;
+					weight: 700;
+				}
+				letter-spacing: -0.02em;
+				line-height: 1em;
+				color: $negro;
+			}
+			h4 {
+				color: $negro;
+				display: none;
+			}
+		}
+		&:hover {
+			figure {
+				img {
+					filter: brightness(110%);
+				}
+			}
+		}
+		&.chica {
+			.meta-content {
+				h2 {
+					font-size: 1.3em;
+				}
+			}
+		}
+	}
+	.nota-b,
+	.nota-c {
+		margin-bottom: 20px;
+	}
+	@include media-breakpoint-up(lg) {
+		h5 {
+			margin-top: 10px;
+			padding-top: 4px;
+			font-size: 24px;
+		}
+		article {
+			figure {
+				margin-bottom: 5px;
+			}
+			.meta-content {
+				h2 {
+					font: $font-destacada;
+				}
+			}
+		}
+		.nota-b {
+			.cobertura-nota {
+				position: relative;
+				.meta-content {
+					position: absolute;
+					bottom: 10px;
+					right: 20px;
+					left: 20px;
+					background: white;
+					padding: 7px 15px;
+					h4 {
+						display: none;
+					}
+					h2 {
+						color: $negro;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-only(lg) {
+		h5 {
+			text-align: left;
+			padding-top: 33px;
+			height: 60px;
+		}
+		.row {
+			margin-top: -74px;
+			.nota-c {
+				margin-top: auto;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.nota-a,
+		.nota-c {
+			margin-bottom: 0;
+			.cobertura-nota {
+				h4 {
+					font: $font-general;
+					font-size: 14px;
+					span {
+						color: $secondary;
+					}
+					&.firma-home {
+						text-transform: uppercase;;
+						font-size: 12px;
+					}
+					line-height: 1.2em;
+					font-weight: normal;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down(md) {
+		.nota-b {
+			.cobertura-nota {
+				position: relative;
+				.meta-content {
+					position: absolute;
+					bottom: 10px;
+					right: 20px;
+					left: 20px;
+					background: white;
+					padding: 7px 15px;
+					h2 {
+						color: $negro;
+					}
+				}
+			}
+		}
+	}	
+	@include media-breakpoint-down(sm) {
+		h5 {
+			font-size: 1.3rem;
+		}
+		.nota-a,
+		.nota-b,
+		.nota-c {
+			.cobertura-nota {
+				position: relative;
+				.meta-content {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					left: 0;
+					background: rgba(255,255,255,0.8);
+					padding: 3px 10px;
+					h2 {
+						color: $hover;
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		h5 {
+			padding: 0 15px;
+			font-size: 1.2rem;
+		}
+	}	
+	.bn-stick {
+	    position: sticky;
+	    margin: auto;
+	    top: 2.7em;
+	    z-index: 9;
+	    margin-bottom: 5px;
+	}
+}

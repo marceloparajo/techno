@@ -79,7 +79,11 @@
 							{!! $imageHelper->getLazyImages( $news[0]['main_image']['srcs']['extra-big-wide'], 1140, $news[0]['main_image']['caption'],'img-fluid','1140x540') !!}
 						</figure>
 						<div class="meta-content">
-							@if ($news[0]['hat'] != '')<h3 class="hat">{{ $news[0]['hat'] }}</h3>@endif
+							@if ($news[0]['hat'] != '')
+								<h3 class="hat">{{ $news[0]['hat'] }}</h3>
+							@else
+								<h3 class="hat">{{ $news[0]['channel']['name'] }}</h3>
+							@endif							
 							<h2>{{ $news[0]['home_title'] }}</h2>
 							<h4 class="headline">{{ $news[0]['headline'] }}</h4>
 							@if ($news[0]['signed'])
@@ -95,7 +99,11 @@
 							{!! $imageHelper->getLazyImages( $news[1]['main_image']['srcs']['extra-medium-wide'], 720, $news[1]['main_image']['caption'],'img-fluid', '720x355') !!}
 						</figure>
 						<div class="meta-content">
-							@if ($news[1]['hat'] != '')<h3 class="hat">{{ $news[1]['hat'] }}</h3>@endif
+							@if ($news[1]['hat'] != '')
+								<h3 class="hat">{{ $news[1]['hat'] }}</h3>
+							@else
+								<h3 class="hat">{{ $news[1]['channel']['name'] }}</h3>
+							@endif
 							<h2 class="px-2 px-md-0">{{ $news[1]['home_title'] }}</h2>
 							<h4 class="headline">{{ $news[1]['headline'] }}</h4>
 							@if ($news[1]['signed'])
@@ -111,7 +119,11 @@
 							{!! $imageHelper->getLazyImages( $news[2]['main_image']['srcs']['extra-medium-wide'], 720, $news[2]['main_image']['caption'],'img-fluid', '720x355') !!}
 						</figure>
 						<div class="meta-content">
-							@if ($news[2]['hat'] != '')<h3 class="hat">{{ $news[2]['hat'] }}</h3>@endif
+							@if ($news[2]['hat'] != '')
+								<h3 class="hat">{{ $news[2]['hat'] }}</h3>
+							@else
+								<h3 class="hat">{{ $news[2]['channel']['name'] }}</h3>
+							@endif
 							<h2 class="px-2 px-md-0">{{ $news[2]['home_title'] }}</h2>
 							<h4 class="headline">{{ $news[2]['headline'] }}</h4>
 							@if ($news[2]['signed'])
@@ -127,7 +139,7 @@
 
 			</div>
 
-			<div class="banner-vertical d-none d-xl-flex">
+			<div class="banner-vertical d-none d-lg-block">
 				<div id="" class="ads-space d-none d-lg-block" data-id="300x600x-pos-" data-w="300" data-h="600" data-loaded="false" data-reload="true" ></div>
 			</div>
 

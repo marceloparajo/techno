@@ -4,13 +4,11 @@ $body-bg: #fff;
 $body-bg-2: #333;
 
 // Typography
-$font-family-sans-serif: "Open Sans", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 $font-condensed: "Oswald", sans-serif;
 
 // **** Perfil Custom Theme ****
-$pf_perfil_color: #333333;
 $pf_main_color: #EE2314;
 $pf_main_color_2: #e12111;
 $pf_main_color_3: #E4D20B;
@@ -69,14 +67,33 @@ $pf_a_color_hover: $pf_main_color;
 
 
 
+
+
+
+/** PERFIL **/
+
+// tipografias
+$font-general: 'Fira Sans',Helvetica,Arial,Sans-serif;
+$font-cuerpo:  'Crimson Pro', 'Times New Roman', Times, Georgia, Serif;
+$font-destacada: 'Crimson Pro', 'Times New Roman', Times, Georgia, serif;
+
+
+$font-sinserif: 'Fira Sans',Helvetica,Arial,Sans-serif;
+$font-serif: 'Crimson Pro', 'Times New Roman', Times, Georgia, serif;
+$font-condensada: 'Oswald',Helvetica,Arial,Sans-serif;
+
+//colores
 $negro: #0a0a0a; 
-$link: #7b7b7b;
-$hover: #990033;
-$miscelanea: #0076ba;
-$miscelanea-light: #3391c8;
 $dark:#343a40;
 $light: #f8f9fa;
+$azul: #557c9c;
+$miscelanea: $azul;
+$miscelanea-light: #d0dbe4;
+$azul-light: #d0dbe4;
+$azul-dark: #445e7c;
+$link: $azul;
+$hover: $azul-dark;
+$linea: #d4d4d4;
+$linea-oscura: #b9b9b9;
+$fondo-gris: #dee0e2;
 $secondary: #6c757d;
-$font-destacada: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
-$font-general: 'Source Sans Pro',Helvetica,Arial,Sans-serif;
-$font-cuerpo: Georgia,'Times New Roman',Times,Serif;
