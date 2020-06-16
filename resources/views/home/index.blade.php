@@ -28,7 +28,7 @@
 		<div class="editorial">
 			@foreach($home_content as $key => $value)
 				@if ($key != 'sidebar')
-					<section id="{{ $key }}" class="row mx-0">
+					<section id="{{ $key }}">
 						@foreach($value as $item)
 							@include('home.dispositions.' . $item['template'], ['news' => $item['news']])
 						@endforeach

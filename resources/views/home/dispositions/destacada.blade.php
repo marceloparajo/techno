@@ -16,12 +16,24 @@
 								<figure>
 									<a href="{{ $news[0]['permalink'] }}">
 										{!! $imageHelper->getLazyImages( $news[0]['main_image']['srcs']['small-wide'], 540, $news[0]['main_image']['caption'],'img-fluid','540x304') !!}
+										@if ($news[0]['has_video']) 
+											<div class="galeria-video">
+												<span><i class="fa fa-play"></i></span>
+											</div>
+										@endif
+										@if ($news[0]['has_gallery'])
+											<div class="galeria-video">
+												<span><i class="fa fa-camera"></i></span>
+											</div>
+										@endif
 									</a>
 								</figure>			
 								<div class="meta-content">
 									<a href="{{ $news[0]['permalink'] }}">
 										@if ($news[0]['hat'] != '')
 											<h3 class="hat">{{ $news[0]['hat'] }} </h3>
+										@else
+											<h3 class="hat">{{ $news[0]['channel']['name'] }}
 										@endif
 										<h2>
 											{{ $news[0]['home_title'] }}
@@ -29,7 +41,13 @@
 										<h4 class="headline">{{ $news[0]['headline'] }}</h4>
 									</a>
 									@if ($news[0]['signed'])
-										<h5 class="firma-home">{{ __('by') }} {{ $news[0]['author']['fullname'] }}</h5>
+									<h5 class="firma-home">
+										<a href="/autores/{{$news[0]['author']['username']}}">
+											{{ __('by') }} {{ $news[0]['author']['fullname'] }}
+										</a>
+									</h5>
+									@elseif ($news[0]['credit'] != '')
+										<h5>{{ $news[0]['credit'] }}</h5>
 									@endif
 								</div>
 						</article>
@@ -44,6 +62,16 @@
 										<h4 class="headline">
 											{{ $new['headline'] }}
 										</h4>
+										@if ($new['has_video']) 
+											<div class="galeria-video">
+												<span><i class="fa fa-play"></i></span>
+											</div>
+										@endif
+										@if ($new['has_gallery'])
+											<div class="galeria-video">
+												<span><i class="fa fa-camera"></i></span>
+											</div>
+										@endif
 									</a>
 								</figure>
 								<div class="meta-content">
@@ -59,7 +87,13 @@
 										</h4>
 									</a>
 									@if ($new['signed'])
-										<h5 class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</h5>
+									<h5 class="firma-home">
+										<a href="/autores/{{$new['author']['username']}}">
+											{{ __('by') }} {{ $new['author']['fullname'] }}
+										</a>
+									</h5>
+									@elseif ($new['credit'] != '')
+										<h5>{{ $new['credit'] }}</h5>
 									@endif
 								</div>
 							</article>
@@ -77,6 +111,16 @@
 											<h4 class="headline">
 												{{ $new['headline'] }}
 											</h4>
+											@if ($new['has_video']) 
+												<div class="galeria-video">
+													<span><i class="fa fa-play"></i></span>
+												</div>
+											@endif
+											@if ($new['has_gallery'])
+												<div class="galeria-video">
+													<span><i class="fa fa-camera"></i></span>
+												</div>
+											@endif
 										</a>
 									</figure>
 									<div class="meta-content">
@@ -124,6 +168,16 @@
 										<h4 class="headline">
 											{{ $new['headline'] }}
 										</h4>
+										@if ($new['has_video']) 
+											<div class="galeria-video">
+												<span><i class="fa fa-play"></i></span>
+											</div>
+										@endif
+										@if ($new['has_gallery'])
+											<div class="galeria-video">
+												<span><i class="fa fa-camera"></i></span>
+											</div>
+										@endif
 									</a>
 								</figure>
 								<div class="meta-content">
@@ -164,6 +218,16 @@
 											<h4 class="headline">
 												{{ $new['headline'] }}
 											</h4>
+											@if ($new['has_video']) 
+												<div class="galeria-video">
+													<span><i class="fa fa-play"></i></span>
+												</div>
+											@endif
+											@if ($new['has_gallery'])
+												<div class="galeria-video">
+													<span><i class="fa fa-camera"></i></span>
+												</div>
+											@endif
 										</a>
 									</figure>
 									<div class="meta-content">

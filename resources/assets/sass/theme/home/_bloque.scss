@@ -460,6 +460,21 @@
 						&:nth-last-child(-n+2) {
 							margin-bottom: 0;
 						}
+						&:nth-child(4) {
+							&:hover {
+								figure {
+									a {
+										 img {
+										 	filter: brightness(1);
+										 }
+										 h4 {
+										 	opacity: 0;
+										 	display: none;
+										 }
+									}
+								}
+							}
+						}
 					}
 				}
 			}

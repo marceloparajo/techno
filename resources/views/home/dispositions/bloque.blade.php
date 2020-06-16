@@ -15,10 +15,20 @@
 							<article class="articulo">
 								<figure>
 									<a href="{{ $new['permalink'] }}">
-											{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
-											<h4 class="headline">
-												{{ $new['headline'] }}
-											</h4>
+										{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
+										<h4 class="headline">
+											{{ $new['headline'] }}
+										</h4>
+										@if ($new['has_video']) 
+											<div class="galeria-video">
+												<span><i class="fa fa-play"></i></span>
+											</div>
+										@endif
+										@if ($new['has_gallery'])
+											<div class="galeria-video">
+												<span><i class="fa fa-camera"></i></span>
+											</div>
+										@endif
 									</a>
 								</figure>
 
@@ -57,6 +67,16 @@
 										<h4 class="headline">
 											{{ $new['headline'] }}
 										</h4>
+										@if ($new['has_video']) 
+											<div class="galeria-video">
+												<span><i class="fa fa-play"></i></span>
+											</div>
+										@endif
+										@if ($new['has_gallery'])
+											<div class="galeria-video">
+												<span><i class="fa fa-camera"></i></span>
+											</div>
+										@endif
 								</a>
 							</figure>
 

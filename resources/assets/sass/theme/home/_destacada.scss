@@ -133,7 +133,6 @@
 	.container.caja-right {
 		margin: 10px auto;
 		padding: 0;
-		background: #fde;
 	}
 
 	@include media-breakpoint-up(sm) {
@@ -294,6 +293,7 @@
 							padding: 10px;
 							box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
 							border-top: none;
+							border-radius: 3px;
 							figure {
 								display: none;
 							}
@@ -327,6 +327,7 @@
 							background: white;
 							box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
 							margin: 0 0 20px 0;
+							border-radius: 3px;
 							.meta-content {
 								transform: translateY(-37px);
 								margin-bottom: -20px;
@@ -343,6 +344,14 @@
 										font-weight: normal;
 										margin-left: -15px;
 										margin-bottom: 5px;
+									}
+								}
+							}
+							figure {
+								a {
+									.galeria-video {
+										left: auto;
+										right: 5px;
 									}
 								}
 							}

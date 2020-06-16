@@ -16,7 +16,7 @@
 			h4 {
 				font:{
 					family: $font-sinserif;
-					size: 1rem;
+					size: .9rem;
 					weight: normal;
 				}
 				color: white;
@@ -29,6 +29,30 @@
 				transition: ease 0.5s;
 				padding: 15px;
 				display: none;
+				line-height: 1.2em;
+			}
+			.galeria-video {
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+				color:  rgba(255,255,255,.85);
+				border: 2px solid rgba(255,255,255,.85);
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				display: block;
+				text-align: center;
+				line-height: 36px;
+				span {
+					i {
+						&:before {
+							font-size: 1.1rem;
+						}
+						&.fa-play {
+							padding-left: 3px;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -92,14 +116,6 @@
 		}
 	}
 	&:hover {
-		figure {
-			a {
-				h4 {
-					top: 0;
-					z-index: 9;
-				}
-			}
-		}
 		.meta-content {
 			h2 {
 				color: $dark;
@@ -132,7 +148,7 @@
 				}
 			}
 			h5 {
-				margin-top: 8px;
+				margin-bottom: 8px;
 			}
 		}
 		&:hover {
@@ -144,6 +160,7 @@
 					h4 {
 						top: 0;
 						opacity: 1;
+						z-index: 9;
 					}
 				}
 			}

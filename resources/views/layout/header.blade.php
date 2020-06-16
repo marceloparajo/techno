@@ -111,10 +111,10 @@
 </div>
 
 <div class="container-fluid d-none d-xl-flex menudetemas px-0">
-	<div class="container px-0 px-xl-0 elmenu">
+	<div class="container px-0 elmenu">
 
 		<div id="menuTemas" class="nav-temas collapse-temas collapse d-lg-flex row mx-0">
-			<ul class="nav justify-content-start temas mb-3 mb-lg-0 pl-2 flex-grow-1">
+			<ul class="nav justify-content-start temas mb-3 mb-lg-0 pl-1 flex-grow-1">
 				@foreach ($menuHelper->getMenuItems('temas') as $item)
 					<li class="nav-item text-uppercase px-0">
 						<a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="px-0 nav-link {{ $item['class'] }}" title="{{ $item['title'] }}">

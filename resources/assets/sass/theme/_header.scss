@@ -449,12 +449,6 @@ ul.canales {
 		display: block!important;
 	}
 }
-@include media-breakpoint-down(lg) {
-	.elheader,
-	.elmenu {
-		// max-width: 100%!important;
-	}
-}
 
 .mainnavbar {
 	padding-top: 0;
@@ -492,7 +486,12 @@ ul.menu-destacado {
 
 
 .menudetemas {
-	background: $dark;
+	background: $negro;
+	@include media-breakpoint-up(xl) {
+		.container.elmenu {
+			max-width: 1260px;
+		}
+	}
 }
 
 .header-meta {
