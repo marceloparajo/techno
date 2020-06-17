@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;
+@import url(https://fonts.googleapis.com/css?family=Crimson+Pro:400,400i,500,500i,600,600i&display=swap|Oswald:400,600&display=swap|Fira+Sans:ital,wght@0,400;
 
-0,500;0,600;1,400;1,500;1,600&display=swap);@import url(https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap);@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap);@import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@charset "UTF-8";
+0,600;1,400;1,600&display=swap);@import url(https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap);@import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@charset "UTF-8";
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -16947,6 +16947,8 @@ footer .footer-revistas li a:hover {
   display: block;
   text-align: center;
   line-height: 36px;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
 }
 
 .articulo figure a .galeria-video span i:before {
@@ -17048,12 +17050,18 @@ footer .footer-revistas li a:hover {
   .articulo:hover figure a img {
     -webkit-filter: brightness(30%);
             filter: brightness(30%);
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
   }
 
   .articulo:hover figure a h4 {
     top: 0;
     opacity: 1;
     z-index: 9;
+  }
+
+  .articulo:hover figure a .galeria-video {
+    opacity: 0;
   }
 }
 
@@ -20386,209 +20394,205 @@ footer .footer-revistas li a:hover {
   }
 }
 
-.bloomberg h5 {
+.bloomberg {
+  margin: 0 auto 20px auto;
+  padding: 10px 0;
+}
+
+.bloomberg h6 {
   display: block;
   width: 100%;
   height: 33px;
   text-align: right;
+  padding: 5px 10px;
+  text-transform: uppercase;
   color: #00bbe9;
   font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
   font-size: 18px;
   font-weight: bold;
-  background-image: url(/images/bloomberg-logo-home.png?2268f4faffa31ba6fe4435bf84b0cc5b);
+  background-image: url(/images/bloomberg_menu.png?fcafc99b379ae271d21b337f7f2acb1e);
   background-repeat: no-repeat;
-  background-position: 0 0;
-  padding-top: 5px;
-  text-transform: uppercase;
+  background-position: 10px bottom;
+  background-size: 148px;
 }
 
-.bloomberg .cobertura-nota {
-  width: 100%;
+.bloomberg .caja-contenido .caja-notas .articulo.notabloomberg .meta-content a h2 {
+  font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
 }
 
-.bloomberg .cobertura-nota figure {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-.bloomberg .cobertura-nota figure img {
-  width: 100%;
-  height: auto;
-  -webkit-transition: ease 0.3s;
-  transition: ease 0.3s;
-}
-
-.bloomberg .cobertura-nota .meta-content h2 {
-  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1em;
-  color: #0a0a0a;
-}
-
-.bloomberg .cobertura-nota .meta-content h4 {
-  color: #0a0a0a;
+.bloomberg .caja-contenido .caja-notas .articulo.notabloomberg .meta-content h5 {
   display: none;
 }
 
-.bloomberg .cobertura-nota:hover figure img {
-  -webkit-filter: brightness(110%);
-          filter: brightness(110%);
+.bloomberg .caja-contenido .caja-notas .articulo.notabloomberg:hover .meta-content a h2 {
+  color: #00bbe9;
 }
 
-.bloomberg .cobertura-nota.chica .meta-content h2 {
-  font-size: 1.3em;
-}
-
-.bloomberg .nota-b,
-.bloomberg .nota-c {
-  margin-bottom: 20px;
+@media (min-width: 768px) {
+  .bloomberg .caja-contenido {
+    background: white;
+    -webkit-box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media (min-width: 1020px) {
+  .bloomberg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .bloomberg .caja-contenido {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .articulo {
+    float: left;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-0 {
+    width: 320px;
+    position: relative;
+    padding: 0 10px;
+    background: #d7eaf8;
+    height: 350px;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-0 .meta-content {
+    background: white;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    width: 350px;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-0 .meta-content h3 {
+    display: none;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-0 .meta-content h2 {
+    font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-0 .meta-content:after {
+    content: " ";
+    display: block;
+    width: 340px;
+    margin: 0 auto;
+    height: 3px;
+    background: #00bbe9;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-1 {
+    width: 320px;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-2 {
+    width: 320px;
+  }
+
+  .bloomberg .caja-right {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    margin: 0 0 0 20px;
+  }
+
   .bloomberg h5 {
     margin-top: 10px;
     padding-top: 4px;
     font-size: 24px;
   }
-
-  .bloomberg article figure {
-    margin-bottom: 5px;
-  }
-
-  .bloomberg article .meta-content h2 {
-    font: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  }
-
-  .bloomberg .nota-b .cobertura-nota {
-    position: relative;
-  }
-
-  .bloomberg .nota-b .cobertura-nota .meta-content {
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-    left: 20px;
-    background: white;
-    padding: 7px 15px;
-  }
-
-  .bloomberg .nota-b .cobertura-nota .meta-content h4 {
-    display: none;
-  }
-
-  .bloomberg .nota-b .cobertura-nota .meta-content h2 {
-    color: #0a0a0a;
-  }
-}
-
-@media (min-width: 1020px) and (max-width: 1279.98px) {
-  .bloomberg h5 {
-    text-align: left;
-    padding-top: 33px;
-    height: 60px;
-  }
-
-  .bloomberg .row {
-    margin-top: -74px;
-  }
-
-  .bloomberg .row .nota-c {
-    margin-top: auto;
-  }
 }
 
 @media (min-width: 1280px) {
-  .bloomberg .nota-a,
-  .bloomberg .nota-c {
-    margin-bottom: 0;
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-0 {
+    width: 380px;
   }
 
-  .bloomberg .nota-a .cobertura-nota h4,
-  .bloomberg .nota-c .cobertura-nota h4 {
-    font: "Fira Sans", Helvetica, Arial, Sans-serif;
-    font-size: 14px;
-    line-height: 1.2em;
-    font-weight: normal;
-  }
-
-  .bloomberg .nota-a .cobertura-nota h4 span,
-  .bloomberg .nota-c .cobertura-nota h4 span {
-    color: #6c757d;
-  }
-
-  .bloomberg .nota-a .cobertura-nota h4.firma-home,
-  .bloomberg .nota-c .cobertura-nota h4.firma-home {
-    text-transform: uppercase;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 1019.98px) {
-  .bloomberg .nota-b .cobertura-nota {
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-1 {
+    width: 350px;
+    padding: 10px 30px 10px 10px;
+    background: #d7eaf8;
     position: relative;
+    margin: 0 0 0 10px;
+    height: 209px;
   }
 
-  .bloomberg .nota-b .cobertura-nota .meta-content {
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-1 .meta-content {
     position: absolute;
-    bottom: 10px;
-    right: 20px;
-    left: 20px;
     background: white;
-    padding: 7px 15px;
+    padding: 10px;
+    bottom: 10px;
+    right: 10px;
+    width: 85%;
   }
 
-  .bloomberg .nota-b .cobertura-nota .meta-content h2 {
-    color: #0a0a0a;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .bloomberg h5 {
-    font-size: 1.3rem;
-  }
-
-  .bloomberg .nota-a .cobertura-nota,
-  .bloomberg .nota-b .cobertura-nota,
-  .bloomberg .nota-c .cobertura-nota {
-    position: relative;
-  }
-
-  .bloomberg .nota-a .cobertura-nota .meta-content,
-  .bloomberg .nota-b .cobertura-nota .meta-content,
-  .bloomberg .nota-c .cobertura-nota .meta-content {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 3px 10px;
-  }
-
-  .bloomberg .nota-a .cobertura-nota .meta-content h2,
-  .bloomberg .nota-b .cobertura-nota .meta-content h2,
-  .bloomberg .nota-c .cobertura-nota .meta-content h2 {
-    color: #445e7c;
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-1 .meta-content a h2 {
     font-size: 1.2rem;
+    font-weight: 600;
   }
-}
 
-@media (max-width: 575.98px) {
-  .bloomberg h5 {
-    padding: 0 15px;
-    font-size: 1.2rem;
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-2 {
+    width: 180px;
+    margin: 0 0 0 10px;
+    border-top: 2px dotted #0a0a0a;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 209px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-}
 
-.bloomberg .bn-stick {
-  position: -webkit-sticky;
-  position: sticky;
-  margin: auto;
-  top: 2.7em;
-  z-index: 9;
-  margin-bottom: 5px;
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-2 .meta-content a h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.2em;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .bloomberg-tres {
+    float: left;
+    width: 540px;
+    margin: 10px 0 0 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    height: 129px;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .bloomberg-tres .articulo {
+    border-top: 2px dotted #0a0a0a;
+    border-bottom: 2px dotted #0a0a0a;
+    width: 32%;
+    margin: 0;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .bloomberg-tres .articulo figure {
+    display: none;
+  }
+
+  .bloomberg .caja-contenido .caja-notas .bloomberg-tres .articulo .meta-content a h2 {
+    font-size: 1rem;
+    line-height: 1.3em;
+  }
 }
 
 .alerta {
