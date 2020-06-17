@@ -1,11 +1,15 @@
 $azul-bloomberg: #00bbe9;
 
 .bloomberg {
-	h5 {
+	margin: 0 auto 20px auto;
+	padding: 10px 0;
+	h6 {
 		display: block;
 		width: 100%;
 		height: 33px;
 		text-align: right;
+		padding: 5px 10px;
+		text-transform: uppercase;
 		color: $azul-bloomberg;
 		font:{
 			family: $font-general;
@@ -13,183 +17,184 @@ $azul-bloomberg: #00bbe9;
 			weight: bold;
 		}
 		background:{
-			image: url('img/bloomberg-logo-home.png');
+			image: url('img/bloomberg_menu.png');
 			repeat: no-repeat;
-			position: 0 0;
+			position: 10px bottom;
+			size: 148px;
 		}
-		padding-top: 5px;
-		text-transform: uppercase;
 	}
-	.cobertura-nota {
-		width: 100%;
-		figure {
-			width: 100%;
-			height: auto;
-			overflow: hidden;
-			img {
-				width: 100%;
-				height: auto;
-				transition: ease 0.3s;
-			}
-		}
-		.meta-content {
-			h2 {
-				font:{
-					family: $font-destacada;
-					size: 1.2rem;
-					weight: 700;
+	.caja-contenido {
+		.caja-notas {
+			.articulo.notabloomberg {
+				.meta-content {
+					a {
+						h2 {
+							font-family: $font-sinserif;
+						}
+					}
+					h5 {
+						display: none;
+					}
 				}
-				letter-spacing: -0.02em;
-				line-height: 1em;
-				color: $negro;
-			}
-			h4 {
-				color: $negro;
-				display: none;
-			}
-		}
-		&:hover {
-			figure {
-				img {
-					filter: brightness(110%);
-				}
-			}
-		}
-		&.chica {
-			.meta-content {
-				h2 {
-					font-size: 1.3em;
+				&:hover {
+					.meta-content {
+						a {
+							h2 {
+								color: $azul-bloomberg;
+							}
+						}
+					}
 				}
 			}
 		}
 	}
-	.nota-b,
-	.nota-c {
-		margin-bottom: 20px;
+	@include media-breakpoint-up(md) {
+		.caja-contenido {
+			background: white;
+			box-shadow: 0 2px 7px 0 rgba(0,0,0,.3);
+			.caja-notas {
+				.articulo {
+					.meta-content {
+						a {
+						}
+					}
+				}
+			}
+		}
 	}
 	@include media-breakpoint-up(lg) {
+		display: flex;
+		.caja-contenido {
+			flex: 1 1 0;
+			.caja-notas {
+				.articulo {
+					float: left;
+					&.bl-0 {
+						width: 320px;
+						position: relative;
+						padding: 0 10px;
+						background: #d7eaf8;
+						height: 350px;
+						.meta-content {
+							background: white;
+							position: absolute;
+							bottom: 0;
+							padding: 10px;
+							width: 350px;
+							h3 {
+								display: none;
+							}
+							h2 {
+								font-family: $font-sinserif;
+								font-size: 2rem;
+								font-weight: 600;
+							}
+							&:after {
+								content: " ";
+								display: block;
+								width: 340px;
+								margin: 0 auto;
+								height: 3px;
+								background: $azul-bloomberg;
+								position: absolute;
+								bottom: 0;
+							}
+						}
+					}
+					&.bl-1 {
+						width: 320px;
+					}
+					&.bl-2 {
+						width: 320px;
+					}
+				}
+			}
+		}
+		.caja-right {
+			flex-basis: 300px;
+			margin: 0 0 0 20px;
+		}
 		h5 {
 			margin-top: 10px;
 			padding-top: 4px;
 			font-size: 24px;
 		}
-		article {
-			figure {
-				margin-bottom: 5px;
-			}
-			.meta-content {
-				h2 {
-					font: $font-destacada;
-				}
-			}
-		}
-		.nota-b {
-			.cobertura-nota {
-				position: relative;
-				.meta-content {
-					position: absolute;
-					bottom: 10px;
-					right: 20px;
-					left: 20px;
-					background: white;
-					padding: 7px 15px;
-					h4 {
-						display: none;
-					}
-					h2 {
-						color: $negro;
-					}
-				}
-			}
-		}
-	}
-	@include media-breakpoint-only(lg) {
-		h5 {
-			text-align: left;
-			padding-top: 33px;
-			height: 60px;
-		}
-		.row {
-			margin-top: -74px;
-			.nota-c {
-				margin-top: auto;
-			}
-		}
 	}
 	@include media-breakpoint-up(xl) {
-		.nota-a,
-		.nota-c {
-			margin-bottom: 0;
-			.cobertura-nota {
-				h4 {
-					font: $font-general;
-					font-size: 14px;
-					span {
-						color: $secondary;
+		.caja-contenido {
+			.caja-notas {
+				.articulo {
+					&.bl-0 {
+						width: 380px;
 					}
-					&.firma-home {
-						text-transform: uppercase;;
-						font-size: 12px;
+					&.bl-1 {
+						width: 350px;
+						padding: 10px 30px 10px 10px;
+						background: #d7eaf8;
+						position: relative;
+						margin: 0 0 0 10px;
+						height: 209px;
+						.meta-content {
+							position: absolute;
+							background: white;
+							padding: 10px;
+							bottom: 10px;
+							right: 10px;
+							width: 85%;
+							a {
+								h2 {
+									font-size: 1.2rem;
+									font-weight: 600;
+								}
+							}
+						}
 					}
-					line-height: 1.2em;
-					font-weight: normal;
+					&.bl-2 {
+						width: 180px;
+						margin: 0 0 0 10px;
+						border-top: 2px dotted $negro;
+						display: flex;
+						height: 209px;
+						flex-direction: column-reverse;
+						justify-content: space-between;
+						.meta-content {
+							a {
+								h2 {
+									font-size: 1.1rem;
+									font-weight: 600;
+									line-height: 1.2em;
+								}
+							}
+						}
+					}
+				}
+				.bloomberg-tres {
+					float: left;
+					width: 540px;
+					margin: 10px 0 0 10px;
+					display: flex;
+					justify-content: space-between;
+					align-items: stretch;
+					height: 129px;
+					.articulo {
+						border-top: 2px dotted $negro;
+						border-bottom: 2px dotted $negro;
+						width: 32%;
+						margin: 0;
+						figure {
+							display: none;
+						}
+						.meta-content {
+							a {
+								h2 {
+									font-size: 1rem;
+									line-height: 1.3em;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
-	}
-	@include media-breakpoint-down(md) {
-		.nota-b {
-			.cobertura-nota {
-				position: relative;
-				.meta-content {
-					position: absolute;
-					bottom: 10px;
-					right: 20px;
-					left: 20px;
-					background: white;
-					padding: 7px 15px;
-					h2 {
-						color: $negro;
-					}
-				}
-			}
-		}
-	}	
-	@include media-breakpoint-down(sm) {
-		h5 {
-			font-size: 1.3rem;
-		}
-		.nota-a,
-		.nota-b,
-		.nota-c {
-			.cobertura-nota {
-				position: relative;
-				.meta-content {
-					position: absolute;
-					bottom: 0;
-					right: 0;
-					left: 0;
-					background: rgba(255,255,255,0.8);
-					padding: 3px 10px;
-					h2 {
-						color: $hover;
-						font-size: 1.2rem;
-					}
-				}
-			}
-		}
-	}
-	@include media-breakpoint-down(xs) {
-		h5 {
-			padding: 0 15px;
-			font-size: 1.2rem;
-		}
-	}	
-	.bn-stick {
-	    position: sticky;
-	    margin: auto;
-	    top: 2.7em;
-	    z-index: 9;
-	    margin-bottom: 5px;
 	}
 }

@@ -5,7 +5,7 @@
 
 		<div class="container cobertura mb-4">
 
-				<h6>{{ $news[0]['hat'] ?? '' }}</h6>
+			<h6>{{ $news[0]['hat'] ?? '' }}</h6>
 
 			<div class="notas-cobertura">
 
