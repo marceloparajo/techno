@@ -8,7 +8,8 @@ $azul-bloomberg: #00bbe9;
 		width: 100%;
 		height: 33px;
 		text-align: right;
-		padding: 5px 10px;
+		margin: 10px 0 5px 0;
+		padding: 12px 10px 5px 10px;
 		text-transform: uppercase;
 		color: $azul-bloomberg;
 		font:{
@@ -54,8 +55,110 @@ $azul-bloomberg: #00bbe9;
 			box-shadow: 0 2px 7px 0 rgba(0,0,0,.3);
 			.caja-notas {
 				.articulo {
-					.meta-content {
-						a {
+					float: left;
+					&.bl-0 {
+						width: 49%;
+						position: relative;
+						padding: 0 10px;
+						background: #d7eaf8;
+						height: 300px;
+						margin: 0 2% 0 0;
+						.meta-content {
+							background: white;
+							position: absolute;
+							bottom: 0;
+							left: 10px;
+							right: 20px;
+							padding: 10px;
+							width: auto;
+							h3 {
+								display: none;
+							}
+							h2 {
+								font-family: $font-sinserif;
+								font-size: 1.8rem;
+								font-weight: 600;
+							}
+							&:after {
+								content: " ";
+								display: block;
+								width: 94%;
+								margin: 0 auto;
+								height: 3px;
+								background: $azul-bloomberg;
+								position: absolute;
+								bottom: 0;
+							}
+						}
+					}
+					&.bl-1 {
+						width: 47%;
+						height: 190px;
+						background: #d7eaf8;
+						position: relative;
+						padding: 10px 30px 10px 10px;
+						margin-bottom: 20px;
+						.meta-content {
+							position: absolute;
+							background: white;
+							padding: 10px;
+							right: 10px;
+							left: 40px;
+							bottom: 10px;
+							width: auto;
+							a {
+								h2 {
+									font-size: 1.2rem;
+									font-weight: 600;
+								}
+							}
+						}
+					}
+					&.bl-2 {
+						width: 47%;
+						height: 90px;
+						margin: 0;
+						border-top: 2px dotted $dark;
+						border-bottom: 2px dotted $dark;
+						padding: 10px 0;
+						figure {
+							float: left;
+							width: 30%;
+						}
+						.meta-content {
+							float: left;
+							width: 70%;
+							padding: 0 0 0 10px;
+							a {
+								h2 {
+									font-size: 1rem;
+									font-weight: 600;
+									line-height: 1.2em;
+								}
+							}
+						}
+					}
+				}
+				.bloomberg-tres {
+					width: 100%;
+					margin: 10px 0;
+					padding: 10px;
+					display: flex;
+					justify-content: space-between;
+					.articulo {
+						width: 32%;
+						margin: 0;
+						border-bottom: 2px dotted $negro;
+						figure {
+							display: none;
+						}
+						.meta-content {
+							a {
+								h2 {
+									font-size: 1rem;
+									line-height: 1.3em;
+								}
+							}
 						}
 					}
 				}
@@ -68,44 +171,20 @@ $azul-bloomberg: #00bbe9;
 			flex: 1 1 0;
 			.caja-notas {
 				.articulo {
-					float: left;
 					&.bl-0 {
-						width: 320px;
-						position: relative;
-						padding: 0 10px;
-						background: #d7eaf8;
-						height: 350px;
+						width: 280px;
+						margin: 0 10px 0 0;
 						.meta-content {
-							background: white;
-							position: absolute;
-							bottom: 0;
-							padding: 10px;
-							width: 350px;
-							h3 {
-								display: none;
-							}
-							h2 {
-								font-family: $font-sinserif;
-								font-size: 2rem;
-								font-weight: 600;
-							}
 							&:after {
-								content: " ";
-								display: block;
-								width: 340px;
-								margin: 0 auto;
-								height: 3px;
-								background: $azul-bloomberg;
-								position: absolute;
-								bottom: 0;
+								width: 230px;
 							}
 						}
 					}
 					&.bl-1 {
-						width: 320px;
+						width: 340px;
 					}
 					&.bl-2 {
-						width: 320px;
+						width: 340px;
 					}
 				}
 			}
@@ -126,21 +205,28 @@ $azul-bloomberg: #00bbe9;
 				.articulo {
 					&.bl-0 {
 						width: 380px;
+						height: 318px;
+						margin: 0;
+						.meta-content {
+							width: 350px;
+							a {
+								h2 {
+									font-size: 2rem;
+								}
+							}
+							&:after {
+								width: 330px;
+							}
+						}
 					}
 					&.bl-1 {
 						width: 350px;
-						padding: 10px 30px 10px 10px;
-						background: #d7eaf8;
-						position: relative;
 						margin: 0 0 0 10px;
 						height: 209px;
 						.meta-content {
-							position: absolute;
-							background: white;
-							padding: 10px;
 							bottom: 10px;
 							right: 10px;
-							width: 85%;
+							left: 40px;
 							a {
 								h2 {
 									font-size: 1.2rem;
@@ -152,12 +238,16 @@ $azul-bloomberg: #00bbe9;
 					&.bl-2 {
 						width: 180px;
 						margin: 0 0 0 10px;
+						padding: 5px 0 0 0;
 						border-top: 2px dotted $negro;
 						display: flex;
 						height: 209px;
 						flex-direction: column-reverse;
 						justify-content: space-between;
+						border-bottom: none;
 						.meta-content {
+							width: 100%;
+							padding: 0;
 							a {
 								h2 {
 									font-size: 1.1rem;
@@ -166,29 +256,27 @@ $azul-bloomberg: #00bbe9;
 								}
 							}
 						}
+						figure {
+							width: 100%;
+						}
 					}
 				}
 				.bloomberg-tres {
 					float: left;
 					width: 540px;
-					margin: 10px 0 0 10px;
-					display: flex;
-					justify-content: space-between;
+					margin: 10px 0 10px 10px;
+					padding: 0;
 					align-items: stretch;
-					height: 129px;
+					height: 99px;
 					.articulo {
 						border-top: 2px dotted $negro;
-						border-bottom: 2px dotted $negro;
-						width: 32%;
-						margin: 0;
-						figure {
-							display: none;
-						}
 						.meta-content {
 							a {
 								h2 {
 									font-size: 1rem;
 									line-height: 1.3em;
+									height: 82px;
+									overflow: hidden;
 								}
 							}
 						}
