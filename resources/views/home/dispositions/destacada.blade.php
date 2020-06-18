@@ -1,4 +1,5 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
+@inject('shortcodeConverter', "App\Http\Helpers\ShortCodeConverter")
 
 
 
@@ -13,49 +14,50 @@
 
 					<div class="columna-dostercios">
 						<article class="articulo main-destacada">
-								<figure>
-									<a href="{{ $news[0]['permalink'] }}">
-										{!! $imageHelper->getLazyImages( $news[0]['main_image']['srcs']['small-wide'], 540, $news[0]['main_image']['caption'],'img-fluid','540x304') !!}
-										@if ($news[0]['has_video']) 
-											<div class="galeria-video">
-												<span><i class="fa fa-play"></i></span>
-											</div>
-										@endif
-										@if ($news[0]['has_gallery'])
-											<div class="galeria-video">
-												<span><i class="fa fa-camera"></i></span>
-											</div>
-										@endif
-									</a>
-								</figure>			
-								<div class="meta-content">
-									<a href="{{ $news[0]['permalink'] }}">
-										@if ($news[0]['hat'] != '')
-											<h3 class="hat">{{ $news[0]['hat'] }} </h3>
-										@else
-											<h3 class="hat">{{ $news[0]['channel']['name'] }}
-										@endif
-										<h2>
-											{{ $news[0]['home_title'] }}
-										</h2>
-										<h4 class="headline">{{ $news[0]['headline'] }}</h4>
-									</a>
-									@if ($news[0]['signed'])
-									<h5 class="firma-home">
-										<a href="/autores/{{$news[0]['author']['username']}}">
-											{{ __('by') }} {{ $news[0]['author']['fullname'] }}
-										</a>
-									</h5>
-									@elseif ($news[0]['credit'] != '')
-										<h5>{{ $news[0]['credit'] }}</h5>
+							<figure>
+								<a href="{{ $news[0]['permalink'] }}">
+									{!! $imageHelper->getLazyImages( $news[0]['main_image']['srcs']['small-wide'], 540, $news[0]['main_image']['caption'],'img-fluid','540x304') !!}
+									@if ($news[0]['has_video']) 
+										<div class="galeria-video">
+											<span><i class="fa fa-play"></i></span>
+										</div>
 									@endif
-								</div>
+									@if ($news[0]['has_gallery'])
+										<div class="galeria-video">
+											<span><i class="fa fa-camera"></i></span>
+										</div>
+									@endif
+								</a>
+							</figure>			
+							<div class="meta-content">
+								<a href="{{ $news[0]['permalink'] }}">
+									@if ($news[0]['hat'] != '')
+										<h3 class="hat">{{ $news[0]['hat'] }} </h3>
+									@else
+										<h3 class="hat">{{ $news[0]['channel']['name'] }}
+									@endif
+									<h2>
+										{{ $news[0]['home_title'] }}
+									</h2>
+									<h4 class="headline">{{ $news[0]['headline'] }}</h4>
+								</a>
+								@if ($news[0]['signed'])
+								<h5 class="firma-home">
+									<a href="/autores/{{$news[0]['author']['username']}}">
+										{{ __('by') }} {{ $news[0]['author']['fullname'] }}
+									</a>
+								</h5>
+								@elseif ($news[0]['credit'] != '')
+									<h5>{{ $news[0]['credit'] }}</h5>
+								@endif
+							</div>
 						</article>
 
 
 						@foreach(array_slice($news, 0, 2) as $key => $new)<!-- ESTE FOREACH DEBE SER 3,4 -->
 
 							<article class="articulo destacadin">
+
 								<figure>
 									<a href="{{ $new['permalink'] }}">
 										{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
@@ -74,6 +76,7 @@
 										@endif
 									</a>
 								</figure>
+
 								<div class="meta-content">
 									<a href="{{ $news[0]['permalink'] }}">
 										@if ($new['hat'] != '')
