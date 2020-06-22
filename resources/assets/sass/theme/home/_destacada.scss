@@ -195,6 +195,9 @@
 							margin-bottom:  10px;
 							.meta-content {
 								a {
+									h3 {
+										display: block;
+									}
 									h2 {
 										font-size: 1.4rem;
 									}
@@ -203,6 +206,8 @@
 						}
 						&:nth-child(n+2) {
 							display: block;
+							border-top: none;
+							padding-top: 0;
 							.meta-content {
 								padding: 5px 0;
 								h3 {
@@ -277,6 +282,10 @@
 							.meta-content {
 								padding-top: 0;
 							}
+						}
+						&:nth-child(n+2) {
+							border-top: 1px solid $linea;
+							padding-top: 10px;
 						}
 						&:nth-child(n+3) {
 							flex-basis: auto;

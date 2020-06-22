@@ -92,6 +92,7 @@
 	@include media-breakpoint-up(md) {
 		padding: 0;
 		article {
+			margin-bottom: 20px;
 			a {
 				padding: 0;
 				display: flex;

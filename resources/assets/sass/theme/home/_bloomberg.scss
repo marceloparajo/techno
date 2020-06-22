@@ -27,7 +27,16 @@ $azul-bloomberg: #00bbe9;
 	.caja-contenido {
 		.caja-notas {
 			.articulo.notabloomberg {
+				display: flex;
+				justify-content: space-between;
+				padding: 10px;
+				border-top: 1px solid $linea;
+				figure {
+					width: 30%;
+				}
 				.meta-content {
+					padding: 0;
+					width: 68%;
 					a {
 						h2 {
 							font-family: $font-sinserif;
@@ -36,6 +45,9 @@ $azul-bloomberg: #00bbe9;
 					h5 {
 						display: none;
 					}
+				}
+				figure {
+					margin: 0;
 				}
 				&:hover {
 					.meta-content {
@@ -46,10 +58,52 @@ $azul-bloomberg: #00bbe9;
 						}
 					}
 				}
+				&.bl-0 {
+					flex-wrap: wrap;
+					padding: 0 10px 0 0;
+					background: #d7eaf8;
+					figure {
+						width: 100%;
+					}
+					.meta-content {
+						width: auto;
+						background: white;
+						margin: 0 0 -20px 10px;
+						transform: translateY(-20px);
+						padding: 5px 10px;
+						&:after {
+							content: "";
+							display: block;
+							position: absolute;
+							bottom: 0;
+							left: 10px;
+							right: 10px;
+							background: $azul-bloomberg;
+							height: 3px;
+						}
+					}
+				}
+				&.bl-1 {
+					flex-wrap: wrap;
+					position: relative;
+					border-top: none;
+					figure {
+						width: 100%;
+					}
+					.meta-content {
+						padding: 5px 10px 0 10px;
+						width: auto;
+						background: white;
+						position: absolute;
+						bottom: 0;
+						right: 10px;
+						left: 20%;
+					}
+				}
 			}
 		}
 	}
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(sm) {
 		.caja-contenido {
 			background: white;
 			box-shadow: 0 2px 7px 0 rgba(0,0,0,.3);
@@ -61,7 +115,7 @@ $azul-bloomberg: #00bbe9;
 						position: relative;
 						padding: 0 10px;
 						background: #d7eaf8;
-						height: 300px;
+						height: 270px;
 						margin: 0 2% 0 0;
 						.meta-content {
 							background: white;
@@ -76,7 +130,7 @@ $azul-bloomberg: #00bbe9;
 							}
 							h2 {
 								font-family: $font-sinserif;
-								font-size: 1.8rem;
+								font-size: 1.4rem;
 								font-weight: 600;
 							}
 							&:after {
@@ -93,7 +147,7 @@ $azul-bloomberg: #00bbe9;
 					}
 					&.bl-1 {
 						width: 47%;
-						height: 190px;
+						height: 180px;
 						background: #d7eaf8;
 						position: relative;
 						padding: 10px 30px 10px 10px;
@@ -108,7 +162,7 @@ $azul-bloomberg: #00bbe9;
 							width: auto;
 							a {
 								h2 {
-									font-size: 1.2rem;
+									font-size: 1.1rem;
 									font-weight: 600;
 								}
 							}
@@ -116,7 +170,7 @@ $azul-bloomberg: #00bbe9;
 					}
 					&.bl-2 {
 						width: 47%;
-						height: 90px;
+						height: 70px;
 						margin: 0;
 						border-top: 2px dotted $dark;
 						border-bottom: 2px dotted $dark;
@@ -153,6 +207,7 @@ $azul-bloomberg: #00bbe9;
 							display: none;
 						}
 						.meta-content {
+							width: 100%;
 							a {
 								h2 {
 									font-size: 1rem;
@@ -160,6 +215,33 @@ $azul-bloomberg: #00bbe9;
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.caa-contenido {
+			.caja-notas {
+				.articulo {
+					&.bl-0 {
+						height: 300px;
+						.meta-content {
+							h2 {
+								font-size: 1.8rem;
+							}
+						}
+					}
+					&.bl-1 {
+						height: 190px;
+						.meta-content {
+							h2 {
+								font-size: 1.2rem;
+							}
+						}
+					}
+					&.bl-2 {
+						height: 90px;
 					}
 				}
 			}
