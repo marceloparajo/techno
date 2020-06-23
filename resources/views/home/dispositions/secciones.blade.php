@@ -1,40 +1,76 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
-@if (isset($news) && count($news) > 0)
+@if (isset($news) && count($news) > 3)
 
-	@if (isset($news[2]))
-		<section class="container-fluid cobertura secciones py-2 mb-4 border">
-			<div class="container">
-				<h5>{{ $news[0]['hat'] ?? '' }}</h5>
-				<div class="row px-2" >
-					@foreach(array_slice($news, 0) as $key => $new)
+		<div class="container secciones">
 
-						@if ( $key == 0 || $key == 9 )
-						<article class="bloque pt-3 pb-md-3 col-12 col-md-6 col-lg-4 col-xxl-3 px-0 px-sm-3">
-						@else 
-						<article class="bloque pt-3 pb-md-3 col-12 col-sm-6 col-lg-4 col-xxl-3 px-0 px-sm-3">
-						@endif
-							<a href="{{ $new['permalink'] }}">
+			<div class="caja-contenido">
+
+				<div class="seccionfija {{ $news[0]['channel']['slug'] }}">
+
+					<h6></h6>
+
+					<div class="contenedor-notas">
+
+						@foreach(array_slice($news, 0, 7) as $key => $new)
+
+							<article class="articulo seccion">
+
 								<figure>
-									{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
-									<h4>{{ $new['headline'] }}</h4>
+									<a href="{{ $new['permalink'] }}">
+										{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
+										<h4 class="headline">
+											{{ $new['headline'] }}
+										</h4>
+										@if ($new['has_video']) 
+											<div class="galeria-video">
+												<span><i class="fa fa-play"></i></span>
+											</div>
+										@endif
+										@if ($new['has_gallery'])
+											<div class="galeria-video">
+												<span><i class="fa fa-camera"></i></span>
+											</div>
+										@endif
+									</a>
 								</figure>
 
-								<div class="meta-content px-2 px-sm-0">
-									@if ($new['hat'] != '')
-										<h3>{{ $new['hat'] }}</h3>
-									@else
-										<h3>{{ strtoupper($new['channel']['name']) }} </h3>
-									@endif
-									<h2 class="mb-2">{{ $new['home_title'] }}</h2>
+								<div class="meta-content">
+									<a href="{{ $news[0]['permalink'] }}">
+										@if ($new['hat'] != '')
+											<h3 class="hat">{{ $new['hat'] }} </h3>
+										@endif
+										<h2>
+											{{ $new['home_title'] }}
+										</h2>
+										<h4 class="headline">
+											{{ $new['headline'] }}
+										</h4>
+									</a>
 									@if ($new['signed'])
-										<h5 class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</h5>
+									<h5 class="firma-home">
+										<a href="/autores/{{$new['author']['username']}}">
+											{{ __('by') }} {{ $new['author']['fullname'] }}
+										</a>
+									</h5>
+									@elseif ($new['credit'] != '')
+										<h5>{{ $new['credit'] }}</h5>
 									@endif
 								</div>
-							</a>
-						</article>
-					@endforeach
+							</article>
+
+						@endforeach
+
+					</div>
+
 				</div>
+
+			</div><!-- caja-contenido -->
+
+			<div class="caja-right">
+
 			</div>
-		</section>
-	@endif
+
+
+		</div>
+
 @endif

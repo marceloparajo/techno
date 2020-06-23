@@ -1,0 +1,175 @@
+$sports: #33c381;
+$mujer: #be227d;
+$shows: #e43d3d;
+
+.secciones {
+	padding: 0;
+	width: 100%;
+	margin: 0 auto 20px auto;
+	.caja-contenido {
+		.seccionfija {
+			h6 {
+				margin: 0;
+				font: {
+					family: $font-condensada;
+					size: 6vw;
+					weight: 400;
+				}
+				text-transform: uppercase;
+				color: white;
+				background: $mujer;
+				padding: 3px 10px;
+				&:before {
+					content: "Mujer";
+					display: inline-block;
+					width: auto;
+					height: auto;
+				}
+			}
+			.contenedor-notas {
+				border-bottom: 4px solid $mujer;
+				.articulo.seccion {
+					display: flex;
+					justify-content: space-between;
+					padding-top: 10px;
+					border-top: 1px solid $linea;
+					figure {
+						width: 30%;
+					}
+					.meta-content {
+						width: 68%;
+						padding: 0;
+						h3 {
+							display: none;
+						}
+					}
+					&:first-of-type {
+						display: block;
+						padding-top: 0;
+						figure {
+							width: 100%;
+						}
+						.meta-content {
+							width: 100%;
+							padding: 5px 10px 0 10px;
+							a {
+								h2 {
+									font-size: 6vw;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.deportes {
+				h6 {
+					background: $sports;
+					&:before {
+						content: "Deportes";
+					}
+				}
+				.contenedor-notas {
+					border-bottom: 4px solid $sports;
+				}
+			}
+			&.espectaculos {
+				h6 {
+					background: $shows;
+					&:before {
+						content: "Espectaculos";
+					}
+				}
+				.contenedor-notas {
+					border-bottom: 4px solid $shows;
+				}
+			}
+		}
+	}
+	.caja-right {
+	}
+	@include media-breakpoint-up(sm) {
+		.caja-contenido {
+			.seccionfija {
+				h6 {
+					font-size: 1.4rem;
+				}
+				.contenedor-notas {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					border-bottom: none;
+					.articulo.seccion {
+						width: 31.5%;
+						border-bottom: 2px solid $mujer;
+						border-top: none;
+						padding-top: 0;
+						display: block;
+						figure {
+							width: 100%;
+						}
+						.meta-content {
+							padding: 0;
+							width: 100%;
+							a {
+								h2 {
+									font-size: 1.1rem;
+								}
+							}
+						}
+						&:first-of-type {
+							width: 100%;
+							.meta-content {
+								padding: 0;
+								a {
+									h2 {
+										font-size: 1.4rem;
+									}
+								}
+							}
+						}
+					}
+				}
+				&.deportes {
+					.contenedor-notas {
+						border-bottom: none;
+						.articulo.seccion {
+							border-bottom: 2px solid $sports;
+						}
+					}
+				}
+				&.espectaculos {
+					.contenedor-notas {
+						border-bottom: none;
+						.articulo.seccion {
+							border-bottom: 2px solid $shows;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.caja-contenido {
+			.seccionfija {
+				.contenedor-notas {
+					.articulo.seccion {
+						&:first-of-type {
+							display: flex;
+							padding: 10px 0;
+							.meta-content {
+								width: 34%;
+								padding: 0 0 0 10px;
+								h4 {
+									display: block;
+								}
+							}
+							figure {
+								width: 66%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

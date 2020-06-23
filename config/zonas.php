@@ -73,10 +73,6 @@ return [
         'template' => 'bloomberg'
     ],
     [
-        'id' => 'cobertura-clubmed',
-        'template' => 'cobertura'
-    ],
-    [
         'id' => 'catastrofe',
         'template' => 'catastrofe'
     ],
@@ -127,10 +123,6 @@ return [
     [
         'id' => 'mujer',
         'template' => 'secciones'
-    ],
-    [
-        'id' => 'radio',
-        'template' => 'seccionfija'
     ],
     [
         'id' => 'cobertura-radioperfil',

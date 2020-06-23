@@ -255,6 +255,7 @@
 			.container {
 				.columna-dostercios {
 					flex: 1 1 0;
+					align-self: flex-start;
 					.articulo.destacadin {
 						&:nth-last-child(-n+2) {
 							margin-bottom: 0;
@@ -398,6 +399,9 @@
 								}
 							}
 						}
+						&:nth-child(4) {
+							padding-top: 0;
+						}
 					}
 				}
 			}
@@ -452,7 +456,6 @@
 							}
 						}
 					}
-					align-self: stretch;
 				}
 				.columna-tercio {
 					flex-basis: 300px;

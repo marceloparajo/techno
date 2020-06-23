@@ -50,8 +50,7 @@
 
 			<div class="caja-right">
 
-
-				<div id="" class="ads-space text-center d-block d-md-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
+				<div id="" class="ads-space text-center d-block" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
 
 			</div><!-- caja-right -->
 
