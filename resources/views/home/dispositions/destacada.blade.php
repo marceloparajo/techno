@@ -291,13 +291,7 @@
 
 				<div class="sidebar">
 
-
-
-
 				<div id="" class="ads-space d-none d-lg-block" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
-
-
-
 
 				{{-- CONTENIDO HARCODED -BORRAR --}}
 

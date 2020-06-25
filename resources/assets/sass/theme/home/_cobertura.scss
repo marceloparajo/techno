@@ -296,7 +296,9 @@
 
 
 
-/** CAJA GENERAL **/
+/** CAJA GENERAL 
+Se usa para Radio Perfil
+**/
 
 .cajageneral {
 	* {
@@ -625,18 +627,325 @@
 	}
 }
 
-
-.seccionfija {
-	.container {
-		.row {
-			.container {
-				display: flex;
-				.contenedor-notas {
-					flex: 1 1 0;
+.arteycultura {
+	margin: 20px auto;
+	border-bottom: 1px solid $negro;
+	border-top: 1px solid $negro;
+	position: relative;
+	padding: 10px 0 0 0;
+	&:before {
+		content: " ";
+		height: 3px;
+		background: $negro;
+		display: block;
+		width: 200px;
+		position: absolute;
+		left: -1px;
+		top: -4px;
+	}
+	h6 {
+		font:{
+			family: $font-serif;
+			weight: 600;
+			size: 1.5rem;
+			size: 5vw;
+		}
+		text-transform: uppercase;
+		padding: 0 10px;
+	}
+	.notas-ayc {
+		display: block;
+		.articulo.ayc {
+			display: flex;
+			justify-content: space-between;
+			border-top: 1px solid $linea;
+			padding-top: 5px;
+			figure {
+				width: 30%;
+			}
+			.meta-content {
+				width: 68%;
+				padding: 0 10px 0 0;
+				h3 {
+					display: none;
 				}
-				.ads-space {
-					flex-basis: 300px;
-					margin-left: 20px;
+			}
+		}
+		>.articulo.ayc:first-of-type {
+			display: block;
+			padding-top: 0;
+			border-top: none;
+			figure {
+				width: 100%;
+			}
+			.meta-content {
+				width: 100%;
+				padding: 5px 10px;
+			}
+		}
+		.columna-dosnotas {
+			.articulo.ayc {
+				margin-bottom: 0;
+				.meta-content {
+					h3 {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		h6 {
+			padding: 0;
+			font-size: 1.5rem;
+		}
+		.notas-ayc {
+			.articulo.ayc {
+				.meta-content {
+					a {
+						h2 {
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+			>.articulo.ayc:first-of-type {
+				.meta-content {
+					padding: 5px 0;
+					a {
+						h2 {
+							font-size: 1.4rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-only(sm) {
+		.notas-ayc {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.columna-dosnotas {
+				width:66.2%;
+				display: flex;
+				justify-content: space-between;
+				.articulo.ayc {
+					display: block;
+					width: 48.5%;
+					figure {
+						width: 100%;
+					}				
+					.meta-content {
+						width: 100%;
+					}
+				}
+			}
+			>.articulo.ayc:last-of-type {
+				width: 32%;
+				display: block;
+				figure {
+					width: 100%;
+				}
+				.meta-content {
+					width: 100%;
+				}
+			}	
+		}
+	}
+	@include media-breakpoint-only(md) {
+		.notas-ayc {
+			.meta-content {
+				a {
+					h2 {
+						font-size: 1.1rem;
+					}
+				}
+			}
+			>.articulo.ayc:first-of-type {
+				width: 49%;
+				float: left;
+				margin: 0 2% 0 0;
+				.meta-content {
+					a {
+						h2 {
+							font-size: 1.3rem;
+						}
+					}
+				}
+			}
+			>.articulo.ayc:last-of-type {
+				width: 49%;
+				float: left;
+			}
+			.columna-dosnotas {
+				width: 49%;
+				float:  left;
+				.articulo.ayc {
+					&:first-of-type {
+						border-top: none;
+						padding-top: 0;
+					}
+					figure {
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 100%;
+			height: 1px;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.notas-ayc {
+			display: flex;
+			justify-content: space-between;
+			.articulo.ayc {
+				border-top: none;
+				padding-top: 0;
+			}
+			.columna-dosnotas {
+				width: 24%;
+				order: 0;
+				.articulo.ayc {
+					position: relative;
+					display: block;
+					figure {
+						width: 100%;
+						h4 {
+							display: none;
+						}
+					}
+					.meta-content {
+						width: 100%;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						padding: 10px 10px 0 10px;
+						background: rgba(0,0,0,0);
+						background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+						a {
+							h2 {
+								color: white;
+								font-size: 1.1rem;
+								margin-bottom: 2px;
+							}
+						}
+						h5 {
+							border-top: none;
+							padding-top: 0;
+							margin-top: 0;
+							color: white;
+							a {
+								color: white;
+							}
+						}
+					}
+					&:first-of-type {
+						margin-bottom: 11px;
+					}
+				}
+			}
+			>.articulo.ayc:first-of-type {
+				width: 49%;
+				order: 1;
+				position: relative;
+				.meta-content {
+					position: absolute;
+					bottom: 0;
+					left:0;
+					right: 0;
+					padding: 0 10px;
+					background: rgba(0,0,0,0);
+					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+					a {
+						h2 {
+							color: white;
+						}
+					}
+					h5 {
+						color: white;
+						a {
+							color: white;
+						}
+					}
+				}
+			}
+			>.articulo.ayc:last-of-type {
+				width: 24%;
+				order: 2;
+				display: block;
+				figure {
+					width: 100%;
+				}
+				.meta-content {
+					width: 100%;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.notas-ayc {
+			.articulo.ayc {
+				.meta-content {
+					a {
+						h2 {
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+			>.articulo.ayc:last-of-type {
+				width: 300px;
+				flex-basis: 300px;
+				figure {
+					margin: 0 0 5px 0;
+				}
+				.meta-content {
+					a {
+						h4 {
+							display: block;
+							max-height: 5em;
+							overflow: hidden;
+						}
+						h2 {
+							font-size: 1.4rem;
+						}
+					}
+				}
+			}
+			>.articulo.ayc:first-of-type {
+				flex: 1 1 0;
+				margin: 0 20px;
+				width: auto;
+				margin-bottom: 10px;
+				.meta-content {
+					a {
+						h2 {
+							font-size: 1.6rem;
+						}
+					}
+				}
+			}
+			.columna-dosnotas {
+				width: 300px;
+				flex-basis: 300px;
+				.articulo.ayc {
+					.meta-content {
+						a {
+							h2 {
+								font-size: 1.4rem;
+								margin-bottom: 2px;
+							}
+						}
+					}
 				}
 			}
 		}

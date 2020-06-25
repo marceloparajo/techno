@@ -18152,7 +18152,9 @@ footer .footer-revistas li a:hover {
   display: block;
 }
 
-/** CAJA GENERAL **/
+/** CAJA GENERAL 
+Se usa para Radio Perfil
+**/
 
 .cajageneral {
   display: -webkit-box;
@@ -18536,22 +18538,362 @@ footer .footer-revistas li a:hover {
   }
 }
 
-.seccionfija .container .row .container {
+.arteycultura {
+  margin: 20px auto;
+  border-bottom: 1px solid #0a0a0a;
+  border-top: 1px solid #0a0a0a;
+  position: relative;
+  padding: 10px 0 0 0;
+}
+
+.arteycultura:before {
+  content: " ";
+  height: 3px;
+  background: #0a0a0a;
+  display: block;
+  width: 200px;
+  position: absolute;
+  left: -1px;
+  top: -4px;
+}
+
+.arteycultura h6 {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-size: 5vw;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+.arteycultura .notas-ayc {
+  display: block;
+}
+
+.arteycultura .notas-ayc .articulo.ayc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 5px;
 }
 
-.seccionfija .container .row .container .contenedor-notas {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+.arteycultura .notas-ayc .articulo.ayc figure {
+  width: 30%;
 }
 
-.seccionfija .container .row .container .ads-space {
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
-  margin-left: 20px;
+.arteycultura .notas-ayc .articulo.ayc .meta-content {
+  width: 68%;
+  padding: 0 10px 0 0;
+}
+
+.arteycultura .notas-ayc .articulo.ayc .meta-content h3 {
+  display: none;
+}
+
+.arteycultura .notas-ayc > .articulo.ayc:first-of-type {
+  display: block;
+  padding-top: 0;
+  border-top: none;
+}
+
+.arteycultura .notas-ayc > .articulo.ayc:first-of-type figure {
+  width: 100%;
+}
+
+.arteycultura .notas-ayc > .articulo.ayc:first-of-type .meta-content {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.arteycultura .notas-ayc .columna-dosnotas .articulo.ayc {
+  margin-bottom: 0;
+}
+
+.arteycultura .notas-ayc .columna-dosnotas .articulo.ayc .meta-content h3 {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .arteycultura h6 {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .arteycultura .notas-ayc .articulo.ayc .meta-content a h2 {
+    font-size: 1.2rem;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type .meta-content {
+    padding: 5px 0;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type .meta-content a h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .arteycultura .notas-ayc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas {
+    width: 66.2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc {
+    display: block;
+    width: 48.5%;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc figure {
+    width: 100%;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc .meta-content {
+    width: 100%;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type {
+    width: 32%;
+    display: block;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type figure {
+    width: 100%;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type .meta-content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1019.98px) {
+  .arteycultura .notas-ayc .meta-content a h2 {
+    font-size: 1.1rem;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type {
+    width: 49%;
+    float: left;
+    margin: 0 2% 0 0;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type .meta-content a h2 {
+    font-size: 1.3rem;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type {
+    width: 49%;
+    float: left;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas {
+    width: 49%;
+    float: left;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc figure {
+    margin-bottom: 20px;
+  }
+
+  .arteycultura:after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 1px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .arteycultura .notas-ayc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .arteycultura .notas-ayc .articulo.ayc {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas {
+    width: 24%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc {
+    position: relative;
+    display: block;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc figure {
+    width: 100%;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc figure h4 {
+    display: none;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc .meta-content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 10px 0 10px;
+    background: rgba(0, 0, 0, 0);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc .meta-content a h2 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc .meta-content h5 {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+    color: white;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc .meta-content h5 a {
+    color: white;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc:first-of-type {
+    margin-bottom: 11px;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type {
+    width: 49%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    position: relative;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type .meta-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+    background: rgba(0, 0, 0, 0);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type .meta-content a h2 {
+    color: white;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type .meta-content h5 {
+    color: white;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type .meta-content h5 a {
+    color: white;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type {
+    width: 24%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    display: block;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type figure {
+    width: 100%;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type .meta-content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1295px) {
+  .arteycultura .notas-ayc .articulo.ayc .meta-content a h2 {
+    font-size: 1.2rem;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type {
+    width: 300px;
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type figure {
+    margin: 0 0 5px 0;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type .meta-content a h4 {
+    display: block;
+    max-height: 5em;
+    overflow: hidden;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:last-of-type .meta-content a h2 {
+    font-size: 1.4rem;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    margin: 0 20px;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .arteycultura .notas-ayc > .articulo.ayc:first-of-type .meta-content a h2 {
+    font-size: 1.6rem;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas {
+    width: 300px;
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+  }
+
+  .arteycultura .notas-ayc .columna-dosnotas .articulo.ayc .meta-content a h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+  }
 }
 
 .bloque {
@@ -19331,6 +19673,176 @@ footer .footer-revistas li a:hover {
 
   .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type figure {
     width: 66%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .secciones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .secciones .caja-contenido {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion {
+    position: relative;
+    margin: 0;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion figure h4 {
+    display: none;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:hover figure a img {
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type {
+    padding: 0;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type figure {
+    width: 67%;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type .meta-content {
+    width: 33%;
+    padding: 10px 0;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type .meta-content a h2 {
+    padding-left: 10px;
+    font-size: 1.6rem;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type .meta-content a h4 {
+    padding-left: 10px;
+    display: none;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type .meta-content h3 {
+    padding-left: 10px;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type:hover figure a img {
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) {
+    width: 33%;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) .meta-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) .meta-content a h3 {
+    background: #0a0a0a;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) .meta-content a h2 {
+    color: white;
+    padding: 0 10px;
+    letter-spacing: 0;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) .meta-content h5 {
+    color: white;
+    padding: 0 10px;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) .meta-content h5 a {
+    color: white;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) .meta-content h5 a:hover {
+    text-decoration: underline;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(3n) {
+    width: 34%;
+    border-left: 2px solid #be227d;
+    border-right: 2px solid #be227d;
+  }
+
+  .secciones .caja-contenido .seccionfija.deportes {
+    background: #525151;
+  }
+
+  .secciones .caja-contenido .seccionfija.deportes .articulo.seccion .meta-content a h3 {
+    background: #0a0a0a;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+  }
+
+  .secciones .caja-contenido .seccionfija.deportes .articulo.seccion .meta-content a h2 {
+    color: white;
+  }
+
+  .secciones .caja-contenido .seccionfija.deportes .articulo.seccion .meta-content a h4 {
+    color: white;
+  }
+
+  .secciones .caja-contenido .seccionfija.deportes .articulo.seccion .meta-content h5 {
+    color: white;
+  }
+
+  .secciones .caja-contenido .seccionfija.deportes .articulo.seccion .meta-content h5 a {
+    color: white;
+  }
+
+  .secciones .caja-contenido .seccionfija.deportes .articulo.seccion .meta-content h5 a:hover {
+    text-decoration: underline;
+  }
+
+  .secciones .caja-contenido .seccionfija.deportes .articulo.seccion:first-of-type .meta-content {
+    padding-right: 10px;
+  }
+
+  .secciones .caja-contenido .seccionfija.deportes .articulo.seccion:nth-child(3n) {
+    border-left: 2px solid #33c381;
+    border-right: 2px solid #33c381;
+  }
+
+  .secciones .caja-contenido .seccionfija.espectaculos .articulo.seccion:nth-child(3n) {
+    border-left: 2px solid #e43d3d;
+    border-right: 2px solid #e43d3d;
+  }
+
+  .secciones .caja-right {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    margin: 0 0 0 20px;
+  }
+}
+
+@media (min-width: 1295px) {
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type .meta-content a h2 {
+    font-size: 1.8rem;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type .meta-content a h4 {
+    display: block;
   }
 }
 
