@@ -19846,6 +19846,322 @@ Se usa para Radio Perfil
   }
 }
 
+.fotogaleria {
+  background: #343a40;
+  padding: 10px;
+}
+
+.fotogaleria h6 {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-size: 5vw;
+  text-transform: uppercase;
+  color: white;
+}
+
+.fotogaleria .notas-fotogaleria .articulo.defotogaleria {
+  background: #0a0a0a;
+  margin-bottom: 0;
+}
+
+.fotogaleria .notas-fotogaleria .articulo.defotogaleria .meta-content a h3 {
+  display: none;
+}
+
+.fotogaleria .notas-fotogaleria .articulo.defotogaleria .meta-content a h2 {
+  color: white;
+}
+
+.fotogaleria .notas-fotogaleria .articulo.defotogaleria .meta-content a h4 {
+  color: white;
+}
+
+.fotogaleria .notas-fotogaleria .articulo.defotogaleria .meta-content h5 {
+  color: white;
+  border-top: 1px solid #343a40;
+}
+
+.fotogaleria .notas-fotogaleria .articulo.defotogaleria .meta-content h5 a {
+  color: white;
+}
+
+.fotogaleria .notas-fotogaleria .articulo.defotogaleria .meta-content h5 a:hover {
+  text-decoration: underline;
+}
+
+.fotogaleria .notas-fotogaleria .articulo.defotogaleria figure .galeria-video {
+  top: 10px;
+  right: 10px;
+  left: auto;
+  bottom: auto;
+}
+
+.fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #343a40;
+}
+
+.fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria figure {
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria figure .galeria-video {
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+}
+
+.fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria .meta-content {
+  width: 68%;
+  padding: 0 10px 0 0;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.fotogaleria .notas-fotogaleria > .articulo.defotogaleria .meta-content a h2 {
+  font-size: 1.6rem;
+  font-size: 6vw;
+}
+
+@media (min-width: 576px) {
+  .fotogaleria h6 {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria {
+    display: block;
+    width: 49%;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria figure {
+    width: 100%;
+    margin: 0;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria .meta-content {
+    width: 100%;
+    padding: 5px 10px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria figure .galeria-video {
+    top: 10px;
+    right: 10px;
+    left: auto;
+    bottom: auto;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria {
+    margin-bottom: 10px;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria .meta-content {
+    padding: 5px 10px;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria .meta-content a h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .fotogaleria .notas-fotogaleria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias {
+    width: 32%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria {
+    width: 100%;
+    position: relative;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria .meta-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 10px 0 10px;
+    background: rgba(0, 0, 0, 0);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria .meta-content h5 {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria .meta-content a h2 {
+    font-size: 1.2rem;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria figure a .galeria-video {
+    opacity: .7;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria {
+    width: 65%;
+    margin-bottom: 0;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria .meta-content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria .meta-content a h2 {
+    font-size: 1.4rem;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria figure {
+    height: 100%;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria figure a {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria figure a .galeria-video {
+    opacity: .7;
+  }
+}
+
+@media (min-width: 1020px) {
+  .fotogaleria .notas-fotogaleria .secundarias {
+    width: auto;
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    margin-left: 20px;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria figure a .galeria-video {
+    opacity: 1;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria .meta-content {
+    padding-top: 50px;
+    opacity: 1;
+    -webkit-transition: ease .5s;
+    transition: ease .5s;
+  }
+
+  .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria:hover .meta-content {
+    opacity: 0;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria {
+    width: auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria .meta-content a h2 {
+    font-size: 1.6rem;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria figure a .galeria-video {
+    opacity: 1;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria:hover figure a img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+}
+
+@media (min-width: 1295px) {
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria .meta-content {
+    position: static;
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    width: auto;
+    padding: 10px;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria .meta-content a h4 {
+    display: block;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria .meta-content a h3 {
+    display: block;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria .meta-content a h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .fotogaleria .notas-fotogaleria > .articulo.defotogaleria figure {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    width: auto;
+  }
+}
+
 .catastrofe {
   background: #0a0a0a;
   padding: 15px 15px 5px 15px;

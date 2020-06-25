@@ -129,9 +129,15 @@ return [
 		'template' => 'caja-general'
 	],
 	[
+		'id' => 'fotogalerias',
+		'template' => 'fotogalerias'
+	],
+	[
+		'id' => 'video',
+		'template' => 'video'
+	],
+	[
 		'id' => 'arteycultura',
 		'template' => 'arteycultura'
 	],
-
-
 ];
