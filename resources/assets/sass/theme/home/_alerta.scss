@@ -4,7 +4,7 @@
 	background-color: $azul-dark;
 	padding: 0;
 	transform: translateY(-15px);
-	margin-bottom: -15px;
+	margin-bottom: -5px;
 	.container {
 		background: $azul;
 		margin-top: 0;
@@ -45,6 +45,11 @@
 					}
 				}
 			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.container {
+			min-width: 1260px;
 		}
 	}
 }

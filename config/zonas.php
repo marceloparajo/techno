@@ -46,7 +46,7 @@ return [
 	],
 	[
 		'id' => 'bloque-extra',
-		'template' => 'bloque'
+		'template' => 'video'
 	],
 	[
 		'id' => 'cobertura',
@@ -123,6 +123,10 @@ return [
 	[
 		'id' => 'mujer',
 		'template' => 'secciones'
+	],
+	[
+		'id' => 'cobertura-marieclaire',
+		'template' => 'marieclaire'
 	],
 	[
 		'id' => 'cobertura-radioperfil',

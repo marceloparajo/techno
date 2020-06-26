@@ -49,7 +49,7 @@
 						<span class="escucha"><a href="#"><i class="fas fa-play"></i>Escuchá&nbsp;on&nbsp;line<br>FM 101.9</a></span>
 					</div>
 
-				</div><!-- notas-cobertura -->
+				</div><!-- notas-cajageneral -->
 
 			</div>
 
