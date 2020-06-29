@@ -18704,6 +18704,10 @@ Se usa para Radio Perfil
   font-size: 6vw;
 }
 
+.video .container .notas-video > .articulo.devideo:last-of-type .miramas {
+  display: none;
+}
+
 @media (min-width: 576px) {
   .video h6 {
     padding: 10px 0 0 0;
@@ -18898,6 +18902,57 @@ Se usa para Radio Perfil
   .video .container .notas-video > .articulo.devideo:first-of-type .meta-content h3 {
     display: block;
     color: white;
+  }
+  .video .container .notas-video > .articulo.devideo:last-of-type {
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .video .container .notas-video > .articulo.devideo:last-of-type:hover figure a img {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-filter: none;
+            filter: none;
+  }
+  .video .container .notas-video > .articulo.devideo:last-of-type:hover figure a h4 {
+    display: none;
+  }
+  .video .container .notas-video > .articulo.devideo:last-of-type .meta-content {
+    position: static;
+  }
+  .video .container .notas-video > .articulo.devideo:last-of-type figure:hover a img {
+    -webkit-filter: brightness(50%);
+            filter: brightness(50%);
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  .video .container .notas-video > .articulo.devideo:last-of-type .miramas {
+    width: 100%;
+    padding: 5px 10px 0 10px;
+    margin: auto 0 0 0;
+    color: white;
+    display: block;
+    background: #0a0a0a;
+    text-align: right;
+    border-radius: 3px;
+  }
+  .video .container .notas-video > .articulo.devideo:last-of-type .miramas a {
+    color: white;
+  }
+  .video .container .notas-video > .articulo.devideo:last-of-type .miramas a:before {
+    content: "\F061";
+    font-family: "FontAwesome";
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    float: right;
   }
   .video .container .notas-video .grupotres .articulo.devideo {
     border-top: none;

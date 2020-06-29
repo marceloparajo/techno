@@ -56,7 +56,7 @@
 
 							@if ($key == 4)
 								<div class="miramas">
-									<a href="#">Más Videos</a>
+									<a href="/seccion/video/">Más Videos</a>
 								</div>
 							@endif
 
