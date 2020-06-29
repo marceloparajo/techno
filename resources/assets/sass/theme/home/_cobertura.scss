@@ -625,6 +625,7 @@ Se usa para Radio Perfil
 						}
 						.meta-content {
 							width: 100%;
+							padding: 5px 10px;
 							transform: translateY(-20px);
 							a {
 								h3 {
@@ -649,6 +650,9 @@ Se usa para Radio Perfil
 		justify-content: space-between;
 		.caja-contenido {
 			flex: 1 1 0;
+			.notas-cajageneral.marieclaire {
+				margin-bottom: 20px;
+			}
 		}
 		.caja-right {
 			flex-basis: 300px;
@@ -689,6 +693,7 @@ Se usa para Radio Perfil
 					}
 					.articulo.caja-nota {
 						width: 300px;
+						margin-bottom: 0;
 					}
 				}
 			}

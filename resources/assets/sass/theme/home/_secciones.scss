@@ -409,9 +409,9 @@ $shows: #e43d3d;
 					width: 30%;
 					margin-bottom: 10px;
 					.galeria-video {
-						top: auto;
+						top: 5px;
 						right: auto;
-						left: auto;
+						left: 5px;
 						bottom: auto;
 					}
 				}
@@ -666,7 +666,7 @@ $shows: #e43d3d;
 				display: flex;
 				justify-content: space-between;
 				padding-top: 10px;
-				border-top: 1px solid $negro;
+				border-top: 1px solid $linea-oscura;
 				margin: 0 10px 10px 10px;
 				width: auto;
 				figure {
@@ -686,7 +686,7 @@ $shows: #e43d3d;
 					}
 					h5 {
 						color: white;
-						border-top: 1px solid $negro;
+						border-top: 1px solid $linea-oscura;
 						a {
 							color: white;
 							&:hover {
@@ -696,23 +696,30 @@ $shows: #e43d3d;
 					}
 				}
 			}
-			>.articulo.devideo:first-of-type {
-				display: block;
-				width: 100%;
-				padding: 0;
-				margin: 0;
-				border-top: none;
-				figure {
+			>.articulo.devideo {
+				&:first-of-type {
+					display: block;
 					width: 100%;
-				}
-				.meta-content {
-					width: 100%;
-					padding: 5px 10px;
-					a {
-						h2 {
-							font-size: 1.6rem;
-							font-size: 6vw;
+					padding: 0;
+					margin: 0;
+					border-top: none;
+					figure {
+						width: 100%;
+					}
+					.meta-content {
+						width: 100%;
+						padding: 5px 10px;
+						a {
+							h2 {
+								font-size: 1.6rem;
+								font-size: 6vw;
+							}
 						}
+					}
+				}
+				&:last-of-type {
+					.miramas {
+						display: none;
 					}
 				}
 			}
@@ -720,26 +727,246 @@ $shows: #e43d3d;
 	}
 	@include media-breakpoint-up(sm) {
 		h6 {
-			padding: 0;
+			padding: 10px 0 0 0;
 			font-size: 1.5rem;
 		}
-		.articulo.devideo {
-			margin: 0 0 10px 0;
-			width: 100%;
-		}
-		>.articulo.devideo:first-ofy-type {
-			.meta-content {
-				a {
-					h2 {
-						font-size: 1.6rem;
+		.container {
+			.notas-video {
+				.articulo.devideo {
+					margin: 0 0 10px 0;
+					width: 100%;
+					.meta-content {
+						a {
+							h2 {
+								font-size: 1.1rem;
+							}
+						}
+					}
+				}
+				>.articulo.devideo:first-of-type {
+					.meta-content {
+						padding: 5px 0;
+						a {
+							h2 {
+								font-size: 1.4rem;
+								letter-spacing: 0;
+							}
+						}
+					}
+				}
+				.grupotres {
+					display: flex;
+					justify-content: space-between;
+					.articulo.devideo {
+						width: 31.5%;
+						display: block;
+						figure {
+							width: 100%;
+						}
+						.meta-content {
+							width: 100%;
+							padding: 5px 0;
+							a {
+								h2 {
+									font-size: 1.1rem;
+									letter-spacing: 0;
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 	}
+	@include media-breakpoint-only(md) {
+		.container {
+			.notas-video {
+				>.articulo.devideo:first-of-type {
+					width: 49%;
+					float: left;
+					margin: 0 2% 0 0;
+				}
+				.grupotres {
+					width: 49%;
+					flex-direction: column;
+					.articulo.devideo {
+						display: flex;
+						width: 100%;
+						figure {
+							width: 25%;
+						}
+						.meta-content {
+							width: 73%;
+							padding: 0;
+						}
+						&:first-of-type {
+							padding-top: 0;
+							border-top: none;
+						}
+					}
+				}
+				>.articulo.devideo:last-of-type {
+					width: 49%;
+					figure {
+						width: 25%;
+					}
+					.meta-content {
+						width: 73%;
+						padding: 0;
+						a {
+							h2 {
+								font-size: 1.1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.container {
+			.notas-video {
+				display: flex;
+				justify-content: space-between;
+				>.articulo.devideo {
+					flex-basis: 300px;
+					margin: 0;
+					background: $negro;
+					position: relative;
+					.meta-content {
+						background: $negro;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						padding: 5px 10px;
+					}
+					&:last-of-type {
+						padding-top: 0;
+						border-top: none;
+						display: block;
+						figure {
+							width: 100%;
+						}
+						.meta-content {
+							width: 100%;
+						}
+					}
+					&:first-of-type {
+						.meta-content {
+							padding: 5px 10px;
+						}
+					}
+				}
+				.grupotres {
+					flex: 1 1 0;
+					padding: 0 20px;
+					flex-direction: column;
+					.articulo.devideo {
+						display: flex;
+						width: 100%;
+						figure {
+							width: 25%;
+							a {
+								h4 {
+									display: none;
+								}
+							}
+						}
+						.meta-content {
+							width: 73%;
+							padding: 0;
+							a {
+								h2 {
+									font-size: 1.1rem;
+								}
+								h5 {
+									display: none;
+								}
+							}
+						}
+						&:first-of-type {
+							padding-top: 0;
+							border-top: none;
+						}
+						&:last-of-type {
+							margin-bottom: 0;
+							´border-bottom: 1px solid $linea-oscura;
+						}
+					}
+				}
+			}
+		}
+
+	}
 	@include media-breakpoint-up(xl) {
 		.container {
 			max-width: 1260px;
+			.notas-video {
+				>.articulo.devideo {
+					&:first-of-type {
+						background: $negro;
+						position: relative;
+						flex-basis: 480px;
+						padding: 0;
+						figure {
+							margin: 0;
+						}
+						.meta-content {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							padding: 5px 10px;
+							background: $negro;
+							h3 {
+								display: block;
+								color: white;
+							}
+						}
+					}
+					&:last-of-type {
+						background-color: transparent;
+						.meta-content {
+							position: static;
+						}
+						.miramas {
+							width: 100%;
+							padding: 5px 10px;
+							margin: auto 0 0 0;
+							color: white;
+							a {
+								color: white;
+							}
+						}
+					}
+				}
+				.grupotres {
+					.articulo.devideo {
+						border-top: none;
+						background: $negro;
+						padding: 0;
+						figure {
+							width: 40%;
+						}
+						.meta-content {
+							width: 60%;
+							padding: 10px;
+							h2 {
+								font-size: 1.1rem;
+								margin: 0;
+							}
+							h5 {
+								dislay: block;
+								margin: 5px 0 0 0;
+							}
+						}
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
 		}
 	}
 }
