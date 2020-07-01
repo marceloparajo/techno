@@ -17,7 +17,7 @@
 								<a href="{{ $new['permalink'] }}">
 									{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
 									@if($key != 0)
-									<h4>{{ $new['headline'] }}</h4>
+									{{-- <h4>{{ $new['headline'] }}</h4> --}}
 									@endif
 									@if ($new['has_video']) 
 										<div class="galeria-video">

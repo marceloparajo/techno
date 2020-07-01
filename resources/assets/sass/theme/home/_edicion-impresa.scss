@@ -1,0 +1,84 @@
+$amarillo: #fff1d1;
+
+.impresa {
+	margin: 0 auto 20px auto;
+	padding: 10px;
+	border: 1px solid $linea;
+	h6 {
+		display: block;
+		width: 100%;
+		text-transform: uppercase;
+		padding: 0 10px;
+		font:{
+			family: $font-general;
+			size: 18px;
+			weight: 400;
+		}
+		.diarioperfil {
+			display: block;
+			width: 100px;
+			height: 18px;
+			text-indent: -9999px;
+			margin: 0 0 5px 0;
+			background:{
+				image: url('img/perfil-impresa.png');
+				repeat: no-repeat;
+				position: 0 0;
+				size: 100px;
+			}
+		}
+	}
+	.notas-impresa {
+		>.articulo.deimpresa {
+			&:first-of-type {
+				width: 300px;
+				height: 408px;
+				margin: 10px auto;
+				box-shadow: 0 3px 7px 0 rgba(0,0,0,0.25);
+				figure {
+					width: 300px;
+					height: 408px;
+					overflow: hidden;
+					a {
+						img {
+							height: 408px;
+							max-width: none;
+						}
+					}
+				}
+				.meta-content {
+					padding: 5px 0;
+				}
+			}
+			&:nth-child(n+3) {
+				display: flex;
+				justify-content: space-between;
+				figure {
+					width: 30%;
+				}
+				.meta-content {
+					padding: 0;
+					width: 68%;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		.notas-impresa {
+			>.articulo.deimpresa {
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+
+
+	}
+	@include media-breakpoint-up(lg) {
+
+
+	}
+	@include media-breakpoint-up(xl) {
+
+
+	}
+}

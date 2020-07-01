@@ -18,7 +18,7 @@
 							<article class="articulo caja-nota">
 								<figure>
 									<a href="{{ $new['permalink'] }}">
-										{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
+										{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 270, $new['main_image']['caption'],'img-fluid','270x152') !!}
 										<h4>{{ $new['headline'] }}</h4>
 									</a>	
 								</figure>
