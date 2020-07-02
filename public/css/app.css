@@ -21639,8 +21639,8 @@ Se usa para Radio Perfil
     display: none;
   }
 
-  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type .meta-content h3 {
-    padding-left: 10px;
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type .meta-content h5 {
+    margin-left: 10px;
   }
 
   .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type:hover figure a img {
@@ -23808,26 +23808,27 @@ Se usa para Radio Perfil
   }
 }
 
-.impresa {
+.impresa .caja-contenido {
   margin: 0 auto 20px auto;
   padding: 10px;
-  background: #e4e2e4;
+  border: 1px solid #d4d4d4;
 }
 
-.impresa h6 {
+.impresa .caja-contenido h6 {
   display: block;
   width: 100%;
   text-transform: uppercase;
-  padding: 0 10px;
+  padding: 0;
+  border-bottom: 1px solid #d4d4d4;
   font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
-  font-size: 18px;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
-.impresa h6 .diarioperfil {
+.impresa .caja-contenido h6 .diarioperfil {
   display: block;
   width: 100px;
-  height: 18px;
+  height: 20px;
   text-indent: -9999px;
   margin: 0 0 5px 0;
   background-image: url(/images/perfil-impresa.png?083f11729fda2334f30780e5ceee10af);
@@ -23836,43 +23837,347 @@ Se usa para Radio Perfil
   background-size: 100px;
 }
 
-.impresa .notas-impresa > .articulo.deimpresa:first-of-type {
-  width: 300px;
-  height: 408px;
-  margin: 10px auto;
+.impresa .caja-contenido .notas-impresa > .articulo.deimpresa .meta-content h5 {
+  margin-bottom: 0;
 }
 
-.impresa .notas-impresa > .articulo.deimpresa:first-of-type figure {
+.impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type {
+  width: 300px;
+  height: 408px;
+  margin: 10px auto 20px auto;
+  -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+.impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type figure {
   width: 300px;
   height: 408px;
   overflow: hidden;
 }
 
-.impresa .notas-impresa > .articulo.deimpresa:first-of-type figure a img {
+.impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type figure a img {
   height: 408px;
   max-width: none;
 }
 
-.impresa .notas-impresa > .articulo.deimpresa:first-of-type .meta-content {
+.impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type .meta-content {
   padding: 5px 0;
 }
 
-.impresa .notas-impresa > .articulo.deimpresa:nth-child(n+3) {
+.impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 10px;
 }
 
-.impresa .notas-impresa > .articulo.deimpresa:nth-child(n+3) figure {
+.impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) figure {
   width: 30%;
 }
 
-.impresa .notas-impresa > .articulo.deimpresa:nth-child(n+3) .meta-content {
+.impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) .meta-content {
   padding: 0;
   width: 68%;
+}
+
+.impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 10px;
+}
+
+.impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa figure {
+  width: 30%;
+}
+
+.impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa .meta-content {
+  padding: 0;
+  width: 68%;
+}
+
+@media (min-width: 576px) {
+  .impresa .caja-contenido {
+    position: relative;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 46%;
+    height: 300px;
+    margin: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type figure {
+    width: 100%;
+    height: 300px;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:first-of-type {
+    width: 48%;
+    height: 260px;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .impresa .caja-contenido h6 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .impresa .caja-contenido h6 .fechaedicion {
+    text-align: right;
+    padding: 5px 0 0 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type {
+    width: 30%;
+    top: 42px;
+    height: 280px;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type figure {
+    height: 280px;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type figure img {
+    height: 280px;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) {
+    width: 31.5%;
+    display: block;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) figure {
+    width: 100%;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) .meta-content {
+    width: 100%;
+    padding: 5px 0 0 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) .meta-content a h2 {
+    font-size: 1.2rem;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa {
+    width: 24%;
+    display: block;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa figure {
+    width: 100%;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa .meta-content {
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa .meta-content a h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1359.98px) {
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:first-of-type {
+    width: 66%;
+    margin-right: 34%;
+    height: 280px;
+    position: relative;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:first-of-type .meta-content {
+    position: absolute;
+    background: white;
+    bottom: 0;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    padding: 10px;
+    border-bottom: 1px solid #d4d4d4;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+5) {
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+5) .meta-content {
+    padding: 0;
+    width: 68%;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+5) .meta-content a h2 {
+    font-size: 1.1rem;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+5) figure {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .impresa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .impresa .caja-right {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    margin: 0 0 0 20px;
+  }
+
+  .impresa .caja-contenido {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+}
+
+@media (min-width: 1295px) {
+  .impresa .caja-contenido h6 .diarioperfil {
+    margin-left: 300px;
+  }
+
+  .impresa .caja-contenido .notas-impresa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type {
+    left: 10px;
+    top: 10px;
+    width: 280px;
+    -ms-flex-preferred-size: 215px;
+        flex-basis: 215px;
+    margin: 0 20px 0 0;
+    height: 380px;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type figure {
+    width: 280px;
+    height: 380px;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type figure img {
+    height: 380px;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas {
+    margin-left: 300px;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa {
+    margin-bottom: 10px;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa .meta-content {
+    padding-bottom: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa .meta-content h5 {
+    margin-bottom: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:first-of-type {
+    height: auto;
+    width: 31.5%;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:first-of-type .meta-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(-n+2) .meta-content {
+    padding-bottom: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(-n+3) {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+4) figure {
+    display: none;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background: #fff1d1;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa {
+    border-top: none;
+    padding-top: 0;
+    width: 24%;
+    position: relative;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa figure {
+    display: none;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa:nth-child(n+2):before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -7px;
+    background: #d4d4d4;
+    width: 1px;
+  }
 }
 
 .pf-new-show .sticky-bottom-ads {

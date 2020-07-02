@@ -1,84 +1,341 @@
 $amarillo: #fff1d1;
 
 .impresa {
-	margin: 0 auto 20px auto;
-	padding: 10px;
-	border: 1px solid $linea;
-	h6 {
-		display: block;
-		width: 100%;
-		text-transform: uppercase;
-		padding: 0 10px;
-		font:{
-			family: $font-general;
-			size: 18px;
-			weight: 400;
-		}
-		.diarioperfil {
+	.caja-contenido {
+		margin: 0 auto 20px auto;
+		padding: 10px;
+		border: 1px solid $linea;
+		h6 {
 			display: block;
-			width: 100px;
-			height: 18px;
-			text-indent: -9999px;
-			margin: 0 0 5px 0;
-			background:{
-				image: url('img/perfil-impresa.png');
-				repeat: no-repeat;
-				position: 0 0;
-				size: 100px;
+			width: 100%;
+			text-transform: uppercase;
+			padding: 0;
+			border-bottom: 1px solid $linea;
+			font:{
+				family: $font-general;
+				size: 0.9rem;
+				weight: 400;
+			}
+			.diarioperfil {
+				display: block;
+				width: 100px;
+				height: 20px;
+				text-indent: -9999px;
+				margin: 0 0 5px 0;
+				background:{
+					image: url('img/perfil-impresa.png');
+					repeat: no-repeat;
+					position: 0 0;
+					size: 100px;
+				}
 			}
 		}
-	}
-	.notas-impresa {
-		>.articulo.deimpresa {
-			&:first-of-type {
-				width: 300px;
-				height: 408px;
-				margin: 10px auto;
-				box-shadow: 0 3px 7px 0 rgba(0,0,0,0.25);
-				figure {
+		.notas-impresa {
+			>.articulo.deimpresa {
+				.meta-content {
+					h5 {
+						margin-bottom: 0;
+					}
+				}
+				&:first-of-type {
 					width: 300px;
 					height: 408px;
-					overflow: hidden;
-					a {
-						img {
-							height: 408px;
-							max-width: none;
+					margin: 10px auto 20px auto;
+					box-shadow: 0 3px 7px 0 rgba(0,0,0,0.3);
+					figure {
+						width: 300px;
+						height: 408px;
+						overflow: hidden;
+						a {
+							img {
+								height: 408px;
+								max-width: none;
+							}
+						}
+					}
+					.meta-content {
+						padding: 5px 0;
+					}
+				}
+			}
+			.caja-notas {
+				.articulo.deimpresa {
+					&:nth-child(n+2) {
+						display: flex;
+						justify-content: space-between;
+						border-top: 1px solid $linea;
+						padding-top: 10px;
+						figure {
+							width: 30%;
+						}
+						.meta-content {
+							padding: 0;
+							width: 68%;
 						}
 					}
 				}
-				.meta-content {
-					padding: 5px 0;
-				}
 			}
-			&:nth-child(n+3) {
-				display: flex;
-				justify-content: space-between;
-				figure {
-					width: 30%;
-				}
-				.meta-content {
-					padding: 0;
-					width: 68%;
+			.caja-notas-amarillas {
+				.articulo.deimpresa {
+					display: flex;
+					justify-content: space-between;
+					border-top: 1px solid $linea;
+					padding-top: 10px;
+					figure {
+						width: 30%;
+					}
+					.meta-content {
+						padding: 0;
+						width: 68%;
+					}
 				}
 			}
 		}
 	}
 	@include media-breakpoint-up(sm) {
-		.notas-impresa {
-			>.articulo.deimpresa {
+		.caja-contenido {
+			position: relative;
+			.notas-impresa {
+				>.articulo.deimpresa {
+					&:first-of-type {
+						position: absolute;
+						top: 10px;
+						right: 10px;
+						width: 46%;
+						height: 300px;
+						margin: 0;
+						figure {
+							width: 100%;
+							height: 300px;
+						}
+					}
+				}
+				.caja-notas {
+					.articulo.deimpresa {
+						&:first-of-type {
+							width: 48%;
+							height: 260px;
+							margin: 0 0 20px 0;
+							overflow: hidden;
+						}
+					}
+				}
 			}
 		}
 	}
 	@include media-breakpoint-up(md) {
-
-
+		.caja-contenido {
+			h6 {
+				display: flex;
+				justify-content: space-between;
+				.fechaedicion {
+					text-align: right;
+					padding: 5px 0 0 0;
+				}
+			}
+			.notas-impresa {
+				>.articulo.deimpresa {
+					&:first-of-type {
+						width: 30%;
+						top: 42px;
+						height: 280px;
+						figure {
+							height: 280px;
+							img {
+								height: 280px;
+							}
+						}
+					}
+				}
+				.caja-notas {
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					.articulo.deimpresa {
+						&:nth-child(n+2) {
+							width: 31.5%;
+							display: block;
+							figure {
+								width: 100%;
+							}
+							.meta-content {
+								width: 100%;
+								padding: 5px 0 0 0;
+								a {
+									h2 {
+										font-size: 1.2rem;
+									}
+								}
+							}
+						}
+					}
+				}
+				.caja-notas-amarillas {
+					display: flex;
+					justify-content: space-between;
+					.articulo.deimpresa {
+						width: 24%;
+						display: block;
+						figure {
+							width: 100%;
+						}
+						.meta-content {
+							width: 100%;
+							padding: 5px 0;
+							a {
+								h2 {
+									font-size: 1.2rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-between(md,xl) {
+		.caja-contenido {
+			.notas-impresa {
+				.caja-notas {
+					.articulo.deimpresa {
+						&:first-of-type {
+							width: 66%;
+							margin-right: 34%;
+							height: 280px;
+							position: relative;
+							.meta-content {
+								position: absolute;
+								background: white;
+								bottom: 0;
+								right: 10px;
+								left: 10px;
+								width: auto;
+								padding: 10px;
+								border-bottom: 1px solid $linea;
+							}
+						}					
+						&:nth-child(n+5) {
+							width: 49%;
+							display: flex;
+							.meta-content {
+								padding: 0;
+								width: 68%;
+								a {
+									h2 {
+										font-size: 1.1rem;
+									}
+								}
+							}
+							figure {
+								width: 30%;
+							}
+						}
+					}
+				}
+			}		
+		}
 	}
 	@include media-breakpoint-up(lg) {
-
-
+		display: flex;
+		justify-content: space-between;
+		.caja-right {
+			flex-basis: 300px;
+			margin: 0 0 0 20px;
+		}
+		.caja-contenido {
+			flex: 1 1 0;
+		}
 	}
 	@include media-breakpoint-up(xl) {
-
-
+		.caja-contenido {
+			h6 {
+				.diarioperfil {
+					margin-left: 300px;
+				}
+			}
+			.notas-impresa {
+				display: flex;
+				flex-wrap: wrap;
+				>.articulo.deimpresa {
+					&:first-of-type {
+						left: 10px;
+						top: 10px;
+						width: 280px;
+						flex-basis: 215px;
+						margin: 0 20px 0 0;
+						height: 380px;
+						figure {
+							width: 280px;
+							height: 380px;
+							img {
+								height: 380px;
+							}
+						}
+					}
+				}
+				.caja-notas {
+					margin-left: 300px;
+					.articulo.deimpresa {
+						margin-bottom: 10px;
+						.meta-content {
+							padding-bottom: 0;
+							h5 {
+								margin-bottom: 0;
+							}
+						}
+						&:first-of-type {
+							height: auto;
+							width: 31.5%;
+							.meta-content {
+								h2 {
+									font-size: 1.2rem;
+								}
+							}
+						}
+						&:nth-child(-n+2) {
+							.meta-content {
+								padding-bottom: 0;
+							}
+						}
+						&:nth-child(-n+3) {
+							border-top: none;
+							padding-top: 0;
+						}
+						&:nth-child(n+4) {
+							figure {
+								display: none;
+							}
+						}
+					}
+				}
+				.caja-notas-amarillas {
+					width: 100%;
+					margin: 0;
+					padding: 10px;
+					background: $amarillo;
+					.articulo.deimpresa {
+						border-top: none;
+						padding-top: 0;
+						width: 24%;
+						position: relative;
+						figure {
+							display: none;
+						}
+						&:nth-child(n+2) {
+							&:before {
+								content: "";
+								display: block;
+								position: absolute;
+								top: 0;
+								bottom: 0;
+								left: -7px;
+								background: $linea;
+								width: 1px;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
