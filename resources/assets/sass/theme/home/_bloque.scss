@@ -46,7 +46,7 @@
 						padding: 0 10px 0 0;
 						width: 68%;
 						a {
-							h3 {
+							span.hat {
 								display: none;
 							}
 						}
@@ -82,7 +82,7 @@
 						flex-basis: 68%;
 						padding: 0 10px 0 0;
 						a {
-							h3 {
+							span.hat {
 								display: none;
 							}
 						}
@@ -136,7 +136,7 @@
 						.meta-content {
 							width: 100%;
 							a {
-								h3 {
+								span.hat {
 									display: block;
 								}
 							}
@@ -167,7 +167,7 @@
 							.meta-content {
 								padding: 0;
 								a {
-									h3 {
+									span.hat {
 										display: block;
 									}
 									h2 {
@@ -197,7 +197,7 @@
 						}
 						.meta-content {
 							a {
-								h3 {
+								span.hat {
 									display: block;
 								}
 							}
@@ -314,7 +314,7 @@
 							}
 							.meta-content {
 								a {
-									h3 {
+									span.hat {
 										display: block;
 									}
 									h2 {
@@ -415,7 +415,7 @@
 						&:nth-child(3) {
 							.meta-content {
 								a {
-									h3 {
+									span.hat {
 										display: block;
 									}
 								}
@@ -437,7 +437,18 @@
 	@include media-breakpoint-up(lg) {
 		flex-direction: row;
 		.caja-contenido {
+			//para el sticky
+			display: flex;
+			align-self: stretch;
+			align-items: flex-start;
+			//hasta aca para el sticky
 			.container {
+				//para el sticky
+				position: -webkit-sticky;
+				position: sticky;
+				bottom: 1rem;
+				align-self: flex-end;
+				//hasta aca para el sticky
 				.columna-tercio {
 					border-bottom: 1px solid $linea;
 					border-left: none;

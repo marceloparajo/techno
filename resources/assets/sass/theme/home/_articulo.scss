@@ -62,7 +62,8 @@
 		text-align: left;
 		padding: 5px 10px;
 		a {
-			h3 {
+			.hat {
+				display: block;
 				font:{
 					family: $font-sinserif;
 					size: .9rem;

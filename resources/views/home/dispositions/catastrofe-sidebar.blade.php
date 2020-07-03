@@ -15,7 +15,7 @@
 					<div class="meta-content">
 						<a href="{{ $new['permalink'] }}">
 							@if ($new['hat'] != '')
-								<h3 class="hat">{{ $new['hat'] }} </h3>
+								<span class="hat">{{ $new['hat'] }} </span>
 							@endif
 							<h2>
 								{{ $new['home_title'] }}
@@ -35,10 +35,10 @@
 				</article>
 				@endforeach
 
-				<div class="articulo catastrofe-tres">
+				<div class="catastrofe-tres">
 
 					@foreach (array_slice($news, 1, 3) as $new)
-						<article class="catastrofe-chica">
+						<article class="articulo catastrofe-chica">
 							<figure>
 								<a href="{{ $new['permalink'] }}">
 									{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid','270x152') !!}
@@ -47,7 +47,7 @@
 							<div class="meta-content">
 								<a href="{{ $new['permalink'] }}">
 									@if ($new['hat'] != '')
-										<h3 class="hat">{{ $new['hat'] }} </h3>
+										<span class="hat">{{ $new['hat'] }} </span>
 									@endif
 									<h2>
 										{{ $new['home_title'] }}
@@ -79,7 +79,7 @@
   
 
 
-<div id="opinion">
+	<div id="opinion">
 		<header>
 			<div class="opinion-titulo"><i class="fa fa-quote-right" aria-hidden="true"></i> <a href="https://www.perfil.com/seccion/opinion/" target="_blank">Opinión</a></div>
 		</header>

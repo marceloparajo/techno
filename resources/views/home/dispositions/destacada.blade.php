@@ -32,9 +32,9 @@
 							<div class="meta-content">
 								<a href="{{ $news[0]['permalink'] }}">
 									@if ($news[0]['hat'] != '')
-										<h3 class="hat">{{ $news[0]['hat'] }} </h3>
+										<span class="hat">{{ $news[0]['hat'] }} </span>
 									@else
-										<h3 class="hat">{{ $news[0]['channel']['name'] }}
+										<span class="hat">{{ $news[0]['channel']['name'] }}
 									@endif
 									<h2>
 										{{ $news[0]['home_title'] }}
@@ -80,7 +80,7 @@
 								<div class="meta-content">
 									<a href="{{ $news[0]['permalink'] }}">
 										@if ($new['hat'] != '')
-											<h3 class="hat">{{ $new['hat'] }} </h3>
+											<span class="hat">{{ $new['hat'] }} </span>
 										@endif
 										<h2>
 											{{ $new['home_title'] }}
@@ -129,7 +129,7 @@
 									<div class="meta-content">
 										<a href="{{ $news[0]['permalink'] }}">
 											@if ($new['hat'] != '')
-												<h3 class="hat">{{ $new['hat'] }} </h3>
+												<span class="hat">{{ $new['hat'] }} </span>
 											@endif
 											<h2>
 												{{ $new['home_title'] }}
@@ -186,7 +186,7 @@
 								<div class="meta-content">
 									<a href="{{ $news[0]['permalink'] }}">
 										@if ($new['hat'] != '')
-											<h3 class="hat">{{ $new['hat'] }} </h3>
+											<span class="hat">{{ $new['hat'] }} </span>
 										@endif
 										<h2>
 											{{ $new['home_title'] }}
@@ -236,7 +236,7 @@
 									<div class="meta-content">
 										<a href="{{ $news[0]['permalink'] }}">
 											@if ($new['hat'] != '')
-												<h3 class="hat">{{ $new['hat'] }} </h3>
+												<span class="hat">{{ $new['hat'] }} </span>
 											@endif
 											<h2>
 												{{ $new['home_title'] }}

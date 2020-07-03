@@ -39,7 +39,7 @@ $shows: #e43d3d;
 					.meta-content {
 						width: 68%;
 						padding: 0;
-						h3 {
+						span.hat {
 							display: none;
 						}
 					}
@@ -239,7 +239,7 @@ $shows: #e43d3d;
 								background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );				
 								a {
-									h3 {
+									span.hat {
 										background: $negro;
 										color: white;
 										display: inline-block;
@@ -275,7 +275,7 @@ $shows: #e43d3d;
 					.articulo.seccion {
 						.meta-content {
 							a {
-								h3 {
+								span.hat {
 									background: $negro;
 									color: white;
 									display: inline-block;
@@ -367,7 +367,7 @@ $shows: #e43d3d;
 			margin-bottom: 0;
 			.meta-content {
 				a {
-					h3 {
+					span.hat {
 						display: none;
 					}
 					h2 {
@@ -620,7 +620,7 @@ $shows: #e43d3d;
 						h4 {
 							display: block;
 						}
-						h3 {
+						span.hat {
 							display: block;
 						}
 						h2 {
@@ -673,7 +673,7 @@ $shows: #e43d3d;
 					width: 68%;
 					padding: 0 10px 0 0;
 					a {
-						h3 {
+						span.hat {
 							color: white;
 							display: none;
 						}
@@ -934,7 +934,7 @@ $shows: #e43d3d;
 							right: 0;
 							padding: 5px 10px;
 							background: $negro;
-							h3 {
+							span.hat {
 								display: block;
 								color: white;
 							}

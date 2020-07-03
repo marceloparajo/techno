@@ -25,7 +25,7 @@
 
 	<div class="row maincontainer px-0 pt-3 mx-0">
 
-		<div class="editorial">
+		<main class="editorial">
 			@foreach($home_content as $key => $value)
 				@if ($key != 'sidebar')
 					<section id="{{ $key }}">
@@ -35,7 +35,7 @@
 					</section>
 				@endif
 			@endforeach
-		</div>
+		</main>
 
 
 		<!-- megalateral -->

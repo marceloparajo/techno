@@ -20,7 +20,7 @@
 				}
 				.meta-content {
 					padding:0;
-					h3 {
+					span.hat {
 						font:{
 							family: $font-general;
 							size: 14px;
@@ -91,7 +91,7 @@
 					flex-basis: 65%;
 					transform: translateY(-3px);
 					padding-right: 10px;
-					h3 {
+					span.hat {
 						font:{
 							family: $font-general;
 							size: 14px;
@@ -237,6 +237,9 @@
 	@include media-breakpoint-only(lg) {
 		.caja-notas {
 			.catastrofe-todas {
+				.catastrofe-tres {
+					margin-bottom: 0;
+				}
 				article.catastrofe-grande {
 					.meta-content {
 						h4 {

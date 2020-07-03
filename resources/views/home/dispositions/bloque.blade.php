@@ -41,7 +41,7 @@
 								<div class="meta-content">
 									<a href="{{ $new['permalink'] }}">
 										@if ($new['hat'] != '')
-											<h3 class="hat">{{ $new['hat'] }} </h3>
+											<span class="hat">{{ $new['hat'] }} </span>
 										@endif
 										<h2>
 											{{ $new['home_title'] }}
@@ -89,7 +89,7 @@
 							<div class="meta-content">
 								<a href="{{ $new['permalink'] }}">
 									@if ($new['hat'] != '')
-										<h3 class="hat">{{ $new['hat'] }} </h3>
+										<span class="hat">{{ $new['hat'] }} </span>
 									@endif
 									<h2>
 										{{ $new['home_title'] }}
@@ -112,8 +112,13 @@
 
 
 {{--
+##########################
+##########################
 
-	esto no iría
+		ESTO NO VA
+
+##########################
+##########################
 
 					<div class="hilera-full trescolumnas">
 						@foreach(array_slice($news, 0, 5) as $key => $new)
@@ -133,7 +138,7 @@
 								<div class="meta-content">
 									<a href="{{ $new['permalink'] }}">
 										@if ($new['hat'] != '')
-											<h3 class="hat">{{ $new['hat'] }} </h3>
+											<span class="hat">{{ $new['hat'] }} </span>
 										@endif
 										<h2>
 											{{ $new['home_title'] }}
@@ -157,9 +162,6 @@
 						@endforeach
 					</div>
 
-
-
-
 					<div class="hilera-full cuatrocolumnas">
 						@foreach(array_slice($news, 0, 5) as $key => $new)
 							@if ($key == 4)
@@ -178,7 +180,7 @@
 								<div class="meta-content">
 									<a href="{{ $new['permalink'] }}">
 										@if ($new['hat'] != '')
-											<h3 class="hat">{{ $new['hat'] }} </h3>
+											<span class="hat">{{ $new['hat'] }} </span>
 										@endif
 										<h2>
 											{{ $new['home_title'] }}
@@ -214,8 +216,6 @@
 
 			<div class="container caja-right">
 				<div class="sidebar">
-
-					<div id="" class="ads-space d-none d-lg-block" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
 
 
 

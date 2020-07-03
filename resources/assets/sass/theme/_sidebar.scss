@@ -146,7 +146,8 @@
 	#investigacion,
 	#opinion,
 	#periodismopuro,
-	#panorama {
+	#panorama,
+	#masLeidasSidebar {
 		background: #fff;
 		width: 100%;
 		margin: 0 0 20px 0;
@@ -168,7 +169,7 @@
 				height: 26px;
 				display: block;
 				margin: 0;
-				background: url('/static/css/img/ventas/exitoina-logo-sidebar.png') 0 0 no-repeat;
+				background: url('img/exitoina-logo-sidebar.png') 0 0 no-repeat;
 				a {
 					display: block;
 					width: 180px;
@@ -181,7 +182,7 @@
 				height: 29px;
 				display: block;
 				margin: 0;
-				background: url('/static/css/img/ventas/net-logo-sidebar.png') 0 0 no-repeat;
+				background: url('img/net-logo-sidebar.png') 0 0 no-repeat;
 				a {
 					display: block;
 					width: 70px;
@@ -211,7 +212,7 @@
 				font-family: 'Crimson Text', 'Times New Roman', Times, serif;
 				font-size: 24px;
 				font-weight: 600;
-				background: url('/static/css/img/ventas/perfil-logo-xs-sidebar.png') right 0 no-repeat;
+				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
 				.fa {
 					color: #c3ced8;
 					margin: 0 3px 0 0;
@@ -233,7 +234,7 @@
 				font-family: 'Crimson Text', 'Times New Roman', Times, serif;
 				font-size: 24px;
 				font-weight: 600;
-				background: url('/static/css/img/ventas/perfil-logo-xs-sidebar.png') right 0 no-repeat;
+				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
 				.fa {
 					color: #c3ced8;
 					margin: 0 3px 0 0;
@@ -251,7 +252,7 @@
 				height: 49px;
 				display: block;
 				margin: 0 auto;
-				background: url('/static/css/img/ventas/periodismo-puro-logo-sidebar.png') 0 0 no-repeat;
+				background: url('img/periodismo-puro-logo-sidebar.png') 0 0 no-repeat;
 				background-position: center center;
 				a {
 					display: block;

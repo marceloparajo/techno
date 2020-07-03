@@ -37,7 +37,7 @@
 					<div class="meta-content">
 						<a href="{{ $new['permalink'] }}">
 							@if ($new['hat'] != '')
-								<h3 class="hat">{{ $new['hat'] }} </h3>
+								<span class="hat">{{ $new['hat'] }} </span>
 							@endif
 							<h2>
 								{{ $new['home_title'] }}

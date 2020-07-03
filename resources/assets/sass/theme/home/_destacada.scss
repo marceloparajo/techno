@@ -52,7 +52,7 @@
 						.meta-content {
 							padding: 0 10px 0 0;
 							width: 68%;
-							h3 {
+							span.hat {
 								display: none;
 							}
 						}
@@ -67,7 +67,7 @@
 				.articulo {
 					.meta-content {
 						a {
-							h3 {
+							span.hat {
 								display: none;
 							}
 						}
@@ -165,7 +165,7 @@
 							}
 							.meta-content {
 								width: 100%;
-								h3 {
+								span.hat {
 									display: block;
 								}
 							}
@@ -195,7 +195,7 @@
 							margin-bottom:  10px;
 							.meta-content {
 								a {
-									h3 {
+									span.hat {
 										display: block;
 									}
 									h2 {
@@ -210,7 +210,7 @@
 							padding-top: 0;
 							.meta-content {
 								padding: 5px 0;
-								h3 {
+								span.hat {
 									display: block;
 								}
 							}
@@ -235,7 +235,7 @@
 							.meta-content {
 								padding: 5px 10px;
 								a {
-									h3 {
+									span.hat {
 										display: none;
 									}
 									h2 {
@@ -311,7 +311,7 @@
 						&:nth-child(4) {
 							.meta-content {
 								a {
-									h3 {
+									span.hat {
 										display: block;
 									}
 								}
@@ -346,11 +346,11 @@
 									h2 {
 										font-size: 1.8rem;
 									}
-									h3 {
+									span.hat {
 										background: $negro;
 										color: white;
 										display: inline-block;
-										padding: 10px 15px;
+										padding: 7px 15px;
 										font-weight: normal;
 										margin-left: -15px;
 										margin-bottom: 5px;

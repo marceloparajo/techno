@@ -7,7 +7,7 @@
 		<article>
 			<a href="{{ $new['permalink'] }}">
 				<h2>{{ $new['home_title'] }}</h2>
-				<h3>{{ $new['embed_code'] }}</h3>
+				<p>{{ $new['embed_code'] }}</p>
 			</a>
 		</article>
 		@endforeach

@@ -3,6 +3,9 @@ body {
 	width: 100%;
 	max-width: 100%;
 }
+body {
+	overflow-x: hidden;
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
