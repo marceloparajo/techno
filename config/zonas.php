@@ -46,15 +46,23 @@ return [
 	],
 	[
 		'id' => 'bloque-extra',
-		'template' => 'video'
+		'template' => 'bloque'
 	],
 	[
 		'id' => 'cobertura',
 		'template' => 'cobertura'
 	],
 	[
+		'id' => 'catastrofe',
+		'template' => 'catastrofe-sidebar'
+	],
+	[
 		'id' => 'especiales',
 		'template' => 'especial'
+	],
+	[
+		'id' => 'cobertura-yelmo',
+		'template' => 'cobertura'
 	],
 	[
 		'id' => 'cobertura-extra',
@@ -71,10 +79,6 @@ return [
 	[
 		'id' => 'bloomberg',
 		'template' => 'bloomberg'
-	],
-	[
-		'id' => 'catastrofe',
-		'template' => 'catastrofe'
 	],
 	[
 		'id' => 'minuto-de-noticias',
@@ -109,10 +113,6 @@ return [
 		'template' => 'bloque'
 	],
 	[
-		'id' => 'sugeridas-perfil',
-		'template' => 'sugeridas-perfil'
-	],
-	[
 		'id' => 'deportes',
 		'template' => 'secciones'
 	],
@@ -123,6 +123,10 @@ return [
 	[
 		'id' => 'mujer',
 		'template' => 'secciones'
+	],
+	[
+		'id' => 'edicion-impresa',
+		'template' => 'edicion-impresa'
 	],
 	[
 		'id' => 'cobertura-marieclaire',
@@ -144,4 +148,58 @@ return [
 		'id' => 'arteycultura',
 		'template' => 'arteycultura'
 	],
+	[
+		'id' => 'rev-caras',
+		'template' => 'revistas'
+	],
+	[
+		'id' => 'rev-noticias',
+		'template' => 'revistas'
+	],
+	[
+		'id' => 'rev-marieclaire',
+		'template' => 'revistas'
+	],
+	[
+		'id' => 'rev-parabrisas',
+		'template' => 'revistas'
+	],
+	[
+		'id' => 'rev-weekend',
+		'template' => 'revistas'
+	],
+	[
+		'id' => 'rev-supercampo',
+		'template' => 'revistas'
+	],
+	[
+		'id' => 'rev-luz',
+		'template' => 'revistas'
+	],
+	[
+		'id' => 'rev-hombre',
+		'template' => 'revistas'
+	],
+	[
+		'id' => 'rev-fortuna',
+		'template' => 'revistas'
+	],
+	[
+		'id' => 'rev-mia',
+		'template' => 'revistas'
+	],
+	[
+		'id' => 'rev-lunateen',
+		'template' => 'revistas'
+	],
 ];
+
+
+
+
+/*
+wamp/www/perfilcom/node_modules/webpack-notifier/index.js
+
+Linea 42 a 46
+Agregadas para que no tire error el npm run
+*/

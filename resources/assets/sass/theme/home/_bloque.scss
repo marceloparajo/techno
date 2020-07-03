@@ -119,7 +119,7 @@
 	}
 	.container.caja-right {
 		margin: 10px auto;
-		background: #fde;
+		padding: 0;
 	}
 	@include media-breakpoint-up(sm) {
 		.caja-contenido {
@@ -480,10 +480,22 @@
 			}
 		}
 		.container.caja-right {
-			padding: 0;
 			flex-basis: 300px;
-			margin: 0 0 0 20px;
+			width: 300px;
+			display: flex;
 			align-self: stretch;
+			align-items: flex-start;
+			margin: 0 0 0 20px;
+			padding: 0;
+			.sidebar {
+				width: 300px;
+				position: -webkit-sticky;
+				position: sticky;
+				bottom: 1rem;
+				align-self: flex-end;
+				display: flex;
+				flex-direction: column;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {

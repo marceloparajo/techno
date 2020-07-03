@@ -3644,7 +3644,7 @@
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  --light: #f8f9fa;
+  --light: #e4e2e4;
   --dark: #343a40;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -6203,16 +6203,16 @@ pre code {
 .table-light,
 .table-light > th,
 .table-light > td {
-  background-color: #fdfdfe;
+  background-color: #f7f7f7;
 }
 
 .table-hover .table-light:hover {
-  background-color: #ececf6;
+  background-color: #eaeaea;
 }
 
 .table-hover .table-light:hover > td,
 .table-hover .table-light:hover > th {
-  background-color: #ececf6;
+  background-color: #eaeaea;
 }
 
 .table-dark,
@@ -7223,42 +7223,42 @@ fieldset:disabled a.btn {
 
 .btn-light {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #e4e2e4;
+  border-color: #e4e2e4;
 }
 
 .btn-light:hover {
   color: #212529;
-  background-color: #e2e6ea;
-  border-color: #dae0e5;
+  background-color: #d2ced2;
+  border-color: #cbc8cb;
 }
 
 .btn-light:focus,
 .btn-light.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(228, 226, 228, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(228, 226, 228, 0.5);
 }
 
 .btn-light.disabled,
 .btn-light:disabled {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #e4e2e4;
+  border-color: #e4e2e4;
 }
 
 .btn-light:not(:disabled):not(.disabled):active,
 .btn-light:not(:disabled):not(.disabled).active,
 .show > .btn-light.dropdown-toggle {
   color: #212529;
-  background-color: #dae0e5;
-  border-color: #d3d9df;
+  background-color: #cbc8cb;
+  border-color: #c5c1c5;
 }
 
 .btn-light:not(:disabled):not(.disabled):active:focus,
 .btn-light:not(:disabled):not(.disabled).active:focus,
 .show > .btn-light.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(228, 226, 228, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(228, 226, 228, 0.5);
 }
 
 .btn-dark {
@@ -7542,27 +7542,27 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-light {
-  color: #f8f9fa;
+  color: #e4e2e4;
   background-color: transparent;
   background-image: none;
-  border-color: #f8f9fa;
+  border-color: #e4e2e4;
 }
 
 .btn-outline-light:hover {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #e4e2e4;
+  border-color: #e4e2e4;
 }
 
 .btn-outline-light:focus,
 .btn-outline-light.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(228, 226, 228, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(228, 226, 228, 0.5);
 }
 
 .btn-outline-light.disabled,
 .btn-outline-light:disabled {
-  color: #f8f9fa;
+  color: #e4e2e4;
   background-color: transparent;
 }
 
@@ -7570,15 +7570,15 @@ fieldset:disabled a.btn {
 .btn-outline-light:not(:disabled):not(.disabled).active,
 .show > .btn-outline-light.dropdown-toggle {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #e4e2e4;
+  border-color: #e4e2e4;
 }
 
 .btn-outline-light:not(:disabled):not(.disabled):active:focus,
 .btn-outline-light:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-light.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(228, 226, 228, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(228, 226, 228, 0.5);
 }
 
 .btn-outline-dark {
@@ -9886,14 +9886,14 @@ input[type="button"].btn-block {
 
 .badge-light {
   color: #212529;
-  background-color: #f8f9fa;
+  background-color: #e4e2e4;
 }
 
 .badge-light[href]:hover,
 .badge-light[href]:focus {
   color: #212529;
   text-decoration: none;
-  background-color: #dae0e5;
+  background-color: #cbc8cb;
 }
 
 .badge-dark {
@@ -10040,17 +10040,17 @@ input[type="button"].btn-block {
 }
 
 .alert-light {
-  color: #818182;
-  background-color: #fefefe;
-  border-color: #fdfdfe;
+  color: #777677;
+  background-color: #faf9fa;
+  border-color: #f7f7f7;
 }
 
 .alert-light hr {
-  border-top-color: #ececf6;
+  border-top-color: #eaeaea;
 }
 
 .alert-light .alert-link {
-  color: #686868;
+  color: #5d5d5d;
 }
 
 .alert-dark {
@@ -10335,20 +10335,20 @@ input[type="button"].btn-block {
 }
 
 .list-group-item-light {
-  color: #818182;
-  background-color: #fdfdfe;
+  color: #777677;
+  background-color: #f7f7f7;
 }
 
 .list-group-item-light.list-group-item-action:hover,
 .list-group-item-light.list-group-item-action:focus {
-  color: #818182;
-  background-color: #ececf6;
+  color: #777677;
+  background-color: #eaeaea;
 }
 
 .list-group-item-light.list-group-item-action.active {
   color: #fff;
-  background-color: #818182;
-  border-color: #818182;
+  background-color: #777677;
+  border-color: #777677;
 }
 
 .list-group-item-dark {
@@ -11252,14 +11252,14 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #e4e2e4 !important;
 }
 
 a.bg-light:hover,
 a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
-  background-color: #dae0e5 !important;
+  background-color: #cbc8cb !important;
 }
 
 .bg-dark {
@@ -11346,7 +11346,7 @@ button.bg-dark:focus {
 }
 
 .border-light {
-  border-color: #f8f9fa !important;
+  border-color: #e4e2e4 !important;
 }
 
 .border-dark {
@@ -15742,12 +15742,12 @@ a.text-danger:focus {
 }
 
 .text-light {
-  color: #f8f9fa !important;
+  color: #e4e2e4 !important;
 }
 
 a.text-light:hover,
 a.text-light:focus {
-  color: #dae0e5 !important;
+  color: #cbc8cb !important;
 }
 
 .text-dark {
@@ -16316,11 +16316,11 @@ a:hover {
 }
 
 .social-header a {
-  color: #f8f9fa;
+  color: #e4e2e4;
 }
 
 .social-header a i {
-  color: #f8f9fa;
+  color: #e4e2e4;
   font-size: 18px;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
@@ -16398,7 +16398,7 @@ ul.temas li.nav-item a {
   font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #f8f9fa;
+  color: #e4e2e4;
 }
 
 ul.temas li.nav-item a:hover {
@@ -16872,7 +16872,7 @@ footer .footer-revistas li a:hover {
           transform: translateY(-1px);
 }
 
-@media only screen and (max-width: 890px) {
+@media (max-width: 1019.98px) {
   .podcasts-radio {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -16896,6 +16896,806 @@ footer .footer-revistas li a:hover {
     -ms-flex-preferred-size: 100px;
         flex-basis: 100px;
   }
+}
+
+.caja-right #exitoina,
+.caja-right #net,
+.caja-right #investigacion,
+.caja-right #opinion,
+.caja-right #periodismopuro,
+.caja-right #panorama {
+  background: #fff;
+  width: 100%;
+  margin: 0 0 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+
+.caja-right #exitoina header,
+.caja-right #net header,
+.caja-right #investigacion header,
+.caja-right #opinion header,
+.caja-right #periodismopuro header,
+.caja-right #panorama header {
+  width: 100%;
+  padding: 10px 10px 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+}
+
+.caja-right #exitoina header .exitoina-titulo,
+.caja-right #net header .exitoina-titulo,
+.caja-right #investigacion header .exitoina-titulo,
+.caja-right #opinion header .exitoina-titulo,
+.caja-right #periodismopuro header .exitoina-titulo,
+.caja-right #panorama header .exitoina-titulo {
+  text-indent: -9999px;
+  width: 180px;
+  height: 26px;
+  display: block;
+  margin: 0;
+  background: url("/static/css/img/ventas/exitoina-logo-sidebar.png") 0 0 no-repeat;
+}
+
+.caja-right #exitoina header .exitoina-titulo a,
+.caja-right #net header .exitoina-titulo a,
+.caja-right #investigacion header .exitoina-titulo a,
+.caja-right #opinion header .exitoina-titulo a,
+.caja-right #periodismopuro header .exitoina-titulo a,
+.caja-right #panorama header .exitoina-titulo a {
+  display: block;
+  width: 180px;
+  height: 26px;
+}
+
+.caja-right #exitoina header .net-titulo,
+.caja-right #net header .net-titulo,
+.caja-right #investigacion header .net-titulo,
+.caja-right #opinion header .net-titulo,
+.caja-right #periodismopuro header .net-titulo,
+.caja-right #panorama header .net-titulo {
+  text-indent: -9999px;
+  width: 70px;
+  height: 29px;
+  display: block;
+  margin: 0;
+  background: url("/static/css/img/ventas/net-logo-sidebar.png") 0 0 no-repeat;
+}
+
+.caja-right #exitoina header .net-titulo a,
+.caja-right #net header .net-titulo a,
+.caja-right #investigacion header .net-titulo a,
+.caja-right #opinion header .net-titulo a,
+.caja-right #periodismopuro header .net-titulo a,
+.caja-right #panorama header .net-titulo a {
+  display: block;
+  width: 70px;
+  width: 29px;
+}
+
+.caja-right #exitoina header .investigacion-titulo,
+.caja-right #net header .investigacion-titulo,
+.caja-right #investigacion header .investigacion-titulo,
+.caja-right #opinion header .investigacion-titulo,
+.caja-right #periodismopuro header .investigacion-titulo,
+.caja-right #panorama header .investigacion-titulo {
+  text-indent: -9999px;
+  width: 280px;
+  height: 35px;
+  display: block;
+  margin: 0;
+  background: url("/static/css/img/investigacion-logo-sidebar.png") 0 0 no-repeat;
+}
+
+.caja-right #exitoina header .investigacion-titulo a,
+.caja-right #net header .investigacion-titulo a,
+.caja-right #investigacion header .investigacion-titulo a,
+.caja-right #opinion header .investigacion-titulo a,
+.caja-right #periodismopuro header .investigacion-titulo a,
+.caja-right #panorama header .investigacion-titulo a {
+  display: block;
+  width: 280px;
+  height: 35px;
+}
+
+.caja-right #exitoina header .opinion-titulo,
+.caja-right #net header .opinion-titulo,
+.caja-right #investigacion header .opinion-titulo,
+.caja-right #opinion header .opinion-titulo,
+.caja-right #periodismopuro header .opinion-titulo,
+.caja-right #panorama header .opinion-titulo {
+  width: 280px;
+  height: 30px;
+  line-height: 44px;
+  display: block;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Crimson Text', 'Times New Roman', Times, serif;
+  font-size: 24px;
+  font-weight: 600;
+  background: url("/static/css/img/ventas/perfil-logo-xs-sidebar.png") right 0 no-repeat;
+}
+
+.caja-right #exitoina header .opinion-titulo .fa,
+.caja-right #net header .opinion-titulo .fa,
+.caja-right #investigacion header .opinion-titulo .fa,
+.caja-right #opinion header .opinion-titulo .fa,
+.caja-right #periodismopuro header .opinion-titulo .fa,
+.caja-right #panorama header .opinion-titulo .fa {
+  color: #c3ced8;
+  margin: 0 3px 0 0;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.caja-right #exitoina header .opinion-titulo a,
+.caja-right #net header .opinion-titulo a,
+.caja-right #investigacion header .opinion-titulo a,
+.caja-right #opinion header .opinion-titulo a,
+.caja-right #periodismopuro header .opinion-titulo a,
+.caja-right #panorama header .opinion-titulo a {
+  display: inline-block;
+  color: #000;
+}
+
+.caja-right #exitoina header .panorama-titulo,
+.caja-right #net header .panorama-titulo,
+.caja-right #investigacion header .panorama-titulo,
+.caja-right #opinion header .panorama-titulo,
+.caja-right #periodismopuro header .panorama-titulo,
+.caja-right #panorama header .panorama-titulo {
+  width: 280px;
+  height: 30px;
+  line-height: 44px;
+  display: block;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Crimson Text', 'Times New Roman', Times, serif;
+  font-size: 24px;
+  font-weight: 600;
+  background: url("/static/css/img/ventas/perfil-logo-xs-sidebar.png") right 0 no-repeat;
+}
+
+.caja-right #exitoina header .panorama-titulo .fa,
+.caja-right #net header .panorama-titulo .fa,
+.caja-right #investigacion header .panorama-titulo .fa,
+.caja-right #opinion header .panorama-titulo .fa,
+.caja-right #periodismopuro header .panorama-titulo .fa,
+.caja-right #panorama header .panorama-titulo .fa {
+  color: #c3ced8;
+  margin: 0 3px 0 0;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.caja-right #exitoina header .panorama-titulo a,
+.caja-right #net header .panorama-titulo a,
+.caja-right #investigacion header .panorama-titulo a,
+.caja-right #opinion header .panorama-titulo a,
+.caja-right #periodismopuro header .panorama-titulo a,
+.caja-right #panorama header .panorama-titulo a {
+  display: inline-block;
+  color: #000;
+}
+
+.caja-right #exitoina header .periodismopuro-titulo,
+.caja-right #net header .periodismopuro-titulo,
+.caja-right #investigacion header .periodismopuro-titulo,
+.caja-right #opinion header .periodismopuro-titulo,
+.caja-right #periodismopuro header .periodismopuro-titulo,
+.caja-right #panorama header .periodismopuro-titulo {
+  text-indent: -9999px;
+  width: 183px;
+  height: 49px;
+  display: block;
+  margin: 0 auto;
+  background: url("/static/css/img/ventas/periodismo-puro-logo-sidebar.png") 0 0 no-repeat;
+  background-position: center center;
+}
+
+.caja-right #exitoina header .periodismopuro-titulo a,
+.caja-right #net header .periodismopuro-titulo a,
+.caja-right #investigacion header .periodismopuro-titulo a,
+.caja-right #opinion header .periodismopuro-titulo a,
+.caja-right #periodismopuro header .periodismopuro-titulo a,
+.caja-right #panorama header .periodismopuro-titulo a {
+  display: block;
+  width: 183px;
+  width: 49px;
+  margin: auto;
+}
+
+.caja-right #exitoina header.pp,
+.caja-right #net header.pp,
+.caja-right #investigacion header.pp,
+.caja-right #opinion header.pp,
+.caja-right #periodismopuro header.pp,
+.caja-right #panorama header.pp {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.caja-right #exitoina header.pp h3,
+.caja-right #net header.pp h3,
+.caja-right #investigacion header.pp h3,
+.caja-right #opinion header.pp h3,
+.caja-right #periodismopuro header.pp h3,
+.caja-right #panorama header.pp h3 {
+  border-top: 1px solid #d4d4d4;
+  margin-top: 10px;
+  padding-top: 5px;
+  text-align: right;
+  font-size: 15px;
+  font-style: italic;
+  display: block;
+  width: 100%;
+}
+
+.caja-right #exitoina article,
+.caja-right #net article,
+.caja-right #investigacion article,
+.caja-right #opinion article,
+.caja-right #periodismopuro article,
+.caja-right #panorama article {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.caja-right #exitoina article a,
+.caja-right #net article a,
+.caja-right #investigacion article a,
+.caja-right #opinion article a,
+.caja-right #periodismopuro article a,
+.caja-right #panorama article a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.caja-right #exitoina article a figure,
+.caja-right #net article a figure,
+.caja-right #investigacion article a figure,
+.caja-right #opinion article a figure,
+.caja-right #periodismopuro article a figure,
+.caja-right #panorama article a figure {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  height: 50px;
+  margin: 0 10px 0 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.caja-right #exitoina article a h2,
+.caja-right #net article a h2,
+.caja-right #investigacion article a h2,
+.caja-right #opinion article a h2,
+.caja-right #periodismopuro article a h2,
+.caja-right #panorama article a h2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.05em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+}
+
+.caja-right #exitoina article a h5,
+.caja-right #net article a h5,
+.caja-right #investigacion article a h5,
+.caja-right #opinion article a h5,
+.caja-right #periodismopuro article a h5,
+.caja-right #panorama article a h5 {
+  font-size: 12px;
+  font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
+  line-height: 1em;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.caja-right #exitoina article.notaOpinion a,
+.caja-right #net article.notaOpinion a,
+.caja-right #investigacion article.notaOpinion a,
+.caja-right #opinion article.notaOpinion a,
+.caja-right #periodismopuro article.notaOpinion a,
+.caja-right #panorama article.notaOpinion a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.caja-right #exitoina article.notaOpinion a figure,
+.caja-right #net article.notaOpinion a figure,
+.caja-right #investigacion article.notaOpinion a figure,
+.caja-right #opinion article.notaOpinion a figure,
+.caja-right #periodismopuro article.notaOpinion a figure,
+.caja-right #panorama article.notaOpinion a figure {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  width: 100%;
+}
+
+.caja-right #exitoina article.notaOpinion a .content,
+.caja-right #net article.notaOpinion a .content,
+.caja-right #investigacion article.notaOpinion a .content,
+.caja-right #opinion article.notaOpinion a .content,
+.caja-right #periodismopuro article.notaOpinion a .content,
+.caja-right #panorama article.notaOpinion a .content {
+  -ms-flex-preferred-size: 63%;
+      flex-basis: 63%;
+}
+
+.caja-right #exitoina article.notaOpinion:first-of-type a,
+.caja-right #net article.notaOpinion:first-of-type a,
+.caja-right #investigacion article.notaOpinion:first-of-type a,
+.caja-right #opinion article.notaOpinion:first-of-type a,
+.caja-right #periodismopuro article.notaOpinion:first-of-type a,
+.caja-right #panorama article.notaOpinion:first-of-type a {
+  display: block;
+}
+
+.caja-right #exitoina article:after,
+.caja-right #net article:after,
+.caja-right #investigacion article:after,
+.caja-right #opinion article:after,
+.caja-right #periodismopuro article:after,
+.caja-right #panorama article:after {
+  display: block;
+  content: " ";
+  clear: both;
+  height: 1px;
+  margin: 0;
+}
+
+.caja-right #exitoina article:hover,
+.caja-right #net article:hover,
+.caja-right #investigacion article:hover,
+.caja-right #opinion article:hover,
+.caja-right #periodismopuro article:hover,
+.caja-right #panorama article:hover {
+  background: #ededed;
+}
+
+.caja-right #exitoina article:hover a h2,
+.caja-right #net article:hover a h2,
+.caja-right #investigacion article:hover a h2,
+.caja-right #opinion article:hover a h2,
+.caja-right #periodismopuro article:hover a h2,
+.caja-right #panorama article:hover a h2 {
+  color: #000;
+}
+
+.caja-right #exitoina article:first-of-type a,
+.caja-right #net article:first-of-type a,
+.caja-right #investigacion article:first-of-type a,
+.caja-right #opinion article:first-of-type a,
+.caja-right #periodismopuro article:first-of-type a,
+.caja-right #panorama article:first-of-type a {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.caja-right #exitoina article:first-of-type a figure,
+.caja-right #net article:first-of-type a figure,
+.caja-right #investigacion article:first-of-type a figure,
+.caja-right #opinion article:first-of-type a figure,
+.caja-right #periodismopuro article:first-of-type a figure,
+.caja-right #panorama article:first-of-type a figure {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: auto;
+  clear: both;
+  margin: 0 0 5px 0;
+}
+
+.caja-right #exitoina article:first-of-type a h2,
+.caja-right #net article:first-of-type a h2,
+.caja-right #investigacion article:first-of-type a h2,
+.caja-right #opinion article:first-of-type a h2,
+.caja-right #periodismopuro article:first-of-type a h2,
+.caja-right #panorama article:first-of-type a h2 {
+  font-size: 18px;
+  line-height: 1.03em;
+}
+
+.caja-right #exitoina article.notaPanorama a,
+.caja-right #net article.notaPanorama a,
+.caja-right #investigacion article.notaPanorama a,
+.caja-right #opinion article.notaPanorama a,
+.caja-right #periodismopuro article.notaPanorama a,
+.caja-right #panorama article.notaPanorama a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.caja-right #exitoina article.notaPanorama a figure,
+.caja-right #net article.notaPanorama a figure,
+.caja-right #investigacion article.notaPanorama a figure,
+.caja-right #opinion article.notaPanorama a figure,
+.caja-right #periodismopuro article.notaPanorama a figure,
+.caja-right #panorama article.notaPanorama a figure {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  width: 100%;
+}
+
+.caja-right #exitoina article.notaPanorama a .content,
+.caja-right #net article.notaPanorama a .content,
+.caja-right #investigacion article.notaPanorama a .content,
+.caja-right #opinion article.notaPanorama a .content,
+.caja-right #periodismopuro article.notaPanorama a .content,
+.caja-right #panorama article.notaPanorama a .content {
+  -ms-flex-preferred-size: 63%;
+      flex-basis: 63%;
+}
+
+.caja-right #exitoina article.notaPanorama a .content h5,
+.caja-right #net article.notaPanorama a .content h5,
+.caja-right #investigacion article.notaPanorama a .content h5,
+.caja-right #opinion article.notaPanorama a .content h5,
+.caja-right #periodismopuro article.notaPanorama a .content h5,
+.caja-right #panorama article.notaPanorama a .content h5 {
+  text-align: right;
+}
+
+.caja-right #exitoina article.notaPanorama:first-of-type a,
+.caja-right #net article.notaPanorama:first-of-type a,
+.caja-right #investigacion article.notaPanorama:first-of-type a,
+.caja-right #opinion article.notaPanorama:first-of-type a,
+.caja-right #periodismopuro article.notaPanorama:first-of-type a,
+.caja-right #panorama article.notaPanorama:first-of-type a {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.caja-right #exitoina article.notaPanorama:first-of-type a figure,
+.caja-right #net article.notaPanorama:first-of-type a figure,
+.caja-right #investigacion article.notaPanorama:first-of-type a figure,
+.caja-right #opinion article.notaPanorama:first-of-type a figure,
+.caja-right #periodismopuro article.notaPanorama:first-of-type a figure,
+.caja-right #panorama article.notaPanorama:first-of-type a figure {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  width: 100%;
+  height: 50px;
+  margin: 0 10px 0 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.caja-right #exitoina article.notaPanorama:first-of-type a .content,
+.caja-right #net article.notaPanorama:first-of-type a .content,
+.caja-right #investigacion article.notaPanorama:first-of-type a .content,
+.caja-right #opinion article.notaPanorama:first-of-type a .content,
+.caja-right #periodismopuro article.notaPanorama:first-of-type a .content,
+.caja-right #panorama article.notaPanorama:first-of-type a .content {
+  -ms-flex-preferred-size: 63%;
+      flex-basis: 63%;
+}
+
+.caja-right #exitoina article.notaPanorama:first-of-type a .content h2,
+.caja-right #net article.notaPanorama:first-of-type a .content h2,
+.caja-right #investigacion article.notaPanorama:first-of-type a .content h2,
+.caja-right #opinion article.notaPanorama:first-of-type a .content h2,
+.caja-right #periodismopuro article.notaPanorama:first-of-type a .content h2,
+.caja-right #panorama article.notaPanorama:first-of-type a .content h2 {
+  font-size: 16px;
+}
+
+.caja-right #exitoina footer,
+.caja-right #net footer,
+.caja-right #investigacion footer,
+.caja-right #opinion footer,
+.caja-right #periodismopuro footer,
+.caja-right #panorama footer {
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  background-color: white;
+}
+
+.caja-right #exitoina footer a,
+.caja-right #net footer a,
+.caja-right #investigacion footer a,
+.caja-right #opinion footer a,
+.caja-right #periodismopuro footer a,
+.caja-right #panorama footer a {
+  font-family: 'PT sans', helvetica, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #000;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  line-height: 1em;
+}
+
+.caja-right #exitoina footer a:after,
+.caja-right #net footer a:after,
+.caja-right #investigacion footer a:after,
+.caja-right #opinion footer a:after,
+.caja-right #periodismopuro footer a:after,
+.caja-right #panorama footer a:after {
+  content: "\F061";
+  font-family: "FontAwesome";
+  display: block;
+  font-size: 20px;
+  margin-left: 10px;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.caja-right #exitoina footer a:hover,
+.caja-right #net footer a:hover,
+.caja-right #investigacion footer a:hover,
+.caja-right #opinion footer a:hover,
+.caja-right #periodismopuro footer a:hover,
+.caja-right #panorama footer a:hover {
+  color: #444;
+}
+
+.caja-right #exitoina footer.edi a,
+.caja-right #net footer.edi a,
+.caja-right #investigacion footer.edi a,
+.caja-right #opinion footer.edi a,
+.caja-right #periodismopuro footer.edi a,
+.caja-right #panorama footer.edi a {
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 1019.98px) {
+  .caja-right #exitoina article,
+  .caja-right #net article,
+  .caja-right #investigacion article,
+  .caja-right #opinion article,
+  .caja-right #periodismopuro article,
+  .caja-right #panorama article {
+    width: 49%;
+    margin-left: 1%;
+    float: left;
+  }
+
+  .caja-right #exitoina article a figure,
+  .caja-right #net article a figure,
+  .caja-right #investigacion article a figure,
+  .caja-right #opinion article a figure,
+  .caja-right #periodismopuro article a figure,
+  .caja-right #panorama article a figure {
+    height: 7vw;
+    width: 100%;
+  }
+
+  .caja-right #exitoina article a figure img,
+  .caja-right #net article a figure img,
+  .caja-right #investigacion article a figure img,
+  .caja-right #opinion article a figure img,
+  .caja-right #periodismopuro article a figure img,
+  .caja-right #panorama article a figure img {
+    width: 100%;
+  }
+
+  .caja-right #exitoina article:first-of-type,
+  .caja-right #net article:first-of-type,
+  .caja-right #investigacion article:first-of-type,
+  .caja-right #opinion article:first-of-type,
+  .caja-right #periodismopuro article:first-of-type,
+  .caja-right #panorama article:first-of-type {
+    width: 50%;
+    margin: 0;
+    border-bottom: none;
+  }
+
+  .caja-right #exitoina article:last-of-type,
+  .caja-right #net article:last-of-type,
+  .caja-right #investigacion article:last-of-type,
+  .caja-right #opinion article:last-of-type,
+  .caja-right #periodismopuro article:last-of-type,
+  .caja-right #panorama article:last-of-type {
+    border-bottom: none;
+  }
+
+  .caja-right #exitoina header .opinion-titulo,
+  .caja-right #net header .opinion-titulo,
+  .caja-right #investigacion header .opinion-titulo,
+  .caja-right #opinion header .opinion-titulo,
+  .caja-right #periodismopuro header .opinion-titulo,
+  .caja-right #panorama header .opinion-titulo {
+    width: 100%;
+  }
+
+  .caja-right #exitoina header.pp,
+  .caja-right #net header.pp,
+  .caja-right #investigacion header.pp,
+  .caja-right #opinion header.pp,
+  .caja-right #periodismopuro header.pp,
+  .caja-right #panorama header.pp {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .caja-right #exitoina header.pp .periodismopuro-titulo,
+  .caja-right #net header.pp .periodismopuro-titulo,
+  .caja-right #investigacion header.pp .periodismopuro-titulo,
+  .caja-right #opinion header.pp .periodismopuro-titulo,
+  .caja-right #periodismopuro header.pp .periodismopuro-titulo,
+  .caja-right #panorama header.pp .periodismopuro-titulo {
+    margin-left: 0;
+  }
+
+  .caja-right #exitoina header.pp h3,
+  .caja-right #net header.pp h3,
+  .caja-right #investigacion header.pp h3,
+  .caja-right #opinion header.pp h3,
+  .caja-right #periodismopuro header.pp h3,
+  .caja-right #panorama header.pp h3 {
+    display: inline-block;
+    border-top: none;
+    width: auto;
+  }
+
+  .caja-right #exitoina footer,
+  .caja-right #net footer,
+  .caja-right #investigacion footer,
+  .caja-right #opinion footer,
+  .caja-right #periodismopuro footer,
+  .caja-right #panorama footer {
+    clear: both;
+    width: 100%;
+    border-top: 1px solid #ddd;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .caja-right #exitoina,
+  .caja-right #net,
+  .caja-right #investigacion,
+  .caja-right #opinion,
+  .caja-right #periodismopuro,
+  .caja-right #panorama {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .caja-right #exitoina article,
+  .caja-right #exitoina article:first-of-type,
+  .caja-right #net article,
+  .caja-right #net article:first-of-type,
+  .caja-right #investigacion article,
+  .caja-right #investigacion article:first-of-type,
+  .caja-right #opinion article,
+  .caja-right #opinion article:first-of-type,
+  .caja-right #periodismopuro article,
+  .caja-right #periodismopuro article:first-of-type,
+  .caja-right #panorama article,
+  .caja-right #panorama article:first-of-type {
+    width: 100%;
+    margin: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .caja-right #exitoina article a,
+  .caja-right #exitoina article:first-of-type a,
+  .caja-right #net article a,
+  .caja-right #net article:first-of-type a,
+  .caja-right #investigacion article a,
+  .caja-right #investigacion article:first-of-type a,
+  .caja-right #opinion article a,
+  .caja-right #opinion article:first-of-type a,
+  .caja-right #periodismopuro article a,
+  .caja-right #periodismopuro article:first-of-type a,
+  .caja-right #panorama article a,
+  .caja-right #panorama article:first-of-type a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .caja-right #exitoina article a figure,
+  .caja-right #exitoina article:first-of-type a figure,
+  .caja-right #net article a figure,
+  .caja-right #net article:first-of-type a figure,
+  .caja-right #investigacion article a figure,
+  .caja-right #investigacion article:first-of-type a figure,
+  .caja-right #opinion article a figure,
+  .caja-right #opinion article:first-of-type a figure,
+  .caja-right #periodismopuro article a figure,
+  .caja-right #periodismopuro article:first-of-type a figure,
+  .caja-right #panorama article a figure,
+  .caja-right #panorama article:first-of-type a figure {
+    -ms-flex-preferred-size: 100px;
+        flex-basis: 100px;
+    height: auto;
+    margin: 0 10px 0 0;
+  }
+
+  .caja-right #exitoina article a h2,
+  .caja-right #exitoina article:first-of-type a h2,
+  .caja-right #net article a h2,
+  .caja-right #net article:first-of-type a h2,
+  .caja-right #investigacion article a h2,
+  .caja-right #investigacion article:first-of-type a h2,
+  .caja-right #opinion article a h2,
+  .caja-right #opinion article:first-of-type a h2,
+  .caja-right #periodismopuro article a h2,
+  .caja-right #periodismopuro article:first-of-type a h2,
+  .caja-right #panorama article a h2,
+  .caja-right #panorama article:first-of-type a h2 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    font-size: 18px;
+  }
+}
+
+.caja-right #opinion header,
+.caja-right #panorama header {
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 226, 232, 0)), to(#e4e2e8));
+  background: linear-gradient(to bottom, rgba(228, 226, 232, 0) 0%, #e4e2e8 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e4e2e8', endColorstr='#e4e2e8',GradientType=0 );
+  /* IE6-9 */
 }
 
 .articulo {
@@ -18555,6 +19355,7 @@ Se usa para Radio Perfil
 
   .cajageneral .caja-contenido .notas-cajageneral.marieclaire .contenido-notas .articulo.caja-nota .meta-content {
     width: 100%;
+    padding: 5px 10px;
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
   }
@@ -18588,6 +19389,10 @@ Se usa para Radio Perfil
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
+  }
+
+  .cajageneral .caja-contenido .notas-cajageneral.marieclaire {
+    margin-bottom: 20px;
   }
 
   .cajageneral .caja-right {
@@ -18626,6 +19431,7 @@ Se usa para Radio Perfil
 
   .cajageneral .caja-contenido .notas-cajageneral.marieclaire .contenido-notas .articulo.caja-nota {
     width: 300px;
+    margin-bottom: 0;
   }
 }
 
@@ -19148,7 +19954,7 @@ Se usa para Radio Perfil
 
 .bloque .container.caja-right {
   margin: 10px auto;
-  background: #fde;
+  padding: 0;
 }
 
 @media (min-width: 576px) {
@@ -19534,12 +20340,35 @@ Se usa para Radio Perfil
   }
 
   .bloque .container.caja-right {
-    padding: 0;
     -ms-flex-preferred-size: 300px;
         flex-basis: 300px;
-    margin: 0 0 0 20px;
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-item-align: stretch;
         align-self: stretch;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 0 20px;
+    padding: 0;
+  }
+
+  .bloque .container.caja-right .sidebar {
+    width: 300px;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 1rem;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -19817,8 +20646,8 @@ Se usa para Radio Perfil
     display: none;
   }
 
-  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type .meta-content h3 {
-    padding-left: 10px;
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type .meta-content h5 {
+    margin-left: 10px;
   }
 
   .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type:hover figure a img {
@@ -20005,11 +20834,10 @@ Se usa para Radio Perfil
 }
 
 .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria figure .galeria-video {
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: 7px auto;
+  top: 5px;
+  right: auto;
+  left: 5px;
+  bottom: auto;
 }
 
 .fotogaleria .notas-fotogaleria .secundarias .articulo.defotogaleria .meta-content {
@@ -20285,7 +21113,7 @@ Se usa para Radio Perfil
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 10px;
-  border-top: 1px solid #0a0a0a;
+  border-top: 1px solid #555;
   margin: 0 10px 10px 10px;
   width: auto;
 }
@@ -20310,7 +21138,7 @@ Se usa para Radio Perfil
 
 .video .container .notas-video .articulo.devideo .meta-content h5 {
   color: white;
-  border-top: 1px solid #0a0a0a;
+  border-top: 1px solid #555;
 }
 
 .video .container .notas-video .articulo.devideo .meta-content h5 a {
@@ -20343,9 +21171,13 @@ Se usa para Radio Perfil
   font-size: 6vw;
 }
 
+.video .container .notas-video > .articulo.devideo:last-of-type .miramas {
+  display: none;
+}
+
 @media (min-width: 576px) {
   .video h6 {
-    padding: 0;
+    padding: 10px 0 0 0;
     font-size: 1.5rem;
   }
 
@@ -20354,12 +21186,204 @@ Se usa para Radio Perfil
     width: 100%;
   }
 
+  .video .container .notas-video .articulo.devideo .meta-content a h2 {
+    font-size: 1.1rem;
+  }
+
   .video .container .notas-video > .articulo.devideo:first-of-type .meta-content {
     padding: 5px 0;
   }
 
   .video .container .notas-video > .articulo.devideo:first-of-type .meta-content a h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+  }
+
+  .video .container .notas-video .grupotres {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo {
+    width: 31.5%;
+    display: block;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo figure {
+    width: 100%;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo .meta-content {
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo .meta-content a h2 {
+    font-size: 1.1rem;
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1019.98px) {
+  .video .container .notas-video > .articulo.devideo:first-of-type {
+    width: 49%;
+    float: left;
+    margin: 0 2% 0 0;
+  }
+
+  .video .container .notas-video .grupotres {
+    width: 49%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo figure {
+    width: 25%;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo .meta-content {
+    width: 73%;
+    padding: 0;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo:first-of-type {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type {
+    width: 49%;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type figure {
+    width: 25%;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type .meta-content {
+    width: 73%;
+    padding: 0;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type .meta-content a h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1020px) {
+  .video .container .notas-video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .video .container .notas-video > .articulo.devideo {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    margin: 0;
+    background: #0a0a0a;
+    position: relative;
+  }
+
+  .video .container .notas-video > .articulo.devideo .meta-content {
+    background: #0a0a0a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 10px;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type {
+    padding-top: 0;
+    border-top: none;
+    display: block;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type figure {
+    width: 100%;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type .meta-content {
+    width: 100%;
+  }
+
+  .video .container .notas-video > .articulo.devideo:first-of-type .meta-content {
+    padding: 5px 10px;
+  }
+
+  .video .container .notas-video > .articulo.devideo:hover figure a img {
+    -webkit-filter: none;
+            filter: none;
+  }
+
+  .video .container .notas-video .grupotres {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    padding: 0 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo figure {
+    width: 25%;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo figure a h4 {
+    display: none;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo .meta-content {
+    width: 73%;
+    padding: 0;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo .meta-content a h2 {
+    font-size: 1.1rem;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo .meta-content a h5 {
+    display: none;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo:first-of-type {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo:last-of-type {
+    margin-bottom: 0;
+    border-bottom: 1px solid #555;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo:hover figure a img {
+    -webkit-filter: none;
+            filter: none;
   }
 }
 
@@ -20367,12 +21391,250 @@ Se usa para Radio Perfil
   .video .container {
     max-width: 1260px;
   }
+
+  .video .container .notas-video > .articulo.devideo:first-of-type {
+    background: #0a0a0a;
+    position: relative;
+    -ms-flex-preferred-size: 480px;
+        flex-basis: 480px;
+    padding: 0;
+  }
+
+  .video .container .notas-video > .articulo.devideo:first-of-type figure {
+    margin: 0;
+  }
+
+  .video .container .notas-video > .articulo.devideo:first-of-type .meta-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 10px;
+    background: #0a0a0a;
+  }
+
+  .video .container .notas-video > .articulo.devideo:first-of-type .meta-content h3 {
+    display: block;
+    color: white;
+  }
+
+  .video .container .notas-video > .articulo.devideo:first-of-type:hover figure a img {
+    -webkit-filter: none;
+            filter: none;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type {
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type:hover figure a img {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-filter: none;
+            filter: none;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type .meta-content {
+    position: static;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type figure:hover a img {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type .miramas {
+    width: 100%;
+    padding: 5px 10px 0 10px;
+    margin: auto 0 0 0;
+    color: white;
+    display: block;
+    background: #0a0a0a;
+    text-align: right;
+    border-radius: 2px;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type .miramas a {
+    color: white;
+  }
+
+  .video .container .notas-video > .articulo.devideo:last-of-type .miramas a:before {
+    content: "\F061";
+    font-family: "FontAwesome";
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    float: right;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo {
+    border-top: none;
+    background: #0a0a0a;
+    padding: 0;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo figure {
+    width: 40%;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo .meta-content {
+    width: 60%;
+    padding: 10px;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo .meta-content h2 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo .meta-content h5 {
+    dislay: block;
+    margin: 5px 0 0 0;
+  }
+
+  .video .container .notas-video .grupotres .articulo.devideo:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.revistas {
+  margin: 0 auto 20px auto;
+  padding: 0;
+  border: 1px solid #d4d4d4;
+}
+
+.revistas .notas-revistas .articulo.derevistas {
+  margin: 0;
+  padding: 10px;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.revistas .notas-revistas .articulo.derevistas .meta-content {
+  padding: 5px 0;
+}
+
+.revistas .notas-revistas .articulo.derevistas:hover {
+  background: #e4e2e4;
+}
+
+.revistas .notas-revistas .grupotres .articulo.derevistas {
+  border-top: 1px solid #d4d4d4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.revistas .notas-revistas .grupotres .articulo.derevistas figure {
+  width: 30%;
+}
+
+.revistas .notas-revistas .grupotres .articulo.derevistas .meta-content {
+  width: 68%;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .revistas .notas-revistas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .revistas .notas-revistas > .articulo.derevistas {
+    width: 50%;
+    margin: 0;
+    position: relative;
+    border-top: 1px solid #d4d4d4;
+  }
+
+  .revistas .notas-revistas > .articulo.derevistas .meta-content {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    right: 20px;
+    background: white;
+    width: auto;
+    padding: 10px;
+  }
+
+  .revistas .notas-revistas > .articulo.derevistas .meta-content a h2 {
+    font-size: 1.4rem;
+  }
+
+  .revistas .notas-revistas .grupotres {
+    width: 50%;
+  }
+
+  .revistas .notas-revistas .grupotres .articulo.derevistas {
+    border-left: 1px solid #d4d4d4;
+  }
+
+  .revistas .notas-revistas .grupotres .articulo.derevistas .meta-content a h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1020px) {
+  .revistas .notas-revistas .articulo.derevistas:hover figure a img {
+    -webkit-filter: none;
+            filter: none;
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  .revistas .notas-revistas > .articulo.derevistas {
+    width: 33%;
+  }
+
+  .revistas .notas-revistas .grupotres {
+    width: 67%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .revistas .notas-revistas .grupotres .articulo.derevistas {
+    width: 33.333333%;
+    display: block;
+  }
+
+  .revistas .notas-revistas .grupotres .articulo.derevistas figure {
+    width: 100%;
+  }
+
+  .revistas .notas-revistas .grupotres .articulo.derevistas .meta-content {
+    width: 100%;
+    padding: 5px 0;
+  }
+}
+
+@media (min-width: 1295px) {
+  .revistas .notas-revistas > .articulo.derevistas .meta-content {
+    bottom: 20px;
+  }
 }
 
 .catastrofe {
-  background: #0a0a0a;
-  padding: 15px 15px 5px 15px;
   margin-bottom: 20px;
+  padding: 0;
+}
+
+.catastrofe .catastrofe-todas {
+  padding: 15px;
+  background: #0a0a0a;
 }
 
 .catastrofe .catastrofe-todas article {
@@ -20380,23 +21642,23 @@ Se usa para Radio Perfil
   margin-bottom: 10px;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande a figure {
+.catastrofe .catastrofe-todas article.catastrofe-grande figure {
   width: 100%;
   height: 100%;
   overflow: hidden;
   margin: 0 0 10px 0;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande a figure img {
+.catastrofe .catastrofe-todas article.catastrofe-grande figure img {
   width: 100%;
   height: auto;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content {
-  padding: 0 10px;
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content {
+  padding: 0;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content h3 {
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h3 {
   font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
   font-size: 14px;
   font-height: 700;
@@ -20406,9 +21668,10 @@ Se usa para Radio Perfil
   padding: 0;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content h2 {
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h2 {
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  font-size: 1.5em;
+  font-size: 1.6rem;
+  font-size: 7vw;
   font-weight: 400;
   color: white;
   letter-spacing: -0.01em;
@@ -20416,13 +21679,13 @@ Se usa para Radio Perfil
   line-height: 1.03em;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content h2 .hat {
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h2 .hat {
   color: #557c9c;
   font-size: 0.98em;
   font-weight: 600;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content h2 .hat:after {
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h2 .hat:after {
   content: " / ";
   font-size: .8em;
   font-weight: normal;
@@ -20433,7 +21696,7 @@ Se usa para Radio Perfil
           transform: translateY(-2px);
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content h4 {
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h4 {
   color: #d4d4d4;
   font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
   font-size: 16px;
@@ -20442,21 +21705,21 @@ Se usa para Radio Perfil
   display: none;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content h5 {
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h5 {
+  border-top-color: #343a40;
+}
+
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h5 a {
   color: #d4d4d4;
-  font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.2em;
-  text-transform: uppercase;
+}
+
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h5 a:hover {
+  color: white;
 }
 
 .catastrofe .catastrofe-todas article.catastrofe-chica {
   padding-top: 10px;
   border-top: 1px solid #343a40;
-}
-
-.catastrofe .catastrofe-todas article.catastrofe-chica a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20465,13 +21728,13 @@ Se usa para Radio Perfil
           justify-content: space-between;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-chica a figure {
+.catastrofe .catastrofe-todas article.catastrofe-chica figure {
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
   margin: 0;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-chica a .meta-content {
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content {
   -ms-flex-preferred-size: 65%;
       flex-basis: 65%;
   -webkit-transform: translateY(-3px);
@@ -20479,7 +21742,7 @@ Se usa para Radio Perfil
   padding-right: 10px;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-chica a .meta-content h3 {
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h3 {
   font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
   font-size: 14px;
   font-height: 700;
@@ -20487,9 +21750,10 @@ Se usa para Radio Perfil
   margin: 0;
   text-transform: uppercase;
   padding: 0;
+  display: none;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-chica a .meta-content h2 {
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h2 {
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 1.2em;
   font-weight: 400;
@@ -20499,11 +21763,11 @@ Se usa para Radio Perfil
   margin-bottom: 0;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-chica a .meta-content h2 .hat {
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h2 .hat {
   color: #557c9c;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-chica a .meta-content h2 .hat:after {
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h2 .hat:after {
   content: " / ";
   font-size: .8em;
   font-weight: normal;
@@ -20514,8 +21778,31 @@ Se usa para Radio Perfil
           transform: translateY(-2px);
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-chica a .meta-content h4 {
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h4 {
   display: none;
+}
+
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h5 {
+  margin-top: 8px;
+  border-top-color: #343a40;
+}
+
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h5 a {
+  color: #d4d4d4;
+}
+
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h5 a:hover {
+  color: white;
+}
+
+@media (min-width: 576px) {
+  .catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h2 {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -20528,18 +21815,18 @@ Se usa para Radio Perfil
             justify-content: space-between;
   }
 
-  .catastrofe .catastrofe-todas article.catastrofe-grande a {
+  .catastrofe .catastrofe-todas article.catastrofe-grande {
     position: relative;
     width: 100%;
     display: block;
   }
 
-  .catastrofe .catastrofe-todas article.catastrofe-grande a figure {
+  .catastrofe .catastrofe-todas article.catastrofe-grande figure {
     width: 80%;
     margin: 0 0 0 auto;
   }
 
-  .catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content {
+  .catastrofe .catastrofe-todas article.catastrofe-grande .meta-content {
     position: absolute;
     top: 0;
     left: 0;
@@ -20553,59 +21840,93 @@ Se usa para Radio Perfil
     /* IE6-9 */
   }
 
-  .catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content h2 {
-    font-size: 1.8em;
+  .catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h2 {
+    font-size: 2rem;
   }
 
-  .catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content h4 {
+  .catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h4 {
     display: block;
   }
 
   .catastrofe .catastrofe-todas article.catastrofe-chica {
-    -ms-flex-preferred-size: 32%;
-        flex-basis: 32%;
-  }
-
-  .catastrofe .catastrofe-todas article.catastrofe-chica a {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: 32%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 0;
   }
 
-  .catastrofe .catastrofe-todas article.catastrofe-chica a figure {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+  .catastrofe .catastrofe-todas article.catastrofe-chica figure {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
     margin: 0 0 10px 0;
   }
 
-  .catastrofe .catastrofe-todas article.catastrofe-chica a .meta-content {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+  .catastrofe .catastrofe-todas article.catastrofe-chica .meta-content {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
     margin: 0;
+    padding: 0;
+  }
+
+  .catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h2 {
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 1020px) {
-  .catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content h2 {
+  .catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h2 {
     font-size: 2.4em;
   }
 }
 
+@media (min-width: 1020px) {
+  .catastrofe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .catastrofe .caja-notas {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+
+  .catastrofe .caja-right {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    width: 300px;
+    margin: 0 0 0 20px;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1294.98px) {
+  .catastrofe .caja-notas .catastrofe-todas article.catastrofe-grande .meta-content h4 {
+    display: none;
+  }
+}
+
 @media (min-width: 1295px) {
-  .catastrofe .catastrofe-todas {
+  .catastrofe > .catastrofe-todas {
     position: relative;
   }
 
-  .catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content {
+  .catastrofe > .catastrofe-todas article.catastrofe-grande .meta-content {
     padding-left: 0;
   }
 
-  .catastrofe .catastrofe-todas article.catastrofe-grande a .meta-content h2 {
+  .catastrofe > .catastrofe-todas article.catastrofe-grande .meta-content h2 {
     font-size: 3em;
   }
 
-  .catastrofe .catastrofe-todas .catastrofe-tres {
+  .catastrofe > .catastrofe-todas .catastrofe-tres {
     position: absolute;
     width: 30%;
     bottom: 0;
@@ -20615,11 +21936,9 @@ Se usa para Radio Perfil
             flex-direction: column;
   }
 
-  .catastrofe .catastrofe-todas .catastrofe-tres .catastrofe-chica {
+  .catastrofe > .catastrofe-todas .catastrofe-tres .catastrofe-chica {
+    width: 100%;
     margin: 0;
-  }
-
-  .catastrofe .catastrofe-todas .catastrofe-tres .catastrofe-chica a {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -20629,16 +21948,20 @@ Se usa para Radio Perfil
             justify-content: space-between;
   }
 
-  .catastrofe .catastrofe-todas .catastrofe-tres .catastrofe-chica a figure {
+  .catastrofe > .catastrofe-todas .catastrofe-tres .catastrofe-chica figure {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
   }
 
-  .catastrofe .catastrofe-todas .catastrofe-tres .catastrofe-chica a .meta-content {
+  .catastrofe > .catastrofe-todas .catastrofe-tres .catastrofe-chica .meta-content {
     -ms-flex-preferred-size: 67%;
         flex-basis: 67%;
     -webkit-transform: translateY(-3px);
             transform: translateY(-3px);
+  }
+
+  .catastrofe > .catastrofe-todas .catastrofe-tres .catastrofe-chica .meta-content h5 {
+    display: none;
   }
 }
 
@@ -21258,23 +22581,23 @@ Se usa para Radio Perfil
 }
 
 @media (min-width: 768px) {
-  .bloomberg .caa-contenido .caja-notas .articulo.bl-0 {
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-0 {
     height: 300px;
   }
 
-  .bloomberg .caa-contenido .caja-notas .articulo.bl-0 .meta-content h2 {
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-0 .meta-content h2 {
     font-size: 1.8rem;
   }
 
-  .bloomberg .caa-contenido .caja-notas .articulo.bl-1 {
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-1 {
     height: 190px;
   }
 
-  .bloomberg .caa-contenido .caja-notas .articulo.bl-1 .meta-content h2 {
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-1 .meta-content h2 {
     font-size: 1.2rem;
   }
 
-  .bloomberg .caa-contenido .caja-notas .articulo.bl-2 {
+  .bloomberg .caja-contenido .caja-notas .articulo.bl-2 {
     height: 90px;
   }
 }
@@ -21554,6 +22877,364 @@ Se usa para Radio Perfil
     display: inline-block;
     font-size: 1.3rem;
     margin-bottom: 0;
+  }
+}
+
+.impresa {
+  padding: 0;
+}
+
+.impresa .caja-contenido {
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  border: 1px solid #d4d4d4;
+}
+
+.impresa .caja-contenido h6 {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 0;
+  border-bottom: 1px solid #d4d4d4;
+  font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.impresa .caja-contenido h6 .diarioperfil {
+  display: block;
+  width: 100px;
+  height: 20px;
+  text-indent: -9999px;
+  margin: 0 0 5px 0;
+  background-image: url(/images/perfil-impresa.png?083f11729fda2334f30780e5ceee10af);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100px;
+}
+
+.impresa .caja-contenido .notas-impresa > .articulo.deimpresa .meta-content h5 {
+  margin-bottom: 0;
+}
+
+.impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type {
+  width: 300px;
+  margin: 10px auto 20px auto;
+}
+
+.impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type figure {
+  width: 300px;
+  -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+.impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type .meta-content {
+  padding: 5px 0;
+}
+
+.impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 10px;
+}
+
+.impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) figure {
+  width: 30%;
+}
+
+.impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) .meta-content {
+  padding: 0;
+  width: 68%;
+}
+
+.impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 10px;
+}
+
+@media (min-width: 576px) {
+  .impresa .caja-contenido {
+    position: relative;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 46%;
+    height: 300px;
+    margin: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type figure {
+    width: 100%;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:first-of-type {
+    width: 48%;
+    height: 260px;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .impresa .caja-contenido h6 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .impresa .caja-contenido h6 .fechaedicion {
+    text-align: right;
+    padding: 5px 0 0 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type {
+    width: 30%;
+    top: 42px;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) {
+    width: 31.5%;
+    display: block;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) figure {
+    width: 100%;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) .meta-content {
+    width: 100%;
+    padding: 5px 0 0 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+2) .meta-content a h2 {
+    font-size: 1.2rem;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: #fff1d1;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa {
+    width: 48%;
+    display: block;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa .meta-content {
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa .meta-content a h2 {
+    font-size: 1.2rem;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa:nth-child(-n+2) {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1294.98px) {
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:first-of-type {
+    width: 66%;
+    margin-right: 34%;
+    height: 280px;
+    position: relative;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:first-of-type .meta-content {
+    position: absolute;
+    background: white;
+    bottom: 0;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    padding: 10px;
+    border-bottom: 1px solid #d4d4d4;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+5) {
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+5) .meta-content {
+    padding: 0;
+    width: 68%;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+5) .meta-content a h2 {
+    font-size: 1.1rem;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+5) figure {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .impresa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .impresa .caja-right {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    margin: 0 0 0 20px;
+  }
+
+  .impresa .caja-contenido {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas:first-of-type {
+    margin: 0;
+  }
+
+  .impresa .articulo.deimpresa:hover figure a img {
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@media (min-width: 1295px) {
+  .impresa .caja-contenido .notas-impresa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type {
+    position: static;
+    width: 24%;
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+    margin: 0 20px 0 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa > .articulo.deimpresa:first-of-type figure {
+    width: 100%;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa {
+    margin-bottom: 10px;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa .meta-content {
+    padding-bottom: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa .meta-content h5 {
+    margin-bottom: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:first-of-type {
+    width: 31.5%;
+    height: auto;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:first-of-type .meta-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(-n+2) .meta-content {
+    padding-bottom: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(-n+3) {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas .articulo.deimpresa:nth-child(n+4) figure {
+    display: none;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas {
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    background: #fff1d1;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa {
+    margin: 0;
+    border-top: none;
+    padding-top: 0;
+    width: 24%;
+    position: relative;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa .meta-content {
+    padding: 0;
+    margin: 0;
+  }
+
+  .impresa .caja-contenido .notas-impresa .caja-notas-amarillas .articulo.deimpresa:nth-child(n+2):before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -7px;
+    background: #d4d4d4;
+    width: 1px;
   }
 }
 

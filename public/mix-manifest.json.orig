@@ -1,16 +1,11 @@
 {
+    "/js/channels-show.js": "/js/channels-show.js?id=137cad8c1569f28deab3",
 <<<<<<< HEAD
-    "/js/channels-show.js": "/js/channels-show.js?id=587cfc21684a30e0a002",
-    "/css/app.css": "/css/app.css?id=27b861310bda00a25d08",
-    "/js/news-show.js": "/js/news-show.js?id=cfe50d74898864a866af",
-    "/js/home.js": "/js/home.js?id=a7507652d8214cda7e2c",
+    "/css/app.css": "/css/app.css?id=9d9ed3277a588b230a8d",
+=======
+    "/css/app.css": "/css/app.css?id=45697093ad5f926fa463",
+>>>>>>> efd4eb5900669ee9c55e0f4f5728e84c4c706c08
+    "/js/news-show.js": "/js/news-show.js?id=b8393ee9fcff3de72f30",
+    "/js/home.js": "/js/home.js?id=8663752323831f798de4",
     "/js/epl-41.js": "/js/epl-41.js?id=76a0e1f9eccb844837ec"
 }
-=======
-    "/js/channels-show.js": "/js/channels-show.js?id=f9706d567b3034593048",
-    "/css/app.css": "/css/app.css?id=c434d4c922c0f0dba480",
-    "/js/news-show.js": "/js/news-show.js?id=6e09799471c016acad82",
-    "/js/home.js": "/js/home.js?id=fd80dce0d654325de05a",
-    "/js/epl-41.js": "/js/epl-41.js?id=18102047c6862b6793bc"
-}
->>>>>>> f9cc6876cf4d021ab31a3115f17d0c38ebc4412c

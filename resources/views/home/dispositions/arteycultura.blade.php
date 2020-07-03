@@ -21,9 +21,23 @@
 						 @endif
 						 >
 							<a href="{{ $new['permalink'] }}">
-								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
+								@if ($key == 0)
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 540, $new['main_image']['caption'],'img-fluid', '540x304') !!}
+								@else
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
+								@endif
 								@if($key != 0)
 								<h4>{{ $new['headline'] }}</h4>
+								@endif
+								@if ($new['has_video']) 
+									<div class="galeria-video">
+										<span><i class="fa fa-play"></i></span>
+									</div>
+								@endif
+								@if ($new['has_gallery'])
+									<div class="galeria-video">
+										<span><i class="fa fa-camera"></i></span>
+									</div>
 								@endif
 							</a>
 						</figure>
