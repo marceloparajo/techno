@@ -66,6 +66,22 @@
 			flex-direction: column;
 			margin: 0;
 			padding: 0;
+			.articulo.decobertura {
+				display: flex;
+				justify-content: space-between;
+				border-top: 1px solid $linea;
+				padding-top: 5px;
+				figure {
+					width: 30%;
+				}
+				.meta-content {
+					width: 68%;
+					padding: 0 10px 0 0;
+					span.hat {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 	@include media-breakpoint-up(sm) {
@@ -181,6 +197,16 @@
 				justify-content: space-between;
 				.articulo.decobertura {
 					width: 32%;
+					display: block;
+					figure {
+						width: 100%;
+						padding: 0;
+						margin: 0;
+					}
+					.meta-content {
+						padding: 5px 0 0 0;
+						width: 100%;
+					}
 				}
 			}
 		}

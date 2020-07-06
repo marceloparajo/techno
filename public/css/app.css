@@ -18630,7 +18630,7 @@ footer .footer-revistas li a:hover {
   color: #fff;
 }
 
-.podcasts-radio .notaPodcast a .content h2 {
+.podcasts-radio .notaPodcast a .content h3 {
   font-size: 16px;
   line-height: 1.05em;
   font-weight: 600;
@@ -18723,8 +18723,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion,
 .caja-right #opinion,
 .caja-right #periodismopuro,
-.caja-right #panorama,
-.caja-right #masLeidasSidebar {
+.caja-right #panorama {
   background: #fff;
   width: 100%;
   margin: 0 0 20px 0;
@@ -18740,8 +18739,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header,
 .caja-right #opinion header,
 .caja-right #periodismopuro header,
-.caja-right #panorama header,
-.caja-right #masLeidasSidebar header {
+.caja-right #panorama header {
   width: 100%;
   padding: 10px 10px 5px 10px;
   -webkit-box-sizing: border-box;
@@ -18764,8 +18762,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .exitoina-titulo,
 .caja-right #opinion header .exitoina-titulo,
 .caja-right #periodismopuro header .exitoina-titulo,
-.caja-right #panorama header .exitoina-titulo,
-.caja-right #masLeidasSidebar header .exitoina-titulo {
+.caja-right #panorama header .exitoina-titulo {
   text-indent: -9999px;
   width: 180px;
   height: 26px;
@@ -18779,8 +18776,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .exitoina-titulo a,
 .caja-right #opinion header .exitoina-titulo a,
 .caja-right #periodismopuro header .exitoina-titulo a,
-.caja-right #panorama header .exitoina-titulo a,
-.caja-right #masLeidasSidebar header .exitoina-titulo a {
+.caja-right #panorama header .exitoina-titulo a {
   display: block;
   width: 180px;
   height: 26px;
@@ -18791,8 +18787,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .net-titulo,
 .caja-right #opinion header .net-titulo,
 .caja-right #periodismopuro header .net-titulo,
-.caja-right #panorama header .net-titulo,
-.caja-right #masLeidasSidebar header .net-titulo {
+.caja-right #panorama header .net-titulo {
   text-indent: -9999px;
   width: 70px;
   height: 29px;
@@ -18806,8 +18801,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .net-titulo a,
 .caja-right #opinion header .net-titulo a,
 .caja-right #periodismopuro header .net-titulo a,
-.caja-right #panorama header .net-titulo a,
-.caja-right #masLeidasSidebar header .net-titulo a {
+.caja-right #panorama header .net-titulo a {
   display: block;
   width: 70px;
   width: 29px;
@@ -18818,8 +18812,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .investigacion-titulo,
 .caja-right #opinion header .investigacion-titulo,
 .caja-right #periodismopuro header .investigacion-titulo,
-.caja-right #panorama header .investigacion-titulo,
-.caja-right #masLeidasSidebar header .investigacion-titulo {
+.caja-right #panorama header .investigacion-titulo {
   text-indent: -9999px;
   width: 280px;
   height: 35px;
@@ -18833,8 +18826,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .investigacion-titulo a,
 .caja-right #opinion header .investigacion-titulo a,
 .caja-right #periodismopuro header .investigacion-titulo a,
-.caja-right #panorama header .investigacion-titulo a,
-.caja-right #masLeidasSidebar header .investigacion-titulo a {
+.caja-right #panorama header .investigacion-titulo a {
   display: block;
   width: 280px;
   height: 35px;
@@ -18845,15 +18837,14 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .opinion-titulo,
 .caja-right #opinion header .opinion-titulo,
 .caja-right #periodismopuro header .opinion-titulo,
-.caja-right #panorama header .opinion-titulo,
-.caja-right #masLeidasSidebar header .opinion-titulo {
+.caja-right #panorama header .opinion-titulo {
   width: 280px;
   height: 30px;
   line-height: 44px;
   display: block;
   margin: 0;
   text-transform: uppercase;
-  font-family: 'Crimson Text', 'Times New Roman', Times, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right 0 no-repeat;
@@ -18864,8 +18855,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .opinion-titulo .fa,
 .caja-right #opinion header .opinion-titulo .fa,
 .caja-right #periodismopuro header .opinion-titulo .fa,
-.caja-right #panorama header .opinion-titulo .fa,
-.caja-right #masLeidasSidebar header .opinion-titulo .fa {
+.caja-right #panorama header .opinion-titulo .fa {
   color: #c3ced8;
   margin: 0 3px 0 0;
   font-weight: normal;
@@ -18877,8 +18867,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .opinion-titulo a,
 .caja-right #opinion header .opinion-titulo a,
 .caja-right #periodismopuro header .opinion-titulo a,
-.caja-right #panorama header .opinion-titulo a,
-.caja-right #masLeidasSidebar header .opinion-titulo a {
+.caja-right #panorama header .opinion-titulo a {
   display: inline-block;
   color: #000;
 }
@@ -18888,15 +18877,14 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .panorama-titulo,
 .caja-right #opinion header .panorama-titulo,
 .caja-right #periodismopuro header .panorama-titulo,
-.caja-right #panorama header .panorama-titulo,
-.caja-right #masLeidasSidebar header .panorama-titulo {
+.caja-right #panorama header .panorama-titulo {
   width: 280px;
   height: 30px;
   line-height: 44px;
   display: block;
   margin: 0;
   text-transform: uppercase;
-  font-family: 'Crimson Text', 'Times New Roman', Times, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right 0 no-repeat;
@@ -18907,8 +18895,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .panorama-titulo .fa,
 .caja-right #opinion header .panorama-titulo .fa,
 .caja-right #periodismopuro header .panorama-titulo .fa,
-.caja-right #panorama header .panorama-titulo .fa,
-.caja-right #masLeidasSidebar header .panorama-titulo .fa {
+.caja-right #panorama header .panorama-titulo .fa {
   color: #c3ced8;
   margin: 0 3px 0 0;
   font-weight: normal;
@@ -18920,8 +18907,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .panorama-titulo a,
 .caja-right #opinion header .panorama-titulo a,
 .caja-right #periodismopuro header .panorama-titulo a,
-.caja-right #panorama header .panorama-titulo a,
-.caja-right #masLeidasSidebar header .panorama-titulo a {
+.caja-right #panorama header .panorama-titulo a {
   display: inline-block;
   color: #000;
 }
@@ -18931,8 +18917,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .periodismopuro-titulo,
 .caja-right #opinion header .periodismopuro-titulo,
 .caja-right #periodismopuro header .periodismopuro-titulo,
-.caja-right #panorama header .periodismopuro-titulo,
-.caja-right #masLeidasSidebar header .periodismopuro-titulo {
+.caja-right #panorama header .periodismopuro-titulo {
   text-indent: -9999px;
   width: 183px;
   height: 49px;
@@ -18947,8 +18932,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header .periodismopuro-titulo a,
 .caja-right #opinion header .periodismopuro-titulo a,
 .caja-right #periodismopuro header .periodismopuro-titulo a,
-.caja-right #panorama header .periodismopuro-titulo a,
-.caja-right #masLeidasSidebar header .periodismopuro-titulo a {
+.caja-right #panorama header .periodismopuro-titulo a {
   display: block;
   width: 183px;
   width: 49px;
@@ -18960,21 +18944,19 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion header.pp,
 .caja-right #opinion header.pp,
 .caja-right #periodismopuro header.pp,
-.caja-right #panorama header.pp,
-.caja-right #masLeidasSidebar header.pp {
+.caja-right #panorama header.pp {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.caja-right #exitoina header.pp h3,
-.caja-right #net header.pp h3,
-.caja-right #investigacion header.pp h3,
-.caja-right #opinion header.pp h3,
-.caja-right #periodismopuro header.pp h3,
-.caja-right #panorama header.pp h3,
-.caja-right #masLeidasSidebar header.pp h3 {
+.caja-right #exitoina header.pp h4,
+.caja-right #net header.pp h4,
+.caja-right #investigacion header.pp h4,
+.caja-right #opinion header.pp h4,
+.caja-right #periodismopuro header.pp h4,
+.caja-right #panorama header.pp h4 {
   border-top: 1px solid #d4d4d4;
   margin-top: 10px;
   padding-top: 5px;
@@ -18990,8 +18972,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article,
 .caja-right #opinion article,
 .caja-right #periodismopuro article,
-.caja-right #panorama article,
-.caja-right #masLeidasSidebar article {
+.caja-right #panorama article {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -19007,8 +18988,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article a,
 .caja-right #opinion article a,
 .caja-right #periodismopuro article a,
-.caja-right #panorama article a,
-.caja-right #masLeidasSidebar article a {
+.caja-right #panorama article a {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19020,8 +19000,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article a figure,
 .caja-right #opinion article a figure,
 .caja-right #periodismopuro article a figure,
-.caja-right #panorama article a figure,
-.caja-right #masLeidasSidebar article a figure {
+.caja-right #panorama article a figure {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   height: 50px;
@@ -19030,13 +19009,12 @@ footer .footer-revistas li a:hover {
   overflow: hidden;
 }
 
-.caja-right #exitoina article a h2,
-.caja-right #net article a h2,
-.caja-right #investigacion article a h2,
-.caja-right #opinion article a h2,
-.caja-right #periodismopuro article a h2,
-.caja-right #panorama article a h2,
-.caja-right #masLeidasSidebar article a h2 {
+.caja-right #exitoina article a h3,
+.caja-right #net article a h3,
+.caja-right #investigacion article a h3,
+.caja-right #opinion article a h3,
+.caja-right #periodismopuro article a h3,
+.caja-right #panorama article a h3 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
@@ -19053,8 +19031,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article a h5,
 .caja-right #opinion article a h5,
 .caja-right #periodismopuro article a h5,
-.caja-right #panorama article a h5,
-.caja-right #masLeidasSidebar article a h5 {
+.caja-right #panorama article a h5 {
   font-size: 12px;
   font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
   line-height: 1em;
@@ -19067,8 +19044,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaOpinion a,
 .caja-right #opinion article.notaOpinion a,
 .caja-right #periodismopuro article.notaOpinion a,
-.caja-right #panorama article.notaOpinion a,
-.caja-right #masLeidasSidebar article.notaOpinion a {
+.caja-right #panorama article.notaOpinion a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19082,8 +19058,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaOpinion a figure,
 .caja-right #opinion article.notaOpinion a figure,
 .caja-right #periodismopuro article.notaOpinion a figure,
-.caja-right #panorama article.notaOpinion a figure,
-.caja-right #masLeidasSidebar article.notaOpinion a figure {
+.caja-right #panorama article.notaOpinion a figure {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   width: 100%;
@@ -19094,8 +19069,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaOpinion a .content,
 .caja-right #opinion article.notaOpinion a .content,
 .caja-right #periodismopuro article.notaOpinion a .content,
-.caja-right #panorama article.notaOpinion a .content,
-.caja-right #masLeidasSidebar article.notaOpinion a .content {
+.caja-right #panorama article.notaOpinion a .content {
   -ms-flex-preferred-size: 63%;
       flex-basis: 63%;
 }
@@ -19105,8 +19079,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaOpinion:first-of-type a,
 .caja-right #opinion article.notaOpinion:first-of-type a,
 .caja-right #periodismopuro article.notaOpinion:first-of-type a,
-.caja-right #panorama article.notaOpinion:first-of-type a,
-.caja-right #masLeidasSidebar article.notaOpinion:first-of-type a {
+.caja-right #panorama article.notaOpinion:first-of-type a {
   display: block;
 }
 
@@ -19115,8 +19088,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article:after,
 .caja-right #opinion article:after,
 .caja-right #periodismopuro article:after,
-.caja-right #panorama article:after,
-.caja-right #masLeidasSidebar article:after {
+.caja-right #panorama article:after {
   display: block;
   content: " ";
   clear: both;
@@ -19129,18 +19101,16 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article:hover,
 .caja-right #opinion article:hover,
 .caja-right #periodismopuro article:hover,
-.caja-right #panorama article:hover,
-.caja-right #masLeidasSidebar article:hover {
+.caja-right #panorama article:hover {
   background: #ededed;
 }
 
-.caja-right #exitoina article:hover a h2,
-.caja-right #net article:hover a h2,
-.caja-right #investigacion article:hover a h2,
-.caja-right #opinion article:hover a h2,
-.caja-right #periodismopuro article:hover a h2,
-.caja-right #panorama article:hover a h2,
-.caja-right #masLeidasSidebar article:hover a h2 {
+.caja-right #exitoina article:hover a h3,
+.caja-right #net article:hover a h3,
+.caja-right #investigacion article:hover a h3,
+.caja-right #opinion article:hover a h3,
+.caja-right #periodismopuro article:hover a h3,
+.caja-right #panorama article:hover a h3 {
   color: #000;
 }
 
@@ -19149,8 +19119,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article:first-of-type a,
 .caja-right #opinion article:first-of-type a,
 .caja-right #periodismopuro article:first-of-type a,
-.caja-right #panorama article:first-of-type a,
-.caja-right #masLeidasSidebar article:first-of-type a {
+.caja-right #panorama article:first-of-type a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -19162,8 +19131,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article:first-of-type a figure,
 .caja-right #opinion article:first-of-type a figure,
 .caja-right #periodismopuro article:first-of-type a figure,
-.caja-right #panorama article:first-of-type a figure,
-.caja-right #masLeidasSidebar article:first-of-type a figure {
+.caja-right #panorama article:first-of-type a figure {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   height: auto;
@@ -19171,13 +19139,12 @@ footer .footer-revistas li a:hover {
   margin: 0 0 5px 0;
 }
 
-.caja-right #exitoina article:first-of-type a h2,
-.caja-right #net article:first-of-type a h2,
-.caja-right #investigacion article:first-of-type a h2,
-.caja-right #opinion article:first-of-type a h2,
-.caja-right #periodismopuro article:first-of-type a h2,
-.caja-right #panorama article:first-of-type a h2,
-.caja-right #masLeidasSidebar article:first-of-type a h2 {
+.caja-right #exitoina article:first-of-type a h3,
+.caja-right #net article:first-of-type a h3,
+.caja-right #investigacion article:first-of-type a h3,
+.caja-right #opinion article:first-of-type a h3,
+.caja-right #periodismopuro article:first-of-type a h3,
+.caja-right #panorama article:first-of-type a h3 {
   font-size: 18px;
   line-height: 1.03em;
 }
@@ -19187,8 +19154,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaPanorama a,
 .caja-right #opinion article.notaPanorama a,
 .caja-right #periodismopuro article.notaPanorama a,
-.caja-right #panorama article.notaPanorama a,
-.caja-right #masLeidasSidebar article.notaPanorama a {
+.caja-right #panorama article.notaPanorama a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19202,8 +19168,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaPanorama a figure,
 .caja-right #opinion article.notaPanorama a figure,
 .caja-right #periodismopuro article.notaPanorama a figure,
-.caja-right #panorama article.notaPanorama a figure,
-.caja-right #masLeidasSidebar article.notaPanorama a figure {
+.caja-right #panorama article.notaPanorama a figure {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   width: 100%;
@@ -19214,8 +19179,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaPanorama a .content,
 .caja-right #opinion article.notaPanorama a .content,
 .caja-right #periodismopuro article.notaPanorama a .content,
-.caja-right #panorama article.notaPanorama a .content,
-.caja-right #masLeidasSidebar article.notaPanorama a .content {
+.caja-right #panorama article.notaPanorama a .content {
   -ms-flex-preferred-size: 63%;
       flex-basis: 63%;
 }
@@ -19225,8 +19189,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaPanorama a .content h5,
 .caja-right #opinion article.notaPanorama a .content h5,
 .caja-right #periodismopuro article.notaPanorama a .content h5,
-.caja-right #panorama article.notaPanorama a .content h5,
-.caja-right #masLeidasSidebar article.notaPanorama a .content h5 {
+.caja-right #panorama article.notaPanorama a .content h5 {
   text-align: right;
 }
 
@@ -19235,8 +19198,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaPanorama:first-of-type a,
 .caja-right #opinion article.notaPanorama:first-of-type a,
 .caja-right #periodismopuro article.notaPanorama:first-of-type a,
-.caja-right #panorama article.notaPanorama:first-of-type a,
-.caja-right #masLeidasSidebar article.notaPanorama:first-of-type a {
+.caja-right #panorama article.notaPanorama:first-of-type a {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -19248,8 +19210,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaPanorama:first-of-type a figure,
 .caja-right #opinion article.notaPanorama:first-of-type a figure,
 .caja-right #periodismopuro article.notaPanorama:first-of-type a figure,
-.caja-right #panorama article.notaPanorama:first-of-type a figure,
-.caja-right #masLeidasSidebar article.notaPanorama:first-of-type a figure {
+.caja-right #panorama article.notaPanorama:first-of-type a figure {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   width: 100%;
@@ -19264,19 +19225,17 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion article.notaPanorama:first-of-type a .content,
 .caja-right #opinion article.notaPanorama:first-of-type a .content,
 .caja-right #periodismopuro article.notaPanorama:first-of-type a .content,
-.caja-right #panorama article.notaPanorama:first-of-type a .content,
-.caja-right #masLeidasSidebar article.notaPanorama:first-of-type a .content {
+.caja-right #panorama article.notaPanorama:first-of-type a .content {
   -ms-flex-preferred-size: 63%;
       flex-basis: 63%;
 }
 
-.caja-right #exitoina article.notaPanorama:first-of-type a .content h2,
-.caja-right #net article.notaPanorama:first-of-type a .content h2,
-.caja-right #investigacion article.notaPanorama:first-of-type a .content h2,
-.caja-right #opinion article.notaPanorama:first-of-type a .content h2,
-.caja-right #periodismopuro article.notaPanorama:first-of-type a .content h2,
-.caja-right #panorama article.notaPanorama:first-of-type a .content h2,
-.caja-right #masLeidasSidebar article.notaPanorama:first-of-type a .content h2 {
+.caja-right #exitoina article.notaPanorama:first-of-type a .content h3,
+.caja-right #net article.notaPanorama:first-of-type a .content h3,
+.caja-right #investigacion article.notaPanorama:first-of-type a .content h3,
+.caja-right #opinion article.notaPanorama:first-of-type a .content h3,
+.caja-right #periodismopuro article.notaPanorama:first-of-type a .content h3,
+.caja-right #panorama article.notaPanorama:first-of-type a .content h3 {
   font-size: 16px;
 }
 
@@ -19285,8 +19244,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion footer,
 .caja-right #opinion footer,
 .caja-right #periodismopuro footer,
-.caja-right #panorama footer,
-.caja-right #masLeidasSidebar footer {
+.caja-right #panorama footer {
   width: 100%;
   padding: 10px;
   -webkit-box-sizing: border-box;
@@ -19301,9 +19259,8 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion footer a,
 .caja-right #opinion footer a,
 .caja-right #periodismopuro footer a,
-.caja-right #panorama footer a,
-.caja-right #masLeidasSidebar footer a {
-  font-family: 'PT sans', helvetica, arial, sans-serif;
+.caja-right #panorama footer a {
+  font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.2em;
@@ -19323,8 +19280,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion footer a:after,
 .caja-right #opinion footer a:after,
 .caja-right #periodismopuro footer a:after,
-.caja-right #panorama footer a:after,
-.caja-right #masLeidasSidebar footer a:after {
+.caja-right #panorama footer a:after {
   content: "\F061";
   font-family: "FontAwesome";
   display: block;
@@ -19339,8 +19295,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion footer a:hover,
 .caja-right #opinion footer a:hover,
 .caja-right #periodismopuro footer a:hover,
-.caja-right #panorama footer a:hover,
-.caja-right #masLeidasSidebar footer a:hover {
+.caja-right #panorama footer a:hover {
   color: #444;
 }
 
@@ -19349,8 +19304,7 @@ footer .footer-revistas li a:hover {
 .caja-right #investigacion footer.edi a,
 .caja-right #opinion footer.edi a,
 .caja-right #periodismopuro footer.edi a,
-.caja-right #panorama footer.edi a,
-.caja-right #masLeidasSidebar footer.edi a {
+.caja-right #panorama footer.edi a {
   letter-spacing: 0.02em;
 }
 
@@ -19360,8 +19314,7 @@ footer .footer-revistas li a:hover {
   .caja-right #investigacion article,
   .caja-right #opinion article,
   .caja-right #periodismopuro article,
-  .caja-right #panorama article,
-  .caja-right #masLeidasSidebar article {
+  .caja-right #panorama article {
     width: 49%;
     margin-left: 1%;
     float: left;
@@ -19372,8 +19325,7 @@ footer .footer-revistas li a:hover {
   .caja-right #investigacion article a figure,
   .caja-right #opinion article a figure,
   .caja-right #periodismopuro article a figure,
-  .caja-right #panorama article a figure,
-  .caja-right #masLeidasSidebar article a figure {
+  .caja-right #panorama article a figure {
     height: 7vw;
     width: 100%;
   }
@@ -19383,8 +19335,7 @@ footer .footer-revistas li a:hover {
   .caja-right #investigacion article a figure img,
   .caja-right #opinion article a figure img,
   .caja-right #periodismopuro article a figure img,
-  .caja-right #panorama article a figure img,
-  .caja-right #masLeidasSidebar article a figure img {
+  .caja-right #panorama article a figure img {
     width: 100%;
   }
 
@@ -19393,8 +19344,7 @@ footer .footer-revistas li a:hover {
   .caja-right #investigacion article:first-of-type,
   .caja-right #opinion article:first-of-type,
   .caja-right #periodismopuro article:first-of-type,
-  .caja-right #panorama article:first-of-type,
-  .caja-right #masLeidasSidebar article:first-of-type {
+  .caja-right #panorama article:first-of-type {
     width: 50%;
     margin: 0;
     border-bottom: none;
@@ -19405,8 +19355,7 @@ footer .footer-revistas li a:hover {
   .caja-right #investigacion article:last-of-type,
   .caja-right #opinion article:last-of-type,
   .caja-right #periodismopuro article:last-of-type,
-  .caja-right #panorama article:last-of-type,
-  .caja-right #masLeidasSidebar article:last-of-type {
+  .caja-right #panorama article:last-of-type {
     border-bottom: none;
   }
 
@@ -19415,8 +19364,7 @@ footer .footer-revistas li a:hover {
   .caja-right #investigacion header .opinion-titulo,
   .caja-right #opinion header .opinion-titulo,
   .caja-right #periodismopuro header .opinion-titulo,
-  .caja-right #panorama header .opinion-titulo,
-  .caja-right #masLeidasSidebar header .opinion-titulo {
+  .caja-right #panorama header .opinion-titulo {
     width: 100%;
   }
 
@@ -19425,8 +19373,7 @@ footer .footer-revistas li a:hover {
   .caja-right #investigacion header.pp,
   .caja-right #opinion header.pp,
   .caja-right #periodismopuro header.pp,
-  .caja-right #panorama header.pp,
-  .caja-right #masLeidasSidebar header.pp {
+  .caja-right #panorama header.pp {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -19441,18 +19388,16 @@ footer .footer-revistas li a:hover {
   .caja-right #investigacion header.pp .periodismopuro-titulo,
   .caja-right #opinion header.pp .periodismopuro-titulo,
   .caja-right #periodismopuro header.pp .periodismopuro-titulo,
-  .caja-right #panorama header.pp .periodismopuro-titulo,
-  .caja-right #masLeidasSidebar header.pp .periodismopuro-titulo {
+  .caja-right #panorama header.pp .periodismopuro-titulo {
     margin-left: 0;
   }
 
-  .caja-right #exitoina header.pp h3,
-  .caja-right #net header.pp h3,
-  .caja-right #investigacion header.pp h3,
-  .caja-right #opinion header.pp h3,
-  .caja-right #periodismopuro header.pp h3,
-  .caja-right #panorama header.pp h3,
-  .caja-right #masLeidasSidebar header.pp h3 {
+  .caja-right #exitoina header.pp h4,
+  .caja-right #net header.pp h4,
+  .caja-right #investigacion header.pp h4,
+  .caja-right #opinion header.pp h4,
+  .caja-right #periodismopuro header.pp h4,
+  .caja-right #panorama header.pp h4 {
     display: inline-block;
     border-top: none;
     width: auto;
@@ -19463,8 +19408,7 @@ footer .footer-revistas li a:hover {
   .caja-right #investigacion footer,
   .caja-right #opinion footer,
   .caja-right #periodismopuro footer,
-  .caja-right #panorama footer,
-  .caja-right #masLeidasSidebar footer {
+  .caja-right #panorama footer {
     clear: both;
     width: 100%;
     border-top: 1px solid #ddd;
@@ -19477,8 +19421,7 @@ footer .footer-revistas li a:hover {
   .caja-right #investigacion,
   .caja-right #opinion,
   .caja-right #periodismopuro,
-  .caja-right #panorama,
-  .caja-right #masLeidasSidebar {
+  .caja-right #panorama {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -19499,9 +19442,7 @@ footer .footer-revistas li a:hover {
   .caja-right #periodismopuro article,
   .caja-right #periodismopuro article:first-of-type,
   .caja-right #panorama article,
-  .caja-right #panorama article:first-of-type,
-  .caja-right #masLeidasSidebar article,
-  .caja-right #masLeidasSidebar article:first-of-type {
+  .caja-right #panorama article:first-of-type {
     width: 100%;
     margin: 0;
     -ms-flex-preferred-size: 100%;
@@ -19519,9 +19460,7 @@ footer .footer-revistas li a:hover {
   .caja-right #periodismopuro article a,
   .caja-right #periodismopuro article:first-of-type a,
   .caja-right #panorama article a,
-  .caja-right #panorama article:first-of-type a,
-  .caja-right #masLeidasSidebar article a,
-  .caja-right #masLeidasSidebar article:first-of-type a {
+  .caja-right #panorama article:first-of-type a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -19542,29 +19481,25 @@ footer .footer-revistas li a:hover {
   .caja-right #periodismopuro article a figure,
   .caja-right #periodismopuro article:first-of-type a figure,
   .caja-right #panorama article a figure,
-  .caja-right #panorama article:first-of-type a figure,
-  .caja-right #masLeidasSidebar article a figure,
-  .caja-right #masLeidasSidebar article:first-of-type a figure {
+  .caja-right #panorama article:first-of-type a figure {
     -ms-flex-preferred-size: 100px;
         flex-basis: 100px;
     height: auto;
     margin: 0 10px 0 0;
   }
 
-  .caja-right #exitoina article a h2,
-  .caja-right #exitoina article:first-of-type a h2,
-  .caja-right #net article a h2,
-  .caja-right #net article:first-of-type a h2,
-  .caja-right #investigacion article a h2,
-  .caja-right #investigacion article:first-of-type a h2,
-  .caja-right #opinion article a h2,
-  .caja-right #opinion article:first-of-type a h2,
-  .caja-right #periodismopuro article a h2,
-  .caja-right #periodismopuro article:first-of-type a h2,
-  .caja-right #panorama article a h2,
-  .caja-right #panorama article:first-of-type a h2,
-  .caja-right #masLeidasSidebar article a h2,
-  .caja-right #masLeidasSidebar article:first-of-type a h2 {
+  .caja-right #exitoina article a h3,
+  .caja-right #exitoina article:first-of-type a h3,
+  .caja-right #net article a h3,
+  .caja-right #net article:first-of-type a h3,
+  .caja-right #investigacion article a h3,
+  .caja-right #investigacion article:first-of-type a h3,
+  .caja-right #opinion article a h3,
+  .caja-right #opinion article:first-of-type a h3,
+  .caja-right #periodismopuro article a h3,
+  .caja-right #periodismopuro article:first-of-type a h3,
+  .caja-right #panorama article a h3,
+  .caja-right #panorama article:first-of-type a h3 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
@@ -19581,6 +19516,264 @@ footer .footer-revistas li a:hover {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e4e2e8', endColorstr='#e4e2e8',GradientType=0 );
   /* IE6-9 */
+}
+
+.caja-right #masLeidasSidebar {
+  background: #fff;
+  width: 100%;
+  margin: 0 0 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+
+.caja-right #masLeidasSidebar header.masleidas-titulo {
+  height: 40px;
+  display: block;
+  margin: 10px 10px 5px 10px;
+  text-transform: uppercase;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  font-size: 18px;
+  font-weight: 600;
+  background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right center no-repeat;
+}
+
+.caja-right #masLeidasSidebar header.masleidas-titulo a {
+  display: inline-block;
+  color: #000;
+  line-height: 50px;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom {
+  width: 100%;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas {
+  width: 100%;
+  padding: 5px 10px;
+  border-top: 1px solid #d4d4d4;
+  background: #fff;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas a {
+  width: 100%;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
+  width: 100%;
+  margin: 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas a figure img {
+  width: 100%;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas a h3 {
+  color: #343a40;
+  font-size: 1.1rem;
+  font-size: 5vw;
+  line-height: 1.05em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  margin: 0;
+  padding: 0 0 0 40px;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas a h3 .rankOrder {
+  width: 40px;
+  margin: 0 0 0 -40px;
+  text-align: right;
+  display: inline-block;
+  padding: 0 8px 0 0;
+  font-size: 2em;
+  color: #999;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas:hover {
+  background: #ededed;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas:hover a h3 {
+  color: #0a0a0a;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas:first-of-type {
+  position: relative;
+  padding: 0;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas:first-of-type a h3 {
+  display: block;
+  background: rgba(0, 0, 0, 0);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  color: white;
+  padding: 50px 10px 10px 40px;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas:first-of-type a h3 .rankOrder {
+  color: white;
+}
+
+.caja-right #masLeidasSidebar #rankPerfilcom article.masleidas:first-of-type:hover a h3 {
+  color: white;
+}
+
+.caja-right #masLeidasSidebar footer {
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  background-color: white;
+  border-top: 1px solid #d4d4d4;
+}
+
+.caja-right #masLeidasSidebar footer a {
+  font-family: "Fira Sans", Helvetica, Arial, Sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #000;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  line-height: 1em;
+}
+
+.caja-right #masLeidasSidebar footer a:after {
+  content: "\F061";
+  font-family: "FontAwesome";
+  display: block;
+  font-size: 20px;
+  margin-left: 10px;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.caja-right #masLeidasSidebar footer a:hover {
+  color: #444;
+}
+
+@media (min-width: 576px) {
+  .caja-right #masLeidasSidebar #rankPerfilcom {
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 2em;
+            column-gap: 2em;
+    -webkit-column-rule: 1px solid #d4d4d4;
+            column-rule: 1px solid #d4d4d4;
+  }
+
+  .caja-right #masLeidasSidebar #rankPerfilcom article.masleidas {
+    -webkit-column-break-inside: avoid;
+            break-inside: avoid-column;
+    padding: 5px 0;
+  }
+
+  .caja-right #masLeidasSidebar #rankPerfilcom article.masleidas a h3 {
+    font-size: 1.1rem;
+  }
+
+  .caja-right #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
+    height: 140px;
+  }
+}
+
+@media (min-width: 576px) {
+  .caja-right #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
+    height: 190px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .caja-right #masLeidasSidebar #rankPerfilcom {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+
+  .caja-right #masLeidasSidebar #rankPerfilcom article.masleidas {
+    padding: 5px 10px;
+  }
+
+  .caja-right #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
+    height: auto;
+  }
+}
+
+.caja-right #columnistas {
+  background: #fff;
+  width: 100%;
+  margin: 0 0 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+
+.caja-right #columnistas header {
+  width: 100%;
+  padding: 10px 10px 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0;
+}
+
+.caja-right #columnistas article.nota-columnista {
+  width: 100%;
+  padding: 5px 10px;
+  border-top: 1px solid #d4d4d4;
+}
+
+.caja-right #columnistas article.nota-columnista a {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  font-size: 1.1rem;
+  font-size: 5vw;
+  font-weight: 400;
+  color: #343a40;
+}
+
+.caja-right #columnistas article.nota-columnista a figure {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+  border: 1px solid #557c9c;
+}
+
+.caja-right #columnistas article.nota-columnista a figure img {
+  width: 100%;
 }
 
 .articulo {
@@ -20569,6 +20762,30 @@ footer .footer-revistas li a:hover {
   padding: 0;
 }
 
+.cobertura .notas-cobertura .columna-ancha .articulo.decobertura {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 5px;
+}
+
+.cobertura .notas-cobertura .columna-ancha .articulo.decobertura figure {
+  width: 30%;
+}
+
+.cobertura .notas-cobertura .columna-ancha .articulo.decobertura .meta-content {
+  width: 68%;
+  padding: 0 10px 0 0;
+}
+
+.cobertura .notas-cobertura .columna-ancha .articulo.decobertura .meta-content span.hat {
+  display: none;
+}
+
 @media (min-width: 576px) {
   .cobertura h6 {
     padding: 0;
@@ -20719,6 +20936,18 @@ footer .footer-revistas li a:hover {
 
   .cobertura .notas-cobertura .columna-ancha .articulo.decobertura {
     width: 32%;
+    display: block;
+  }
+
+  .cobertura .notas-cobertura .columna-ancha .articulo.decobertura figure {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cobertura .notas-cobertura .columna-ancha .articulo.decobertura .meta-content {
+    padding: 5px 0 0 0;
+    width: 100%;
   }
 }
 
@@ -22412,6 +22641,10 @@ Se usa para Radio Perfil
   border-bottom: 4px solid #e43d3d;
 }
 
+.secciones .caja-right {
+  width: 100%;
+}
+
 @media (min-width: 576px) {
   .secciones .caja-contenido .seccionfija h6 {
     font-size: 1.4rem;
@@ -22657,6 +22890,7 @@ Se usa para Radio Perfil
   .secciones .caja-right {
     -ms-flex-preferred-size: 300px;
         flex-basis: 300px;
+    width: 300px;
     margin: 0 0 0 20px;
   }
 }

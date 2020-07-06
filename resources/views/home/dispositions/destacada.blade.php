@@ -310,7 +310,7 @@
 									<img class="lazy" alt="Alberto Fernández, Néstor Kirchner y Hugo Chávez" src="https://fotos.perfil.com/2020/06/10/trim/150/85/alberto-fernandez-nestor-kirchner-y-hugo-chavez-969431.jpg" style="display: inline-block;">
 								</figure>
 								<div class="content">
-									<h2>Qué me contás: ¿El Subcomandante Alberto entró en “modo Chávez”?</h2>
+									<h3>Qué me contás: ¿El Subcomandante Alberto entró en “modo Chávez”?</h3>
 									<h5>Por Edi Zunino </h5>
 								</div>
 							</a>
@@ -321,7 +321,7 @@
 					    		<img class="lazy" alt="Coronavirus en Buenos Aires " src="https://fotos.perfil.com/2020/06/10/trim/150/85/coronavirus-en-buenos-aires-969308.jpg" style="display: inline-block;">
 					    	</figure>
 								<div class="content">
-									<h2>El 95% de los nuevos casos de coronavirus son en Buenos Aires</h2>
+									<h3>El 95% de los nuevos casos de coronavirus son en Buenos Aires</h3>
 									<h5>Por Alejandro Gomel </h5>
 								</div>
 							</a>
@@ -332,7 +332,7 @@
 									<img class="lazy" alt="Cereales en Brasil" src="https://fotos.perfil.com/2020/06/10/trim/150/85/cereales-en-brasil-969400.jpg" style="display: inline-block;">
 								</figure>
 								<div class="content">
-									<h2>Brasil logra cosecha récord de granos</h2>
+									<h3>Brasil logra cosecha récord de granos</h3>
 									<h5>Por Facundo Mesquida </h5>
 								</div>
 							</a>
@@ -343,7 +343,7 @@
 									<img class="lazy" alt="Eduardo Duhalde y Roberto Lavagna" src="https://fotos.perfil.com/2020/06/10/trim/150/85/eduardo-duhalde-y-roberto-lavagna-969268.jpg" style="display: inline-block;">
 								</figure>
 								<div class="content">
-									<h2>En qué coinciden Roberto Lavagna y Eduardo Duhalde</h2>
+									<h3>En qué coinciden Roberto Lavagna y Eduardo Duhalde</h3>
 									<h5>Por Gustavo González</h5>
 								</div>
 							</a>
@@ -354,7 +354,7 @@
 									<img class="lazy" alt="Fútbol chileno" src="https://fotos.perfil.com/2020/06/09/trim/150/85/futbol-chileno-969190.jpg" style="display: inline-block;">
 								</figure>
 								<div class="content">
-									<h2>Diez mil dólares por mes para volver a entrenar</h2>
+									<h3>Diez mil dólares por mes para volver a entrenar</h3>
 									<h5>Por Juan Manuel Pons </h5>
 								</div>
 							</a>

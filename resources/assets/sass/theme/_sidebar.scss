@@ -70,7 +70,7 @@
 			.content {
 				flex: 1 1 0;
 				color: #fff;
-				h2 {
+				h3 {
 					font-size: 16px;
 					line-height: 1.05em;
 					font-weight: 600;
@@ -146,8 +146,7 @@
 	#investigacion,
 	#opinion,
 	#periodismopuro,
-	#panorama,
-	#masLeidasSidebar {
+	#panorama {
 		background: #fff;
 		width: 100%;
 		margin: 0 0 20px 0;
@@ -209,7 +208,7 @@
 				display: block;
 				margin: 0;
 				text-transform: uppercase;
-				font-family: 'Crimson Text', 'Times New Roman', Times, serif;
+				font-family: $font-serif;
 				font-size: 24px;
 				font-weight: 600;
 				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
@@ -231,7 +230,7 @@
 				display: block;
 				margin: 0;
 				text-transform: uppercase;
-				font-family: 'Crimson Text', 'Times New Roman', Times, serif;
+				font-family: $font-serif;
 				font-size: 24px;
 				font-weight: 600;
 				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
@@ -263,7 +262,7 @@
 			}
 			&.pp {
 				flex-direction: column;
-				h3 {
+				h4 {
 					border-top: 1px solid #d4d4d4;
 					margin-top: 10px;
 					padding-top: 5px;
@@ -292,7 +291,7 @@
 					border-radius: 3px;
 					overflow: hidden;
 				}
-				h2 {
+				h3 {
 					flex: 1 1 0;
 					color: #333;
 					font-size: 16px;
@@ -337,7 +336,7 @@
 			&:hover {
 				background: #ededed;
 				a {
-					h2 {
+					h3 {
 						color: #000;
 					}
 				}
@@ -351,7 +350,7 @@
 						clear: both;
 						margin: 0 0 5px 0;
 					}
-					h2 {
+					h3 {
 						font-size: 18px;
 						line-height: 1.03em;
 					}
@@ -385,7 +384,7 @@
 						}
 						.content {
 							flex-basis: 63%;
-							h2 {
+							h3 {
 								font-size: 16px;
 							}
 						}
@@ -401,7 +400,7 @@
 			margin: 0;
 			background-color: white;
 			a {
-				font-family: 'PT sans', helvetica, arial, sans-serif;
+				font-family: $font-sinserif;
 				font-size: 14px;
 				font-weight: 600;
 				letter-spacing: 0.2em;
@@ -461,7 +460,7 @@
 					.periodismopuro-titulo {
 						margin-left: 0;
 					}
-					h3 {
+					h4 {
 						display: inline-block;
 						border-top: none;
 						width: auto;
@@ -490,7 +489,7 @@
 						height: auto;
 						margin: 0 10px 0 0;
 					}
-					h2 {
+					h3 {
 						flex: 1 1 0;
 						font-size: 18px;
 					}
@@ -505,6 +504,225 @@
 			background: -webkit-linear-gradient(top,  rgba(228,226,232,0) 0%,rgba(228,226,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
 			background: linear-gradient(to bottom,  rgba(228,226,232,0) 0%,rgba(228,226,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e4e2e8', endColorstr='#e4e2e8',GradientType=0 ); /* IE6-9 */
+		}
+	}
+	#masLeidasSidebar {
+		background: #fff;
+		width: 100%;
+		margin: 0 0 20px 0;
+		box-sizing: border-box;
+		box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+		border-radius: 6px;
+		header.masleidas-titulo {
+			height: 40px;
+			display: block;
+			margin: 10px 10px 5px 10px;
+			text-transform: uppercase;
+			font-family: $font-serif;
+			font-size:18px;
+			font-weight: 600;
+			background: url('img/perfil-logo-xs-sidebar.png') right center no-repeat;
+			a {
+				display: inline-block;
+				color: #000;
+				line-height: 50px;
+			}
+		}
+		#rankPerfilcom {
+			width: 100%;
+			article.masleidas {
+				width: 100%;
+				padding: 5px 10px;
+				border-top: 1px solid $linea;
+				background: #fff;
+				transition: ease .3s;
+				a {
+					width: 100%;
+					figure {
+						width: 100%;
+						margin: 0;
+						border-radius: 3px;
+						overflow: hidden;
+						img {
+							width: 100%;
+						}
+					}
+					h3 {
+						color: $dark;
+						font-size: 1.1rem;
+						font-size: 5vw;
+						line-height: 1.05em;
+						font-weight: 600;
+						letter-spacing: -0.01em;
+						font-family: $font-serif;
+						margin: 0;
+						padding: 0 0 0 40px;
+						.rankOrder {
+							width: 40px;
+							margin: 0 0 0 -40px;;
+							text-align: right;
+							display: inline-block;
+							padding: 0 8px 0 0;
+							font-size: 2em;
+							color: #999;
+							transform: translateY(10px);
+							font-weight: 400;
+							letter-spacing: -0.03em;
+						}
+					}
+				}
+				&:hover {
+					background: #ededed;
+					a {
+						h3 {
+							color: $negro;
+						}
+					}
+				}
+				&:first-of-type {
+					position: relative;
+					padding: 0;
+					a {
+						h3 {
+							display: block;
+							background: rgba(0,0,0,0);
+							background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							right: 0px;
+							color: white;
+							padding: 50px 10px 10px 40px;
+							.rankOrder {
+								color: white;
+							}
+						}
+					}
+					&:hover {
+						a {
+							h3 {
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+		footer {
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #ddd;
+			margin: 0;
+			background-color: white;
+			border-top: 1px solid $linea;
+			a {
+				font-family: $font-sinserif;
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 0.2em;
+				color: #000;
+				text-transform: uppercase;
+				display: flex;
+				justify-content: flex-end;
+				line-height: 1em;
+				&:after {
+					content: "\f061";
+					font-family: "FontAwesome";
+					display: block;
+					font-size: 20px;
+					margin-left: 10px;
+					transform: translateY(-1px);
+				}
+				&:hover {
+					color: #444;
+				}
+			}
+		}		
+		@include media-breakpoint-up(sm) {
+			#rankPerfilcom {
+				column-count: 2;
+				column-gap: 2em;
+				column-rule: 1px solid $linea;
+				article.masleidas {
+					break-inside: avoid-column;
+					padding: 5px 0;
+					a {
+						h3 {
+							font-size: 1.1rem
+						}
+						figure {
+							height: 140px;
+						}
+					}
+				}
+			}
+		}
+		@include media-breakpoint-up(sm) {
+			#rankPerfilcom {
+				article.masleidas {
+					a {
+						figure {
+							height: 190px;
+						}
+					}
+				}
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			#rankPerfilcom {
+				column-count: 1;
+				article.masleidas {
+					padding: 5px 10px;
+					a {
+						figure {
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+	#columnistas {
+		background: #fff;
+		width: 100%;
+		margin: 0 0 20px 0;
+		box-sizing: border-box;
+		box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+		border-radius: 6px;
+		header {
+			width: 100%;
+			padding: 10px 10px 5px 10px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin: 0;
+		}
+		article.nota-columnista {
+			width: 100%;
+			padding: 5px 10px;
+			border-top: 1px solid $linea;
+			a {
+				font:{
+					family: $font-serif;
+					size: 1.1rem;
+					size: 5vw;
+					weight: 400;
+				}
+				color: $dark;
+				figure {
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+					margin: 0 10px 0 0;
+					border: 1px solid $azul;
+					img {
+						width: 100%;
+					}
+				}
+			}
 		}
 	}
 }

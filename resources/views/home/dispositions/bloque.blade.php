@@ -230,7 +230,7 @@
 								<figure>
 													<img class="lazy" alt="Fabián Cubero" src="https://fotos.perfil.com/2020/04/21/trim/300/169/fabian-cubero-0421-943498.jpg" style="display: inline-block;">
 												</figure>
-								<h2>Fabián Cubero denunció penalmente a Nicole Neumann</h2>
+								<h3>Fabián Cubero denunció penalmente a Nicole Neumann</h3>
 							</a>
 						</article>
 								<article class="notaExitoina">
@@ -238,7 +238,7 @@
 								<figure>
 													<img class="lazy" alt="Jorge Rial y Adrián Pallares" src="https://fotos.perfil.com/2020/07/01/trim/150/85/jorge-rial-adrian-pallares-0107-979581.jpg" style="display: inline-block;">
 												</figure>
-								<h2>Tensión en Intrusos por un comentario de Jorge Rial a Adrián Pallares</h2>
+								<h3>Tensión en Intrusos por un comentario de Jorge Rial a Adrián Pallares</h3>
 							</a>
 						</article>
 								<article class="notaExitoina">
@@ -246,7 +246,7 @@
 								<figure>
 													<img class="lazy" alt="Silvina Luna y Gustavo Conti" src="https://fotos.perfil.com/2020/07/02/trim/150/85/silvina-luna-gustavo-conti-0702-980083.jpg" style="display: inline-block;">
 												</figure>
-								<h2>El incómodo momento de Gustavo Conti en Pampita Online por un drama familiar</h2>
+								<h3>El incómodo momento de Gustavo Conti en Pampita Online por un drama familiar</h3>
 							</a>
 						</article>
 								<article class="notaExitoina">
@@ -254,7 +254,7 @@
 								<figure>
 													<img class="lazy" alt="Beavis y Butt-Head" src="https://fotos.perfil.com/2020/07/01/trim/150/85/beavis-y-butt-head-979935.jpg" style="display: inline-block;">
 												</figure>
-								<h2>Anunciaron el regreso de Beavis y Butt-Head</h2>
+								<h3>Anunciaron el regreso de Beavis y Butt-Head</h3>
 							</a>
 						</article>
 								<footer>
@@ -280,7 +280,7 @@
 								<figure>
 													<img class="lazy" alt="Gustavo Conti" src="https://fotos.perfil.com/2020/07/01/trim/300/169/gustavo-conti-979933.png" style="display: inline-block;">
 												</figure>
-								<h2>Gustavo Conti expuso cómo seduciría a Pampita </h2>
+								<h3>Gustavo Conti expuso cómo seduciría a Pampita </h3>
 							</a>
 						</article>
 								<article class="notaNet">
@@ -288,7 +288,7 @@
 								<figure>
 													<img class="lazy" alt="Pampita" src="https://fotos.perfil.com/2020/07/02/trim/150/85/pampita-980609.png" style="display: inline-block;">
 												</figure>
-								<h2>Pampita le respondió a Mariana Brey: “Estoy muy bien parada como mujer, el honor es muy importante” </h2>
+								<h3>Pampita le respondió a Mariana Brey: “Estoy muy bien parada como mujer, el honor es muy importante” </h3>
 							</a>
 						</article>
 								<article class="notaNet">
@@ -296,7 +296,7 @@
 								<figure>
 													<img class="lazy" alt="@comotodonet" src="https://fotos.perfil.com/2020/07/01/trim/150/85/molleja-979666.jpg" style="display: inline-block;">
 												</figure>
-								<h2>Recetas variadas con mollejas</h2>
+								<h3>Recetas variadas con mollejas</h3>
 							</a>
 						</article>
 								<article class="notaNet">
@@ -304,7 +304,7 @@
 								<figure>
 													<img class="lazy" alt="Mandá texto cone estilo por WhatsApp" src="https://fotos.perfil.com/2020/07/01/trim/150/85/whatsapp-979236.jpg" style="display: inline-block;">
 												</figure>
-								<h2>WhatsApp: mirá cómo enviar mensajes en negrita, cursiva y tachado</h2>
+								<h3>WhatsApp: mirá cómo enviar mensajes en negrita, cursiva y tachado</h3>
 							</a>
 						</article>
 								<footer>

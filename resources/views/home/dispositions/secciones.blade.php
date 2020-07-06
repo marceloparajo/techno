@@ -84,61 +84,94 @@ CONTENIDO HARDCODEADO DESDE ACA
 ######################################
 --}}
 
-<div id="masLeidasSidebar" class="widget-mas-leidas-de-perfil">
-	<header>
-		<div class="masleidas-titulo"><a href="/mas-leidas">Las noticias más leídas</a></h4>
+<section id="masLeidasSidebar" class="widget-mas-leidas-de-perfil">
+	<header class="masleidas-titulo">
+		<a href="/mas-leidas">Lo más visto</a>
 	</header>
 		<div id="rankPerfilcom">
-			<ol class="masleidas">
-				<li>
+			<article class="masleidas">
+				<a href="//www.perfil.com/noticias/politica/marcelo-tinelli-lobo-con-piel-de-cordero.phtml">
 					<figure>
 						<img class="lazy" src="https://fotos.perfil.com/2020/06/21/trim/300/200/marcelo-tinelli-974731.jpg">
 					</figure>
-					<span class="rankOrder">1</span>
-					<a href="//www.perfil.com/noticias/politica/marcelo-tinelli-lobo-con-piel-de-cordero.phtml" class="rankTitle">Marcelo Tinelli, un lobo en piel de cordero</a>
-				</li>
-				<li>
-					<span class="rankOrder">2</span>
-					<a href="//www.perfil.com/noticias/politica/jorge-lanata-los-chorros-estan-sueltos-y-estan-yendo-por-la-venganza.phtml" class="rankTitle">Jorge Lanata: "El costo político de detenerme a mí, a Majul, o quien sea es muy alto"</a>
-				</li>
-				<li>
+					<h3>
+						<span class="rankOrder">1</span>Marcelo Tinelli, un lobo en piel de cordero
+					</h3>
+				</a>
+			</article>
+			<article class="masleidas">
+				<a href="//www.perfil.com/noticias/politica/jorge-lanata-los-chorros-estan-sueltos-y-estaiclen-yendo-por-la-venganza.phtml">
+					<h3>
+					<span class="rankOrder">2</span>Jorge Lanata: "El costo político de detenerme a mí, a Majul, o quien sea es muy alto"
+				</h3>
+				</a>
+			</article>
+			<article class="masleidas">
+				<a href="//www.perfil.com/noticias/politica/apartan-al-juez-federico-villena-de-la-causa-por-espionaje-ilegal.phtml">
+					<h3>
 					<span class="rankOrder">3</span>
-					<a href="//www.perfil.com/noticias/politica/apartan-al-juez-federico-villena-de-la-causa-por-espionaje-ilegal.phtml" class="rankTitle">Apartan al juez Federico Villena de la causa por espionaje ilegal</a>
-				</li>
-				<li>
+					Apartan al juez Federico Villena de la causa por espionaje ilegal
+					</h3>
+				</a>
+			</article>
+			<article class="masleidas">
+				<a href="//www.perfil.com/noticias/politica/sabina-frederic-repondio-a-horacio-verbitsky-dijo-es-injusto-compararme-con-patricia-bullrich.phtml">
+					<h3>
 					<span class="rankOrder">4</span>
-					<a href="//www.perfil.com/noticias/politica/sabina-frederic-repondio-a-horacio-verbitsky-dijo-es-injusto-compararme-con-patricia-bullrich.phtml" class="rankTitle">Sabina Frederic le respondió a Horacio Verbitsky: "Es injusto compararme con Patricia Bullrich"</a>
-				</li>
-				<li>
+					Sabina Frederic le respondió a Horacio Verbitsky: "Es injusto compararme con Patricia Bullrich"
+					</h3>
+				</a>
+			</article>
+			<article class="masleidas">
+				<a href="//www.perfil.com/noticias/politica/gabriel-solano-presento-a-su-bebe-y-lo-criticaron-porque-nacio-hospital-aleman.phtml">
+					<h3>
 					<span class="rankOrder">5</span>
-					<a href="//www.perfil.com/noticias/politica/gabriel-solano-presento-a-su-bebe-y-lo-criticaron-porque-nacio-hospital-aleman.phtml" class="rankTitle">Gabriel Solano presentó a su bebé y lo criticaron porque nació en un sanatorio privado</a>
-				</li>
-				<li>
-					<span class="rankOrder">6</span>
-					<a href="//www.perfil.com/noticias/politica/marcelo-longobardi-pueden-detener-periodistas-y-alberto-fernandez-se-pareceria-nicolas-maduro.phtml" class="rankTitle">Longobardi: "Pueden detener a periodistas y Alberto Fernández se parecería a Maduro"</a>
-				</li>
-				<li>
-					<span class="rankOrder">7</span>
-					<a href="//www.perfil.com/noticias/bloomberg/bc-nueva-mutacion-podria-acelerar-propagacion-de-covid-19-experto.phtml" class="rankTitle">Una nueva mutación podría acelerar la propagación de Covid-19</a>
-				</li>
-				<li>
+					Gabriel Solano presentó a su bebé y lo criticaron porque nació en un sanatorio privado
+					</h3>
+				</a>
+			</article>
+			<article class="masleidas">
+				<a href="//www.perfil.com/noticias/politica/marcelo-longobardi-pueden-detener-periodistas-y-alberto-fernandez-se-pareceria-nicolas-maduro.phtml">
+					<h3><span class="rankOrder">6</span>
+					Longobardi: "Pueden detener a periodistas y Alberto Fernández se parecería a Maduro"
+					</h3>
+				</a>
+			</article>
+			<article class="masleidas">
+				<a href="//www.perfil.com/noticias/bloomberg/bc-nueva-mutacion-podria-acelerar-propagacion-de-covid-19-experto.phtml">
+					<h3>
+					<span class="rankOrder">7</span>Una nueva mutación podría acelerar la propagación de Covid-19
+					</h3>
+				</a>
+			</article>
+			<article class="masleidas">
+				<a href="//www.perfil.com/noticias/politica/fernando-iglesias-redobla-la-apuesta-tras-su-ataque-a-perfil-no-me-voy-a-disculpar.phtml">
+					<h3>
 					<span class="rankOrder">8</span>
-					<a href="//www.perfil.com/noticias/politica/fernando-iglesias-redobla-la-apuesta-tras-su-ataque-a-perfil-no-me-voy-a-disculpar.phtml" class="rankTitle">Fernando Iglesias redobla la apuesta tras su ataque a Perfil: "No me voy a disculpar"</a>
-				</li>
-				<li>
+					Fernando Iglesias redobla la apuesta tras su ataque a Perfil: "No me voy a disculpar"
+					</h3>
+				</a>
+			</article>
+			<article class="masleidas">
+				<a href="//www.perfil.com/noticias/actualidad/horacio-verbitsky-estoy-preocupado-por-el-regreso-de-bullrich-al-mininisterio-de-seguridad.phtml">
+					<h3>
 					<span class="rankOrder">9</span>
-					<a href="//www.perfil.com/noticias/actualidad/horacio-verbitsky-estoy-preocupado-por-el-regreso-de-bullrich-al-mininisterio-de-seguridad.phtml" class="rankTitle">Verbitsky y la doctrina Frederic: "Estoy preocupado por el regreso de Bullrich a Seguridad"</a>
-				</li>
-				<li>
-					<span class="rankOrder">10</span>
-					<a href="//www.perfil.com/noticias/coronavirus/18-nuevas-muertes-coronavirus-sube-tasa-mortalidad.phtml" class="rankTitle">Con 18 nuevas muertes sube la tasa de mortalidad por coronavirus</a>
-				</li>
-			</ol>
+					Verbitsky y la doctrina Frederic: "Estoy preocupado por el regreso de Bullrich a Seguridad"
+					</h3>
+				</a>
+			</article>
+			<article class="masleidas">
+				<a href="//www.perfil.com/noticias/coronavirus/18-nuevas-muertes-coronavirus-sube-tasa-mortalidad.phtml">
+					<h3>
+					<span class="rankOrder">10</span>Con 18 nuevas muertes sube la tasa de mortalidad por coronavirus
+					</h3>
+				</a>
+			</article>
 		</div>
 		<footer>
 			<a href="/mas-leidas">Mirá más</a>
     </footer>
-	</div>
+	</section>
 
 
 {{--

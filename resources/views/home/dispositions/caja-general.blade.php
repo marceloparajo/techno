@@ -59,7 +59,79 @@
 
 			<div class="caja-right">
 
-				sidebarismo
+
+
+
+
+{{--
+######################################
+######################################
+
+CONTENIDO HARDCODEADO DESDE ACA
+
+######################################
+######################################
+--}}
+				<section id="columnistas">
+					<header class="columnistas-titulo">
+						<a href="#">Columnistas</a>
+					</header>
+					<article class="nota-columnista">
+						<a href="/noticias/columnistas/en-45-dias-explota-todo.phtml">
+							<img src="https://fotos.perfil.com/autores/default/jfontevecchia_50.jpg?v=1.0.29"> 
+							<h3>"En 45 días explota todo"</h3>
+							<h5>Jorge Fontevecchia</h5>
+						</a>
+					</article>
+
+					<article class="nota-columnista">
+						<a href="/noticias/columnistas/la-comedia-mas-triste-del-mundo.phtml">
+							<img src="https://fotos.perfil.com/autores/default/ggonzalez_50.jpg?v=1.0.29"> 
+							<h3>La comedia más triste del mundo</h3>
+							<h5>Gustavo González</h5>
+						</a>
+					</article>
+					
+					<article class="nota-columnista">
+						<a href="/noticias/columnistas/no-importa.phtml">
+							<img src="https://fotos.perfil.com/autores/default/jcalvo_50.jpg?v=1.0.29"> 
+							<h3>No importa</h3>
+							<h5>Javier Calvo</h5>
+						</a>
+					</article>
+					
+					<article class="nota-columnista">
+						<a href="/noticias/columnistas/piolas-y-duros.phtml">
+							<img src="https://fotos.perfil.com/autores/default/bsarlo_50.jpg?v=1.0.29"> 
+							<h3>Beatriz Sarlo</h3>
+							<h5>Piolas y duros</h5>
+						</a>
+					</article>
+					
+					<article class="nota-columnista">
+						<a href="/noticias/columnistas/dogmatismo-y-ciencia.phtml">
+							<img src="https://fotos.perfil.com/autores/default/jduranbarba_50.jpg?v=1.0.29"> 
+							<h3>Dogmatismo y ciencia</h3>
+							<h5>Jaime Duran Barba</h5>
+						</a>
+					</article>
+					<footer>
+						<a href="/mas-leidas">Mirá más</a>
+					</footer>
+				</section>
+
+{{--
+######################################
+######################################
+
+CONTENIDO HARDCODEADO HASTA ACA
+
+######################################
+######################################
+--}}
+
+
+
 
 			</div>
 
