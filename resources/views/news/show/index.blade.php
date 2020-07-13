@@ -93,15 +93,36 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 
 
-						
-
-
-
 				@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])
 
 
 				<div class="news-body">
 					{!! $body !!}
+
+
+
+					{{-- Embed Code --}}
+					@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code'))
+						{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
+					@endif
+
+					{{-- Gallery --}}
+					@if (count($noticia['gallery']) > 1)
+						<div class="col-12 border p-3">
+							<h3>{{ __('Image Gallery') }}</h3>
+							<div id="gallery-thumbnails" class="bottom-gallery">
+								@foreach ($noticia['gallery'] as $image)
+									<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
+										<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}">
+									</a>
+								@endforeach
+							</div>
+						</div>
+					@endif
+
+					@include('partials.teads')
+
+					
 				</div>				
 
 			</article>

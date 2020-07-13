@@ -26680,6 +26680,8 @@ REVISTAS
 
 .perfil-noticia .maincontainer .noticia {
   width: 100%;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 10px;
 }
 
 .perfil-noticia .maincontainer .noticia article .autor-nota {
@@ -26690,8 +26692,8 @@ REVISTAS
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  border-top: 1px solid #557c9c;
-  padding-top: 10px;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px 0;
 }
 
 .perfil-noticia .maincontainer .noticia article .autor-nota figure {
@@ -26759,6 +26761,61 @@ REVISTAS
   color: #0a0a0a;
 }
 
+.perfil-noticia .maincontainer .noticia article figure.figure.btn-open-gallery {
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+
+.perfil-noticia .maincontainer .noticia article figure.figure.btn-open-gallery a.btn-open-gallery.fotogaleria {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.perfil-noticia .maincontainer .noticia article figure.figure.btn-open-gallery a.btn-open-gallery.fotogaleria i.fas {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  color: white;
+  border-radius: 3px;
+}
+
+.perfil-noticia .maincontainer .noticia article .news-body {
+  font-size: 1.1rem;
+  font-size: 5vw;
+}
+
+.perfil-noticia .maincontainer .noticia article .news-body strong,
+.perfil-noticia .maincontainer .noticia article .news-body a strong {
+  font-weight: 600;
+}
+
+.perfil-noticia .maincontainer .noticia article .news-body a,
+.perfil-noticia .maincontainer .noticia article .news-body a strong,
+.perfil-noticia .maincontainer .noticia article .news-body strong a {
+  color: #445e7c;
+}
+
+.perfil-noticia .maincontainer .noticia article .news-body p {
+  font-size: 1rem;
+  font-size: 5vw;
+}
+
+.perfil-noticia .maincontainer .noticia article .news-body p strong,
+.perfil-noticia .maincontainer .noticia article .news-body p a strong {
+  font-weight: 600;
+}
+
+.perfil-noticia .maincontainer .noticia article .news-body p a,
+.perfil-noticia .maincontainer .noticia article .news-body p a strong,
+.perfil-noticia .maincontainer .noticia article .news-body p strong a {
+  color: #445e7c;
+}
+
 .perfil-noticia .float-button {
   position: fixed;
   width: 60px;
@@ -26823,6 +26880,14 @@ REVISTAS
 
   .perfil-noticia .maincontainer .noticia article .autor-nota .autor-nota-group ul li a .redsocial {
     display: block;
+  }
+
+  .perfil-noticia .maincontainer .noticia article .news-body {
+    font-size: 1.1rem;
+  }
+
+  .perfil-noticia .maincontainer .noticia article .news-body p {
+    font-size: 1.1rem;
   }
 }
 
