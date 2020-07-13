@@ -122,6 +122,13 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 					@include('partials.teads')
 
+					@include('news.show.partials.news-tags')
+
+				{{-- Noticias sugeridas de otros sitios/revistas --}}
+				@include('news.show.partials.suggested-site-news')
+
+				{{-- Más Noticias (para los crawlers) --}}
+				@include('news.show.partials.more-news-crawlers')
 					
 				</div>				
 
