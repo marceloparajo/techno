@@ -78,7 +78,7 @@
 								</figure>
 
 								<div class="meta-content">
-									<a href="{{ $news[0]['permalink'] }}">
+									<a href="{{ $new['permalink'] }}">
 										@if ($new['hat'] != '')
 											<span class="hat">{{ $new['hat'] }} </span>
 										@endif
@@ -127,7 +127,7 @@
 										</a>
 									</figure>
 									<div class="meta-content">
-										<a href="{{ $news[0]['permalink'] }}">
+										<a href="{{ $new['permalink'] }}">
 											@if ($new['hat'] != '')
 												<span class="hat">{{ $new['hat'] }} </span>
 											@endif
@@ -184,7 +184,7 @@
 									</a>
 								</figure>
 								<div class="meta-content">
-									<a href="{{ $news[0]['permalink'] }}">
+									<a href="{{ $new['permalink'] }}">
 										@if ($new['hat'] != '')
 											<span class="hat">{{ $new['hat'] }} </span>
 										@endif
@@ -234,7 +234,7 @@
 										</a>
 									</figure>
 									<div class="meta-content">
-										<a href="{{ $news[0]['permalink'] }}">
+										<a href="{{ $new['permalink'] }}">
 											@if ($new['hat'] != '')
 												<span class="hat">{{ $new['hat'] }} </span>
 											@endif

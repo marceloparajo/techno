@@ -13,16 +13,14 @@
 		</div>
 	</div>
 </div>
-<div class="container-fluid m-0 py-0 perfil-header sticky-top shadow-sm">
+<header class="container-fluid m-0 py-0 perfil-header sticky-top shadow-sm">
 	<div class="container px-0 d-flex flex-column flex-xl-row py-0 elheader">
 		<nav class="navbar navbar-expand-xl navbar-light bg-white w-100 justify-content-start justify-content-xl-between mainnavbar py-lg-1 px-0" id="header-navbar">
 
-
-
 				<div class="d-flex justify-content-start">
 
-		            <div class="elisologo pl-2 pl-sm-0">
-		            	<div id="hamburguesa" class="hamburguer" onclick="myFunction(this)">
+            <div class="elisologo pl-2 pl-sm-0">
+							<div id="hamburguesa" class="hamburguer" onclick="myFunction(this)">
 							<div class="bar1"></div>
 							<div class="bar2"></div>
 							<div class="bar3"></div>
@@ -108,7 +106,7 @@
 			</div>
 		</div><!-- header-menu -->
 	</div>
-</div>
+</header>
 
 <div class="container-fluid d-none d-xl-flex menudetemas px-0">
 	<div class="container px-0 elmenu">
@@ -135,8 +133,6 @@
 		</div>
 	</div>
 </div>
-
-
 
 <script>
 	function myFunction(x) {

@@ -873,3 +873,244 @@
 
 	}
 }
+
+
+
+.perfil-noticia {
+	.maincontainer {
+		width: 100%;
+		padding: 0;
+		margin: 0 auto;
+		max-width: 1260px;
+		flex-direction: column;
+		.articulo-header {
+			width: 100%;
+			padding: 10px;
+			.hat {
+				line-height: 1em;
+				padding: 0 0 5px 0;
+				border-bottom: 1px solid $linea;
+				font: {
+					family: $font-sinserif;
+					size: 0.9rem;
+					size: 4.5vw;
+					weight: 400;
+				}
+				color: $dark;
+				a {
+					color: $azul;
+					font-weight: 600;
+					text-transform: uppercase;
+				}
+				span {
+					&.volanta {
+						font-weight: 600;
+						text-transform: uppercase;
+						&:before {
+							content: "";
+							display: block;
+							height: 1em;
+							width: 1px;
+							background: $linea;
+							margin: 0 7px;
+							display: inline-block;
+						}
+					}
+					&.fecha {
+						&:before {
+							content: "";
+							display: block;
+							height: 1em;
+							width: 1px;
+							background: $linea;
+							margin: 0 7px;
+							display: inline-block;
+						}
+					}
+				}
+			}
+			h1 {
+				font: {
+					family: $font-serif;
+					size: 1.6rem;
+					size: 8vw;
+					weight: 600;
+				}
+				line-height: 1em;
+			}
+			h2 {
+				font:{
+					size: 1.4rem;
+					size: 5vw;
+					weight: 400;
+					family: $font-serif;
+				}
+				margin: 10px 0;
+			}
+		}
+		.noticia {
+			width: 100%;
+			article {
+				.autor-nota {
+					width: 100%;
+					display: flex;
+					justify-content: flex-start;
+					border-top: 1px solid $azul;
+					padding-top: 10px;
+					figure {
+						width: 50px;
+						height: 50px;
+						margin: 0 10px 0 0;
+						border-radius: 50%;
+						border: 1px solid $azul;
+						overflow: hidden;
+					}
+					.autor-nota-group {
+						flex: 1 1 0;
+						h5 {
+							font:{
+								family: $font-serif;
+								size: 1.1rem;
+								size: 6vw;
+								weight: 600;
+							}
+							color: $dark;
+							margin: 0 0 5px 0;
+							a {
+								color: $dark;
+							}
+						}
+						p {
+							font:{
+								family: $font-sinserif;
+								size: .9rem;
+								weight: 400;
+							}
+							line-height: 1.1em;
+							margin: 0 0 3px 0;
+						}
+						ul {
+							list-style: none;
+							padding: 0;
+							margin: 10px 0 0 0;
+							li {
+								float: left;
+								display: inline-block;
+								margin: 0 10px 0 0;
+								padding: 0;
+								line-height: 1em;
+								font-size: 2rem;
+								font-size: 8vw;
+								.redsocial {
+									padding: 0 0 0 5px;
+									display: none; //display block a partir de md.
+								}
+								a {
+									color: #666;
+									&:hover {
+										color: $negro;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.float-button {
+		position:fixed;
+		width:60px;
+		height:60px;
+		bottom:20px;
+		right:20px;
+		background-color:$azul;
+		color:#FFF;
+		border-radius:50%;
+		text-align:center;
+		box-shadow: 0 2px 7px 0 rgba(0,0,0,.3);
+		z-index: 1;
+		i {
+			line-height: 60px;
+			font-size: 30px;
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		.maincontainer {
+			.articulo-header {
+				padding: 10px 0;
+				.hat {
+					font-size: 0.9rem;
+				}
+				h1 {
+					font-size: 2rem;
+				}
+				h2 {
+					font-size: 1.4rem;
+				}
+			}
+			.noticia {
+				padding: 0;
+				article {
+					.autor-nota {
+						.autor-nota-group {
+							h5 {
+								font-size: 1.1rem;
+							}
+							p {
+								font-size: .8rem;
+							}
+							ul {
+								li {
+									font-size: 1rem;
+									a {
+										display: flex;
+										justify-content: flex-start;
+										.redsocial {
+											display: block;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.maincontainer {
+			.articulo-header {
+				h1 {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.maincontainer {
+			.articulo-header {
+				.hat {
+					font-size: 1.1rem;
+				}
+				h1 {
+					font-size: 4rem;
+				}
+				h2 {
+					font-size: 1.4rem;
+				}
+			}
+			.noticia {
+				display: flex;
+				article {
+					flex: 1 1 0;
+				}
+				.sidebar {
+					flex-basis: 300px;
+					width: 300px;
+					margin: 0 0 0 20px;
+				}
+			}
+		}
+	}
+}

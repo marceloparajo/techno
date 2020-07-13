@@ -1,4 +1,11 @@
-/** COBERTURA **/
+/*
+
+COBERTURA
+CAJA GENERAL
+RADIO
+ARTE Y CULTURA
+
+*/
 
 .cobertura {
 	margin: 20px auto;
@@ -595,6 +602,9 @@ Se usa para Radio Perfil
 						flex-basis: 24%;
 						justify-content: flex-start;
 						position: relative;
+						figure {
+							margin: 0 0 5px 0;
+						}
 						.meta-content {
 							a {
 								h2 {
@@ -682,6 +692,7 @@ Se usa para Radio Perfil
 		}
 		.caja-right {
 			flex-basis: 300px;
+			width: 300px;
 			margin: 0 0 0 20px;
 		}
 	}
@@ -692,6 +703,7 @@ Se usa para Radio Perfil
 				.contenido-notas {
 					.articulo.caja-nota {
 						padding-bottom: 0;
+						margin-bottom: 0;
 						&:before {
 							left: -9px;
 						}
@@ -700,12 +712,20 @@ Se usa para Radio Perfil
 								span.hat {
 									display: block;
 								}
+								h2 {
+									font-size: 1.3rem;
+								}
 							}
 						}
 						&:first-of-type {
-							a {
-								span.hat {
-									display: none;
+							.meta-content {
+								a {
+									span.hat {
+										display: none;
+									}
+									h2 {
+										font-size: 1.4rem;
+									}
 								}
 							}
 						}
