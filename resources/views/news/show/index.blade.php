@@ -79,9 +79,9 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 			<span class="fecha">{{ $noticia['date_available_human'] }}</span>
 		</header>
 
-		<div class="container noticia">
+		<div class="container noticia pt-2">
 			
-			<article>
+			<article class="col-12 col-lg-8 px-0 pr-lg-4">
 
 				{{-- Author --}}
 				@if ($noticia['signed'])
@@ -129,12 +129,16 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 				{{-- Más Noticias (para los crawlers) --}}
 				@include('news.show.partials.more-news-crawlers')
+
+				@include('partials.outbrain-news')
+
 					
 				</div>				
 
 			</article>
 
-			<aside class="sidebar">
+			<aside class="sidebar col-12 col-lg-4 px-0">
+					@include('sidebar.index', ['content' => $sidebar_content])
 			</aside>
 
 		</div><!-- noticia -->

@@ -81,6 +81,10 @@ return [
 		'template' => 'bloomberg'
 	],
 	[
+		'id' => 'opinion-sidebar',
+		'template' => 'opinion'
+	],
+	[
 		'id' => 'minuto-de-noticias',
 		'template' => 'minuto-de-noticias'
 	],

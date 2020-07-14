@@ -1,3 +1,5 @@
+/*
+
 .pf-new-show {
 	.sticky-bottom-ads {
 		position: fixed;
@@ -614,7 +616,6 @@
 		.social-btn {
 			font-size: 2em;
 		}
-		/*
 		.social-facebook {
 			color: $pf_facebook_color;
 		}
@@ -630,7 +631,6 @@
 		.social-blog {
 			color: $pf_tumblr_color;
 		}
-		*/
 	}
 
 
@@ -874,7 +874,7 @@
 	}
 }
 
-
+*/
 
 .perfil-noticia {
 	.maincontainer {
@@ -937,6 +937,7 @@
 					weight: 600;
 				}
 				line-height: 1em;
+				letter-spacing: -0.02em;
 			}
 			h2 {
 				font:{
@@ -951,7 +952,6 @@
 		.noticia {
 			width: 100%;
 			border-top: 1px solid $linea;
-			padding-top: 10px;
 			article {
 				.autor-nota {
 					width: 100%;
@@ -1049,7 +1049,10 @@
 					strong a {
 						color: $azul-dark;
 					}
-					p {
+					p,
+					ul,
+					ol,
+					li {
 						font-size: 1rem;
 						font-size: 5vw;
 						strong,
@@ -1061,6 +1064,25 @@
 						strong a {
 							color: $azul-dark;
 						}
+					}
+					ul {
+						li {
+							list-style: none;
+							padding: 0 0 0 16px;
+							margin: 0 0 0.5em 0;
+							&:before {
+								content: "\f111";
+								display: inline-block;
+								font-size: .5rem;
+								font-family: "FontAwesome";
+								color: $azul;
+								margin: 0 10px 0 -16px;
+								transform: translateY(-2px);
+							}
+						}
+					}
+					.media.noticia-relacionada {
+						display: none;
 					}
 				}
 			}
@@ -1124,7 +1146,10 @@
 					}
 					.news-body {
 						font-size: 1.1rem;
-						p {
+						p,
+						ul,
+						ol,
+						li {
 							font-size: 1.1rem;
 						}
 					}
@@ -1139,6 +1164,36 @@
 					font-size: 3rem;
 				}
 			}
+			.noticia {
+				article {
+					.news-body {
+						a,
+						strong a,
+						a strong {
+							color: $dark;
+							border-bottom: $link;
+							transition: ease .3s;
+							&:hover {
+									background-color: $link;
+							}
+						}
+						p,
+						ul,
+						ol,
+						li {
+							a,
+							strong a,
+							a strong {
+								color: $dark;
+								border-bottom: 1px solid $link;
+								&:hover {
+									background-color: $link;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	@include media-breakpoint-up(lg) {
@@ -1149,6 +1204,7 @@
 				}
 				h1 {
 					font-size: 4rem;
+					margin-bottom: 20px;
 				}
 				h2 {
 					font-size: 1.4rem;
@@ -1156,6 +1212,7 @@
 			}
 			.noticia {
 				display: flex;
+				/*
 				article {
 					flex: 1 1 0;
 				}
@@ -1164,6 +1221,14 @@
 					width: 300px;
 					margin: 0 0 0 20px;
 				}
+				*/
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.maincontainer {
+			.container {
+				max-width: 1260px;
 			}
 		}
 	}

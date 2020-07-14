@@ -54,11 +54,12 @@
 
 			</div>
 
-			<div class="caja-right">
+			<aside class="caja-right">
 
 				sidebarismo
 
-			</div>		</div>
+			</aside>
+		</div>
 
 	@endif
 

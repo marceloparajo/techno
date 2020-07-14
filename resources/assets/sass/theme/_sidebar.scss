@@ -140,7 +140,8 @@
 
 
 
-.caja-right {
+.caja-right,
+.sidebar {
 	#exitoina,
 	#net,
 	#investigacion,
@@ -202,7 +203,7 @@
 				}
 			}
 			.opinion-titulo {
-				width: 280px;
+				width: 100%;
 				height: 30px;
 				line-height: 44px;
 				display: block;
