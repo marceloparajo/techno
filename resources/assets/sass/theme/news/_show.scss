@@ -916,24 +916,13 @@
 							display: inline-block;
 						}
 					}
-					&.fecha {
-						&:before {
-							content: "";
-							display: block;
-							height: 1em;
-							width: 1px;
-							background: $linea;
-							margin: 0 7px;
-							display: inline-block;
-						}
-					}
 				}
 			}
 			h1 {
 				font: {
 					family: $font-serif;
-					size: 1.6rem;
-					size: 8vw;
+					size: 1.8rem;
+					size: 9vw;
 					weight: 600;
 				}
 				line-height: 1em;
@@ -941,8 +930,8 @@
 			}
 			h2 {
 				font:{
-					size: 1.4rem;
-					size: 5vw;
+					size: 1.5rem;
+					size: 6vw;
 					weight: 400;
 					family: $font-serif;
 				}
@@ -953,6 +942,59 @@
 			width: 100%;
 			border-top: 1px solid $linea;
 			article {
+				.fecha-redes {
+					.fecha {
+						font-size: 1rem;
+						font-weight: 600;
+						color: #999;
+					}
+					.social-topsharing {
+						h4 {
+							display: none;
+						}
+						ul {
+							margin: 0;
+							display: flex;
+							list-style: none;
+							justify-content: center;
+							li {
+								font-size: 30px;
+								margin: 0 10px;
+								&.facebook {
+									a {
+										color: $fb_color;
+									}
+								}
+								&.twitter {
+									a {
+										text-align: center;
+										width: 30px;
+										height: 30px;
+										display: inline-block;
+										font-size: 20px;
+										background: $tw_color;
+										color: white;
+										border-radius: 50%;
+										line-height: 1.8em;
+										i {
+											transform: translateY(-3px);
+										}
+									}
+								}
+								&.whatsapp {
+									a {
+										color: $wa_color;
+									}
+								}
+								&.pinterest {
+									a {
+										color: $pinterest_color;
+									}
+								}
+							}
+						}
+					}
+				}
 				.autor-nota {
 					width: 100%;
 					display: flex;
@@ -1001,8 +1043,8 @@
 								margin: 0 10px 0 0;
 								padding: 0;
 								line-height: 1em;
-								font-size: 2rem;
-								font-size: 8vw;
+								font-size: 1rem;
+								font-size: 5vw;
 								.redsocial {
 									padding: 0 0 0 5px;
 									display: none; //display block a partir de md.
@@ -1021,6 +1063,7 @@
 					width: 100%;
 					position: relative;
 					margin-top: 10px;
+					display: block;
 					a.btn-open-gallery.fotogaleria {
 						width: 100%;
 						height: 100%;
@@ -1034,6 +1077,25 @@
 							padding: 5px;
 							color: white;
 							border-radius: 3px;
+						}
+					}
+					img {
+						display: block;
+					}
+					.figure-caption {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						background: rgba(98, 134, 177, .7);
+						color: white;
+						font-size: .85rem;
+						font-size: 4vw;
+						line-height: 1em;
+						padding: 5px;
+						.credito-foto {
+							text-transform: uppercase;
+							font-size: .8em;
 						}
 					}
 				}
@@ -1122,6 +1184,19 @@
 			.noticia {
 				padding: 0;
 				article {
+					.fecha-redes {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						.social-topsharing {
+							ul {
+								justify-content: flex-end;
+								li:last-of-type {
+									margin-right: 0;
+								}
+							}
+						}
+					}					
 					.autor-nota {
 						.autor-nota-group {
 							h5 {
@@ -1132,16 +1207,22 @@
 							}
 							ul {
 								li {
-									font-size: 1rem;
+									font-size: .7rem;
 									a {
 										display: flex;
 										justify-content: flex-start;
 										.redsocial {
 											display: block;
+											text-transform: uppercase;
 										}
 									}
 								}
 							}
+						}
+					}
+					figure.figure.btn-open-gallery {
+						.figure-caption {
+							font-size: .85rem;
 						}
 					}
 					.news-body {
@@ -1166,6 +1247,24 @@
 			}
 			.noticia {
 				article {
+					.fecha-redes {
+						.social-topsharing {
+							ul {
+								li.whatsapp {
+									display: none;
+								}
+							}
+						}
+					}
+					figure.figure.btn-open-gallery {
+						.figure-caption {
+							position: relative;
+							background: transparent;
+							color: $negro;
+							padding: 0 0 5px 0;
+							border-bottom: 1px solid $linea;
+						}
+					}
 					.news-body {
 						a,
 						strong a,

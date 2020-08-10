@@ -76,12 +76,23 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 			<h2 class="headline">
 				{{ $noticia['headline'] }}
 			</h2>
-			<span class="fecha">{{ $noticia['date_available_human'] }}</span>
 		</header>
 
-		<div class="container noticia pt-2">
+		<div class="container noticia pt-2 px-0">
 			
 			<article class="col-12 col-lg-8 px-0 pr-lg-4">
+
+			<div class="fecha-redes px-2 px-sm-0">
+				<span class="fecha">{{ $noticia['date_available_human'] }}</span>
+
+				@include('news.show.partials.social-top', ['shareText' => __('share')] )
+
+			</div>
+
+
+
+				@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])
+
 
 				{{-- Author --}}
 				@if ($noticia['signed'])
@@ -90,13 +101,8 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 				@elseif (! $noticia['signed'] && $noticia['credit'] != '')
 					<p>{{ __('by') }} {{ $noticia['credit'] }}</p>
 				@endif
-
-
-
-				@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])
-
-
-				<div class="news-body">
+				
+				<div class="news-body px-2 px-sm-0">
 					{!! $body !!}
 
 

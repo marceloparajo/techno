@@ -11,7 +11,7 @@
             <noscript>
                 <img src="{{ $gallery[0]['srcs']['big-wide'] }}" alt="{{ $gallery[0]['caption'] }}" itemprop="url">
             </noscript>
-            <figcaption class="figure-caption pb-1 pt-1 pl-2">{{ $gallery[0]['caption'] }} | {{ $gallery[0]['credit']}}</figcaption>
+            <figcaption class="figure-caption">{{ $gallery[0]['caption'] }}<span class="credito-foto"> | {{ $gallery[0]['credit']}}</span></figcaption>
         </figure>
     @endif
 <input type="hidden" id="lightbox-gallery-content" value="{{ $lightbox }}">
