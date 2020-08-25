@@ -80,31 +80,26 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 		<div class="container noticia pt-2 px-0">
 			
-			<article class="col-12 col-lg-8 px-0 pr-lg-4">
-
-			<div class="fecha-redes px-2 px-sm-0">
-				<span class="fecha">{{ $noticia['date_available_human'] }}</span>
-
-				@include('news.show.partials.social-top', ['shareText' => __('share')] )
-
-			</div>
+			<article class="col-12 col-lg-8 col-xl-9 px-0 pr-lg-5">
 
 
+				@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])				
+				<div class="news-body">
 
-				@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])
+					@include('news.show.partials.social-top', ['shareText' => __('share')] )
 
+					<div class="fecha">
+						{{ $noticia['date_available_human'] }}
+						{{-- Author --}}
+						@if ($noticia['signed'])
+							@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
+						{{-- Credit --}}
+						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
+							<p>{{ __('by') }} {{ $noticia['credit'] }}</p>
+						@endif
+					</div>
 
-				{{-- Author --}}
-				@if ($noticia['signed'])
-					@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
-				{{-- Credit --}}
-				@elseif (! $noticia['signed'] && $noticia['credit'] != '')
-					<p>{{ __('by') }} {{ $noticia['credit'] }}</p>
-				@endif
-				
-				<div class="news-body px-2 px-sm-0">
 					{!! $body !!}
-
 
 
 					{{-- Embed Code --}}
@@ -126,9 +121,19 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 						</div>
 					@endif
 
+
+					{{-- Author --}}
+					@if ($noticia['signed'])
+						@include('news.show.partials.author-bottom', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
+					@endif
+
+
 					@include('partials.teads')
 
 					@include('news.show.partials.news-tags')
+
+					
+				</div>
 
 				{{-- Noticias sugeridas de otros sitios/revistas --}}
 				@include('news.show.partials.suggested-site-news')
@@ -136,14 +141,11 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 				{{-- Más Noticias (para los crawlers) --}}
 				@include('news.show.partials.more-news-crawlers')
 
-				@include('partials.outbrain-news')
-
-					
-				</div>				
+				@include('partials.outbrain-news')				
 
 			</article>
 
-			<aside class="sidebar col-12 col-lg-4 px-0">
+			<aside class="sidebar col-12 col-lg-4 col-xl-3 px-0">
 					@include('sidebar.index', ['content' => $sidebar_content])
 			</aside>
 

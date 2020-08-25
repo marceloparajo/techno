@@ -477,6 +477,7 @@ ul.menu-destacado {
 		a {
 			display: block;
 			padding: 10px;
+			color: $dark;
 		}
 	}
 	@include media-breakpoint-down(lg) {
