@@ -892,8 +892,8 @@
 				border-bottom: 1px solid $linea;
 				font: {
 					family: $font-sinserif;
-					size: 0.9rem;
-					size: 4.5vw;
+					size: 0.8rem;
+					size: 4vw;
 					weight: 400;
 				}
 				color: $dark;
@@ -931,11 +931,12 @@
 			h2 {
 				font:{
 					size: 1.5rem;
-					size: 6vw;
+					size: 6.5vw;
 					weight: 400;
 					family: $font-serif;
 				}
 				margin: 10px 0;
+				letter-spacing: -0.01em;
 			}
 		}
 		.noticia {
@@ -1002,9 +1003,10 @@
 					ol,
 					li {
 						font-size: 1.4rem;
-						font-size: 6.2vw;
+						font-size: 6vw;
 						font-family: $font-serif;
-						line-height: 1.4em;
+						line-height: 1.3em;
+						letter-spacing: -0.01em;
 						strong,
 						a strong {
 							font-weight: 600;
@@ -1296,7 +1298,7 @@
 						ul,
 						ol,
 						li {
-							line-height: 1.6em;
+							line-height: 1.4em;
 							a,
 							strong a,
 							a strong {

@@ -25130,8 +25130,8 @@ REVISTAS
   padding: 0 0 5px 0;
   border-bottom: 1px solid #d4d4d4;
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
-  font-size: 0.9rem;
-  font-size: 4.5vw;
+  font-size: 0.8rem;
+  font-size: 4vw;
   font-weight: 400;
   color: #343a40;
 }
@@ -25168,10 +25168,11 @@ REVISTAS
 
 .perfil-noticia .maincontainer .articulo-header h2 {
   font-size: 1.5rem;
-  font-size: 6vw;
+  font-size: 6.5vw;
   font-weight: 400;
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   margin: 10px 0;
+  letter-spacing: -0.01em;
 }
 
 .perfil-noticia .maincontainer .noticia {
@@ -25249,9 +25250,10 @@ REVISTAS
 .perfil-noticia .maincontainer .noticia article .news-body ol,
 .perfil-noticia .maincontainer .noticia article .news-body li {
   font-size: 1.4rem;
-  font-size: 6.2vw;
+  font-size: 6vw;
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  line-height: 1.4em;
+  line-height: 1.3em;
+  letter-spacing: -0.01em;
 }
 
 .perfil-noticia .maincontainer .noticia article .news-body p strong,
@@ -25608,7 +25610,7 @@ REVISTAS
   .perfil-noticia .maincontainer .noticia article .news-body ul,
   .perfil-noticia .maincontainer .noticia article .news-body ol,
   .perfil-noticia .maincontainer .noticia article .news-body li {
-    line-height: 1.6em;
+    line-height: 1.4em;
   }
 
   .perfil-noticia .maincontainer .noticia article .news-body p a,
