@@ -13,6 +13,7 @@ body {
 }
 a {
 	color: $link;
+	text-decoration: none;
 	&:hover {
 		color: $hover;
 		text-decoration: none;
@@ -119,5 +120,17 @@ a {
 		>.container {
 			max-width: 1260px;
 		}
+	}
+}
+
+.contenedor {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1260px;
+	@include media-breakpoint-up(sm) {
+		padding: 10px;
+	}
+	@include media-breakpoint-up(xl) {
+		padding: 0;
 	}
 }

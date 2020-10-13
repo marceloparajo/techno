@@ -72,6 +72,19 @@ $pf_a_color_hover: $pf_main_color;
 
 /** PERFIL **/
 
+@import "theme/mixins/_breakpoints.scss";
+
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 1020px,
+	xl: 1295px,
+	xxl: 1360px,
+	xxxl: 1690px
+);
+
 // tipografias
 $font-general: 'Roboto',Helvetica,Arial,Sans-serif;
 $font-cuerpo:  'Crimson Pro', 'Times New Roman', Times, Georgia, Serif;
@@ -83,7 +96,9 @@ $font-serif: 'Crimson Pro', 'Times New Roman', Times, Georgia, serif;
 $font-condensada: 'Oswald',Helvetica,Arial,Sans-serif;
 
 //colores
-$negro: #0a0a0a; 
+
+$negro: #171717;
+$black: #171717; 
 $dark:#343a40;
 $light: #e4e2e4;
 $azul: #557c9c;
