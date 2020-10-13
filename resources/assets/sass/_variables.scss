@@ -96,11 +96,10 @@ $font-serif: 'Crimson Pro', 'Times New Roman', Times, Georgia, serif;
 $font-condensada: 'Oswald',Helvetica,Arial,Sans-serif;
 
 //colores
-
 $negro: #171717;
 $black: #171717; 
 $dark:#343a40;
-$light: #e4e2e4;
+$light: #ececec;
 $azul: #557c9c;
 $miscelanea: $azul;
 $miscelanea-light: #d0dbe4;
@@ -113,7 +112,7 @@ $linea-oscura: #555;
 $fondo-gris: #dee0e2;
 $secondary: #6c757d;
 
-
+// redes sociales 
 $fb_color: #4868AD;
 $tw_color: #4295DA;
 $ig_color: #C73F7A;
@@ -124,3 +123,7 @@ $flickr_color: #ff0084;
 $tumblr_color: #32506d;
 $wa_color: #25D366;
 $rss_color: #ee802f;
+
+// paywall
+$pw-azul: #005ca0;
+$pw-azul-claro: #0072c7;
