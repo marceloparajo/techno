@@ -76,6 +76,11 @@ return [
 		'id' => 'cobertura-general',
 		'template' => 'cobertura'
 	],
+
+	[
+		'id' => 'marcadores-futbol',
+		'template' => 'cobertura'
+	],
 	[
 		'id' => 'bloomberg',
 		'template' => 'bloomberg'

@@ -3,8 +3,6 @@
 .alerta {
 	background-color: $azul-dark;
 	padding: 0;
-	transform: translateY(-15px);
-	margin-bottom: -5px;
 	.container {
 		background: $azul;
 		margin-top: 0;
@@ -28,6 +26,7 @@
 					color: white;
 					font-size: 1.2rem;
 					line-height: 1.05em;
+					font-weight: normal;
 					span.hat {
 						margin: 0 5px 0 0;
 						color: $azul-light;
@@ -55,12 +54,12 @@
 }
 
 .coronavirus {
-	margin:0 auto;
+	margin:20px auto;
 	padding: 0 10px;
 	article {
 		font-family: $font-condensada;
 		text-transform: uppercase;
-		border-bottom: 3px solid $dark;
+		border-bottom: 1px solid $linea;
 		padding-bottom: 5px;
 		margin: 0 0 5px 0;
 		a {

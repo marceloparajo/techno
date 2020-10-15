@@ -97,8 +97,6 @@
 				</ul>
 			</nav>
 		</div><!-- header-menu -->
-	<div class="header-middle">
-	</div>
 	<nav class="header-bottom">
 		<ul class="temas">
 		@foreach ($menuHelper->getMenuItems('temas') as $item)

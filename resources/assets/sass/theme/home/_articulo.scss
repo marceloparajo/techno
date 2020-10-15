@@ -13,6 +13,7 @@
 				width: 100%;
 				height: auto;
 				transition: ease .3s;
+				display: block;
 			}
 			h4 {
 				font:{
@@ -99,7 +100,7 @@
 				letter-spacing: -0.01em;
 			}
 		}
-		h5 {
+		.firma-home {
 			font:{
 				family: $font-sinserif;
 				size: .8rem;
@@ -110,7 +111,7 @@
 			border-top: 1px solid #d7cec5;
 			display: inline-block;
 			padding-top: 5px;
-			margin-bottom: 0;
+			margin: 6px 0 0  0;
 			a {
 				color: $dark;
 				&:hover {
@@ -151,8 +152,8 @@
 					font-size: 1.3rem;
 				}
 			}
-			h5 {
-				margin-bottom: 8px;
+			.firma-home {
+				margin: 10px 0 0 0;
 			}
 		}
 		&:hover {
@@ -179,6 +180,9 @@
 			a {
 				h2 {
 					font-size: 1.4rem;
+				}
+				h4 {
+					margin-top: 10px;
 				}
 			}
 		}

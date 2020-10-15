@@ -1,7 +1,7 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
 
 @if (isset($news) && count($news) > 0)
-	<div class="container-fluid alerta px-0">
+	<div class="alerta">
 		<div class="container">
 			@foreach (array_slice($news, 0, 1) as $new)
 		

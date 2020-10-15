@@ -97,6 +97,10 @@
 	}
 	.header-bottom {
 		background: $negro;
+		@include media-breakpoint-down(xl) {
+			height: 1px;
+			overflow: hidden;
+		}
 	}
 }
 .pre-header {
@@ -142,7 +146,6 @@
 #contenedor-header-menu {
 	position: relative;
 	width: 100%;
-	max-width: 1300px;
 	margin: auto;
 	font-family: $font-general;
 	#menues {
