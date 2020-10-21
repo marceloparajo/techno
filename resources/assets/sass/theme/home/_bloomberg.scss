@@ -286,6 +286,92 @@ $azul-bloomberg: #00bbe9;
 			.caja-notas {
 				.articulo {
 					&.bl-0 {
+						width: 320px;
+						height: 318px;
+						margin: 0;
+						.meta-content {
+							width: 350px;
+							a {
+								h2 {
+									font-size: 2rem;
+								}
+							}
+							&:after {
+								width: 270px;
+							}
+						}
+					}
+					&.bl-1 {
+						width: 290px;
+						margin: 0 0 0 10px;
+						height: 209px;
+						.meta-content {
+							bottom: 10px;
+							right: 10px;
+							left: 40px;
+							a {
+								h2 {
+									font-size: 1.2rem;
+									font-weight: 600;
+								}
+							}
+						}
+					}
+					&.bl-2 {
+						width: 180px;
+						margin: 0 0 0 10px;
+						padding: 5px 0 0 0;
+						border-top: 2px dotted $negro;
+						display: flex;
+						height: 209px;
+						flex-direction: column-reverse;
+						justify-content: space-between;
+						border-bottom: none;
+						.meta-content {
+							width: 100%;
+							padding: 0;
+							a {
+								h2 {
+									font-size: 1.1rem;
+									font-weight: 600;
+									line-height: 1.2em;
+								}
+							}
+						}
+						figure {
+							width: 100%;
+						}
+					}
+				}
+				.bloomberg-tres {
+					float: left;
+					width: 480px;
+					margin: 10px 0 10px 10px;
+					padding: 0;
+					align-items: stretch;
+					height: 99px;
+					.articulo {
+						border-top: 2px dotted $negro;
+						.meta-content {
+							a {
+								h2 {
+									font-size: 1rem;
+									line-height: 1.3em;
+									height: 82px;
+									overflow: hidden;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xxl) {
+		.caja-contenido {
+			.caja-notas {
+				.articulo {
+					&.bl-0 {
 						width: 380px;
 						height: 318px;
 						margin: 0;

@@ -139,9 +139,6 @@
 			.columna-dostercios {
 				flex: 1 1 0;
 				align-self: flex-start;
-				.main-destacada {
-					margin-bottom: 0;
-				}
 			}
 			.columna-tercio {
 				flex-basis: 31.5%;
@@ -242,6 +239,7 @@
 			.columna-dostercios {
 				.articulo {
 					&.main-destacada {
+						margin-bottom: 0;
 						.meta-content {
 							a {
 								h2 {
@@ -271,6 +269,7 @@
 			}
 			.columna-tercio {
 				flex-basis: 300px;
+				margin: 0 0 0 25px;
 				.articulo {
 					&:first-of-type,
 					&:last-of-type {
@@ -351,5 +350,12 @@
 		border-top: 1px solid $linea;
 		border-bottom: 1px solid $linea;
 		padding: 20px 0;
+	}
+}
+
+.ads-up-xl {
+	display: none;
+	@include media-breakpoint-up(xl) {
+		display: block;
 	}
 }

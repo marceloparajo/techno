@@ -39,7 +39,7 @@
 
 
 						{{-- codigo harcodeado - borrar --}}
-						@if ($key != 'central-header')
+						@if ($key != 'central-header' && $key != 'central-footer')
 						<div class="contenedor-general"> 
 							@foreach($value as $item)
 								@include('home.dispositions.' . $item['template'], ['news' => $item['news']])

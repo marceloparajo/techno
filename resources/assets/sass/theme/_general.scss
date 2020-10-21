@@ -119,6 +119,7 @@ a {
 				margin: 0 0 0 20px;
 				padding: 0;
 				.content-sidebar {
+					width: 300px;
 					position: -webkit-sticky;
 					position: sticky;
 					bottom: 1rem;
@@ -166,5 +167,15 @@ a {
 				padding-right: 25px;
 			}
 		}
+	}
+}
+
+
+
+/** VER ESTOS ESTILOS SEGUN COMO SE ARME **/
+
+.contenedor {
+	>section#central-footer {
+		flex-direction: column;
 	}
 }

@@ -5,7 +5,7 @@
 
 		<div class="container bloomberg px-0">
 
-			<div class="caja-contenido">
+			<div class="caja-contenido bloomberg">
 
 				<h6>Negocios</h6>
 
@@ -47,13 +47,6 @@
 				</div><!-- caja-notas -->
 
 			</div><!-- caja-contenido -->
-
-			<div class="caja-right">
-
-				<div id="" class="ads-space text-center d-block" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
-
-			</div><!-- caja-right -->
-
 
 		</div><!-- container -->
 

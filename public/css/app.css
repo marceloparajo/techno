@@ -3791,6 +3791,7 @@ a:hover {
   }
 
   .contenedor > section .sidebar .content-sidebar {
+    width: 300px;
     position: -webkit-sticky;
     position: sticky;
     bottom: 1rem;
@@ -3853,6 +3854,15 @@ a:hover {
   .supercontenedor.conmega .contenedor {
     padding-right: 25px;
   }
+}
+
+/** VER ESTOS ESTILOS SEGUN COMO SE ARME **/
+
+.contenedor > section#central-footer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .main-header .header-top {
@@ -8395,10 +8405,6 @@ footer .footer-revistas li a:hover {
         align-self: flex-start;
   }
 
-  .contenedor-general .destacada .columna-dostercios .main-destacada {
-    margin-bottom: 0;
-  }
-
   .contenedor-general .destacada .columna-tercio {
     -ms-flex-preferred-size: 31.5%;
         flex-basis: 31.5%;
@@ -8507,6 +8513,10 @@ footer .footer-revistas li a:hover {
 }
 
 @media (min-width: 1295px) {
+  .contenedor-general .destacada .columna-dostercios .articulo.main-destacada {
+    margin-bottom: 0;
+  }
+
   .contenedor-general .destacada .columna-dostercios .articulo.main-destacada .meta-content a h2 {
     margin-top: 6px;
   }
@@ -8520,6 +8530,7 @@ footer .footer-revistas li a:hover {
   .contenedor-general .destacada .columna-tercio {
     -ms-flex-preferred-size: 300px;
         flex-basis: 300px;
+    margin: 0 0 0 25px;
   }
 
   .contenedor-general .destacada .columna-tercio .articulo:first-of-type .meta-content a h2,
@@ -8581,6 +8592,16 @@ footer .footer-revistas li a:hover {
     border-top: 1px solid #d4d4d4;
     border-bottom: 1px solid #d4d4d4;
     padding: 20px 0;
+  }
+}
+
+.ads-up-xl {
+  display: none;
+}
+
+@media (min-width: 1295px) {
+  .ads-up-xl {
+    display: block;
   }
 }
 
@@ -9231,6 +9252,7 @@ Se usa para Radio Perfil
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
   background-color: #e6e6e6;
   background-image: url(/images/perfil-logo-xs.png?9be1a3f1af70ffa4d1f18318126a3ff5);
   background-repeat: no-repeat;
@@ -9278,7 +9300,12 @@ Se usa para Radio Perfil
 
 .cajageneral .caja-contenido .notas-cajageneral.radio-perfil .footer-cajageneral span a {
   color: #343a40;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .cajageneral .caja-contenido .notas-cajageneral.radio-perfil .footer-cajageneral span a .fas {
@@ -10104,21 +10131,21 @@ Se usa para Radio Perfil
   display: none;
 }
 
-.contenedor-general .bloque .columna-tercio .articulo:nth-child(2) {
+.contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(2) {
   background: #171717;
   padding: 0;
   border-top: none;
 }
 
-.contenedor-general .bloque .columna-tercio .articulo:nth-child(2) .meta-content {
+.contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(2) .meta-content {
   padding: 10px;
 }
 
-.contenedor-general .bloque .columna-tercio .articulo:nth-child(2) .meta-content a .hat {
+.contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(2) .meta-content a .hat {
   margin: 0 0 5px 0;
 }
 
-.contenedor-general .bloque .columna-tercio .articulo:nth-child(2) .meta-content a h2 {
+.contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(2) .meta-content a h2 {
   color: white;
   font-family: "Oswald", Helvetica, Arial, Sans-serif;
   text-transform: uppercase;
@@ -10126,15 +10153,15 @@ Se usa para Radio Perfil
   line-height: 1.1em;
 }
 
-.contenedor-general .bloque .columna-tercio .articulo:nth-child(2) .meta-content .firma-home {
+.contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(2) .meta-content .firma-home {
   color: white;
 }
 
-.contenedor-general .bloque .columna-tercio .articulo:nth-child(2) .meta-content .firma-home a {
+.contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(2) .meta-content .firma-home a {
   color: white;
 }
 
-.contenedor-general .bloque .columna-tercio .articulo:nth-child(2) figure {
+.contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(2) figure {
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -10212,16 +10239,51 @@ Se usa para Radio Perfil
   }
 
   .contenedor-general .bloque .columna-tercio {
-    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     border-left: 1px solid #d4d4d4;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-izquierda {
+    width: 48%;
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(1) {
+    background: white;
+    padding: 10px;
+    -webkit-box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+    border-top: none;
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(1) figure {
+    display: none;
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(2) .meta-content a span.hat {
+    display: block;
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-derecha {
+    width: 48%;
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-derecha .articulo figure {
+    display: none;
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-derecha .articulo .meta-content {
+    padding: 0;
   }
 
   .contenedor-general .bloque .columna-tercio .articulo {
@@ -10236,30 +10298,6 @@ Se usa para Radio Perfil
     width: 100%;
     padding: 5px 0;
   }
-
-  .contenedor-general .bloque .columna-tercio .articulo:nth-child(1) {
-    background: white;
-    padding: 10px;
-    -webkit-box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
-            box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
-    border-top: none;
-  }
-
-  .contenedor-general .bloque .columna-tercio .articulo:nth-child(1) figure {
-    display: none;
-  }
-
-  .contenedor-general .bloque .columna-tercio .articulo:nth-child(2) .meta-content a span.hat {
-    display: block;
-  }
-
-  .contenedor-general .bloque .columna-tercio .articulo:nth-child(4) figure {
-    display: none;
-  }
-
-  .contenedor-general .bloque .columna-tercio .articulo:nth-child(4) .meta-content {
-    padding: 0;
-  }
 }
 
 @media (min-width: 1020px) {
@@ -10273,11 +10311,10 @@ Se usa para Radio Perfil
   .contenedor-general .bloque .columna-tercio {
     border-left: none;
     padding: 0;
-    margin: 0 0 0 20px;
   }
 }
 
-@media (min-width: 1295px) {
+@media (min-width: 1360px) {
   .contenedor-general .bloque {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -10298,14 +10335,50 @@ Se usa para Radio Perfil
         flex-basis: 48%;
   }
 
+  .contenedor-general .bloque .columna-dostercios .articulo:nth-child(n+5) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .contenedor-general .bloque .columna-dostercios .articulo:nth-child(n+5) figure {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+
+  .contenedor-general .bloque .columna-dostercios .articulo:nth-child(n+5) .meta-content {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+
   .contenedor-general .bloque .columna-tercio {
     -ms-flex-preferred-size: 300px;
         flex-basis: 300px;
     margin-left: 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
-  .contenedor-general .bloque .columna-tercio .articulo:nth-child(3) figure {
-    display: none;
+  .contenedor-general .bloque .columna-tercio .columna-tercio-derecha {
+    width: 100%;
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-izquierda {
+    width: 100%;
   }
 }
 
@@ -12560,6 +12633,99 @@ REVISTAS
 
 @media (min-width: 1295px) {
   .container.bloomberg .caja-contenido .caja-notas .articulo.bl-0 {
+    width: 320px;
+    height: 318px;
+    margin: 0;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-0 .meta-content {
+    width: 350px;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-0 .meta-content a h2 {
+    font-size: 2rem;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-0 .meta-content:after {
+    width: 270px;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-1 {
+    width: 290px;
+    margin: 0 0 0 10px;
+    height: 209px;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-1 .meta-content {
+    bottom: 10px;
+    right: 10px;
+    left: 40px;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-1 .meta-content a h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-2 {
+    width: 180px;
+    margin: 0 0 0 10px;
+    padding: 5px 0 0 0;
+    border-top: 2px dotted #171717;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 209px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom: none;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-2 .meta-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-2 .meta-content a h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.2em;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-2 figure {
+    width: 100%;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .bloomberg-tres {
+    float: left;
+    width: 480px;
+    margin: 10px 0 10px 10px;
+    padding: 0;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    height: 99px;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .bloomberg-tres .articulo {
+    border-top: 2px dotted #171717;
+  }
+
+  .container.bloomberg .caja-contenido .caja-notas .bloomberg-tres .articulo .meta-content a h2 {
+    font-size: 1rem;
+    line-height: 1.3em;
+    height: 82px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1360px) {
+  .container.bloomberg .caja-contenido .caja-notas .articulo.bl-0 {
     width: 380px;
     height: 318px;
     margin: 0;
@@ -12712,7 +12878,8 @@ REVISTAS
 }
 
 .coronavirus {
-  margin: 20px auto;
+  margin: 0 auto;
+  width: 100%;
   padding: 0 10px;
 }
 

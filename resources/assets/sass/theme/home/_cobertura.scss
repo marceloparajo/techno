@@ -368,6 +368,7 @@ Se usa para Radio Perfil
 				height: 40px;
 				display: flex;
 				justify-content: flex-end;
+				font-family: $font-sinserif;
 				background:{
 					color: #e6e6e6;
 					image: url('img/perfil-logo-xs.png');
@@ -409,7 +410,8 @@ Se usa para Radio Perfil
 					text-transform: uppercase;
 					a {
 						color: $dark;
-						display: block;
+						display: flex;
+						justify-content: flex-start;
 						.fas {
 							background: #70b3c8;
 							margin: 0 10px 0 0;
