@@ -147,7 +147,7 @@ $azul-bloomberg: #00bbe9;
 					}
 					&.bl-1 {
 						width: 47%;
-						height: 180px;
+						height: 170px;
 						background: #d7eaf8;
 						position: relative;
 						padding: 10px 30px 10px 10px;
@@ -170,19 +170,18 @@ $azul-bloomberg: #00bbe9;
 					}
 					&.bl-2 {
 						width: 47%;
-						height: 70px;
+						height: 80px;
 						margin: 0;
 						border-top: 2px dotted $dark;
 						border-bottom: 2px dotted $dark;
-						padding: 10px 0;
+						padding: 8px 0;
 						figure {
-							float: left;
-							width: 30%;
+							display: none;
 						}
 						.meta-content {
 							float: left;
-							width: 70%;
-							padding: 0 0 0 10px;
+							width: 100%;
+							padding: 0;
 							a {
 								h2 {
 									font-size: 1rem;
@@ -241,6 +240,15 @@ $azul-bloomberg: #00bbe9;
 						}
 					}
 					&.bl-2 {
+						figure {
+							display: block;
+							float: left;
+							width: 30%;
+						}
+						.meta-content {
+							width: 70%;
+							padding-left: 10px;
+						}
 						height: 90px;
 					}
 				}

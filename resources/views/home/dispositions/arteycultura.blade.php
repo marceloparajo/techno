@@ -27,7 +27,7 @@
 								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
 								@endif
 								@if($key != 0)
-								<h4>{{ $new['headline'] }}</h4>
+								<p class="headline">{{ $new['headline'] }}</p>
 								@endif
 								@if ($new['has_video']) 
 									<div class="galeria-video">
@@ -50,16 +50,16 @@
 								<h2>
 									{{ $new['home_title'] }}
 								</h2>
-								<h4>{{ $new['headline'] }}</h4>
+								<p class="headline">{{ $new['headline'] }}</p>
 							</a>
 							@if ($new['signed'])
-							<h5 class="firma-home">
+							<div class="firma-home">
 								<a href="/autores/{{$new['author']['username']}}">
 									{{ __('by') }} {{ $new['author']['fullname'] }}
 								</a>
-							</h5>
+							</div>
 							@elseif ($new['credit'] != '')
-								<h5>{{ $new['credit'] }}</h5>
+								<div class="firma-home">{{ $new['credit'] }}</div>
 							@endif
 							</div>
 						</a>

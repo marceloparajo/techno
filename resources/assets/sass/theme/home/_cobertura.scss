@@ -12,7 +12,8 @@ ARTE Y CULTURA
 	border-bottom: 1px solid $negro;
 	border-top: 1px solid $negro;
 	position: relative;
-	padding: 10px 0 0 0;
+	padding: 10px;
+	background: $light;
 	&:before {
 		content: " ";
 		height: 3px;
@@ -31,7 +32,8 @@ ARTE Y CULTURA
 			size: 5vw;
 		}
 		text-transform: uppercase;
-		padding: 0 10px;
+		padding: 0;
+		margin: 0 0 5px 0;
 	}
 	.notas-cobertura {
 		display: flex;
@@ -42,6 +44,7 @@ ARTE Y CULTURA
 			.articulo.decobertura {
 				margin-bottom: 0;
 				.meta-content {
+					padding: 5px 0;
 					span.hat {
 						display: none;
 					}
@@ -119,7 +122,7 @@ ARTE Y CULTURA
 			}
 		}
 	}
-	@include media-breakpoint-only(md) {
+	@include media-breakpoint-up(md) {
 		.notas-cobertura {
 			.columna-tercio {
 				position: relative;
@@ -146,17 +149,6 @@ ARTE Y CULTURA
 							padding-bottom: 0;
 						}
 					}
-				}
-				&:before {
-					content: "";
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					bottom: 0;
-					width: 1px;
-					background: #d4d4d4;
-					transform: translateX(-10px);
 				}
 			}
 			.columna-dostercios {
@@ -221,19 +213,13 @@ ARTE Y CULTURA
 	@include media-breakpoint-up(lg) {
 		.notas-cobertura {
 			.columna-dostercios {
-				width: 49%;
+				//width: 49%;
 				.articulo.decobertura {
 					position: relative;
 					height: 100%;
 					margin-bottom: 20px;
 					figure {
 						height: 100%;
-						img {
-							display: none;
-						}
-						background-position: center center;
-						background-repeat: no-repeat;
-						background-size: cover;
 					}
 					.meta-content {
 						position: absolute;
@@ -247,8 +233,19 @@ ARTE Y CULTURA
 							font-size: 1.4rem;
 						}
 					}
+					&:hover {
+						figure {
+							img {
+								a {
+									transform: scale(1);
+									filter: brightness(100%);
+								}
+							}
+						}
+					}
 				}
 			}
+			/*
 			.columna-tercio {
 				width: 49%;
 				flex-direction: row;
@@ -258,6 +255,7 @@ ARTE Y CULTURA
 					border-bottom: 1px solid $linea;
 				}
 			}
+			*/
 			.columna-ancha {
 				justify-content: space-between;
 				width: 100%;
@@ -271,10 +269,11 @@ ARTE Y CULTURA
 	@include media-breakpoint-up(xl) {
 		.notas-cobertura {
 			.columna-dostercios {
-				width: 620px;
+				flex: 1 1 0;
 			}
 			.columna-tercio {
-				width: 620px;
+				flex-basis: 290px;
+				margin: 0 0 0 25px;
 				.articulo.decobertura {
 					width: 300px;
 				}

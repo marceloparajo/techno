@@ -111,7 +111,7 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
             <button class="close-button" id="button-close-sticky-ads"><i class="fa fa-times"></i></button>
             <div id="" class="ads-space text-center" data-id="float-footer" data-w="320" data-h="50" data-loaded="false" data-reload="true"></div>
         </div>
-        <div id="" class="ads-space text-center d-none d-md-block" data-id="float-footer-desktop" data-w="728" data-h="90" data-loaded="false" data-reload="false"></div>
+        
 
         @yield('templates')
 

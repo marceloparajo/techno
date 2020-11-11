@@ -61,7 +61,7 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 @section('body')
 
 
-	<main class="maincontainer" id="page">
+	<main class="supercontenedor" id="page">
 
 		<header class="container articulo-header">
 			<div class="hat">
@@ -80,7 +80,7 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 		<div class="container noticia pt-2 px-0">
 			
-			<article class="col-12 col-lg-8 col-xl-9 px-0 pr-lg-5">
+			<article class="main-article">
 
 
 				@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])				

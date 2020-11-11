@@ -12,7 +12,7 @@ return [
 		'id' => 'alerta',
 		'template' => 'alerta'
 	],
-   [
+	[
 		'id' => 'coronavirus-contador',
 		'template' => 'coronavirus'
 	],
@@ -54,7 +54,7 @@ return [
 	],
 	[
 		'id' => 'catastrofe',
-		'template' => 'catastrofe-sidebar'
+		'template' => 'catastrofe'
 	],
 	[
 		'id' => 'especiales',

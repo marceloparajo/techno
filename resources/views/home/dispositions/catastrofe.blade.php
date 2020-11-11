@@ -19,16 +19,16 @@
 						<h2>
 							{{ $new['home_title'] }}
 						</h2>
-						<h4 class="headline">{{ $new['headline'] }}</h4>
+						<p class="headline">{{ $new['headline'] }}</p>
 					</a>
 					@if ($new['signed'])
-					<h5 class="firma-home">
+					<div class="firma-home">
 						<a href="/autores/{{$new['author']['username']}}">
 							{{ __('by') }} {{ $new['author']['fullname'] }}
 						</a>
-					</h5>
+					</div>
 					@elseif ($new['credit'] != '')
-						<h5>{{ $new['credit'] }}</h5>
+						<div class="firma-home">{{ $new['credit'] }}</div>
 					@endif
 				</div>
 			</article>
@@ -51,16 +51,16 @@
 								<h2>
 									{{ $new['home_title'] }}
 								</h2>
-								<h4 class="headline">{{ $new['headline'] }}</h4>
+								<p class="headline">{{ $new['headline'] }}</p>
 							</a>
 							@if ($new['signed'])
-							<h5 class="firma-home">
+							<div class="firma-home">
 								<a href="/autores/{{$new['author']['username']}}">
 									{{ __('by') }} {{ $new['author']['fullname'] }}
 								</a>
-							</h5>
+							</div>
 							@elseif ($new['credit'] != '')
-								<h5>{{ $new['credit'] }}</h5>
+								<div class="firma-home">{{ $new['credit'] }}</div>
 							@endif
 						</div>
 					</article>

@@ -9,7 +9,7 @@ REVISTAS
 
 
 $sports: #33c381;
-$mujer: #be227d;
+$mujer: #eaeaea;
 $shows: #e43d3d;
 
 
@@ -94,6 +94,11 @@ $shows: #e43d3d;
 					border-bottom: 4px solid $shows;
 				}
 			}
+			&.mujer {
+				h6 {
+					color: $dark;
+				}
+			}
 		}
 	}
 	.caja-right {
@@ -114,10 +119,12 @@ $shows: #e43d3d;
 						width: 31.5%;
 						border-bottom: 2px solid $mujer;
 						border-top: none;
-						padding-top: 0;
+						padding: 0 0 10px 0;
 						display: block;
+						margin-bottom: 15px;
 						figure {
 							width: 100%;
+							margin: 0 0 5px 0;
 						}
 						.meta-content {
 							padding: 0;
@@ -134,7 +141,7 @@ $shows: #e43d3d;
 								padding: 0;
 								a {
 									h2 {
-										font-size: 1.4rem;
+										font-size: 1.5rem;
 									}
 								}
 							}
@@ -386,11 +393,11 @@ $shows: #e43d3d;
 					h2 {
 						color: white;
 					}
-					h4 {
+					p.headline {
 						color: white;
 					}
 				}
-				h5 {
+				.firma-home {
 					color: white;
 					border-top: 1px solid $dark;
 					a {
@@ -509,7 +516,7 @@ $shows: #e43d3d;
 						background: rgba(0,0,0,0);
 						background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );				
-						h5 {
+						.firma-home {
 							border-top: none;
 							padding-top: 0;
 						}
@@ -630,7 +637,7 @@ $shows: #e43d3d;
 					width: auto;
 					padding: 10px;
 					a {
-						h4 {
+						p.headline {
 							display: block;
 						}
 						span.hat {
@@ -694,7 +701,7 @@ $shows: #e43d3d;
 							color: white;
 						}
 					}
-					h5 {
+					.firma-home {
 						color: white;
 						border-top: 1px solid $linea-oscura;
 						a {
@@ -875,7 +882,7 @@ $shows: #e43d3d;
 								}
 							}
 						}
-						}
+					}
 				}
 				.grupotres {
 					flex: 1 1 0;
@@ -887,7 +894,7 @@ $shows: #e43d3d;
 						figure {
 							width: 25%;
 							a {
-								h4 {
+								p.headline {
 									display: none;
 								}
 							}
@@ -899,7 +906,7 @@ $shows: #e43d3d;
 								h2 {
 									font-size: 1.1rem;
 								}
-								h5 {
+								.firma-home {
 									display: none;
 								}
 							}
@@ -1027,7 +1034,7 @@ $shows: #e43d3d;
 								font-size: 1.1rem;
 								margin: 0;
 							}
-							h5 {
+							.firma-home {
 								dislay: block;
 								margin: 5px 0 0 0;
 							}

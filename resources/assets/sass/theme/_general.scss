@@ -20,34 +20,6 @@ a {
 	}
 }
 
-
-.btn-primary {
-	background-color: $pf_main_color_2;
-	border-color: $pf_main_color_2;
-	color: black;
-}
-
-.btn-primary:active, .btn-primary:hover {
-	background-color: black !important;
-	border-color: black !important;
-	color: white;
-}
-
-.btn-outline-primary {
-	border-color: $pf_main_color_2;
-	color: $pf_main_color_2;
-}
-
-.btn-outline-primary:hover, .btn-outline-primary:active {
-	background-color: transparent !important;
-	border-color: $pf_main_color_4 !important;
-	color: $pf_main_color_4 !important;
-}
-
-.text-inverse {
-	color: $pf_font_color_inverse;
-}
-
 .image-responsive {
 	width: 100%;
 	height: auto;
@@ -80,26 +52,25 @@ a {
 .supercontenedor {
 	width: 100%;
 	height: 100%;
+	padding-top: 20px;
 }
 .contenedor {
 	margin: 0 auto;
 	width: 100%;
-	>section {
-		padding: 0;
-		margin: 0 0 20px 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+	flex-wrap: wrap;
+	.contenedor-general {
 		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
 		flex-direction: column;
-		.contenedor-general {
-			display: flex;
-			flex-direction: column;
-		}
-		.sidebar {
-			margin: 10px auto;
-			padding: 0;
-			display: flex;
-		}
+	}
+	.sidebar {
+		margin: 10px auto;
+		padding: 0;
+		display: flex;
 	}
 	@include media-breakpoint-up(sm) {
 		max-width: 540px;
@@ -109,28 +80,26 @@ a {
 	}
 	@include media-breakpoint-up(lg) {
 		max-width: 960px;
-		>section {
-			flex-direction: row;
-			.sidebar {
-				flex-basis: 300px;
+		flex-direction: row;
+		.sidebar {
+			flex-basis: 300px;
+			display: flex;
+			align-self: stretch;
+			align-items: flex-start;
+			margin: 0 0 0 20px;
+			padding: 0;
+			.content-sidebar {
+				width: 300px;
+				position: -webkit-sticky;
+				position: sticky;
+				bottom: 1rem;
+				align-self: flex-end;
 				display: flex;
-				align-self: stretch;
-				align-items: flex-start;
-				margin: 0 0 0 20px;
-				padding: 0;
-				.content-sidebar {
-					width: 300px;
-					position: -webkit-sticky;
-					position: sticky;
-					bottom: 1rem;
-					align-self: flex-end;
-					display: flex;
-					flex-direction: column;
-				}
+				flex-direction: column;
 			}
-			.contenedor-general {
-				flex: 1 1 0;
-			}
+		}
+		.contenedor-general {
+			flex: 1 1 0;
 		}
 	}
 	@include media-breakpoint-up(xl) {
@@ -143,39 +112,5 @@ a {
 
 
 
-.supercontenedor {
-	.megalateral {
-		width: 250px;
-		height: 600px;
-		display: none;
-		flex-basis: 250px;
-		position: sticky;
-		top: 4.5rem; 
-		background: #f60;
-		.megalateral-b {
-			width: 250px;
-		}
-	}
-	@include media-breakpoint-up(lg) {
-		&.conmega {
-			max-width: 1260px;
-			margin: auto;
-			.megalateral {
-				display: block;
-			}
-			.contenedor {
-				padding-right: 25px;
-			}
-		}
-	}
-}
 
 
-
-/** VER ESTOS ESTILOS SEGUN COMO SE ARME **/
-
-.contenedor {
-	>section#central-footer {
-		flex-direction: column;
-	}
-}

@@ -1,5 +1,5 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
-@if (isset($news) && count($news) > 0)
+@if (isset($news) && count($news) > 3)
 
 	@if (isset($news[0]))
 
@@ -40,16 +40,16 @@
 									<h2>
 										{{ $new['home_title'] }}
 									</h2>
-									<h4>{{ $new['headline'] }}</h4>
+									<p class="headline">{{ $new['headline'] }}</p>
 								</a>
 								@if ($new['signed'])
-								<h5>
+								<span class="firma-home">
 									<a href="/autores/{{$new['author']['username']}}">
 										{{ __('by') }} {{ $new['author']['fullname'] }}
 									</a>
-								</h5>
+								</span>
 								@elseif ($new['credit'] != '')
-									<h5>{{ $new['credit'] }}</h5>
+									<span class="firma-home">{{ $new['credit'] }}</span>
 								@endif
 								</div>
 							</a>

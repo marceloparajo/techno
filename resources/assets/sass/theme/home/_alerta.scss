@@ -1,54 +1,45 @@
 
 
 .alerta {
-	background-color: $azul-dark;
-	padding: 0;
-	.container {
-		background: $azul;
-		margin-top: 0;
-		margin-bottom: 0;
-		padding: 5px 10px;
-		article {
-			display: flex;
-			justify-content: flex-start;
-			padding-top: 3px;
-			.laalerta {
-				margin: 0 10px 0 0;
-				.fas {
-					font-size: 24px;
-					color: #fff;
-				}
-			}
-			a {
-				font-family: $font-serif;
-				letter-spacing: -0.03em;
-				h2 {
-					color: white;
-					font-size: 1.2rem;
-					line-height: 1.05em;
-					font-weight: normal;
-					span.hat {
-						margin: 0 5px 0 0;
-						color: $azul-light;
-					}
-				}
+	background-color: $azul;
+	padding: 5px 10px;
+	margin: -20px 0 10px 0;
+	width: 100%;
+	article {
+		display: flex;
+		justify-content: flex-start;
+		padding-top: 3px;
+		font-family: $font-condensada;
+		text-transform: uppercase;
+		.laalerta {
+			margin: 0 10px 0 0;
+			.fas {
+				font-size: 24px;
+				color: #fff;
 			}
 		}
-	}
-	@include media-breakpoint-up(md) {
-		.container {
-			article {
-				a {
-					h2 {
-						font-size: 1.4rem;
-					}
+		a {
+			letter-spacing: -0.03em;
+			h2 {
+				color: white;
+				font-size: 1.2rem;
+				line-height: 1.05em;
+				font-weight: normal;
+				letter-spacing: 0;
+				span.hat {
+					margin: 0 5px 0 0;
+					color: $azul-light;
 				}
 			}
 		}
 	}
 	@include media-breakpoint-up(xl) {
-		.container {
-			min-width: 1260px;
+		article {
+			.laalerta {
+				.fas {
+					margin-top: -5px;
+				}
+			}
 		}
 	}
 }
@@ -63,6 +54,7 @@
 		border-bottom: 1px solid $linea;
 		padding-bottom: 5px;
 		margin: 0 0 5px 0;
+		line-height: 1.5em;
 		a {
 			h2 {
 				color: $dark;
@@ -79,10 +71,14 @@
 				font-size: 4.5vw;
 				letter-spacing: -0.01em;
 				margin: 0;
+				.pipe {
+					display: none;
+				}
 			}
 		}
 	}
 	@include media-breakpoint-only(sm) {
+		padding: 0;
 		article {
 			a {
 				h2 {
@@ -100,19 +96,20 @@
 			margin-bottom: 20px;
 			a {
 				padding: 0;
-				display: flex;
-				flex-direction: row;
-				justify-content: flex-start;
-				align-items: baseline;
 				h2 {
-					display: inline-block;
-					margin: 0 10px 0 0;
+					margin: 0;
 					font-size: 1.3rem;
 				}
 				p {
-					display: inline-block;
 					font-size: 1.3rem;
 					margin-bottom: 0;
+					br {
+						display: none;
+					}
+					.pipe {
+						display: inline-block;
+						margin: 0 10px;;
+					}
 				}
 			}			
 		}

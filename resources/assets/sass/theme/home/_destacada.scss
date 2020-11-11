@@ -20,8 +20,9 @@
 								font-size: 7vw;
 								line-height: 1em;
 							}
-							h4 {
+							p.headline {
 								display: block;
+								margin: 10px 0 0 0;
 							}
 						}
 					}
@@ -139,12 +140,15 @@
 			.columna-dostercios {
 				flex: 1 1 0;
 				align-self: flex-start;
+				.articulo {
+					margin: 0;
+				}
 			}
 			.columna-tercio {
-				flex-basis: 31.5%;
+				flex-basis: 33.5%;
 				flex-direction: column;
-				margin-left: 15px;
-				padding-left: 15px;
+				margin-left: 10px;
+				padding-left: 10px;
 				border-left: 1px solid $linea;
 				justify-content: flex-start;
 				flex-wrap: nowrap;
@@ -174,8 +178,11 @@
 	@include media-breakpoint-up(lg) {
 		flex-direction: row;
 		.destacada {
+			margin-bottom: 20px;
 			.columna-dostercios {
+				align-self: auto;
 				.articulo {
+					margin: 0;
 					&.main-destacada {
 						background: white;
 						box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
@@ -214,7 +221,8 @@
 				border-bottom: 1px solid $linea;
 				border-left: none;
 				padding: 0;
-				margin: 0 0 0 16px;
+				margin: 0 0 0 22px;
+				flex-basis: 31%;
 				.articulo {
 					.meta-content {
 						a {
@@ -225,13 +233,6 @@
 					}
 				}
 			}
-		}
-	}
-	@include media-breakpoint-only(lg) {
-		.destacada {
-			position: sticky;
-			bottom: 1rem;
-			align-self: flex-end;
 		}
 	}
 	@include media-breakpoint-up(xl) {
@@ -284,7 +285,7 @@
 					&:first-of-type {
 						.meta-content {
 							a {
-								h4 {
+								p.headline {
 									display: block;
 								}
 							}
@@ -313,49 +314,3 @@
 	}
 }
 
-
-
-
-
-/* banners */
-.down-md
- {
-	display: block;
-	width: 100%;
-	text-align: center;
-	border-bottom: 1px solid $linea;
-	padding: 20px 0;
-	@include media-breakpoint-up(md) {
-		display: none;
-	}
-}
-
-.up-xl.only-md{
-	display: none;
-	margin: 20px auto;
-	width: 728px;
-	@include media-breakpoint-only(md) {
-		display: block;
-	}
-	@include media-breakpoint-up(xl) {
-		display: block;
-	}
-}
-
-.ads-sidebar {
-	margin: 0 0 20px 0;
-	width: 100%;
-	text-align: center;
-	@include media-breakpoint-down(md) {
-		border-top: 1px solid $linea;
-		border-bottom: 1px solid $linea;
-		padding: 20px 0;
-	}
-}
-
-.ads-up-xl {
-	display: none;
-	@include media-breakpoint-up(xl) {
-		display: block;
-	}
-}

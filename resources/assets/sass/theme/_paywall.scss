@@ -1,178 +1,204 @@
 /** suscripción en header **/
-.pre-header {
-	.contenedor {
-		.header-data {
-			#pw-suscripcion,
-			.pw-suscripcion {
-				display: flex;
-				justify-content: flex-end;
-				align-items: center;
-				margin: 0 0 0 30px;
-				font:{
-					family: $font-sinserif;
-					size: 14px;
-					weight: bold;
-				}
-				line-height: 1em;
-				letter-spacing: 0.04em;
-				#pw-suscribite,
-				.pw-suscribite {
-					height: 24px;
-					background-color: $pw-azul;
-					color: white;
-					display: block;
-					padding: 5px 10px;
-					border-radius: 3px;
-					box-sizing: border-box;
-					margin: 0 0 0 10px;
-					cursor: pointer;
-					transition: ease .3s;
-					text-transform: uppercase;
-					&:hover {
-						background: $pw-azul-claro;
-					}
-				}
-				#pw-ingresar,
-				.pw-ingresar {
-					height: 24px;
-					box-sizing: border-box;
-					background: white;
-					color: $pw-azul;
-					padding: 5px 10px 3px 15px;
-					border-radius: 3px;
-					position: relative;
-					cursor: pointer;
-					transition: ease .3s;
-					text-transform: uppercase;
+
+#pw-suscripcion,
+.pw-suscripcion {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0 0 10px 10px;
+	font:{
+		family: $font-sinserif;
+		size: 12px;
+		weight: bold;
+	}
+	line-height: 1em;
+	letter-spacing: 0.04em;
+	#pw-suscribite,
+	.pw-suscribite {
+		height: 24px;
+		background-color: $pw-azul;
+		color: white;
+		display: block;
+		padding: 5px 10px;
+		border-radius: 3px;
+		box-sizing: border-box;
+		margin: 0 0 0 10px;
+		cursor: pointer;
+		transition: ease .3s;
+		text-transform: uppercase;
+		&:hover {
+			background: $pw-azul-claro;
+		}
+	}
+	#pw-ingresar,
+	.pw-ingresar {
+		height: 24px;
+		box-sizing: border-box;
+		background: white;
+		color: $pw-azul;
+		padding: 4px 10px 3px 28px;
+		border-radius: 3px;
+		position: relative;
+		cursor: pointer;
+		transition: ease .3s;
+		text-transform: uppercase;
+		border: 1px solid $linea;
+		&:before {
+			content: "";
+			display: block;
+			width: 14px;
+			height: 14px;
+			position: absolute;
+			left: 5px;
+			top: 3px;
+			border-radius: 50%;
+			transition: ease .3s;
+			border: 1px solid $pw-azul;
+			background: {
+				color: $pw-azul-claro;
+				image: url('img/paywall/usuario.png');
+				repeat: no-repeat;
+				size: 12px;
+				position: center 1px;
+			}
+		}
+		&:hover {
+			color: #222;
+			&:before {
+				background-color: $pw-azul-claro;
+			}
+		}
+	}
+	#pw-logged,
+	.pw-logged {
+		height: 34px;
+		box-sizing: border-box;
+		color: #333;
+		padding: 3px 10px 3px 3px;
+		border-radius: 16px;
+		position: relative;
+		cursor: pointer;
+		transition: ease .3s;
+		line-height: 24px;
+		border: 1px solid #ccdfef;
+		background: #eef3f7;
+		.pw-logged-avatar {
+			width: 26px;
+			height: 26px;
+			border-radius: 50%;
+			overflow: hidden;
+			display: block;
+			float: left;
+			margin: 0 5px 0 0;
+		}
+		.pw-logged-info {
+			display: none;
+			position: absolute;
+			top: 26px;
+			left: 2px;
+			right: 0;
+			z-index: 9;
+			width: 100%;
+			padding: 10px 0;
+			box-sizing: border-box;
+			min-width: 180px;
+			ul {
+				border-radius: 3px;
+				border:1px solid #ddd;
+				display: block;
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				background: #fff;
+				position: relative;
+				box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+				li {
+					padding: 10px;
+					border-bottom: 1px solid #dfeefb;
+					font-size: 13px;
+					line-height: 1.2em;
 					&:before {
-						content: "";
+						content: "\f111";
+						font-family: "FontAwesome";
+						font-size: 7px;
+						color: #aacce8;
+						float:left;
 						display: block;
-						width: 24px;
-						height: 24px;
-						position: absolute;
-						left: -20px;
-						top: -3px;
-						border-radius: 50%;
-						border: 2px solid $pw-azul-claro;
-						transition: ease .3s;
-						border: 3px solid $light;
-						background: {
-							color: $pw-azul;
-							image: url('img/paywall/usuario.png');
-							repeat: no-repeat;
-							size: 18px;
-							position: center 1px;
-						}
+						width: 12px;
+						line-height: 1em;
+						padding-top: 4px;
+					}
+					a {
+						color: #888;
 					}
 					&:hover {
-						color: #222;
-						&:before {
-							background-color: $pw-azul-claro;
+						a {
+							color: #000;
 						}
+						&:before {
+							color: $pw-azul;
+						}
+					}
+					&:last-of-type {
+						border-bottom: none;
 					}
 				}
-				#pw-logged,
-				.pw-logged {
-					height: 34px;
-					box-sizing: border-box;
-					color: #333;
-					padding: 3px 10px 3px 3px;
-					border-radius: 16px;
-					position: relative;
-					cursor: pointer;
-					transition: ease .3s;
-					line-height: 24px;
-					border: 1px solid #ccdfef;
-					background: #eef3f7;
-					.pw-logged-avatar {
-						width: 26px;
-						height: 26px;
-						border-radius: 50%;
-						overflow: hidden;
-						display: block;
-						float: left;
-						margin: 0 5px 0 0;
-					}
-					.pw-logged-info {
-						display: none;
-						position: absolute;
-						top: 26px;
-						left: 2px;
-						right: 0;
-						z-index: 9;
-						width: 100%;
-						padding: 10px 0;
-						box-sizing: border-box;
-						min-width: 180px;
-						ul {
-							border-radius: 3px;
-							border:1px solid #ddd;
-							display: block;
-							padding: 0;
-							margin: 0;
-							list-style: none;
-							background: #fff;
-							position: relative;
-							box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
-							li {
-								padding: 10px;
-								border-bottom: 1px solid #dfeefb;
-								font-size: 13px;
-								line-height: 1.2em;
-								&:before {
-									content: "\f111";
-									font-family: "FontAwesome";
-									font-size: 7px;
-									color: #aacce8;
-									float:left;
-									display: block;
-									width: 12px;
-									line-height: 1em;
-									padding-top: 4px;
-								}
-								a {
-									color: #888;
-								}
-								&:hover {
-									a {
-										color: #000;
-									}
-									&:before {
-										color: $pw-azul;
-									}
-								}
-								&:last-of-type {
-									border-bottom: none;
-								}
-							}
-							&:before {
-								content: "";
-								position: absolute;
-								top: -6px;
-								left: 30px;
-								display: block;
-								width: 10px;
-								height: 10px;
-								transform: rotate(45deg);
-								background: #fff;
-								border-top: 1px solid #ddd;
-								border-left: 1px solid #ddd;
-							}
-						}
-					}
-					&:hover {
-						color: #000;
-						background: white;
-						>.pw-logged-info {
-							display: block;
-						}
-					}
+				&:before {
+					content: "";
+					position: absolute;
+					top: -6px;
+					left: 30px;
+					display: block;
+					width: 10px;
+					height: 10px;
+					transform: rotate(45deg);
+					background: #fff;
+					border-top: 1px solid #ddd;
+					border-left: 1px solid #ddd;
 				}
 			}
-
+		}
+		&:hover {
+			color: #000;
+			background: white;
+			>.pw-logged-info {
+				display: block;
+			}
 		}
 	}
 }
+@include media-breakpoint-down(md) {
+	.pw-suscripcion {
+		margin: 0 0 18px 10px;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.pw-suscripcion {
+		margin: 0 0 12px 10px;
+	}
+}
+@include media-breakpoint-down(xs) {
+	.pw-suscripcion {
+		font-size: 11px;
+		font-weight: normal;
+		margin-bottom: 6px;
+		.pw-suscribite {
+			background-color: transparent;
+			color: $pw-azul-claro;
+			padding: 5px 0;
+		}
+		.pw-ingresar {
+			background-color: transparent;
+			border: none;
+			padding: 5px 0;
+			color: #444;
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+	
 
 
 #pw-zocalo {

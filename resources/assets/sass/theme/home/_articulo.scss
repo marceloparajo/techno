@@ -15,7 +15,7 @@
 				transition: ease .3s;
 				display: block;
 			}
-			h4 {
+			p.headline {
 				font:{
 					family: $font-sinserif;
 					size: .9rem;
@@ -53,6 +53,7 @@
 						}
 						&.fa-play {
 							padding-left: 3px;
+							line-height: 36px;
 						}
 					}
 				}
@@ -68,7 +69,7 @@
 				display: block;
 				font:{
 					family: $font-sinserif;
-					size: .9rem;
+					size: .8rem;
 					weight: 600;
 				}
 				line-height: 1em;
@@ -88,7 +89,7 @@
 				letter-spacing: -0.03em;
 				transition: ease .3s;
 			}
-			h4 {
+			p.headline {
 				font:{
 					family: $font-sinserif;
 					size: 15px;
@@ -141,13 +142,16 @@
 		margin: 0 0 20px 0;
 		figure {
 			a {
-				h4 {
+				p.headline {
 					display: block;
 				}
 			}
 		}
 		.meta-content {
 			a {
+				.hat {
+					font-size: .9em;
+				}
 				h2 {
 					font-size: 1.3rem;
 				}
@@ -163,7 +167,7 @@
 						filter: brightness(30%);
 						transform: scale(1.03);
 					}
-					h4 {
+					p.headline {
 						top: 0;
 						opacity: 1;
 						z-index: 9;
@@ -181,7 +185,7 @@
 				h2 {
 					font-size: 1.4rem;
 				}
-				h4 {
+				p.headline {
 					margin-top: 10px;
 				}
 			}

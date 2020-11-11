@@ -3,10 +3,6 @@
 $body-bg: #fff;
 $body-bg-2: #333;
 
-// Typography
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
-$font-condensed: "Oswald", sans-serif;
 
 // **** Perfil Custom Theme ****
 $pf_main_color: #EE2314;
@@ -31,10 +27,6 @@ $pf_tumblr_color: #32506d;
 $pf_whatsapp_color: #25D366;
 $pf_rss_color: #ee802f;
 
-$pf_articles_hat: $pf_main_color_2;
-$pf_articles_details: $pf_main_color_2;
-$pf_links_color: $pf_main_color_2;
-$pf_links_color_hover: $pf_main_color;
 
 // -- Footer
 $pf_footer_bg: #333;
@@ -43,26 +35,11 @@ $pf_footer_font_color: #666;
 // -- Sidebar
 $pf_sidebar_most_viewed_bg: $pf_font_color_headline;
 
-// News - Show
-$pf_news_show_header_line: $pf_main_color;
-$pf_news_show_author_img_border: $pf_main_color_2;
-$pf_news_show_author_name: $pf_main_color_2;
-$pf_news_show_main_image_caption_bg: $pf_main_color;
-$pf_news_show_main_image_caption_border: $pf_font_color;
 
 // Block - Mosaico
 $pf_b_mosaico_bg: #333;
 
-// Block - Especial-3
-$pf_b_especial_3_bg: #333;
 
-// -- Header
-$pf_header_bg: $pf_main_color;
-
-// -- Navbar
-$pf_navbar_bg: #333;
-$pf_a_color: #999;
-$pf_a_color_hover: $pf_main_color;
 
 
 
@@ -99,7 +76,8 @@ $font-condensada: 'Oswald',Helvetica,Arial,Sans-serif;
 $negro: #171717;
 $black: #171717; 
 $dark:#343a40;
-$light: #ececec;
+//$light: #ececec;
+$light: #ebebeb;
 $azul: #557c9c;
 $miscelanea: $azul;
 $miscelanea-light: #d0dbe4;

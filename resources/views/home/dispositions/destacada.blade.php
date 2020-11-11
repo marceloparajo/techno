@@ -36,7 +36,7 @@
 						<h2>
 							{{ $news[0]['home_title'] }}
 						</h2>
-						<h4 class="headline">{{ $news[0]['headline'] }}</h4>
+						<p class="headline">{{ $news[0]['headline'] }}</p>
 					</a>
 					@if ($news[0]['signed'])
 					<div class="firma-home">
@@ -61,9 +61,9 @@
 					<figure>
 						<a href="{{ $new['permalink'] }}">
 							{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
-							<h4 class="headline">
+							<p class="headline">
 								{{ $new['headline'] }}
-							</h4>
+							</p>
 							@if ($new['has_video']) 
 								<div class="galeria-video">
 									<span><i class="fa fa-play"></i></span>
@@ -86,9 +86,9 @@
 							<h2>
 								{{ $new['home_title'] }}
 							</h2>
-							<h4 class="headline">
+							<p class="headline">
 								{{ $new['headline'] }}
-							</h4>
+							</p>
 						</a>
 						@if ($new['signed'])
 							<div class="firma-home">

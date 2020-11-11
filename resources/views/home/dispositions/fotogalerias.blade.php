@@ -19,7 +19,7 @@
 						<a href="{{ $new['permalink'] }}">
 							{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
 							@if($key != 0)
-							<h4>{{ $new['headline'] }}</h4>
+							<p class="headline">{{ $new['headline'] }}</p>
 							@endif
 							@if ($new['has_video']) 
 								<div class="galeria-video">
@@ -42,16 +42,16 @@
 							<h2>
 								{{ $new['home_title'] }}
 							</h2>
-							<h4>{{ $new['headline'] }}</h4>
+							<p class="headline">{{ $new['headline'] }}</p>
 						</a>
 						@if ($new['signed'])
-						<h5 class="firma-home">
+						<div class="firma-home">
 							<a href="/autores/{{$new['author']['username']}}">
 								{{ __('by') }} {{ $new['author']['fullname'] }}
 							</a>
-						</h5>
+						</div>
 						@elseif ($new['credit'] != '')
-							<h5>{{ $new['credit'] }}</h5>
+							<div class="firma-home">{{ $new['credit'] }}</div>
 						@endif
 						</div>
 					</a>
@@ -65,13 +65,11 @@
 		</div><!-- fotogaleria -->
 
 
-		<div class="row text-center banner-horizontal mx-2 mb-1 mt-5 d-none d-lg-block w-100">
-			<div id="" class="ads-space text-center d-none d-lg-block" data-id="728x90x-pos-" data-w="728" data-h="90" data-loaded="false" data-reload="true" >
+			<div id="" class="ads-space up-md" data-id="728x90x-pos-" data-w="728" data-h="90" data-loaded="false" data-reload="true" >
 			</div>
-		</div>
 
 
-		<div id="" class="ads-space text-center d-block d-md-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
+		<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
 
 
 	
