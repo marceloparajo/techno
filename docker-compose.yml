@@ -3,22 +3,18 @@ services:
 
   #PHP
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        uid: ${UID}
-    image: batimes-site-app
-    container_name: batimes-site
+    image: fedemramato/laravel-php7.3:latest
+    container_name: newperfil-site
     environment:
       APACHE_RUN_USER: #${UID}
       APACHE_RUN_GROUP: #${UID}
-      VIRTUAL_HOST: dev-batimes.perfil.com
+      VIRTUAL_HOST: dev-new.perfil.com
     restart: unless-stopped
     expose:
       - "80"
     volumes:
       - ./:/var/www/html
+      - /var/nfsperfil:/var/www/nfs
     networks:
       - webapps-network
 

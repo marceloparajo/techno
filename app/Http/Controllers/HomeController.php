@@ -12,7 +12,10 @@ namespace App\Http\Controllers;
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
@@ -39,8 +42,8 @@ class HomeController extends Controller
 
     /**
      * @param BloquesHelper $bloquesHelper
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @return Factory|View
+     * @throws FileNotFoundException
      */
     public function index(BloquesHelper $bloquesHelper)
     {
@@ -59,6 +62,7 @@ class HomeController extends Controller
 
         // Obtengo las noticias
         $home_content = $bloquesHelper->generateContent($homedata);
+        $sidebar_content = (isset($home_content['sidebar'])) ? $home_content['sidebar'] : [];
 
         $amphtml = route('home.amp');
 
@@ -68,7 +72,7 @@ class HomeController extends Controller
             'section' => "sitios.$site.home"
         ];
 
-        return view('home.index', compact('home_content', 'analytics_data', 'amphtml'));
+        return view('home.index', compact('home_content', 'analytics_data', 'amphtml', 'sidebar_content'));
     }
 
     public function amp(BloquesHelper $bloquesHelper)
