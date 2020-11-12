@@ -30,9 +30,11 @@
 
 		@foreach($home_content as $key => $value)
 			@if ($key != 'sidebar')
-				<section id="{{ $key }}" class="row mx-0">
+				<section id="{{ $key }}" class="contenedor">
 					@foreach($value as $item)
-						@include('home.dispositions.' . $item['template'], ['news' => $item['news']])
+						<div class="contenedor-general"> 
+							@include('home.dispositions.' . $item['template'], ['news' => $item['news']])
+						</div>
 					@endforeach
 				</section>
 			@endif
