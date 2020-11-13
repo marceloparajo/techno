@@ -141,7 +141,6 @@
 
 
 .sidebar {
-	width: 100%;
 	#exitoina,
 	#net,
 	#investigacion,
@@ -873,9 +872,7 @@
 			}
 		}
 	}
-	@include media-breakpoint-up(lg) {
-		width: 300px;
-	}
+
 }
 
 

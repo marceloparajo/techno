@@ -93,6 +93,18 @@ return [
 		'template' => 'opinion'
 	],
 	[
+		'id' => 'reperfilar-sidebar',
+		'template' => 'opinion'
+	],
+	[
+		'id' => 'exitoina-sidebar',
+		'template' => 'opinion'
+	],
+	[
+		'id' => 'net-sidebar',
+		'template' => 'opinion'
+	],
+	[
 		'id' => 'minuto-de-noticias',
 		'template' => 'minuto-de-noticias'
 	],

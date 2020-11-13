@@ -8751,13 +8751,9 @@ a:hover {
 .supercontenedor {
   width: 100%;
   height: 100%;
-  padding-top: 20px;
-}
-
-.contenedor {
   margin: 0 auto;
   width: 100%;
-  padding: 0;
+  padding: 20px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8775,7 +8771,12 @@ a:hover {
       flex-wrap: wrap;
 }
 
-.contenedor .contenedor-general {
+.supercontenedor .contenedor-general {
+  width: 100%;
+}
+
+.supercontenedor .contenido {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8785,28 +8786,43 @@ a:hover {
           flex-direction: column;
 }
 
-.contenedor .sidebar {
+.supercontenedor .contenido .contenedor-general {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.supercontenedor .sidebar {
   margin: 10px auto;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 576px) {
-  .contenedor {
+  .supercontenedor {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .contenedor {
+  .supercontenedor {
     max-width: 720px;
   }
 }
 
 @media (min-width: 1020px) {
-  .contenedor {
+  .supercontenedor {
     max-width: 960px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -8814,7 +8830,7 @@ a:hover {
             flex-direction: row;
   }
 
-  .contenedor .sidebar {
+  .supercontenedor .sidebar {
     -ms-flex-preferred-size: 300px;
         flex-basis: 300px;
     display: -webkit-box;
@@ -8829,7 +8845,7 @@ a:hover {
     padding: 0;
   }
 
-  .contenedor .sidebar .content-sidebar {
+  .supercontenedor .sidebar .content-sidebar {
     width: 300px;
     position: -webkit-sticky;
     position: sticky;
@@ -8845,7 +8861,7 @@ a:hover {
             flex-direction: column;
   }
 
-  .contenedor .contenedor-general {
+  .supercontenedor .contenido {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
@@ -8853,13 +8869,17 @@ a:hover {
 }
 
 @media (min-width: 1295px) {
-  .contenedor {
+  .supercontenedor {
     max-width: 1140px;
+  }
+
+  .supercontenedor .sidebar {
+    margin: 0 0 0 25px;
   }
 }
 
 @media (min-width: 1360px) {
-  .contenedor {
+  .supercontenedor {
     max-width: 1260px;
   }
 }
@@ -9835,10 +9855,6 @@ footer .footer-revistas li a:hover {
     -ms-flex-preferred-size: 100px;
         flex-basis: 100px;
   }
-}
-
-.sidebar {
-  width: 100%;
 }
 
 .sidebar #exitoina,
@@ -11091,12 +11107,6 @@ footer .footer-revistas li a:hover {
     left: -220px;
     -webkit-transition: ease .3s;
     transition: ease .3s;
-  }
-}
-
-@media (min-width: 1020px) {
-  .sidebar {
-    width: 300px;
   }
 }
 

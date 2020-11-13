@@ -52,26 +52,34 @@ a {
 .supercontenedor {
 	width: 100%;
 	height: 100%;
-	padding-top: 20px;
-}
-.contenedor {
 	margin: 0 auto;
 	width: 100%;
-	padding: 0;
+	padding: 20px 0 0 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-direction: column;
 	flex-wrap: wrap;
 	.contenedor-general {
+		width: 100%;
+	}
+	.contenido {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
+		.contenedor-general {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 	.sidebar {
 		margin: 10px auto;
 		padding: 0;
 		display: flex;
+		width: 100%;
+		flex-direction: column;
 	}
+
 	@include media-breakpoint-up(sm) {
 		max-width: 540px;
 	}
@@ -98,12 +106,15 @@ a {
 				flex-direction: column;
 			}
 		}
-		.contenedor-general {
+		.contenido {
 			flex: 1 1 0;
 		}
 	}
 	@include media-breakpoint-up(xl) {
 		max-width: 1140px;
+		.sidebar {
+			margin: 0 0 0 25px;
+		}
 	}
 	@include media-breakpoint-up(xxl) {
 		max-width: 1260px;

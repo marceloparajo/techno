@@ -28,21 +28,28 @@
 
 	<main class="supercontenedor">
 
-		@foreach($home_content as $key => $value)
-			@if ($key != 'sidebar')
-				<section id="{{ $key }}" class="contenedor">
-					<div class="contenedor-general"> 
+			@foreach($home_content as $key => $value)
+				@if ($key != 'sidebar')
+
+					@if ($key == 'central-footer')
+						</div>
+						<div class="sidebar">
+								@include('sidebar.index', ['content' => $sidebar_content])
+						</div>
+					@endif
+
+
+					<section id="{{ $key }}" class="contenedor-general">
 						@foreach($value as $item)
 							@include('home.dispositions.' . $item['template'], ['news' => $item['news']])
 						@endforeach
-					</div>
-				</section>
-			@endif
-		@endforeach
+					</section>
+				@endif
+				@if ($key == 'central-header')
+					<div class="contenido">
+				@endif
+			@endforeach
 
-		<div class="sidebar">
-				@include('sidebar.index', ['content' => $sidebar_content])
-		</div>
 	</main>
 
 @endsection

@@ -13,5 +13,4 @@
 @endif
 <article class="d-none d-md-block d-lg-none d-lg-none article article-side bg-ads-space pt-2 pb-2 text-center position-sticky" style="top:3.5em;">
     <p>{{ __('ads space') }}</p>
-    <div id="" class="ads-space text-center" data-id="728x90x-pos-" data-w="728" data-h="90" data-loaded="false" data-reload="false"></div>
-</article>
+ </article>

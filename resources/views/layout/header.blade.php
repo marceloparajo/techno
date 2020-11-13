@@ -1,5 +1,5 @@
 @inject('menuHelper', "App\Http\Helpers\MenuHelper")
-<div class="pre-header contenedor">
+<div class="pre-header supercontenedor">
 	<div class="header-fecha">
 		Jueves 22 de octubre de 2020
 	</div>
@@ -22,7 +22,7 @@
 	</div>
 </div>
 
-<header class="main-header contenedor">
+<header class="main-header supercontenedor">
 	<div class="header-top">
 		<div class="elisologo">
 			<div id="hamburguesa" class="hamburguer" onclick="myFunction(this)">
