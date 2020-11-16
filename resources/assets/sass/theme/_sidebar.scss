@@ -146,7 +146,9 @@
 	#investigacion,
 	#opinion,
 	#periodismopuro,
-	#panorama {
+	#panorama,
+	#reperfilar,
+	#videocolumnas {
 		background: #fff;
 		width: 100%;
 		margin: 0 0 20px 0;
@@ -212,7 +214,7 @@
 				font-size: 24px;
 				font-weight: 600;
 				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
-				.fa {
+				.fas {
 					color: #c3ced8;
 					margin: 0 3px 0 0;
 					font-weight: normal;
@@ -237,7 +239,6 @@
 				.fa {
 					color: #c3ced8;
 					margin: 0 3px 0 0;
-					font-weight: normal;
 					font-size: 20px;
 				}
 				a {
@@ -271,6 +272,34 @@
 					font-style: italic;
 					display: block;
 					width: 100%;
+				}
+			}
+			.reperfilar-titulo {
+				text-indent: -9999px;
+				width: 210px;
+				height: 42px;
+				display: block;
+				margin: 0;
+				background: url('img/reperfilar-logo-sidebar.png') -3px 0 no-repeat;
+				a {
+					display: block;
+					width: 210px;
+					height: 42px;
+				}
+			}
+			.videocolumnas-titulo {
+				width: 280px;
+				height: 30px;
+				line-height: 44px;
+				display: block;
+				margin: 0;
+				text-transform: uppercase;
+				font-family: $font-serif;
+				font-size: 24px;
+				font-weight: 600;
+				a {
+					display: inline-block;
+					color: #000;
 				}
 			}
 		}
@@ -311,7 +340,8 @@
 					text-transform: uppercase;
 				}
 			}
-			&.notaOpinion {
+			&.notaOpinion,
+			&.notaVideocolumnas {
 				a {
 					display: flex;
 					justify-content: space-between;
@@ -500,13 +530,21 @@
 			}
 		}
 	}
+	
 	#opinion,
-	#panorama {
+	#panorama,
+	#videocolumnas {
 		header {
-			background: -moz-linear-gradient(top,  rgba(228,226,232,0) 0%, rgba(228,226,232,1) 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(top,  rgba(228,226,232,0) 0%,rgba(228,226,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
 			background: linear-gradient(to bottom,  rgba(228,226,232,0) 0%,rgba(228,226,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e4e2e8', endColorstr='#e4e2e8',GradientType=0 ); /* IE6-9 */
+		}
+	}
+	#reperfilar {
+		overflow: hidden;
+		header {
+			background: #4285f4;
+			padding: 0;
+			height: 42px;
 		}
 	}
 	#masLeidasSidebar {
@@ -874,5 +912,8 @@
 	}
 
 }
+
+
+
 
 

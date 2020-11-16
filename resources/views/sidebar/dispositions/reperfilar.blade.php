@@ -1,13 +1,10 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
-@inject('shortcodeConverter', "App\Http\Helpers\ShortCodeConverter")
-
-
 @if (isset($news) && count($news) > 0)
 
 
-<section id="opinion">
+<section id="reperfilar">
 	<header>
-		<div class="opinion-titulo"><i class="fas fa-quote-right"></i> <a href="https://www.perfil.com/seccion/opinion/" target="_blank">Opinión</a></div>
+		<div class="reperfilar-titulo"><a href="https://www.perfil.com/reperfilar/" target="_blank">Reperfilar</a></div>
 	</header>
 
 	@foreach(array_slice($news, 0, 6) as $key => $new)
@@ -33,7 +30,7 @@
 	</article>
 	@endforeach
 	<footer>
-		<a href="https://www.perfil.com/seccion/opinion/" target="_blank">Más en Opinión </a>
+		<a href="https://www.perfil.com/reperfilar/" target="_blank">Más en RePerfilAr </a>
 	</footer>
 </section>
 

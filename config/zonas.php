@@ -93,16 +93,20 @@ return [
 		'template' => 'opinion'
 	],
 	[
+		'id' => 'video-columnas',
+		'template' => 'videocolumnas'
+	],
+	[
 		'id' => 'reperfilar-sidebar',
-		'template' => 'opinion'
+		'template' => 'reperfilar'
 	],
 	[
 		'id' => 'exitoina-sidebar',
-		'template' => 'opinion'
+		'template' => 'exitoina'
 	],
 	[
 		'id' => 'net-sidebar',
-		'template' => 'opinion'
+		'template' => 'net'
 	],
 	[
 		'id' => 'minuto-de-noticias',

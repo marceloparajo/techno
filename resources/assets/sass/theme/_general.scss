@@ -98,10 +98,9 @@ a {
 			padding: 0;
 			.content-sidebar {
 				width: 300px;
-				position: -webkit-sticky;
+				align-self: flex-end;
 				position: sticky;
 				bottom: 1rem;
-				align-self: flex-end;
 				display: flex;
 				flex-direction: column;
 			}

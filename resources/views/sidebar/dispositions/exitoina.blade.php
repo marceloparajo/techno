@@ -1,18 +1,15 @@
 @inject('imageHelper', "App\Http\Helpers\ImageHelper")
-@inject('shortcodeConverter', "App\Http\Helpers\ShortCodeConverter")
-
-
 @if (isset($news) && count($news) > 0)
 
 
-<section id="opinion">
+<section id="exitoina">
 	<header>
-		<div class="opinion-titulo"><i class="fas fa-quote-right"></i> <a href="https://www.perfil.com/seccion/opinion/" target="_blank">Opinión</a></div>
+		<div class="exitoina-titulo"><a href="https://exitoina.perfil.com/" target="_blank">Exitoina</a></div>
 	</header>
 
 	@foreach(array_slice($news, 0, 6) as $key => $new)
 
-	<article class="notaOpinion">
+	<article class="notaExitoina">
 		<a href="{{ $new['permalink'] }}">
 			<figure>
 				{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid','270x152') !!}
@@ -33,7 +30,7 @@
 	</article>
 	@endforeach
 	<footer>
-		<a href="https://www.perfil.com/seccion/opinion/" target="_blank">Más en Opinión </a>
+		<a href="https://exitoina.perfil.com/" target="_blank">Más en Exitoína </a>
 	</footer>
 </section>
 

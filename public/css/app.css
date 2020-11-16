@@ -8847,11 +8847,11 @@ a:hover {
 
   .supercontenedor .sidebar .content-sidebar {
     width: 300px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     position: -webkit-sticky;
     position: sticky;
     bottom: 1rem;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9862,7 +9862,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion,
 .sidebar #opinion,
 .sidebar #periodismopuro,
-.sidebar #panorama {
+.sidebar #panorama,
+.sidebar #reperfilar,
+.sidebar #videocolumnas {
   background: #fff;
   width: 100%;
   margin: 0 0 20px 0;
@@ -9878,7 +9880,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header,
 .sidebar #opinion header,
 .sidebar #periodismopuro header,
-.sidebar #panorama header {
+.sidebar #panorama header,
+.sidebar #reperfilar header,
+.sidebar #videocolumnas header {
   width: 100%;
   padding: 10px 10px 5px 10px;
   -webkit-box-sizing: border-box;
@@ -9901,7 +9905,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .exitoina-titulo,
 .sidebar #opinion header .exitoina-titulo,
 .sidebar #periodismopuro header .exitoina-titulo,
-.sidebar #panorama header .exitoina-titulo {
+.sidebar #panorama header .exitoina-titulo,
+.sidebar #reperfilar header .exitoina-titulo,
+.sidebar #videocolumnas header .exitoina-titulo {
   text-indent: -9999px;
   width: 180px;
   height: 26px;
@@ -9915,7 +9921,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .exitoina-titulo a,
 .sidebar #opinion header .exitoina-titulo a,
 .sidebar #periodismopuro header .exitoina-titulo a,
-.sidebar #panorama header .exitoina-titulo a {
+.sidebar #panorama header .exitoina-titulo a,
+.sidebar #reperfilar header .exitoina-titulo a,
+.sidebar #videocolumnas header .exitoina-titulo a {
   display: block;
   width: 180px;
   height: 26px;
@@ -9926,7 +9934,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .net-titulo,
 .sidebar #opinion header .net-titulo,
 .sidebar #periodismopuro header .net-titulo,
-.sidebar #panorama header .net-titulo {
+.sidebar #panorama header .net-titulo,
+.sidebar #reperfilar header .net-titulo,
+.sidebar #videocolumnas header .net-titulo {
   text-indent: -9999px;
   width: 70px;
   height: 29px;
@@ -9940,7 +9950,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .net-titulo a,
 .sidebar #opinion header .net-titulo a,
 .sidebar #periodismopuro header .net-titulo a,
-.sidebar #panorama header .net-titulo a {
+.sidebar #panorama header .net-titulo a,
+.sidebar #reperfilar header .net-titulo a,
+.sidebar #videocolumnas header .net-titulo a {
   display: block;
   width: 70px;
   width: 29px;
@@ -9951,7 +9963,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .investigacion-titulo,
 .sidebar #opinion header .investigacion-titulo,
 .sidebar #periodismopuro header .investigacion-titulo,
-.sidebar #panorama header .investigacion-titulo {
+.sidebar #panorama header .investigacion-titulo,
+.sidebar #reperfilar header .investigacion-titulo,
+.sidebar #videocolumnas header .investigacion-titulo {
   text-indent: -9999px;
   width: 280px;
   height: 35px;
@@ -9965,7 +9979,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .investigacion-titulo a,
 .sidebar #opinion header .investigacion-titulo a,
 .sidebar #periodismopuro header .investigacion-titulo a,
-.sidebar #panorama header .investigacion-titulo a {
+.sidebar #panorama header .investigacion-titulo a,
+.sidebar #reperfilar header .investigacion-titulo a,
+.sidebar #videocolumnas header .investigacion-titulo a {
   display: block;
   width: 280px;
   height: 35px;
@@ -9976,7 +9992,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .opinion-titulo,
 .sidebar #opinion header .opinion-titulo,
 .sidebar #periodismopuro header .opinion-titulo,
-.sidebar #panorama header .opinion-titulo {
+.sidebar #panorama header .opinion-titulo,
+.sidebar #reperfilar header .opinion-titulo,
+.sidebar #videocolumnas header .opinion-titulo {
   width: 100%;
   height: 30px;
   line-height: 44px;
@@ -9989,12 +10007,14 @@ footer .footer-revistas li a:hover {
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right 0 no-repeat;
 }
 
-.sidebar #exitoina header .opinion-titulo .fa,
-.sidebar #net header .opinion-titulo .fa,
-.sidebar #investigacion header .opinion-titulo .fa,
-.sidebar #opinion header .opinion-titulo .fa,
-.sidebar #periodismopuro header .opinion-titulo .fa,
-.sidebar #panorama header .opinion-titulo .fa {
+.sidebar #exitoina header .opinion-titulo .fas,
+.sidebar #net header .opinion-titulo .fas,
+.sidebar #investigacion header .opinion-titulo .fas,
+.sidebar #opinion header .opinion-titulo .fas,
+.sidebar #periodismopuro header .opinion-titulo .fas,
+.sidebar #panorama header .opinion-titulo .fas,
+.sidebar #reperfilar header .opinion-titulo .fas,
+.sidebar #videocolumnas header .opinion-titulo .fas {
   color: #c3ced8;
   margin: 0 3px 0 0;
   font-weight: normal;
@@ -10006,7 +10026,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .opinion-titulo a,
 .sidebar #opinion header .opinion-titulo a,
 .sidebar #periodismopuro header .opinion-titulo a,
-.sidebar #panorama header .opinion-titulo a {
+.sidebar #panorama header .opinion-titulo a,
+.sidebar #reperfilar header .opinion-titulo a,
+.sidebar #videocolumnas header .opinion-titulo a {
   display: inline-block;
   color: #000;
 }
@@ -10016,7 +10038,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .panorama-titulo,
 .sidebar #opinion header .panorama-titulo,
 .sidebar #periodismopuro header .panorama-titulo,
-.sidebar #panorama header .panorama-titulo {
+.sidebar #panorama header .panorama-titulo,
+.sidebar #reperfilar header .panorama-titulo,
+.sidebar #videocolumnas header .panorama-titulo {
   width: 280px;
   height: 30px;
   line-height: 44px;
@@ -10034,10 +10058,11 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .panorama-titulo .fa,
 .sidebar #opinion header .panorama-titulo .fa,
 .sidebar #periodismopuro header .panorama-titulo .fa,
-.sidebar #panorama header .panorama-titulo .fa {
+.sidebar #panorama header .panorama-titulo .fa,
+.sidebar #reperfilar header .panorama-titulo .fa,
+.sidebar #videocolumnas header .panorama-titulo .fa {
   color: #c3ced8;
   margin: 0 3px 0 0;
-  font-weight: normal;
   font-size: 20px;
 }
 
@@ -10046,7 +10071,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .panorama-titulo a,
 .sidebar #opinion header .panorama-titulo a,
 .sidebar #periodismopuro header .panorama-titulo a,
-.sidebar #panorama header .panorama-titulo a {
+.sidebar #panorama header .panorama-titulo a,
+.sidebar #reperfilar header .panorama-titulo a,
+.sidebar #videocolumnas header .panorama-titulo a {
   display: inline-block;
   color: #000;
 }
@@ -10056,7 +10083,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .periodismopuro-titulo,
 .sidebar #opinion header .periodismopuro-titulo,
 .sidebar #periodismopuro header .periodismopuro-titulo,
-.sidebar #panorama header .periodismopuro-titulo {
+.sidebar #panorama header .periodismopuro-titulo,
+.sidebar #reperfilar header .periodismopuro-titulo,
+.sidebar #videocolumnas header .periodismopuro-titulo {
   text-indent: -9999px;
   width: 183px;
   height: 49px;
@@ -10071,7 +10100,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header .periodismopuro-titulo a,
 .sidebar #opinion header .periodismopuro-titulo a,
 .sidebar #periodismopuro header .periodismopuro-titulo a,
-.sidebar #panorama header .periodismopuro-titulo a {
+.sidebar #panorama header .periodismopuro-titulo a,
+.sidebar #reperfilar header .periodismopuro-titulo a,
+.sidebar #videocolumnas header .periodismopuro-titulo a {
   display: block;
   width: 183px;
   width: 49px;
@@ -10083,7 +10114,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header.pp,
 .sidebar #opinion header.pp,
 .sidebar #periodismopuro header.pp,
-.sidebar #panorama header.pp {
+.sidebar #panorama header.pp,
+.sidebar #reperfilar header.pp,
+.sidebar #videocolumnas header.pp {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -10095,7 +10128,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion header.pp h4,
 .sidebar #opinion header.pp h4,
 .sidebar #periodismopuro header.pp h4,
-.sidebar #panorama header.pp h4 {
+.sidebar #panorama header.pp h4,
+.sidebar #reperfilar header.pp h4,
+.sidebar #videocolumnas header.pp h4 {
   border-top: 1px solid #d4d4d4;
   margin-top: 10px;
   padding-top: 5px;
@@ -10106,12 +10141,74 @@ footer .footer-revistas li a:hover {
   width: 100%;
 }
 
+.sidebar #exitoina header .reperfilar-titulo,
+.sidebar #net header .reperfilar-titulo,
+.sidebar #investigacion header .reperfilar-titulo,
+.sidebar #opinion header .reperfilar-titulo,
+.sidebar #periodismopuro header .reperfilar-titulo,
+.sidebar #panorama header .reperfilar-titulo,
+.sidebar #reperfilar header .reperfilar-titulo,
+.sidebar #videocolumnas header .reperfilar-titulo {
+  text-indent: -9999px;
+  width: 210px;
+  height: 42px;
+  display: block;
+  margin: 0;
+  background: url(/images/reperfilar-logo-sidebar.png?94bb6278a91475a6c62db56a0c03ef15) -3px 0 no-repeat;
+}
+
+.sidebar #exitoina header .reperfilar-titulo a,
+.sidebar #net header .reperfilar-titulo a,
+.sidebar #investigacion header .reperfilar-titulo a,
+.sidebar #opinion header .reperfilar-titulo a,
+.sidebar #periodismopuro header .reperfilar-titulo a,
+.sidebar #panorama header .reperfilar-titulo a,
+.sidebar #reperfilar header .reperfilar-titulo a,
+.sidebar #videocolumnas header .reperfilar-titulo a {
+  display: block;
+  width: 210px;
+  height: 42px;
+}
+
+.sidebar #exitoina header .videocolumnas-titulo,
+.sidebar #net header .videocolumnas-titulo,
+.sidebar #investigacion header .videocolumnas-titulo,
+.sidebar #opinion header .videocolumnas-titulo,
+.sidebar #periodismopuro header .videocolumnas-titulo,
+.sidebar #panorama header .videocolumnas-titulo,
+.sidebar #reperfilar header .videocolumnas-titulo,
+.sidebar #videocolumnas header .videocolumnas-titulo {
+  width: 280px;
+  height: 30px;
+  line-height: 44px;
+  display: block;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.sidebar #exitoina header .videocolumnas-titulo a,
+.sidebar #net header .videocolumnas-titulo a,
+.sidebar #investigacion header .videocolumnas-titulo a,
+.sidebar #opinion header .videocolumnas-titulo a,
+.sidebar #periodismopuro header .videocolumnas-titulo a,
+.sidebar #panorama header .videocolumnas-titulo a,
+.sidebar #reperfilar header .videocolumnas-titulo a,
+.sidebar #videocolumnas header .videocolumnas-titulo a {
+  display: inline-block;
+  color: #000;
+}
+
 .sidebar #exitoina article,
 .sidebar #net article,
 .sidebar #investigacion article,
 .sidebar #opinion article,
 .sidebar #periodismopuro article,
-.sidebar #panorama article {
+.sidebar #panorama article,
+.sidebar #reperfilar article,
+.sidebar #videocolumnas article {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10127,7 +10224,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article a,
 .sidebar #opinion article a,
 .sidebar #periodismopuro article a,
-.sidebar #panorama article a {
+.sidebar #panorama article a,
+.sidebar #reperfilar article a,
+.sidebar #videocolumnas article a {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10139,7 +10238,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article a figure,
 .sidebar #opinion article a figure,
 .sidebar #periodismopuro article a figure,
-.sidebar #panorama article a figure {
+.sidebar #panorama article a figure,
+.sidebar #reperfilar article a figure,
+.sidebar #videocolumnas article a figure {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   height: 50px;
@@ -10153,7 +10254,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article a figure img,
 .sidebar #opinion article a figure img,
 .sidebar #periodismopuro article a figure img,
-.sidebar #panorama article a figure img {
+.sidebar #panorama article a figure img,
+.sidebar #reperfilar article a figure img,
+.sidebar #videocolumnas article a figure img {
   width: 100%;
 }
 
@@ -10162,7 +10265,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article a h3,
 .sidebar #opinion article a h3,
 .sidebar #periodismopuro article a h3,
-.sidebar #panorama article a h3 {
+.sidebar #panorama article a h3,
+.sidebar #reperfilar article a h3,
+.sidebar #videocolumnas article a h3 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
@@ -10179,7 +10284,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article a h5,
 .sidebar #opinion article a h5,
 .sidebar #periodismopuro article a h5,
-.sidebar #panorama article a h5 {
+.sidebar #panorama article a h5,
+.sidebar #reperfilar article a h5,
+.sidebar #videocolumnas article a h5 {
   font-size: 12px;
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   line-height: 1em;
@@ -10188,11 +10295,21 @@ footer .footer-revistas li a:hover {
 }
 
 .sidebar #exitoina article.notaOpinion a,
+.sidebar #exitoina article.notaVideocolumnas a,
 .sidebar #net article.notaOpinion a,
+.sidebar #net article.notaVideocolumnas a,
 .sidebar #investigacion article.notaOpinion a,
+.sidebar #investigacion article.notaVideocolumnas a,
 .sidebar #opinion article.notaOpinion a,
+.sidebar #opinion article.notaVideocolumnas a,
 .sidebar #periodismopuro article.notaOpinion a,
-.sidebar #panorama article.notaOpinion a {
+.sidebar #periodismopuro article.notaVideocolumnas a,
+.sidebar #panorama article.notaOpinion a,
+.sidebar #panorama article.notaVideocolumnas a,
+.sidebar #reperfilar article.notaOpinion a,
+.sidebar #reperfilar article.notaVideocolumnas a,
+.sidebar #videocolumnas article.notaOpinion a,
+.sidebar #videocolumnas article.notaVideocolumnas a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10202,32 +10319,62 @@ footer .footer-revistas li a:hover {
 }
 
 .sidebar #exitoina article.notaOpinion a figure,
+.sidebar #exitoina article.notaVideocolumnas a figure,
 .sidebar #net article.notaOpinion a figure,
+.sidebar #net article.notaVideocolumnas a figure,
 .sidebar #investigacion article.notaOpinion a figure,
+.sidebar #investigacion article.notaVideocolumnas a figure,
 .sidebar #opinion article.notaOpinion a figure,
+.sidebar #opinion article.notaVideocolumnas a figure,
 .sidebar #periodismopuro article.notaOpinion a figure,
-.sidebar #panorama article.notaOpinion a figure {
+.sidebar #periodismopuro article.notaVideocolumnas a figure,
+.sidebar #panorama article.notaOpinion a figure,
+.sidebar #panorama article.notaVideocolumnas a figure,
+.sidebar #reperfilar article.notaOpinion a figure,
+.sidebar #reperfilar article.notaVideocolumnas a figure,
+.sidebar #videocolumnas article.notaOpinion a figure,
+.sidebar #videocolumnas article.notaVideocolumnas a figure {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   width: 100%;
 }
 
 .sidebar #exitoina article.notaOpinion a .content,
+.sidebar #exitoina article.notaVideocolumnas a .content,
 .sidebar #net article.notaOpinion a .content,
+.sidebar #net article.notaVideocolumnas a .content,
 .sidebar #investigacion article.notaOpinion a .content,
+.sidebar #investigacion article.notaVideocolumnas a .content,
 .sidebar #opinion article.notaOpinion a .content,
+.sidebar #opinion article.notaVideocolumnas a .content,
 .sidebar #periodismopuro article.notaOpinion a .content,
-.sidebar #panorama article.notaOpinion a .content {
+.sidebar #periodismopuro article.notaVideocolumnas a .content,
+.sidebar #panorama article.notaOpinion a .content,
+.sidebar #panorama article.notaVideocolumnas a .content,
+.sidebar #reperfilar article.notaOpinion a .content,
+.sidebar #reperfilar article.notaVideocolumnas a .content,
+.sidebar #videocolumnas article.notaOpinion a .content,
+.sidebar #videocolumnas article.notaVideocolumnas a .content {
   -ms-flex-preferred-size: 63%;
       flex-basis: 63%;
 }
 
 .sidebar #exitoina article.notaOpinion:first-of-type a,
+.sidebar #exitoina article.notaVideocolumnas:first-of-type a,
 .sidebar #net article.notaOpinion:first-of-type a,
+.sidebar #net article.notaVideocolumnas:first-of-type a,
 .sidebar #investigacion article.notaOpinion:first-of-type a,
+.sidebar #investigacion article.notaVideocolumnas:first-of-type a,
 .sidebar #opinion article.notaOpinion:first-of-type a,
+.sidebar #opinion article.notaVideocolumnas:first-of-type a,
 .sidebar #periodismopuro article.notaOpinion:first-of-type a,
-.sidebar #panorama article.notaOpinion:first-of-type a {
+.sidebar #periodismopuro article.notaVideocolumnas:first-of-type a,
+.sidebar #panorama article.notaOpinion:first-of-type a,
+.sidebar #panorama article.notaVideocolumnas:first-of-type a,
+.sidebar #reperfilar article.notaOpinion:first-of-type a,
+.sidebar #reperfilar article.notaVideocolumnas:first-of-type a,
+.sidebar #videocolumnas article.notaOpinion:first-of-type a,
+.sidebar #videocolumnas article.notaVideocolumnas:first-of-type a {
   display: block;
 }
 
@@ -10236,7 +10383,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article:after,
 .sidebar #opinion article:after,
 .sidebar #periodismopuro article:after,
-.sidebar #panorama article:after {
+.sidebar #panorama article:after,
+.sidebar #reperfilar article:after,
+.sidebar #videocolumnas article:after {
   display: block;
   content: " ";
   clear: both;
@@ -10249,7 +10398,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article:hover,
 .sidebar #opinion article:hover,
 .sidebar #periodismopuro article:hover,
-.sidebar #panorama article:hover {
+.sidebar #panorama article:hover,
+.sidebar #reperfilar article:hover,
+.sidebar #videocolumnas article:hover {
   background: #ededed;
 }
 
@@ -10258,7 +10409,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article:hover a h3,
 .sidebar #opinion article:hover a h3,
 .sidebar #periodismopuro article:hover a h3,
-.sidebar #panorama article:hover a h3 {
+.sidebar #panorama article:hover a h3,
+.sidebar #reperfilar article:hover a h3,
+.sidebar #videocolumnas article:hover a h3 {
   color: #000;
 }
 
@@ -10267,7 +10420,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article:first-of-type a,
 .sidebar #opinion article:first-of-type a,
 .sidebar #periodismopuro article:first-of-type a,
-.sidebar #panorama article:first-of-type a {
+.sidebar #panorama article:first-of-type a,
+.sidebar #reperfilar article:first-of-type a,
+.sidebar #videocolumnas article:first-of-type a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -10279,7 +10434,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article:first-of-type a figure,
 .sidebar #opinion article:first-of-type a figure,
 .sidebar #periodismopuro article:first-of-type a figure,
-.sidebar #panorama article:first-of-type a figure {
+.sidebar #panorama article:first-of-type a figure,
+.sidebar #reperfilar article:first-of-type a figure,
+.sidebar #videocolumnas article:first-of-type a figure {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   height: auto;
@@ -10292,7 +10449,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article:first-of-type a h3,
 .sidebar #opinion article:first-of-type a h3,
 .sidebar #periodismopuro article:first-of-type a h3,
-.sidebar #panorama article:first-of-type a h3 {
+.sidebar #panorama article:first-of-type a h3,
+.sidebar #reperfilar article:first-of-type a h3,
+.sidebar #videocolumnas article:first-of-type a h3 {
   font-size: 18px;
   line-height: 1.03em;
 }
@@ -10302,7 +10461,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article.notaPanorama a,
 .sidebar #opinion article.notaPanorama a,
 .sidebar #periodismopuro article.notaPanorama a,
-.sidebar #panorama article.notaPanorama a {
+.sidebar #panorama article.notaPanorama a,
+.sidebar #reperfilar article.notaPanorama a,
+.sidebar #videocolumnas article.notaPanorama a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10316,7 +10477,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article.notaPanorama a figure,
 .sidebar #opinion article.notaPanorama a figure,
 .sidebar #periodismopuro article.notaPanorama a figure,
-.sidebar #panorama article.notaPanorama a figure {
+.sidebar #panorama article.notaPanorama a figure,
+.sidebar #reperfilar article.notaPanorama a figure,
+.sidebar #videocolumnas article.notaPanorama a figure {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   width: 100%;
@@ -10327,7 +10490,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article.notaPanorama a .content,
 .sidebar #opinion article.notaPanorama a .content,
 .sidebar #periodismopuro article.notaPanorama a .content,
-.sidebar #panorama article.notaPanorama a .content {
+.sidebar #panorama article.notaPanorama a .content,
+.sidebar #reperfilar article.notaPanorama a .content,
+.sidebar #videocolumnas article.notaPanorama a .content {
   -ms-flex-preferred-size: 63%;
       flex-basis: 63%;
 }
@@ -10337,7 +10502,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article.notaPanorama a .content h5,
 .sidebar #opinion article.notaPanorama a .content h5,
 .sidebar #periodismopuro article.notaPanorama a .content h5,
-.sidebar #panorama article.notaPanorama a .content h5 {
+.sidebar #panorama article.notaPanorama a .content h5,
+.sidebar #reperfilar article.notaPanorama a .content h5,
+.sidebar #videocolumnas article.notaPanorama a .content h5 {
   text-align: right;
 }
 
@@ -10346,7 +10513,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article.notaPanorama:first-of-type a,
 .sidebar #opinion article.notaPanorama:first-of-type a,
 .sidebar #periodismopuro article.notaPanorama:first-of-type a,
-.sidebar #panorama article.notaPanorama:first-of-type a {
+.sidebar #panorama article.notaPanorama:first-of-type a,
+.sidebar #reperfilar article.notaPanorama:first-of-type a,
+.sidebar #videocolumnas article.notaPanorama:first-of-type a {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -10358,7 +10527,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article.notaPanorama:first-of-type a figure,
 .sidebar #opinion article.notaPanorama:first-of-type a figure,
 .sidebar #periodismopuro article.notaPanorama:first-of-type a figure,
-.sidebar #panorama article.notaPanorama:first-of-type a figure {
+.sidebar #panorama article.notaPanorama:first-of-type a figure,
+.sidebar #reperfilar article.notaPanorama:first-of-type a figure,
+.sidebar #videocolumnas article.notaPanorama:first-of-type a figure {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   width: 100%;
@@ -10373,7 +10544,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article.notaPanorama:first-of-type a .content,
 .sidebar #opinion article.notaPanorama:first-of-type a .content,
 .sidebar #periodismopuro article.notaPanorama:first-of-type a .content,
-.sidebar #panorama article.notaPanorama:first-of-type a .content {
+.sidebar #panorama article.notaPanorama:first-of-type a .content,
+.sidebar #reperfilar article.notaPanorama:first-of-type a .content,
+.sidebar #videocolumnas article.notaPanorama:first-of-type a .content {
   -ms-flex-preferred-size: 63%;
       flex-basis: 63%;
 }
@@ -10383,7 +10556,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion article.notaPanorama:first-of-type a .content h3,
 .sidebar #opinion article.notaPanorama:first-of-type a .content h3,
 .sidebar #periodismopuro article.notaPanorama:first-of-type a .content h3,
-.sidebar #panorama article.notaPanorama:first-of-type a .content h3 {
+.sidebar #panorama article.notaPanorama:first-of-type a .content h3,
+.sidebar #reperfilar article.notaPanorama:first-of-type a .content h3,
+.sidebar #videocolumnas article.notaPanorama:first-of-type a .content h3 {
   font-size: 16px;
 }
 
@@ -10392,7 +10567,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion footer,
 .sidebar #opinion footer,
 .sidebar #periodismopuro footer,
-.sidebar #panorama footer {
+.sidebar #panorama footer,
+.sidebar #reperfilar footer,
+.sidebar #videocolumnas footer {
   width: 100%;
   padding: 10px;
   -webkit-box-sizing: border-box;
@@ -10407,7 +10584,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion footer a,
 .sidebar #opinion footer a,
 .sidebar #periodismopuro footer a,
-.sidebar #panorama footer a {
+.sidebar #panorama footer a,
+.sidebar #reperfilar footer a,
+.sidebar #videocolumnas footer a {
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -10428,7 +10607,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion footer a:after,
 .sidebar #opinion footer a:after,
 .sidebar #periodismopuro footer a:after,
-.sidebar #panorama footer a:after {
+.sidebar #panorama footer a:after,
+.sidebar #reperfilar footer a:after,
+.sidebar #videocolumnas footer a:after {
   content: "\F061";
   font-family: 'Font Awesome 5 Free';
   display: block;
@@ -10443,7 +10624,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion footer a:hover,
 .sidebar #opinion footer a:hover,
 .sidebar #periodismopuro footer a:hover,
-.sidebar #panorama footer a:hover {
+.sidebar #panorama footer a:hover,
+.sidebar #reperfilar footer a:hover,
+.sidebar #videocolumnas footer a:hover {
   color: #444;
 }
 
@@ -10452,7 +10635,9 @@ footer .footer-revistas li a:hover {
 .sidebar #investigacion footer.edi a,
 .sidebar #opinion footer.edi a,
 .sidebar #periodismopuro footer.edi a,
-.sidebar #panorama footer.edi a {
+.sidebar #panorama footer.edi a,
+.sidebar #reperfilar footer.edi a,
+.sidebar #videocolumnas footer.edi a {
   letter-spacing: 0.02em;
 }
 
@@ -10462,7 +10647,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion article,
   .sidebar #opinion article,
   .sidebar #periodismopuro article,
-  .sidebar #panorama article {
+  .sidebar #panorama article,
+  .sidebar #reperfilar article,
+  .sidebar #videocolumnas article {
     width: 49%;
     margin-left: 1%;
     float: left;
@@ -10473,7 +10660,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion article a figure,
   .sidebar #opinion article a figure,
   .sidebar #periodismopuro article a figure,
-  .sidebar #panorama article a figure {
+  .sidebar #panorama article a figure,
+  .sidebar #reperfilar article a figure,
+  .sidebar #videocolumnas article a figure {
     height: 7vw;
     width: 100%;
   }
@@ -10483,7 +10672,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion article a figure img,
   .sidebar #opinion article a figure img,
   .sidebar #periodismopuro article a figure img,
-  .sidebar #panorama article a figure img {
+  .sidebar #panorama article a figure img,
+  .sidebar #reperfilar article a figure img,
+  .sidebar #videocolumnas article a figure img {
     width: 100%;
   }
 
@@ -10492,7 +10683,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion article:first-of-type,
   .sidebar #opinion article:first-of-type,
   .sidebar #periodismopuro article:first-of-type,
-  .sidebar #panorama article:first-of-type {
+  .sidebar #panorama article:first-of-type,
+  .sidebar #reperfilar article:first-of-type,
+  .sidebar #videocolumnas article:first-of-type {
     width: 50%;
     margin: 0;
     border-bottom: none;
@@ -10503,7 +10696,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion article:last-of-type,
   .sidebar #opinion article:last-of-type,
   .sidebar #periodismopuro article:last-of-type,
-  .sidebar #panorama article:last-of-type {
+  .sidebar #panorama article:last-of-type,
+  .sidebar #reperfilar article:last-of-type,
+  .sidebar #videocolumnas article:last-of-type {
     border-bottom: none;
   }
 
@@ -10512,7 +10707,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion header .opinion-titulo,
   .sidebar #opinion header .opinion-titulo,
   .sidebar #periodismopuro header .opinion-titulo,
-  .sidebar #panorama header .opinion-titulo {
+  .sidebar #panorama header .opinion-titulo,
+  .sidebar #reperfilar header .opinion-titulo,
+  .sidebar #videocolumnas header .opinion-titulo {
     width: 100%;
   }
 
@@ -10521,7 +10718,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion header.pp,
   .sidebar #opinion header.pp,
   .sidebar #periodismopuro header.pp,
-  .sidebar #panorama header.pp {
+  .sidebar #panorama header.pp,
+  .sidebar #reperfilar header.pp,
+  .sidebar #videocolumnas header.pp {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -10536,7 +10735,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion header.pp .periodismopuro-titulo,
   .sidebar #opinion header.pp .periodismopuro-titulo,
   .sidebar #periodismopuro header.pp .periodismopuro-titulo,
-  .sidebar #panorama header.pp .periodismopuro-titulo {
+  .sidebar #panorama header.pp .periodismopuro-titulo,
+  .sidebar #reperfilar header.pp .periodismopuro-titulo,
+  .sidebar #videocolumnas header.pp .periodismopuro-titulo {
     margin-left: 0;
   }
 
@@ -10545,7 +10746,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion header.pp h4,
   .sidebar #opinion header.pp h4,
   .sidebar #periodismopuro header.pp h4,
-  .sidebar #panorama header.pp h4 {
+  .sidebar #panorama header.pp h4,
+  .sidebar #reperfilar header.pp h4,
+  .sidebar #videocolumnas header.pp h4 {
     display: inline-block;
     border-top: none;
     width: auto;
@@ -10556,7 +10759,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion footer,
   .sidebar #opinion footer,
   .sidebar #periodismopuro footer,
-  .sidebar #panorama footer {
+  .sidebar #panorama footer,
+  .sidebar #reperfilar footer,
+  .sidebar #videocolumnas footer {
     clear: both;
     width: 100%;
     border-top: 1px solid #ddd;
@@ -10569,7 +10774,9 @@ footer .footer-revistas li a:hover {
   .sidebar #investigacion,
   .sidebar #opinion,
   .sidebar #periodismopuro,
-  .sidebar #panorama {
+  .sidebar #panorama,
+  .sidebar #reperfilar,
+  .sidebar #videocolumnas {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -10590,7 +10797,11 @@ footer .footer-revistas li a:hover {
   .sidebar #periodismopuro article,
   .sidebar #periodismopuro article:first-of-type,
   .sidebar #panorama article,
-  .sidebar #panorama article:first-of-type {
+  .sidebar #panorama article:first-of-type,
+  .sidebar #reperfilar article,
+  .sidebar #reperfilar article:first-of-type,
+  .sidebar #videocolumnas article,
+  .sidebar #videocolumnas article:first-of-type {
     width: 100%;
     margin: 0;
     -ms-flex-preferred-size: 100%;
@@ -10608,7 +10819,11 @@ footer .footer-revistas li a:hover {
   .sidebar #periodismopuro article a,
   .sidebar #periodismopuro article:first-of-type a,
   .sidebar #panorama article a,
-  .sidebar #panorama article:first-of-type a {
+  .sidebar #panorama article:first-of-type a,
+  .sidebar #reperfilar article a,
+  .sidebar #reperfilar article:first-of-type a,
+  .sidebar #videocolumnas article a,
+  .sidebar #videocolumnas article:first-of-type a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -10629,7 +10844,11 @@ footer .footer-revistas li a:hover {
   .sidebar #periodismopuro article a figure,
   .sidebar #periodismopuro article:first-of-type a figure,
   .sidebar #panorama article a figure,
-  .sidebar #panorama article:first-of-type a figure {
+  .sidebar #panorama article:first-of-type a figure,
+  .sidebar #reperfilar article a figure,
+  .sidebar #reperfilar article:first-of-type a figure,
+  .sidebar #videocolumnas article a figure,
+  .sidebar #videocolumnas article:first-of-type a figure {
     -ms-flex-preferred-size: 100px;
         flex-basis: 100px;
     height: auto;
@@ -10647,7 +10866,11 @@ footer .footer-revistas li a:hover {
   .sidebar #periodismopuro article a h3,
   .sidebar #periodismopuro article:first-of-type a h3,
   .sidebar #panorama article a h3,
-  .sidebar #panorama article:first-of-type a h3 {
+  .sidebar #panorama article:first-of-type a h3,
+  .sidebar #reperfilar article a h3,
+  .sidebar #reperfilar article:first-of-type a h3,
+  .sidebar #videocolumnas article a h3,
+  .sidebar #videocolumnas article:first-of-type a h3 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
@@ -10656,14 +10879,23 @@ footer .footer-revistas li a:hover {
 }
 
 .sidebar #opinion header,
-.sidebar #panorama header {
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
+.sidebar #panorama header,
+.sidebar #videocolumnas header {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 226, 232, 0)), to(#e4e2e8));
   background: linear-gradient(to bottom, rgba(228, 226, 232, 0) 0%, #e4e2e8 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e4e2e8', endColorstr='#e4e2e8',GradientType=0 );
   /* IE6-9 */
+}
+
+.sidebar #reperfilar {
+  overflow: hidden;
+}
+
+.sidebar #reperfilar header {
+  background: #4285f4;
+  padding: 0;
+  height: 42px;
 }
 
 .sidebar #masLeidasSidebar {
