@@ -19,6 +19,9 @@ a {
 		text-decoration: none;
 	}
 }
+figure img {
+	width: 100%;
+}
 
 .image-responsive {
 	width: 100%;
@@ -77,7 +80,9 @@ a {
 		padding: 0;
 		display: flex;
 		width: 100%;
-		flex-direction: column;
+	}
+	&.main-header {
+		padding-top: 0;
 	}
 
 	@include media-breakpoint-up(sm) {

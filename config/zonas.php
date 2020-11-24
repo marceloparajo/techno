@@ -85,6 +85,14 @@ return [
 		'template' => 'cobertura'
 	],
 	[
+		'id' => 'cobertura-cocacola',
+		'template' => 'cobertura'
+	],
+	[
+		'id' => 'cobertura-parabrisas',
+		'template' => 'cobertura'
+	],
+	[
 		'id' => 'bloomberg',
 		'template' => 'bloomberg'
 	],

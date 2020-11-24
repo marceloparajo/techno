@@ -23,9 +23,11 @@
     <div class="col-12 news">
         @foreach (array_slice($noticias, 0, 4) as $noticia)
             <div class="{{ $relacionadasGroupClass }}">
-                <a href="{{ $noticia['permalink'] }}" title="Read {{ $noticia['title'] }}">
+                <figure>
+                    <a href="{{ $noticia['permalink'] }}" title="Read {{ $noticia['title'] }}">
                     {!! $imageHelper->getLazyImages( $noticia['image']['srcs']['small'], 540, $noticia['image']['caption'],'img-fluid', '540x304') !!}
-                </a>
+                    </a>
+                </figure>
                 <h2><a href="{{ $noticia['permalink'] }}">{{ $noticia['title'] }}</a></h2>
             </div>
         @endforeach

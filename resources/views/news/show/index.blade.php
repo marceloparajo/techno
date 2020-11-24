@@ -63,7 +63,7 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 	<main class="supercontenedor" id="page">
 
-		<header class="container articulo-header">
+		<header class="articulo-header">
 			<div class="hat">
 				<a href="/seccion/{{ $noticia['channel']['slug']}}">{{ strtoupper($noticia['channel']['name']) }}</a>
 				@if($noticia['hat'] != '')
@@ -78,59 +78,89 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 			</h2>
 		</header>
 
-		<div class="container noticia pt-2 px-0">
+		<div class="container" id="noticia">
 			
 			<article class="main-article">
 
 
-				@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])				
+				{{-- Embed Code --}}
+					@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code')
+						@php
+							if (STRPOS($noticia['embed_code'], 'rudo') || STRPOS($noticia['embed_code'], 'tube')  ) {
+						@endphp
+							{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
+						@php
+							} 
+						@endphp
+					@else 
+						@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])				
+					@endif
+
+
 				<div class="news-body">
+					<div class="fecha-autor">
+						{{-- Author --}}
+						@if ($noticia['signed'])
+							<div class="autor"> 
+								@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
+							</div>
+						{{-- Credit --}}
+						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
+							<div class="autor">{{ $noticia['credit'] }}</div>
+						@endif						
+						<div class="fecha">
+							{{ $noticia['date_available_human'] }}
+						</div>
+					</div>
+
+
+					@include('news.show.partials.news-tags')
+
 
 					@include('news.show.partials.social-top', ['shareText' => __('share')] )
 
-					<div class="fecha">
-						{{ $noticia['date_available_human'] }}
+
+
+
+					<div class="news-content"> 
+
+						{!! $body !!}
+
+
+						{{-- Embed Code --}}
+						@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code')
+							{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
+						@endif
+
+						{{-- Gallery --}}
+						@if (count($noticia['gallery']) > 1)
+							<div class="col-12 border p-3">
+								<h3>{{ __('Image Gallery') }}</h3>
+								<div id="gallery-thumbnails" class="bottom-gallery">
+									@foreach ($noticia['gallery'] as $image)
+										<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
+											<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}">
+										</a>
+									@endforeach
+								</div>
+							</div>
+						@endif
+
+
 						{{-- Author --}}
 						@if ($noticia['signed'])
-							@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
-						{{-- Credit --}}
-						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
-							<p>{{ __('by') }} {{ $noticia['credit'] }}</p>
+							@include('news.show.partials.author-bottom', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 						@endif
+
+
+						@include('partials.teads')
+
+						@include('news.show.partials.news-tags')
+
 					</div>
 
-					{!! $body !!}
-
-
-					{{-- Embed Code --}}
-					@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code'))
-						{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
-					@endif
-
-					{{-- Gallery --}}
-					@if (count($noticia['gallery']) > 1)
-						<div class="col-12 border p-3">
-							<h3>{{ __('Image Gallery') }}</h3>
-							<div id="gallery-thumbnails" class="bottom-gallery">
-								@foreach ($noticia['gallery'] as $image)
-									<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
-										<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}">
-									</a>
-								@endforeach
-							</div>
-						</div>
-					@endif
-
-
-					{{-- Author --}}
-					@if ($noticia['signed'])
-						@include('news.show.partials.author-bottom', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
-					@endif
-
-
-					@include('partials.teads')
-
-					@include('news.show.partials.news-tags')
+					{{-- Más Noticias (para los crawlers) --}}
+					@include('news.show.partials.more-news-crawlers')
 
 					
 				</div>
@@ -145,8 +175,8 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 			</article>
 
-			<aside class="sidebar col-12 col-lg-4 col-xl-3 px-0">
-					@include('sidebar.index', ['content' => $sidebar_content])
+			<aside class="sidebar">
+				@include('sidebar.index', ['content' => $sidebar_content])
 			</aside>
 
 		</div><!-- noticia -->

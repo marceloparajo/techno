@@ -1,7 +1,9 @@
 <div class="media noticia-relacionada row">
 	<div class="content-related flex-shrink-1">
     @if ($type == '')
-        <a href="{{ $url }}" title="{{ $title }}"><img src="{{ $image }}" class="mr-2 float-left" alt="{{ $title }}"></a>
+    	<figure>
+        	<a href="{{ $url }}" title="{{ $title }}"><img src="{{ $image }}" class="mr-2 float-left" alt="{{ $title }}"></a>
+    	</figure>
     @endif
 		<h6><a href="{{ $url }}" title="{{ $title }}">{{ __('Read more') }}...</a></h6>
 		<h5><a href="{{ $url }}" title="{{ $title }}">{{ $title }}</a> <a href="{{ $url }}" class="round-btn"></a></h5>
