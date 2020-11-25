@@ -47,11 +47,15 @@
 				font:{
 					size: 1.5rem;
 					size: 6.5vw;
-					weight: 400;
 					family: $font-serif;
 				}
+				weight: 400;
 				margin: 10px 0;
 				letter-spacing: -0.01em;
+			}
+			h3 {
+				font-size: 1.2em;
+				margin: 16px 0 10px 0;
 			}
 		}
 		.container {

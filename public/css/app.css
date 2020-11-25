@@ -13298,10 +13298,15 @@ REVISTAS
 .perfil-noticia .supercontenedor .articulo-header h2 {
   font-size: 1.5rem;
   font-size: 6.5vw;
-  font-weight: 400;
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  weight: 400;
   margin: 10px 0;
   letter-spacing: -0.01em;
+}
+
+.perfil-noticia .supercontenedor .articulo-header h3 {
+  font-size: 1.2em;
+  margin: 16px 0 10px 0;
 }
 
 .perfil-noticia .supercontenedor .container .main-article {
@@ -14294,69 +14299,80 @@ REVISTAS
   }
 }
 
-.mas-en-perfil .titulo {
+.mas-en-perfil .mas-en-perfil-titulo {
+  margin: 30px 0 10px 0;
+  padding: 0 10px 10px 10px;
+  border-bottom: 1px solid #d4d4d4;
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #313133;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #343a40;
   text-transform: uppercase;
-  padding: 20px 0;
 }
 
-.mas-en-perfil .titulo a {
+.mas-en-perfil .mas-en-perfil-titulo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #343a40;
 }
 
-.mas-en-perfil .titulo a .img-mas-en-perfil {
+.mas-en-perfil .mas-en-perfil-titulo a .img-mas-en-perfil {
   width: auto;
-  height: 34px;
+  height: 28px;
   margin-left: 10px;
 }
 
-.mas-en-perfil .titulo .in-other-lang {
-  font-weight: normal;
-  font-size: .8em;
-  color: #999;
-}
-
-.mas-en-perfil-notas .sitio-externo {
+.mas-en-perfil .sitio-externo {
   padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.mas-en-perfil-notas .sitio-externo a figure {
-  width: 100%;
-  overflow: hidden;
-  height: 0;
-  padding-top: 56.25%;
-  margin: 0 0 5px 0;
+.mas-en-perfil .sitio-externo a.noticia-sitio-externo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.mas-en-perfil-notas .sitio-externo a figure img {
+.mas-en-perfil .sitio-externo a.noticia-sitio-externo figure {
+  width: 35%;
+}
+
+.mas-en-perfil .sitio-externo a.noticia-sitio-externo figure img {
   display: block;
   width: 100%;
   height: auto;
-  -webkit-transition: ease 0.3s;
-  transition: ease 0.3s;
-  margin-top: -56.25%;
 }
 
-.mas-en-perfil-notas .sitio-externo a h2 {
+.mas-en-perfil .sitio-externo a.noticia-sitio-externo h2 {
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   font-size: 18px;
-  font-weight: 700;
-  text-align: center;
+  font-weight: 600;
   padding: 0 10px;
-  color: #313133;
-  padding-bottom: 15px;
+  color: #171717;
+  width: 62%;
 }
 
-.mas-en-perfil-notas .sitio-externo a:hover {
+.mas-en-perfil .sitio-externo a.noticia-sitio-externo:hover {
   text-decoration: none;
 }
 
-.mas-en-perfil-notas .sitio-externo .logo-revista {
+.mas-en-perfil .sitio-externo a.logo-revista {
   height: 25px;
   width: 100%;
   margin: 0;
@@ -14365,55 +14381,55 @@ REVISTAS
   background-repeat: no-repeat;
 }
 
-.mas-en-perfil-notas .sitio-externo.marieclaire {
+.mas-en-perfil .sitio-externo.marieclaire {
   background-color: white;
 }
 
-.mas-en-perfil-notas .sitio-externo.marieclaire .logo-revista {
+.mas-en-perfil .sitio-externo.marieclaire .logo-revista {
   background-position: 14px -9px;
 }
 
-.mas-en-perfil-notas .sitio-externo.rouge {
+.mas-en-perfil .sitio-externo.rouge {
   background-color: #17191b;
 }
 
-.mas-en-perfil-notas .sitio-externo.rouge a h2 {
+.mas-en-perfil .sitio-externo.rouge a h2 {
   color: white;
 }
 
-.mas-en-perfil-notas .sitio-externo.rouge .logo-revista {
+.mas-en-perfil .sitio-externo.rouge .logo-revista {
   background-position: 10px -97px;
 }
 
-.mas-en-perfil-notas .sitio-externo.noticias {
+.mas-en-perfil .sitio-externo.noticias {
   background-color: #4db2ec;
 }
 
-.mas-en-perfil-notas .sitio-externo.noticias .logo-revista {
+.mas-en-perfil .sitio-externo.noticias .logo-revista {
   background-position: 10px -66px;
 }
 
-.mas-en-perfil-notas .sitio-externo.caras {
+.mas-en-perfil .sitio-externo.caras {
   background-color: #dc3545;
 }
 
-.mas-en-perfil-notas .sitio-externo.caras a h2 {
+.mas-en-perfil .sitio-externo.caras a h2 {
   color: white;
 }
 
-.mas-en-perfil-notas .sitio-externo.caras .logo-revista {
+.mas-en-perfil .sitio-externo.caras .logo-revista {
   background-position: 10px -38px;
 }
 
-.mas-en-perfil-notas .sitio-externo.parabrisas {
+.mas-en-perfil .sitio-externo.parabrisas {
   background-color: #ff0002;
 }
 
-.mas-en-perfil-notas .sitio-externo.parabrisas a h2 {
+.mas-en-perfil .sitio-externo.parabrisas a h2 {
   color: white;
 }
 
-.mas-en-perfil-notas .sitio-externo.parabrisas .logo-revista {
+.mas-en-perfil .sitio-externo.parabrisas .logo-revista {
   background-position: 10px -130px;
 }
 

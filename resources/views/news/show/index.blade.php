@@ -61,7 +61,7 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 @section('body')
 
 
-	<main class="supercontenedor" id="page">
+	<main class="supercontenedor {{ $noticia['channel']['slug']}}" id="page">
 
 		<header class="articulo-header">
 			<div class="hat">
