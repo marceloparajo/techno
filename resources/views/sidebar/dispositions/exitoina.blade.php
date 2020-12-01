@@ -7,7 +7,7 @@
 		<div class="exitoina-titulo"><a href="https://exitoina.perfil.com/" target="_blank">Exitoina</a></div>
 	</header>
 
-	@foreach(array_slice($news, 0, 6) as $key => $new)
+	@foreach(array_slice($news, 0, 4) as $key => $new)
 
 	<article class="notaExitoina">
 		<a href="{{ $new['permalink'] }}">
@@ -22,8 +22,8 @@
 							{{ __('by') }} {{ $new['author']['fullname'] }}
 						</a>
 					</h5>
-					@elseif ($new['credit'] != '')
-						<h5>{{ $new['credit'] }}</h5>
+				@elseif ($new['credit'] != '')
+					<h5>{{ $new['credit'] }}</h5>
 				@endif
 			</div>
 		</a>

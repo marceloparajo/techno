@@ -109,12 +109,20 @@ return [
 		'template' => 'reperfilar'
 	],
 	[
+		'id' => 'ppuro-sidebar',
+		'template' => 'periodismopuro'
+	],
+	[
 		'id' => 'exitoina-sidebar',
 		'template' => 'exitoina'
 	],
 	[
 		'id' => 'net-sidebar',
 		'template' => 'net'
+	],
+	[
+		'id' => 'columnistas',
+		'template' => 'columnistas'
 	],
 	[
 		'id' => 'minuto-de-noticias',

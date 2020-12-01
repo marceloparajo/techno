@@ -16,20 +16,18 @@
     }
 @endphp
 
-<div class="row noticias-relacionadas">
-    <div class="col-12 top">
-        <h6>{{ __('related news') }}</h6>
-    </div>
-    <div class="col-12 news">
+<div class="noticias-relacionadas">
+    <h6>{{ __('related news') }}</h6>
+    <div class="related-news">
         @foreach (array_slice($noticias, 0, 4) as $noticia)
-            <div class="{{ $relacionadasGroupClass }}">
-                <figure>
+            <article class="related-new">
+                <figure class="related-img">
                     <a href="{{ $noticia['permalink'] }}" title="Read {{ $noticia['title'] }}">
                     {!! $imageHelper->getLazyImages( $noticia['image']['srcs']['small'], 540, $noticia['image']['caption'],'img-fluid', '540x304') !!}
                     </a>
                 </figure>
-                <h2><a href="{{ $noticia['permalink'] }}">{{ $noticia['title'] }}</a></h2>
-            </div>
+                <h5><a href="{{ $noticia['permalink'] }}">{{ $noticia['title'] }}</a></h5>
+            </article>
         @endforeach
     </div>
 </div>

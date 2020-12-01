@@ -147,11 +147,11 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 						@endif
 
 
-						{{-- Author --}}
+						{{-- Author
 						@if ($noticia['signed'])
 							@include('news.show.partials.author-bottom', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 						@endif
-
+						--}}
 
 						@include('partials.teads')
 
@@ -167,9 +167,6 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 				{{-- Noticias sugeridas de otros sitios/revistas --}}
 				@include('news.show.partials.suggested-site-news')
-
-				{{-- Más Noticias (para los crawlers) --}}
-				@include('news.show.partials.more-news-crawlers')
 
 				@include('partials.outbrain-news')				
 

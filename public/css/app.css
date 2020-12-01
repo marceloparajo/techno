@@ -4560,69 +4560,89 @@ ul.canales li.nav-item a:hover {
   }
 }
 
-footer {
-  background-color: #333;
-  color: #666;
-  font-size: 28px;
+.main-footer {
+  border-top: 1px solid #d4d4d4;
+  color: #343a40;
   margin-top: 50px;
-  padding: 30px 10px;
+  padding: 6px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-footer img {
-  width: 200px;
+.main-footer figure {
+  width: 120px;
+  margin: 10px auto;
+}
+
+.main-footer figure img {
+  width: 100%;
   height: auto;
 }
 
-footer a {
-  color: #666;
+.main-footer a {
+  color: #343a40;
 }
 
-footer .disclaimer {
-  font-size: 13px;
+.main-footer .footer-redes {
+  margin: 0 auto;
 }
 
-footer .footer-nav {
-  width: 100%;
+.main-footer .footer-redes a {
+  margin: 0 8px;
+  color: #555;
 }
 
-footer .footer-revistas {
-  width: 100%;
-  padding: 0;
+.main-footer .footer-redes a i {
+  font-size: 1.5rem;
 }
 
-footer .footer-revistas li {
-  display: inline-block;
-}
-
-footer .footer-revistas li a {
-  border: 1px solid #6c757d;
-  border-radius: 2px;
-  margin: 0 5px 10px;
-  padding: 2px 6px;
-  font-size: 15px;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-  text-decoration: none;
-}
-
-footer .footer-revistas li a:hover {
-  background: #c51111;
-  border-color: #c51111;
+.main-footer .disclaimer {
+  font-size: .8rem;
+  text-align: center;
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+  background: #343a40;
   color: white;
+  padding: 15px 10px 5px 10px;
+  margin: 0;
+  line-height: 1.2em;
 }
 
-@media (max-width: 575.98px) {
-  footer {
-    font-size: 20px;
-  }
-
-  footer img {
-    width: 200px;
-  }
+.main-footer .disclaimer a {
+  color: #d4d4d4;
 }
 
-.footer-nav ul li {
+.main-footer .nav-footer {
+  width: 100%;
+  background: #d4d4d4;
+  padding: 5px 0;
+  margin: 20px 0 0 0;
+}
+
+.main-footer .nav-footer ul.footer-revistas {
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+  margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+.main-footer .nav-footer ul.footer-revistas li {
+  display: inline-block;
+  margin: 5px;
+  font-size: .7rem;
+  text-transform: uppercase;
+}
+
+.main-footer .nav-footer ul.footer-revistas li a {
+  display: block;
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+  padding: 2px 5px;
+  background: white;
 }
 
 .podcasts-radio {
@@ -4980,6 +5000,7 @@ footer .footer-revistas li a:hover {
   margin: 0 3px 0 0;
   font-weight: normal;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .sidebar #exitoina header .opinion-titulo a,
@@ -5192,6 +5213,9 @@ footer .footer-revistas li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .sidebar #exitoina article a figure,
@@ -5204,8 +5228,7 @@ footer .footer-revistas li a:hover {
 .sidebar #videocolumnas article a figure {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
-  height: 50px;
-  margin: 0 10px 0 0;
+  height: auto;
   border-radius: 3px;
   overflow: hidden;
 }
@@ -5221,122 +5244,48 @@ footer .footer-revistas li a:hover {
   width: 100%;
 }
 
-.sidebar #exitoina article a h3,
-.sidebar #net article a h3,
-.sidebar #investigacion article a h3,
-.sidebar #opinion article a h3,
-.sidebar #periodismopuro article a h3,
-.sidebar #panorama article a h3,
-.sidebar #reperfilar article a h3,
-.sidebar #videocolumnas article a h3 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
-  color: #333;
-  font-size: 16px;
-  line-height: 1.05em;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-}
-
-.sidebar #exitoina article a h5,
-.sidebar #net article a h5,
-.sidebar #investigacion article a h5,
-.sidebar #opinion article a h5,
-.sidebar #periodismopuro article a h5,
-.sidebar #panorama article a h5,
-.sidebar #reperfilar article a h5,
-.sidebar #videocolumnas article a h5 {
-  font-size: 12px;
-  font-family: "Roboto", Helvetica, Arial, Sans-serif;
-  line-height: 1em;
-  margin-top: 5px;
-  text-transform: uppercase;
-}
-
-.sidebar #exitoina article.notaOpinion a,
-.sidebar #exitoina article.notaVideocolumnas a,
-.sidebar #net article.notaOpinion a,
-.sidebar #net article.notaVideocolumnas a,
-.sidebar #investigacion article.notaOpinion a,
-.sidebar #investigacion article.notaVideocolumnas a,
-.sidebar #opinion article.notaOpinion a,
-.sidebar #opinion article.notaVideocolumnas a,
-.sidebar #periodismopuro article.notaOpinion a,
-.sidebar #periodismopuro article.notaVideocolumnas a,
-.sidebar #panorama article.notaOpinion a,
-.sidebar #panorama article.notaVideocolumnas a,
-.sidebar #reperfilar article.notaOpinion a,
-.sidebar #reperfilar article.notaVideocolumnas a,
-.sidebar #videocolumnas article.notaOpinion a,
-.sidebar #videocolumnas article.notaVideocolumnas a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.sidebar #exitoina article.notaOpinion a figure,
-.sidebar #exitoina article.notaVideocolumnas a figure,
-.sidebar #net article.notaOpinion a figure,
-.sidebar #net article.notaVideocolumnas a figure,
-.sidebar #investigacion article.notaOpinion a figure,
-.sidebar #investigacion article.notaVideocolumnas a figure,
-.sidebar #opinion article.notaOpinion a figure,
-.sidebar #opinion article.notaVideocolumnas a figure,
-.sidebar #periodismopuro article.notaOpinion a figure,
-.sidebar #periodismopuro article.notaVideocolumnas a figure,
-.sidebar #panorama article.notaOpinion a figure,
-.sidebar #panorama article.notaVideocolumnas a figure,
-.sidebar #reperfilar article.notaOpinion a figure,
-.sidebar #reperfilar article.notaVideocolumnas a figure,
-.sidebar #videocolumnas article.notaOpinion a figure,
-.sidebar #videocolumnas article.notaVideocolumnas a figure {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
-  width: 100%;
-}
-
-.sidebar #exitoina article.notaOpinion a .content,
-.sidebar #exitoina article.notaVideocolumnas a .content,
-.sidebar #net article.notaOpinion a .content,
-.sidebar #net article.notaVideocolumnas a .content,
-.sidebar #investigacion article.notaOpinion a .content,
-.sidebar #investigacion article.notaVideocolumnas a .content,
-.sidebar #opinion article.notaOpinion a .content,
-.sidebar #opinion article.notaVideocolumnas a .content,
-.sidebar #periodismopuro article.notaOpinion a .content,
-.sidebar #periodismopuro article.notaVideocolumnas a .content,
-.sidebar #panorama article.notaOpinion a .content,
-.sidebar #panorama article.notaVideocolumnas a .content,
-.sidebar #reperfilar article.notaOpinion a .content,
-.sidebar #reperfilar article.notaVideocolumnas a .content,
-.sidebar #videocolumnas article.notaOpinion a .content,
-.sidebar #videocolumnas article.notaVideocolumnas a .content {
+.sidebar #exitoina article a .content,
+.sidebar #net article a .content,
+.sidebar #investigacion article a .content,
+.sidebar #opinion article a .content,
+.sidebar #periodismopuro article a .content,
+.sidebar #panorama article a .content,
+.sidebar #reperfilar article a .content,
+.sidebar #videocolumnas article a .content {
   -ms-flex-preferred-size: 63%;
       flex-basis: 63%;
 }
 
-.sidebar #exitoina article.notaOpinion:first-of-type a,
-.sidebar #exitoina article.notaVideocolumnas:first-of-type a,
-.sidebar #net article.notaOpinion:first-of-type a,
-.sidebar #net article.notaVideocolumnas:first-of-type a,
-.sidebar #investigacion article.notaOpinion:first-of-type a,
-.sidebar #investigacion article.notaVideocolumnas:first-of-type a,
-.sidebar #opinion article.notaOpinion:first-of-type a,
-.sidebar #opinion article.notaVideocolumnas:first-of-type a,
-.sidebar #periodismopuro article.notaOpinion:first-of-type a,
-.sidebar #periodismopuro article.notaVideocolumnas:first-of-type a,
-.sidebar #panorama article.notaOpinion:first-of-type a,
-.sidebar #panorama article.notaVideocolumnas:first-of-type a,
-.sidebar #reperfilar article.notaOpinion:first-of-type a,
-.sidebar #reperfilar article.notaVideocolumnas:first-of-type a,
-.sidebar #videocolumnas article.notaOpinion:first-of-type a,
-.sidebar #videocolumnas article.notaVideocolumnas:first-of-type a {
-  display: block;
+.sidebar #exitoina article a .content h3,
+.sidebar #net article a .content h3,
+.sidebar #investigacion article a .content h3,
+.sidebar #opinion article a .content h3,
+.sidebar #periodismopuro article a .content h3,
+.sidebar #panorama article a .content h3,
+.sidebar #reperfilar article a .content h3,
+.sidebar #videocolumnas article a .content h3 {
+  color: #333;
+  font-size: 1.3rem;
+  font-size: 5.7vw;
+  font-weight: 400;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  line-height: 1.05em;
+  letter-spacing: -0.01em;
+}
+
+.sidebar #exitoina article a .content h5,
+.sidebar #net article a .content h5,
+.sidebar #investigacion article a .content h5,
+.sidebar #opinion article a .content h5,
+.sidebar #periodismopuro article a .content h5,
+.sidebar #panorama article a .content h5,
+.sidebar #reperfilar article a .content h5,
+.sidebar #videocolumnas article a .content h5 {
+  font-size: 12px;
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+  line-height: .85rem;
+  margin-top: 4vw;
+  text-transform: uppercase;
 }
 
 .sidebar #exitoina article:after,
@@ -5402,125 +5351,35 @@ footer .footer-revistas li a:hover {
       flex-basis: 100%;
   height: auto;
   clear: both;
-  margin: 0 0 5px 0;
+  margin: 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-.sidebar #exitoina article:first-of-type a h3,
-.sidebar #net article:first-of-type a h3,
-.sidebar #investigacion article:first-of-type a h3,
-.sidebar #opinion article:first-of-type a h3,
-.sidebar #periodismopuro article:first-of-type a h3,
-.sidebar #panorama article:first-of-type a h3,
-.sidebar #reperfilar article:first-of-type a h3,
-.sidebar #videocolumnas article:first-of-type a h3 {
-  font-size: 18px;
+.sidebar #exitoina article:first-of-type a .content,
+.sidebar #net article:first-of-type a .content,
+.sidebar #investigacion article:first-of-type a .content,
+.sidebar #opinion article:first-of-type a .content,
+.sidebar #periodismopuro article:first-of-type a .content,
+.sidebar #panorama article:first-of-type a .content,
+.sidebar #reperfilar article:first-of-type a .content,
+.sidebar #videocolumnas article:first-of-type a .content {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.sidebar #exitoina article:first-of-type a .content h3,
+.sidebar #net article:first-of-type a .content h3,
+.sidebar #investigacion article:first-of-type a .content h3,
+.sidebar #opinion article:first-of-type a .content h3,
+.sidebar #periodismopuro article:first-of-type a .content h3,
+.sidebar #panorama article:first-of-type a .content h3,
+.sidebar #reperfilar article:first-of-type a .content h3,
+.sidebar #videocolumnas article:first-of-type a .content h3 {
+  font-size: 1.5rem;
+  font-size: 6.5vw;
   line-height: 1.03em;
-}
-
-.sidebar #exitoina article.notaPanorama a,
-.sidebar #net article.notaPanorama a,
-.sidebar #investigacion article.notaPanorama a,
-.sidebar #opinion article.notaPanorama a,
-.sidebar #periodismopuro article.notaPanorama a,
-.sidebar #panorama article.notaPanorama a,
-.sidebar #reperfilar article.notaPanorama a,
-.sidebar #videocolumnas article.notaPanorama a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.sidebar #exitoina article.notaPanorama a figure,
-.sidebar #net article.notaPanorama a figure,
-.sidebar #investigacion article.notaPanorama a figure,
-.sidebar #opinion article.notaPanorama a figure,
-.sidebar #periodismopuro article.notaPanorama a figure,
-.sidebar #panorama article.notaPanorama a figure,
-.sidebar #reperfilar article.notaPanorama a figure,
-.sidebar #videocolumnas article.notaPanorama a figure {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
-  width: 100%;
-}
-
-.sidebar #exitoina article.notaPanorama a .content,
-.sidebar #net article.notaPanorama a .content,
-.sidebar #investigacion article.notaPanorama a .content,
-.sidebar #opinion article.notaPanorama a .content,
-.sidebar #periodismopuro article.notaPanorama a .content,
-.sidebar #panorama article.notaPanorama a .content,
-.sidebar #reperfilar article.notaPanorama a .content,
-.sidebar #videocolumnas article.notaPanorama a .content {
-  -ms-flex-preferred-size: 63%;
-      flex-basis: 63%;
-}
-
-.sidebar #exitoina article.notaPanorama a .content h5,
-.sidebar #net article.notaPanorama a .content h5,
-.sidebar #investigacion article.notaPanorama a .content h5,
-.sidebar #opinion article.notaPanorama a .content h5,
-.sidebar #periodismopuro article.notaPanorama a .content h5,
-.sidebar #panorama article.notaPanorama a .content h5,
-.sidebar #reperfilar article.notaPanorama a .content h5,
-.sidebar #videocolumnas article.notaPanorama a .content h5 {
-  text-align: right;
-}
-
-.sidebar #exitoina article.notaPanorama:first-of-type a,
-.sidebar #net article.notaPanorama:first-of-type a,
-.sidebar #investigacion article.notaPanorama:first-of-type a,
-.sidebar #opinion article.notaPanorama:first-of-type a,
-.sidebar #periodismopuro article.notaPanorama:first-of-type a,
-.sidebar #panorama article.notaPanorama:first-of-type a,
-.sidebar #reperfilar article.notaPanorama:first-of-type a,
-.sidebar #videocolumnas article.notaPanorama:first-of-type a {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.sidebar #exitoina article.notaPanorama:first-of-type a figure,
-.sidebar #net article.notaPanorama:first-of-type a figure,
-.sidebar #investigacion article.notaPanorama:first-of-type a figure,
-.sidebar #opinion article.notaPanorama:first-of-type a figure,
-.sidebar #periodismopuro article.notaPanorama:first-of-type a figure,
-.sidebar #panorama article.notaPanorama:first-of-type a figure,
-.sidebar #reperfilar article.notaPanorama:first-of-type a figure,
-.sidebar #videocolumnas article.notaPanorama:first-of-type a figure {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
-  width: 100%;
-  height: 50px;
-  margin: 0 10px 0 0;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.sidebar #exitoina article.notaPanorama:first-of-type a .content,
-.sidebar #net article.notaPanorama:first-of-type a .content,
-.sidebar #investigacion article.notaPanorama:first-of-type a .content,
-.sidebar #opinion article.notaPanorama:first-of-type a .content,
-.sidebar #periodismopuro article.notaPanorama:first-of-type a .content,
-.sidebar #panorama article.notaPanorama:first-of-type a .content,
-.sidebar #reperfilar article.notaPanorama:first-of-type a .content,
-.sidebar #videocolumnas article.notaPanorama:first-of-type a .content {
-  -ms-flex-preferred-size: 63%;
-      flex-basis: 63%;
-}
-
-.sidebar #exitoina article.notaPanorama:first-of-type a .content h3,
-.sidebar #net article.notaPanorama:first-of-type a .content h3,
-.sidebar #investigacion article.notaPanorama:first-of-type a .content h3,
-.sidebar #opinion article.notaPanorama:first-of-type a .content h3,
-.sidebar #periodismopuro article.notaPanorama:first-of-type a .content h3,
-.sidebar #panorama article.notaPanorama:first-of-type a .content h3,
-.sidebar #reperfilar article.notaPanorama:first-of-type a .content h3,
-.sidebar #videocolumnas article.notaPanorama:first-of-type a .content h3 {
-  font-size: 16px;
 }
 
 .sidebar #exitoina footer,
@@ -5600,243 +5459,6 @@ footer .footer-revistas li a:hover {
 .sidebar #reperfilar footer.edi a,
 .sidebar #videocolumnas footer.edi a {
   letter-spacing: 0.02em;
-}
-
-@media (max-width: 1019.98px) {
-  .sidebar #exitoina article,
-  .sidebar #net article,
-  .sidebar #investigacion article,
-  .sidebar #opinion article,
-  .sidebar #periodismopuro article,
-  .sidebar #panorama article,
-  .sidebar #reperfilar article,
-  .sidebar #videocolumnas article {
-    width: 49%;
-    margin-left: 1%;
-    float: left;
-  }
-
-  .sidebar #exitoina article a figure,
-  .sidebar #net article a figure,
-  .sidebar #investigacion article a figure,
-  .sidebar #opinion article a figure,
-  .sidebar #periodismopuro article a figure,
-  .sidebar #panorama article a figure,
-  .sidebar #reperfilar article a figure,
-  .sidebar #videocolumnas article a figure {
-    height: 7vw;
-    width: 100%;
-  }
-
-  .sidebar #exitoina article a figure img,
-  .sidebar #net article a figure img,
-  .sidebar #investigacion article a figure img,
-  .sidebar #opinion article a figure img,
-  .sidebar #periodismopuro article a figure img,
-  .sidebar #panorama article a figure img,
-  .sidebar #reperfilar article a figure img,
-  .sidebar #videocolumnas article a figure img {
-    width: 100%;
-  }
-
-  .sidebar #exitoina article:first-of-type,
-  .sidebar #net article:first-of-type,
-  .sidebar #investigacion article:first-of-type,
-  .sidebar #opinion article:first-of-type,
-  .sidebar #periodismopuro article:first-of-type,
-  .sidebar #panorama article:first-of-type,
-  .sidebar #reperfilar article:first-of-type,
-  .sidebar #videocolumnas article:first-of-type {
-    width: 50%;
-    margin: 0;
-    border-bottom: none;
-  }
-
-  .sidebar #exitoina article:last-of-type,
-  .sidebar #net article:last-of-type,
-  .sidebar #investigacion article:last-of-type,
-  .sidebar #opinion article:last-of-type,
-  .sidebar #periodismopuro article:last-of-type,
-  .sidebar #panorama article:last-of-type,
-  .sidebar #reperfilar article:last-of-type,
-  .sidebar #videocolumnas article:last-of-type {
-    border-bottom: none;
-  }
-
-  .sidebar #exitoina header .opinion-titulo,
-  .sidebar #net header .opinion-titulo,
-  .sidebar #investigacion header .opinion-titulo,
-  .sidebar #opinion header .opinion-titulo,
-  .sidebar #periodismopuro header .opinion-titulo,
-  .sidebar #panorama header .opinion-titulo,
-  .sidebar #reperfilar header .opinion-titulo,
-  .sidebar #videocolumnas header .opinion-titulo {
-    width: 100%;
-  }
-
-  .sidebar #exitoina header.pp,
-  .sidebar #net header.pp,
-  .sidebar #investigacion header.pp,
-  .sidebar #opinion header.pp,
-  .sidebar #periodismopuro header.pp,
-  .sidebar #panorama header.pp,
-  .sidebar #reperfilar header.pp,
-  .sidebar #videocolumnas header.pp {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
-  .sidebar #exitoina header.pp .periodismopuro-titulo,
-  .sidebar #net header.pp .periodismopuro-titulo,
-  .sidebar #investigacion header.pp .periodismopuro-titulo,
-  .sidebar #opinion header.pp .periodismopuro-titulo,
-  .sidebar #periodismopuro header.pp .periodismopuro-titulo,
-  .sidebar #panorama header.pp .periodismopuro-titulo,
-  .sidebar #reperfilar header.pp .periodismopuro-titulo,
-  .sidebar #videocolumnas header.pp .periodismopuro-titulo {
-    margin-left: 0;
-  }
-
-  .sidebar #exitoina header.pp h4,
-  .sidebar #net header.pp h4,
-  .sidebar #investigacion header.pp h4,
-  .sidebar #opinion header.pp h4,
-  .sidebar #periodismopuro header.pp h4,
-  .sidebar #panorama header.pp h4,
-  .sidebar #reperfilar header.pp h4,
-  .sidebar #videocolumnas header.pp h4 {
-    display: inline-block;
-    border-top: none;
-    width: auto;
-  }
-
-  .sidebar #exitoina footer,
-  .sidebar #net footer,
-  .sidebar #investigacion footer,
-  .sidebar #opinion footer,
-  .sidebar #periodismopuro footer,
-  .sidebar #panorama footer,
-  .sidebar #reperfilar footer,
-  .sidebar #videocolumnas footer {
-    clear: both;
-    width: 100%;
-    border-top: 1px solid #ddd;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .sidebar #exitoina,
-  .sidebar #net,
-  .sidebar #investigacion,
-  .sidebar #opinion,
-  .sidebar #periodismopuro,
-  .sidebar #panorama,
-  .sidebar #reperfilar,
-  .sidebar #videocolumnas {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .sidebar #exitoina article,
-  .sidebar #exitoina article:first-of-type,
-  .sidebar #net article,
-  .sidebar #net article:first-of-type,
-  .sidebar #investigacion article,
-  .sidebar #investigacion article:first-of-type,
-  .sidebar #opinion article,
-  .sidebar #opinion article:first-of-type,
-  .sidebar #periodismopuro article,
-  .sidebar #periodismopuro article:first-of-type,
-  .sidebar #panorama article,
-  .sidebar #panorama article:first-of-type,
-  .sidebar #reperfilar article,
-  .sidebar #reperfilar article:first-of-type,
-  .sidebar #videocolumnas article,
-  .sidebar #videocolumnas article:first-of-type {
-    width: 100%;
-    margin: 0;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-
-  .sidebar #exitoina article a,
-  .sidebar #exitoina article:first-of-type a,
-  .sidebar #net article a,
-  .sidebar #net article:first-of-type a,
-  .sidebar #investigacion article a,
-  .sidebar #investigacion article:first-of-type a,
-  .sidebar #opinion article a,
-  .sidebar #opinion article:first-of-type a,
-  .sidebar #periodismopuro article a,
-  .sidebar #periodismopuro article:first-of-type a,
-  .sidebar #panorama article a,
-  .sidebar #panorama article:first-of-type a,
-  .sidebar #reperfilar article a,
-  .sidebar #reperfilar article:first-of-type a,
-  .sidebar #videocolumnas article a,
-  .sidebar #videocolumnas article:first-of-type a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-
-  .sidebar #exitoina article a figure,
-  .sidebar #exitoina article:first-of-type a figure,
-  .sidebar #net article a figure,
-  .sidebar #net article:first-of-type a figure,
-  .sidebar #investigacion article a figure,
-  .sidebar #investigacion article:first-of-type a figure,
-  .sidebar #opinion article a figure,
-  .sidebar #opinion article:first-of-type a figure,
-  .sidebar #periodismopuro article a figure,
-  .sidebar #periodismopuro article:first-of-type a figure,
-  .sidebar #panorama article a figure,
-  .sidebar #panorama article:first-of-type a figure,
-  .sidebar #reperfilar article a figure,
-  .sidebar #reperfilar article:first-of-type a figure,
-  .sidebar #videocolumnas article a figure,
-  .sidebar #videocolumnas article:first-of-type a figure {
-    -ms-flex-preferred-size: 100px;
-        flex-basis: 100px;
-    height: auto;
-    margin: 0 10px 0 0;
-  }
-
-  .sidebar #exitoina article a h3,
-  .sidebar #exitoina article:first-of-type a h3,
-  .sidebar #net article a h3,
-  .sidebar #net article:first-of-type a h3,
-  .sidebar #investigacion article a h3,
-  .sidebar #investigacion article:first-of-type a h3,
-  .sidebar #opinion article a h3,
-  .sidebar #opinion article:first-of-type a h3,
-  .sidebar #periodismopuro article a h3,
-  .sidebar #periodismopuro article:first-of-type a h3,
-  .sidebar #panorama article a h3,
-  .sidebar #panorama article:first-of-type a h3,
-  .sidebar #reperfilar article a h3,
-  .sidebar #reperfilar article:first-of-type a h3,
-  .sidebar #videocolumnas article a h3,
-  .sidebar #videocolumnas article:first-of-type a h3 {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 0px;
-            flex: 1 1 0;
-    font-size: 18px;
-  }
 }
 
 .sidebar #opinion header,
@@ -6015,52 +5637,6 @@ footer .footer-revistas li a:hover {
 
 .sidebar #masLeidasSidebar footer a:hover {
   color: #444;
-}
-
-@media (min-width: 576px) {
-  .sidebar #masLeidasSidebar #rankPerfilcom {
-    -webkit-column-count: 2;
-            column-count: 2;
-    -webkit-column-gap: 2em;
-            column-gap: 2em;
-    -webkit-column-rule: 1px solid #d4d4d4;
-            column-rule: 1px solid #d4d4d4;
-  }
-
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas {
-    -webkit-column-break-inside: avoid;
-            break-inside: avoid-column;
-    padding: 5px 0;
-  }
-
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a h3 {
-    font-size: 1.1rem;
-  }
-
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
-    height: 140px;
-  }
-}
-
-@media (min-width: 576px) {
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
-    height: 190px;
-  }
-}
-
-@media (min-width: 1020px) {
-  .sidebar #masLeidasSidebar #rankPerfilcom {
-    -webkit-column-count: 1;
-            column-count: 1;
-  }
-
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas {
-    padding: 5px 10px;
-  }
-
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
-    height: auto;
-  }
 }
 
 .sidebar #columnistas {
@@ -6300,6 +5876,366 @@ footer .footer-revistas li a:hover {
     left: -220px;
     -webkit-transition: ease .3s;
     transition: ease .3s;
+  }
+}
+
+.sidebar .carousel-item {
+  display: none;
+}
+
+.sidebar .carousel-item.active {
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .sidebar #exitoina,
+  .sidebar #net,
+  .sidebar #investigacion,
+  .sidebar #opinion,
+  .sidebar #periodismopuro,
+  .sidebar #panorama,
+  .sidebar #reperfilar,
+  .sidebar #videocolumnas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .sidebar #exitoina article,
+  .sidebar #net article,
+  .sidebar #investigacion article,
+  .sidebar #opinion article,
+  .sidebar #periodismopuro article,
+  .sidebar #panorama article,
+  .sidebar #reperfilar article,
+  .sidebar #videocolumnas article {
+    width: 49%;
+  }
+
+  .sidebar #exitoina article a,
+  .sidebar #net article a,
+  .sidebar #investigacion article a,
+  .sidebar #opinion article a,
+  .sidebar #periodismopuro article a,
+  .sidebar #panorama article a,
+  .sidebar #reperfilar article a,
+  .sidebar #videocolumnas article a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .sidebar #exitoina article a figure,
+  .sidebar #net article a figure,
+  .sidebar #investigacion article a figure,
+  .sidebar #opinion article a figure,
+  .sidebar #periodismopuro article a figure,
+  .sidebar #panorama article a figure,
+  .sidebar #reperfilar article a figure,
+  .sidebar #videocolumnas article a figure {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .sidebar #exitoina article a .content,
+  .sidebar #net article a .content,
+  .sidebar #investigacion article a .content,
+  .sidebar #opinion article a .content,
+  .sidebar #periodismopuro article a .content,
+  .sidebar #panorama article a .content,
+  .sidebar #reperfilar article a .content,
+  .sidebar #videocolumnas article a .content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .sidebar #exitoina article a .content h3,
+  .sidebar #net article a .content h3,
+  .sidebar #investigacion article a .content h3,
+  .sidebar #opinion article a .content h3,
+  .sidebar #periodismopuro article a .content h3,
+  .sidebar #panorama article a .content h3,
+  .sidebar #reperfilar article a .content h3,
+  .sidebar #videocolumnas article a .content h3 {
+    font-size: 1.1rem;
+  }
+
+  .sidebar #exitoina article:first-of-type a figure,
+  .sidebar #net article:first-of-type a figure,
+  .sidebar #investigacion article:first-of-type a figure,
+  .sidebar #opinion article:first-of-type a figure,
+  .sidebar #periodismopuro article:first-of-type a figure,
+  .sidebar #panorama article:first-of-type a figure,
+  .sidebar #reperfilar article:first-of-type a figure,
+  .sidebar #videocolumnas article:first-of-type a figure {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0;
+  }
+
+  .sidebar #exitoina article:first-of-type a .content,
+  .sidebar #net article:first-of-type a .content,
+  .sidebar #investigacion article:first-of-type a .content,
+  .sidebar #opinion article:first-of-type a .content,
+  .sidebar #periodismopuro article:first-of-type a .content,
+  .sidebar #panorama article:first-of-type a .content,
+  .sidebar #reperfilar article:first-of-type a .content,
+  .sidebar #videocolumnas article:first-of-type a .content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .sidebar #exitoina article:first-of-type a .content h3,
+  .sidebar #net article:first-of-type a .content h3,
+  .sidebar #investigacion article:first-of-type a .content h3,
+  .sidebar #opinion article:first-of-type a .content h3,
+  .sidebar #periodismopuro article:first-of-type a .content h3,
+  .sidebar #panorama article:first-of-type a .content h3,
+  .sidebar #reperfilar article:first-of-type a .content h3,
+  .sidebar #videocolumnas article:first-of-type a .content h3 {
+    font-size: 1.1rem;
+  }
+
+  .sidebar #exitoina header .opinion-titulo,
+  .sidebar #net header .opinion-titulo,
+  .sidebar #investigacion header .opinion-titulo,
+  .sidebar #opinion header .opinion-titulo,
+  .sidebar #periodismopuro header .opinion-titulo,
+  .sidebar #panorama header .opinion-titulo,
+  .sidebar #reperfilar header .opinion-titulo,
+  .sidebar #videocolumnas header .opinion-titulo {
+    width: 100%;
+  }
+
+  .sidebar #exitoina header.pp,
+  .sidebar #net header.pp,
+  .sidebar #investigacion header.pp,
+  .sidebar #opinion header.pp,
+  .sidebar #periodismopuro header.pp,
+  .sidebar #panorama header.pp,
+  .sidebar #reperfilar header.pp,
+  .sidebar #videocolumnas header.pp {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .sidebar #exitoina header.pp .periodismopuro-titulo,
+  .sidebar #net header.pp .periodismopuro-titulo,
+  .sidebar #investigacion header.pp .periodismopuro-titulo,
+  .sidebar #opinion header.pp .periodismopuro-titulo,
+  .sidebar #periodismopuro header.pp .periodismopuro-titulo,
+  .sidebar #panorama header.pp .periodismopuro-titulo,
+  .sidebar #reperfilar header.pp .periodismopuro-titulo,
+  .sidebar #videocolumnas header.pp .periodismopuro-titulo {
+    margin-left: 0;
+  }
+
+  .sidebar #exitoina header.pp h4,
+  .sidebar #net header.pp h4,
+  .sidebar #investigacion header.pp h4,
+  .sidebar #opinion header.pp h4,
+  .sidebar #periodismopuro header.pp h4,
+  .sidebar #panorama header.pp h4,
+  .sidebar #reperfilar header.pp h4,
+  .sidebar #videocolumnas header.pp h4 {
+    display: inline-block;
+    border-top: none;
+    width: auto;
+  }
+
+  .sidebar #exitoina footer,
+  .sidebar #net footer,
+  .sidebar #investigacion footer,
+  .sidebar #opinion footer,
+  .sidebar #periodismopuro footer,
+  .sidebar #panorama footer,
+  .sidebar #reperfilar footer,
+  .sidebar #videocolumnas footer {
+    clear: both;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar #exitoina article,
+  .sidebar #net article,
+  .sidebar #investigacion article,
+  .sidebar #opinion article,
+  .sidebar #periodismopuro article,
+  .sidebar #panorama article,
+  .sidebar #reperfilar article,
+  .sidebar #videocolumnas article {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .sidebar #exitoina,
+  .sidebar #net,
+  .sidebar #investigacion,
+  .sidebar #opinion,
+  .sidebar #periodismopuro,
+  .sidebar #panorama,
+  .sidebar #reperfilar,
+  .sidebar #videocolumnas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .sidebar #exitoina article,
+  .sidebar #exitoina article:first-of-type,
+  .sidebar #net article,
+  .sidebar #net article:first-of-type,
+  .sidebar #investigacion article,
+  .sidebar #investigacion article:first-of-type,
+  .sidebar #opinion article,
+  .sidebar #opinion article:first-of-type,
+  .sidebar #periodismopuro article,
+  .sidebar #periodismopuro article:first-of-type,
+  .sidebar #panorama article,
+  .sidebar #panorama article:first-of-type,
+  .sidebar #reperfilar article,
+  .sidebar #reperfilar article:first-of-type,
+  .sidebar #videocolumnas article,
+  .sidebar #videocolumnas article:first-of-type {
+    width: 100%;
+    margin: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .sidebar #exitoina article a,
+  .sidebar #exitoina article:first-of-type a,
+  .sidebar #net article a,
+  .sidebar #net article:first-of-type a,
+  .sidebar #investigacion article a,
+  .sidebar #investigacion article:first-of-type a,
+  .sidebar #opinion article a,
+  .sidebar #opinion article:first-of-type a,
+  .sidebar #periodismopuro article a,
+  .sidebar #periodismopuro article:first-of-type a,
+  .sidebar #panorama article a,
+  .sidebar #panorama article:first-of-type a,
+  .sidebar #reperfilar article a,
+  .sidebar #reperfilar article:first-of-type a,
+  .sidebar #videocolumnas article a,
+  .sidebar #videocolumnas article:first-of-type a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .sidebar #exitoina article a figure,
+  .sidebar #exitoina article:first-of-type a figure,
+  .sidebar #net article a figure,
+  .sidebar #net article:first-of-type a figure,
+  .sidebar #investigacion article a figure,
+  .sidebar #investigacion article:first-of-type a figure,
+  .sidebar #opinion article a figure,
+  .sidebar #opinion article:first-of-type a figure,
+  .sidebar #periodismopuro article a figure,
+  .sidebar #periodismopuro article:first-of-type a figure,
+  .sidebar #panorama article a figure,
+  .sidebar #panorama article:first-of-type a figure,
+  .sidebar #reperfilar article a figure,
+  .sidebar #reperfilar article:first-of-type a figure,
+  .sidebar #videocolumnas article a figure,
+  .sidebar #videocolumnas article:first-of-type a figure {
+    -ms-flex-preferred-size: 100px;
+        flex-basis: 100px;
+    height: auto;
+    margin: 0 10px 0 0;
+  }
+
+  .sidebar #exitoina article a h3,
+  .sidebar #exitoina article:first-of-type a h3,
+  .sidebar #net article a h3,
+  .sidebar #net article:first-of-type a h3,
+  .sidebar #investigacion article a h3,
+  .sidebar #investigacion article:first-of-type a h3,
+  .sidebar #opinion article a h3,
+  .sidebar #opinion article:first-of-type a h3,
+  .sidebar #periodismopuro article a h3,
+  .sidebar #periodismopuro article:first-of-type a h3,
+  .sidebar #panorama article a h3,
+  .sidebar #panorama article:first-of-type a h3,
+  .sidebar #reperfilar article a h3,
+  .sidebar #reperfilar article:first-of-type a h3,
+  .sidebar #videocolumnas article a h3,
+  .sidebar #videocolumnas article:first-of-type a h3 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 576px) {
+  .sidebar #masLeidasSidebar #rankPerfilcom {
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 2em;
+            column-gap: 2em;
+    -webkit-column-rule: 1px solid #d4d4d4;
+            column-rule: 1px solid #d4d4d4;
+  }
+
+  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas {
+    -webkit-column-break-inside: avoid;
+            break-inside: avoid-column;
+    padding: 5px 0;
+  }
+
+  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a h3 {
+    font-size: 1.1rem;
+  }
+
+  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
+    height: 140px;
+  }
+}
+
+@media (min-width: 576px) {
+  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
+    height: 190px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .sidebar #masLeidasSidebar #rankPerfilcom {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+
+  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas {
+    padding: 5px 10px;
+  }
+
+  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
+    height: auto;
   }
 }
 
@@ -9029,15 +8965,6 @@ ARTE Y CULTURA
         flex-basis: 290px;
     margin: 0 0 0 25px;
   }
-
-  .cobertura .notas-cobertura .columna-tercio .articulo.decobertura {
-    width: 300px;
-  }
-
-  .cobertura .notas-cobertura .columna-ancha .articulo.decobertura {
-    width: 300px;
-    padding-bottom: 0;
-  }
 }
 
 .cobertura.moderada .cobertura-nota-porcuatro {
@@ -11610,15 +11537,15 @@ REVISTAS
   display: none;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h5 {
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content .firma-home {
   border-top-color: #343a40;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h5 a {
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content .firma-home a {
   color: #d4d4d4;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content h5 a:hover {
+.catastrofe .catastrofe-todas article.catastrofe-grande .meta-content .firma-home a:hover {
   color: white;
 }
 
@@ -11687,16 +11614,16 @@ REVISTAS
   display: none;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h5 {
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content .firma-home {
   margin-top: 8px;
   border-top-color: #343a40;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h5 a {
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content .firma-home a {
   color: #d4d4d4;
 }
 
-.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content h5 a:hover {
+.catastrofe .catastrofe-todas article.catastrofe-chica .meta-content .firma-home a:hover {
   color: white;
 }
 
@@ -11739,9 +11666,9 @@ REVISTAS
     width: 80%;
     padding-right: 40%;
     padding-top: 10px;
-    background: -webkit-gradient(linear, left top, right top, from(#0a0a0a), color-stop(35%, #0a0a0a), to(transparent));
-    background: linear-gradient(to right, #0a0a0a 0%, #0a0a0a 35%, transparent 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', endColorstr='#000a0a0a',GradientType=1 );
+    background: -webkit-gradient(linear, left top, right top, from(#171717), color-stop(35%, #171717), to(transparent));
+    background: linear-gradient(to right, #171717 0%, #171717 35%, transparent 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$negro', endColorstr='##17171700',GradientType=1 );
     /* IE6-9 */
   }
 
@@ -11832,45 +11759,18 @@ REVISTAS
   }
 
   .catastrofe > .catastrofe-todas article.catastrofe-grande .meta-content h2 {
-    font-size: 3em;
+    font-size: 2.6em;
+    line-height: 1em;
+    margin-bottom: 20px;
   }
 
-  .catastrofe > .catastrofe-todas .catastrofe-tres {
-    position: absolute;
-    width: 30%;
-    bottom: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .catastrofe > .catastrofe-todas article.catastrofe-grande .meta-content p {
+    display: block;
+    color: white;
   }
 
   .catastrofe > .catastrofe-todas .catastrofe-tres .catastrofe-chica {
-    width: 100%;
     margin: 0;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
-  .catastrofe > .catastrofe-todas .catastrofe-tres .catastrofe-chica figure {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
-  }
-
-  .catastrofe > .catastrofe-todas .catastrofe-tres .catastrofe-chica .meta-content {
-    -ms-flex-preferred-size: 67%;
-        flex-basis: 67%;
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
-  }
-
-  .catastrofe > .catastrofe-todas .catastrofe-tres .catastrofe-chica .meta-content h5 {
-    display: none;
   }
 }
 
@@ -13299,9 +13199,9 @@ REVISTAS
   font-size: 1.5rem;
   font-size: 6.5vw;
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  weight: 400;
+  font-weight: 400;
   margin: 10px 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .perfil-noticia .supercontenedor .articulo-header h3 {
@@ -13313,20 +13213,20 @@ REVISTAS
   width: 100%;
 }
 
-.perfil-noticia .supercontenedor .container .main-article figure.figure.btn-open-gallery {
+.perfil-noticia .supercontenedor .container .main-article figure {
   width: 100%;
   position: relative;
   margin-top: 10px;
   display: block;
 }
 
-.perfil-noticia .supercontenedor .container .main-article figure.figure.btn-open-gallery a.btn-open-gallery.fotogaleria {
+.perfil-noticia .supercontenedor .container .main-article figure a.btn-open-gallery.fotogaleria {
   width: 100%;
   height: 100%;
   padding: 0;
 }
 
-.perfil-noticia .supercontenedor .container .main-article figure.figure.btn-open-gallery a.btn-open-gallery.fotogaleria i.fas {
+.perfil-noticia .supercontenedor .container .main-article figure a.btn-open-gallery.fotogaleria i.fas {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -13337,11 +13237,11 @@ REVISTAS
   border-radius: 3px;
 }
 
-.perfil-noticia .supercontenedor .container .main-article figure.figure.btn-open-gallery img {
+.perfil-noticia .supercontenedor .container .main-article figure img {
   display: block;
 }
 
-.perfil-noticia .supercontenedor .container .main-article figure.figure.btn-open-gallery .figure-caption {
+.perfil-noticia .supercontenedor .container .main-article figure figcaption {
   color: #343a40;
   font-size: .85rem;
   font-size: 4vw;
@@ -13352,7 +13252,7 @@ REVISTAS
   margin: 0 0 10px 0;
 }
 
-.perfil-noticia .supercontenedor .container .main-article figure.figure.btn-open-gallery .figure-caption .credito-foto {
+.perfil-noticia .supercontenedor .container .main-article figure figcaption .credito-foto {
   text-transform: uppercase;
   font-size: .8em;
 }
@@ -13474,10 +13374,6 @@ REVISTAS
 .perfil-noticia .supercontenedor .container .main-article .news-body h2 {
   line-height: 1em;
   margin: 20px 0 14px 0;
-}
-
-.perfil-noticia .supercontenedor .container .main-article .news-body .media.noticia-relacionada {
-  display: none;
 }
 
 .perfil-noticia .supercontenedor .container .main-article .news-body .autor {
@@ -13731,6 +13627,152 @@ REVISTAS
   color: #555;
 }
 
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas {
+  width: 100%;
+  border-top: 1px solid #d4d4d4;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas h6 {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-size: 5vw;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news .related-new {
+  width: 100%;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news .related-new figure.related-img {
+  width: 35%;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news .related-new h5 {
+  font-size: 1rem;
+  font-size: 4.7vw;
+  line-height: 1em;
+  letter-spacing: -0.02em;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news .related-new h5 a {
+  color: #171717;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada {
+  width: 100%;
+  margin: 40px 0;
+  padding: 10px 0;
+  border-top: 1px solid #d4d4d4;
+  position: relative;
+  background: white;
+  -webkit-box-shadow: 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada:after {
+  content: "";
+  clear: both;
+  display: block;
+  width: 100%;
+  height: 0;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a figure {
+  width: 80px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a figure img {
+  width: 100%;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a h6 {
+  color: #171717;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-size: 3.5vw;
+  margin: 0 0 2px 0;
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a h5 {
+  color: #171717;
+  font-size: 1rem;
+  font-size: 5vw;
+  line-height: 1em;
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .previous_news h4 {
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+  font-size: .9rem;
+  font-size: 4.5vw;
+  font-weight: 600;
+  color: #171717;
+  text-transform: uppercase;
+  padding: 20px 0 5px 0;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .previous_news ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .previous_news ul li {
+  font-weight: 400;
+  font-size: 1rem;
+  font-size: 5vw;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  margin-left: 8px;
+  line-height: 1.05em;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .previous_news ul li:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\F531";
+  font-size: 10px;
+  color: #343a40;
+  position: absolute;
+  left: 10px;
+  top: 2px;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .previous_news ul li a {
+  color: #171717;
+  text-decoration: none;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .previous_news ul li a:hover {
+  text-decoration: none;
+  color: #557c9c;
+}
+
 .perfil-noticia .float-button {
   position: fixed;
   width: 60px;
@@ -13786,7 +13828,7 @@ REVISTAS
 
   .perfil-noticia .supercontenedor .container .main-article .news-body {
     display: grid;
-    grid-template-areas: 'headerleft headerright' 'main main';
+    grid-template-areas: 'headerleft headerright' 'main main' 'bottom bottom';
     padding: 0;
     margin-top: 20px;
     font-size: 1.35rem;
@@ -13867,12 +13909,72 @@ REVISTAS
     border-top: 1px solid #d4d4d4;
   }
 
-  .perfil-noticia .supercontenedor .container .main-article figure.figure.btn-open-gallery .figure-caption {
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a figure {
+    width: 100px;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a h6 {
+    font-size: .75rem;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a h5 {
+    font-size: 1.2rem;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas h6 {
+    font-size: 1.2rem;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news .related-new {
+    width: 48%;
+    border-top: none;
+    border-bottom: 1px solid #d4d4d4;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news .related-new figure.related-img {
+    width: 100%;
+    float: none;
+    margin: 0 0 5px 0;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news .related-new h5 {
+    font-size: 1.2rem;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news {
+    grid-area: bottom;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news h4 {
+    font-size: .9rem;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news ul li {
+    font-size: 1.2rem;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article figure figcaption {
     font-size: .85rem;
     padding: 5px 0;
   }
 
-  .perfil-noticia .supercontenedor .container .main-article figure.figure.btn-open-gallery img {
+  .perfil-noticia .supercontenedor .container .main-article figure img {
     width: 100%;
   }
 }
@@ -14020,6 +14122,22 @@ REVISTAS
   .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .social-topsharing ul li a:hover {
     background: transparent;
   }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas h6 {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d4d4d4;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news .related-new h5 a {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas .related-news .related-new h5 a:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 @media (min-width: 1020px) {
@@ -14094,7 +14212,7 @@ REVISTAS
     font-family: "Roboto", Helvetica, Arial, Sans-serif;
     font-weight: normal;
     color: #343a40;
-    line-height: 1em;
+    line-height: 1.1em;
     margin: 5px 0 20px 0;
     display: block;
   }
@@ -14145,9 +14263,10 @@ REVISTAS
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    z-index: 3;
     position: -webkit-sticky;
     position: sticky;
-    padding: 30px 0;
+    padding: 30px 0 20px 0;
     border-bottom: 1px solid #d4d4d4;
     top: 0;
     background: white;
@@ -14299,80 +14418,92 @@ REVISTAS
   }
 }
 
-.mas-en-perfil .mas-en-perfil-titulo {
-  margin: 30px 0 10px 0;
-  padding: 0 10px 10px 10px;
-  border-bottom: 1px solid #d4d4d4;
-  font-family: "Roboto", Helvetica, Arial, Sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #343a40;
-  text-transform: uppercase;
+.mas-en-perfil {
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.mas-en-perfil .mas-en-perfil-titulo a {
+.mas-en-perfil .mas-en-perfil-titulo {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #343a40;
-}
-
-.mas-en-perfil .mas-en-perfil-titulo a .img-mas-en-perfil {
-  width: auto;
-  height: 28px;
-  margin-left: 10px;
-}
-
-.mas-en-perfil .sitio-externo {
-  padding-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.mas-en-perfil .sitio-externo a.noticia-sitio-externo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.mas-en-perfil .sitio-externo a.noticia-sitio-externo figure {
-  width: 35%;
-}
-
-.mas-en-perfil .sitio-externo a.noticia-sitio-externo figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.mas-en-perfil .sitio-externo a.noticia-sitio-externo h2 {
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   font-size: 18px;
   font-weight: 600;
-  padding: 0 10px;
-  color: #171717;
-  width: 62%;
+  color: #343a40;
+  text-transform: uppercase;
+  padding: 20px 010px 0;
+  border-bottom: 1px solid #343a40;
 }
 
-.mas-en-perfil .sitio-externo a.noticia-sitio-externo:hover {
+.mas-en-perfil .mas-en-perfil-titulo a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mas-en-perfil .mas-en-perfil-titulo a .img-mas-en-perfil {
+  margin-left: 10px;
+  width: auto;
+  height: 24px;
+}
+
+.sitio-externo {
+  width: 48%;
+  padding-top: 10px;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+  margin: 10px 0;
+}
+
+.sitio-externo a figure {
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  padding-top: 56.25%;
+  margin: 0 0 5px 0;
+}
+
+.sitio-externo a figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  margin-top: -56.25%;
+}
+
+.sitio-externo a h2 {
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+  font-size: 1rem;
+  font-size: 4vw;
+  font-weight: 600;
+  line-height: 1em;
+  text-align: center;
+  padding: 0 10px;
+  color: #313133;
+  padding-bottom: 15px;
+}
+
+.sitio-externo a:hover {
   text-decoration: none;
 }
 
-.mas-en-perfil .sitio-externo a.logo-revista {
+.sitio-externo .logo-revista {
   height: 25px;
   width: 100%;
   margin: 0;
@@ -14381,103 +14512,115 @@ REVISTAS
   background-repeat: no-repeat;
 }
 
-.mas-en-perfil .sitio-externo.marieclaire {
+.sitio-externo.marieclaire {
   background-color: white;
 }
 
-.mas-en-perfil .sitio-externo.marieclaire .logo-revista {
+.sitio-externo.marieclaire .logo-revista {
   background-position: 14px -9px;
 }
 
-.mas-en-perfil .sitio-externo.rouge {
+.sitio-externo.rouge {
   background-color: #17191b;
 }
 
-.mas-en-perfil .sitio-externo.rouge a h2 {
+.sitio-externo.rouge a h2 {
   color: white;
 }
 
-.mas-en-perfil .sitio-externo.rouge .logo-revista {
+.sitio-externo.rouge .logo-revista {
   background-position: 10px -97px;
 }
 
-.mas-en-perfil .sitio-externo.noticias {
+.sitio-externo.noticias {
   background-color: #4db2ec;
 }
 
-.mas-en-perfil .sitio-externo.noticias .logo-revista {
+.sitio-externo.noticias .logo-revista {
   background-position: 10px -66px;
 }
 
-.mas-en-perfil .sitio-externo.caras {
+.sitio-externo.caras {
   background-color: #dc3545;
 }
 
-.mas-en-perfil .sitio-externo.caras a h2 {
+.sitio-externo.caras a h2 {
   color: white;
 }
 
-.mas-en-perfil .sitio-externo.caras .logo-revista {
+.sitio-externo.caras .logo-revista {
   background-position: 10px -38px;
 }
 
-.mas-en-perfil .sitio-externo.parabrisas {
+.sitio-externo.exitoina {
+  background-color: white;
+}
+
+.sitio-externo.exitoina .logo-revista {
+  background-position: 10px -162px;
+}
+
+.sitio-externo.hombre {
+  background-color: white;
+}
+
+.sitio-externo.hombre .logo-revista {
+  background-position: 10px -290px;
+}
+
+.sitio-externo.weekend {
+  background-color: #424242;
+}
+
+.sitio-externo.weekend .logo-revista {
+  background-position: 10px -253px;
+}
+
+.sitio-externo.weekend a h2 {
+  color: #ebba0e;
+}
+
+.sitio-externo.parabrisas {
   background-color: #ff0002;
 }
 
-.mas-en-perfil .sitio-externo.parabrisas a h2 {
+.sitio-externo.parabrisas a h2 {
   color: white;
 }
 
-.mas-en-perfil .sitio-externo.parabrisas .logo-revista {
+.sitio-externo.parabrisas .logo-revista {
   background-position: 10px -130px;
 }
 
-.previous_news h4 {
-  font-family: "Roboto", Helvetica, Arial, Sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: #313133;
-  text-transform: uppercase;
-  padding: 20px 0 5px 0;
+.sitio-externo.perfil {
+  background-color: white;
 }
 
-.previous_news ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
+.sitio-externo.perfil .logo-revista {
+  background-position: 10px -188px;
 }
 
-.previous_news ul li {
-  font-weight: 400;
-  font-size: 16px;
-  font-family: "Roboto", Helvetica, Arial, Sans-serif;
-  margin-left: 20px;
-  line-height: 1.1em;
-  margin-bottom: 10px;
+.sitio-externo:hover {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.previous_news ul li:before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\F531";
-  font-size: 12px;
-  width: 20px;
-  height: auto;
-  display: inline-block;
-  float: left;
-  color: #ccc;
-  padding-top: 3px;
-  margin-left: -20px;
+@media (min-width: 576px) {
+  .sitio-externo a h2 {
+    font-size: 1rem;
+  }
 }
 
-.previous_news ul li a {
-  color: #b9dfff;
+@media (min-width: 768px) and (max-width: 1019.98px) {
+  .sitio-externo {
+    width: 24%;
+  }
 }
 
-.previous_news ul li a:hover {
-  text-decoration: none;
-  color: #c51111;
+@media (min-width: 1295px) {
+  .sitio-externo {
+    width: 24%;
+  }
 }
 
 .pf-channel-show .col-ads-left,

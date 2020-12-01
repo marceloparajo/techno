@@ -219,6 +219,7 @@
 					margin: 0 3px 0 0;
 					font-weight: normal;
 					font-size: 20px;
+					font-weight: bold;
 				}
 				a {
 					display: inline-block;
@@ -313,49 +314,35 @@
 			a {
 				width: 100%;
 				display: flex;
+				justify-content: space-between;
 				figure {
 					flex-basis: 35%;
-					height: 50px;
-					margin: 0 10px 0 0;
+					height: auto;
 					border-radius: 3px;
 					overflow: hidden;
 					img {
 						width: 100%;
 					}
 				}
-				h3 {
-					flex: 1 1 0;
-					color: #333;
-					font-size: 16px;
-					line-height: 1.05em;
-					font-weight: 600;
-					letter-spacing: -0.01em;
-					font-family: $font-serif;
-				}			
-				h5 {
-					font-size: 12px;
-					font-family: $font-sinserif;
-					line-height: 1em;
-					margin-top: 5px;
-					text-transform: uppercase;
-				}
-			}
-			&.notaOpinion,
-			&.notaVideocolumnas {
-				a {
-					display: flex;
-					justify-content: space-between;
-					figure {
-						flex-basis: 35%;
-						width: 100%;
-					}
-					.content {
-						flex-basis: 63%;
-					}
-				}
-				&:first-of-type {
-					a {
-						display: block;
+				.content {
+					flex-basis: 63%;
+					h3 {
+						color: #333;
+						font:{
+							size: 1.3rem;
+							size: 5.7vw;
+							weight: 400;
+							family: $font-serif;
+						}
+						line-height: 1.05em;
+						letter-spacing: -0.01em;
+					}			
+					h5 {
+						font-size: 12px;
+						font-family: $font-sinserif;
+						line-height: .85rem;
+						margin-top: 4vw;
+						text-transform: uppercase;
 					}
 				}
 			}
@@ -381,45 +368,15 @@
 						flex-basis: 100%;
 						height: auto;
 						clear: both;
-						margin: 0 0 5px 0;
-					}
-					h3 {
-						font-size: 18px;
-						line-height: 1.03em;
-					}
-				}
-			}
-			&.notaPanorama {
-				a {
-					display: flex;
-					justify-content: space-between;
-					figure {
-						flex-basis: 35%;
-						width: 100%;
+						margin: 0;
+						justify-content: flex-start;
 					}
 					.content {
-						flex-basis: 63%;
-						h5 {
-							text-align: right;
-						}
-					}
-				}
-				&:first-of-type {
-					a {
-						flex-direction: row;
-						figure {
-							flex-basis: 35%;
-							width: 100%;
-							height: 50px;
-							margin: 0 10px 0 0;
-							border-radius: 3px;
-							overflow: hidden;
-						}
-						.content {
-							flex-basis: 63%;
-							h3 {
-								font-size: 16px;
-							}
+						flex-basis: 100%;
+						h3 {
+							font-size: 1.5rem;
+							font-size: 6.5vw;
+							line-height: 1.03em;
 						}
 					}
 				}
@@ -457,75 +414,6 @@
 			&.edi {
 				a {
 					letter-spacing: 0.02em;
-				}
-			}
-		}
-		@include media-breakpoint-down(md) {
-			article {
-				width: 49%;
-				margin-left: 1%;
-				float: left;
-				a {
-					figure {
-						height: 7vw;
-						width: 100%;
-						img {
-							width: 100%;
-						}
-					}
-				}
-				&:first-of-type {
-					width: 50%;
-					margin: 0;
-					border-bottom: none;
-				}
-				&:last-of-type {
-					border-bottom: none;
-				}
-			}
-			header {
-				.opinion-titulo {
-					width: 100%;
-				}
-				&.pp {
-					flex-direction: row;
-					justify-content: space-between;
-					.periodismopuro-titulo {
-						margin-left: 0;
-					}
-					h4 {
-						display: inline-block;
-						border-top: none;
-						width: auto;
-					}
-				}
-			}
-			footer {
-				clear: both;
-				width: 100%;
-				border-top: 1px solid #ddd;
-			}
-		}
-		@include media-breakpoint-down(sm) {
-			display: flex;
-			flex-direction: column;
-			article,
-			article:first-of-type {
-				width: 100%;
-				margin: 0;
-				flex-basis: 100%;
-				a {
-					display: flex;
-					flex-direction: row;
-					figure {
-						flex-basis: 100px;
-						height: auto;
-						margin: 0 10px 0 0;
-					}
-					h3 {
-						flex: 1 1 0;
-						font-size: 18px;
-					}
 				}
 			}
 		}
@@ -678,49 +566,6 @@
 				}
 				&:hover {
 					color: #444;
-				}
-			}
-		}		
-		@include media-breakpoint-up(sm) {
-			#rankPerfilcom {
-				column-count: 2;
-				column-gap: 2em;
-				column-rule: 1px solid $linea;
-				article.masleidas {
-					break-inside: avoid-column;
-					padding: 5px 0;
-					a {
-						h3 {
-							font-size: 1.1rem
-						}
-						figure {
-							height: 140px;
-						}
-					}
-				}
-			}
-		}
-		@include media-breakpoint-up(sm) {
-			#rankPerfilcom {
-				article.masleidas {
-					a {
-						figure {
-							height: 190px;
-						}
-					}
-				}
-			}
-		}
-		@include media-breakpoint-up(lg) {
-			#rankPerfilcom {
-				column-count: 1;
-				article.masleidas {
-					padding: 5px 10px;
-					a {
-						figure {
-							height: auto;
-						}
-					}
 				}
 			}
 		}
@@ -911,6 +756,179 @@
 		}
 	}
 
+	.carousel-item {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+
+
+	@include media-breakpoint-up(sm) {
+		#exitoina,
+		#net,
+		#investigacion,
+		#opinion,
+		#periodismopuro,
+		#panorama,
+		#reperfilar,
+		#videocolumnas {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			article {
+				width: 49%;
+				a {
+					flex-direction: column;
+					justify-content: flex-start;
+					figure {
+						flex-basis: 100%;
+					}
+					.content {
+						flex-basis: 100%;
+						h3 {
+							font-size: 1.1rem;
+						}
+					}
+				}
+				&:first-of-type {
+					a {
+						figure {
+							flex-basis: 100%;
+							margin: 0;
+						}
+						.content {
+							flex-basis: 100%;
+							h3 {
+								font-size: 1.1rem;
+							}
+						}
+					}
+				}
+			}
+			header {
+				.opinion-titulo {
+					width: 100%;
+				}
+				&.pp {
+					flex-direction: row;
+					justify-content: space-between;
+					.periodismopuro-titulo {
+						margin-left: 0;
+					}
+					h4 {
+						display: inline-block;
+						border-top: none;
+						width: auto;
+					}
+				}
+			}
+			footer {
+				clear: both;
+				width: 100%;
+			}
+		}
+	}
+
+
+	@include media-breakpoint-up(md) {
+		#exitoina,
+		#net,
+		#investigacion,
+		#opinion,
+		#periodismopuro,
+		#panorama,
+		#reperfilar,
+		#videocolumnas {
+			article {
+				width: 25%;
+			}
+		}
+	}
+
+
+	@include media-breakpoint-up(lg) {
+		#exitoina,
+		#net,
+		#investigacion,
+		#opinion,
+		#periodismopuro,
+		#panorama,
+		#reperfilar,
+		#videocolumnas {
+			display: flex;
+			flex-direction: column;
+			article,
+			article:first-of-type {
+				width: 100%;
+				margin: 0;
+				flex-basis: 100%;
+				a {
+					display: flex;
+					flex-direction: row;
+					figure {
+						flex-basis: 100px;
+						height: auto;
+						margin: 0 10px 0 0;
+					}
+					h3 {
+						flex: 1 1 0;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		#masLeidasSidebar {
+			#rankPerfilcom {
+				column-count: 2;
+				column-gap: 2em;
+				column-rule: 1px solid $linea;
+				article.masleidas {
+					break-inside: avoid-column;
+					padding: 5px 0;
+					a {
+						h3 {
+							font-size: 1.1rem
+						}
+						figure {
+							height: 140px;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		#masLeidasSidebar {
+			#rankPerfilcom {
+				article.masleidas {
+					a {
+						figure {
+							height: 190px;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		#masLeidasSidebar {
+			#rankPerfilcom {
+				column-count: 1;
+				article.masleidas {
+					padding: 5px 10px;
+					a {
+						figure {
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 

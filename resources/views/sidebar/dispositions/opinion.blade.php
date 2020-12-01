@@ -10,7 +10,7 @@
 		<div class="opinion-titulo"><i class="fas fa-quote-right"></i> <a href="https://www.perfil.com/seccion/opinion/" target="_blank">Opinión</a></div>
 	</header>
 
-	@foreach(array_slice($news, 0, 6) as $key => $new)
+	@foreach(array_slice($news, 0, 4) as $key => $new)
 
 	<article class="notaOpinion">
 		<a href="{{ $new['permalink'] }}">

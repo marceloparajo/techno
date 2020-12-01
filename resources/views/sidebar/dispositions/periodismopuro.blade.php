@@ -7,7 +7,7 @@
 		<div class="periodismopuro-titulo"><i class="fa fa-quote-right" aria-hidden="true"></i> <a href="https://www.canalnet.tv/programas/periodismo-puro/" target="_blank">Periodismo Puro</a></div>
 	</header>
 
-	@foreach(array_slice($news, 0, 6) as $key => $new)
+	@foreach(array_slice($news, 0, 4) as $key => $new)
 
 	<article class="notaPeriodismopuro">
 		<a href="{{ $new['permalink'] }}">
