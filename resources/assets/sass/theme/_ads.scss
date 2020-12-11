@@ -54,3 +54,20 @@
 		display: block;
 	}
 }
+
+
+// se muestra en pagina de canal cuando es mayor a XL y cuando es menor a MD
+.contenido.canal {
+	.cuatro-notas {
+		&:nth-child(even) {
+			.down-md.up-xl {
+				@include media-breakpoint-up(xxl) {
+					display: block;
+					width: 300px;
+					grid-area: tl;
+					border-bottom: none;
+				}
+			}
+		}
+	}
+}

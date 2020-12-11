@@ -4,60 +4,86 @@
 	$slices = (int)floor(count($news)/$itemsBySlices);
 	$currentSlice = 0;
 @endphp
-<div class="container-fluid bg-white mb-3 py-3 shadow">
-	<div class="container columnistas-home">
-		<div class="d-flex flex-column flex-md-row align-items-start">
-			<div class="row w-100 flex-md-grow-1">
 
-				<h5 class="mx-2 mx-md-0">{{ __("columnists") }}</h5>
+	<div id="columnistas">
 
-				<div id="carouselColumnistas" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						@for ($i = 0; $i < $slices; $i++)
-							<li data-target="#carouselColumnistas" data-slide-to="{{ $i }}" class="@php if($i == 0) {echo 'active';} @endphp"></li>
-						@endfor
-					</ol>
+		<header>
+			<a href="/columnistas">{{ __("columnists") }}</a>
+		</header>
 
-					<div class="carousel-inner">
-					@for ($i = 0; $i < $slices; $i++)
-						<div class="carousel-item @php if($i == 0) { echo 'active';} @endphp">
-							<div class="row d-flex">
-								{{-- dd($news[0]) --}}
+		<div class="columnistas-general">
 
-								@foreach(array_slice($news, ($i*$itemsBySlices), $itemsBySlices) as $key => $new)
-									<article class="col-12 col-sm-6 col-lg-3 columna d-flex px-2">
-										<a href="{{ $new['permalink'] }}" class=" align-items-stretch">
-											@if ($new['signed'])
-												<img src="https://fotos.perfil.com/autores/default/{{ $new['author']['username'] }}.jpg" class="rounded-circle" />
-											@else
-												<img src="https://fotos.perfil.com/autores/default/default_100.jpg" class="rounded-circle" />
-											@endif
-												<h2>{{ $new['home_title'] }}</h2>
-											@if ($new['signed'])
-												<span class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</span>
-											@elseif ($new['credit'] != '')
-												<span class="firma-home">{{ $new['credit'] }}</span>
-											@endif
-										</a>
-									</article>
-								@endforeach
-							</div>
-						</div>
-					@endfor
-						
+			<div id="columnistas-caja">
+				@for ($i = 0; $i < $slices; $i++)
+					<div class="grupo-columnistas" id="grupo-col-{{ $i }}">
+							{{-- dd($news[0]) --}}
+
+							@foreach(array_slice($news, ($i*$itemsBySlices), $itemsBySlices) as $key => $new)
+								<article class="articulo-columnista">
+									<a href="{{ $new['permalink'] }}">
+										<figure>
+											<img src="https://fotos.perfil.com/autores/default/{{ $new['author']['username'] }}_50.jpg" alt="{{ $new['author']['fullname'] }}" />
+										</figure>
+
+										{{--
+
+										@if ($new['signed'])
+										<figure>
+											<img src="https://fotos.perfil.com/autores/default/{{ $new['author']['username'] }}.jpg" alt="{{ $new['author']['fullname'] }}" />
+										</figure>
+										@else
+										<figure>
+											<img src="https://fotos.perfil.com/autores/default/default_100.jpg" class="rounded-circle" />
+										</figure>
+										@endif
+
+										--}}
+											<h3>{{ $new['home_title'] }}</h3>
+
+
+											<span class="firma-home"> {{ $new['author']['fullname'] }}</span>
+
+
+										@if ($new['signed'])
+											<span class="firma-home">{{ __('by') }} {{ $new['author']['fullname'] }}</span>
+										@elseif ($new['credit'] != '')
+											<span class="firma-home">{{ $new['credit'] }}</span>
+										@endif
+									</a>
+								</article>
+							@endforeach
 					</div>
-
-				</div>
-
+				@endfor
+			</div>
+			<div class="columnistas-enlaces">
+				@for ($i = 0; $i < $slices; $i++)
+					@php $k = $i + 1; @endphp
+					<a id="col-enlace-{{ $i }}" onclick="fu({{ $i }})">{{ $k }}</a>
+				@endfor
 			</div>
 
-
-			<div class="d-flex banner-vertical">
-				<div id="" class="ads-space mx-auto text-center" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true"></div>
-			</div>
 		</div>
+		<footer>
+			<a href="/columnistas">Más columnistas</a>
+		</footer>
+
 	</div>
-</div>
+
+<script>
+	var slices = @php echo ($slices); @endphp;
+	var ancho = document.getElementById('grupo-col-0').clientWidth;
+	var elmargen = 0;
+
+	for (var i=0; i < slices; i++) {
+		function fu(i) {
+			elmargen = -(ancho * i);
+			document.getElementById("grupo-col-0").style.marginLeft = elmargen + 'px';
+		}
+	}
+
+</script>
+
+
 
 
 

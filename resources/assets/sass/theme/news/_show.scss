@@ -42,6 +42,7 @@
 				}
 				line-height: 1em;
 				letter-spacing: -0.03em;
+				color: $negro;
 			}
 			h2 {
 				font:{
@@ -140,7 +141,7 @@
 					a,
 					a strong,
 					strong a {
-						color: $azul;
+						color: $link-mobile;
 					}
 					p,
 					ul,
@@ -150,7 +151,7 @@
 						font-size: 5.5vw;
 						font-family: $font-serif;
 						line-height: 1.35em;
-						letter-spacing: -0.02em;
+						letter-spacing: -0.01em;
 						color: $dark;
 						strong,
 						a strong {
@@ -160,7 +161,7 @@
 						a,
 						a strong,
 						strong a {
-							color: $azul-dark;
+							color: $link-mobile;
 							text-decoration: underline;
 						}
 					}
@@ -480,6 +481,46 @@
 								}
 							}
 						}
+						.tags {
+							display: block;
+							border-top: 1px solid $linea;
+							margin-top: 30px;
+							margin-bottom: 20px;
+							ul {
+								padding: 0;
+								margin: 10px 0;
+								list-style: none;
+								display: flex;
+								justify-content: flex-start;
+								flex-wrap: wrap;
+								li {
+									display: inline-block;
+									margin: 0 20px 10px 0;
+									padding: 0;
+									font:{
+										family: $font-sinserif;
+										size: .85rem;
+										size: 4vw;
+									}
+									a {
+										color: $dark;
+										text-decoration: none;
+										background: $light;
+										padding: 3px .5em;
+										border-radius: 3px;
+									}
+									&:before {
+										content: none;
+									}
+								}
+							}
+							h4 {
+								display: none;
+							}
+							label {
+								display: none;
+							}
+						}
 					}
 					.previous_news {
 						h4 {
@@ -579,7 +620,7 @@
 					font-size: 2.4rem;
 				}
 				h2 {
-					font-size: 1.4rem;
+					font-size: 1.42rem;
 				}
 			}
 			.container {
@@ -597,7 +638,7 @@
 						ul,
 						ol,
 						li {
-							font-size: 1.4rem;
+							font-size: 1.42rem;
 							line-height: 1.4em;
 						}
 						.social-topsharing {
@@ -691,6 +732,13 @@
 									}
 								}
 							}
+							.tags {
+								ul {
+									li {
+										font-size: .85rem;
+									}
+								}
+							}
 						}
 						.previous_news {
 							grid-area: bottom;
@@ -722,6 +770,7 @@
 			.articulo-header {
 				h1 {
 					font-size: 3rem;
+					letter-spacing: -0.02em;
 				}
 			}
 			.container {
@@ -757,7 +806,7 @@
 							ol,
 							li {
 								line-height: 1.4em;
-								color: $negro;
+								color: $dark;
 								a,
 								strong a,
 								a strong {
@@ -821,6 +870,18 @@
 												&:hover {
 													box-shadow: none;
 												}
+											}
+										}
+									}
+								}
+							}
+							.tags {
+								ul {
+									li {
+										a {
+											box-shadow: none;
+											&:hover {
+												box-shadow: none;
 											}
 										}
 									}
@@ -957,10 +1018,10 @@
 							ul {
 								list-style: none;
 								li {
-									font-size: 1.1rem;
+									font-size: 1.12rem;
 									padding: 0;
 									margin: 10px 0 0 0;
-									line-height: 1.05em;
+									line-height: 1.15em;
 									a {
 										color: $dark;
 										text-decoration: none;

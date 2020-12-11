@@ -20,13 +20,13 @@
 			<div class="content">
 				<h3>{{ $new['home_title'] }}</h3>
 				@if ($new['signed'])
-					<h5 class="firma-home">
-						<a href="/autores/{{$new['author']['username']}}">
-							{{ __('by') }} {{ $new['author']['fullname'] }}
-						</a>
-					</h5>
-					@elseif ($new['credit'] != '')
-						<h5>{{ $new['credit'] }}</h5>
+					<span class="firma-home">
+						{{ __('by') }} {{ $new['author']['fullname'] }}
+					</span>
+				@elseif ($new['credit'] != '')
+					<span class="firma-home">
+						{{ $new['credit'] }}
+					</span>
 				@endif
 			</div>
 		</a>

@@ -66,11 +66,6 @@
 
 	</div>
 
-	<div class="caja-right">
-		SIDEBAR
-	</div>
-
-
 </div><!-- container impresa -->
 
 @endif

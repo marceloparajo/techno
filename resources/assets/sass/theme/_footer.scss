@@ -41,7 +41,7 @@
 	}
 	.nav-footer {
 		width: 100%;
-		background: $linea;
+		background: $fondo-gris;
 		padding: 5px 0;
 		margin: 20px 0 0 0;
 		ul.footer-revistas {
@@ -56,10 +56,14 @@
 				text-transform: uppercase;
 				a {
 					display: block;
-					border: 1px solid $linea;
+					border: 1px solid $fondo-gris;
 					border-radius: 3px;
 					padding: 2px 5px;
-					background: white;
+					background: $fondo-gris;
+					transition: ease .2s;
+					&:hover {
+						background: white;
+					}
 				}
 			}
 		}

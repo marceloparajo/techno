@@ -318,7 +318,6 @@
 				figure {
 					flex-basis: 35%;
 					height: auto;
-					border-radius: 3px;
 					overflow: hidden;
 					img {
 						width: 100%;
@@ -327,7 +326,7 @@
 				.content {
 					flex-basis: 63%;
 					h3 {
-						color: #333;
+						color: $negro;
 						font:{
 							size: 1.3rem;
 							size: 5.7vw;
@@ -337,12 +336,14 @@
 						line-height: 1.05em;
 						letter-spacing: -0.01em;
 					}			
-					h5 {
-						font-size: 12px;
+					.firma-home {
 						font-family: $font-sinserif;
-						line-height: .85rem;
-						margin-top: 4vw;
+						font-size: .8rem;
+						font-size: 3.3vw;
+						margin-top: 5px;
 						text-transform: uppercase;
+						color: $dark;
+						display: inline-block;
 					}
 				}
 			}
@@ -354,7 +355,7 @@
 				margin: 0;
 			}
 			&:hover {
-				background: #ededed;
+				background: rgba(0,0,0,.05);
 				a {
 					h3 {
 						color: #000;
@@ -389,6 +390,7 @@
 			border-bottom: 1px solid #ddd;
 			margin: 0;
 			background-color: white;
+			border-radius: 0 0 6px 6px;
 			a {
 				font-family: $font-sinserif;
 				font-size: 14px;
@@ -546,6 +548,7 @@
 			margin: 0;
 			background-color: white;
 			border-top: 1px solid $linea;
+			border-radius: 0 0 6px 6px;
 			a {
 				font-family: $font-sinserif;
 				font-size: 14px;
@@ -573,7 +576,8 @@
 	#columnistas {
 		background: #fff;
 		width: 100%;
-		margin: 0 0 20px 0;
+		max-width: 100%;
+		margin: 0 0 30px 0;
 		box-sizing: border-box;
 		box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
 		border-radius: 6px;
@@ -601,48 +605,76 @@
 				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
 			}
 		}
-		.grupo-columnistas {
-			article.nota-columnista {
+		.columnistas-general {
+			width: 100%;
+			max-width: 100%;
+			height: 350px;
+			position: relative;
+			overflow: hidden;
+			.columnistas-enlaces {
+				display: none;
+			}
+			#columnistas-caja {
+				position: absolute;
 				width: 100%;
-				padding: 10px;
-				border-top: 1px solid $linea;
-				height: 70px;
-				a {
-					color: $dark;
-					font:{
-						family: $font-serif;
-						weight: 400;
-					}
-					figure {
-						width: 50px;
-						height: 50px;
-						border-radius: 50%;
-						margin: 0 10px 0 0;
-						border: 1px solid $azul;
-						overflow: hidden;
-						float: left;
-						display: block;
-						img {
-							width: 100%;
-							height: 100%;
-							display: block;
+				height: 390px;
+				top: 0;
+				display: flex;
+				overflow-x: auto;
+				scroll-snap-type: x mandatory;
+				scroll-behavior: smooth;
+				-webkit-overflow-scrolling: touch;
+				.grupo-columnistas {
+					scroll-snap-align: start;
+					flex-direction: column;
+					flex-shrink: 0;
+					transform-origin: center center;
+					transform: scale(1);
+					transition: ease 0.5s;
+					width: 100%;
+					.articulo-columnista {
+						width: 100%;
+						padding: 10px;
+						border-top: 1px solid $linea;
+						height: 70px;
+						a {
+							color: $dark;
+							font:{
+								family: $font-serif;
+								weight: 400;
+							}
+							figure {
+								width: 50px;
+								height: 50px;
+								border-radius: 50%;
+								margin: 0 10px 0 0;
+								border: 1px solid $azul;
+								overflow: hidden;
+								float: left;
+								display: block;
+								img {
+									width: 100%;
+									height: 100%;
+									display: block;
+								}
+							}
+							h3 {
+								padding: 0;
+								margin: 0;
+								font-size: 1rem;
+								font-size: 5vw;
+								line-height: 1em;
+								color: $negro;
+							}
+							.firma-home {
+								padding: 0;
+								margin: 0;
+								font-size: .8rem;
+								font-size: 4.5vw;
+								color: $dark;
+								font-style: italic;
+							}
 						}
-					}
-					h3 {
-						padding: 0;
-						margin: 0;
-						font-size: 1rem;
-						font-size: 5vw;
-						line-height: 1em;
-						color: $negro;
-					}
-					h5 {
-						padding: 0;
-						margin: 0;
-						font-size: .8rem;
-						font-size: 4.5vw;
-						color: $dark;
-						font-style: italic;
 					}
 				}
 			}
@@ -655,6 +687,7 @@
 			margin: 0;
 			background-color: white;
 			border-top: 1px solid $linea;
+			border-radius: 0 0 6px 6px;
 			a {
 				font-family: $font-sinserif;
 				font-size: 14px;
@@ -677,89 +710,6 @@
 					color: #444;
 				}
 			}
-		}
-		@include media-breakpoint-up(sm) {
-			.grupo-columnistas {
-				padding: 0 10px;
-				article.nota-columnista {
-					padding: 10px 0;
-					a {
-						h3 {
-							font-size: 1.2rem;
-						}
-						h5 {
-							font-size: 1rem;
-						}
-					}
-				}
-			}
-		}
-		@include media-breakpoint-up(md) {
-			.grupo-columnistas {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
-				article.nota-columnista {
-					width: 48%;
-					overflow: hidden;
-				}
-			}
-		}
-		@include media-breakpoint-up(lg) {
-			.grupo-columnistas {
-				padding: 0;
-				display: block;
-				article.nota-columnista {
-					width: 100%;
-					padding: 0 10px;
-					border-top: 1px solid $linea;
-					height: 70px;
-					overflow: hidden;
-					position: relative;
-					a {
-						display: flex;
-						width: 510px;
-						position: absolute;
-						top: 0;
-						left: 10px;
-						transition: ease .3s;
-						padding: 10px 0;
-						figure {
-							flex-basis: 50px;
-							margin: 0 20px 0 10px;
-							order: 1;
-						}
-						h3 {
-							order: 0;
-							display: block;
-							padding: 0;
-							margin: 0;
-							width: 220px;
-						}
-						h5 {
-							order: 2;
-							display: block;
-							padding: 0;
-							margin: 0;
-							width: 210px;
-						}
-					}
-					&:hover {
-						background: #ededed;
-						a {
-							left: -220px;
-							transition: ease .3s;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	.carousel-item {
-		display: none;
-		&.active {
-			display: block;
 		}
 	}
 
@@ -788,6 +738,9 @@
 						flex-basis: 100%;
 						h3 {
 							font-size: 1.1rem;
+						}
+						.firma-home {
+							font-size: .8rem;
 						}
 					}
 				}
@@ -828,6 +781,50 @@
 				width: 100%;
 			}
 		}
+
+		#masLeidasSidebar {
+			#rankPerfilcom {
+				column-count: 2;
+				column-gap: 2em;
+				column-rule: 1px solid $linea;
+				article.masleidas {
+					break-inside: avoid-column;
+					padding: 5px 0;
+					a {
+						h3 {
+							font-size: 1.1rem
+						}
+						figure {
+							height: 190px;
+						}
+					}
+				}
+			}
+		}
+
+		#columnistas {
+			.columnistas-general {
+				#columnistas-caja {
+					.grupo-columnistas {
+						padding: 0 10px;
+						article.articulo-columnista {
+							padding: 10px 0;
+							a {
+								h3 {
+									font-size: 1.2rem;
+									font-weight: 500;
+									letter-spacing: -0.02em;
+								}
+								.firma-home {
+									font-size: 1rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
 	}
 
 
@@ -842,7 +839,30 @@
 		#videocolumnas {
 			article {
 				width: 25%;
+				a {
+					.content {
+						.firma-home {
+							font-size: .7rem;
+						}
+					}
+				}
 			}
+		}
+
+		#columnistas {
+			.columnistas-general {
+				#columnistas-caja {
+					.grupo-columnistas {
+						flex-wrap: wrap;
+						justify-content: space-between;
+						width: 50%;
+						padding: 0 14px;
+						article.articulo-columnista {
+							overflow: hidden;
+						}
+					}
+				}
+			}			
 		}
 	}
 
@@ -858,63 +878,40 @@
 		#videocolumnas {
 			display: flex;
 			flex-direction: column;
-			article,
-			article:first-of-type {
+			article {
 				width: 100%;
 				margin: 0;
-				flex-basis: 100%;
 				a {
 					display: flex;
 					flex-direction: row;
+					justify-content: space-between;
 					figure {
-						flex-basis: 100px;
-						height: auto;
-						margin: 0 10px 0 0;
+						flex-basis: 35%;
 					}
-					h3 {
-						flex: 1 1 0;
-						font-size: 18px;
+					.content {
+						flex-basis: 63%;
 					}
 				}
-			}
-		}
-	}
-
-	@include media-breakpoint-up(sm) {
-		#masLeidasSidebar {
-			#rankPerfilcom {
-				column-count: 2;
-				column-gap: 2em;
-				column-rule: 1px solid $linea;
-				article.masleidas {
-					break-inside: avoid-column;
-					padding: 5px 0;
+				&:first-of-type {
 					a {
-						h3 {
-							font-size: 1.1rem
-						}
+						display: flex;
+						justify-content: flex-start;
 						figure {
-							height: 140px;
+							flex-basis: 100%;
+							height: auto;
+							margin: 0 0 5px 0;
+						}
+						.content {
+							flex-basis: 100%;
+							h3 {
+								flex: 1 1 0;
+								font-size: 18px;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
-	@include media-breakpoint-up(sm) {
-		#masLeidasSidebar {
-			#rankPerfilcom {
-				article.masleidas {
-					a {
-						figure {
-							height: 190px;
-						}
-					}
-				}
-			}
-		}
-	}
-	@include media-breakpoint-up(lg) {
 		#masLeidasSidebar {
 			#rankPerfilcom {
 				column-count: 1;
@@ -928,6 +925,92 @@
 				}
 			}
 		}
+
+		#columnistas {
+			.columnistas-general {
+				height: 390px;
+				#columnistas-caja {
+					overflow-x: hidden;
+					padding-bottom: 30px;
+					.grupo-columnistas {
+						padding: 0;
+						width: 100%;
+						padding: 0;
+						.articulo-columnista {
+							width: 100%;
+							padding: 0 10px;
+							border-top: 1px solid $linea;
+							height: 70px;
+							overflow: hidden;
+							position: relative;
+							a {
+								display: flex;
+								width: 510px;
+								position: absolute;
+								top: 0;
+								left: 10px;
+								transition: ease .3s;
+								padding: 10px 0;
+								figure {
+									width: 50px;
+									margin: 0 20px 0 10px;
+									order: 1;
+								}
+								h3 {
+									order: 0;
+									display: block;
+									padding: 0;
+									margin: 0;
+									width: 220px;
+								}
+								.firma-home {
+									order: 2;
+									display: block;
+									padding: 0;
+									margin: 0;
+									width: 210px;
+								}
+							}
+							&:hover {
+								background: #ededed;
+								a {
+									left: -220px;
+									transition: ease .3s;
+								}
+							}
+						}
+					}
+				}
+
+				.columnistas-enlaces {
+					position: absolute;
+					bottom: 10px;
+					left: 10px;
+					right: 10px;
+					justify-content: center;
+					z-index: 9;
+					border-top: 1px solid $linea;
+					display: flex;
+					flex-wrap: wrap;
+					a {
+						display: block;
+						background: white;
+						border: 1px solid $linea;
+						border-radius: 50%;
+						width: 20px;
+						height: 20px;
+						text-align: center;
+						line-height: 1em;
+						font: normal 12px/20px $font-sinserif;
+						color: $dark;
+						text-decoration: none;
+						margin: 0 5px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
 	}
 }
 
