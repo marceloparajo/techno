@@ -283,6 +283,7 @@
 						}
 					}
 					&:first-of-type {
+						margin-bottom: 20px;
 						.meta-content {
 							a {
 								p.headline {
@@ -290,6 +291,9 @@
 								}
 							}
 						}
+					}
+					&:last-of-type {
+						padding-top: 25px;
 					}
 				}
 			}

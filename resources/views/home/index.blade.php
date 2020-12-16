@@ -26,7 +26,6 @@
 @section('body')
 
 
-	<main class="supercontenedor">
 
 			@foreach($home_content as $key => $value)
 				@if ($key != 'sidebar')
@@ -46,11 +45,12 @@
 					</section>
 				@endif
 				@if ($key == 'central-header')
+				<main class="supercontenedor">
 					<div class="contenido">
 				@endif
 			@endforeach
+		</main>
 
-	</main>
 
 @endsection
 

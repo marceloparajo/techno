@@ -232,7 +232,7 @@ $shows: #e43d3d;
 										display: none;
 									}
 								}
-								h5 {
+								.firma-home {
 									margin-left: 10px;
 								}
 							}
@@ -270,7 +270,7 @@ $shows: #e43d3d;
 										letter-spacing: 0;
 									}
 								}
-								h5 {
+								.firma-home {
 									color: white;
 									padding: 0 10px;
 									a {
@@ -307,7 +307,7 @@ $shows: #e43d3d;
 									color: white;
 								}
 							}
-							h5 {
+							.firma-home {
 								color: white;
 								a {
 									color: white;
@@ -617,7 +617,7 @@ $shows: #e43d3d;
 					figure {
 						a {
 							img {
-								transform: scale(1);
+								transform: none;
 								filter: brightness(100%);
 							}
 						}

@@ -13,7 +13,65 @@
 		border-bottom: 1px solid $linea;
 		width: 100%;
 	}
-	.contenido.canal {
+	.contenido.canal,
+	.contenido.autor {
+		.autor-pagina {
+			display: flex;
+			padding: 10px;
+			border: 1px solid $linea;
+			border-radius: 3px;
+			margin: 0 10px 20px 10px;
+			figure {
+				flex-basis: 60px;
+				margin: 0 20px 0 0;
+				width: 60px;
+				height: 60px;
+				overflow: hidden;
+				background: white;
+				img {
+					width: 100%;
+					height: auto;
+					filter: grayscale(100%);
+				}
+			}
+			.meta-autor {
+				flex: 1 1 0;
+				.nombre-autor {
+					display: block;
+					font:{
+						size: 1.2rem;
+						family: $font-serif;
+						weight: 500;
+					}
+					margin: 0 0 5px 0;
+					letter-spacing: -0.02em;
+				}
+				p.info-autor {
+					font:{
+						size: .75rem;
+						family: $font-sinserif;
+						weight: 400;
+					}
+					margin: 0 0 5px 0;
+					color: $link-mobile;
+					a {
+						color: $link-mobile;
+					}
+				}
+				p.redes-autor {
+					margin: 0;
+					a {
+						display: inline-block;
+						color: $link-mobile;
+						font-size: 1.3rem;
+						margin: 5px 15px 0 0;
+						&:hover {
+							color: $linea-oscura;
+						}
+					}
+				}
+			}
+		}
 		.cuatro-notas {
 			.articulo {
 				margin-bottom: 25px;
@@ -46,7 +104,11 @@
 			font-size: 1.6rem;
 			padding: 0 0 5px 0;
 		}
-		.contenido.canal {
+		.contenido.canal,
+		.contenido.autor {
+			.autor-pagina {
+				margin: 0 0 20px 0;
+			}
 			.cuatro-notas {
 				.articulo {
 					display: flex;
@@ -80,7 +142,8 @@
 		}
 	}
 	@include media-breakpoint-only(md) {
-		.contenido.canal {
+		.contenido.canal,
+		.contenido.autor {
 			.cuatro-notas {
 				display: flex;
 				justify-content: space-between;
@@ -99,8 +162,25 @@
 			}
 		}
 	}
+	@include media-breakpoint-up(md) {
+		.contenido.canal,
+		.contenido.autor {
+			.autor-pagina {
+				padding: 15px;
+				figure {
+					flex-basis: 100px;
+					width: 100px;
+					height: 100px;
+					img {
+						height: auto;
+					}
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
-		.contenido.canal {
+		.contenido.canal,
+		.contenido.autor {
 			.cuatro-notas {
 				&:first-of-type,
 				&:nth-child(odd) {
@@ -191,7 +271,8 @@
 		}
 	}
 	@include media-breakpoint-up(xxl) {
-		.contenido.canal {
+		.contenido.canal,
+		.contenido.autor {
 			.cuatro-notas {
 				&:nth-child(even) {
 					display: grid;

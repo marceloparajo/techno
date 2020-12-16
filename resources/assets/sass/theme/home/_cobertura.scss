@@ -49,6 +49,16 @@ ARTE Y CULTURA
 						display: none;
 					}
 				}
+				&:hover {
+					figure {
+						a {
+							img {
+								transform: none;
+								filter: none;
+							}
+						}
+					}
+				}
 			}
 		}
 		.columna-tercio {
@@ -61,12 +71,25 @@ ARTE Y CULTURA
 				padding-top: 5px;
 				figure {
 					width: 30%;
+					p {
+						display: none;
+					}
 				}
 				.meta-content {
 					width: 68%;
 					padding: 0 10px 0 0;
-					span.hat {
+					.hat {
 						display: none;
+					}
+				}
+				&:hover {
+					figure {
+						a {
+							img {
+								transform: none;
+								filter: none;
+							}
+						}
 					}
 				}
 			}
@@ -97,7 +120,7 @@ ARTE Y CULTURA
 	@include media-breakpoint-up(sm) {
 		h6 {
 			padding: 0;
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 		}
 		.notas-cobertura {
 			.columna-tercio {
@@ -124,53 +147,6 @@ ARTE Y CULTURA
 	}
 	@include media-breakpoint-up(md) {
 		.notas-cobertura {
-			.columna-tercio {
-				position: relative;
-				justify-content: flex-start;
-				.articulo.decobertura {
-					width: 100%;
-					.meta-content {
-						span.hat {
-							display: none;
-						}
-					}
-					&:first-of-type {
-						.meta-content {
-							padding-top: 0;
-						}
-						figure {
-							display: none;
-						}
-						border-bottom: 1px solid $linea;
-					}
-					&:last-of-type {
-						margin-bottom: 0;
-						.meta-content {
-							padding-bottom: 0;
-						}
-					}
-				}
-			}
-			.columna-dostercios {
-				.articulo.decobertura {
-					margin-bottom: 10px;
-					.meta-content {
-						margin: 0;
-						padding: 0;
-						h2 {
-							padding: 0;
-							margin: 0;
-						}
-					}
-				}
-			}
-			.columna-ancha {
-				padding-top: 20px;
-			}
-		}
-	}
-	@include media-breakpoint-up(md) {
-		.notas-cobertura {
 			flex-direction: row;
 			justify-content: space-between;
 			flex-wrap: wrap;
@@ -178,20 +154,56 @@ ARTE Y CULTURA
 				width: 100%;
 			}
 			.columna-dostercios {
-				width: 65%;
+				width: 49%;
 				.articulo.decobertura {
+					position: relative;
 					.meta-content {
+						position: absolute;
+						background: rgba(255,255,255,.9);
+						padding: 5px 10px;
+						margin: 0;
+						bottom: 10px;
+						left: 10px;
+						right: 10px;
+						width: auto;
 						h2 {
-							font-size: 1.6rem;
+							padding: 0;
+							margin: 0;
+							font-size: 1.3rem;
 						}
 					}
 				}
 			}
 			.columna-tercio {
-				width: 32%;
-				flex-direction: column;
+				width: 49%;
+				display: flex;
+				justify-content: space-between;
+				.articulo.decobertura {
+					width: 48%;
+					position: relative;
+					.meta-content {
+						h2 {
+							font-size: 1.2rem;
+						}
+						.hat {
+							display: block;
+							font-size: .8em;
+						}
+					}
+					&:before {
+						content: "";
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: -9px;
+						width: 1px;
+						display: block;
+						background: $linea;
+					}
+				}
 			}
 			.columna-ancha {
+				padding-top: 20px;
 				flex-direction: row;
 				justify-content: space-between;
 				.articulo.decobertura {
@@ -233,29 +245,8 @@ ARTE Y CULTURA
 							font-size: 1.4rem;
 						}
 					}
-					&:hover {
-						figure {
-							img {
-								a {
-									transform: scale(1);
-									filter: brightness(100%);
-								}
-							}
-						}
-					}
 				}
 			}
-			/*
-			.columna-tercio {
-				width: 49%;
-				flex-direction: row;
-				justify-content: space-between;
-				.articulo.decobertura {
-					width: 48%;
-					border-bottom: 1px solid $linea;
-				}
-			}
-			*/
 			.columna-ancha {
 				justify-content: space-between;
 				width: 100%;
@@ -263,17 +254,6 @@ ARTE Y CULTURA
 					margin-bottom: 0;
 					width: 32%;
 				}
-			}
-		}
-	}
-	@include media-breakpoint-up(xl) {
-		.notas-cobertura {
-			.columna-dostercios {
-				flex: 1 1 0;
-			}
-			.columna-tercio {
-				flex-basis: 290px;
-				margin: 0 0 0 25px;
 			}
 		}
 	}
@@ -476,6 +456,16 @@ Se usa para Radio Perfil
 							}
 						}
 					}
+					&:hover {
+						figure {
+							a {
+								img {
+									filter: none;
+									transform: none;
+								}
+							}
+						}
+					}
 				}
 			}
 			&.perfil-educacion {
@@ -617,6 +607,21 @@ Se usa para Radio Perfil
 						&:first-of-type {
 							flex-basis: 48%;
 							margin-bottom: 0;
+							figure {
+								height: 100%;
+								align-self: stretch;
+								overflow: hidden;
+								width: auto;
+								a {
+									img {
+										height: 100%;
+										width: auto;
+										margin: 0 0 0 60%;
+										left: -60%;
+										position: absolute;
+									}
+								}
+							}
 							.meta-content {
 								width: auto;
 								position: absolute;
@@ -949,7 +954,7 @@ Se usa para Radio Perfil
 								margin-bottom: 2px;
 							}
 						}
-						h5 {
+						.firma-home {
 							border-top: none;
 							padding-top: 0;
 							margin-top: 0;
@@ -982,7 +987,7 @@ Se usa para Radio Perfil
 							color: white;
 						}
 					}
-					h5 {
+					.firma-home {
 						color: white;
 						a {
 							color: white;

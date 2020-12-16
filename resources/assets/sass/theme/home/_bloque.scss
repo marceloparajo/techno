@@ -256,11 +256,17 @@
 						flex-basis: 100%;
 						flex-direction: row;
 						justify-content: space-between;
+						border: 1px solid $linea;
+						padding: 0;
 						figure {
 							flex-basis: 48%;
+							margin-bottom: 0;
+							padding-bottom: 0;
+							display: block;
 						}
 						.meta-content {
 							flex-basis: 48%;
+							padding: 10px 10px 10px 0;
 						}
 					}
 				}
