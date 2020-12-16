@@ -10608,14 +10608,23 @@ REVISTAS
   }
 
   .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type:hover figure a img {
-    -webkit-filter: brightness(110%);
-            filter: brightness(110%);
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-filter: none;
+            filter: none;
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:first-of-type:hover figure a p.headline {
+    display: none;
   }
 
   .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) {
+    padding: 0;
     width: 33%;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) figure {
+    margin-bottom: 0;
   }
 
   .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) .meta-content {
@@ -10623,6 +10632,7 @@ REVISTAS
     bottom: 0;
     left: 0;
     right: 0;
+    padding-bottom: 5px;
     background: rgba(0, 0, 0, 0);
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
@@ -10644,7 +10654,8 @@ REVISTAS
 
   .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) .meta-content .firma-home {
     color: white;
-    padding: 0 10px;
+    margin-left: 10px;
+    padding-top: 3px;
   }
 
   .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) .meta-content .firma-home a {
@@ -10653,6 +10664,17 @@ REVISTAS
 
   .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2) .meta-content .firma-home a:hover {
     text-decoration: underline;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2):hover figure a img {
+    -webkit-filter: none;
+            filter: none;
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(n+2):hover figure a p.headline {
+    display: none;
   }
 
   .secciones .caja-contenido .seccionfija .contenedor-notas .articulo.seccion:nth-child(3n) {
