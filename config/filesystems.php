@@ -50,7 +50,7 @@ return [
 
         'rsc' => [
             'driver' => 'local',
-            'root' => storage_path('app/rsc')
+            'root' => env('RESOURCES_PATH', storage_path('app/rsc'))
         ],
 
         'public' => [

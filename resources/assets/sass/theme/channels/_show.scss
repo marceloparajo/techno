@@ -1,212 +1,268 @@
-.pf-channel-show {
-	.col-ads-left, .col-ads-right {
-		flex: 0 0 10%;
-		min-width: 160px;
-		padding: 0;
-		z-index: 1;
-	}
-	.col-articles {
-		flex: 0 0 80%;
-
-		@include media-breakpoint-down(xl) {
-			flex: 0 0 86%;
+.supercontenedor {
+	h1.seccion-titulo {
+		font:{
+			family: $font-serif;
+			size: 1.6rem;
+			size: 7.2vw;
+			weight: 600;
 		}
-
-		@include media-breakpoint-down(lg) {
-			flex: inherit;
-		}
+		color: $negro;
+		text-transform: uppercase;
+		margin: 0 0 10px 0;
+		padding: 0 0 5px 10px;
+		border-bottom: 1px solid $linea;
+		width: 100%;
 	}
+	.contenido.canal,
+	.contenido.autor {
+		.autor-pagina {
+			display: flex;
+			padding: 10px;
+			border: 1px solid $linea;
+			border-radius: 3px;
+			margin: 0 10px 20px 10px;
+			figure {
+				flex-basis: 60px;
+				margin: 0 20px 0 0;
+				width: 60px;
+				height: 60px;
+				overflow: hidden;
+				background: white;
+				img {
+					width: 100%;
+					height: auto;
+					filter: grayscale(100%);
+				}
+			}
+			.meta-autor {
+				flex: 1 1 0;
+				.nombre-autor {
+					display: block;
+					font:{
+						size: 1.2rem;
+						family: $font-serif;
+						weight: 500;
+					}
+					margin: 0 0 5px 0;
+					letter-spacing: -0.02em;
+				}
+				p.info-autor {
+					font:{
+						size: .75rem;
+						family: $font-sinserif;
+						weight: 400;
+					}
+					margin: 0 0 5px 0;
+					color: $link-mobile;
+					a {
+						color: $link-mobile;
+					}
+				}
+				p.redes-autor {
+					margin: 0;
+					a {
+						display: inline-block;
+						color: $link-mobile;
+						font-size: 1.3rem;
+						margin: 5px 15px 0 0;
+						&:hover {
+							color: $linea-oscura;
+						}
+					}
+				}
+			}
+		}
+		.cuatro-notas {
+			.articulo {
+				margin-bottom: 25px;
+				.meta-content {
+					a {
 
-	.pf-title-container {
-		background-color: $miscelanea;
-		border-bottom: 3px solid $negro;
-		.pf-title {
-			padding-top: 20px;
-			h1 {
-				color: white;
-				font-size: 1.5rem;
-				font-weight: 400;
-				margin: 0;
-				letter-spacing: 0.02em;
-				text-transform: uppercase;
-				@include media-breakpoint-down(xs) {
-					font-size: 1.5rem;
+						h2 {
+							letter-spacing: -0.02em;
+							font-size: 1.6rem;
+							font-size: 7.2vw;
+						}
+						p.date-time {
+							font:{
+								family: $font-sinserif;
+								weight: normal;
+								size: .8rem;
+								size: 3vw;
+							}
+							text-transform: uppercase;
+							color: $linea-oscura;
+							margin: 10px 0 0 0;
+						}
+					}
 				}
 			}
 		}
 	}
-
-	.contiene-nota {
-		.nota-article {
-			width: 100%;
-			a {
-				figure {
-					width: 100%;
-					height: auto;
-					overflow: hidden;
-					margin: 0;
-					img {
+	@include media-breakpoint-up(sm) {
+		h1.seccion-titulo {
+			font-size: 1.6rem;
+			padding: 0 0 5px 0;
+		}
+		.contenido.canal,
+		.contenido.autor {
+			.autor-pagina {
+				margin: 0 0 20px 0;
+			}
+			.cuatro-notas {
+				.articulo {
+					display: flex;
+					justify-content: space-between;
+					figure {
+						flex-basis: 40%;
+					}
+					.meta-content {
+						flex-basis: 58%;
+						a {
+							h2 {
+								font-size: 1.4rem;
+							}
+							p.date-time {
+								font-size: .8rem;
+							}
+						}
+					}
+					&:first-of-type {
 						display: block;
-						width: 100%;
+						.meta-content {
+							a {
+								h2 {
+									font-size: 1.6rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-only(md) {
+		.contenido.canal,
+		.contenido.autor {
+			.cuatro-notas {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				.articulo {
+					display: block;
+					width: 48%;
+					.meta-content {
+						a {
+							h2 {
+								font-size: 1.3rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.contenido.canal,
+		.contenido.autor {
+			.autor-pagina {
+				padding: 15px;
+				figure {
+					flex-basis: 100px;
+					width: 100px;
+					height: 100px;
+					img {
 						height: auto;
 					}
 				}
-				.data-nota {
-					h3.hat {
-						font:{
-							family: $font-general;
-							size: 14px;
-							weight: 700;
-						}
-						text-transform: uppercase;
-						background: $miscelanea;
-						color: white;
-						display: inline-block;
-						padding: 5px;
-					}
-					h2 {
-						font: {
-							family: $font-destacada;
-							weight: 700;
-							size: 1.5em;
-						}
-						letter-spacing: -.02em;
-						color: $negro;
-					}
-					h4 {
-						font: {
-							family: $font-general;
-							weight: 400;
-							size: 1em;
-						}
-						color: $negro;
-						.date-time {
-							color: $secondary;
-						}
-						&.author {
-							text-transform: uppercase;
-						}
-					}
-				}
-			}
-			@include media-breakpoint-down(sm) {
-				a {
-					.data-nota {
-						h4 {
-							display: none;
-						}
-					}
-				}
 			}
 		}
-		&.standard-nota {
-			.nota-article {
-				a {
-					.data-nota {
-						transform: translateY(-26px);
-					}
-				}
-			}
-		}
-		&.biggest-nota {
-			.nota-article {
-				a {
-					.data-nota {
-						transform: translateY(-26px);
-					}
-				}
-			}
-			@include media-breakpoint-up(xl) {
-				.nota-article {
-					position: relative;
-					a {
-						.data-nota {
-							position: absolute;
-							bottom: 10px;
-							left: 20px;
-							right: 20px;
-							transform: translateY(-1px);
-							h2 {
-								padding: 20px 10px 10px 10px;
-								background: white;
-								margin: 0;
-							}
-							h4 {
-								padding:0 10px 10px 10px;
-								background: white;
-								margin: 0;
-							}
-							h3 {
-								transform: translateY(20px);
-								margin-left: 10px;
+	}
+	@include media-breakpoint-up(xl) {
+		.contenido.canal,
+		.contenido.autor {
+			.cuatro-notas {
+				&:first-of-type,
+				&:nth-child(odd) {
+					display: grid;
+					grid-template-areas: 
+						'topleft topleft topright'
+						'topleft topleft topright'
+						'topleft topleft bottomright'
+						'bottomleft bottomleft bottomright';
+				    grid-template-columns: repeat(3, 1fr);
+					grid-column-gap: 20px;
+					.articulo {
+						width: 100%;
+						display: block;
+						box-shadow: 0 3px 7px 0 rgba(0,0,0,.2);
+						background: white;
+						transition: ease .4s;
+						&:nth-child(1) {
+							grid-area: topleft;
+							.meta-content {
+								padding: 10px;
 							}
 						}
-					}
-				}
-			}
-		}
-		&.biggest-standard-nota {
-			.nota-article {
-				position: relative;
-				a {
-					.data-nota {
-						position: absolute;
-						bottom: 10px;
-						left: 20px;
-						right: 20px;
-						transform: translateY(-1px);
-						h2 {
-							padding: 20px 10px 10px 10px;
-							background: white;
-							margin: 0;
-						}
-						h4 {
+						&:nth-child(2) {
+							display: flex;
+							grid-area: bottomleft;
 							padding: 10px;
-							background: white;
-							margin: 0;
+							position: relative;
+							margin: 0 0 45px 0;
+							&:after {
+								content: ' ';
+								height: 2px;
+								background: $linea-oscura;
+								display: block;
+								position: absolute;
+								bottom: -20px;
+								left: 0;
+								right: 0;
+							}
 						}
-						h3 {
-							transform: translateY(20px);
-							margin-left: 10px;
+						&:nth-child(3) {
+							grid-area: topright;
+							padding: 10px;
+						}
+						&:nth-child(4) {
+							grid-area: bottomright;
+							padding: 10px;
+						}
+						&:hover {
+							box-shadow: 0 5px 15px 0 rgba(0,0,0,.3);
+							figure {
+								a {
+									img {
+										filter: brightness(100%);
+										transform: none;
+									}
+								}
+							}
 						}
 					}
 				}
-				@include media-breakpoint-up(xl) {
-					a {
-						.data-nota {
-							position: static;
-							transform: translateY(-26px);
-							h3 {
-								margin-left: 0;
-								transform: translateY(0);
-							}
-							h2 {
-								background: transparent;
-								padding: 0 0 10px 0;
-							}
-							h4 {
-								background: transparent;
-								padding: 0 0 10px 0;
+				&:nth-child(even) {
+					display: flex;
+					justify-content: space-between;
+					.articulo {
+						display: block;
+						flex-basis: 23.5%;
+						.meta-content {
+							a {
+								h2 {
+									font-size: 1.1rem;
+								}
 							}
 						}
-					}
-				}
-				@include media-breakpoint-down(sm) {
-					a {
-						.data-nota {
-							position: static;
-							transform: translateY(-26px);
-							h3 {
-								margin-left: 0;
-								transform: translateY(0);
-							}
-							h2 {
-								background: transparent;
-								padding: 0;
-							}
-							h4 {
-								background: transparent;
-								padding: 0;
+						&:hover {
+							figure {
+								a {
+									img {
+										filter: brightness(100%);
+										transform: none;
+									}
+								}
 							}
 						}
 					}
@@ -214,40 +270,91 @@
 			}
 		}
 	}
-}
-
-// ***** Responsive *****
-
-@include media-breakpoint-down(xs) {
-	.pf-hat {
-		left: 0;
-	}
-
-	.pf-hat::before {
-		display: none;
-	}
-}
-
-.ads-space-channel {
-	background-image: linear-gradient(135deg, #fafafa 25%, #eee 25%, #eee 50%, #fafafa 50%, #fafafa 75%, #eee 75%, #eee 100%);
-	background-size: 14.66px 13.67px;
-	&:before {
-		content: "Espacio de publicidad";
-		text-transform: uppercase;
-		padding: 5px 0;
-		margin: 0 0 5px 0;
-		text-align: center;
-		background: #eee;
-		color: #ccc;
-		font-size: 12px;
-		font-family: $font-general;
-		display: block;
-		clear: both;
-	}
-	&:after {
-		content: "";
-		display: block;
-		height: 10px;
-		clear:both;
+	@include media-breakpoint-up(xxl) {
+		.contenido.canal,
+		.contenido.autor {
+			.cuatro-notas {
+				&:nth-child(even) {
+					display: grid;
+					grid-template-areas:
+						'tl tl tm tm tr tr'
+						'bl bl bl br br br';
+					grid-column-gap: 20px;
+				    grid-template-columns: repeat(6, 1fr);
+					.down-ml.up-xl {
+						grid-area: tl;
+						width: 100%;
+					}
+					.articulo {
+						.meta-content {
+							a {
+								h2 {
+									font-size: 1.3rem;
+								}
+							}
+						}
+						&:nth-child(1) {
+							width: 100%;
+							grid-area: tm;
+							border-bottom: 1px solid $linea;
+							.meta-content {
+								a {
+									h2 {
+										font-size: 1.4rem;
+									}
+								}
+							}
+						}
+						&:nth-child(2) {
+							grid-area: tr;
+							background: $black;
+							padding: 10px;
+							width: 100%;
+							.meta-content {
+								a {
+									h2 {
+										color: white;
+										font-family: $font-condensada;
+										text-transform: uppercase;
+										font-size: 1.4rem;
+										line-height: 1.1em;
+										margin-top: 5px;
+									}
+									p {
+										color: white;
+									}
+								}
+								.firma-home {
+									color: white;
+									a {
+										color: white;
+									}
+								}
+							}
+						}
+						&:nth-child(3) {
+							grid-area: bl;
+							display: flex;
+							.meta-content {
+								padding: 0;
+								.hat {
+									display: none;
+								}
+							}
+						}
+						&:nth-child(4) {
+							grid-area: br;
+							display: flex;
+							.meta-content {
+								padding: 0;
+								.hat {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }

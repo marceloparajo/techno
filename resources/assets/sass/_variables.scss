@@ -3,14 +3,8 @@
 $body-bg: #fff;
 $body-bg-2: #333;
 
-// Typography
-$font-family-sans-serif: "Open Sans", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
-$font-condensed: "Oswald", sans-serif;
 
 // **** Perfil Custom Theme ****
-$pf_perfil_color: #333333;
 $pf_main_color: #EE2314;
 $pf_main_color_2: #e12111;
 $pf_main_color_3: #E4D20B;
@@ -33,10 +27,6 @@ $pf_tumblr_color: #32506d;
 $pf_whatsapp_color: #25D366;
 $pf_rss_color: #ee802f;
 
-$pf_articles_hat: $pf_main_color_2;
-$pf_articles_details: $pf_main_color_2;
-$pf_links_color: $pf_main_color_2;
-$pf_links_color_hover: $pf_main_color;
 
 // -- Footer
 $pf_footer_bg: #333;
@@ -45,38 +35,75 @@ $pf_footer_font_color: #666;
 // -- Sidebar
 $pf_sidebar_most_viewed_bg: $pf_font_color_headline;
 
-// News - Show
-$pf_news_show_header_line: $pf_main_color;
-$pf_news_show_author_img_border: $pf_main_color_2;
-$pf_news_show_author_name: $pf_main_color_2;
-$pf_news_show_main_image_caption_bg: $pf_main_color;
-$pf_news_show_main_image_caption_border: $pf_font_color;
 
 // Block - Mosaico
 $pf_b_mosaico_bg: #333;
 
-// Block - Especial-3
-$pf_b_especial_3_bg: #333;
-
-// -- Header
-$pf_header_bg: $pf_main_color;
-
-// -- Navbar
-$pf_navbar_bg: #333;
-$pf_a_color: #999;
-$pf_a_color_hover: $pf_main_color;
 
 
 
 
-$negro: #0a0a0a; 
-$link: #7b7b7b;
-$hover: #990033;
-$miscelanea: #0076ba;
-$miscelanea-light: #3391c8;
+
+
+
+
+/** PERFIL **/
+
+@import "theme/mixins/_breakpoints.scss";
+
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 1020px,
+	xl: 1295px,
+	xxl: 1360px,
+	xxxl: 1690px
+);
+
+// tipografias
+$font-general: 'Roboto',Helvetica,Arial,Sans-serif;
+$font-cuerpo:  'Crimson Pro', 'Times New Roman', Times, Georgia, Serif;
+$font-destacada: 'Crimson Pro', 'Times New Roman', Times, Georgia, serif;
+
+
+$font-sinserif: 'Roboto',Helvetica,Arial,Sans-serif;
+$font-serif: 'Crimson Pro', 'Times New Roman', Times, Georgia, serif;
+$font-condensada: 'Oswald',Helvetica,Arial,Sans-serif;
+
+//colores
+$negro: #171717;
+$black: #171717; 
 $dark:#343a40;
-$light: #f8f9fa;
+//$light: #ececec;
+$light: #ebebeb;
+$azul: #557c9c;
+$miscelanea: #c51111;
+$miscelanea-light: #d0dbe4;
+$azul-light: #d0dbe4;
+// $azul-dark: #445e7c;
+$azul-dark: #3d5eab;
+$link: #4295da;
+$hover: #b9dfff;
+$linea: #d4d4d4;
+$linea-oscura: #555;
+$fondo-gris: #dee0e2;
 $secondary: #6c757d;
-$font-destacada: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
-$font-general: 'Source Sans Pro',Helvetica,Arial,Sans-serif;
-$font-cuerpo: Georgia,'Times New Roman',Times,Serif;
+$link-mobile: #969696;
+
+// redes sociales 
+$fb_color: #4868AD;
+$tw_color: #4295DA;
+$ig_color: #C73F7A;
+$yt_color: #D95040;
+$linkedin_color: #0a66c2;
+$pinterest_color: #cc2127;
+$flickr_color: #ff0084;
+$tumblr_color: #32506d;
+$wa_color: #25D366;
+$rss_color: #ee802f;
+
+// paywall
+$pw-azul: #005ca0;
+$pw-azul-claro: #0072c7;

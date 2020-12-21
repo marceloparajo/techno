@@ -1,0 +1,1187 @@
+/*
+SECCIONES 
+FOTOGALERIA
+VIDEO
+REVISTAS
+
+*/
+
+
+
+$sports: #33c381;
+$mujer: #eaeaea;
+$shows: #e43d3d;
+
+
+.secciones {
+	padding: 0;
+	width: 100%;
+	margin: 0 auto 20px auto;
+	.caja-contenido {
+		.seccionfija {
+			h6 {
+				margin: 0;
+				font: {
+					family: $font-condensada;
+					size: 6vw;
+					weight: 400;
+				}
+				text-transform: uppercase;
+				color: white;
+				background: $mujer;
+				padding: 3px 10px;
+				&:before {
+					content: "Mujer";
+					display: inline-block;
+					width: auto;
+					height: auto;
+				}
+			}
+			.contenedor-notas {
+				border-bottom: 4px solid $mujer;
+				.articulo.seccion {
+					display: flex;
+					justify-content: space-between;
+					padding-top: 10px;
+					border-top: 1px solid $linea;
+					figure {
+						width: 30%;
+					}
+					.meta-content {
+						width: 68%;
+						padding: 0;
+						span.hat {
+							display: none;
+						}
+					}
+					&:first-of-type {
+						display: block;
+						padding-top: 0;
+						figure {
+							width: 100%;
+						}
+						.meta-content {
+							width: 100%;
+							padding: 5px 10px 0 10px;
+							a {
+								h2 {
+									font-size: 6vw;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.deportes {
+				h6 {
+					background: $sports;
+					&:before {
+						content: "Deportes";
+					}
+				}
+				.contenedor-notas {
+					border-bottom: 4px solid $sports;
+				}
+			}
+			&.espectaculos {
+				h6 {
+					background: $shows;
+					&:before {
+						content: "Espectaculos";
+					}
+				}
+				.contenedor-notas {
+					border-bottom: 4px solid $shows;
+				}
+			}
+			&.mujer {
+				h6 {
+					color: $dark;
+				}
+			}
+		}
+	}
+	.caja-right {
+		width: 100%;
+	}
+	@include media-breakpoint-up(sm) {
+		.caja-contenido {
+			.seccionfija {
+				h6 {
+					font-size: 1.4rem;
+				}
+				.contenedor-notas {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					border-bottom: none;
+					.articulo.seccion {
+						width: 31.5%;
+						border-bottom: 2px solid $mujer;
+						border-top: none;
+						padding: 0 0 10px 0;
+						display: block;
+						margin-bottom: 15px;
+						figure {
+							width: 100%;
+							margin: 0 0 5px 0;
+						}
+						.meta-content {
+							padding: 0;
+							width: 100%;
+							a {
+								h2 {
+									font-size: 1.1rem;
+								}
+							}
+						}
+						&:first-of-type {
+							width: 100%;
+							.meta-content {
+								padding: 0;
+								a {
+									h2 {
+										font-size: 1.5rem;
+									}
+								}
+							}
+						}
+					}
+				}
+				&.deportes {
+					.contenedor-notas {
+						border-bottom: none;
+						.articulo.seccion {
+							border-bottom: 2px solid $sports;
+						}
+					}
+				}
+				&.espectaculos {
+					.contenedor-notas {
+						border-bottom: none;
+						.articulo.seccion {
+							border-bottom: 2px solid $shows;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.caja-contenido {
+			.seccionfija {
+				.contenedor-notas {
+					.articulo.seccion {
+						&:first-of-type {
+							display: flex;
+							padding: 10px 0;
+							.meta-content {
+								width: 34%;
+								padding: 0 0 0 10px;
+								h4 {
+									display: block;
+								}
+							}
+							figure {
+								width: 66%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		.caja-contenido {
+			flex: 1 1 0;
+			.seccionfija {
+				.contenedor-notas {
+					.articulo.seccion {
+						position: relative;
+						figure {
+							h4 {
+								display: none;
+							}
+						}
+						margin: 0;
+						&:hover {
+							figure {
+								a {
+									img {
+										filter: brightness(70%);
+									}
+								}
+							}
+						}
+						&:first-of-type {
+							padding: 0;
+							figure {
+								width: 67%;
+							}
+							.meta-content {
+								width: 33%;
+								padding: 10px 0;
+								a {
+									h2 {
+										padding-left: 10px;
+										font-size: 1.6rem;
+									}
+									h4 {
+										padding-left: 10px;
+										display: none;
+									}
+								}
+								.firma-home {
+									margin-left: 10px;
+								}
+							}
+							&:hover {
+								figure {
+									a {
+										img {
+											filter: none;
+											transform: none;
+										}
+										p.headline {
+											display: none;
+										}
+									}
+								}
+							}
+						}
+						&:nth-child(n+2) {
+							padding: 0;
+							width: 33%;
+							figure {
+								margin-bottom: 0;
+							}
+							.meta-content {
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								padding-bottom: 5px;
+								background: rgba(0,0,0,0);
+								background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );				
+								a {
+									span.hat {
+										background: $negro;
+										color: white;
+										display: inline-block;
+										padding: 5px 10px;
+									}
+									h2 {
+										color: white;
+										padding: 0 10px;
+										letter-spacing: 0;
+									}
+								}
+								.firma-home {
+									color: white;
+									margin-left: 10px;
+									padding-top: 3px;
+									a {
+										color: white;
+										&:hover {
+											text-decoration: underline;
+										}
+									}
+								}
+							}
+							&:hover {
+								figure {
+									a {
+										img {
+											filter: none;
+											transform: none;
+										}
+										p.headline {
+											display: none;
+										}
+									}
+								}
+							}
+						}
+						&:nth-child(3n){
+							width: 34%;
+							border-left: 2px solid $mujer;
+							border-right: 2px solid $mujer;
+						}
+					}
+				}
+				&.deportes {
+					background: #525151;
+					.articulo.seccion {
+						.meta-content {
+							a {
+								span.hat {
+									background: $negro;
+									color: white;
+									display: inline-block;
+									padding: 5px 10px;
+								}
+								h2 {
+									color: white;
+								}
+								h4 {
+									color: white;
+								}
+							}
+							.firma-home {
+								color: white;
+								a {
+									color: white;
+									&:hover {
+										text-decoration: underline;
+									}
+								}
+							}
+						}
+						&:first-of-type {
+							.meta-content {
+								padding-right: 10px;
+							}
+						}
+						&:nth-child(3n){
+							border-left: 2px solid $sports;
+							border-right: 2px solid $sports;
+						}
+					}
+				}
+				&.espectaculos {
+					.articulo.seccion {
+						&:nth-child(3n) {
+							border-left: 2px solid $shows;
+							border-right: 2px solid $shows;
+						}
+					}
+				}
+			}
+		}
+		.caja-right {
+			flex-basis: 300px;
+			width: 300px;
+			margin: 0 0 0 20px;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.caja-contenido {
+			.seccionfija {
+				.contenedor-notas {
+					.articulo.seccion {
+						&:first-of-type {
+							.meta-content {
+								a {
+									h2 {
+										font-size: 1.8rem;
+									}
+									h4 {
+										display: block;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.fotogaleria {
+	background: $dark;
+	padding: 10px;
+	h6 {
+		font:{
+			family: $font-serif;
+			weight: 600;
+			size: 1.5rem;
+			size: 5vw;
+		}
+		text-transform: uppercase;
+		color: white,;
+	}
+	.notas-fotogaleria {
+		.articulo.defotogaleria {
+			background: $negro;
+			margin-bottom: 0;
+			.meta-content {
+				a {
+					span.hat {
+						display: none;
+					}
+					h2 {
+						color: white;
+					}
+					p.headline {
+						color: white;
+					}
+				}
+				.firma-home {
+					color: white;
+					border-top: 1px solid $dark;
+					a {
+						color: white;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+			figure {
+				.galeria-video {
+					top: 10px;
+					right: 10px;
+					left: auto;
+					bottom: auto;
+				}
+			}
+		}
+		.secundarias {
+			.articulo.defotogaleria {
+				display: flex;
+				justify-content: space-between;
+				padding-top: 10px;
+				border-top: 1px solid $dark;
+				figure {
+					width: 30%;
+					margin-bottom: 10px;
+					.galeria-video {
+						top: 5px;
+						right: auto;
+						left: 5px;
+						bottom: auto;
+					}
+				}
+				.meta-content {
+					width: 68%;
+					padding: 0 10px 0 0;
+					transform: translateY(-4px);
+				}
+			}
+		}
+		>.articulo.defotogaleria {
+			.meta-content {
+				a {
+					h2 {
+						font-size: 1.6rem;
+						font-size: 6vw;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		h6 {
+			padding: 0;
+			font-size: 1.5rem;
+		}
+		.notas-fotogaleria {
+			.secundarias {
+				display: flex;
+				justify-content: space-between;
+				.articulo.defotogaleria {
+					display: block;
+					width: 49%;
+					border-top: none;
+					padding-top: 0;
+					figure {
+						width: 100%;
+						margin: 0;
+					}
+					.meta-content {
+						width: 100%;
+						padding: 5px 10px;
+						transform: translateY(0);
+					}
+					figure {
+						.galeria-video {
+							top: 10px;
+							right: 10px;
+							left: auto;
+							bottom: auto;
+						}						
+					}
+				}
+			}
+			>.articulo.defotogaleria {
+				margin-bottom: 10px;
+				.meta-content {
+					padding: 5px 10px;
+					a {
+						h2 {
+							font-size: 1.6rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.notas-fotogaleria {
+			display: flex;
+			justify-content: space-between;
+			.secundarias {
+				width: 32%;
+				flex-direction: column;
+				.articulo.defotogaleria {
+					width: 100%;
+					position: relative;
+					.meta-content {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						padding: 10px 10px 0 10px;
+						background: rgba(0,0,0,0);
+						background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );				
+						.firma-home {
+							border-top: none;
+							padding-top: 0;
+						}
+						a {
+							h2 {
+								font-size: 1.2rem;
+							}
+						}
+					}
+					figure  {
+						a {
+							.galeria-video {
+								opacity: .7;
+							}
+						}
+					}
+					&:first-of-type {
+						margin-bottom: 10px;
+					}
+				}
+			}
+			>.articulo.defotogaleria {
+				width: 65%;
+				margin-bottom: 0;
+				position: relative;
+				padding: 0;
+				overflow: hidden;
+				.meta-content {		
+					position: absolute;
+					bottom: 0;
+					background: rgba(0,0,0,0);
+					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+					a {
+						h2 {
+							font-size: 1.4rem;
+						}
+					}
+				}
+				figure {
+					height: 100%;
+					a {
+						width: 100%;
+						height: 100%;
+						display: flex;
+						.galeria-video {
+							opacity: .7;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.notas-fotogaleria {
+			.secundarias {
+				width: auto;
+				flex-basis: 300px;
+				margin-left: 20px;
+				.articulo.defotogaleria {
+					figure {
+						a {
+							.galeria-video {
+								opacity: 1;
+							}
+						}
+					}
+					.meta-content {
+						padding-top: 50px;
+						opacity: 1;
+						transition: ease .5s;
+					}
+					&:hover {
+						.meta-content {
+							opacity: 0;
+						}
+					}
+				}
+			}
+			>.articulo.defotogaleria {
+				width: auto;
+				flex: 1 1 0;
+				.meta-content {
+					a {
+						h2 {
+							font-size: 1.6rem;
+						}
+					}
+				}
+				figure {
+					a {
+						.galeria-video {
+							opacity: 1;
+						}
+					}
+				}
+				&:hover {
+					figure {
+						a {
+							img {
+								transform: none;
+								filter: brightness(100%);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.notas-fotogaleria {
+			>.articulo.defotogaleria {
+				display: flex;
+				flex-direction: row-reverse;
+				.meta-content {
+					position: static;
+					flex-basis: 300px;
+					width: auto;
+					padding: 10px;
+					a {
+						p.headline {
+							display: block;
+						}
+						span.hat {
+							display: block;
+						}
+						h2 {
+							font-size: 1.6rem;
+							margin-bottom: 20px;
+						}
+					}
+				}
+				figure {
+					flex: 1 1 0;
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+.video {
+	width: 100%;
+	padding: 0 0 10px 0;
+	margin: 20px 0;
+	background: $dark;
+	h6 {
+		font:{
+			family: $font-serif;
+			weight: 600;
+			size: 1.5rem;
+			size: 5vw;
+		}
+		text-transform: uppercase;
+		color: white;
+		padding: 10px 10px 0 10px;
+	}
+	.container {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+		.notas-video {
+			.articulo.devideo {
+				display: flex;
+				justify-content: space-between;
+				padding-top: 10px;
+				border-top: 1px solid $linea-oscura;
+				margin: 0 10px 10px 10px;
+				width: auto;
+				figure {
+					width: 30%;
+				}
+				.meta-content {
+					width: 68%;
+					padding: 0 10px 0 0;
+					a {
+						span.hat {
+							color: white;
+							display: none;
+						}
+						h2 {
+							color: white;
+						}
+					}
+					.firma-home {
+						color: white;
+						border-top: 1px solid $linea-oscura;
+						a {
+							color: white;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+			>.articulo.devideo {
+				&:first-of-type {
+					display: block;
+					width: 100%;
+					padding: 0;
+					margin: 0;
+					border-top: none;
+					figure {
+						width: 100%;
+					}
+					.meta-content {
+						width: 100%;
+						padding: 5px 10px;
+						a {
+							h2 {
+								font-size: 1.6rem;
+								font-size: 6vw;
+							}
+						}
+					}
+				}
+				&:last-of-type {
+					.miramas {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		h6 {
+			padding: 10px 0 0 0;
+			font-size: 1.5rem;
+		}
+		.container {
+			.notas-video {
+				.articulo.devideo {
+					margin: 0 0 10px 0;
+					width: 100%;
+					.meta-content {
+						a {
+							h2 {
+								font-size: 1.1rem;
+							}
+						}
+					}
+				}
+				>.articulo.devideo:first-of-type {
+					.meta-content {
+						padding: 5px 0;
+						a {
+							h2 {
+								font-size: 1.4rem;
+								letter-spacing: 0;
+							}
+						}
+					}
+				}
+				.grupotres {
+					display: flex;
+					justify-content: space-between;
+					.articulo.devideo {
+						width: 31.5%;
+						display: block;
+						figure {
+							width: 100%;
+						}
+						.meta-content {
+							width: 100%;
+							padding: 5px 0;
+							a {
+								h2 {
+									font-size: 1.1rem;
+									letter-spacing: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-only(md) {
+		.container {
+			.notas-video {
+				>.articulo.devideo:first-of-type {
+					width: 49%;
+					float: left;
+					margin: 0 2% 0 0;
+				}
+				.grupotres {
+					width: 49%;
+					flex-direction: column;
+					.articulo.devideo {
+						display: flex;
+						width: 100%;
+						figure {
+							width: 25%;
+						}
+						.meta-content {
+							width: 73%;
+							padding: 0;
+						}
+						&:first-of-type {
+							padding-top: 0;
+							border-top: none;
+						}
+					}
+				}
+				>.articulo.devideo:last-of-type {
+					width: 49%;
+					figure {
+						width: 25%;
+					}
+					.meta-content {
+						width: 73%;
+						padding: 0;
+						a {
+							h2 {
+								font-size: 1.1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.container {
+			.notas-video {
+				display: flex;
+				justify-content: space-between;
+				>.articulo.devideo {
+					flex-basis: 300px;
+					margin: 0;
+					background: $negro;
+					position: relative;
+					.meta-content {
+						background: $negro;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						padding: 5px 10px;
+					}
+					&:last-of-type {
+						padding-top: 0;
+						border-top: none;
+						display: block;
+						figure {
+							width: 100%;
+						}
+						.meta-content {
+							width: 100%;
+						}
+					}
+					&:first-of-type {
+						.meta-content {
+							padding: 5px 10px;
+						}
+					}
+					&:hover {
+						figure {
+							a {
+								img {
+									filter: none;
+								}
+							}
+						}
+					}
+				}
+				.grupotres {
+					flex: 1 1 0;
+					padding: 0 20px;
+					flex-direction: column;
+					.articulo.devideo {
+						display: flex;
+						width: 100%;
+						figure {
+							width: 25%;
+							a {
+								p.headline {
+									display: none;
+								}
+							}
+						}
+						.meta-content {
+							width: 73%;
+							padding: 0;
+							a {
+								h2 {
+									font-size: 1.1rem;
+								}
+								.firma-home {
+									display: none;
+								}
+							}
+						}
+						&:first-of-type {
+							padding-top: 0;
+							border-top: none;
+						}
+						&:last-of-type {
+							margin-bottom: 0;
+							border-bottom: 1px solid $linea-oscura;
+						}
+						&:hover {
+							figure {
+								a {
+									img {
+										filter: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+	@include media-breakpoint-up(xl) {
+		.container {
+			max-width: 1260px;
+			.notas-video {
+				>.articulo.devideo {
+					&:first-of-type {
+						background: $negro;
+						position: relative;
+						flex-basis: 480px;
+						padding: 0;
+						figure {
+							margin: 0;
+						}
+						.meta-content {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							padding: 5px 10px;
+							background: $negro;
+							span.hat {
+								display: block;
+								color: white;
+							}
+						}
+						&:hover {
+							figure {
+								a {
+									img {
+										filter: none;
+									}
+								}
+							}
+						}
+					}
+					&:last-of-type {
+						background-color: transparent;
+						display: flex;
+						flex-direction: column;
+						&:hover {
+							figure {
+								a {
+									img {
+										transform: none;
+										filter: none;
+									}
+								}
+							}
+						}
+						.meta-content {
+							position: static;
+						}
+						figure {
+							&:hover {
+								a {
+									img {
+										transform: scale(1.02);
+									}
+								}
+							}
+						}
+						.miramas {
+							width: 100%;
+							padding: 5px 10px 0 10px;
+							margin: auto 0 0 0;
+							color: white;
+							display: block;
+							background: $negro;
+							text-align:  right;
+							border-radius: 2px;
+							a {
+								color: white;
+								&:before {
+									content: "\F061";
+									font-family: "FontAwesome";
+									display: block;
+									font-size: 20px;
+									margin-left: 10px;
+									transform: translateY(-5px);
+									float: right;
+								}
+							}
+						}
+					}
+				}
+				.grupotres {
+					.articulo.devideo {
+						border-top: none;
+						background: $negro;
+						padding: 0;
+						figure {
+							width: 40%;
+						}
+						.meta-content {
+							width: 60%;
+							padding: 10px;
+							h2 {
+								font-size: 1.1rem;
+								margin: 0;
+							}
+							.firma-home {
+								dislay: block;
+								margin: 5px 0 0 0;
+							}
+						}
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.revistas {
+	margin:0 auto 20px auto;
+	padding: 0;
+	border: 1px solid $linea;
+	.notas-revistas {
+		.articulo.derevistas {
+			margin: 0;
+			padding: 10px;
+			transition: ease .3s;
+			.meta-content {
+				padding: 5px 0;
+			}
+			&:hover {
+				background: $light;
+			}
+		}
+		.grupotres {
+			.articulo.derevistas {
+				border-top: 1px solid $linea;
+				display: flex;
+				justify-content: space-between;
+				figure {
+					width: 30%;
+				}
+				.meta-content {
+					width: 68%;
+					padding: 0;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.notas-revistas {
+			display: flex;
+			>.articulo.derevistas {
+				width: 50%;
+				margin: 0;
+				position: relative;
+				border-top: 1px solid $linea;
+				.meta-content {
+					position: absolute;
+					bottom: 10px;
+					left: 20px;
+					right: 20px;
+					background: white;
+					width: auto;
+					padding: 10px;
+					a {
+						h2 {
+							font-size: 1.4rem;
+						}
+					}
+				}
+			}
+			.grupotres {
+				width: 50%;
+				.articulo.derevistas {
+					border-left: 1px solid $linea;
+					.meta-content {
+						a {
+							h2 {
+								font-size: 1.1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+	@include media-breakpoint-up(lg) {
+		.notas-revistas {
+			.articulo.derevistas {
+				&:hover {
+					figure {
+						a {
+							img {
+								filter: none;
+								transform: none;
+							}
+						}
+					}
+				}
+			}
+			>.articulo.derevistas {
+				width: 33%;
+			}
+			.grupotres {
+				width: 67%;
+				display: flex;
+				.articulo.derevistas {
+					width: 33.333333%;
+					display: block;
+					figure {
+						width: 100%;
+					}
+					.meta-content {
+						width: 100%;
+						padding: 5px 0;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.notas-revistas {
+			>.articulo.derevistas {
+				.meta-content {
+					bottom: 20px;
+				}
+			}
+		}
+	}
+}

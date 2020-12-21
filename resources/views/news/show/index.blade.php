@@ -56,152 +56,131 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 @endsection
 
-@section('body-class', 'pf-new-show')
+@section('body-class', 'perfil-noticia')
 
 @section('body')
-	<div class="container-fluid">
-		<div class="container d-flex position-relative p-0">
 
-			<!-- banners skycraper -->
-			<div class="ad-160x600-left position-relative">
-				<div id="" style="top:5em;margin-bottom:1em;" class="ads-space sticky-top" data-id="sticky_160x600x-pos-" data-w="160" data-h="600" data-loaded="false" data-reload="true"></div>
+
+	<main class="supercontenedor {{ $noticia['channel']['slug']}}" id="page">
+
+		<header class="articulo-header">
+			<div class="hat">
+				<a href="/seccion/{{ $noticia['channel']['slug']}}">{{ strtoupper($noticia['channel']['name']) }}</a>
+				@if($noticia['hat'] != '')
+				<span class="volanta">{{ $noticia['hat'] }}</span>
+				@endif
 			</div>
-			<div class="ad-160x600-right position-relative">
-				<div id="" style="top:5em;margin-bottom:1em;" class="ads-space sticky-top float-right text-right" data-id="sticky_160x600x-pos-" data-w="160" data-h="600" data-loaded="false" data-reload="true"></div>
-			</div>
-			<!-- //banners-skycrapper -->
 
-			<div class="container col-article p-0">
-				<div class="row m-0">
-					<div class="noticia-cuerpo p-1 pt-2 pt-lg-3 pr-lg-4">
-						<div class="d-flex flex-column-reverse flex-md-column">
+			{{-- Titulos --}}
+			<h1>{{ $noticia['title'] }}</h1>
+			<h2 class="headline">
+				{{ $noticia['headline'] }}
+			</h2>
+		</header>
 
-							{{-- Fecha y Canal --}}
-							<div class="mt-md-3 px-md-3">
-								<h3 class="text-center text-secondary pb-1">{{ strtoupper($noticia['channel']['name']) }}  | <span>{{ $noticia['date_available_human'] }}</span></h3>
-							</div>
+		<div class="container" id="noticia">
+			
+			<article class="main-article">
 
-							{{-- Titulos --}}
-							<div class="pt-0 pt-m-2">
-								<div class="col-12 headgroup px-1 px-md-3">
-									<h1>{{ $noticia['title'] }}</h1>
-									<p class="headline mt-3 text-secondary">
-										{{ $noticia['headline'] }}
-									</p>
-								</div>
-								<div class="col-12 p-0 text-center">
-									<div id="" class="ads-space text-center d-lg-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false"></div>
-								</div>
 
-								{{-- Author --}}
-								@if ($noticia['signed'])
-									@php
-										$displayAuthor =  ($noticia['signed']) ? "block":'none';
-									@endphp
-								@endif
+				{{-- Embed Code --}}
+					@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code')
+						@php
+							if (STRPOS($noticia['embed_code'], 'rudo') || STRPOS($noticia['embed_code'], 'tube')  ) {
+						@endphp
+							{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
+						@php
+							} 
+						@endphp
+					@else 
+						@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])				
+					@endif
 
-								@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
-								@include('news.show.partials.social-top')
-							</div>
 
-							@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])
-						</div>
-
-						{{-- Cuerpo --}}
-						<div class="new-body mt-3">
-							<div class="position-absolute botones-redes">
-								<div class="boton-redes-sociales position-sticky">
-									<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-										<i class="fas fa-share-alt"></i>
-									</a>
-
-									<div class="collapse" id="collapseExample">
-										<ul>
-											<li><a href="http://pinterest.com/pin/create/button/?url={{ $noticia['permalink'] }}&media={{ $noticia['main_image']['src'] }}&description={{ urlencode($noticia['title']) }}" class="pinterest" target="_blank"><i class="fab fa-pinterest"></i></a></li>
-											<li><a href="whatsapp://send?text={{ urlencode($noticia['title']) . ' ' . $noticia['permalink'] }}" data-action="share/whatsapp/share" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-											<li> <a class="twitter" href="https://twitter.com/intent/tweet?text={{ urlencode($noticia['title']) }}&url={{ $noticia['permalink'] }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
-											<li><a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ $noticia['permalink'] }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-12 px-1" id="news-body" style="overflow-x: hidden;">
-								<div class="col-12 p-0 text-center mt-2">
-									<div id="" class="ads-space text-center d-none d-lg-block d-xl-none" data-id="468x60x-pos-" data-w="468" data-h="60" data-loaded="false" data-reload="false"></div>
-									<div id="" class="ads-space text-center d-none d-xl-block" data-id="728x90x-pos-" data-w="728" data-h="90" data-loaded="false" data-reload="false"></div>
-								</div>
-
-								{!! $body !!}
-
-								{{-- Credit --}}
-								@if (! $noticia['signed'] && $noticia['credit'] != '')
-									<p>{{ __('by') }} {{ $noticia['credit'] }}</p>
-								@endif
-
-								{{-- Embed Code --}}
-								@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code'))
-									{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
-								@endif
-
-								{{-- Gallery --}}
-								@if (count($noticia['gallery']) > 1)
-									<div class="col-12 border p-3">
-										<h3>{{ __('Image Gallery') }}</h3>
-										<div id="gallery-thumbnails" class="bottom-gallery">
-											@foreach ($noticia['gallery'] as $image)
-												<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
-													<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}">
-												</a>
-											@endforeach
-										</div>
-									</div>
-								@endif
-
-								@include('partials.teads')
-
-								<div id="" class="ads-space" data-id="interscroller" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>
-
-								@include('news.show.partials.news-tags')
-							</div>
-						</div>
-
+				<div class="news-body">
+					<div class="fecha-autor">
+						{{-- Author --}}
 						@if ($noticia['signed'])
-							@include('news.show.partials.author-bottom', ['author' => $noticia['author']])
+							<div class="autor"> 
+								@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
+							</div>
+						{{-- Credit --}}
+						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
+							<div class="autor">{{ $noticia['credit'] }}</div>
+						@endif						
+						<div class="fecha">
+							{{ $noticia['date_available_human'] }}
+						</div>
+					</div>
+
+
+					@include('news.show.partials.news-tags')
+
+
+					@include('news.show.partials.social-top', ['shareText' => __('share')] )
+
+
+
+
+					<div class="news-content"> 
+
+						{!! $body !!}
+
+
+						{{-- Embed Code --}}
+						@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code')
+							{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
 						@endif
 
-						{{-- Noticias sugeridas de otros sitios/revistas --}}
-						@include('news.show.partials.suggested-site-news')
-
-						{{-- Más Noticias (para los crawlers) --}}
-						@include('news.show.partials.more-news-crawlers')
-
-						<div class="col-12 p-0 d-lg-none text-center mt-2">
-							<div id="" class="ads-space text-center d-lg-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false"></div>
-						</div>
-						<div class="comments">
-							<div class="col-12">
-								<h4>{{ __('comments') }}</h4>
-								<div class="fb-comments" data-href="{{ $noticia['permalink'] }}" data-numposts="10" data-width="100%"></div>
+						{{-- Gallery --}}
+						@if (count($noticia['gallery']) > 1)
+							<div class="col-12 border p-3">
+								<h3>{{ __('Image Gallery') }}</h3>
+								<div id="gallery-thumbnails" class="bottom-gallery">
+									@foreach ($noticia['gallery'] as $image)
+										<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
+											<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}">
+										</a>
+									@endforeach
+								</div>
 							</div>
-						</div>
-						<div class="col-12 p-0 d-lg-none text-center mt-2">
-							<div id="" class="ads-space text-center d-lg-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false">
-							</div>
-						</div>
+						@endif
 
-						@include('partials.outbrain-news')
+
+						{{-- Author
+						@if ($noticia['signed'])
+							@include('news.show.partials.author-bottom', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
+						@endif
+						--}}
+
+						@include('partials.teads')
+
+						@include('news.show.partials.news-tags')
 
 					</div>
 
-					{{-- Sidebar --}}
-					<div class="d-flex pf-sidebar">
-						@include('sidebar.index', ['content' => $sidebar_content])
-					</div>
+					{{-- Más Noticias (para los crawlers) --}}
+					@include('news.show.partials.more-news-crawlers')
+
+					
 				</div>
-			</div>
-		</div>
-	</div>
+
+				{{-- Noticias sugeridas de otros sitios/revistas --}}
+				@include('news.show.partials.suggested-site-news')
+
+				@include('partials.outbrain-news')				
+
+			</article>
+
+			<aside class="sidebar">
+				@include('sidebar.index', ['content' => $sidebar_content])
+			</aside>
+
+		</div><!-- noticia -->
+
+
+
+	</main> <!-- maincontainer -->
 
 	@if (env('APP_MODE_PREVIEW', false))
 		<a href="http://cmspress.perfil.com/admin/galerias/editar/{{ $noticia['id'] }}" target="_blank" class="float-button">

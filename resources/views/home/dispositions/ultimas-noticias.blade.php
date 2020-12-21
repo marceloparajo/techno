@@ -2,7 +2,7 @@
     <section class="pf-disp-bloque-inferior mt-5">
         <div class="row">
             <div class="col-12 text-center">
-                <div id="" class="ads-space text-center mb-2 d-none d-lg-block" data-id="970x90x-pos-" data-w="970" data-h="90" data-loaded="false" data-reload="false"></div>
+                <div id="" class="ads-space text-center mb-2" data-id="970x90x-pos-" data-w="970" data-h="90" data-loaded="false" data-reload="false"></div>
             </div>
         </div>
         <div class="row p-1">

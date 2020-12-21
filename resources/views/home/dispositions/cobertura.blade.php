@@ -3,79 +3,114 @@
 
 	@if (isset($news[2]))
 
-		<section class="container-fluid cobertura bg-dark py-2 mb-4">
+		<div class="container cobertura mb-4">
 
+			<h6>{{ $news[0]['hat'] ?? '' }}</h6>
 
-			<div class="row bn-stick bg-dark">
-				<div class="col-12">
-					<div id="" class="d-none d-md-block d-lg-none ads-space text-center" data-id="468x60x-pos-" data-w="468" data-h="60" data-loaded="false" data-reload="false"></div>
-					<div id="" class="d-none d-lg-block ads-space text-center mt-2 mb-3" data-id="970x90x-pos-" data-w="970" data-h="90" data-loaded="false" data-reload="false"></div>
-				</div>
-			</div>
+			<div class="notas-cobertura">
 
-			<div class="container">
-
-				<h5>{{ $news[0]['hat'] ?? '' }}</h5>
-
-				<div class="row">
-					<div class="col-12 col-md-6 col-lg-4 col-xl-3 nota-a order-1 order-xl-0">
-						<article class="cobertura-nota">
-							<a href="{{ $news[1]['permalink'] }}">
-								<figure>
-									{!! $imageHelper->getLazyImages( $news[1]['main_image']['srcs']['medium-wide'], 720, $news[1]['main_image']['caption'],'img-fluid','720x405') !!}
-								</figure>
-								<div class="meta-content">
-									<h2>{{ $news[1]['home_title'] }}</h2>
-									<h4><span>{{ $news[1]['date_available_human']}}</span> {{ $news[1]['headline'] }}</h4>
-									@if ($news[1]['signed'])
-										<h4 class="firma-home">{{ __('by') }} {{ $news[1]['author']['fullname'] }}</h4>
-									@endif
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col-12 col-lg-4 col-xl-6 nota-b order-0 order-xl-1">
-						<article class="cobertura-nota">
-							<a href="{{ $news[0]['permalink'] }}">
-								<figure>
-									{!! $imageHelper->getLazyImages( $news[0]['main_image']['srcs']['medium-wide'], 720, $news[0]['main_image']['caption'],'img-fluid','720x405') !!}
-								</figure>
-								<div class="meta-content">
-									<h2>{{ $news[0]['home_title'] }}</h2>
-									<h4><span>{{ $news[0]['date_available_human']}}</span> {{ $news[0]['headline'] }}</h4>
-									@if ($news[0]['signed'])
-										<h4 class="firma-home">{{ __('by') }} {{ $news[0]['author']['fullname'] }}</h4>
-									@endif
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4 col-xl-3 nota-a order-2">
-						<article class="cobertura-nota">
-							<a href="{{ $news[2]['permalink'] }}">
-								<figure>
-									{!! $imageHelper->getLazyImages( $news[2]['main_image']['srcs']['medium-wide'], 720, $news[2]['main_image']['caption'],'img-fluid','720x405') !!}
-								</figure>
-								<div class="meta-content">
-									<h2>{{ $news[2]['home_title'] }}</h2>
-									<h4><span>{{ $news[2]['date_available_human']}}</span> {{ $news[2]['headline'] }}</h4>
-									@if ($news[2]['signed'])
-										<h4 class="firma-home">{{ __('by') }} {{ $news[2]['author']['fullname'] }}</h4>
-									@endif
-								</div>
-							</a>
-						</article>
-					</div>
-
-
+				<div class="columna-dostercios"> 
+					@foreach(array_slice($news, 0, 3) as $key => $new)
+					@if ($key == 1)
 				</div>
 
-			</div>
+				<div class="columna-tercio"> 
+					@endif
 
+					<article class="articulo decobertura">
+						<figure>
+							<a href="{{ $new['permalink'] }}">
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
+								@if($key != 0)
+								<p class="headline">{{ $new['headline'] }}</p>
+								@endif
+								@if ($new['has_video']) 
+									<div class="galeria-video">
+										<span><i class="fa fa-play"></i></span>
+									</div>
+								@endif
+								@if ($new['has_gallery'])
+									<div class="galeria-video">
+										<span><i class="fa fa-camera"></i></span>
+									</div>
+								@endif
+							</a>
+						</figure>
 
+						<div class="meta-content">
+							<a href="{{ $new['permalink'] }}">
+								@if ($new['hat'] != '')
+									<span class="hat">{{ $new['hat'] }} </span>
+								@endif
+								<h2>
+									{{ $new['home_title'] }}
+								</h2>
+								<p class="headline">{{ $new['headline'] }}</p>
+							</a>
+							@if ($new['signed'])
+							<div class="firma-home">
+								<a href="/autores/{{$new['author']['username']}}">
+									{{ __('by') }} {{ $new['author']['fullname'] }}
+								</a>
+							</div>
+							@elseif ($new['credit'] != '')
+								<div class="firma-home">{{ $new['credit'] }}</div>
+							@endif
+							</div>
+						</a>
+					</article>
+					@endforeach
+				</div>
 
-		</section>
+				@if (isset($news[5]))
 
+				<div class="columna-ancha"> 
+					@foreach(array_slice($news, 3, 3) as $key => $new)
+					<article class="articulo decobertura">
+						<figure>
+							<a href="{{ $new['permalink'] }}">
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
+								<p class="headline">{{ $new['headline'] }}</p>
+							</a>
+						</figure>
+
+						<div class="meta-content">
+							<a href="{{ $new['permalink'] }}">
+								@if ($new['hat'] != '')
+									<span class="hat">{{ $new['hat'] }} </span>
+								@endif
+								<h2>
+									{{ $new['home_title'] }}
+								</h2>
+								<p class="headline">{{ $new['headline'] }}</p>
+							</a>
+							@if ($new['signed'])
+							<div class="firma-home">
+								<a href="/autores/{{$new['author']['username']}}">
+									{{ __('by') }} {{ $new['author']['fullname'] }}
+								</a>
+							</div>
+							@elseif ($new['credit'] != '')
+								<div class="firma-home">{{ $new['credit'] }}</div>
+							@endif
+							</div>
+						</a>
+					</article>
+					@endforeach
+
+	
+
+						<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
+
+				</div>
+
+				@endif
+
+			</div><!-- notas-cobertura -->
+
+		</div><!-- cobertura -->
+
+	
 	@endif
 
 @endif

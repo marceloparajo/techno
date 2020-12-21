@@ -59,7 +59,8 @@ class ImageHelper
                 '1x1' => $this->generateUrlImage($image, '/cropped/696/696/center/'),
                 '4x3' => $this->generateUrlImage($image, '/cropped/696/522/center/'),
                 '16x9' => $this->generateUrlImage($image, '/cropped/696/392/center/')
-            ]
+            ],
+            'tapa' =>  $this->generateUrlImage($image, '/trim/300/390/')
         ];
     }
 
@@ -74,6 +75,7 @@ class ImageHelper
             $srcs = $this->parseVersionImages( $original );
             
             $dataSrcset =   $srcs['extra-small-wide'].' 270w,';
+            if ($maxWidth >= 300)   $dataSrcset .=  $srcs['tapa'].' 300w,';
             if ($maxWidth >= 540)   $dataSrcset .=  $srcs['small-wide'].' 540w,';
             if ($maxWidth >= 720)   $dataSrcset .=  $srcs['medium-wide'].' 720w,';
             if ($maxWidth >= 720)   $dataSrcset .=  $srcs['extra-medium-wide'].' 720w,';

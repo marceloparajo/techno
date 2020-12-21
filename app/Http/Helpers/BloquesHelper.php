@@ -118,7 +118,7 @@ class BloquesHelper
                     $payload = $this->apiHelper->getNewsFromChannel('op-ed');
                     $posts = $payload->DATA;
                     $bloque_news = array_slice($posts, 0, env("HOME_EDITORIAL_MAX_ITEMS",20));
-                
+
                 } else {
                     if (count($news) <= 0)
                         $news = $this->_getHomeNews();
@@ -150,7 +150,7 @@ class BloquesHelper
     }
 
     /**
-     * Transforma el listado de bloques a lista de noticias 
+     * Transforma el listado de bloques a lista de noticias
      * @param  Array|array $bloques Notas en formato array de zonas/bloques
      * @return Array               Lista de notas si tener en cuenta los bloques asignados
      */

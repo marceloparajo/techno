@@ -1,68 +1,277 @@
 .catastrofe {
-	background: $negro;
-	padding: 15px 0 5px 0;
 	margin-bottom: 20px;
-	article {
-		position: relative;
-		margin-bottom: 10px;
-		a {
-			figure {
-				width: 100%;
-				height: 100%;
-				overflow: hidden;
-				img {
+	padding: 0;
+	.catastrofe-todas {
+		padding: 15px;
+		background: $negro;
+		article {
+			position: relative;
+			margin-bottom: 10px;
+			&.catastrofe-grande {
+				figure {
 					width: 100%;
-					height: auto;
-				}
-			}
-			.meta-contenido {
-				text-align: center;
-				h3 {
-					font:{
-						family: $font-general;
-						size: 14px;
-						weight: normal;
-					}
-					background: $miscelanea;
-					color: white;
-					margin-top: 0;
-					display: inline-block;
-					text-transform: uppercase;
-					padding: 5px 10px;
-				}
-				h2 {
-					font:{
-						family: $font-destacada;
-						size: 1.5em;
-						weight: 700;
-					}
-					color: white;
-					margin-bottom:0;
-					padding:0 10px 20px 10px;
-				}
-				h4 {
-					display: none;
-				}
-				@include media-breakpoint-up(md) {
-					h2 {
-						font-size: 2em;
+					height: 100%;
+					overflow: hidden;
+					margin: 0 0 10px 0;
+					img {
+						width: 100%;
+						height: auto;
 					}
 				}
-				@include media-breakpoint-up(lg) {
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					background: white;
-					h2 {
-						font-size: 3em;
-						transform: translateY(-20px);
-						color: $negro;
+				.meta-content {
+					padding:0;
+					span.hat {
+						font:{
+							family: $font-general;
+							size: 14px;
+							height: 700;
+						}
+						color: $azul;
+						margin: 0;
+						text-transform: uppercase;
 						padding: 0;
 					}
-					h3 {
-						transform: translateY(-20px);
+					h2 {
+						font:{
+							family: $font-destacada;
+							size: 1.6rem;
+							size: 7vw;
+							weight: 400;
+						}
+						color: white;
+						letter-spacing: -0.01em;
+						margin: 0 0 10px 0;
+						line-height: 1.03em;
+						.hat {
+							color: $azul;
+							font-size: 0.98em;
+							font-weight: 600;
+							&:after {
+								content: " / ";
+								font-size: .8em;
+								font-weight: normal;
+								font-family: $font-general;
+								color: $azul;
+								display: inline-block;
+								transform: translateY(-2px);
+							}
+						}
 					}
+					h4 {
+						color: $linea;
+						font: {
+							family: $font-general;
+							size: 16px;
+							weight: 400;
+						}
+						line-height: 1.2em;
+						display: none;
+					}
+					.firma-home {
+						border-top-color: $dark;
+						a {
+							color: $linea;
+							&:hover {
+								color: white;
+							}
+						}
+					}
+				}
+			}
+			&.catastrofe-chica {
+				padding-top: 10px;
+				border-top: 1px solid $dark;
+				display: flex;
+				justify-content: space-between;
+				figure {
+					flex-basis: 33%;
+					margin: 0;
+				}
+				.meta-content {
+					flex-basis: 65%;
+					transform: translateY(-3px);
+					padding-right: 10px;
+					span.hat {
+						font:{
+							family: $font-general;
+							size: 14px;
+							height: 700;
+						}
+						color: $azul;
+						margin: 0;
+						text-transform: uppercase;
+						padding: 0;
+						display: none;
+					}
+					h2 {
+						font:{
+							family: $font-destacada;
+							size: 1.2em;
+							weight: 400;
+						}
+						line-height: 1.08em;
+						color: white;
+						letter-spacing: -0.01em;
+						margin-bottom:0;
+						.hat {
+							color: $azul;
+							&:after {
+								content: " / ";
+								font-size: .8em;
+								font-weight: normal;
+								font-family: $font-general;
+								color: $azul;
+								display: inline-block;
+								transform: translateY(-2px);
+							}
+						}
+					}
+					h4 {
+						display: none;
+					}
+					.firma-home {
+						margin-top: 8px;
+						border-top-color: $dark;
+						a {
+							color: $linea;
+							&:hover {
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+		@include media-breakpoint-up(sm) {
+			article.catastrofe-grande {
+				.meta-content {
+					h2 {
+						font-size: 1.6rem;
+					}
+				}
+			}
+			article.catastrofe-chica {
+				.meta-content {
+					h2 {
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+		@include media-breakpoint-up(md) {
+			.catastrofe-tres {
+				display: flex;
+				justify-content: space-between;
+			}
+			article {
+				&.catastrofe-grande {
+					position: relative;
+					width: 100%;
+					display: block;
+					figure {
+						width: 80%;
+						margin: 0 0 0 auto;
+					}
+					.meta-content {
+						position: absolute;
+						top: 0;
+						left: 0;
+						bottom: 0;
+						width: 80%;
+						padding-right: 40%;
+						padding-top: 10px;
+						background: linear-gradient(to right, $negro 0%, $negro 35%, transparent 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$negro', endColorstr='##17171700',GradientType=1 ); /* IE6-9 */
+						h2 {
+							font-size: 2rem;
+						}
+						h4 {
+							display: block;
+						}
+					}
+				}
+				&.catastrofe-chica {
+					flex-basis: auto;
+					width: 32%;
+					flex-direction: column;
+					justify-content: flex-start;
+					margin-bottom: 0;
+					figure {
+						flex-basis: auto;
+						margin: 0 0 10px 0;
+					}
+					.meta-content {
+						flex-basis: auto;
+						margin: 0;
+						padding: 0;
+						h2 {
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			article {
+				&.catastrofe-grande {
+					.meta-content {
+						h2 {
+							font-size: 2.4em;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		.caja-notas {
+			flex: 1 1 0;
+		}
+		.caja-right {
+			flex-basis: 300px;
+			width: 300px;
+			margin: 0 0 0 20px;
+		}
+	}
+	@include media-breakpoint-only(lg) {
+		.caja-notas {
+			.catastrofe-todas {
+				.catastrofe-tres {
+					margin-bottom: 0;
+				}
+				article.catastrofe-grande {
+					.meta-content {
+						h4 {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		>.catastrofe-todas {		
+			position: relative;
+			article {
+				&.catastrofe-grande {
+					.meta-content {
+						padding-left: 0;
+						h2 {
+							font-size: 2.6em;
+							line-height: 1em;
+							margin-bottom: 20px;
+						}
+						p {
+							display: block;
+							color: white;
+						}
+					}
+				}
+			}
+			.catastrofe-tres {
+				.catastrofe-chica {
+					margin: 0;
 				}
 			}
 		}

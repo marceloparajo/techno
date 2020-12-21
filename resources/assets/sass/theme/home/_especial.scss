@@ -1,8 +1,8 @@
 .especial {
-	background-color: $miscelanea;
+	background-color: $black;
 	margin-bottom: 20px;
 	article {
-		background-color: $miscelanea;
+		background-color: $black;
 		transition: ease .3s;
 		text-align: center;
 		padding-top: 15px;
@@ -30,7 +30,7 @@
 				@include media-breakpoint-up(sm) {
 					padding: 0;
 				}
-				h3 {
+				span.hat {
 					font: {
 						family: $font-general;
 						size: 14px;
@@ -86,7 +86,7 @@
 			}
 		}
 		&:hover {
-			background: $miscelanea-light;
+			background: $azul;
 			a {
 				figure {
 					img {
@@ -121,7 +121,7 @@
 						text-align: left;
 						padding-left: 10px;
 						box-sizing: border-box;
-						h3 {
+						span.hat {
 							display: none;
 						}
 						h2 {

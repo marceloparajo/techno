@@ -1,309 +1,1020 @@
-.pf-sidebar {
+.podcasts-radio {
+	background: #1c313a;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 0 0 20px 0;
 	width: 100%;
-	flex-direction: column;
-	@include media-breakpoint-up(lg) {
-		flex: 0 0 320px;
-		padding: 30px 0;
-	}
-	@include media-breakpoint-up(xl) {
-		flex: 0 0 340px;
-		padding: 0 20px;
-	}
-.card { width: 100%}
-	.minuto-de-noticias {
-		.card-body {
-			 padding: 1rem;
-			 background: $dark;
-			.hat {
-				 font-size: 1.1rem;
-					font-weight: bold;
-					color: white;
-					border-left:4px solid $secondary;
-					text-transform: uppercase;
-					padding: 5px 10px;
-					font-family:$font-destacada;
-					background: $dark;
-					display: block;
+	header {
+		background-color: #161227;
+		width: 100%;
+		.titulo {
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			.podcasts {
+				font-family: $font-serif;
+				font-size: 28px;
+				font-weight: 600;
+				line-height: .9em;
+				letter-spacing: -0.02em;
+				flex: 1 1 0;
+				color: #fff;
+				transform: translateY(4px);
+				a {
+					color: #fff;
+					&:hover {
+						color: #fff;
+					}
+				}
 			}
-			.article-content {
-				padding: 10px;
-				h2 {
-					font-size: 1.5em;
+			.logo-radio {
+				display: block;
+				float: right;
+				margin: 0 0 0 10px;
+				flex-basis: 140px;
+				height: 45px;
+				background-image: url('/images/radio-perfil-isologo.png');
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				background-size: 140px;
+				a {
+					display: block;
+					width: 140px;
+					height: 45px;
+				}
+			}
+			border-bottom: 2px solid #ddd;
+		}
+	}
+	.notaPodcast {
+		width: 100%;
+		padding: 5px 10px;
+		border-bottom: 1px solid #455a64;
+		background: #1c313a;
+		transition: ease .3s;
+		box-sizing: border-box;
+		a {
+			width: 100%;
+			display: flex;
+			figure {
+				width: 30%;
+				height: 50px;
+				float: left;
+				margin: 0 10px 0 0;
+				border-radius: 3px;
+				overflow: hidden;
+			}
+			.content {
+				flex: 1 1 0;
+				color: #fff;
+				h3 {
+					font-size: 16px;
+					line-height: 1.05em;
+					font-weight: 600;
+					letter-spacing: -0.01em;
+					font-family: $font-serif;
+				}
+				h5 {
+					font-size: 12px;
+					font-family: $font-sinserif;
+					line-height: 1em;
+					margin-top: 5px;
+					text-transform: uppercase;
+				}
+			}
+		}
+		&:hover {
+			background: #455a64;
+		}
+		&:after {
+			display: block;
+			content: " ";
+			clear: both;
+			height: 0;
+			margin: 0;
+		}
+	}
+	footer {
+		width: 100%;
+		padding: 10px 0;
+		border-bottom: 1px solid #ddd;
+		margin: 0;
+		a {
+			font-family: $font-sinserif;
+			font-size: 14px;
+			font-weight: normal;
+			letter-spacing: 0.2em;
+			color: #fff;
+			text-transform: uppercase;
+			display: flex;
+			justify-content: flex-end;
+			line-height: 1em;
+			&:after {
+				content: "\f061";
+				font-family: 'Font Awesome 5 Free';
+				display: block;
+				font-size: 20px;
+				margin-left: 10px;
+				margin-right: 10px;
+				transform: translateY(-1px);
+			}
+		}
+	}
+	//@media only screen and (max-width: 890px) {
+	@include media-breakpoint-down(md) {
+		flex-direction: column;
+		.notaPodcast {
+			flex-basis: 100%;
+			a {
+				flex-direction: row;
+				figure {
+					flex-basis: 100px;
 				}
 			}
 		}
 	}
-
 }
 
 
 
-.most-viewed,
-.most-viewed-alter {
-	.card-body {
-		padding: 0!important;
-		.title {					
-			font-size: 1.1rem;
-			font-weight: bold;
-			color: white;
-			border-left: $miscelanea-light;
-			text-transform: uppercase;
-			padding: 5px 10px;
-			font-family:$font-destacada;
-			background: $negro;
-			.in-other-lang {
-				font-weight: normal;
-				font-size: 0.8em;
-				float: right;
-				@include media-breakpoint-only(md) {
-					display: none;
-				}
-			}
-			a {
-				background:none;
-				color: white;				
-			}
-		}
-		ul {
+.sidebar {
+	#exitoina,
+	#net,
+	#investigacion,
+	#opinion,
+	#periodismopuro,
+	#panorama,
+	#reperfilar,
+	#videocolumnas {
+		background: #fff;
+		width: 100%;
+		margin: 0 0 20px 0;
+		box-sizing: border-box;
+		box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+		border-radius: 6px;
+		header {
+			width: 100%;
+			padding: 10px 10px 5px 10px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			border-bottom: 1px solid #ddd;
 			margin: 0;
-			padding: 0;
-			li {
-				list-style: none;
-				padding: 0;
-				border-top: 1px solid #ccc;
-				height: 80px;
-				transition: ease 0.3s;
+			.exitoina-titulo {
+				text-indent: -9999px;
+				width: 180px;
+				height: 26px;
+				display: block;
+				margin: 0;
+				background: url('img/exitoina-logo-sidebar.png') 0 0 no-repeat;
 				a {
 					display: block;
-					position: relative;
+					width: 180px;
+					height: 26px;
+				}
+			}
+			.net-titulo {
+				text-indent: -9999px;
+				width: 70px;
+				height: 29px;
+				display: block;
+				margin: 0;
+				background: url('img/net-logo-sidebar.png') 0 0 no-repeat;
+				a {
+					display: block;
+					width: 70px;
+					width: 29px;
+				}
+			}
+			.investigacion-titulo {
+				text-indent: -9999px;
+				width: 280px;
+				height: 35px;
+				display: block;
+				margin: 0;
+				background: url('/static/css/img/investigacion-logo-sidebar.png') 0 0 no-repeat;
+				a {
+					display: block;
+					width: 280px;
+					height: 35px;
+				}
+			}
+			.opinion-titulo {
+				width: 100%;
+				height: 30px;
+				line-height: 44px;
+				display: block;
+				margin: 0;
+				text-transform: uppercase;
+				font-family: $font-serif;
+				font-size: 24px;
+				font-weight: 600;
+				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
+				.fas {
+					color: #c3ced8;
+					margin: 0 3px 0 0;
+					font-weight: normal;
+					font-size: 20px;
+					font-weight: bold;
+				}
+				a {
+					display: inline-block;
+					color: #000;
+				}
+			}
+			.panorama-titulo {
+				width: 280px;
+				height: 30px;
+				line-height: 44px;
+				display: block;
+				margin: 0;
+				text-transform: uppercase;
+				font-family: $font-serif;
+				font-size: 24px;
+				font-weight: 600;
+				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
+				.fa {
+					color: #c3ced8;
+					margin: 0 3px 0 0;
+					font-size: 20px;
+				}
+				a {
+					display: inline-block;
+					color: #000;
+				}
+			}
+			.periodismopuro-titulo {
+				text-indent: -9999px;
+				width: 183px;
+				height: 49px;
+				display: block;
+				margin: 0 auto;
+				background: url('img/periodismo-puro-logo-sidebar.png') 0 0 no-repeat;
+				background-position: center center;
+				a {
+					display: block;
+					width: 183px;
+					width: 49px;
+					margin: auto;
+				}
+			}
+			&.pp {
+				flex-direction: column;
+				h4 {
+					border-top: 1px solid #d4d4d4;
+					margin-top: 10px;
+					padding-top: 5px;
+					text-align: right;
+					font-size: 15px;
+					font-style: italic;
+					display: block;
 					width: 100%;
+				}
+			}
+			.reperfilar-titulo {
+				text-indent: -9999px;
+				width: 210px;
+				height: 42px;
+				display: block;
+				margin: 0;
+				background: url('img/reperfilar-logo-sidebar.png') -3px 0 no-repeat;
+				a {
+					display: block;
+					width: 210px;
+					height: 42px;
+				}
+			}
+			.videocolumnas-titulo {
+				width: 280px;
+				height: 30px;
+				line-height: 44px;
+				display: block;
+				margin: 0;
+				text-transform: uppercase;
+				font-family: $font-serif;
+				font-size: 24px;
+				font-weight: 600;
+				a {
+					display: inline-block;
+					color: #000;
+				}
+			}
+		}
+		article {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+			background: #fff;
+			transition: ease .3s;
+			a {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				figure {
+					flex-basis: 35%;
+					height: auto;
 					overflow: hidden;
-					height: 80px;
-					figure {
-						width: 90%;
-						display: inline-block;
-						vertical-align: top;
-						margin: 0;
-						height: 80px;
-						overflow: hidden;
-						position: absolute;
-						left: -90%;
-						transition: ease 0.3s;
-						img { 
-							width:100%;
-						}
+					img {
+						width: 100%;
 					}
-					.position {
-						position: absolute;
-						z-index: 9;
-						top: 0;
-						bottom: 0;
-						left: 0;
-						width: 10%;
-						color: white;
-						font-size: 24px;
-						font-family: $font-general;
-						text-align: center;
-						background: white;
-						transition: ease 0.3s;
-						span {
-							display: block;
-							width: 100%;
-							position: absolute;
-							top: 0;
-							bottom: 0;
-						}
-					}
-					h5{
-						margin: 0;
-						font-weight: 600;
-						font-size: 16px;
-						line-height: 18px;
-						display: inline-block;
-						width: 85%;
-						font-family: $font-general;
-						position: absolute;
-						top: 10px;
-						left: 13%;
-						bottom: 0;
-						transition: ease 0.3s;
+				}
+				.content {
+					flex-basis: 63%;
+					h3 {
 						color: $negro;
+						font:{
+							size: 1.3rem;
+							size: 5.7vw;
+							weight: 400;
+							family: $font-serif;
+						}
+						line-height: 1.05em;
+						letter-spacing: -0.01em;
+					}			
+					.firma-home {
+						font-family: $font-sinserif;
+						font-size: .8rem;
+						font-size: 3.3vw;
+						margin-top: 5px;
+						text-transform: uppercase;
+						color: $dark;
+						display: inline-block;
+					}
+				}
+			}
+			&:after {
+				display: block;
+				content: " ";
+				clear: both;
+				height: 1px;
+				margin: 0;
+			}
+			&:hover {
+				background: rgba(0,0,0,.05);
+				a {
+					h3 {
+						color: #000;
+					}
+				}
+			}
+			&:first-of-type {
+				a {
+					flex-direction: column;
+					figure {
+						flex-basis: 100%;
+						height: auto;
+						clear: both;
+						margin: 0;
+						justify-content: flex-start;
+					}
+					.content {
+						flex-basis: 100%;
+						h3 {
+							font-size: 1.5rem;
+							font-size: 6.5vw;
+							line-height: 1.03em;
+						}
+					}
+				}
+			}
+		}
+		footer {
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #ddd;
+			margin: 0;
+			background-color: white;
+			border-radius: 0 0 6px 6px;
+			a {
+				font-family: $font-sinserif;
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 0.2em;
+				color: #000;
+				text-transform: uppercase;
+				display: flex;
+				justify-content: flex-end;
+				line-height: 1em;
+				&:after {
+					content: "\f061";
+					font-family: 'Font Awesome 5 Free';
+					display: block;
+					font-size: 20px;
+					margin-left: 10px;
+					transform: translateY(-1px);
+				}
+				&:hover {
+					color: #444;
+				}
+			}
+			&.edi {
+				a {
+					letter-spacing: 0.02em;
+				}
+			}
+		}
+	}
+	
+	#opinion,
+	#panorama,
+	#videocolumnas {
+		header {
+			background: linear-gradient(to bottom,  rgba(228,226,232,0) 0%,rgba(228,226,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e4e2e8', endColorstr='#e4e2e8',GradientType=0 ); /* IE6-9 */
+		}
+	}
+	#reperfilar {
+		overflow: hidden;
+		header {
+			background: #4285f4;
+			padding: 0;
+			height: 42px;
+		}
+	}
+	#masLeidasSidebar {
+		background: #fff;
+		width: 100%;
+		margin: 0 0 20px 0;
+		box-sizing: border-box;
+		box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+		border-radius: 6px;
+		header.masleidas-titulo {
+			height: 40px;
+			display: block;
+			margin: 10px 10px 5px 10px;
+			text-transform: uppercase;
+			font-family: $font-serif;
+			font-size:18px;
+			font-weight: 600;
+			background: url('img/perfil-logo-xs-sidebar.png') right center no-repeat;
+			a {
+				display: inline-block;
+				color: #000;
+				line-height: 50px;
+			}
+		}
+		#rankPerfilcom {
+			width: 100%;
+			article.masleidas {
+				width: 100%;
+				padding: 5px 10px;
+				border-top: 1px solid $linea;
+				background: #fff;
+				transition: ease .3s;
+				a {
+					width: 100%;
+					figure {
+						width: 100%;
+						margin: 0;
+						border-radius: 3px;
+						overflow: hidden;
+						img {
+							width: 100%;
+						}
+					}
+					h3 {
+						color: $dark;
+						font-size: 1.1rem;
+						font-size: 5vw;
+						line-height: 1.05em;
+						font-weight: 600;
+						letter-spacing: -0.01em;
+						font-family: $font-serif;
+						margin: 0;
+						padding: 0 0 0 40px;
+						.rankOrder {
+							width: 40px;
+							margin: 0 0 0 -40px;;
+							text-align: right;
+							display: inline-block;
+							padding: 0 8px 0 0;
+							font-size: 2em;
+							color: #999;
+							transform: translateY(10px);
+							font-weight: 400;
+							letter-spacing: -0.03em;
+						}
 					}
 				}
 				&:hover {
-					background: #ccc;
+					background: #ededed;
 					a {
-						.position {
-							left: 90%
+						h3 {
+							color: $negro;
 						}
-						figure {
+					}
+				}
+				&:first-of-type {
+					position: relative;
+					padding: 0;
+					a {
+						h3 {
+							display: block;
+							background: rgba(0,0,0,0);
+							background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+							position: absolute;
+							bottom: 0;
 							left: 0;
-							img {
-								filter: brightness(100%);
+							right: 0px;
+							color: white;
+							padding: 50px 10px 10px 40px;
+							.rankOrder {
+								color: white;
 							}
 						}
-						h5 {
-							left: 100%;
-						}
-					}
-				}
-				/*
-				&:first-child { 
-					a {
-						display: flex;
-						justify-content: space-between;
-						figure { 
-							flex: 0 0 90%;
-							margin-bottom: 0px;
-						}
-						h5 {
-							width: 100%;
-							padding: 2% 0;
-							font-size: 1.4em;
-							line-height: 1.2em;
-							margin: 0 1% 0 0;
-							font-weight: 400;
-						}
-						figure {
-							height: auto;
-						}			
-					}
-				}
-				*/
-			}
-		}
-
-		a:hover {
-			text-decoration: none;
-		}
-	}
-	@include media-breakpoint-down(md) {
-		.card-body {
-			ul {
-				li {
-					a {
-						figure {
-							width: 30%;
-							height: 80px;
-							left: 10%;
-							right: auto;
-							img {
-								height: 80px;
-								width: auto;
-								max-width: none!important;
-								margin-left: 50%;
-								transform: translateX(-50%);
-							}
-						}
-						h5 {
-							width: 55%;
-							left: 45%;
-						}				
 					}
 					&:hover {
-						background: #fff;
 						a {
-							.position {
-								left: 0;
+							h3 {
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+		footer {
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #ddd;
+			margin: 0;
+			background-color: white;
+			border-top: 1px solid $linea;
+			border-radius: 0 0 6px 6px;
+			a {
+				font-family: $font-sinserif;
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 0.2em;
+				color: #000;
+				text-transform: uppercase;
+				display: flex;
+				justify-content: flex-end;
+				line-height: 1em;
+				&:after {
+					content: "\f061";
+					font-family: 'Font Awesome 5 Free';
+					display: block;
+					font-size: 20px;
+					margin-left: 10px;
+					transform: translateY(-1px);
+				}
+				&:hover {
+					color: #444;
+				}
+			}
+		}
+	}
+	#columnistas {
+		background: #fff;
+		width: 100%;
+		max-width: 100%;
+		margin: 0 0 30px 0;
+		box-sizing: border-box;
+		box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.15);
+		border-radius: 6px;
+		header {
+			width: 100%;
+			padding: 10px 10px 5px 10px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin: 0;
+			background: linear-gradient(to bottom,  rgba(228,226,232,0) 0%,rgba(228,226,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e4e2e8', endColorstr='#e4e2e8',GradientType=0 ); /* IE6-9 */
+			a {
+				width: 100%;
+				height: 30px;
+				line-height: 44px;
+				display: block;
+				margin: 0;
+				text-transform: uppercase;
+				font-family: $font-serif;
+				font-size: 24px;
+				font-weight: 600;
+				color: $negro;
+				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
+			}
+		}
+		.columnistas-general {
+			width: 100%;
+			max-width: 100%;
+			height: 350px;
+			position: relative;
+			overflow: hidden;
+			.columnistas-enlaces {
+				display: none;
+			}
+			#columnistas-caja {
+				position: absolute;
+				width: 100%;
+				height: 390px;
+				top: 0;
+				display: flex;
+				overflow-x: auto;
+				scroll-snap-type: x mandatory;
+				scroll-behavior: smooth;
+				-webkit-overflow-scrolling: touch;
+				.grupo-columnistas {
+					scroll-snap-align: start;
+					flex-direction: column;
+					flex-shrink: 0;
+					transform-origin: center center;
+					transform: scale(1);
+					transition: ease 0.5s;
+					width: 100%;
+					.articulo-columnista {
+						width: 100%;
+						padding: 10px;
+						border-top: 1px solid $linea;
+						height: 70px;
+						a {
+							color: $dark;
+							font:{
+								family: $font-serif;
+								weight: 400;
 							}
 							figure {
-								left: 10%;
+								width: 50px;
+								height: 50px;
+								border-radius: 50%;
+								margin: 0 10px 0 0;
+								border: 1px solid $azul;
+								overflow: hidden;
+								float: left;
+								display: block;
+								img {
+									width: 100%;
+									height: 100%;
+									display: block;
+								}
 							}
-							h5 {
-								left: 45%;
+							h3 {
+								padding: 0;
+								margin: 0;
+								font-size: 1rem;
+								font-size: 5vw;
+								line-height: 1em;
+								color: $negro;
+							}
+							.firma-home {
+								padding: 0;
+								margin: 0;
+								font-size: .8rem;
+								font-size: 4.5vw;
+								color: $dark;
+								font-style: italic;
 							}
 						}
 					}
 				}
 			}
 		}
-	}	
-	@include media-breakpoint-down(sm) {
-		.card-body {
-			padding: 0!important;
-			ul {
-				li {
+		footer {
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #ddd;
+			margin: 0;
+			background-color: white;
+			border-top: 1px solid $linea;
+			border-radius: 0 0 6px 6px;
+			a {
+				font-family: $font-sinserif;
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 0.2em;
+				color: #000;
+				text-transform: uppercase;
+				display: flex;
+				justify-content: flex-end;
+				line-height: 1em;
+				&:after {
+					content: "\f061";
+					font-family: 'Font Awesome 5 Free';
+					display: block;
+					font-size: 20px;
+					margin-left: 10px;
+					transform: translateY(-1px);
+				}
+				&:hover {
+					color: #444;
+				}
+			}
+		}
+	}
+
+
+	@include media-breakpoint-up(sm) {
+		#exitoina,
+		#net,
+		#investigacion,
+		#opinion,
+		#periodismopuro,
+		#panorama,
+		#reperfilar,
+		#videocolumnas {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			article {
+				width: 49%;
+				a {
+					flex-direction: column;
+					justify-content: flex-start;
+					figure {
+						flex-basis: 100%;
+					}
+					.content {
+						flex-basis: 100%;
+						h3 {
+							font-size: 1.1rem;
+						}
+						.firma-home {
+							font-size: .8rem;
+						}
+					}
+				}
+				&:first-of-type {
 					a {
-						.position {
-							width: 7%;
+						figure {
+							flex-basis: 100%;
+							margin: 0;
+						}
+						.content {
+							flex-basis: 100%;
+							h3 {
+								font-size: 1.1rem;
+							}
+						}
+					}
+				}
+			}
+			header {
+				.opinion-titulo {
+					width: 100%;
+				}
+				&.pp {
+					flex-direction: row;
+					justify-content: space-between;
+					.periodismopuro-titulo {
+						margin-left: 0;
+					}
+					h4 {
+						display: inline-block;
+						border-top: none;
+						width: auto;
+					}
+				}
+			}
+			footer {
+				clear: both;
+				width: 100%;
+			}
+		}
+
+		#masLeidasSidebar {
+			#rankPerfilcom {
+				column-count: 2;
+				column-gap: 2em;
+				column-rule: 1px solid $linea;
+				article.masleidas {
+					break-inside: avoid-column;
+					padding: 5px 0;
+					a {
+						h3 {
+							font-size: 1.1rem
 						}
 						figure {
-							left: 7%;
-						}
-						h5 {
-							width: 58%;
-							left: 38%;
-							top: 5px;
-							font-weight: 400;
-							font-size: 15px;
-							line-height: 17px;
+							height: 190px;
 						}
 					}
 				}
 			}
 		}
-	}
-}
 
-.perfilcom {
-	.most-viewed-alter {
-		.card-body {
-			.title {
-				background-image: url('img/logo_perfil.svg');
-				background-repeat: no-repeat;
-				background-position: 10px 10px;
-				background-size: 154px 35px;
-				background-color: #fff;
-				width: 100%;
-				height: 50px;
-				position: relative;
-				a {
-					display: block;
-					width: 100%;
-					height: 50px;
-					text-indent: -9999px;
-				}
-				&:after {
-					content: "in spanish";
-					position: absolute;
-					right: 10px;
-					top: 10px;
-					display: block;
-					color: #ccc;
-					font-size: 14px;
+		#columnistas {
+			.columnistas-general {
+				#columnistas-caja {
+					.grupo-columnistas {
+						padding: 0 10px;
+						article.articulo-columnista {
+							padding: 10px 0;
+							a {
+								h3 {
+									font-size: 1.2rem;
+									font-weight: 500;
+									letter-spacing: -0.02em;
+								}
+								.firma-home {
+									font-size: 1rem;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
+
+	}
+
+
+	@include media-breakpoint-up(md) {
+		#exitoina,
+		#net,
+		#investigacion,
+		#opinion,
+		#periodismopuro,
+		#panorama,
+		#reperfilar,
+		#videocolumnas {
+			article {
+				width: 25%;
+				a {
+					.content {
+						.firma-home {
+							font-size: .7rem;
+						}
+					}
+				}
+			}
+		}
+
+		#columnistas {
+			.columnistas-general {
+				#columnistas-caja {
+					.grupo-columnistas {
+						flex-wrap: wrap;
+						justify-content: space-between;
+						width: 50%;
+						padding: 0 14px;
+						article.articulo-columnista {
+							overflow: hidden;
+						}
+					}
+				}
+			}			
+		}
+	}
+
+
+	@include media-breakpoint-up(lg) {
+		#exitoina,
+		#net,
+		#investigacion,
+		#opinion,
+		#periodismopuro,
+		#panorama,
+		#reperfilar,
+		#videocolumnas {
+			display: flex;
+			flex-direction: column;
+			article {
+				width: 100%;
+				margin: 0;
+				a {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					figure {
+						flex-basis: 35%;
+					}
+					.content {
+						flex-basis: 63%;
+					}
+				}
+				&:first-of-type {
+					a {
+						display: flex;
+						justify-content: flex-start;
+						figure {
+							flex-basis: 100%;
+							height: auto;
+							margin: 0 0 5px 0;
+						}
+						.content {
+							flex-basis: 100%;
+							h3 {
+								flex: 1 1 0;
+								font-size: 18px;
+							}
+						}
+					}
+				}
+			}
+		}
+		#masLeidasSidebar {
+			#rankPerfilcom {
+				column-count: 1;
+				article.masleidas {
+					padding: 5px 10px;
+					a {
+						figure {
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+
+		#columnistas {
+			.columnistas-general {
+				height: 390px;
+				#columnistas-caja {
+					overflow-x: hidden;
+					padding-bottom: 30px;
+					.grupo-columnistas {
+						padding: 0;
+						width: 100%;
+						padding: 0;
+						.articulo-columnista {
+							width: 100%;
+							padding: 0 10px;
+							border-top: 1px solid $linea;
+							height: 70px;
+							overflow: hidden;
+							position: relative;
+							a {
+								display: flex;
+								width: 510px;
+								position: absolute;
+								top: 0;
+								left: 10px;
+								transition: ease .3s;
+								padding: 10px 0;
+								figure {
+									width: 50px;
+									margin: 0 20px 0 10px;
+									order: 1;
+								}
+								h3 {
+									order: 0;
+									display: block;
+									padding: 0;
+									margin: 0;
+									width: 220px;
+								}
+								.firma-home {
+									order: 2;
+									display: block;
+									padding: 0;
+									margin: 0;
+									width: 210px;
+								}
+							}
+							&:hover {
+								background: #ededed;
+								a {
+									left: -220px;
+									transition: ease .3s;
+								}
+							}
+						}
+					}
+				}
+
+				.columnistas-enlaces {
+					position: absolute;
+					bottom: 10px;
+					left: 10px;
+					right: 10px;
+					justify-content: center;
+					z-index: 9;
+					border-top: 1px solid $linea;
+					display: flex;
+					flex-wrap: wrap;
+					a {
+						display: block;
+						background: white;
+						border: 1px solid $linea;
+						border-radius: 50%;
+						width: 20px;
+						height: 20px;
+						text-align: center;
+						line-height: 1em;
+						font: normal 12px/20px $font-sinserif;
+						color: $dark;
+						text-decoration: none;
+						margin: 0 5px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
 	}
 }
 
 
 
- @include media-breakpoint-up(xl) {
-	.pf-sidebar {
-		padding: 1rem;
-	}
-}
 
-/*Tasboola Sidebar*/
 
-.trc_rbox { background: #fff;}
-.thumbnails-rr { padding: 3%;}
-.trc_rbox_outer { margin-top: 15px; }
-.trc_rbox_header_span {
-	font-size: 1.1rem;
-	font-weight: 400;
-	color: white;
-	border-left:4px solid $dark;
-	text-transform: uppercase;
-	padding: 5px 10px;
-	font-family:$font-destacada;
-	background: $miscelanea;
-	display: block;
-}
-.article.card {
-	padding: 0;
-	.card-body {
-		padding: 0;
-	}
-}
