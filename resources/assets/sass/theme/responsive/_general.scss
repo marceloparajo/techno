@@ -1,0 +1,49 @@
+
+@include media-breakpoint-up(sm) {
+	.supercontenedor {
+		max-width: 540px;
+	}
+}
+@include media-breakpoint-up(md) {
+	.supercontenedor {
+		max-width: 720px;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.supercontenedor {
+		max-width: 960px;
+		flex-direction: row;
+		.sidebar {
+			flex-basis: 300px;
+			display: flex;
+			align-self: stretch;
+			align-items: flex-start;
+			margin: 0 0 0 20px;
+			padding: 0;
+			.content-sidebar {
+				width: 300px;
+				align-self: flex-end;
+				position: sticky;
+				bottom: 1rem;
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		.contenido {
+			flex: 1 1 0;
+		}
+	}
+}
+@include media-breakpoint-up(xl) {
+	.supercontenedor {
+		max-width: 1140px;
+		.sidebar {
+			margin: 0 0 0 25px;
+		}
+	}
+}
+@include media-breakpoint-up(xxl) {
+	.supercontenedor {
+		max-width: 1260px;
+	}
+}
