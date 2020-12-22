@@ -6,12 +6,12 @@
 		</a>
 	</figure>
 	<div class="footer-redes">
-		<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" class="link-social-facebook mr-3" itemprop="sameAs"><i class="fab fa-facebook"></i></a>
-		<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" class="link-social-twitter mr-3" itemprop="sameAs"><i class="fab fa-twitter"></i></a>
-		<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" class="link-social-youtube mr-3" itemprop="sameAs"><i class="fab fa-youtube"></i></a>
-		<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" class="link-social-instagram mr-3" itemprop="sameAs"><i class="fab fa-instagram"></i></a>
-		<a href="{{ route('feeds.lastposts') }}" target="_blank" class="link-social-rss mr-3"><i class="fa fa-rss-square"></i></a>
-		<a href="https://www.{{ env('APP_NAME', '') }}.com.ar/sitemap" target="_blank" class="link-social-sitemap"><i class="fa fa-sitemap"></i></a>
+		<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" class="link-social-facebook mr-3" itemprop="sameAs"><img src="/images/glyph/footer/facebook.svg" /></a>
+		<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" class="link-social-twitter mr-3" itemprop="sameAs"><img src="/images/glyph/footer/twitter.svg" /></a>
+		<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" class="link-social-youtube mr-3" itemprop="sameAs"><img src="/images/glyph/footer/youtube.svg" /></a>
+		<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" class="link-social-instagram mr-3" itemprop="sameAs"><img src="/images/glyph/footer/instagram.svg" /></a>
+		<a href="{{ route('feeds.lastposts') }}" target="_blank" class="link-social-rss mr-3"><img src="/images/glyph/footer/rss.svg" /></a>
+		<a href="https://www.{{ env('APP_NAME', '') }}.com.ar/sitemap" target="_blank" class="link-social-sitemap"><img src="/images/glyph/footer/sitemap.svg" /></a>
 	</div>
 	<nav class="nav-footer">
 		<ul class="footer-revistas">

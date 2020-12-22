@@ -17,12 +17,22 @@
 		color: $dark;
 	}
 	.footer-redes {
+		display: flex;
 		margin: 0 auto;
+		justify-content: center;
+		align-content: center;
 		a {
 			margin: 0 8px;
 			color: $linea-oscura;
-			i {
-				font-size: 1.5rem;
+			align-self: center;
+			img {
+				width: 20px;
+				display: inline-block;
+			}
+			&.link-social-rss {
+				img {
+					width: 17px;
+				}
 			}
 		}
 	}

@@ -13,6 +13,19 @@
 			@foreach(array_slice($news, 0, 3) as $key => $new)
 
 				<article class="articulo nota-{{ $key }}">
+
+
+
+					{{-- Embed Code --}}
+					@if ($new['embed_code'] != '')
+						@php
+							if (STRPOS($new['embed_code'], 'rudo') || STRPOS($new['embed_code'], 'tube')  ) {
+						@endphp
+							{!! $shortcodeConverter->convert($new['embed_code']) !!}
+						@php
+							} 
+						@endphp
+					@else 
 					<figure>
 						<a href="{{ $new['permalink'] }}">
 							@if($key == 0)
@@ -35,6 +48,8 @@
 							@endif
 						</a>
 					</figure>
+					@endif
+
 					<div class="meta-content">
 						<a href="{{ $new['permalink'] }}">
 							@if ($new['hat'] != '')

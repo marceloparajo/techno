@@ -73,7 +73,7 @@
 		<nav id="menues" class="tescondo">
 			<ul>
 				<li><a href="/ultimo-momento/">Último momento</a></li>
-				<li><a><i class="fa fa-angle-right" aria-hidden="true"></i>Temas de hoy</a>
+				<li><a><img src="/images/glyph/chevron.svg" class="chevron">Temas de hoy</a>
 					<ul>
 					@foreach ($menuHelper->getMenuItems('temas') as $item)
 						<li>
@@ -84,7 +84,7 @@
 					@endforeach
 					</ul>
 				</li>
-				<li><a><i class="fa fa-angle-right" aria-hidden="true"></i>Secciones</a>
+				<li><a><img src="/images/glyph/chevron.svg" class="chevron" >Secciones</a>
 					<ul>
 						@foreach ($menuHelper->getMenuItems('principal') as $item)
 						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">{{ $item['text'] }}</a></li>
@@ -92,7 +92,7 @@
 					</ul>
 				</li>
 
-				<li><a><i class="fa fa-angle-right" aria-hidden="true"></i>Revistas</a>
+				<li><a><img src="/images/glyph/chevron.svg" class="chevron" >Revistas</a>
 					<ul>
 					@foreach ($menuHelper->getMenuItems('revistas') as $item)
 						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">{{ $item['text'] }}</a></li>
