@@ -49,8 +49,8 @@
 					</div>
 
 					<div class="footer-cajageneral">
-						<span class="mira"><a href="#"><i class="fas fa-video"></i>Mirá<br>en&nbsp;vivo</a></span>
-						<span class="escucha"><a href="#"><i class="fas fa-play"></i>Escuchá&nbsp;on&nbsp;line<br>FM 101.9</a></span>
+						<span class="mira"><a href="https://radio.perfil.com/en-vivo/video"><img src="/images/glyph/radio/video.svg">Mirá<br>en&nbsp;vivo</a></span>
+						<span class="escucha"><a href="https://radio.perfil.com/en-vivo/radio"><img src="/images/glyph/radio/play.svg">Escuchá&nbsp;on&nbsp;line<br>FM 101.9</a></span>
 					</div>
 
 				</div><!-- notas-cajageneral -->

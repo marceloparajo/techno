@@ -107,19 +107,9 @@
 					width: 100px;
 					height: auto;
 				}
-				i.fas {
+				.radio-play {
 					width: 22px;
-					height: 22px;
-					border-radius: 50%;
-					background: #fff;
-					border: 1px solid #7993ba;
-					color: #00307a;
-					text-align: center;
-					box-sizing: border-box;
-					font-size: 10px;
-					line-height: 19px;
-					margin: 0 5px 3px 0;
-					padding-left: 3px;
+					margin: 0 5px 0 0;
 					transform: translateY(-1px);
 					float: left;
 				}
@@ -382,6 +372,9 @@
 			background: transparent;
 			&:focus {
 				outline: none;
+			}
+			img {
+				width: 13px;
 			}
 		}
 	}

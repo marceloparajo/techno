@@ -16,7 +16,7 @@
 		<div class="buscador" id="header-search">
 			<form method="get" action="{{ route('search.index') }}">
 				<input class="form-control" name="q" type="text" placeholder="{{ __('search') }}" aria-label="{{ __('search') }}" value="{{ Request::get('q') }}">
-				<button type="submit" class="btn"><i class="fas fa-search"></i></button>
+				<button type="submit" class="btn"><img src="/images/glyph/search.svg"></button>
 			</form>
 		</div>
 	</div>
@@ -60,8 +60,8 @@
 		</div><!-- elisologo -->
 		<div class="radio-perfil">
 			<a href="//radio.perfil.com">
-				<i class="fas fa-play"></i>
-				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil">FM 101.9
+				<img src="/images/glyph/radio-play.svg" class="radio-play">
+				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil"><span>FM 101.9</span>
 			</a>
 		</div>
 		<div id="paywall-login-container" class="pw-suscripcion">

@@ -21,12 +21,11 @@
 									@endif
 									@if ($new['has_video']) 
 										<div class="galeria-video">
-											<span><i class="fa fa-play"></i></span>
+											<img src="/images/glyph/hasvideo.svg" class="hasvideo">
 										</div>
-									@endif
-									@if ($new['has_gallery'])
+									@elseif ($new['has_gallery'])
 										<div class="galeria-video">
-											<span><i class="fa fa-camera"></i></span>
+											<img src="/images/glyph/hasgallery.svg" class="hasgallery">
 										</div>
 									@endif
 								</a>
@@ -79,10 +78,8 @@
 
 		</div><!-- video -->
 
-		<div class="row text-center banner-horizontal mx-2 mb-1 mt-5 d-none d-lg-block w-100">
 			<div id="" class="ads-space text-center d-none d-lg-block" data-id="728x90x-pos-" data-w="728" data-h="90" data-loaded="false" data-reload="true" >
 			</div>
-		</div>
 
 
 		<div id="" class="ads-space text-center d-block d-md-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>

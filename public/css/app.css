@@ -3924,20 +3924,9 @@ figure img {
   height: auto;
 }
 
-.main-header .header-top .radio-perfil a i.fas {
+.main-header .header-top .radio-perfil a .radio-play {
   width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid #7993ba;
-  color: #00307a;
-  text-align: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 10px;
-  line-height: 19px;
-  margin: 0 5px 3px 0;
-  padding-left: 3px;
+  margin: 0 5px 0 0;
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
   float: left;
@@ -4281,6 +4270,10 @@ figure img {
 
 .buscador form .btn:focus {
   outline: none;
+}
+
+.buscador form .btn img {
+  width: 13px;
 }
 
 @media (min-width: 768px) {
@@ -6357,7 +6350,7 @@ ul.canales li.nav-item a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 0 10px 10px;
+  margin: 0 0 6px 10px;
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   font-size: 12px;
   font-weight: bold;
@@ -8060,8 +8053,6 @@ ul.canales li.nav-item a:hover {
   position: absolute;
   bottom: 5px;
   left: 5px;
-  color: rgba(255, 255, 255, 0.85);
-  border: 2px solid rgba(255, 255, 255, 0.85);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -8070,15 +8061,20 @@ ul.canales li.nav-item a:hover {
   line-height: 36px;
   -webkit-transition: ease .3s;
   transition: ease .3s;
+  border: 2px solid #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.articulo figure a .galeria-video span i:before {
-  font-size: 1.1rem;
+.articulo figure a .galeria-video img {
+  width: 20px;
+  margin: auto;
 }
 
-.articulo figure a .galeria-video span i.fa-play {
-  padding-left: 3px;
-  line-height: 36px;
+.articulo figure a .galeria-video img.hasvideo {
+  padding-left: 4px;
 }
 
 .articulo .meta-content {
@@ -8937,27 +8933,9 @@ Se usa para Radio Perfil
           justify-content: flex-start;
 }
 
-.cajageneral .caja-contenido .notas-cajageneral.radio-perfil .footer-cajageneral span a .fas {
-  background: #70b3c8;
-  margin: 0 10px 0 0;
-  float: left;
-  display: block;
+.cajageneral .caja-contenido .notas-cajageneral.radio-perfil .footer-cajageneral span a img {
   width: 28px;
-  height: 28px;
-  text-align: center;
-  color: white;
-  border-radius: 50%;
-  line-height: 28px;
-  -webkit-transition: ease .3s;
-  transition: ease .3s;
-}
-
-.cajageneral .caja-contenido .notas-cajageneral.radio-perfil .footer-cajageneral span a .fas.fa-play {
-  padding-left: 3px;
-}
-
-.cajageneral .caja-contenido .notas-cajageneral.radio-perfil .footer-cajageneral span a:hover .fas {
-  background-color: #387ab7;
+  margin-right: 5px;
 }
 
 .cajageneral .caja-contenido .notas-cajageneral.radio-perfil .contenido-notas {
@@ -9757,45 +9735,6 @@ Se usa para Radio Perfil
   width: 100%;
 }
 
-.contenedor-general .bloque .columna-tercio {
-  /*
-			.columna-tercio-izquierda {
-				.articulo {
-					&:nth-child(2) {
-						background: $negro;
-						padding: 0;
-						border-top: none;
-						.meta-content {
-							padding: 10px;
-							a {
-								.hat {
-									margin: 0 0 5px 0;
-								}
-								h2 {
-									color: white;
-									font-family: $font-condensada;
-									text-transform: uppercase;
-									font-weight: 400;
-									line-height: 1.1em;
-								}
-							}
-							.firma-home {
-								color: white;
-								a {
-									color: white;
-								}
-							}
-						}
-						figure {
-							margin-top: auto;
-							margin-bottom: auto;
-						}
-					}					
-				}
-			}
-*/
-}
-
 .contenedor-general .bloque .columna-tercio .articulo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9819,6 +9758,10 @@ Se usa para Radio Perfil
 }
 
 .contenedor-general .bloque .columna-tercio .articulo .meta-content a span.hat {
+  display: none;
+}
+
+.contenedor-general .bloque .columna-tercio .articulo .meta-content a .galeria-video {
   display: none;
 }
 
@@ -9926,6 +9869,20 @@ Se usa para Radio Perfil
     display: none;
   }
 
+  .contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(1) .meta-content a .galeria-video {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 6px 0 0;
+    float: left;
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(1) .meta-content a .galeria-video img {
+    width: 20px;
+  }
+
   .contenedor-general .bloque .columna-tercio .columna-tercio-izquierda .articulo:nth-child(2) {
     background: #171717;
     padding: 0;
@@ -9972,6 +9929,20 @@ Se usa para Radio Perfil
 
   .contenedor-general .bloque .columna-tercio .columna-tercio-derecha .articulo .meta-content {
     padding: 0;
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-derecha .articulo:nth-child(n+2) .meta-content a .galeria-video {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 6px 0 0;
+    float: left;
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+
+  .contenedor-general .bloque .columna-tercio .columna-tercio-derecha .articulo:nth-child(n+2) .meta-content a .galeria-video img {
+    width: 20px;
   }
 
   .contenedor-general .bloque .columna-tercio .articulo {
@@ -13330,33 +13301,14 @@ REVISTAS
 }
 
 .perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li {
-  font-size: 20px;
   margin: 0 20px 0 0;
+  width: 20px;
+  height: 20px;
   padding: 0;
 }
 
-.perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li a {
-  color: #555;
-}
-
-.perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li.facebook a {
-  color: #4868AD;
-}
-
-.perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li.twitter a {
-  color: #4295DA;
-}
-
-.perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li.whatsapp a {
-  color: #25D366;
-}
-
-.perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li.pinterest a {
-  color: #cc2127;
-}
-
-.perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li.linkedin a {
-  color: #0a66c2;
+.perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li a img {
+  height: 20px;
 }
 
 .perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li:before {

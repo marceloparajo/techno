@@ -19,12 +19,11 @@
 								</p>
 								@if ($new['has_video']) 
 									<div class="galeria-video">
-										<span><i class="fa fa-play"></i></span>
+										<img src="/images/glyph/hasvideo.svg" class="hasvideo">
 									</div>
-								@endif
-								@if ($new['has_gallery'])
+								@elseif ($new['has_gallery'])
 									<div class="galeria-video">
-										<span><i class="fa fa-camera"></i></span>
+										<img src="/images/glyph/hasgallery.svg" class="hasgallery">
 									</div>
 								@endif
 							</a>
@@ -60,20 +59,19 @@
 					<article class="articulo">
 						<figure>
 							<a href="{{ $new['permalink'] }}">
-									{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
-									<p class="headline">
-										{{ $new['headline'] }}
-									</p>
-									@if ($new['has_video']) 
-										<div class="galeria-video">
-											<span><i class="fa fa-play"></i></span>
-										</div>
-									@endif
-									@if ($new['has_gallery'])
-										<div class="galeria-video">
-											<span><i class="fa fa-camera"></i></span>
-										</div>
-									@endif
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
+								<p class="headline">
+									{{ $new['headline'] }}
+								</p>
+								@if ($new['has_video']) 
+									<div class="galeria-video">
+										<img src="/images/glyph/hasvideo.svg" class="hasvideo">
+									</div>
+								@elseif ($new['has_gallery'])
+									<div class="galeria-video">
+										<img src="/images/glyph/hasgallery.svg" class="hasgallery">
+									</div>
+								@endif
 							</a>
 						</figure>
 
@@ -81,6 +79,15 @@
 							<a href="{{ $new['permalink'] }}">
 								@if ($new['hat'] != '')
 									<span class="hat">{{ $new['hat'] }} </span>
+								@endif
+								@if ($new['has_video']) 
+									<div class="galeria-video">
+										<img src="/images/glyph/hasvideo-azul.svg" class="hasvideo">
+									</div>
+								@elseif ($new['has_gallery'])
+									<div class="galeria-video">
+										<img src="/images/glyph/hasgallery-azul.svg" class="hasgallery">
+									</div>
 								@endif
 								<h2>
 									{{ $new['home_title'] }}

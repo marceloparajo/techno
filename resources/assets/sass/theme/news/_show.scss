@@ -241,35 +241,13 @@
 							list-style: none;
 							justify-content: flex-start;
 							li {
-								font-size: 20px;
 								margin: 0 20px 0 0;
+								width: 20px;
+								height: 20px;
 								padding: 0;
 								a {
-									color: $linea-oscura;
-								}
-								&.facebook {
-									a {
-										color: $fb_color;
-									}
-								}
-								&.twitter {
-									a {
-										color: $tw_color;
-									}
-								}
-								&.whatsapp {
-									a {
-										color: $wa_color;
-									}
-								}
-								&.pinterest {
-									a {
-										color: $pinterest_color;
-									}
-								}
-								&.linkedin {
-									a {
-										color: $linkedin_color;
+									img {
+										height: 20px;
 									}
 								}
 								&:before {
