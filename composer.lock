@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d370f114a99743d007572e3fe2bef09b",
+    "content-hash": "524812708fb2ba3124537572b8cf6b19",
     "packages": [
         {
             "name": "brick/math",
@@ -95,6 +95,51 @@
             ],
             "abandoned": "https://github.com/Laravel-Lang/lang",
             "time": "2019-03-17T10:36:46+00:00"
+        },
+        {
+            "name": "coderello/laravel-shared-data",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coderello/laravel-shared-data.git",
+                "reference": "2ece664f901a70b66a616a31119280e647f9f7ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coderello/laravel-shared-data/zipball/2ece664f901a70b66a616a31119280e647f9f7ed",
+                "reference": "2ece664f901a70b66a616a31119280e647f9f7ed",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0|^5.0|^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Coderello\\SharedData\\Providers\\SharedDataServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Coderello\\SharedData\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Package for sharing data from Laravel to JavaScript.",
+            "time": "2020-11-18T11:39:06+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

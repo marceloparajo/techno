@@ -92,6 +92,10 @@ class NewsController extends Controller
             'id' => $noticia['id']
         ];
 
+        share([
+            'light_gallery_images' => $noticia['gallery_lightbox']
+        ]);
+
         return view('news.show.index', compact('noticia', 'jsonStructured', 'sidebar_content', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));
     }
 

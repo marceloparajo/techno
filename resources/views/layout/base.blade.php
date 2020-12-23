@@ -7,9 +7,8 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        @if (Route::currentRouteName() != "news.show")
-        <meta http-equiv="Refresh" content="600" />
-        @endif
+        @shared()
+        {{--<meta http-equiv="Refresh" content="600" />--}}
         <meta name="description" content="{{ isset($page_description) ? $page_description : env('SITE_DESCRIPTION', '') }}">
 
         {{-- Ads --}}
@@ -126,10 +125,10 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
         <div id="" class="ads-space" data-id="anuncioprevio" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>
         @include('layout.footer')
 
-        <div class="sticky-bottom-ads d-md-none">
+        {{--<div class="sticky-bottom-ads d-md-none">
             <button class="close-button" id="button-close-sticky-ads"><i class="fa fa-times"></i></button>
             <div id="" class="ads-space text-center" data-id="float-footer" data-w="320" data-h="50" data-loaded="false" data-reload="true"></div>
-        </div>
+        </div>--}}
 
         @yield('templates')
 

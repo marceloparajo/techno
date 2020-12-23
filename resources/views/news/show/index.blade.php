@@ -8,7 +8,7 @@ ID: {{ $noticia['id'] }}
 Imagen Portada: {{ $noticia['main_image']['id'] }}
 @endsection
 
-@section('structured-data-type')itemscope itemtype='https://schema.org/NewsArticle'@endsection
+@section('structured-data-type', 'itemscope itemtype="https://schema.org/NewsArticle"')
 
 @section('ads-sec', 'articulo')
 
@@ -17,6 +17,9 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 @section('head-css')
 	<link rel="preload" href="{{ mix('css/news.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="{{ mix('css/news.css') }}"></noscript>
+
+	<link rel="preload" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}"></noscript>
 @endsection
 
 @section('js')
@@ -91,7 +94,7 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 				@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code' && (STRPOS($noticia['embed_code'], 'rudo') || STRPOS($noticia['embed_code'], 'tube')))
 					{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
 				@else
-					@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])
+					@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])
 				@endif
 				{{-- /Featured Image or Video --}}
 

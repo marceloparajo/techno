@@ -2,16 +2,11 @@ import LazyLoad from 'vanilla-lazyload'
 import 'lightgallery.js'
 
 const SnippetShowNews = function () {
+	const {light_gallery_images} = window.sharedData
 
 	const initialize = () => {
 		initLazyLoad()
-		initGallery()
 		handleClickOpenGallery()
-	}
-
-	const initGallery = () => {
-		console.log('init gallery')
-		lightGallery(document.getElementById('gallery-thumbnails'))
 	}
 
 	const handleClickOpenGallery = () => {
@@ -19,7 +14,11 @@ const SnippetShowNews = function () {
 
 		Array.from(buttons).forEach(el => {
 			el.addEventListener('click', e => {
-				console.log(e)
+				e.preventDefault()
+				lightGallery(e.currentTarget, {
+					dynamic: true,
+					dynamicEl: light_gallery_images
+				})
 			})
 		})
 	}

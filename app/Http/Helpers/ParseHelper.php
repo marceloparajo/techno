@@ -448,7 +448,7 @@ class ParseHelper
 
     /**
      * @param array $gallery
-     * @return string
+     * @return array
      */
     protected function _parseGalleryForLightbox(Array $gallery)
     {
@@ -462,7 +462,8 @@ class ParseHelper
                 'subHtml' => $image['caption']
             ]);
         }
-        return json_encode($images);
+
+        return $images;
     }
 
     /**
