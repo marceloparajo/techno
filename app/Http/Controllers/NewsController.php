@@ -51,7 +51,7 @@ class NewsController extends Controller
      */
     public function show(Route $route, BloquesHelper $bloquesHelper)
     {
-        $slug = str_slug($route->parameter('slug') ?? '');
+        $slug = Str::slug($route->parameter('slug') ?? '');
 
         if ($slug == '')
             abort(404);

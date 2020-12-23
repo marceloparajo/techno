@@ -11,6 +11,7 @@ namespace App\Http\Helpers;
 
 use Carbon\Carbon;
 use App\Http\Helpers\ImageHelper;
+use Illuminate\Support\Str;
 
 class ParseHelper
 {
@@ -93,7 +94,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($tags, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.show', str_slug($tag))
+                    'route' => route('tags.show', Str::slug($tag))
                 ]);
             }
         }
@@ -106,7 +107,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($celebrities, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.personalities.show', str_slug($tag))
+                    'route' => route('tags.personalities.show', Str::slug($tag))
                 ]);
             }
         }
@@ -119,7 +120,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($series, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.series.show', str_slug($tag))
+                    'route' => route('tags.series.show', Str::slug($tag))
                 ]);
             }
         }
@@ -132,7 +133,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($movies, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.movies.show', str_slug($tag))
+                    'route' => route('tags.movies.show', Str::slug($tag))
                 ]);
             }
         }
@@ -145,7 +146,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($events, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.events.show', str_slug($tag))
+                    'route' => route('tags.events.show', Str::slug($tag))
                 ]);
             }
         }
@@ -158,7 +159,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($locations, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.locations.show', str_slug($tag))
+                    'route' => route('tags.locations.show', Str::slug($tag))
                 ]);
             }
         }
@@ -171,7 +172,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($themes, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.topics.show', str_slug($tag))
+                    'route' => route('tags.topics.show', Str::slug($tag))
                 ]);
             }
         }
@@ -303,7 +304,7 @@ class ParseHelper
                     ]
                 ]
             ],
-            'headline' => str_limit($noticia['short_title'], 110),
+            'headline' => Str::limit($noticia['short_title'], 110),
             'url' => $noticia['permalink'],
             'articleSection' => $channel_url,
             'genre' => $channel_url,

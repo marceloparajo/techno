@@ -36,7 +36,7 @@
 		<meta itemprop="keywords" 				content="{{ $noticia['tags'] }}">
 		<meta itemprop="name" 					content="{{ $page_title }}">
 		<meta itemprop="alternateName" 			content="{{ $noticia['short_title'] }}">
-		<meta itemprop="headline" 				content="{{ str_limit($noticia['headline'],105) }}">
+		<meta itemprop="headline" 				content="{{ \Illuminate\Support\Str::limit($noticia['headline'],105) }}">
 		<meta itemprop="url" 					content="{{ $noticia['permalink'] }}">
 		<meta itemprop="articleSection" 		content="{{ $noticia['channel']['slug'] }}">
 		<meta itemprop="inLanguage" 			content="{{ config('app.locale') }}">
