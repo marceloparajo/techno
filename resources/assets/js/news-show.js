@@ -49,9 +49,7 @@ const SnippetShowNews = function () {
 	}
 
 	return {
-		init: () => {
-			initialize()
-		}
+		init: () => initialize()
 	}
 
 }()
