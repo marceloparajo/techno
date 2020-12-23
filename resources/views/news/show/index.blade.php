@@ -8,20 +8,19 @@ ID: {{ $noticia['id'] }}
 Imagen Portada: {{ $noticia['main_image']['id'] }}
 @endsection
 
-@section('structured-data-type')itemscope itemtype='https://schema.org/NewsArticle'@endsection 
+@section('structured-data-type')itemscope itemtype='https://schema.org/NewsArticle'@endsection
 
 @section('ads-sec', 'articulo')
 
 @section('page-title', $noticia['home_title'])
 
-@section('css')
-	<link rel="stylesheet" type="text/css" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}">
+@section('head-css')
+	<link rel="preload" href="{{ mix('css/news.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ mix('css/news.css') }}"></noscript>
 @endsection
 
 @section('js')
-	<script type="text/javascript" src="{{ asset('vendors/lightgallery/js/lightgallery-all.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('vendors/lightgallery/js/lg-thumbnail.min.js') }}"></script>
-	<script type="text/javascript" src="{{ mix('js/news-show.js') }}"></script>
+	<script defer type="text/javascript" src="{{ mix('js/news-show.js') }}"></script>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
@@ -30,30 +29,36 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 		js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.1';
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
+
+	@if (env('ADS_ENABLE', false) && env('TEADS_ENABLE', false) && env('ADS_CLIENT', '') != '')
+		<script defer type="text/javascript" src="https://ads.us.e-planning.net/eb/3/{{ env("ADS_CLIENT") }}/articulo/teads?o=j&crs=UTF-8"></script>
+	@endif
+
+	@if (env('OUTBRAIN_ENABLE', false) && env('ADS_ENABLE', false))
+		<script defer type="text/javascript" src="https://widgets.outbrain.com/outbrain.js"></script>
+	@endif
 @endsection
 
 @section('head-top')
 
 	<link rel="preconnect" href="https://www.facebbook.com">
 	<link rel="canonical" href="{{ $noticia['permalink'] }}">
-@if ($noticia['google_amp']) 
-	<link rel="amphtml" href="{{ route('news.amp.show', [$noticia['channel']['slug'], $noticia['slug']]) }}"> 
-@endif
+
+	@if ($noticia['google_amp'])
+		<link rel="amphtml" href="{{ route('news.amp.show', [$noticia['channel']['slug'], $noticia['slug']]) }}">
+	@endif
+
 	@include('news.show.partials.social-tags')
-	
+
 @endsection
 
 @section('head-bottom')
 	<script type="application/ld+json">
 		{!! json_encode($jsonStructured) !!}
 	</script>
-
-	{{-- @include('partials.taboola-sidebar-header') --}}
-	{{-- @include('partials.taboola-news-header') --}}
 	<noscript>
 		<img src="http://b.scorecardresearch.com/p?c1=2&c2=6906401&cv=2.0&cj=1" />
 	</noscript>
-
 @endsection
 
 @section('body-class', 'perfil-noticia')
@@ -79,53 +84,40 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 		</header>
 
 		<div class="container" id="noticia">
-			
+
 			<article class="main-article">
 
+				{{-- Featured Image or Video --}}
+				@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code' && (STRPOS($noticia['embed_code'], 'rudo') || STRPOS($noticia['embed_code'], 'tube')))
+					{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
+				@else
+					@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])
+				@endif
+				{{-- /Featured Image or Video --}}
 
-				{{-- Embed Code --}}
-					@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code')
-						@php
-							if (STRPOS($noticia['embed_code'], 'rudo') || STRPOS($noticia['embed_code'], 'tube')  ) {
-						@endphp
-							{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
-						@php
-							} 
-						@endphp
-					@else 
-						@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'lightbox' => $noticia['gallery_lightbox'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])				
-					@endif
-
-
+				{{-- Article Body --}}
 				<div class="news-body">
 					<div class="fecha-autor">
 						{{-- Author --}}
 						@if ($noticia['signed'])
-							<div class="autor"> 
+							<div class="autor">
 								@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 							</div>
 						{{-- Credit --}}
 						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
 							<div class="autor">{{ $noticia['credit'] }}</div>
-						@endif						
+						@endif
 						<div class="fecha">
 							{{ $noticia['date_available_human'] }}
 						</div>
 					</div>
 
-
 					@include('news.show.partials.news-tags')
-
 
 					@include('news.show.partials.social-top', ['shareText' => __('share')] )
 
-
-
-
-					<div class="news-content"> 
-
+					<div class="news-content">
 						{!! $body !!}
-
 
 						{{-- Embed Code --}}
 						@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code')
@@ -146,14 +138,11 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 							</div>
 						@endif
 
-
 						{{-- Author
 						@if ($noticia['signed'])
 							@include('news.show.partials.author-bottom', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 						@endif
 						--}}
-
-						@include('partials.teads')
 
 						@include('news.show.partials.news-tags')
 
@@ -162,13 +151,22 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 					{{-- Más Noticias (para los crawlers) --}}
 					@include('news.show.partials.more-news-crawlers')
 
-					
 				</div>
+				{{-- /Article Body --}}
 
 				{{-- Noticias sugeridas de otros sitios/revistas --}}
 				@include('news.show.partials.suggested-site-news')
 
-				@include('partials.outbrain-news')				
+				{{-- Outbrain --}}
+				@if (env('OUTBRAIN_ENABLE', false) && env('ADS_ENABLE', false))
+					<div class="comments">
+						<div class="col-12">
+							<h4></h4>
+							<div class="OUTBRAIN" data-src="{{ $noticia['permalink'] }}" data-widget-id="AR_1" data-ob-template="perfil"></div>
+						</div>
+					</div>
+				@endif
+				{{-- /Outbrain --}}
 
 			</article>
 

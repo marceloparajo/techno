@@ -11,18 +11,21 @@ let mix = require('laravel-mix')
  |
  */
 
-mix.sass('resources/assets/sass/app.scss', 'public/css')
-	.js('resources/assets/js/channels-show.js', 'public/js')
+mix.sass('resources/assets/sass/home.scss', 'public/css')
+	.sass('resources/assets/sass/general.scss', 'public/css')
+	.sass('resources/assets/sass/news.scss', 'public/css')
+
+mix.js('resources/assets/js/channels-show.js', 'public/js')
 	.js('resources/assets/js/home.js', 'public/js')
 	.js('resources/assets/js/news-show.js', 'public/js')
-	.js('resources/assets/js/vendors/epl-41.js', 'public/js')
+	.js('resources/assets/js/eplanning.js', 'public/js')
 
 mix.version([
-	'public/css/app.css',
+	'public/css/home.css',
+	'public/css/general.css',
+	'public/css/news.css',
 	'public/js/channels-show.js',
 	'public/js/home.js',
 	'public/js/news-show.js',
-
-	// Vendors
-	'public/js/epl-41.js'
+	'public/js/eplanning.js'
 ])

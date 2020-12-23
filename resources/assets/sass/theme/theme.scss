@@ -6,11 +6,11 @@
 // @import '../../fonts/fontawesome/scss/brands';
 // @import '../../fonts/fontawesome/scss/solid';
 // @import url('https://use.fontawesome.com/releases/v5.14.0/css/all.css');
-@import "general";
-@import "header";
-@import "footer";
-@import "sidebar";
-@import "paywall";
+@import "main/_general";
+@import "main/_header";
+@import "main/_footer";
+@import "main/_sidebar";
+@import "main/_paywall";
 @import "home/_articulo";
 @import "home/_destacada";
 @import "home/_especial";
@@ -27,8 +27,8 @@
 @import "news/redes-sociales-articulo";
 @import "news/_mas-en-perfil";
 @import "channels/show";
-@import "social";
-@import "social-sharing";
-@import "ads";
+@import "main/_social";
+@import "main/_social-sharing";
+@import "main/_ads";
 
 @import "tests";

@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "is-mobile": "^2.0.0",
+        "lightgallery.js": "^1.4.0",
         "vanilla-lazyload": "^8.15.2"
     }
 }

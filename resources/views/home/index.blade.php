@@ -13,6 +13,11 @@
 	<link rel="amphtml" href="{{ $amphtml?? "" }}">
 @endsection
 
+@section('head-css')
+	<link rel="preload" href="{{ mix('css/home.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ mix('css/home.css') }}"></noscript>
+@endsection
+
 @section('head-bottom')
 	@include('partials.taboola-sidebar-header')
 @endsection

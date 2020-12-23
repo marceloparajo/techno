@@ -1677,11 +1677,9 @@ module.exports = g;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_app__ = __webpack_require__("./resources/assets/js/modules/app.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_eplanning__ = __webpack_require__("./resources/assets/js/modules/eplanning.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_eplvideo__ = __webpack_require__("./resources/assets/js/modules/eplvideo.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vanilla_lazyload__ = __webpack_require__("./node_modules/vanilla-lazyload/dist/lazyload.es2015.js");
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_eplanning__ = __webpack_require__("./resources/assets/js/modules/eplanning.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_eplvideo__ = __webpack_require__("./resources/assets/js/modules/eplvideo.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vanilla_lazyload__ = __webpack_require__("./node_modules/vanilla-lazyload/dist/lazyload.es2015.js");
 
 
 
@@ -1689,17 +1687,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var SnippetHome = function () {
 
 	var initLazyload = function initLazyload() {
-		var lazyLoad = new __WEBPACK_IMPORTED_MODULE_3_vanilla_lazyload__["a" /* default */]({
+		var lazyLoad = new __WEBPACK_IMPORTED_MODULE_2_vanilla_lazyload__["a" /* default */]({
 			elements_selector: '.lazyload'
 		});
 	};
 
 	return {
 		init: function init() {
-			__WEBPACK_IMPORTED_MODULE_0__modules_app__["a" /* default */].initialize();
-			initLazyload();
-			__WEBPACK_IMPORTED_MODULE_1__modules_eplanning__["a" /* default */].init();
-			__WEBPACK_IMPORTED_MODULE_2__modules_eplvideo__["a" /* default */].init();
+			/*App.initialize()
+   initLazyload()
+   eplanningMod.init()
+   eplvideoMod.init()*/
 		}
 	};
 }();
@@ -1711,209 +1709,6 @@ $(window).resize(function () {
 		$(".supercontenedor").removeClass("conmega");
 	}
 });
-
-/***/ }),
-
-/***/ "./resources/assets/js/modules/analytics.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = initAnalytics;
-/* harmony export (immutable) */ __webpack_exports__["b"] = sendHitGalleryAnalytics;
-var my_tracker = null;
-
-function initAnalytics() {
-	var path_name = $('meta[name="analytics-path-name"]').attr('content');
-	var client_id = $('meta[name="analytics-client-id"]').attr('content');
-	var view = $('meta[name="analytics-view"]').attr('content');
-	var data = $('meta[name="analytics-data"]').attr('content');
-
-	// Location
-	var location = path_name + window.location.pathname;
-	location = location.replace('//', '/');
-	var content = data !== '' ? JSON.parse(data) : {};
-
-	ga('create', client_id, 'auto', { allowLinker: true, 'useAmpClientId': true });
-	ga('require', 'linker');
-	ga('linker:autoLink', ['batimes.com.ar', 'fortunaweb.com.ar', 'lunateen.com.ar']);
-	ga('set', 'page', location);
-	ga(function (tracker) {
-		my_tracker = tracker;
-	});
-
-	ga('set', 'dimension2', content['section']);
-
-	switch (view.trim()) {
-		case 'news.show':
-			ga('set', 'dimension1', content['slug']);
-			ga('set', 'dimension3', content['author']);
-			ga('set', 'dimension4', content['date']);
-			ga('set', 'dimension5', content['id']);
-			break;
-
-		case 'channels.show':
-			ga('set', 'dimension1', content['channel']);
-			break;
-
-		case 'authors.show':
-			ga('set', 'dimension1', content['author_username']);
-			ga('set', 'dimension3', content['author_name']);
-			break;
-
-		case 'tags.show':
-			ga('set', 'dimension1', content['tag']);
-			break;
-
-		case 'home.index':
-			ga('set', 'dimension1', 'home');
-			break;
-
-		default:
-			ga('set', 'dimension1', view.trim());
-
-	}
-
-	ga('send', 'pageview');
-}
-
-function sendHitGalleryAnalytics(indexGallery) {
-	my_tracker.set('dimension6', indexGallery);
-	my_tracker.send('pageview');
-}
-
-/***/ }),
-
-/***/ "./resources/assets/js/modules/app.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__analytics__ = __webpack_require__("./resources/assets/js/modules/analytics.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__comscore__ = __webpack_require__("./resources/assets/js/modules/comscore.js");
-
-
-
-function initialize() {
-	var analytics_run = $('meta[name="analytics-run"]').attr('content');
-
-	setJqueryExtends();
-	handleClickIframe();
-	headerUI();
-
-	if (analytics_run === '1') {
-		Object(__WEBPACK_IMPORTED_MODULE_0__analytics__["a" /* initAnalytics */])();
-		Object(__WEBPACK_IMPORTED_MODULE_1__comscore__["a" /* initComscore */])();
-	}
-
-	showButtonCloseStickyBottomAds();
-	handleClickCloseBottomStickyAds();
-}
-
-var showButtonCloseStickyBottomAds = function showButtonCloseStickyBottomAds() {
-	var ads_container = $('.sticky-bottom-ads');
-
-	if (ads_container.is(':visible')) {
-		setTimeout(function () {
-			var btn = $('#button-close-sticky-ads');
-			btn.show();
-		}, 8000);
-	}
-};
-
-var handleClickCloseBottomStickyAds = function handleClickCloseBottomStickyAds() {
-	$('#button-close-sticky-ads').click(function (e) {
-		var btn = $(e.currentTarget);
-		var container = btn.parent('div');
-		var ads_container = container.find('.ads-space');
-
-		ads_container.attr('data-reload', 'false');
-		container.hide();
-	});
-};
-
-function handleClickIframe() {
-	var $containers = $('.iframe-container');
-
-	$containers.click(function (e) {
-		var $container = $(e.currentTarget);
-		var $iframe = $container.find('iframe');
-
-		$iframe.addClass('clicked');
-	});
-
-	$containers.mouseleave(function (e) {
-		var $container = $(e.currentTarget);
-		var $iframe = $container.find('iframe');
-
-		$iframe.removeClass('clicked');
-	});
-}
-
-function setJqueryExtends() {
-	$.fn.extend({
-		animateCss: function animateCss(animationName, callback) {
-			var animationEnd = function (el) {
-				var animations = {
-					animation: 'animationend',
-					OAnimation: 'oAnimationEnd',
-					MozAnimation: 'mozAnimationEnd',
-					WebkitAnimation: 'webkitAnimationEnd'
-				};
-
-				for (var t in animations) {
-					if (el.style[t] !== undefined) {
-						return animations[t];
-					}
-				}
-			}(document.createElement('div'));
-
-			this.addClass('animated ' + animationName).one(animationEnd, function () {
-				$(this).removeClass('animated ' + animationName);
-
-				if (typeof callback === 'function') callback();
-			});
-
-			return this;
-		}
-	});
-}
-
-function headerUI() {
-	var header_logo = $("#logo-small");
-	var header_navbar = $('#header-navbar');
-	var header_search = $('#header-search');
-
-	$(window).scroll(function () {
-		var scroll = $(window).scrollTop();
-
-		if (scroll >= 120 && header_logo.hasClass('logo')) {
-			header_logo.removeClass('logo').addClass("logo-alt");
-			header_navbar.removeClass('mainnavbar').addClass("mainnavbar-alt");
-			header_search.removeClass('buscador').addClass("buscador-alt");
-		} else if (scroll < 120 && header_logo.hasClass('logo-alt')) {
-			header_logo.removeClass("logo-alt").addClass('logo');
-			header_navbar.removeClass('mainnavbar-alt').addClass("mainnavbar");
-			header_search.removeClass('buscador-alt').addClass("buscador");
-		}
-	});
-}
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-	initialize: initialize
-});
-
-/***/ }),
-
-/***/ "./resources/assets/js/modules/comscore.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = initComscore;
-function initComscore() {
-	var client_id = $('meta[name="comscore-client-id"]').attr('content');
-
-	var _comscore = _comscore || [];
-	_comscore.push({ c1: "2", c2: client_id });
-}
 
 /***/ }),
 
@@ -2105,7 +1900,7 @@ function handleReloadAds() {
 	setInterval(reloadAds, 59000);
 }
 
-/* harmony default export */ __webpack_exports__["a"] = ({
+/* unused harmony default export */ var _unused_webpack_default_export = ({
 	init: init
 });
 
@@ -2221,7 +2016,7 @@ function loadVideo(id, code) {
 	});
 }
 
-/* harmony default export */ __webpack_exports__["a"] = ({
+/* unused harmony default export */ var _unused_webpack_default_export = ({
 	init: init
 });
 

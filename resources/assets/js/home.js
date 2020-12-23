@@ -1,4 +1,3 @@
-import App from './modules/app'
 import eplanningMod from './modules/eplanning'
 import eplvideoMod from './modules/eplvideo'
 import Lazyload from 'vanilla-lazyload'
@@ -13,10 +12,10 @@ const SnippetHome = function () {
 
 	return {
 		init: () => {
-			App.initialize()
+			/*App.initialize()
 			initLazyload()
 			eplanningMod.init()
-			eplvideoMod.init()
+			eplvideoMod.init()*/
 		}
 	}
 

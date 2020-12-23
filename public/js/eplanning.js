@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -70,295 +70,6 @@
 
 module.exports = __webpack_require__("./node_modules/regenerator-runtime/runtime-module.js");
 
-
-/***/ }),
-
-/***/ "./node_modules/in-viewport/in-viewport.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {module.exports = inViewport;
-
-var instances = [];
-var supportsMutationObserver = typeof global.MutationObserver === 'function';
-
-function inViewport(elt, params, cb) {
-  var opts = {
-    container: global.document.body,
-    offset: 0,
-    debounce: 15,
-    failsafe: 150
-  };
-
-  if (params === undefined || typeof params === 'function') {
-    cb = params;
-    params = {};
-  }
-
-  var container = opts.container = params.container || opts.container;
-  var offset = opts.offset = params.offset || opts.offset;
-  var debounceValue = opts.debounce = params.debounce || opts.debounce;
-  var failsafe = opts.failsafe = params.failsafe || opts.failsafe;
-
-  // ensure backward compatibility with failsafe as boolean
-  if (failsafe === true) {
-    failsafe = 150;
-  } else if(failsafe === false) {
-    failsafe = 0;
-  }
-
-  // failsafe check always needs to be higher than debounceValue
-  if (failsafe > 0 && failsafe < debounceValue) {
-      failsafe = debounceValue + 50;
-  }
-
-  for (var i = 0; i < instances.length; i++) {
-    if (
-      instances[i].container === container &&
-      instances[i]._debounce === debounceValue &&
-      instances[i]._failsafe === failsafe
-    ) {
-      return instances[i].isInViewport(elt, offset, cb);
-    }
-  }
-
-  return instances[
-    instances.push(createInViewport(container, debounceValue, failsafe)) - 1
-  ].isInViewport(elt, offset, cb);
-}
-
-function addEvent(el, type, fn) {
-  if (el.attachEvent) {
-    el.attachEvent('on' + type, fn);
-  } else {
-    el.addEventListener(type, fn, false);
-  }
-}
-
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function () {
-    var context = this, args = arguments;
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-
-    function later() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    }
-  };
-}
-
-// https://github.com/jquery/sizzle/blob/3136f48b90e3edc84cbaaa6f6f7734ef03775a07/sizzle.js#L708
-var contains = function() {
-  if (!global.document) {
-    return true;
-  }
-  return global.document.documentElement.compareDocumentPosition ?
-    function (a, b) {
-      return !!(a.compareDocumentPosition(b) & 16);
-    } :
-    global.document.documentElement.contains ?
-      function (a, b) {
-        return a !== b && ( a.contains ? a.contains(b) : false );
-      } :
-      function (a, b) {
-        while (b = b.parentNode) {
-          if (b === a) {
-            return true;
-          }
-        }
-        return false;
-      };
-}
-
-function createInViewport(container, debounceValue, failsafe) {
-  var watches = createWatches();
-
-  var scrollContainer = container === global.document.body ? global : container;
-  var debouncedCheck = debounce(watches.checkAll(watchInViewport), debounceValue);
-
-  addEvent(scrollContainer, 'scroll', debouncedCheck);
-
-  if (scrollContainer === global) {
-    addEvent(global, 'resize', debouncedCheck);
-  }
-
-  if (supportsMutationObserver) {
-    observeDOM(watches, container, debouncedCheck);
-  }
-
-  // failsafe check, every X we check for visible images
-  // usecase: a hidden parent containing eleements
-  // when the parent becomes visible, we have no event that the children
-  // became visible
-  if (failsafe > 0) {
-    setInterval(debouncedCheck, failsafe);
-  }
-
-  function isInViewport(elt, offset, cb) {
-    if (!cb) {
-      return isVisible(elt, offset);
-    }
-
-    var remote = createRemote(elt, offset, cb);
-    remote.watch();
-    return remote;
-  }
-
-  function createRemote(elt, offset, cb) {
-    function watch() {
-      watches.add(elt, offset, cb);
-    }
-
-    function dispose() {
-      watches.remove(elt);
-    }
-
-    return {
-      watch: watch,
-      dispose: dispose
-    };
-  }
-
-  function watchInViewport(elt, offset, cb) {
-    if (isVisible(elt, offset)) {
-      watches.remove(elt);
-      cb(elt);
-    }
-  }
-
-  function isVisible(elt, offset) {
-    if (!elt) {
-      return false;
-    }
-
-    if (!contains(global.document.documentElement, elt) || !contains(global.document.documentElement, container)) {
-      return false;
-    }
-
-    // Check if the element is visible
-    // https://github.com/jquery/jquery/blob/740e190223d19a114d5373758127285d14d6b71e/src/css/hiddenVisibleSelectors.js
-    if (!elt.offsetWidth || !elt.offsetHeight) {
-      return false;
-    }
-
-    var eltRect = elt.getBoundingClientRect();
-    var viewport = {};
-
-    if (container === global.document.body) {
-      viewport = {
-        top: -offset,
-        left: -offset,
-        right: global.document.documentElement.clientWidth + offset,
-        bottom: global.document.documentElement.clientHeight + offset
-      };
-    } else {
-      var containerRect = container.getBoundingClientRect();
-      viewport = {
-        top: containerRect.top - offset,
-        left: containerRect.left - offset,
-        right: containerRect.right + offset,
-        bottom: containerRect.bottom + offset
-      };
-    }
-
-    // The element must overlap with the visible part of the viewport
-    var visible =
-      (
-        eltRect.right >= viewport.left &&
-        eltRect.left <= viewport.right &&
-        eltRect.bottom >= viewport.top &&
-        eltRect.top <= viewport.bottom
-      );
-
-    return visible;
-  }
-
-  return {
-    container: container,
-    isInViewport: isInViewport,
-    _debounce: debounceValue,
-    _failsafe: failsafe
-  };
-}
-
-function createWatches() {
-  var watches = [];
-
-  function add(elt, offset, cb) {
-    if (!isWatched(elt)) {
-      watches.push([elt, offset, cb]);
-    }
-  }
-
-  function remove(elt) {
-    var pos = indexOf(elt);
-    if (pos !== -1) {
-      watches.splice(pos, 1);
-    }
-  }
-
-  function indexOf(elt) {
-    for (var i = watches.length - 1; i >= 0; i--) {
-      if (watches[i][0] === elt) {
-        return i;
-      }
-    }
-    return -1;
-  }
-
-  function isWatched(elt) {
-    return indexOf(elt) !== -1;
-  }
-
-  function checkAll(cb) {
-    return function () {
-      for (var i = watches.length - 1; i >= 0; i--) {
-        cb.apply(this, watches[i]);
-      }
-    };
-  }
-
-  return {
-    add: add,
-    remove: remove,
-    isWatched: isWatched,
-    checkAll: checkAll
-  };
-}
-
-function observeDOM(watches, container, cb) {
-  var observer = new MutationObserver(watch);
-  var filter = Array.prototype.filter;
-  var concat = Array.prototype.concat;
-
-  observer.observe(container, {
-    childList: true,
-    subtree: true,
-    // changes like style/width/height/display will be catched
-    attributes: true
-  });
-
-  function watch(mutations) {
-    // some new DOM nodes where previously watched
-    // we should check their positions
-    if (mutations.some(knownNodes) === true) {
-      setTimeout(cb, 0);
-    }
-  }
-
-  function knownNodes(mutation) {
-    var nodes = concat.call([],
-      Array.prototype.slice.call(mutation.addedNodes),
-      mutation.target
-    );
-    return filter.call(nodes, watches.isWatched).length > 0;
-  }
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -1138,658 +849,65 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ "./node_modules/vanilla-lazyload/dist/lazyload.es2015.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var getDefaultSettings = () => ({
-	elements_selector: "img",
-	container: window,
-	threshold: 300,
-	throttle: 150,
-	data_src: "src",
-	data_srcset: "srcset",
-	data_sizes: "sizes",
-	class_loading: "loading",
-	class_loaded: "loaded",
-	class_error: "error",
-	class_initial: "initial",
-	skip_invisible: true,
-	callback_load: null,
-	callback_error: null,
-	callback_set: null,
-	callback_processed: null,
-	callback_enter: null,
-	to_webp: false
-});
-
-const getTopOffset = function(element) {
-	return (
-		element.getBoundingClientRect().top +
-		window.pageYOffset -
-		element.ownerDocument.documentElement.clientTop
-	);
-};
-
-const isBelowViewport = function(element, container, threshold) {
-	const fold =
-		container === window
-			? window.innerHeight + window.pageYOffset
-			: getTopOffset(container) + container.offsetHeight;
-	return fold <= getTopOffset(element) - threshold;
-};
-
-const getLeftOffset = function(element) {
-	return (
-		element.getBoundingClientRect().left +
-		window.pageXOffset -
-		element.ownerDocument.documentElement.clientLeft
-	);
-};
-
-const isAtRightOfViewport = function(element, container, threshold) {
-	const documentWidth = window.innerWidth;
-	const fold =
-		container === window
-			? documentWidth + window.pageXOffset
-			: getLeftOffset(container) + documentWidth;
-	return fold <= getLeftOffset(element) - threshold;
-};
-
-const isAboveViewport = function(element, container, threshold) {
-	const fold =
-		container === window ? window.pageYOffset : getTopOffset(container);
-	return fold >= getTopOffset(element) + threshold + element.offsetHeight;
-};
-
-const isAtLeftOfViewport = function(element, container, threshold) {
-	const fold =
-		container === window ? window.pageXOffset : getLeftOffset(container);
-	return fold >= getLeftOffset(element) + threshold + element.offsetWidth;
-};
-
-function isInsideViewport(element, container, threshold) {
-	return (
-		!isBelowViewport(element, container, threshold) &&
-		!isAboveViewport(element, container, threshold) &&
-		!isAtRightOfViewport(element, container, threshold) &&
-		!isAtLeftOfViewport(element, container, threshold)
-	);
-}
-
-/* Creates instance and notifies it through the window element */
-const createInstance = function(classObj, options) {
-	var event;
-	let eventString = "LazyLoad::Initialized";
-	let instance = new classObj(options);
-	try {
-		// Works in modern browsers
-		event = new CustomEvent(eventString, { detail: { instance } });
-	} catch (err) {
-		// Works in Internet Explorer (all versions)
-		event = document.createEvent("CustomEvent");
-		event.initCustomEvent(eventString, false, false, { instance });
-	}
-	window.dispatchEvent(event);
-};
-
-/* Auto initialization of one or more instances of lazyload, depending on the 
-    options passed in (plain object or an array) */
-function autoInitialize(classObj, options) {
-	if (!options) {
-		return;
-	}
-	if (!options.length) {
-		// Plain object
-		createInstance(classObj, options);
-	} else {
-		// Array of objects
-		for (let i = 0, optionsItem; (optionsItem = options[i]); i += 1) {
-			createInstance(classObj, optionsItem);
-		}
-	}
-}
-
-const replaceExtToWebp = (value, condition) =>
-	condition ? value.replace(/\.(jpe?g|png)/gi, ".webp") : value;
-
-const detectWebp = () => {
-	var webpString = "image/webp";
-	var canvas = document.createElement("canvas");
-
-	if (canvas.getContext && canvas.getContext("2d")) {
-		return canvas.toDataURL(webpString).indexOf(`data:${webpString}`) === 0;
-	}
-
-	return false;
-};
-
-const runningOnBrowser = typeof window !== "undefined";
-
-const isBot =
-	(runningOnBrowser && !("onscroll" in window)) ||
-	/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent);
-const supportsClassList =
-	runningOnBrowser && "classList" in document.createElement("p");
-
-const supportsWebp = runningOnBrowser && detectWebp();
-
-const addClass = (element, className) => {
-	if (supportsClassList) {
-		element.classList.add(className);
-		return;
-	}
-	element.className += (element.className ? " " : "") + className;
-};
-
-const removeClass = (element, className) => {
-	if (supportsClassList) {
-		element.classList.remove(className);
-		return;
-	}
-	element.className = element.className.
-		replace(new RegExp("(^|\\s+)" + className + "(\\s+|$)"), " ").
-		replace(/^\s+/, "").
-		replace(/\s+$/, "");
-};
-
-const dataPrefix = "data-";
-const processedDataName = "was-processed";
-const processedDataValue = "true";
-
-const getData = (element, attribute) => {
-	return element.getAttribute(dataPrefix + attribute);
-};
-
-const setData = (element, attribute, value) => {
-	var attrName = dataPrefix + attribute;
-	if (value === null) {
-		element.removeAttribute(attrName);
-		return;
-	}
-	element.setAttribute(attrName, value);
-};
-
-const setWasProcessedData = element =>
-	setData(element, processedDataName, processedDataValue);
-
-const getWasProcessedData = element =>
-	getData(element, processedDataName) === processedDataValue;
-
-const setSourcesInChildren = function(
-	parentTag,
-	attrName,
-	dataAttrName,
-	toWebpFlag
-) {
-	for (let i = 0, childTag; (childTag = parentTag.children[i]); i += 1) {
-		if (childTag.tagName === "SOURCE") {
-			let attrValue = getData(childTag, dataAttrName);
-			setAttributeIfValue(childTag, attrName, attrValue, toWebpFlag);
-		}
-	}
-};
-
-const setAttributeIfValue = function(
-	element,
-	attrName,
-	value,
-	toWebpFlag
-) {
-	if (!value) {
-		return;
-	}
-	element.setAttribute(attrName, replaceExtToWebp(value, toWebpFlag));
-};
-
-const setSourcesImg = (element, settings) => {
-	const toWebpFlag = supportsWebp && settings.to_webp;
-	const srcsetDataName = settings.data_srcset;
-	const parent = element.parentNode;
-
-	if (parent && parent.tagName === "PICTURE") {
-		setSourcesInChildren(parent, "srcset", srcsetDataName, toWebpFlag);
-	}
-	const sizesDataValue = getData(element, settings.data_sizes);
-	setAttributeIfValue(element, "sizes", sizesDataValue);
-	const srcsetDataValue = getData(element, srcsetDataName);
-	setAttributeIfValue(element, "srcset", srcsetDataValue, toWebpFlag);
-	const srcDataValue = getData(element, settings.data_src);
-	setAttributeIfValue(element, "src", srcDataValue, toWebpFlag);
-};
-
-const setSourcesIframe = (element, settings) => {
-	const srcDataValue = getData(element, settings.data_src);
-
-	setAttributeIfValue(element, "src", srcDataValue);
-};
-
-const setSourcesVideo = (element, settings) => {
-	const srcDataName = settings.data_src;
-	const srcDataValue = getData(element, srcDataName);
-
-	setSourcesInChildren(element, "src", srcDataName);
-	setAttributeIfValue(element, "src", srcDataValue);
-	element.load();
-};
-
-const setSourcesBgImage = (element, settings) => {
-	const toWebpFlag = supportsWebp && settings.to_webp;
-	const srcDataValue = getData(element, settings.data_src);
-
-	if (srcDataValue) {
-		let setValue = replaceExtToWebp(srcDataValue, toWebpFlag);
-		element.style.backgroundImage = `url("${setValue}")`;
-	}
-};
-
-const setSourcesFunctions = {
-	IMG: setSourcesImg,
-	IFRAME: setSourcesIframe,
-	VIDEO: setSourcesVideo
-};
-
-const setSources = (element, settings) => {
-	const tagName = element.tagName;
-	const setSourcesFunction = setSourcesFunctions[tagName];
-	if (setSourcesFunction) {
-		setSourcesFunction(element, settings);
-		return;
-	}
-	setSourcesBgImage(element, settings);
-};
-
-const callbackIfSet = function(callback, argument) {
-	if (callback) {
-		callback(argument);
-	}
-};
-
-const genericLoadEventName = "load";
-const mediaLoadEventName = "loadeddata";
-const errorEventName = "error";
-
-const addEventListener = (element, eventName, handler) => {
-	element.addEventListener(eventName, handler);
-};
-
-const removeEventListener = (element, eventName, handler) => {
-	element.removeEventListener(eventName, handler);
-};
-
-const addAllEventListeners = (element, loadHandler, errorHandler) => {
-	addEventListener(element, genericLoadEventName, loadHandler);
-	addEventListener(element, mediaLoadEventName, loadHandler);
-	addEventListener(element, errorEventName, errorHandler);
-};
-
-const removeAllEventListeners = (element, loadHandler, errorHandler) => {
-	removeEventListener(element, genericLoadEventName, loadHandler);
-	removeEventListener(element, mediaLoadEventName, loadHandler);
-	removeEventListener(element, errorEventName, errorHandler);
-};
-
-const eventHandler = function(event, success, settings) {
-	const className = success ? settings.class_loaded : settings.class_error;
-	const callback = success ? settings.callback_load : settings.callback_error;
-	const element = event.target;
-
-	removeClass(element, settings.class_loading);
-	addClass(element, className);
-	callbackIfSet(callback, element);
-};
-
-const addOneShotEventListeners = (element, settings) => {
-	const loadHandler = event => {
-		eventHandler(event, true, settings);
-		removeAllEventListeners(element, loadHandler, errorHandler);
-	};
-	const errorHandler = event => {
-		eventHandler(event, false, settings);
-		removeAllEventListeners(element, loadHandler, errorHandler);
-	};
-	addAllEventListeners(element, loadHandler, errorHandler);
-};
-
-const managedTags = ["IMG", "IFRAME", "VIDEO"];
-
-function revealElement(element, settings, force) {
-	if (!force && getWasProcessedData(element)) {
-		return; // element has already been processed and force wasn't true
-	}
-	callbackIfSet(settings.callback_enter, element);
-	if (managedTags.indexOf(element.tagName) > -1) {
-		addOneShotEventListeners(element, settings);
-		addClass(element, settings.class_loading);
-	}
-	setSources(element, settings);
-	setWasProcessedData(element);
-	callbackIfSet(settings.callback_set, element);
-}
-
-const removeFromArray = (elements, indexes) => {
-	while (indexes.length) {
-		elements.splice(indexes.pop(), 1);
-	}
-};
-
-/*
- * Constructor
- */
-
-const LazyLoad = function(instanceSettings) {
-	this._settings = Object.assign({}, getDefaultSettings(), instanceSettings);
-	this._queryOriginNode =
-		this._settings.container === window
-			? document
-			: this._settings.container;
-
-	this._previousLoopTime = 0;
-	this._loopTimeout = null;
-	this._boundHandleScroll = this.handleScroll.bind(this);
-
-	this._isFirstLoop = true;
-	window.addEventListener("resize", this._boundHandleScroll);
-	this.update();
-};
-
-LazyLoad.prototype = {
-	_loopThroughElements: function(forceDownload) {
-		const settings = this._settings,
-			elements = this._elements,
-			elementsLength = !elements ? 0 : elements.length;
-		let i,
-			processedIndexes = [],
-			isFirstLoop = this._isFirstLoop;
-
-		if (isFirstLoop) {
-			this._isFirstLoop = false;
-		}
-
-		if (elementsLength === 0) {
-			this._stopScrollHandler();
-			return;
-		}
-
-		for (i = 0; i < elementsLength; i++) {
-			let element = elements[i];
-			/* If must skip_invisible and element is invisible, skip it */
-			if (settings.skip_invisible && element.offsetParent === null) {
-				continue;
-			}
-
-			if (
-				isBot ||
-				forceDownload ||
-				isInsideViewport(
-					element,
-					settings.container,
-					settings.threshold
-				)
-			) {
-				if (isFirstLoop) {
-					addClass(element, settings.class_initial);
-				}
-				this.load(element);
-				processedIndexes.push(i);
-			}
-		}
-
-		// Removing processed elements from this._elements.
-		removeFromArray(elements, processedIndexes);
-	},
-
-	_purgeElements: function() {
-		const elements = this._elements,
-			elementsLength = elements.length;
-		let i,
-			processedIndexes = [];
-
-		for (i = 0; i < elementsLength; i++) {
-			if (getWasProcessedData(elements[i])) {
-				processedIndexes.push(i);
-			}
-		}
-		removeFromArray(elements, processedIndexes);
-	},
-
-	_startScrollHandler: function() {
-		if (!this._isHandlingScroll) {
-			this._isHandlingScroll = true;
-			this._settings.container.addEventListener(
-				"scroll",
-				this._boundHandleScroll
-			);
-		}
-	},
-
-	_stopScrollHandler: function() {
-		if (this._isHandlingScroll) {
-			this._isHandlingScroll = false;
-			this._settings.container.removeEventListener(
-				"scroll",
-				this._boundHandleScroll
-			);
-		}
-	},
-
-	handleScroll: function() {
-		const throttle = this._settings.throttle;
-
-		if (throttle !== 0) {
-			let now = Date.now();
-			let remainingTime = throttle - (now - this._previousLoopTime);
-			if (remainingTime <= 0 || remainingTime > throttle) {
-				if (this._loopTimeout) {
-					clearTimeout(this._loopTimeout);
-					this._loopTimeout = null;
-				}
-				this._previousLoopTime = now;
-				this._loopThroughElements();
-			} else if (!this._loopTimeout) {
-				this._loopTimeout = setTimeout(
-					function() {
-						this._previousLoopTime = Date.now();
-						this._loopTimeout = null;
-						this._loopThroughElements();
-					}.bind(this),
-					remainingTime
-				);
-			}
-		} else {
-			this._loopThroughElements();
-		}
-	},
-
-	loadAll: function() {
-		this._loopThroughElements(true);
-	},
-
-	update: function() {
-		// Converts to array the nodeset obtained querying the DOM from _queryOriginNode with elements_selector
-		this._elements = Array.prototype.slice.call(
-			this._queryOriginNode.querySelectorAll(
-				this._settings.elements_selector
-			)
-		);
-		this._purgeElements();
-		this._loopThroughElements();
-		this._startScrollHandler();
-	},
-
-	destroy: function() {
-		window.removeEventListener("resize", this._boundHandleScroll);
-		if (this._loopTimeout) {
-			clearTimeout(this._loopTimeout);
-			this._loopTimeout = null;
-		}
-		this._stopScrollHandler();
-		this._elements = null;
-		this._queryOriginNode = null;
-		this._settings = null;
-	},
-
-	load: function(element, force) {
-		revealElement(element, this._settings, force);
-	}
-};
-
-/* Automatic instances creation if required (useful for async script loading) */
-if (runningOnBrowser) {
-	autoInitialize(LazyLoad, window.lazyLoadOptions);
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (LazyLoad);
-
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/global.js":
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ "./resources/assets/js/channels-show.js":
+/***/ "./resources/assets/js/eplanning.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_eplanning__ = __webpack_require__("./resources/assets/js/modules/eplanning.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_eplvideo__ = __webpack_require__("./resources/assets/js/modules/eplvideo.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vanilla_lazyload__ = __webpack_require__("./node_modules/vanilla-lazyload/dist/lazyload.es2015.js");
-
-
-
-
-var SnippetChannelsShow = function () {
-
-	var initLazyLoad = function initLazyLoad() {
-		var lazyload = new __WEBPACK_IMPORTED_MODULE_2_vanilla_lazyload__["a" /* default */]({
-			elements_selector: '.lazyload'
-		});
-	};
-
-	return {
-		init: function init() {
-			/*App.initialize()
-   initLazyLoad()
-   eplanningMod.init()
-   eplvideoMod.init()*/
-		}
-	};
-}();
-
-$(document).ready(SnippetChannelsShow.init);
-
-/***/ }),
-
-/***/ "./resources/assets/js/modules/eplanning.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__("./node_modules/babel-runtime/regenerator/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_utils__ = __webpack_require__("./resources/assets/js/modules/utils.js");
 
 
-/**
- * Inicializo modulo
- *
- * @returns {Promise<void>}
- */
-var init = function () {
+var _this = this;
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+
+
+var epl_initialize = function () {
 	var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
-		var show_ads, sec, client, res_initServer, res_setSpaces;
+		var sec, client, res_initServer, res_setSpaces;
 		return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
 			while (1) {
 				switch (_context.prev = _context.next) {
 					case 0:
-						show_ads = $('meta[name="ads-load"]').attr('content');
-						sec = $('meta[name="ads-sec"]').attr('content');
-						client = $('meta[name="ads-client"]').attr('content');
-
-						if (!show_ads) {
-							_context.next = 16;
-							break;
-						}
-
-						_context.next = 6;
+						sec = document.querySelector('meta[name="ads-sec"]').getAttribute('content');
+						client = document.querySelector('meta[name="ads-client"]').getAttribute('content');
+						_context.next = 4;
 						return initServer(client, sec);
 
-					case 6:
+					case 4:
 						res_initServer = _context.sent;
 
 						if (!res_initServer) {
-							_context.next = 14;
+							_context.next = 10;
 							break;
 						}
 
-						_context.next = 10;
+						_context.next = 8;
 						return setSpaces();
 
-					case 10:
+					case 8:
 						res_setSpaces = _context.sent;
 
 
 						if (res_setSpaces) showSpaces();
 
-						handleResizeWindowEvent();
-						handleReloadAds();
-
-					case 14:
-						_context.next = 17;
-						break;
-
-					case 16:
-						console.log('Ads deshabilitados');
-
-					case 17:
+					case 10:
 					case 'end':
 						return _context.stop();
 				}
 			}
-		}, _callee, this);
+		}, _callee, _this);
 	}));
 
-	return function init() {
+	return function epl_initialize() {
 		return _ref.apply(this, arguments);
 	};
 }();
 
-/**
- * Inicializo servidor de ePlanning
- *
- * @param client
- * @param sec
- * @returns {*}
- */
-
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
-function initServer(client, sec) {
+var initServer = function initServer(client, sec) {
 	var protocol = window.location.protocol;
 	var args = {
 		iIF: 1,
@@ -1806,20 +924,16 @@ function initServer(client, sec) {
 	} else {
 		return false;
 	}
-}
+};
 
-/**
- * Busca todos los elementos de la página con la clase .ads-space y construye el arreglo para ser enviado a ePlanning
- *
- * @returns {boolean}
- */
-function setSpaces() {
+var setSpaces = function setSpaces() {
 	var spaces = {};
 	var s = [];
 
-	$('.ads-space').each(function (index, el) {
-		var field = $(el);
-		var id = field.data('id');
+	var elements = document.getElementsByClassName('ads-space');
+
+	Array.from(elements).forEach(function (el) {
+		var id = el.getAttribute('data-id');
 		var num = 1;
 
 		if (id in spaces) {
@@ -1831,10 +945,10 @@ function setSpaces() {
 
 		id = id.replace('-pos-', num);
 
-		field.attr('data-id', id);
-		field.attr('id', 'eplAdDiv' + id);
+		el.setAttribute('data-id', id);
+		el.setAttribute('id', 'eplAdDiv' + id);
 
-		var item = { e: field.attr('data-id'), w: field.data('w'), h: field.data('h') };
+		var item = { e: el.getAttribute('data-id'), w: el.getAttribute('w'), h: el.getAttribute('h') };
 		s.push(item);
 	});
 
@@ -1855,195 +969,47 @@ function setSpaces() {
 	document.epl.addSpaces(eIs);
 
 	return true;
-}
+};
 
-/**
- * Muestra los ads que se encuentran visibles y no fueron cargados antes
- */
-function showSpaces() {
-	$('.ads-space').each(function (index, el) {
-		var field = $(el);
-		if (field.is(':visible') && field.data('loaded') === false) {
-			document.epl.loadAdM(field.attr('data-id'));
-			field.attr('data-loaded', 'true');
+var showSpaces = function showSpaces() {
+	var elements = document.getElementsByClassName('ads-space');
+
+	Array.from(elements).forEach(function (el) {
+		if (Object(__WEBPACK_IMPORTED_MODULE_1__modules_utils__["a" /* isElementVisible */])(el)) {
+			document.epl.loadAdM(el.getAttribute('data-id'));
 		}
 	});
-}
+};
 
-function reloadAds() {
-	$('.ads-space').each(function (index, el) {
-		var field = $(el);
-		var id = field.attr('data-id');
-		var loaded = field.attr('data-loaded') === 'true';
-		var reload = field.attr('data-reload') === 'true';
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'https://us.img.e-planning.net/layers/epl-41.js';
+script.defer = true;
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
 
-		if (field.is(':visible') && loaded && reload) {
-			document.epl.reloadSpace(id);
-		}
-	});
-}
-
-/**
- * Observa si el navegador tiene resize para volver a cargar espacios no cargados previamente
- */
-function handleResizeWindowEvent() {
-	$(window).resize(showSpaces);
-}
-
-function handleReloadAds() {
-	setInterval(reloadAds, 59000);
-}
-
-/* unused harmony default export */ var _unused_webpack_default_export = ({
-	init: init
+script.addEventListener('load', function () {
+	epl_initialize();
 });
 
 /***/ }),
 
-/***/ "./resources/assets/js/modules/eplvideo.js":
+/***/ "./resources/assets/js/modules/utils.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_in_viewport__ = __webpack_require__("./node_modules/in-viewport/in-viewport.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_in_viewport___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_in_viewport__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var videos = [];
-var listenInterval = '';
-
-var video = function () {
-	function video(player) {
-		_classCallCheck(this, video);
-
-		this.player = player;
-		this.autoplay = true;
-		this.init();
-	}
-
-	_createClass(video, [{
-		key: 'init',
-		value: function init() {
-			this.player.skipAds({ delayInSeconds: 7 });
-			this.handleEvents();
-		}
-	}, {
-		key: 'handleEvents',
-		value: function handleEvents() {
-			var _this = this;
-
-			this.player.on('pause', function (ev) {
-				if (ev.userInitiated) _this.autoplay = false;
-			});
-		}
-	}]);
-
-	return video;
-}();
-
-function init() {
-	$('#js-eplvideo').on('load', searchAndLoadVideos);
-}
-
-function searchAndLoadVideos() {
-	var fields = $('.eplvideo');
-
-	$.each(fields, function (index, el) {
-		var field = $(el);
-		loadVideo(field.attr('id'), field.data('code'));
-	});
-
-	if (fields.length > 0) initInterval();
-}
-
-function initInterval() {
-	listenInterval = setInterval(listenInView, 1000);
-}
-
-function listenInView() {
-	if (videos.length > 0) {
-
-		// Busco si hay video reproduciendose
-		var videoPlaying = videos.filter(function (obj) {
-			return !obj.player.isPaused();
-		});
-
-		if (videoPlaying.length <= 0) {
-
-			var auVideos = videos.filter(function (obj) {
-				return obj.autoplay;
-			});
-
-			if (auVideos.length <= 0) clearInterval(listenInterval);
-
-			// Reviso cada video para encontrar alguno que esté en pantalla
-			$.each(auVideos, function (index, video) {
-				var div = video.player.getDiv();
-				if (__WEBPACK_IMPORTED_MODULE_0_in_viewport___default()(div)) {
-
-					if (video.player.isPaused()) {
-						video.player.play();
-						return false;
-					}
-				}
-			});
-		} else {
-			var div = videoPlaying[0].player.getDiv();
-			if (!videoPlaying[0].player.isMuted()) videoPlaying[0].autoplay = false;
-			if (!__WEBPACK_IMPORTED_MODULE_0_in_viewport___default()(div) && !videoPlaying[0].player.isPaused() && videoPlaying[0].player.isMuted()) videoPlaying[0].player.pause();
-		}
-	}
-}
-
-function loadVideo(id, code) {
-	eplvideo(id).setup({
-		player: "perfilcom",
-		video: code,
-		responsive: true,
-		loop: false,
-		autoplay: false
-	}).on('ready', function () {
-		videos.push(new video(eplvideo(id)));
-	});
-}
-
-/* unused harmony default export */ var _unused_webpack_default_export = ({
-	init: init
-});
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isElementVisible; });
+var isElementVisible = function isElementVisible(el) {
+	var style = window.getComputedStyle(el);
+	return style.display !== 'none';
+};
 
 /***/ }),
 
-/***/ "./resources/assets/sass/general.scss":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/assets/sass/home.scss":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/assets/sass/news.scss":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__("./resources/assets/js/channels-show.js");
-__webpack_require__("./resources/assets/sass/home.scss");
-__webpack_require__("./resources/assets/sass/general.scss");
-module.exports = __webpack_require__("./resources/assets/sass/news.scss");
+module.exports = __webpack_require__("./resources/assets/js/eplanning.js");
 
 
 /***/ })

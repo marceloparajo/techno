@@ -179,10 +179,13 @@ class ParseHelper
         // Body
         $body = (isset($noticia['body']) && $noticia['body'] != '') ? $noticia['body'] : '';
 
+        // Permalink
+        $permalink = $this->generatePermalink($noticia['permalink']);
+
         return [
             'id' => $noticia['id'],
             'slug' => $noticia['slug'] ?? '',
-            'canonical'=> isset($noticia['canonical']) && !empty($noticia['canonical']) ? $noticia['canonical']: asset($noticia['permalink']),
+            'canonical'=> isset($noticia['canonical']) && !empty($noticia['canonical']) ? $noticia['canonical']: $permalink,
             'channel' => [
                 'name' => $noticia['channel_name'],
                 'slug' => $noticia['channel_slug']
@@ -210,7 +213,7 @@ class ParseHelper
             'gallery' => $gallery,
             'gallery_lightbox' => (count($gallery)) ? $this->_parseGalleryForLightbox($gallery) : '',
             'body' => $body,
-            'permalink' => asset($noticia['permalink']),
+            'permalink' => $permalink,
             'source_url' => $noticia['permalink'],
             'relacionadas' => $relacionadas,
             'relacionadasGroupClass' => $relacionadasGroupClass,
@@ -238,6 +241,18 @@ class ParseHelper
             'has_video'=> $noticia['has_video']?? false,
             'has_gallery'=> $noticia['has_gallery']?? false
         ];
+    }
+
+    /**
+     * @param string $permalink
+     * @return string
+     */
+    public function generatePermalink(string $permalink)
+    {
+        $url = rtrim(env('APP_URL'), '/');
+        $link = trim($permalink, '/');
+
+        return "$url/$link";
     }
 
     /**

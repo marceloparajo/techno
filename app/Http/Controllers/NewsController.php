@@ -12,16 +12,13 @@ namespace App\Http\Controllers;
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
-use App\Http\Helpers\SidebarHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\View\Factory;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
-use Illuminate\Support\Facades\Storage;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\View as ViewFacade;
 use Illuminate\View\View;
 use Sunra\PhpSimple\HtmlDomParser;
+use Illuminate\Support\Str;
 
 class NewsController extends Controller
 {
@@ -77,7 +74,7 @@ class NewsController extends Controller
         $page_description = (isset($noticia['headline']) && !empty($noticia['headline']))? $noticia['home_title']. ". ". $noticia['headline']: $noticia['home_title'];
 
         // Si el embed code tiene Video de ePlanning, Youtube y Maps de Google
-        if (str_contains($noticia['embed_code'], ['epvideo', 'eplanning', 'youtubelive', 'googlemaps', 'youtube', 'rudovideo']))
+        if (Str::contains($noticia['embed_code'], ['epvideo', 'eplanning', 'youtubelive', 'googlemaps', 'youtube', 'rudovideo']))
             $noticia['main_content'] = 'embed_code';
         else
             $noticia['main_content'] = 'image';
