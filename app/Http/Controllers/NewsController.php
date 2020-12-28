@@ -92,8 +92,42 @@ class NewsController extends Controller
             'id' => $noticia['id']
         ];
 
+        // ----- PAYWALL -----
+        $has_edition = isset($noticia['issue']) && !is_null( $noticia['issue']);
+        $noticia['paywall_type'] = ($has_edition) || (!isset($noticia['paywall_type']) || is_null( $noticia['paywall_type']))
+            ? 'poroso'
+            : $noticia['paywall_type'];
+
+        switch ($noticia['paywall_type']) {
+            case 'abierto':
+            case 'poroso':
+            case 'magico':
+                $paywall_type = 'metered';
+                break;
+
+            case 'cerrada':
+                $paywall_type = 'premium';
+                break;
+
+            default:
+                $paywall_type = 'metered';
+        }
+        // ------ /PAYWALL -----
+
         share([
-            'light_gallery_images' => $noticia['gallery_lightbox']
+            'light_gallery_images' => $noticia['gallery_lightbox'],
+            'paywall' => [
+                'type' => $paywall_type,
+                'content_id' => $noticia['id'],
+                'content_canal' => $noticia['channel']['slug'],
+                'content_title' => $noticia['title'],
+                'content_date' => $noticia['date_available']->toIso8601String(),
+                'content_length' => strlen($noticia['body']),
+                'show_metered_modal' => $has_edition || $noticia['paywall_type'] == 'magico',
+                'author_id' => $noticia['author']['id'],
+                'author_username' => $noticia['author']['username'],
+                'author_fullname' => $noticia['author']['fullname']
+            ]
         ]);
 
         return view('news.show.index', compact('noticia', 'jsonStructured', 'sidebar_content', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));

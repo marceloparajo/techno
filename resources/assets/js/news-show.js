@@ -1,5 +1,7 @@
 import LazyLoad from 'vanilla-lazyload'
 import 'lightgallery.js'
+import 'lg-thumbnail.js'
+
 
 const SnippetShowNews = function () {
 	const {light_gallery_images} = window.sharedData
@@ -17,7 +19,8 @@ const SnippetShowNews = function () {
 				e.preventDefault()
 				lightGallery(e.currentTarget, {
 					dynamic: true,
-					dynamicEl: light_gallery_images
+					dynamicEl: light_gallery_images,
+					thumbnail: true
 				})
 			})
 		})

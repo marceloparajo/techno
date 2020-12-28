@@ -1,9 +1,10 @@
 {
+    "/js/mi-perfil.js": "/js/mi-perfil.js?id=d66b8ad2f529495f9670",
+    "/js/news-show.js": "/js/news-show.js?id=6bede5d9b0cfbbdc1397",
     "/js/channels-show.js": "/js/channels-show.js?id=b991ac8ac47cf7a53b5d",
     "/css/home.css": "/css/home.css?id=636fc0b6abd1d7d1820f",
-    "/css/general.css": "/css/general.css?id=e8feef0c431a50792a1f",
+    "/css/general.css": "/css/general.css?id=c3115faebb1806e1e3ad",
     "/css/news.css": "/css/news.css?id=77e58edd49ac38b3bade",
-    "/js/news-show.js": "/js/news-show.js?id=1ea404fb4d5ee71515c2",
     "/js/eplanning.js": "/js/eplanning.js?id=fd653e89b502e5874a07",
     "/js/home.js": "/js/home.js?id=3626b2ec7cf2d0aede09"
 }

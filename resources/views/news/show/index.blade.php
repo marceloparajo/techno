@@ -42,6 +42,27 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 	@endif
 @endsection
 
+@section('paywall-config')
+	<script type="text/javascript">
+		window.paywallConfig.contentType = 'articulo';
+		window.paywallConfig.type = window.sharedData.paywall.type;
+		window.perfilContent = {
+			id: window.sharedData.paywall.content_id,
+			canal: window.sharedData.paywall.content_canal,
+			title: window.sharedData.paywall.content_title,
+			show_metered_paywall: window.sharedData.paywall.show_metered_modal,
+			paywall_type: window.sharedData.paywall.type,
+			date: window.sharedData.paywall.content_date,
+			body_length: window.sharedData.paywall.content_length,
+			author: {
+				id: window.sharedData.paywall.author_id,
+				username: window.sharedData.paywall.author_username,
+				fullname: window.sharedData.paywall.author_fullname
+			}
+		}
+	</script>
+@endsection
+
 @section('head-top')
 
 	<link rel="preconnect" href="https://www.facebbook.com">

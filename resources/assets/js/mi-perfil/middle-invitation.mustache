@@ -1,0 +1,28 @@
+<div id="pw-pienota">
+  <div class="pw-piedenota-row-noframe">
+    <div class="p pw-piedenota-mensaje-a">Te hace falta saber. <br>Nos apasiona informar.</div>
+    <div class="p pw-piedenota-mensaje-a">Necesitás confiar. <br>Te queremos ahí.</div>
+  </div>
+  <div class="pw-piedenota-row">
+    <div class="pw-piedenota-aside">
+      <figure class="figure-perfil-logo">
+        <a href="/">
+          <img src="/static/css/img/logo_perfil.svg" alt="Perfil">
+        </a>
+      </figure>
+    </div>
+    <div class="pw-piedenota-content">
+      <a href="javascript:void(0);" class="p pw-piedenota-mensaje-b pw-middle-invitation-call-to-action">Hacete socio de Perfil</a>
+      <div class="p pw-piedenota-mensaje-c">Periodismo Puro en tiempo real.</div>
+    </div>
+  </div>
+  <div class="pw-piedenota-row-noframe bg-gris">
+    <button class="pw-boton-suscripcion pw-middle-invitation-call-to-action">{{button_title}}</button>
+    {{^logged}}
+      <div class="p pw-piedenota-enlaces"><a href="{{paywall_url}}id/login/?continue={{current_url}}">Ya tengo cuenta</a></div>
+    {{/logged}}
+  </div>
+  <div class="pw-piedenota-row-noframe">
+    <div class="p pw-piedenota-mensaje-d">En la verdad no hay grieta: el único compromiso es con vos</div>
+  </div>
+</div>

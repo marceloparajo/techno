@@ -201,6 +201,7 @@ class ParseHelper
             'headline' => $noticia['headline'],
             'signed' => isset($noticia['flag_firmado']) && $noticia['flag_firmado'] == 'S',
             'author' => [
+                'id' => $noticia['author_id'] ?? 0,
                 'username' => $noticia['author_username'],
                 'image' => $this->imageHelper->generateUrlImageAuthor($noticia['author_username']),
                 'fullname' => trim($noticia['author_firstname']) . ' ' . trim($noticia['author_lastname']),

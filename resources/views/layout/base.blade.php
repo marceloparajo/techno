@@ -122,6 +122,7 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
 
         @yield('body')
 
+        <div id="pw-content"></div>
         <div id="" class="ads-space" data-id="anuncioprevio" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>
         @include('layout.footer')
 
@@ -137,6 +138,21 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
         <script defer src="{{ mix('js/eplanning.js') }}"></script>
         <script defer id="js-eplvideo" async type="text/javascript" src="https://hls.e-planning.video/video/js/eplvideo.js" data-client="ut/2b79"></script>
         @endif
+
+        <script type="text/javascript">
+            window.paywall = window.paywall || {}
+            window.paywallConfig = window.paywallConfig || {}
+            window.perfilContent = window.perfilContent || {}
+            paywall.queue = window.paywall.queue || []
+
+            window.paywallConfig.loginwallLimit = 40
+            window.paywallConfig.paywallLimit = 80
+            window.paywallConfig.enableSocket = true
+            window.paywallConfig.socketHoursPeriodicity = 3
+            window.paywallConfig.socketHoursPeriodicitySubs = 24
+        </script>
+        @yield('paywall-config')
+        <script defer type="text/javascript" src="{{ mix('js/mi-perfil.js') }}"></script>
 
         @yield('js')
 
