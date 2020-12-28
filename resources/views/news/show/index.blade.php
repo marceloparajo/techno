@@ -91,12 +91,17 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 			<article class="main-article">
 
 				{{-- Featured Image or Video --}}
-				@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code' && (STRPOS($noticia['embed_code'], 'rudo') || STRPOS($noticia['embed_code'], 'tube')))
-					{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
+				@if ($noticia['featured_content'] == 'embed_code')
+					{!! $noticia['embed_code'] !!}
 				@else
-					@include('news.show.partials.main_image', ['gallery' => $noticia['gallery'], 'main_content' => $noticia['main_content'], 'embed_code' => $noticia['embed_code'], 'channel_slug' => $noticia['channel']['slug']])
+					<figure class="figure btn-open-gallery" itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
+						@if (count($noticia['gallery']) > 1)
+							<a href="#" role="button" class="btn-open-gallery fotogaleria" title="{{ __('show fotogallery') }}"><i class="fas fa-expand-arrows-alt"></i></a>
+						@endif
+						<x-lazy-image :src="$noticia['main_image']['srcs']['original']" />
+						<figcaption class="figure-caption">{{ $noticia['main_image']['caption'] }}<span class="credito-foto"> | {{ $noticia['main_image']['credit']}}</span></figcaption>
+					</figure>
 				@endif
-				{{-- /Featured Image or Video --}}
 
 				{{-- Article Body --}}
 				<div class="news-body">
@@ -122,10 +127,10 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 					<div class="news-content">
 						{!! $body !!}
 
-						{{-- Embed Code --}}
+						{{-- Embed Code
 						@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code')
 							{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
-						@endif
+						@endif--}}
 
 						{{-- Gallery --}}
 						@if (count($noticia['gallery']) > 1)

@@ -8,6 +8,8 @@
 
 namespace App\Http\Helpers;
 
+use Illuminate\Support\Str;
+
 class ImageHelper
 {
     const ORIGINAL      = 1300;
@@ -28,7 +30,7 @@ class ImageHelper
      */
     public function __construct()
     {
-        //code here   
+        //code here
     }
 
 
@@ -69,11 +71,11 @@ class ImageHelper
 
         $defaultImg = "https://via.placeholder.com/".$defautSize."?text=". strtoupper(env('APP_NAME',''));
         //$defaultImg = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==, ';
-        
+
         if( strpos($image, 'fotos.perfil.com') !== false ){
             $original = $this->cleanImagePath( $image );
             $srcs = $this->parseVersionImages( $original );
-            
+
             $dataSrcset =   $srcs['extra-small-wide'].' 270w,';
             if ($maxWidth >= 300)   $dataSrcset .=  $srcs['tapa'].' 300w,';
             if ($maxWidth >= 540)   $dataSrcset .=  $srcs['small-wide'].' 540w,';
@@ -138,11 +140,10 @@ class ImageHelper
             $domain .= "/$format";
         }
 
-        $domain = rtrim(env('IMAGES_SERVER', 'https://fotos.perfil.com'), '/') . '/' . ltrim($domain, '/');
-        $retValue = "$domain/$filename";
-        
-        return $retValue;
-        
+        if (! Str::contains($domain, env('IMAGES_SERVER', 'https://fotos.perfil.com')))
+            $domain = rtrim(env('IMAGES_SERVER', 'https://fotos.perfil.com'), '/') . '/' . ltrim($domain, '/');
+
+        return "$domain/$filename";
     }
 
     public function cleanImagePath(String $src ):String

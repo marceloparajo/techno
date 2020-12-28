@@ -73,11 +73,11 @@ class NewsController extends Controller
         $page_title = env('APP_ALTER_NAME', '') . ' | ' . $noticia['home_title'];
         $page_description = (isset($noticia['headline']) && !empty($noticia['headline']))? $noticia['home_title']. ". ". $noticia['headline']: $noticia['home_title'];
 
-        // Si el embed code tiene Video de ePlanning, Youtube y Maps de Google
-        if (Str::contains($noticia['embed_code'], ['epvideo', 'eplanning', 'youtubelive', 'googlemaps', 'youtube', 'rudovideo']))
-            $noticia['main_content'] = 'embed_code';
+        // Si el embed code tiene Video de ePlanning, Youtube y Maps de Google lo seteo como featured content
+        if (Str::contains($noticia['embed_code_original'], ['epvideo', 'eplanning', 'youtubelive', 'googlemaps', 'youtube', 'rudovideo']))
+            $noticia['featured_content'] = 'embed_code';
         else
-            $noticia['main_content'] = 'image';
+            $noticia['featured_content'] = 'image';
 
         $body = $this->_insertContentMiddle($noticia);
 
