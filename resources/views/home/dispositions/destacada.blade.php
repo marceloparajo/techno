@@ -8,74 +8,47 @@
 
 
 	<div class="caja-contenido destacada">
-
-		<div class="columna-dostercios">
-			<article class="articulo main-destacada">
-				<figure>
-					<a href="{{ $news[0]['permalink'] }}">
-						{!! $imageHelper->getLazyImages( $news[0]['main_image']['srcs']['small-wide'], 540, $news[0]['main_image']['caption'],'img-fluid','540x304') !!}
-						@if ($news[0]['has_video']) 
-							<div class="galeria-video">
-								<span><i class="fa fa-play"></i></span>
-							</div>
-						@endif
-						@if ($news[0]['has_gallery'])
-							<div class="galeria-video">
-								<span><i class="fa fa-camera"></i></span>
-							</div>
-						@endif
-					</a>
-				</figure>			
-				<div class="meta-content">
-					<a href="{{ $news[0]['permalink'] }}">
-						@if ($news[0]['hat'] != '')
-							<span class="hat">{{ $news[0]['hat'] }} </span>
-						@else
-							<span class="hat">{{ $news[0]['channel']['name'] }}</span>
-						@endif
-						<h2>
-							{{ $news[0]['home_title'] }}
-						</h2>
-						<p class="headline">{{ $news[0]['headline'] }}</p>
-					</a>
-					@if ($news[0]['signed'])
-					<div class="firma-home">
-						<a href="/autores/{{$news[0]['author']['username']}}">
-							{{ __('by') }} {{ $news[0]['author']['fullname'] }}
-						</a>
-					</div>
-					@elseif ($news[0]['credit'] != '')
-						<div class="firma-home">{{ $news[0]['credit'] }}</div>
-					@endif
-				</div>
-			</article>
-		</div>		
-
-			<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
 		
-		<div class="columna-tercio">
 
-			@foreach(array_slice($news, 1, 2) as $key => $new)
+			@foreach(array_slice($news, 0, 3) as $key => $new)
 
-				<article class="articulo">
+				<article class="articulo nota-{{ $key }}">
+
+
+
+					{{-- Embed Code --}}
+					@if ($new['embed_code'] != '')
+						@php
+							if (STRPOS($new['embed_code'], 'rudo') || STRPOS($new['embed_code'], 'tube')  ) {
+						@endphp
+							{!! $shortcodeConverter->convert($new['embed_code']) !!}
+						@php
+							} 
+						@endphp
+					@else 
 					<figure>
 						<a href="{{ $new['permalink'] }}">
-							{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
+							@if($key == 0)
+								{!! $imageHelper->getLazyImages( $news[0]['main_image']['srcs']['small-wide'], 540, $news[0]['main_image']['caption'],'img-fluid','540x304') !!}
+							@else
+								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
+							@endif
 							<p class="headline">
 								{{ $new['headline'] }}
 							</p>
 							@if ($new['has_video']) 
 								<div class="galeria-video">
-									<span><i class="fa fa-play"></i></span>
+									<img src="/images/glyph/hasvideo.svg" class="hasvideo">
 								</div>
-							@endif
-							@if ($new['has_gallery'])
+							@elseif ($new['has_gallery'])
 								<div class="galeria-video">
-									<span><i class="fa fa-camera"></i></span>
+									<img src="/images/glyph/hasgallery.svg" class="hasgallery">
 								</div>
 							@endif
 						</a>
 					</figure>
+					@endif
+
 					<div class="meta-content">
 						<a href="{{ $new['permalink'] }}">
 							@if ($new['hat'] != '')
@@ -101,9 +74,14 @@
 						@endif
 					</div>
 				</article>
+
+				@if($key == 0)
+					<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
+				@endif
+
+
 			@endforeach
 
-		</div>
 
 
 			<div id="" class="ads-space only-md up-xl" data-id="728x90x-pos-" data-w="728" data-h="90" data-loaded="false" data-reload="true" >

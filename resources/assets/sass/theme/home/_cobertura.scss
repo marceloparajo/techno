@@ -382,26 +382,9 @@ Se usa para Radio Perfil
 						color: $dark;
 						display: flex;
 						justify-content: flex-start;
-						.fas {
-							background: #70b3c8;
-							margin: 0 10px 0 0;
-							float: left;
-							display: block;
+						img {
 							width: 28px;
-							height: 28px;
-							text-align: center;
-							color: white;
-							border-radius: 50%;
-							line-height: 28px;
-							transition: ease .3s;
-							&.fa-play {
-								padding-left: 3px;
-							}
-						}
-						&:hover {
-							.fas {
-								background-color: #387ab7;
-							}
+							margin-right: 5px;
 						}
 					}
 				}

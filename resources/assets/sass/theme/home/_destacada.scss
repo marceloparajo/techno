@@ -5,299 +5,62 @@
 		display: flex;
 		width: 100%;
 		flex-direction: column;
-		.columna-dostercios {
-			display: flex;
-			flex: 1 1 0;
-			flex-wrap: wrap;
-			max-width: 100%;
-			.articulo {
-				&.main-destacada {
-					border-bottom: 1px solid $linea;
-					.meta-content {
-						a {
-							h2 {
-								font-size: 1.8rem;
-								font-size: 7vw;
-								line-height: 1em;
-							}
-							p.headline {
-								display: block;
-								margin: 10px 0 0 0;
-							}
-						}
+		.articulo {
+			.meta-content {
+				a {
+					span.hat {
+						display: none;
 					}
-					&:hover {
-						figure {
-							a {
-								img {
-									transform: none;
-									filter: brightness(100%);
-								}
-							}
-						}
+					h2 {
+						font-size: 1.4rem;
+						font-size: 6vw;
 					}
 				}
 			}
-		}
-		.columna-tercio {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			.articulo {
+			&.nota-2 {
+				display: flex;
+				border-top: 1px solid $linea;
+				padding-top: 10px;
+				figure {
+					flex-basis:33%;
+					margin-right: 10px;
+				}
+				.meta-content {
+					flex: 1 1 0;
+					padding: 0;
+					h2 {
+						font-size: 1.2rem;
+						font-size: 5.4vw;
+					}
+				}
+			}
+			&.nota-0 {
+				border-bottom: 1px solid $linea;
 				.meta-content {
 					a {
-						span.hat {
-							display: none;
+						h2 {
+							font-size: 1.8rem;
+							font-size: 7vw;
+							line-height: 1em;
+						}
+						p.headline {
+							display: block;
+							margin: 10px 0 0 0;
 						}
 					}
 				}
-				&:first-of-type {
-					margin-bottom: 0;
-					.meta-content {
-						a {
-							h2 {
-								font-size: 1.4rem;
-								font-size: 6vw;
-							}
-						}
-					}
-				}
-				&:last-of-type {
-					display: flex;
-					border-top: 1px solid $linea;
-					padding-top: 10px;
+				&:hover {
 					figure {
-						flex-basis:33%;
-						margin-right: 10px;
-					}
-					.meta-content {
-						flex: 1 1 0;
-						padding: 0;
-					}
-				}
-			}
-		}
-	}
-
-	@include media-breakpoint-up(sm) {
-		.destacada {
-			.columna-dostercios {
-				justify-content: space-between;
-				flex-wrap: wrap;
-				.articulo {
-					&.main-destacada {
-						flex-basis: 100%;
-						.meta-content {
-							a {
-								width: auto;
-								h2 {
-									margin-bottom: 12px;
-									font-size: 2rem;
-								}
-							}
-						}
-					}
-				}
-			}
-			.columna-tercio {
-				flex-direction: row;
-				flex-wrap: wrap;
-				.articulo {
-					flex-basis: 48%;
-					flex-direction: column;
-					&:first-of-type {
-						margin-bottom:  10px;
-						.meta-content {
-							a {
-								span.hat {
-									display: block;
-								}
-								h2 {
-									font-size: 1.4rem;
-								}
-							}
-						}
-					}
-					&:last-of-type {
-						display: block;
-						border-top: none;
-						padding-top: 0;
-						.meta-content {
-							padding: 5px 0;
-							span.hat {
-								display: block;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	@include media-breakpoint-up(md) {
-		.destacada {
-			flex-wrap: wrap;
-			flex-direction: row;
-			.columna-dostercios {
-				flex: 1 1 0;
-				align-self: flex-start;
-				.articulo {
-					margin: 0;
-				}
-			}
-			.columna-tercio {
-				flex-basis: 33.5%;
-				flex-direction: column;
-				margin-left: 10px;
-				padding-left: 10px;
-				border-left: 1px solid $linea;
-				justify-content: flex-start;
-				flex-wrap: nowrap;
-				.articulo {
-					border-top: 1px solid $linea;
-					padding-top: 10px;
-					flex-basis: auto;
-					&:first-of-type {
-						padding-top: 0;
-						border-top: none;
-						margin-bottom: 20px;
-						figure {
-							display: none;
-						}
-						.meta-content {
-							padding-top: 0;
-						}
-					}
-					&:last-of-type {
-						border-top: 1px solid $linea;
-						padding-top: 10px;
-					}
-				}
-			}
-		}
-	}
-	@include media-breakpoint-up(lg) {
-		flex-direction: row;
-		.destacada {
-			margin-bottom: 20px;
-			.columna-dostercios {
-				align-self: auto;
-				.articulo {
-					margin: 0;
-					&.main-destacada {
-						background: white;
-						box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
-						border-radius: 3px;
-						.meta-content {
-							transform: translateY(-34px);
-							margin-bottom: -20px;
-							padding: 0 15px;
-							a {
-								h2 {
-									font-size: 1.8rem;
-								}
-								span.hat {
-									background: $negro;
-									color: white;
-									display: inline-block;
-									padding: 10px 15px;
-									font-weight: normal;
-									margin-left: -15px;
-									margin-bottom: 0;
-								}
-							}
-						}
-						figure {
-							a {
-								.galeria-video {
-									left: auto;
-									right: 5px;
-								}
-							}
-						}
-					}
-				}
-			}
-			.columna-tercio {
-				border-bottom: 1px solid $linea;
-				border-left: none;
-				padding: 0;
-				margin: 0 0 0 22px;
-				flex-basis: 31%;
-				.articulo {
-					.meta-content {
 						a {
-							h2 {
-								font-size: 1.4rem;
+							img {
+								transform: none;
+								filter: brightness(100%);
 							}
 						}
 					}
 				}
 			}
 		}
-	}
-	@include media-breakpoint-up(xl) {
-		.destacada {
-			.columna-dostercios {
-				.articulo {
-					&.main-destacada {
-						margin-bottom: 0;
-						.meta-content {
-							a {
-								h2 {
-									margin-top: 6px;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	@include media-breakpoint-up(xxl) {
-		.destacada {
-			.columna-dostercios {
-				.articulo {
-					&.main-destacada {
-						.meta-content {
-							a {
-								h2 {
-									font-size: 2.2rem;
-								}
-							}
-						}
-					}
-				}
-			}
-			.columna-tercio {
-				flex-basis: 300px;
-				margin: 0 0 0 25px;
-				.articulo {
-					&:first-of-type,
-					&:last-of-type {
-						.meta-content {
-							a {
-								h2 {
-									font-size: 1.5rem;
-								}
-							}
-						}
-					}
-					&:first-of-type {
-						margin-bottom: 20px;
-						.meta-content {
-							a {
-								p.headline {
-									display: block;
-								}
-							}
-						}
-					}
-					&:last-of-type {
-						padding-top: 25px;
-					}
-				}
-			}
-		}		
 	}
 }
 

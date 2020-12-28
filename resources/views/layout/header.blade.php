@@ -16,7 +16,7 @@
 		<div class="buscador" id="header-search">
 			<form method="get" action="{{ route('search.index') }}">
 				<input class="form-control" name="q" type="text" placeholder="{{ __('search') }}" aria-label="{{ __('search') }}" value="{{ Request::get('q') }}">
-				<button type="submit" class="btn"><i class="fas fa-search"></i></button>
+				<button type="submit" class="btn"><img src="/images/glyph/search.svg"></button>
 			</form>
 		</div>
 	</div>
@@ -60,8 +60,8 @@
 		</div><!-- elisologo -->
 		<div class="radio-perfil">
 			<a href="//radio.perfil.com">
-				<i class="fas fa-play"></i>
-				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil">FM 101.9
+				<img src="/images/glyph/radio-play.svg" class="radio-play">
+				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil"><span>FM 101.9</span>
 			</a>
 		</div>
 		<div id="paywall-login-container" class="pw-suscripcion">
@@ -73,7 +73,7 @@
 		<nav id="menues" class="tescondo">
 			<ul>
 				<li><a href="/ultimo-momento/">Último momento</a></li>
-				<li><a><i class="fa fa-angle-right" aria-hidden="true"></i>Temas de hoy</a>
+				<li><a><img src="/images/glyph/chevron.svg" class="chevron">Temas de hoy</a>
 					<ul>
 					@foreach ($menuHelper->getMenuItems('temas') as $item)
 						<li>
@@ -84,7 +84,7 @@
 					@endforeach
 					</ul>
 				</li>
-				<li><a><i class="fa fa-angle-right" aria-hidden="true"></i>Secciones</a>
+				<li><a><img src="/images/glyph/chevron.svg" class="chevron" >Secciones</a>
 					<ul>
 						@foreach ($menuHelper->getMenuItems('principal') as $item)
 						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">{{ $item['text'] }}</a></li>
@@ -92,7 +92,7 @@
 					</ul>
 				</li>
 
-				<li><a><i class="fa fa-angle-right" aria-hidden="true"></i>Revistas</a>
+				<li><a><img src="/images/glyph/chevron.svg" class="chevron" >Revistas</a>
 					<ul>
 					@foreach ($menuHelper->getMenuItems('revistas') as $item)
 						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">{{ $item['text'] }}</a></li>

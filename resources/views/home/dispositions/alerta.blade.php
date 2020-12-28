@@ -6,7 +6,7 @@
 		<div class="contenedor-general alerta">
 			@foreach (array_slice($news, 0, 1) as $new)
 			<article>
-				<span class="laalerta"><i class="fas fa-exclamation-circle"></i></span>
+				<span class="laalerta"><img src="/images/glyph/alerta.svg"></span>
 				<a href="{{ $new['permalink'] }}">
 					<h2>
 						@if ($new['hat'] != '')

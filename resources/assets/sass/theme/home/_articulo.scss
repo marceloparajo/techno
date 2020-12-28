@@ -37,8 +37,6 @@
 				position: absolute;
 				bottom: 5px;
 				left: 5px;
-				color:  rgba(255,255,255,.85);
-				border: 2px solid rgba(255,255,255,.85);
 				border-radius: 50%;
 				width: 40px;
 				height: 40px;
@@ -46,15 +44,14 @@
 				text-align: center;
 				line-height: 36px;
 				transition: ease .3s;
-				span {
-					i {
-						&:before {
-							font-size: 1.1rem;
-						}
-						&.fa-play {
-							padding-left: 3px;
-							line-height: 36px;
-						}
+				border: 2px solid #ffffff;
+				display: flex;
+				background: rgba(0,0,0,.3);
+				img {
+					width: 20px;
+					margin: auto;
+					&.hasvideo {
+						padding-left: 4px;
 					}
 				}
 			}

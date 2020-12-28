@@ -113,13 +113,18 @@
 			justify-content: flex-end;
 			line-height: 1em;
 			&:after {
-				content: "\f061";
-				font-family: 'Font Awesome 5 Free';
+				content: " ";
 				display: block;
-				font-size: 20px;
+				width: 20px;
+				height: 20px;
 				margin-left: 10px;
-				margin-right: 10px;
-				transform: translateY(-1px);
+				background:{
+					image: url('/images/glyph/next.svg');
+					repeat: no-repeat;
+					size: 14px;
+					position: 0 0;
+				} 
+				transform: translateY(-2px);
 			}
 		}
 	}
@@ -402,12 +407,18 @@
 				justify-content: flex-end;
 				line-height: 1em;
 				&:after {
-					content: "\f061";
-					font-family: 'Font Awesome 5 Free';
+					content: " ";
 					display: block;
-					font-size: 20px;
+					width: 20px;
+					height: 20px;
 					margin-left: 10px;
-					transform: translateY(-1px);
+					background:{
+						image: url('/images/glyph/next.svg');
+						repeat: no-repeat;
+						size: 14px;
+						position: 0 0;
+					} 
+					transform: translateY(-2px);
 				}
 				&:hover {
 					color: #444;
@@ -560,12 +571,18 @@
 				justify-content: flex-end;
 				line-height: 1em;
 				&:after {
-					content: "\f061";
-					font-family: 'Font Awesome 5 Free';
+					content: " ";
 					display: block;
-					font-size: 20px;
+					width: 20px;
+					height: 20px;
 					margin-left: 10px;
-					transform: translateY(-1px);
+					background:{
+						image: url('/images/glyph/next.svg');
+						repeat: no-repeat;
+						size: 14px;
+						position: 0 0;
+					} 
+					transform: translateY(-2px);
 				}
 				&:hover {
 					color: #444;
@@ -699,12 +716,18 @@
 				justify-content: flex-end;
 				line-height: 1em;
 				&:after {
-					content: "\f061";
-					font-family: 'Font Awesome 5 Free';
+					content: " ";
 					display: block;
-					font-size: 20px;
+					width: 20px;
+					height: 20px;
 					margin-left: 10px;
-					transform: translateY(-1px);
+					background:{
+						image: url('/images/glyph/next.svg');
+						repeat: no-repeat;
+						size: 14px;
+						position: 0 0;
+					} 
+					transform: translateY(-2px);
 				}
 				&:hover {
 					color: #444;

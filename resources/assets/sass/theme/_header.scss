@@ -88,7 +88,6 @@
 						height: 2px;
 					}
 					&.change .bar3 {
-						-webkit-transform: rotate(45deg) translate(-7px, -6px);
 						transform: rotate(45deg) translate(-7px, -6px);
 					}
 				}
@@ -108,19 +107,9 @@
 					width: 100px;
 					height: auto;
 				}
-				i.fas {
+				.radio-play {
 					width: 22px;
-					height: 22px;
-					border-radius: 50%;
-					background: #fff;
-					border: 1px solid #7993ba;
-					color: #00307a;
-					text-align: center;
-					box-sizing: border-box;
-					font-size: 10px;
-					line-height: 19px;
-					margin: 0 5px 3px 0;
-					padding-left: 3px;
+					margin: 0 5px 0 0;
 					transform: translateY(-1px);
 					float: left;
 				}
@@ -283,9 +272,11 @@
 				a {
 					color: #333;
 					width: 100%;
-					.fa {
+					img {
 						float: right;
-						font-size: 16px;
+						height: 10px;
+						width: auto;
+						transform: translateY(5px);
 					}
 				}
 				&:hover {
@@ -381,6 +372,9 @@
 			background: transparent;
 			&:focus {
 				outline: none;
+			}
+			img {
+				width: 13px;
 			}
 		}
 	}

@@ -31,12 +31,11 @@
 								@endif
 								@if ($new['has_video']) 
 									<div class="galeria-video">
-										<span><i class="fa fa-play"></i></span>
+										<img src="/images/glyph/hasvideo.svg" class="hasvideo">
 									</div>
-								@endif
-								@if ($new['has_gallery'])
+								@elseif ($new['has_gallery'])
 									<div class="galeria-video">
-										<span><i class="fa fa-camera"></i></span>
+										<img src="/images/glyph/hasgallery.svg" class="hasgallery">
 									</div>
 								@endif
 							</a>
