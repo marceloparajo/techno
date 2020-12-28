@@ -1,4 +1,5 @@
 @inject('menuHelper', "App\Http\Helpers\MenuHelper")
+
 <footer class="main-footer super-contenedor">
 	<figure>
 		<a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}" itemprop="url">
@@ -21,12 +22,10 @@
 		</ul>
 	</nav>
 	<div class="disclaimer">
-		<p>
-			<span itemprop="name">{{ strtolower(env('APP_NAME')) }}.perfil.com - Editorial Perfil S.A.</span> | © Perfil.com 2006-{{ \Carbon\Carbon::now()->format('Y') }} - All rights reserved<br />
-			Intellectual Property Registry Number 5346433<br />
-			<div class="d-none d-xl-block" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-			Address: <span itemprop="streetAddress">California 2715</span>, <span itemprop="postalCode">C1289ABI</span>, <span itemprop="addressLocality">CABA, Argentina</span>  | Phone: <span itemprop="telephone">(+5411) 7091-4921</span> / <span itemprop="telephone">(+5411) 7091-4922</span> | E-mail: <a href="mailto:perfilcom@perfil.com"><span itemprop="email">perfilcom@perfil.com</span></a>
-			</div>
-		</p>
+		<span itemprop="name">{{ strtolower(env('APP_NAME')) }}.perfil.com - Editorial Perfil S.A.</span> | © Perfil.com 2006-{{ date('Y') }} - All rights reserved<br />
+		Intellectual Property Registry Number 5346433<br />
+		<div class="d-none d-xl-block" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+		Address: <span itemprop="streetAddress">California 2715</span>, <span itemprop="postalCode">C1289ABI</span>, <span itemprop="addressLocality">CABA, Argentina</span>  | Phone: <span itemprop="telephone">(+5411) 7091-4921</span> / <span itemprop="telephone">(+5411) 7091-4922</span> | E-mail: <a href="mailto:perfilcom@perfil.com"><span itemprop="email">perfilcom@perfil.com</span></a>
+		</div>
 	</div>
 </footer>

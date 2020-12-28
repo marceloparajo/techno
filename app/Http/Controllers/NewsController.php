@@ -12,16 +12,13 @@ namespace App\Http\Controllers;
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
-use App\Http\Helpers\SidebarHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\View\Factory;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
-use Illuminate\Support\Facades\Storage;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\View as ViewFacade;
 use Illuminate\View\View;
 use Sunra\PhpSimple\HtmlDomParser;
+use Illuminate\Support\Str;
 
 class NewsController extends Controller
 {
@@ -54,7 +51,7 @@ class NewsController extends Controller
      */
     public function show(Route $route, BloquesHelper $bloquesHelper)
     {
-        $slug = str_slug($route->parameter('slug') ?? '');
+        $slug = Str::slug($route->parameter('slug') ?? '');
 
         if ($slug == '')
             abort(404);
@@ -76,11 +73,11 @@ class NewsController extends Controller
         $page_title = env('APP_ALTER_NAME', '') . ' | ' . $noticia['home_title'];
         $page_description = (isset($noticia['headline']) && !empty($noticia['headline']))? $noticia['home_title']. ". ". $noticia['headline']: $noticia['home_title'];
 
-        // Si el embed code tiene Video de ePlanning, Youtube y Maps de Google
-        if (str_contains($noticia['embed_code'], ['epvideo', 'eplanning', 'youtubelive', 'googlemaps', 'youtube', 'rudovideo']))
-            $noticia['main_content'] = 'embed_code';
+        // Si el embed code tiene Video de ePlanning, Youtube y Maps de Google lo seteo como featured content
+        if (Str::contains($noticia['embed_code_original'], ['epvideo', 'eplanning', 'youtubelive', 'googlemaps', 'youtube', 'rudovideo']))
+            $noticia['featured_content'] = 'embed_code';
         else
-            $noticia['main_content'] = 'image';
+            $noticia['featured_content'] = 'image';
 
         $body = $this->_insertContentMiddle($noticia);
 
@@ -94,6 +91,44 @@ class NewsController extends Controller
             'date' => $noticia['date_available']->format('F, d Y H:i:s O'),
             'id' => $noticia['id']
         ];
+
+        // ----- PAYWALL -----
+        $has_edition = isset($noticia['issue']) && !is_null( $noticia['issue']);
+        $noticia['paywall_type'] = ($has_edition) || (!isset($noticia['paywall_type']) || is_null( $noticia['paywall_type']))
+            ? 'poroso'
+            : $noticia['paywall_type'];
+
+        switch ($noticia['paywall_type']) {
+            case 'abierto':
+            case 'poroso':
+            case 'magico':
+                $paywall_type = 'metered';
+                break;
+
+            case 'cerrada':
+                $paywall_type = 'premium';
+                break;
+
+            default:
+                $paywall_type = 'metered';
+        }
+        // ------ /PAYWALL -----
+
+        share([
+            'light_gallery_images' => $noticia['gallery_lightbox'],
+            'paywall' => [
+                'type' => $paywall_type,
+                'content_id' => $noticia['id'],
+                'content_canal' => $noticia['channel']['slug'],
+                'content_title' => $noticia['title'],
+                'content_date' => $noticia['date_available']->toIso8601String(),
+                'content_length' => strlen($noticia['body']),
+                'show_metered_modal' => $has_edition || $noticia['paywall_type'] == 'magico',
+                'author_id' => $noticia['author']['id'],
+                'author_username' => $noticia['author']['username'],
+                'author_fullname' => $noticia['author']['fullname']
+            ]
+        ]);
 
         return view('news.show.index', compact('noticia', 'jsonStructured', 'sidebar_content', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));
     }
