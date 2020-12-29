@@ -1,4 +1,3 @@
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 0)
 
 	@if (isset($news[2]))
@@ -11,24 +10,20 @@
 
 				@foreach(array_slice($news, 0, 3) as $key => $new)
 				@if ($key == 1)
-					<div class="secundarias"> 
+					<div class="secundarias">
 				@endif
 
 				<article class="articulo defotogaleria">
 					<figure>
 						<a href="{{ $new['permalink'] }}">
-							{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
-							@if($key != 0)
-							<p class="headline">{{ $new['headline'] }}</p>
-							@endif
-							@if ($new['has_video']) 
-								<div class="galeria-video">
-									<img src="/images/glyph/hasvideo.svg" class="hasvideo">
-								</div>
+							<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
+
+							@if($key != 0)<p class="headline">{{ $new['headline'] }}</p>@endif
+
+							@if ($new['has_video'])
+								<div class="galeria-video"><img src="/images/glyph/hasvideo.svg" class="hasvideo"></div>
 							@elseif ($new['has_gallery'])
-								<div class="galeria-video">
-									<img src="/images/glyph/hasgallery.svg" class="hasgallery">
-								</div>
+								<div class="galeria-video"><img src="/images/glyph/hasgallery.svg" class="hasgallery"></div>
 							@endif
 						</a>
 					</figure>
@@ -71,7 +66,7 @@
 		<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
 
 
-	
+
 	@endif
 
 @endif

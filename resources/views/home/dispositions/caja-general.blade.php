@@ -1,4 +1,3 @@
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 0)
 
 	@if (isset($news[1]))
@@ -13,17 +12,17 @@
 						<h6>Radio Perfil</h6>
 					</div>
 
-					<div class="contenido-notas"> 
+					<div class="contenido-notas">
 						@foreach(array_slice($news, 0, 3) as $key => $new)
 						<article class="articulo caja-nota">
 							<figure>
 								<a href="{{ $new['permalink'] }}">
 								@if ($key == 0)
-								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 540, $new['main_image']['caption'],'img-fluid', '540x304') !!}
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
 								@else
-								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" sizes="(min-width: 540px) 30vw, 100vw" />
 								@endif
-								</a>	
+								</a>
 							</figure>
 
 							<div class="meta-content">

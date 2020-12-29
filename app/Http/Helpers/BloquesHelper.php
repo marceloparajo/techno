@@ -8,6 +8,7 @@
 
 namespace App\Http\Helpers;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
@@ -103,7 +104,9 @@ class BloquesHelper
             if ($item['zone'] == 'sidebar') {
                 if (count($sidebarContent) <= 0)
                     $sidebarContent = $this->_getSidebarNewsFromJson();
-                $bloque_news = $sidebarContent;
+                $bloque_news = Arr::where($sidebarContent, function ($value, $key) use ($item) {
+                    return $value['zone'] == $item['id'];
+                });
             } else {
 
                 if ( $item['id'] == 'ultimas-noticias' ) {
