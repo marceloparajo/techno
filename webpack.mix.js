@@ -25,11 +25,10 @@ mix.webpackConfig({
 mix.sass('resources/assets/sass/home.scss', 'public/css')
 	.sass('resources/assets/sass/home-responsive.scss', 'public/css')
 	.sass('resources/assets/sass/general.scss', 'public/css')
-	.sass('resources/assets/sass/general-responsive.scss', 'public/css')
 	.sass('resources/assets/sass/news.scss', 'public/css')
 	.sass('resources/assets/sass/news-responsive.scss', 'public/css')
 	.sass('resources/assets/sass/channels.scss', 'public/css')
-	.sass('resources/assets/sass/responsive/channels/show.scss', 'public/css')
+	.sass('resources/assets/sass/channels-responsive.scss', 'public/css')
 
 mix.js('resources/assets/js/channels-show.js', 'public/js')
 	.js('resources/assets/js/home.js', 'public/js')
