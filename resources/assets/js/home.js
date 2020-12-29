@@ -1,9 +1,10 @@
-import App from './modules/app'
-import eplanningMod from './modules/eplanning'
-import eplvideoMod from './modules/eplvideo'
 import Lazyload from 'vanilla-lazyload'
 
 const SnippetHome = function () {
+
+	const initialize = () => {
+		initLazyload()
+	}
 
 	const initLazyload = () => {
 		const lazyLoad = new Lazyload({
@@ -12,20 +13,14 @@ const SnippetHome = function () {
 	}
 
 	return {
-		init: () => {
-			App.initialize()
-			initLazyload()
-			eplanningMod.init()
-			eplvideoMod.init()
-		}
+		init: () => initialize()
 	}
-
 }()
 
-$(document).ready(SnippetHome.init())
+document.addEventListener('DOMContentLoaded',  () => SnippetHome.init());
 
-$(window).resize(function(){
+/*$(window).resize(function(){
 	if( $(window).width() < 1262) {
 		$(".supercontenedor").removeClass("conmega");
 	}
-});
+});*/

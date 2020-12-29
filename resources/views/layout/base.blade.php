@@ -7,20 +7,23 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        @if (Route::currentRouteName() != "news.show")
-        <meta http-equiv="Refresh" content="600" />
-        @endif
+        @shared()
+        {{--<meta http-equiv="Refresh" content="600" />--}}
         <meta name="description" content="{{ isset($page_description) ? $page_description : env('SITE_DESCRIPTION', '') }}">
-        <meta name="ads-load" content="{{ env('ADS_LOAD', 'true') }}">
+
+        {{-- Ads --}}
         <meta name="ads-sec" content="@yield('ads-sec', 'articulo')">
         <meta name="ads-client" content="{{ env('ADS_CLIENT', '') }}">
+        {{-- /Ads --}}
 
+        {{-- Analytics/Comscore --}}
         <meta name="analytics-path-name" content="{{ rtrim(env('ANALYTICS_PATH_NAME', ''), '/') }}">
         <meta name="analytics-client-id" content="{{ env('ANALYTICS_CLIENT_ID', '') }}">
-        <meta name="analytics-run" content="{{ env('ANALYTICS_SHOW', '0') }}">
+        <meta name="analytics-enable" content="{{ env('ANALYTICS_ENABLE', '0') }}">
         <meta name="analytics-view" content="@if (! is_null(\Route::getCurrentRoute())) {{ \Route::getCurrentRoute()->getName() }} @endif">
         <meta name="analytics-data" content="{{ isset($analytics_data) ? json_encode($analytics_data) : '' }}">
         <meta name="comscore-client-id" content="{{ env('COMSCORE_CLIENT_ID', '') }}">
+        {{-- /Analytics/Comscore --}}
 
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -31,6 +34,7 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
 
         <title>{{ env('APP_ALTER_NAME', 'Perfil') }} | @yield('page-title', '')</title>
 
+        {{-- Favicons --}}
         <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/favicon/apple-icon-57x57.png') }}">
         <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/favicon/apple-icon-60x60.png') }}">
         <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/favicon/apple-icon-72x72.png') }}">
@@ -45,8 +49,7 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
         <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('img/favicon/favicon-96x96.png') }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png') }}">
         <link rel="manifest" href="{{ asset('img/favicon/manifest.json') }}">
-
-        <linl rel="manifest" href="{{ asset('onesignal-manifest.json') }}"></linl>
+        {{-- /Favicons --}}
 
         <link rel="preconnect" href="https://player.performgroup.com">
         <link rel="preconnect" href="https://prg.smartadserver.com">
@@ -55,29 +58,29 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
         <link rel="preconnect" href="https://ad.doubleclick.net">
         <link rel="preconnect" href="https://ut.e-planning.video">
         <link rel="preconnect" href="https://bidder.criteo.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
         @yield('head-top')
 
+        {{-- Font --}}
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Oswald:wght@400;600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" onload="this.rel='stylesheet'" />
+        {{-- /Font --}}
 
+        <link rel="stylesheet" type="text/css" href="{{ mix('css/general.css') }}">
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Oswald:wght@400;600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
-        @yield('css')
+        @yield('head-css')
 
         @yield('head-bottom')
 
-        {{-- Analytics --}}
-        <script type="text/javascript">
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        </script>
+        {{-- Google Tag Manager --}}
+        @if (env('ANALYTICS_ENABLE', false) && env('ANALYTICS_GTM_ID', '') != '')
+        <script>{!! $gtmTag?? "" !!}(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ env('ANALYTICS_GTM_ID','')}}');</script>
+        @endif
+        {{-- /Google Tag Manager --}}
 
         {{-- One Signal --}}
         @if (env('ONESIGNAL_ENABLE', false))
-            <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+            <link rel="manifest" href="{{ asset('onesignal-manifest.json') }}">
+            <script defer src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
             <script>
                 var OneSignal = window.OneSignal || [];
                 OneSignal.push(function() {
@@ -87,6 +90,7 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
                 });
             </script>
         @endif
+        {{-- /One Signal --}}
 
         {{-- Navegg --}}
         @if (env('NAVEGG_ENABLE', false))
@@ -102,35 +106,71 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
                 });
             </script>
         @endif
+        {{-- /Naveg --}}
     </head>
 
     <body class="@yield('body-class', '')">
+        {{-- Google Tag Manager --}}
+        @if (env('ANALYTICS_ENABLE', false) && env('ANALYTICS_GTM_ID', '') != '')
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ env('ANALYTICS_GTM_ID', '')}}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        @endif
+        {{-- /Google Tag Manager --}}
+
         @include('layout.header')
 
         @yield('body')
 
+        <div id="pw-content"></div>
         <div id="" class="ads-space" data-id="anuncioprevio" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>
         @include('layout.footer')
 
-        <div class="sticky-bottom-ads d-md-none">
+        {{--<div class="sticky-bottom-ads d-md-none">
             <button class="close-button" id="button-close-sticky-ads"><i class="fa fa-times"></i></button>
             <div id="" class="ads-space text-center" data-id="float-footer" data-w="320" data-h="50" data-loaded="false" data-reload="true"></div>
-        </div>
-        
+        </div>--}}
 
         @yield('templates')
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        @if (env('ADS_ENABLE', false) && env('ADS_CLIENT', '') != '')
+        <script type="text/javascript">var eplDoc = document; var eplLL = false;</script>
+        <script defer src="{{ mix('js/eplanning.js') }}"></script>
+        <script defer id="js-eplvideo" async type="text/javascript" src="https://hls.e-planning.video/video/js/eplvideo.js" data-client="ut/2b79"></script>
+        @endif
 
-        <script type="text/javascript">const eplDoc = document;</script>
-        <script type="text/javascript" src="{{ mix('js/epl-41.js') }}"></script>
-        <script id="js-eplvideo" async type="text/javascript" src="//hls.e-planning.video/video/js/eplvideo.js" data-client="ut/2b79"></script>
-        <script async src="https://sb.scorecardresearch.com/beacon.js"></script>
+        <script type="text/javascript">
+            window.paywall = window.paywall || {}
+            window.paywallConfig = window.paywallConfig || {}
+            window.perfilContent = window.perfilContent || {}
+            paywall.queue = window.paywall.queue || []
+
+            window.paywallConfig.loginwallLimit = 40
+            window.paywallConfig.paywallLimit = 80
+            window.paywallConfig.enableSocket = true
+            window.paywallConfig.socketHoursPeriodicity = 3
+            window.paywallConfig.socketHoursPeriodicitySubs = 24
+        </script>
+        @yield('paywall-config')
+        <script defer type="text/javascript" src="{{ mix('js/mi-perfil.js') }}"></script>
+
         @yield('js')
 
         @include('partials.dmp')
-        @include('partials.comscore')
+
+        {{-- Comscore --}}
+        @if (env('COMSCORE_ENABLE', false) && env('COMSCORE_CLIENT_ID', '') != '')
+        <script>
+            var _comscore = _comscore || [];
+            _comscore.push({ c1: "2", c2: "{{ env('COMSCORE_CLIENT_ID', '6906401') }}" });
+            (function() {
+                var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.defer = true;
+                s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+                el.parentNode.insertBefore(s, el);
+            })();
+        </script>
+        <noscript>
+            <img src="https://b.scorecardresearch.com/p?c1=2&c2={{ env('COMSCORE_CLIENT_ID', '6906401') }}&cv=2.0&cj=1" />
+        </noscript>
+        @endif
+        {{-- /Comscore --}}
     </body>
 </html>

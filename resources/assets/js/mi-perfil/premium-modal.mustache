@@ -1,0 +1,35 @@
+<div id="pw-modal" class="pw-color-invertido">
+  <div class="pw-modal-box">
+    <div class="pw-modal-content">
+      <div class="pw-modal-top">
+        <a href="/">
+          <div id="pw-modal-close">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+          </div>
+        </a>
+      </div>
+      <div class="pw-perfil-logo">
+        <figure class="figure-perfil-logo">
+          <a href="/">
+            <img src="/static/img/logo_perfil_negativo.png" alt="Perfil">
+          </a>
+        </figure>
+      </div>
+      <div class="pw-modal-row">
+        <p class="pw-modal-mensaje-f">Te hace falta saber. <br>Nos apasiona informar.</p>
+        <p class="pw-modal-mensaje-f">Necesitás confiar. <br>Te queremos ahí.</p>
+        <p class="pw-modal-mensaje-g"><a href="#" class="pw-paywall-premium-modal-btn-call-to-action">Suscribite</a></p>
+        <p class="pw-modal-mensaje-d">Para acceder a nuestro<br><span>Contenido Premium</span><br>y más Periodismo Puro en tiempo real.</p>
+      </div>
+      <div class="pw-modal-row">
+        <button class="pw-boton-suscripcion pw-paywall-premium-modal-btn-call-to-action">Suscribirme</button>
+        <p class="pw-modal-enlaces">
+          {{^logged}}
+            <a href="{{paywall_url}}id/login/?continue={{current_url}}">Ya tengo una cuenta</a>
+          {{/logged}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

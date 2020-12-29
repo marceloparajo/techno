@@ -33,7 +33,9 @@
 			<script>
 				function myFunction(x) {
 					x.classList.toggle("change");
-					$("#menues").toggleClass("tescondo temuestro");
+					var menues = document.querySelector('#menues');
+					menues.classList.toggle('temuestro');
+//					$("#menues").toggleClass("tescondo temuestro");
 				}
 			</script>
 			<figure>
@@ -70,7 +72,7 @@
 		</div>
 	</div>
 	<div id="contenedor-header-menu">
-		<nav id="menues" class="tescondo">
+		<nav id="menues" class="">
 			<ul>
 				<li><a href="/ultimo-momento/">Último momento</a></li>
 				<li><a><img src="/images/glyph/chevron.svg" class="chevron">Temas de hoy</a>

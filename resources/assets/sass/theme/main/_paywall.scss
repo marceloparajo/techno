@@ -1,7 +1,6 @@
 /** suscripción en header **/
 
-#pw-suscripcion,
-.pw-suscripcion {
+#pw-suscripcion, .pw-suscripcion {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -13,8 +12,8 @@
 	}
 	line-height: 1em;
 	letter-spacing: 0.04em;
-	#pw-suscribite,
-	.pw-suscribite {
+
+	#pw-suscribite, .pw-suscribite {
 		height: 24px;
 		background-color: $pw-azul;
 		color: white;
@@ -30,8 +29,8 @@
 			background: $pw-azul-claro;
 		}
 	}
-	#pw-ingresar,
-	.pw-ingresar {
+
+	#pw-ingresar, .pw-ingresar {
 		height: 24px;
 		box-sizing: border-box;
 		background: white;
@@ -43,6 +42,7 @@
 		transition: ease .3s;
 		text-transform: uppercase;
 		border: 1px solid $linea;
+
 		&:before {
 			content: "";
 			display: block;
@@ -62,6 +62,7 @@
 				position: center 1px;
 			}
 		}
+
 		&:hover {
 			color: #222;
 			&:before {
@@ -69,8 +70,8 @@
 			}
 		}
 	}
-	#pw-logged,
-	.pw-logged {
+
+	#pw-logged, .pw-logged {
 		height: 34px;
 		box-sizing: border-box;
 		color: #333;
@@ -82,6 +83,7 @@
 		line-height: 24px;
 		border: 1px solid #ccdfef;
 		background: #eef3f7;
+
 		.pw-logged-avatar {
 			width: 26px;
 			height: 26px;
@@ -91,6 +93,7 @@
 			float: left;
 			margin: 0 5px 0 0;
 		}
+
 		.pw-logged-info {
 			display: none;
 			position: absolute;
@@ -102,6 +105,7 @@
 			padding: 10px 0;
 			box-sizing: border-box;
 			min-width: 180px;
+
 			ul {
 				border-radius: 3px;
 				border:1px solid #ddd;
@@ -112,11 +116,13 @@
 				background: #fff;
 				position: relative;
 				box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+
 				li {
 					padding: 10px;
 					border-bottom: 1px solid #dfeefb;
 					font-size: 13px;
 					line-height: 1.2em;
+
 					&:before {
 						content: "\f111";
 						font-family: "FontAwesome";
@@ -128,21 +134,27 @@
 						line-height: 1em;
 						padding-top: 4px;
 					}
+
 					a {
 						color: #888;
 					}
+
 					&:hover {
+
 						a {
 							color: #000;
 						}
+
 						&:before {
 							color: $pw-azul;
 						}
 					}
+
 					&:last-of-type {
 						border-bottom: none;
 					}
 				}
+
 				&:before {
 					content: "";
 					position: absolute;
@@ -158,35 +170,47 @@
 				}
 			}
 		}
+
 		&:hover {
 			color: #000;
 			background: white;
+
 			>.pw-logged-info {
 				display: block;
 			}
 		}
 	}
 }
+
 @include media-breakpoint-down(md) {
+
 	.pw-suscripcion {
 		margin: 0 0 18px 10px;
 	}
+
 }
+
 @include media-breakpoint-down(sm) {
+
 	.pw-suscripcion {
 		margin: 0 0 12px 10px;
 	}
+
 }
+
 @include media-breakpoint-down(xs) {
+
 	.pw-suscripcion {
 		font-size: 11px;
 		font-weight: normal;
 		margin-bottom: 6px;
+
 		.pw-suscribite {
 			background-color: transparent;
 			color: $pw-azul-claro;
 			padding: 5px 0;
 		}
+
 		.pw-ingresar {
 			background-color: transparent;
 			border: none;
@@ -198,14 +222,9 @@
 		}
 	}
 }
-	
-
 
 #pw-zocalo {
 	box-sizing: border-box;
-	* {
-		box-sizing: border-box;
-	}
 	position: fixed;
 	background: $pw-azul;
 	width: 100%;
@@ -218,25 +237,34 @@
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
+
+	* {
+		box-sizing: border-box;
+	}
+
 	.pw-zocalo-top {
 		padding: 5px 0 0 0;
 		background: #000;
 		margin: 0;
+
 		.pw-zocalo-container {
 			display: flex;
 			justify-content: space-between;
 			max-width: 1300px;
 			width: 100%;
 			margin: 0 auto;
+
 			figure {
 				width: 120px;
 				height: auto;
+
 				img {
 					width: 100%;
 					height: auto;
 					margin: 3px 0 -5px 0;
 				}
 			}
+
 			#pw-zocalo-close {
 				width: 34px;
 				height: 34px;
@@ -248,23 +276,26 @@
 				cursor: pointer;
 				transform: translateY(-15px);
 				margin-bottom: -5px;
-				.bar1,
-				.bar2 {
+
+				.bar1, .bar2 {
 					width: 20px;
 					height: 2px;
 					background: #000;
 					display: block;
 					margin: 0!important;
 				}
+
 				.bar1 {
 					transform: rotate(-45deg) translate(-6px, 14px);
 				}
+
 				.bar2 {
 					transform: rotate(45deg) translate(12px, 4px);
 				}
 			}
 		}
 	}
+
 	.pw-zocalo-container {
 		width: 100%;
 		max-width: 1300px;
@@ -272,12 +303,14 @@
 		display: flex;flex: 1 1 0;
 		justify-content: space-between;
 		padding-bottom: 10px;
+
 		.pw-zocalo-acciones {
 			flex-basis: 320px;
 			padding: 10px 0 10px 20px;
 			align-self: flex-end;
 			display: flex;
 			flex-direction: column;
+
 			.pw-boton-suscripcion {
 				margin: auto 0 0 0;
 				background: white;
@@ -295,14 +328,17 @@
 					weight: bold;
 					size: 18px;
 				}
+
 				&:hover {
 					color: $pw-azul;
 					box-shadow: 0 4px 5px -3px rgba(0,0,0,.5);
 				}
+
 				&:focus {
 					border: none;
 					outline: none;
 				}
+
 				&:after {
 					content: "\f061";
 					font-weight: normal;
@@ -312,6 +348,7 @@
 					margin-left: 10px;
 				}
 			}
+
 			p.mensaje {
 				font-family: $font-serif;
 				font-size: 20px;
@@ -319,6 +356,7 @@
 				line-height: 1em;
 				margin: 4px 0 0 0;
 				color: white;
+
 				br {
 					display: none;
 				}
@@ -568,19 +606,22 @@
 
 
 #pw-modal {
-	* {
-		box-sizing: border-box;
-	}
+	backdrop-filter: blur(30px);
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: rgba(0,0,0,0.8);
+	background: rgba(0,0,0,0.1);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 999;
+
+	* {
+		box-sizing: border-box;
+	}
+
 	.pw-modal-box {
 		background: $pw-azul-claro;
 		color: white;
@@ -1302,7 +1343,7 @@
 				box-shadow: none;
 				border-right: 2px solid $pw-azul;
 				border-radius: 0;
-			} 
+			}
 			.pw-zocalo-acciones {
 				width: 260px;
 				p.mensaje {
@@ -1365,7 +1406,7 @@
 			.pw-piedenota-content {
 				.p {
 					&.pw-piedenota-mensaje-b {
-						margin-left: 25px;				
+						margin-left: 25px;
 						text-align: center;
 					}
 					&.pw-piedenota-mensaje-c {

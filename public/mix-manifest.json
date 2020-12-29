@@ -1,7 +1,15 @@
 {
-    "/js/channels-show.js": "/js/channels-show.js?id=137cad8c1569f28deab3",
-    "/css/app.css": "/css/app.css?id=9d6e9e6a63eff12e393f",
-    "/js/news-show.js": "/js/news-show.js?id=b8393ee9fcff3de72f30",
-    "/js/home.js": "/js/home.js?id=d597dc57f7d8ff3d1bfc",
-    "/js/epl-41.js": "/js/epl-41.js?id=76a0e1f9eccb844837ec"
+    "/js/mi-perfil.js": "/js/mi-perfil.js?id=876fae545cbc816f5a18",
+    "/js/channels-show.js": "/js/channels-show.js?id=4c46e7bbaf4c5cc1186a",
+    "/css/home.css": "/css/home.css?id=2fafb90c211897dc3538",
+    "/css/home-responsive.css": "/css/home-responsive.css?id=010d27c5d21de8db42b1",
+    "/css/general.css": "/css/general.css?id=f9f45ddcb00c463529f4",
+    "/css/news.css": "/css/news.css?id=39339828bb35fbc1a75c",
+    "/css/news-responsive.css": "/css/news-responsive.css?id=9b8e4329897ffeff9d67",
+    "/css/channels.css": "/css/channels.css?id=52dc21cfc8e2cd86a59c",
+    "/js/news-show.js": "/js/news-show.js?id=09af2d4ae53b831c4cae",
+    "/js/eplanning.js": "/js/eplanning.js?id=77b3455feb2f7f410877",
+    "/js/home.js": "/js/home.js?id=88a8a7a868eef978cb9c",
+    "/css/general-responsive.css": "/css/general-responsive.css?id=d41d8cd98f00b204e980",
+    "/css/channels-responsive.css": "/css/channels-responsive.css?id=d41d8cd98f00b204e980"
 }

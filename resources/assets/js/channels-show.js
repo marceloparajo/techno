@@ -1,9 +1,10 @@
-import App from './modules/app'
-import eplanningMod from './modules/eplanning'
-import eplvideoMod from './modules/eplvideo'
 import Lazyload from 'vanilla-lazyload'
 
 const SnippetChannelsShow = function () {
+
+	const initialize = () => {
+		initLazyLoad()
+	}
 
 	const initLazyLoad = () => {
 		const lazyload = new Lazyload({
@@ -12,15 +13,10 @@ const SnippetChannelsShow = function () {
 	}
 
 	return {
-		init: () => {
-			App.initialize()
-			initLazyLoad()
-			eplanningMod.init()
-			eplvideoMod.init()
-		}
+		init: () => initialize()
 	}
 
 }()
 
-$(document).ready(SnippetChannelsShow.init)
+document.addEventListener('DOMContentLoaded',  () => SnippetChannelsShow.init());
 

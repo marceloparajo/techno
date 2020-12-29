@@ -4,11 +4,11 @@ services:
   #PHP
   app:
     image: fedemramato/laravel-php7.3:latest
-    container_name: newperfil-site
+    container_name: perfilcom-site
     environment:
       APACHE_RUN_USER: #${UID}
       APACHE_RUN_GROUP: #${UID}
-      VIRTUAL_HOST: dev-new.perfil.com
+      VIRTUAL_HOST: dev-new-perfil.perfil.com
     restart: unless-stopped
     expose:
       - "80"

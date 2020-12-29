@@ -1,0 +1,23 @@
+{{#user_logged}}
+  <div class="pw-logged">
+    <img src="{{user.avatar}}" class="pw-logged-avatar">
+    {{user.first_name}} {{user.last_name}}
+    <div class="pw-logged-info">
+      <ul>
+        <li><a href="{{paywall_url}}id/perfil">Mi Perfil</a></li>
+        {{^unsubscribed}}
+          <li><a href="{{paywall_url}}mi-suscripcion">Mi suscripción</a></li>
+        {{/unsubscribed}}
+        <li><a href="{{paywall_url}}id/logout">Cerrar sesión</a></li>
+      </ul>
+    </div>
+  </div>
+  {{#unsubscribed}}
+    <a href="{{paywall_url}}" class="pw-suscribite">Suscribite</a>
+  {{/unsubscribed}}
+{{/user_logged}}
+
+{{^user_logged}}
+  <a href="{{paywall_url}}id/login/?continue={{current_url}}" class="pw-ingresar">Ingresar</a>
+  <a href="{{paywall_url}}" class="pw-suscribite">Suscribite</a>
+{{/user_logged}}

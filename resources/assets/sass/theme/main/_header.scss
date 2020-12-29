@@ -249,6 +249,7 @@
 		left: 0;
 		z-index: 999;
 		transition: ease .9s;
+		display: none;
 		ul {
 			list-style:none;
 			padding: 0;
@@ -330,9 +331,6 @@
 					display: block;
 				}
 			}
-		}
-		&.tescondo {
-			display: none;
 		}
 		&.temuestro {
 			display: block;

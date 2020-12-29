@@ -11,6 +11,7 @@ namespace App\Http\Helpers;
 
 use Carbon\Carbon;
 use App\Http\Helpers\ImageHelper;
+use Illuminate\Support\Str;
 
 class ParseHelper
 {
@@ -93,7 +94,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($tags, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.show', str_slug($tag))
+                    'route' => route('tags.show', Str::slug($tag))
                 ]);
             }
         }
@@ -106,7 +107,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($celebrities, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.personalities.show', str_slug($tag))
+                    'route' => route('tags.personalities.show', Str::slug($tag))
                 ]);
             }
         }
@@ -119,7 +120,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($series, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.series.show', str_slug($tag))
+                    'route' => route('tags.series.show', Str::slug($tag))
                 ]);
             }
         }
@@ -132,7 +133,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($movies, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.movies.show', str_slug($tag))
+                    'route' => route('tags.movies.show', Str::slug($tag))
                 ]);
             }
         }
@@ -145,7 +146,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($events, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.events.show', str_slug($tag))
+                    'route' => route('tags.events.show', Str::slug($tag))
                 ]);
             }
         }
@@ -158,7 +159,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($locations, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.locations.show', str_slug($tag))
+                    'route' => route('tags.locations.show', Str::slug($tag))
                 ]);
             }
         }
@@ -171,7 +172,7 @@ class ParseHelper
                 $tag = trim($tag);
                 array_push($themes, [
                     'name' => ucwords($tag),
-                    'route' => route('tags.topics.show', str_slug($tag))
+                    'route' => route('tags.topics.show', Str::slug($tag))
                 ]);
             }
         }
@@ -179,10 +180,13 @@ class ParseHelper
         // Body
         $body = (isset($noticia['body']) && $noticia['body'] != '') ? $noticia['body'] : '';
 
+        // Permalink
+        $permalink = $this->generatePermalink($noticia['permalink']);
+
         return [
             'id' => $noticia['id'],
             'slug' => $noticia['slug'] ?? '',
-            'canonical'=> isset($noticia['canonical']) && !empty($noticia['canonical']) ? $noticia['canonical']: asset($noticia['permalink']),
+            'canonical'=> isset($noticia['canonical']) && !empty($noticia['canonical']) ? $noticia['canonical']: $permalink,
             'channel' => [
                 'name' => $noticia['channel_name'],
                 'slug' => $noticia['channel_slug']
@@ -197,6 +201,7 @@ class ParseHelper
             'headline' => $noticia['headline'],
             'signed' => isset($noticia['flag_firmado']) && $noticia['flag_firmado'] == 'S',
             'author' => [
+                'id' => $noticia['author_id'] ?? 0,
                 'username' => $noticia['author_username'],
                 'image' => $this->imageHelper->generateUrlImageAuthor($noticia['author_username']),
                 'fullname' => trim($noticia['author_firstname']) . ' ' . trim($noticia['author_lastname']),
@@ -210,7 +215,7 @@ class ParseHelper
             'gallery' => $gallery,
             'gallery_lightbox' => (count($gallery)) ? $this->_parseGalleryForLightbox($gallery) : '',
             'body' => $body,
-            'permalink' => asset($noticia['permalink']),
+            'permalink' => $permalink,
             'source_url' => $noticia['permalink'],
             'relacionadas' => $relacionadas,
             'relacionadasGroupClass' => $relacionadasGroupClass,
@@ -225,6 +230,7 @@ class ParseHelper
             'credit' => $noticia['credit'] ?? '',
             'google_amp' => isset($noticia['flag_google_amp']) && $noticia['flag_google_amp'] === 1,
             'embed_code' => $noticia['embed_code'],
+            'embed_code_original' => $noticia['embed_code_original'] ?? '',
             'tags' => $noticia['tags'] ?? '',
             'tags_list'             => $tags,
             'tags_celebrities_list' => $celebrities,
@@ -238,6 +244,18 @@ class ParseHelper
             'has_video'=> $noticia['has_video']?? false,
             'has_gallery'=> $noticia['has_gallery']?? false
         ];
+    }
+
+    /**
+     * @param string $permalink
+     * @return string
+     */
+    public function generatePermalink(string $permalink)
+    {
+        $url = rtrim(env('APP_URL'), '/');
+        $link = trim($permalink, '/');
+
+        return "$url/$link";
     }
 
     /**
@@ -288,7 +306,7 @@ class ParseHelper
                     ]
                 ]
             ],
-            'headline' => str_limit($noticia['short_title'], 110),
+            'headline' => Str::limit($noticia['short_title'], 110),
             'url' => $noticia['permalink'],
             'articleSection' => $channel_url,
             'genre' => $channel_url,
@@ -432,7 +450,7 @@ class ParseHelper
 
     /**
      * @param array $gallery
-     * @return string
+     * @return array
      */
     protected function _parseGalleryForLightbox(Array $gallery)
     {
@@ -446,7 +464,8 @@ class ParseHelper
                 'subHtml' => $image['caption']
             ]);
         }
-        return json_encode($images);
+
+        return $images;
     }
 
     /**
