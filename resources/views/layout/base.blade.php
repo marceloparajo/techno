@@ -51,20 +51,20 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
         <link rel="manifest" href="{{ asset('img/favicon/manifest.json') }}">
         {{-- /Favicons --}}
 
+        {{--
+        <link rel="preconnect" href="https://bidder.criteo.com">
         <link rel="preconnect" href="https://player.performgroup.com">
         <link rel="preconnect" href="https://prg.smartadserver.com">
         <link rel="preconnect" href="https://onesignal.com">
         <link rel="preconnect" href="https://ads.us.e-planning.net">
         <link rel="preconnect" href="https://ad.doubleclick.net">
         <link rel="preconnect" href="https://ut.e-planning.video">
-        <link rel="preconnect" href="https://bidder.criteo.com">
+        --}}
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://use.fontawesome.com">
         @yield('head-top')
 
         {{-- Font --}}
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Oswald:wght@400;600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" onload="this.rel='stylesheet'" />
-        <link href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" rel="stylesheet" />
         {{-- /Font --}}
 
         <link rel="stylesheet" type="text/css" href="{{ mix('css/general.css') }}">
@@ -133,12 +133,6 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
 
         @yield('templates')
 
-        @if (env('ADS_ENABLE', false) && env('ADS_CLIENT', '') != '')
-        <script type="text/javascript">var eplDoc = document; var eplLL = false;</script>
-        <script defer src="{{ mix('js/eplanning.js') }}"></script>
-        <script defer id="js-eplvideo" async type="text/javascript" src="https://hls.e-planning.video/video/js/eplvideo.js" data-client="ut/2b79"></script>
-        @endif
-
         <script type="text/javascript">
             window.paywall = window.paywall || {}
             window.paywallConfig = window.paywallConfig || {}
@@ -156,8 +150,6 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
 
         @yield('js')
 
-        @include('partials.dmp')
-
         {{-- Comscore --}}
         @if (env('COMSCORE_ENABLE', false) && env('COMSCORE_CLIENT_ID', '') != '')
         <script>
@@ -174,5 +166,17 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
         </noscript>
         @endif
         {{-- /Comscore --}}
+
+        {{-- DMP --}}
+        <script type="text/javascript">
+          var _rl_cn = _rl_cn || 0,_rl_ptc = ("https:" == window.location.protocol ? "https" : "http"); window._rl_ids = window._rl_ids || []; window._rely = window._rely || []; _rl_ids.push({pid:909,src:0}); _rely.send = _rely.send?_rely.send:function() {}; (function() { var rl = document.createElement("script"); rl.type = "text/javascript"; rl.defer = true; rl.src = _rl_ptc + "://api.retargetly.com/loader?id=" + _rl_ids[_rl_ids.length-1].pid; rl.id = "rely-api-"+(_rl_cn++); var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(rl, s); })();
+        </script>
+        {{-- /DMP --}}
+
+        @if (env('ADS_ENABLE', false) && env('ADS_CLIENT', '') != '')
+            <script type="text/javascript">var eplDoc = document; var eplLL = false;</script>
+            <script defer src="{{ mix('js/eplanning.js') }}"></script>
+            <script defer id="js-eplvideo" async type="text/javascript" src="https://hls.e-planning.video/video/js/eplvideo.js" data-client="ut/2b79"></script>
+        @endif
     </body>
 </html>

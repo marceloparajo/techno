@@ -12,7 +12,8 @@
 	<article class="notaOpinion">
 		<a href="{{ $new['permalink'] }}">
 			<figure>
-				{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid','270x152') !!}
+				<x-lazy-image :src="$new['main_image']['srcs']['original']" />
+				{{-- $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid','270x152') --}}
 			</figure>
 			<div class="content">
 				<h3>{{ $new['home_title'] }}</h3>
