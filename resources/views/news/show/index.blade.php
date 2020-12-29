@@ -134,15 +134,13 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 						{{-- Gallery --}}
 						@if (count($noticia['gallery']) > 1)
-							<div class="col-12 border p-3">
+							<div class="galeria-imagenes">
 								<h3>{{ __('Image Gallery') }}</h3>
-								<div id="gallery-thumbnails" class="bottom-gallery">
-									@foreach ($noticia['gallery'] as $image)
-										<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
-											<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}">
-										</a>
-									@endforeach
-								</div>
+								@foreach ($noticia['gallery'] as $image)
+									<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
+										<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}">
+									</a>
+								@endforeach
 							</div>
 						@endif
 

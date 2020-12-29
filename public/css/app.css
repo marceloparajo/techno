@@ -13074,17 +13074,20 @@ REVISTAS
   width: 100%;
   height: 100%;
   padding: 0;
+  cursor: pointer;
 }
 
-.perfil-noticia .supercontenedor .container .main-article figure a.btn-open-gallery.fotogaleria i.fas {
+.perfil-noticia .supercontenedor .container .main-article figure a.btn-open-gallery.fotogaleria:after {
+  content: "";
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 24px;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 5px;
-  color: white;
-  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: url("/images/glyph/ampliar.svg") right top no-repeat;
+  background-size: 30px;
+  opacity: .7;
 }
 
 .perfil-noticia .supercontenedor .container .main-article figure img {
@@ -13660,6 +13663,32 @@ REVISTAS
 .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news ul li a:hover {
   text-decoration: none;
   color: #557c9c;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .galeria-imagenes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .galeria-imagenes h3 {
+  width: 100%;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .galeria-imagenes a {
+  width: 32%;
+  margin-right: 1%;
+  display: block;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .galeria-imagenes a img {
+  width: 100%;
 }
 
 .perfil-noticia .float-button {
@@ -14357,7 +14386,7 @@ REVISTAS
   .supercontenedor.reperfilar .reperfilar-main-content {
     display: grid;
     grid-template-areas: 'big smallone' 'big smalltwo' 'big smallthree' 'big smallfour';
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 5fr 2fr;
     grid-column-gap: 20px;
   }
 
@@ -14370,34 +14399,52 @@ REVISTAS
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin: 0;
   }
 
   .supercontenedor.reperfilar .reperfilar-main-content .articulo figure {
-    width: 30%;
+    width: 28%;
   }
 
   .supercontenedor.reperfilar .reperfilar-main-content .articulo .meta-content {
-    width: 68%;
+    width: 70%;
+    padding: 0;
+  }
+
+  .supercontenedor.reperfilar .reperfilar-main-content .articulo .meta-content .firma-home {
+    border-top: 1px solid #343a40;
   }
 
   .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(1) {
     grid-area: big;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    background: #343a40;
+    padding: 5px;
   }
 
-  .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(1) .embed-responsive-16by9 {
-    padding-bottom: 56.25%;
+  .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(1) figure,
+  .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(1) .videoContainer {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    padding-bottom: 39.3%;
+  }
+
+  .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(1) .meta-content {
+    -ms-flex-preferred-size: 28%;
+        flex-basis: 28%;
   }
 
   .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(1) .meta-content a p.headline {
-    display: none;
+    display: block;
+  }
+
+  .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(1) .meta-content .firma-home {
+    border-top: 1px solid #555;
   }
 
   .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(2) {
     grid-area: smallone;
+    border-top: none;
+    padding-top: 0;
   }
 
   .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(3) {
@@ -15639,6 +15686,16 @@ REVISTAS
   }
 
   .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .tags ul li a:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .galeria-imagenes a {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .galeria-imagenes a:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
   }

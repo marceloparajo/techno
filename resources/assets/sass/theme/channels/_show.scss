@@ -343,34 +343,48 @@
 					'big smalltwo'
 					'big smallthree'
 					'big smallfour';
-				grid-template-columns: 2fr 1fr;
+				grid-template-columns: 5fr 2fr;
 				grid-column-gap: 20px;
 				.articulo {
 					width: 100%;
 					flex-direction: row;
 					justify-content: space-between;
+					margin: 0;
 					figure {
-						width: 30%;
+						width: 28%;
 					}
 					.meta-content {
-						width: 68%;
+						width: 70%;
+						padding: 0;
+						.firma-home {
+							border-top: 1px solid $dark;
+						}
 					}
 					&:nth-child(1) {
 						grid-area: big;
-						flex-direction: column;
-						.embed-responsive-16by9 {
-							padding-bottom: 56.25%
+						background: $dark;
+						padding: 5px;
+						figure,
+						.videoContainer {
+							flex-basis: 70%;
+							padding-bottom: 39.3%;
 						}
 						.meta-content {
+							flex-basis: 28%;
 							a {
 								p.headline {
-									display: none;
+									display: block;
 								}
+							}
+							.firma-home {
+								border-top: 1px solid $linea-oscura;
 							}
 						}
 					}
 					&:nth-child(2) {
 						grid-area: smallone;
+						border-top: none;
+						padding-top: 0;
 					}
 					&:nth-child(3) {
 						grid-area: smalltwo;

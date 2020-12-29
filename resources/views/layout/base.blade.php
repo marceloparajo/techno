@@ -61,7 +61,6 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Oswald:wght@400;600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <link href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" rel="stylesheet" />
 
         <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
         @yield('css')
