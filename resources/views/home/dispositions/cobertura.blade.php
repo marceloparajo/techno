@@ -1,38 +1,35 @@
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 0)
 
 	@if (isset($news[2]))
 
+		<!-- Cobertura -->
 		<div class="container cobertura mb-4">
 
 			<h6>{{ $news[0]['hat'] ?? '' }}</h6>
 
 			<div class="notas-cobertura">
 
-				<div class="columna-dostercios"> 
+				<div class="columna-dostercios">
 					@foreach(array_slice($news, 0, 3) as $key => $new)
 					@if ($key == 1)
 				</div>
 
-				<div class="columna-tercio"> 
+				<div class="columna-tercio">
 					@endif
 
 					<article class="articulo decobertura">
 						<figure>
 							<a href="{{ $new['permalink'] }}">
-								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
-								@if($key != 0)
-								<p class="headline">{{ $new['headline'] }}</p>
+								<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
+
+								@if($key != 0)<p class="headline">{{ $new['headline'] }}</p>@endif
+
+								@if ($new['has_video'])
+									<div class="galeria-video"><span><i class="fa fa-play"></i></span></div>
 								@endif
-								@if ($new['has_video']) 
-									<div class="galeria-video">
-										<span><i class="fa fa-play"></i></span>
-									</div>
-								@endif
+
 								@if ($new['has_gallery'])
-									<div class="galeria-video">
-										<span><i class="fa fa-camera"></i></span>
-									</div>
+									<div class="galeria-video"><span><i class="fa fa-camera"></i></span></div>
 								@endif
 							</a>
 						</figure>
@@ -64,12 +61,12 @@
 
 				@if (isset($news[5]))
 
-				<div class="columna-ancha"> 
+				<div class="columna-ancha">
 					@foreach(array_slice($news, 3, 3) as $key => $new)
 					<article class="articulo decobertura">
 						<figure>
 							<a href="{{ $new['permalink'] }}">
-								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
+								<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
 								<p class="headline">{{ $new['headline'] }}</p>
 							</a>
 						</figure>
@@ -98,7 +95,7 @@
 					</article>
 					@endforeach
 
-	
+
 
 						<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
 
@@ -110,7 +107,7 @@
 
 		</div><!-- cobertura -->
 
-	
+
 	@endif
 
 @endif

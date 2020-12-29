@@ -1,6 +1,3 @@
-@inject('shortcodeConverter', "App\Http\Helpers\shortCodeConverter ")
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
-
 @extends('layout.base')
 
 @section('page-info')
@@ -151,10 +148,10 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 					<div class="news-content">
 						{!! $body !!}
 
-						{{-- Embed Code
+						{{-- Embed Code --}}
 						@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code')
-							{!! $shortcodeConverter->convert($noticia['embed_code']) !!}
-						@endif--}}
+							{!! $noticia['embed_code'] !!}
+						@endif
 
 						{{-- Gallery --}}
 						@if (count($noticia['gallery']) > 1)
@@ -187,7 +184,7 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 				{{-- /Article Body --}}
 
 				{{-- Noticias sugeridas de otros sitios/revistas --}}
-				@include('news.show.partials.suggested-site-news')
+				<x-suggested-site-news />
 
 				{{-- Outbrain --}}
 				@if (env('OUTBRAIN_ENABLE', false) && env('ADS_ENABLE', false))

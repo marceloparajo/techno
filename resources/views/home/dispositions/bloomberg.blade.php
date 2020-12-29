@@ -1,8 +1,7 @@
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 0)
 
 	@if (isset($news[4]))
-
+		<!-- Bloomberg -->
 		<div class="container bloomberg px-0">
 
 			<div class="caja-contenido bloomberg">
@@ -21,7 +20,7 @@
 						<article class="articulo notabloomberg bl-{{ $key }}">
 							<figure>
 								<a href="{{ $new['permalink'] }}">
-									{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 540, $new['main_image']['caption'],'img-fluid','540x304') !!}
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
 								</a>
 							</figure>
 							<div class="meta-content">
@@ -42,13 +41,13 @@
 
 					@endforeach
 
-					</div><!-- bloomberg-tres -->
+					</div>
 
-				</div><!-- caja-notas -->
+				</div>
 
-			</div><!-- caja-contenido -->
+			</div>
 
-		</div><!-- container -->
+		</div>
 
 	@endif
 

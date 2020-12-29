@@ -1,4 +1,3 @@
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 0)
 
 	@if (isset($news[1]))
@@ -13,14 +12,14 @@
 						<h6>Marie Claire</h6>
 					</div>
 
-					<div class="contenido-notas"> 
+					<div class="contenido-notas">
 						@foreach(array_slice($news, 0, 2) as $key => $new)
 							<article class="articulo caja-nota">
 								<figure>
 									<a href="{{ $new['permalink'] }}">
-										{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 270, $new['main_image']['caption'],'img-fluid','270x152') !!}
+										<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
 										<h4>{{ $new['headline'] }}</h4>
-									</a>	
+									</a>
 								</figure>
 
 								<div class="meta-content">

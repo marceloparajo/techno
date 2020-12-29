@@ -1,4 +1,3 @@
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 2)
 
 
@@ -23,8 +22,9 @@
 						<article class="cobertura-nota">
 							<a href="{{ $news[1]['permalink'] }}">
 								<figure>
-									{!! $imageHelper->getLazyImages( $news[1]['main_image']['srcs']['medium-wide'], 720, $news[1]['main_image']['caption'],'img-fluid','720x405') !!}
+									<x-lazy-image :src="$news[1]['main_image']['srcs']['original']" alt="$news[1]['main_image']['caption']" class="img-fluid" />
 								</figure>
+
 								<div class="meta-content">
 									<h2>{{ $news[1]['home_title'] }}</h2>
 									<h4><span>{{ $news[1]['date_available_human']}}</span> {{ $news[1]['headline'] }}</h4>
@@ -39,7 +39,7 @@
 						<article class="cobertura-nota">
 							<a href="{{ $news[0]['permalink'] }}">
 								<figure>
-									{!! $imageHelper->getLazyImages( $news[0]['main_image']['srcs']['medium-wide'], 720, $news[0]['main_image']['caption'],'img-fluid','720x405') !!}
+									<x-lazy-image :src="$news[0]['main_image']['srcs']['original']" alt="$news[0]['main_image']['caption']" class="img-fluid" />
 								</figure>
 								<div class="meta-content">
 									<h2>{{ $news[0]['home_title'] }}</h2>
@@ -55,7 +55,7 @@
 						<article class="cobertura-nota">
 							<a href="{{ $news[2]['permalink'] }}">
 								<figure>
-									{!! $imageHelper->getLazyImages( $news[2]['main_image']['srcs']['medium-wide'], 720, $news[2]['main_image']['caption'],'img-fluid','720x405') !!}
+									<x-lazy-image :src="$news[2]['main_image']['srcs']['original']" alt="$news[2]['main_image']['caption']" class="img-fluid" />
 								</figure>
 								<div class="meta-content">
 									<h2>{{ $news[2]['home_title'] }}</h2>
@@ -75,7 +75,7 @@
 						<article class="cobertura-nota-porcuatro">
 							<a href="{{ $new['permalink'] }}">
 								<figure>
-									{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
 								</figure>
 								<div class="meta-content">
 									<h2>{{ $new['home_title'] }}</h2>
@@ -88,7 +88,7 @@
 						</article>
 
 					@endforeach
-			
+
 				@else
 
 					@foreach(array_slice($news, 0, 5) as $key => $new)
@@ -102,7 +102,7 @@
 						<article class="cobertura-nota-porcinco">
 							<a href="{{ $new['permalink'] }}">
 								<figure>
-									{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['medium-wide'], 720, $new['main_image']['caption'],'img-fluid','720x405') !!}
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
 								</figure>
 								<div class="meta-content">
 									<h2>{{ $new['home_title'] }}</h2>
@@ -115,7 +115,7 @@
 						</article>
 					</div>
 					@endforeach
-			
+
 				@endif
 
 				</div><!-- row -->
