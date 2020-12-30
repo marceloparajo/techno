@@ -22,7 +22,7 @@
 @endsection
 
 @section('head-bottom')
-	@include('partials.taboola-sidebar-header')
+{{--	@include('partials.taboola-sidebar-header')  --}}
 @endsection
 
 @section('page-title', env('HOME_TITLE','Home') )
