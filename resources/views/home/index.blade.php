@@ -34,30 +34,29 @@
 @section('body')
 
 
+		@foreach($home_content as $key => $value)
+			@if ($key != 'sidebar')
 
-			@foreach($home_content as $key => $value)
-				@if ($key != 'sidebar')
-
-					@if ($key == 'central-footer')
-						</div>
-						<div class="sidebar">
-								@include('sidebar.index', ['content' => $sidebar_content])
-						</div>
-					@endif
-
-
-					<section id="{{ $key }}" class="contenedor-general">
-						@foreach($value as $item)
-							@include('home.dispositions.' . $item['template'], ['news' => $item['news']])
-						@endforeach
-					</section>
+				@if ($key == 'central-footer')
+					</div>
+					<div class="sidebar">
+							@include('sidebar.index', ['content' => $sidebar_content])
+					</div>
 				@endif
-				@if ($key == 'central-header')
-				<main class="supercontenedor">
-					<div class="contenido">
-				@endif
-			@endforeach
-		</main>
+
+
+				<section id="{{ $key }}" class="contenedor-general">
+					@foreach($value as $item)
+						@include('home.dispositions.' . $item['template'], ['news' => $item['news']])
+					@endforeach
+				</section>
+			@endif
+			@if ($key == 'central-header')
+			<main class="supercontenedor">
+				<div class="contenido">
+			@endif
+		@endforeach
+	</main>
 
 
 @endsection

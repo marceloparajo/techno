@@ -130,7 +130,17 @@ class NewsController extends Controller
             ]
         ]);
 
-        return view('news.show.index', compact('noticia', 'jsonStructured', 'sidebar_content', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));
+        # Reviso que la noticia pertenezca a un canal con vista personalizada. De lo contrario, muestro vista general.
+        switch ($noticia['channel']['slug']) {
+            case 'reperfilar':
+                $view = 'news.show.reperfilar';
+                break;
+
+            default:
+                $view = 'news.show.index';
+        }
+
+        return view($view, compact('noticia', 'jsonStructured', 'sidebar_content', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));
     }
 
     /**

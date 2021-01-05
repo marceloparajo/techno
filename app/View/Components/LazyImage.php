@@ -24,7 +24,15 @@ class LazyImage extends Component
      */
     public $class;
 
+    /**
+     * @var string
+     */
     public $sizes;
+
+    /**
+     * @var bool
+     */
+    public $play_button;
 
     /**
      * Create a new component instance.
@@ -32,13 +40,16 @@ class LazyImage extends Component
      * @param string $src
      * @param string $alt
      * @param string $class
+     * @param string $sizes
+     * @param bool $play_button
      */
-    public function __construct(string $src, string $alt = '', string $class = '', string $sizes = '(min-width: 540px) 60vw, 100vw')
+    public function __construct(string $src, string $alt = '', string $class = '', string $sizes = '(min-width: 540px) 60vw, 100vw', bool $playButton = false)
     {
         $this->src = $src;
         $this->alt = $alt;
         $this->class = $class;
         $this->sizes = $sizes;
+        $this->play_button = $playButton;
     }
 
     /**

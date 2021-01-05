@@ -30,6 +30,31 @@ class ApiHelper
     }
 
     /**
+     * @param string $canal
+     * @param int $limit
+     * @return object
+     */
+    public function getNewsWithDestaqueFromChannel(string $canal, int $limit = 5)
+    {
+        $call = $this->api_server . "&metodo=getNewsWithDestaqueFromChannel&canal=$canal&maxrows=$limit";
+        $payload = file_get_contents($call);
+        return (object) json_decode($payload, true);
+    }
+
+    /**
+     * @param string $canal
+     * @param string $subcanales
+     * @param int $limit
+     * @return object
+     */
+    public function getNewsFromMainChannel(string $canal, string $subcanales, int $limit = 5)
+    {
+        $call = $this->api_server . "&metodo=getNewsFromMainChannel&canal=$canal&subcanales=$subcanales&maxrows=$limit";
+        $payload = file_get_contents($call);
+        return (object) json_decode($payload, true);
+    }
+
+    /**
      * Setea el apiHelper para hacer llamadas a cualquier api de las habilitadas
      * @param String|string $siteCode Código de sitio del cual se quieren hacer las llamadas
      */

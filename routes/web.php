@@ -20,6 +20,8 @@ Route::get('', [
     'uses' => 'HomeController@index'
 ]);
 
+include (__DIR__ . '/web/subpages.php');
+
 include (__DIR__ . '/web/amp.php');
 
 include (__DIR__ . '/web/authors.php');

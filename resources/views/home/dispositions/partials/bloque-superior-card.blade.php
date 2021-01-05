@@ -1,5 +1,3 @@
-@inject('shortcodeConverter', "App\Http\Helpers\shortCodeConverter ")
-
 {{-- Edición Impresa --}}
 @if ($new['channel']['slug'] == 'tapas')
 
@@ -14,11 +12,11 @@
     </div>
 
 {{-- Mapa Pique --}}
-@elseif ($new['channel']['slug'] == 'el-pique' && $new['embed_code'] != '')
+@elseif ($new['channel']['slug'] == 'el-pique' && $new['embed_code_original'] != '')
 
     <article class="article card map">
         <div class="card-body">
-            {!! $shortcodeConverter->convert($new['embed_code']) !!}
+            {!! $new['embed_code'] !!}
             <div class="article-content" style="padding: 1.4rem;">
                 <a href="{{ $new['permalink'] }}">
                     <h2>{{ $new['home_title'] }}</h2>

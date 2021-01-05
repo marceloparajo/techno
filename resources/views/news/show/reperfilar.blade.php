@@ -102,9 +102,9 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 			{{-- Titulos --}}
 			<h1>{{ $noticia['title'] }}</h1>
-			@if($noticia['headline'] != '.')
-				<h2 class="headline">{{ $noticia['headline'] }}</h2>
-			@endif
+			<h2 class="headline">
+				{{ $noticia['headline'] }}
+			</h2>
 		</header>
 
 		<div class="container" id="noticia">
