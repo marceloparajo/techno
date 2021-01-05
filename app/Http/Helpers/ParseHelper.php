@@ -229,7 +229,7 @@ class ParseHelper
             ],
             'credit' => $noticia['credit'] ?? '',
             'google_amp' => isset($noticia['flag_google_amp']) && $noticia['flag_google_amp'] === 1,
-            'embed_code' => $noticia['embed_code_convert'] ?? '',
+            'embed_code' => $noticia['embed_code_convert'] ?? $noticia['embed_code'],
             'embed_code_original' => $noticia['embed_code_original'] ?? $noticia['embed_code'],
             'tags' => $noticia['tags'] ?? '',
             'tags_list'             => $tags,
