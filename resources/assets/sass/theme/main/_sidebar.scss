@@ -36,7 +36,7 @@
 				margin: 0 0 0 10px;
 				flex-basis: 140px;
 				height: 45px;
-				background-image: url('/images/radio-perfil-isologo.png');
+				background-image: url('../../../img/radio-perfil-isologo.png');
 				background-position: 0 0;
 				background-repeat: no-repeat;
 				background-size: 140px;
@@ -119,11 +119,11 @@
 				height: 20px;
 				margin-left: 10px;
 				background:{
-					image: url('/images/glyph/next.svg');
+					image: url('../../../img/glyph/next.svg');
 					repeat: no-repeat;
 					size: 14px;
 					position: 0 0;
-				} 
+				}
 				transform: translateY(-2px);
 			}
 		}
@@ -175,7 +175,7 @@
 				height: 26px;
 				display: block;
 				margin: 0;
-				background: url('img/exitoina-logo-sidebar.png') 0 0 no-repeat;
+				background: url('../../../img/exitoina-logo-sidebar.png') 0 0 no-repeat;
 				a {
 					display: block;
 					width: 180px;
@@ -188,7 +188,7 @@
 				height: 29px;
 				display: block;
 				margin: 0;
-				background: url('img/net-logo-sidebar.png') 0 0 no-repeat;
+				background: url('../../../img/net-logo-sidebar.png') 0 0 no-repeat;
 				a {
 					display: block;
 					width: 70px;
@@ -201,7 +201,7 @@
 				height: 35px;
 				display: block;
 				margin: 0;
-				background: url('/static/css/img/investigacion-logo-sidebar.png') 0 0 no-repeat;
+				background: url('../../../img/investigacion-logo-sidebar.png') 0 0 no-repeat;
 				a {
 					display: block;
 					width: 280px;
@@ -218,7 +218,7 @@
 				font-family: $font-serif;
 				font-size: 24px;
 				font-weight: 600;
-				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
+				background: url('../../../img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
 				.fas {
 					color: #c3ced8;
 					margin: 0 3px 0 0;
@@ -241,7 +241,7 @@
 				font-family: $font-serif;
 				font-size: 24px;
 				font-weight: 600;
-				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
+				background: url('../../../img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
 				.fa {
 					color: #c3ced8;
 					margin: 0 3px 0 0;
@@ -258,7 +258,7 @@
 				height: 49px;
 				display: block;
 				margin: 0 auto;
-				background: url('img/periodismo-puro-logo-sidebar.png') 0 0 no-repeat;
+				background: url('../../../img/periodismo-puro-logo-sidebar.png') 0 0 no-repeat;
 				background-position: center center;
 				a {
 					display: block;
@@ -286,7 +286,7 @@
 				height: 42px;
 				display: block;
 				margin: 0;
-				background: url('img/reperfilar-logo-sidebar.png') -3px 0 no-repeat;
+				background: url('../../../img/reperfilar-logo-sidebar.png') -3px 0 no-repeat;
 				a {
 					display: block;
 					width: 210px;
@@ -340,7 +340,7 @@
 						}
 						line-height: 1.05em;
 						letter-spacing: -0.01em;
-					}			
+					}
 					.firma-home {
 						font-family: $font-sinserif;
 						font-size: .8rem;
@@ -413,11 +413,11 @@
 					height: 20px;
 					margin-left: 10px;
 					background:{
-						image: url('/images/glyph/next.svg');
+						image: url('../../../img/glyph/next.svg');
 						repeat: no-repeat;
 						size: 14px;
 						position: 0 0;
-					} 
+					}
 					transform: translateY(-2px);
 				}
 				&:hover {
@@ -431,7 +431,7 @@
 			}
 		}
 	}
-	
+
 	#opinion,
 	#panorama,
 	#videocolumnas {
@@ -463,7 +463,7 @@
 			font-family: $font-serif;
 			font-size:18px;
 			font-weight: 600;
-			background: url('img/perfil-logo-xs-sidebar.png') right center no-repeat;
+			background: url('../../../img/perfil-logo-xs-sidebar.png') right center no-repeat;
 			a {
 				display: inline-block;
 				color: #000;
@@ -577,11 +577,11 @@
 					height: 20px;
 					margin-left: 10px;
 					background:{
-						image: url('/images/glyph/next.svg');
+						image: url('../../../img/glyph/next.svg');
 						repeat: no-repeat;
 						size: 14px;
 						position: 0 0;
-					} 
+					}
 					transform: translateY(-2px);
 				}
 				&:hover {
@@ -619,7 +619,7 @@
 				font-size: 24px;
 				font-weight: 600;
 				color: $negro;
-				background: url('img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
+				background: url('../../../img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
 			}
 		}
 		.columnistas-general {
@@ -722,11 +722,11 @@
 					height: 20px;
 					margin-left: 10px;
 					background:{
-						image: url('/images/glyph/next.svg');
+						image: url('../../../img/glyph/next.svg');
 						repeat: no-repeat;
 						size: 14px;
 						position: 0 0;
-					} 
+					}
 					transform: translateY(-2px);
 				}
 				&:hover {
@@ -885,7 +885,7 @@
 						}
 					}
 				}
-			}			
+			}
 		}
 	}
 

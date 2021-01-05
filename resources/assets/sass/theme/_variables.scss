@@ -49,7 +49,7 @@ $pf_b_mosaico_bg: #333;
 
 /** PERFIL **/
 
-@import "theme/mixins/_breakpoints.scss";
+@import "mixins/_breakpoints.scss";
 
 
 $grid-breakpoints: (
@@ -74,7 +74,7 @@ $font-condensada: 'Oswald',Helvetica,Arial,Sans-serif;
 
 //colores
 $negro: #171717;
-$black: #171717; 
+$black: #171717;
 $dark:#343a40;
 //$light: #ebebeb;
 $light: #f1f1f1;
@@ -92,7 +92,7 @@ $fondo-gris: #dee0e2;
 $secondary: #6c757d;
 $link-mobile: #969696;
 
-// redes sociales 
+// redes sociales
 $fb_color: #4868AD;
 $tw_color: #4295DA;
 $ig_color: #C73F7A;

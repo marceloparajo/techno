@@ -4,6 +4,14 @@
     <meta http-equiv="refresh" content="600" />
 @endsection
 
+@section('head-css')
+    <link rel="preload" href="{{ mix('css/reperfilar-home.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-home.css') }}"></noscript>
+
+    <link rel="preload" href="{{ mix('css/reperfilar-home-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-home-responsive.css') }}"></noscript>
+@endsection
+
 @section('page-title', $page_title)
 
 @section('body')

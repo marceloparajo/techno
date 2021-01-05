@@ -298,7 +298,7 @@ ARTE Y CULTURA
 
 
 
-	
+
 
 	&.moderada {
 		.cobertura-nota-porcuatro {
@@ -346,7 +346,7 @@ ARTE Y CULTURA
 
 
 
-/** CAJA GENERAL 
+/** CAJA GENERAL
 Se usa para Radio Perfil
 **/
 
@@ -369,14 +369,14 @@ Se usa para Radio Perfil
 				width: 100%;
 				height: 50px;
 				background:{
-					image: url(img/radio-perfil.png);
+					image: url('../../../img/radio-perfil.png');
 					size: 120px;
 					repeat: no-repeat;
 					position: 10px 10px;
 				}
 				h6 {
 					text-indent: -9999px;
-				}			
+				}
 			}
 			.footer-cajageneral {
 				width: 100%;
@@ -388,7 +388,7 @@ Se usa para Radio Perfil
 				font-family: $font-sinserif;
 				background:{
 					color: #e6e6e6;
-					image: url('img/perfil-logo-xs.png');
+					image: url('../../../img/perfil-logo-xs.png');
 					repeat: no-repeat;
 					position: 10px 5px;
 				}
@@ -501,7 +501,7 @@ Se usa para Radio Perfil
 			&.perfil-educacion {
 				.header-cajageneral {
 					background:{
-						image: url(img/perfil-educacion.png);
+						image: url('../../../img/perfil-educacion.png');
 						size: 98px;
 					}
 				}
@@ -509,7 +509,7 @@ Se usa para Radio Perfil
 			&.canalnet {
 				.header-cajageneral {
 					background:{
-						image: url(img/canal-net.png);
+						image: url('../../../img/canal-net.png');
 						position: 10px 20px;
 					}
 				}
@@ -522,14 +522,14 @@ Se usa para Radio Perfil
 				width: 100%;
 				height: 30px;
 				background:{
-					image: url(img/marieclaire.png);
+					image: url('../../../img/marieclaire.png');
 					position: 10px 2;
 					size: 120px;
 					repeat: no-repeat;
 				}
 				h6 {
 					text-indent: -9999px;
-				}			
+				}
 			}
 			.contenido-notas {
 				width: 100%;
@@ -882,7 +882,7 @@ Se usa para Radio Perfil
 					width: 48.5%;
 					figure {
 						width: 100%;
-					}				
+					}
 					.meta-content {
 						width: 100%;
 					}
@@ -897,7 +897,7 @@ Se usa para Radio Perfil
 				.meta-content {
 					width: 100%;
 				}
-			}	
+			}
 		}
 	}
 	@include media-breakpoint-only(md) {

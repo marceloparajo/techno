@@ -25,7 +25,7 @@ $amarillo: #fff1d1;
 				text-indent: -9999px;
 				margin: 0 0 5px 0;
 				background:{
-					image: url('img/perfil-impresa.png');
+					image: url('../../../img/perfil-impresa.png');
 					repeat: no-repeat;
 					position: 0 0;
 					size: 100px;
@@ -195,7 +195,7 @@ $amarillo: #fff1d1;
 								padding: 10px;
 								border-bottom: 1px solid $linea;
 							}
-						}					
+						}
 						&:nth-child(n+5) {
 							width: 49%;
 							display: flex;
@@ -214,7 +214,7 @@ $amarillo: #fff1d1;
 						}
 					}
 				}
-			}		
+			}
 		}
 	}
 	@include media-breakpoint-up(lg) {

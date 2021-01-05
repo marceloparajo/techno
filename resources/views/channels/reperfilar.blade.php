@@ -2,6 +2,22 @@
 
 @section('page-title', $page_title)
 
+@section('ads-sec', 'seccion')
+
+@section('head-css')
+    <link rel="preload" href="{{ mix('css/reperfilar-channels.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-channels.css') }}"></noscript>
+
+    <link rel="preload" href="{{ mix('css/reperfilar-channels-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-channels-responsive.css') }}"></noscript>
+@endsection
+
+@section('js')
+    <script defer type="text/javascript" src="{{ mix('js/channels-show.js') }}"></script>
+@endsection
+
+@section('body-class', 'pf-channel-show')
+
 @section('body')
 
     {{-- Menu --}}

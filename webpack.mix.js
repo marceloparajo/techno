@@ -30,6 +30,14 @@ mix.sass('resources/assets/sass/home.scss', 'public/css')
 	.sass('resources/assets/sass/channels.scss', 'public/css')
 	.sass('resources/assets/sass/channels-responsive.scss', 'public/css')
 
+	// REPERFILAR
+	.sass('resources/assets/sass/reperfilar/reperfilar-home.scss', 'public/css')
+	.sass('resources/assets/sass/reperfilar/reperfilar-home-responsive.scss', 'public/css')
+	.sass('resources/assets/sass/reperfilar/reperfilar-channels.scss', 'public/css')
+	.sass('resources/assets/sass/reperfilar/reperfilar-channels-responsive.scss', 'public/css')
+	.sass('resources/assets/sass/reperfilar/reperfilar-news.scss', 'public/css')
+	.sass('resources/assets/sass/reperfilar/reperfilar-news-responsive.scss', 'public/css')
+
 mix.js('resources/assets/js/channels-show.js', 'public/js')
 	.js('resources/assets/js/home.js', 'public/js')
 	.js('resources/assets/js/news-show.js', 'public/js')
@@ -45,6 +53,12 @@ mix.version([
 	'public/css/news-responsive.css',
 	'public/css/channels.css',
 	'public/css/channels-responsive.css',
+	'public/css/reperfilar-home.css',
+	'public/css/reperfilar-home-responsive.css',
+	'public/css/reperfilar-channels.css',
+	'public/css/reperfilar-channels-responsive.css',
+	'public/css/reperfilar-news.css',
+	'public/css/reperfilar-news-responsive.css',
 	'public/js/channels-show.js',
 	'public/js/home.js',
 	'public/js/news-show.js',
