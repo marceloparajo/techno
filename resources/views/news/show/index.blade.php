@@ -149,7 +149,7 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 						{!! $body !!}
 
 						{{-- Embed Code --}}
-						@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code')
+						@if ($noticia['embed_code'] != '' && $noticia['featured_content'] != 'embed_code')
 							{!! $noticia['embed_code'] !!}
 						@endif
 

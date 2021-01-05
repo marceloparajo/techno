@@ -6,7 +6,7 @@
 			<article class="articulo nota-{{ $key }}">
 
 				{{-- Embed Code --}}
-				@if ($new['embed_code'] != '' && (strpos($new['embed_code'], 'rudo') || strpos($new['embed_code'], 'tube')))
+				@if ($new['embed_code_original'] != '' && (strpos($new['embed_code_original'], 'rudo') || strpos($new['embed_code_original'], 'tube')))
 					{!! $new['embed_code'] !!}
 				@endif
 
