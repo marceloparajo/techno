@@ -1,0 +1,89 @@
+.supercontenedor.bgalerta {
+	.alerta {
+		@include media-breakpoint-up(md) {
+			max-width: 720px;
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: 960px;
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: 1140px;
+		}
+		@include media-breakpoint-up(xxl) {
+			max-width: 1260px;
+		}
+	}
+}
+
+
+.supercontenedor.radio-ticker {
+	@include media-breakpoint-up(lg) {
+		display: block;
+		padding-top: 10px;
+		position: relative;
+		.contenedor-general {
+			border-bottom: 1px solid #ccc;
+			padding: 0 0 8px 0;
+			overflow: hidden;
+			background:{
+				image: url('img/radio-ticker.jpg');
+				repeat: no-repeat;
+				position: 0 1px;
+			}
+			.radio-news {
+				position: relative;
+				animation: animateright 0.8s;
+				width: 100%;
+				box-sizing: border-box;
+				padding-left: 134px;
+				font:{
+					weight: bold;
+					size: 15px;
+					family: $font-sinserif;
+				}
+				line-height: 1em;
+				height: 15px;
+				overflow: hidden;
+				text-transform: uppercase;
+				a {
+					color: $dark;
+					&:hover {
+						color: $negro;
+					}
+					&:before {
+						content:"";
+						display: block;
+						width: 10px;
+						height: 15px;
+						margin: 0 5px 0 0;
+						float: left;
+						background:{
+							image: url('/images/glyph/bullet.svg');
+							repeat: no-repeat;
+							size: 10px;
+							position: 0 1px;
+						}
+					}
+				}
+			}
+			@keyframes animateright{
+				from{right: -800px; opacity: 0} to{right: 0; opacity: 1}
+			}
+		}
+		.frecuencia {
+			position: absolute;
+			padding: 7px 0 0 20px;
+			background: white;
+			right: 0;
+			top: 0;
+			bottom: 1px;
+			font:{
+				family: $font-sinserif;
+				weight: bold;
+				size: .9rem;
+			}
+			color: $azul;
+			z-index: 2;
+		}
+	}
+}

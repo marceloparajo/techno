@@ -102,9 +102,11 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 
 			{{-- Titulos --}}
 			<h1>{{ $noticia['title'] }}</h1>
+			@if($noticia['headline'] != '.')
 			<h2 class="headline">
 				{{ $noticia['headline'] }}
 			</h2>
+			@endif
 		</header>
 
 		<div class="container" id="noticia">
@@ -112,7 +114,9 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 			<article class="main-article">
 
 				{{-- Featured Image or Video --}}
-				@if ($noticia['featured_content'] == 'embed_code')
+
+				
+				@if ($noticia['embed_code'] != '' && (strpos($noticia['embed_code'], 'rudo') || strpos($noticia['embed_code'], 'tube')))
 					{!! $noticia['embed_code'] !!}
 				@else
 					<figure class="figure btn-open-gallery" itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
@@ -149,7 +153,7 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 						{!! $body !!}
 
 						{{-- Embed Code --}}
-						@if ($noticia['embed_code'] != '' && $noticia['main_content'] != 'embed_code')
+						@if ($noticia['embed_code'] != '')
 							{!! $noticia['embed_code'] !!}
 						@endif
 

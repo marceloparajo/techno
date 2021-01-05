@@ -8,8 +8,7 @@
 				{{-- Embed Code --}}
 				@if ($new['embed_code'] != '' && (strpos($new['embed_code'], 'rudo') || strpos($new['embed_code'], 'tube')))
 					{!! $new['embed_code'] !!}
-				@endif
-
+				@else
 				<figure>
 					<a href="{{ $new['permalink'] }}">
 						@if($key == 0)
@@ -31,6 +30,7 @@
 						@endif
 					</a>
 				</figure>
+				@endif
 
 				<div class="meta-content">
 					<a href="{{ $new['permalink'] }}">

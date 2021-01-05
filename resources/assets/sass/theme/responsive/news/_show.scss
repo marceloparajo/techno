@@ -38,6 +38,7 @@
 							'headerleft headerright'
 							'main main'
 							'bottom bottom';
+						grid-template-columns: 2fr 1fr;
 						padding: 0;
 						margin-top: 20px;
 						font-size: 1.35rem;
@@ -61,6 +62,7 @@
 								}
 							}
 						}
+						/*
 						.autor-nota {
 							.autor-nota-group {
 								h5 {
@@ -84,12 +86,21 @@
 								}
 							}
 						}
+						*/
 						.fecha-autor {
 							grid-area: headerleft;
 							padding-top: 0;
 							.fecha {
 								font-size:0.85rem;
 								margin-bottom: 0;
+							}
+							.autor {
+								border-bottom: none;
+								.autor-nota-arriba {
+									padding: 0;
+									margin-bottom: 0;
+									display: block;
+								}
 							}
 						}
 						.news-content {
@@ -250,7 +261,6 @@
 									width: 90px;
 									li {
 										padding-left: 0;
-										font-size: 20px;
 										a {
 											border-bottom: none;
 											box-shadow: none;
@@ -353,7 +363,7 @@
 							'sidebarmiddle main main'
 							'sidebarbottom main main'
 							'sidebarunder main main';
-						padding: 20px 50px 0 0;
+						padding: 20px 0 0 0;
 						margin: 0;
 						grid-template-rows: auto auto auto 100%;
 						grid-template-columns: 26% auto auto;

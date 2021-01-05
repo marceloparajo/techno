@@ -59,10 +59,10 @@
 					@endforeach
 				</div>
 
-				@if (isset($news[5]))
+				@if (isset($news[6]))
 
 				<div class="columna-ancha">
-					@foreach(array_slice($news, 3, 3) as $key => $new)
+					@foreach(array_slice($news, 3, 4) as $key => $new)
 					<article class="articulo decobertura">
 						<figure>
 							<a href="{{ $new['permalink'] }}">

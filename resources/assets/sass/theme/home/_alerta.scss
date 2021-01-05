@@ -4,7 +4,6 @@
 	padding: 0;
 	max-width: 100%;
 	.alerta {
-		max-width: 1260px;
 		background-color: $azul;
 		padding: 5px 10px;
 		margin: 0 auto;
@@ -36,16 +35,14 @@
 				}
 			}
 		}
-		@include media-breakpoint-up(xl) {
-			article {
-				.laalerta {
-					.fas {
-						margin-top: -5px;
-					}
-				}
-			}
+		@include media-breakpoint-up(sm) {
+			max-width: 540px;
 		}
 	}
+}
+
+.supercontenedor.radio-ticker {
+	display: none;
 }
 
 .coronavirus {

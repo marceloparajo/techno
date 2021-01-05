@@ -207,7 +207,7 @@ ARTE Y CULTURA
 				flex-direction: row;
 				justify-content: space-between;
 				.articulo.decobertura {
-					width: 32%;
+					width: 23.5%;
 					display: block;
 					figure {
 						width: 100%;
@@ -217,6 +217,11 @@ ARTE Y CULTURA
 					.meta-content {
 						padding: 5px 0 0 0;
 						width: 100%;
+						a {
+							h2 {
+								font-size: 1.1rem;
+							}
+						}
 					}
 				}
 			}
@@ -232,6 +237,11 @@ ARTE Y CULTURA
 					margin-bottom: 20px;
 					figure {
 						height: 100%;
+						a {
+							p.headline {
+								display: none;
+							}
+						}
 					}
 					.meta-content {
 						position: absolute;
@@ -245,6 +255,19 @@ ARTE Y CULTURA
 							font-size: 1.4rem;
 						}
 					}
+					&:hover {
+						figure {
+							a {
+								img {
+									filter: brightness(1);
+									transform: scale(100%);
+								}
+								p.headline {
+									display: none;
+								}
+							}
+						}
+					}
 				}
 			}
 			.columna-ancha {
@@ -252,7 +275,19 @@ ARTE Y CULTURA
 				width: 100%;
 				.articulo.decobertura {
 					margin-bottom: 0;
-					width: 32%;
+					&:hover {
+						figure {
+							a {
+								img {
+									filter: none;
+									transform: none;
+								}
+								p.headline {
+									display: none;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -292,8 +327,20 @@ ARTE Y CULTURA
 					display: block;
 				}
 			}
+			&:hover {
+				figure {
+					a {
+						img {
+							filter: brightness(1);
+							transform: scale(100%);
+						}
+						p.headline {
+							display: none;
+						}
+					}
+				}
+			}
 		}
-
 	}
 }
 
