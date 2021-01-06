@@ -1,9 +1,7 @@
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
-
 <div class="col-12 mb-3 p-1">
     <a class="article-link" href="{{ $noticia['permalink'] }}">
         <article class="card pf-big-article d-none d-md-block">
-            {!! $imageHelper->getLazyImages( $noticia['main_image']['src'], 1140, $noticia['main_image']['caption'],'card-img') !!}
+            <x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['caption']" class="img-fluid" max-width="700" />
             <div class="card-img-overlay d-flex flex-row-reverse">
                 <div class="align-self-center w-50">
                     @if ($noticia['hat'] != '')<p class="hat">{{ $noticia['hat'] }}</p>@endif
@@ -20,7 +18,7 @@
             </div>
         </article>
         <article class="card pf-middle-article d-block d-md-none">
-            {!! $imageHelper->getLazyImages( $noticia['main_image']['src'], 1140, $noticia['main_image']['caption'],'card-img') !!}
+            <x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['caption']" class="img-fluid" max-width="700" />
             <div class="card-body d-flex flex-column">
                 @if ($noticia['hat'] != '')<p class="pf-hat">{{ $noticia['hat'] }}</p>@endif
                 <div class="align-self-start">

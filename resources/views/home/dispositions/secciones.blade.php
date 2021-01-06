@@ -1,4 +1,3 @@
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 3)
 
 		<div class="container secciones">
@@ -17,25 +16,10 @@
 
 								<figure>
 									<a href="{{ $new['permalink'] }}" target="_blank">
-										@if ($key == 0)
-										{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 540, $new['main_image']['caption'],'img-fluid', '540x304') !!}
-										@else
-										{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['extra-small-wide'], 270, $new['main_image']['caption'],'img-fluid', '270x152') !!}
-										@endif
-
+										<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 										<p class="headline">
 											{{ $new['headline'] }}
 										</p>
-										@if ($new['has_video']) 
-											<div class="galeria-video">
-												<span><i class="fa fa-play"></i></span>
-											</div>
-										@endif
-										@if ($new['has_gallery'])
-											<div class="galeria-video">
-												<span><i class="fa fa-camera"></i></span>
-											</div>
-										@endif
 									</a>
 								</figure>
 

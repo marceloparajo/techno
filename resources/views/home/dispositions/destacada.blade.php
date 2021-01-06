@@ -12,22 +12,12 @@
 				<figure>
 					<a href="{{ $new['permalink'] }}">
 						@if($key == 0)
-							<x-lazy-image :src="$news[0]['main_image']['srcs']['original']" alt="$news[0]['main_image']['caption']" class="img-fluid" />
+							<x-lazy-image :src="$news[0]['main_image']['srcs']['original']" :alt="$news[0]['main_image']['caption']" class="img-fluid" max-width="700" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 						@else
-							<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" sizes="(min-width: 540px) 30vw, 100vw" />
+							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 						@endif
 
 						<p class="headline">{{ $new['headline'] }}</p>
-
-						@if ($new['has_video'])
-							<div class="galeria-video">
-								<img src="/images/glyph/hasvideo.svg" class="hasvideo">
-							</div>
-						@elseif ($new['has_gallery'])
-							<div class="galeria-video">
-								<img src="/images/glyph/hasgallery.svg" class="hasgallery">
-							</div>
-						@endif
 					</a>
 				</figure>
 				@endif

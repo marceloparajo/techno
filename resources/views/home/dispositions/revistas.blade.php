@@ -7,21 +7,12 @@
 					<article class="articulo derevistas">
 						<figure>
 							<a href="{{ $new['permalink'] }}">
-								@if ($key == 0)
-									<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
-								@else
-									<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" sizes="(min-width: 540px) 30vw, 100vw" />
-								@endif
+								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" />
 							</a>
 						</figure>
 
 						<div class="meta-content">
 							<a href="{{ $new['permalink'] }}">
-								{{--
-									@if ($new['hat'] != '')
-										<span class="hat">{{ $new['hat'] }} </span>
-									@endif
-								--}}
 								<h2>
 									{{ $new['home_title'] }}
 								</h2>

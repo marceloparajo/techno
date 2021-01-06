@@ -1,10 +1,8 @@
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
-
 <div class="col-12 mb-3 p-1">
 	<article class="pf-first-article">
 		<a class="article-link" href="{{ $noticia['permalink'] }}">
 			<figure>
-				{!! $imageHelper->getLazyImages( $noticia['main_image']['src'], 1140, $noticia['main_image']['caption'],'card-img') !!}
+				<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['caption']" class="img-fluid" max-width="700" />
 			</figure>
 			<div class="card-img-overlay d-flex flex-row">
 			@if ($noticia['hat'] != '')<p class="pf-hat">{{ $noticia['hat'] }}</p>@endif
@@ -18,5 +16,5 @@
 				@endif
 			</div>
 		</a>
-	</article>	
+	</article>
 </div>

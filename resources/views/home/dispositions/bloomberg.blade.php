@@ -20,7 +20,7 @@
 						<article class="articulo notabloomberg bl-{{ $key }}">
 							<figure>
 								<a href="{{ $new['permalink'] }}">
-									<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" />
 								</a>
 							</figure>
 							<div class="meta-content">
