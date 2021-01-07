@@ -3354,6 +3354,10 @@
     height: 40px;
   }
 
+  .perfil-noticia .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav li.seguinos ul li a {
+    padding: 0;
+  }
+
   .perfil-noticia .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav li.seguinos ul li a:after {
     content: none;
   }
