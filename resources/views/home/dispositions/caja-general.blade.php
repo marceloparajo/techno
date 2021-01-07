@@ -18,9 +18,9 @@
 							<figure>
 								<a href="{{ $new['permalink'] }}">
 								@if ($key == 0)
-									<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="700" />
 								@else
-									<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" sizes="(min-width: 540px) 30vw, 100vw" />
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" />
 								@endif
 								</a>
 							</figure>

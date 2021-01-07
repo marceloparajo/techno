@@ -1,15 +1,14 @@
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
 @if (isset($news) && count($news) > 0)
 	<section class="container-fluid especial">
 
-		@if ( count($news) < 3 ) 
-			
-			<div class="container d-flex px-0"> 
+		@if ( count($news) < 3 )
+
+			<div class="container d-flex px-0">
 				@foreach ($news as $key => $new)
 					<article class="col-12 col-md-6 mb-0 mb-lg-0 px-0 px-md-3 pordos">
 						<a href="{{ $new['permalink'] }}">
 							<figure>
-								{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['large-wide'], 960, $new['main_image']['caption'],'img-fluid','960x540') !!}
+								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="1000" />
 							</figure>
 							<div class="meta-contenido">
 								@if ($new['hat'] != '')
@@ -25,7 +24,7 @@
 				@endforeach
 			</div>
 
-		@else	
+		@else
 
 			<div class="container d-flex px-0">
 				@foreach (array_slice($news, 0, 3) as $key => $new)
@@ -36,7 +35,7 @@
 					@endif
 							<a href="{{ $new['permalink'] }}">
 								<figure>
-									{!! $imageHelper->getLazyImages( $new['main_image']['srcs']['large-wide'], 960, $new['main_image']['caption'],'img-fluid','960x540') !!}
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="1000" />
 								</figure>
 								<div class="meta-contenido">
 									@if ($new['hat'] != '')

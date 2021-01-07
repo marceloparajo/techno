@@ -19,18 +19,8 @@
                     <article class="articulo decobertura">
                         <figure>
                             <a href="{{ $new['permalink'] }}">
-                                <x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
-
+                                <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
                                 @if($key != 0)<p class="headline">{{ $new['headline'] }}</p>@endif
-
-                                @if ($new['has_video'])
-                                    <div class="galeria-video"><span><i class="fa fa-play"></i></span></div>
-                                @endif
-
-                                @if ($new['has_gallery'])
-                                    <div class="galeria-video"><span><i class="fa fa-camera"></i></span></div>
-                                @endif
-
                             </a>
                         </figure>
 
@@ -66,7 +56,7 @@
                     <article class="articulo decobertura">
                         <figure>
                             <a href="{{ $new['permalink'] }}">
-                                <x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
+                                <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" />
                                 <p class="headline">{{ $new['headline'] }}</p>
                             </a>
                         </figure>

@@ -16,15 +16,8 @@
 				<article class="articulo defotogaleria">
 					<figure>
 						<a href="{{ $new['permalink'] }}">
-							<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" class="img-fluid" />
-
+							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera_button="$new['has_gallery']" />
 							@if($key != 0)<p class="headline">{{ $new['headline'] }}</p>@endif
-
-							@if ($new['has_video'])
-								<div class="galeria-video"><img src="/images/glyph/hasvideo.svg" class="hasvideo"></div>
-							@elseif ($new['has_gallery'])
-								<div class="galeria-video"><img src="/images/glyph/hasgallery.svg" class="hasgallery"></div>
-							@endif
 						</a>
 					</figure>
 
