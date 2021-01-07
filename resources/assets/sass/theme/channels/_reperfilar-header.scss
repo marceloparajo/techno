@@ -1,3 +1,75 @@
+
+.perfil-noticia {
+	.main-header {
+		.supercontenedor {
+			.header-bottom {
+				display: none;
+			}		}
+	}
+	.header-reperfilar {
+		background: $reperfilar-azul;
+		color: white;
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+		.reperfilar-menu {
+			position: relative;
+			width: 100px;
+			display: block;
+			.secciones {
+				.menu-secciones-barras {
+					display: inline-block;
+					width: 25px;
+					font-family: $font-serif;
+					cursor: pointer;
+					color: white;
+					.barra {
+						width: 25px;
+						height: 1px;
+						display: block;
+						background: white;
+						margin: 6px 0;
+					}
+				}
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 10px 0;
+				background: $reperfilar-azul;
+				position: absolute;
+				top: 25px;
+				width: 120px;
+				transition: ease .3s;
+				height: 0;
+				overflow: hidden;
+				li {
+					font-size: 1rem;
+					a {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .supercontenedor.reperfilar {
 	h1 {
 		display: none;
