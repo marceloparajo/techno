@@ -191,6 +191,10 @@
     display: none;
   }
 
+  .contenedor-general .destacada .articulo.nota-1 .embed-responsive {
+    display: none;
+  }
+
   .contenedor-general .destacada .articulo.nota-1 .meta-content {
     padding-top: 0;
   }

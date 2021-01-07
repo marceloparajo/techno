@@ -1809,7 +1809,7 @@
 
 .supercontenedor .contenido.canal .autor-pagina .meta-autor p.redes-autor a:hover,
 .supercontenedor .contenido.autor .autor-pagina .meta-autor p.redes-autor a:hover {
-  color: #555;
+  color: #656565;
 }
 
 .supercontenedor .contenido.canal .cuatro-notas .articulo,
@@ -1831,7 +1831,7 @@
   font-size: .8rem;
   font-size: 3vw;
   text-transform: uppercase;
-  color: #555;
+  color: #656565;
   margin: 10px 0 0 0;
 }
 
@@ -1845,7 +1845,7 @@
 
 .supercontenedor.reperfilar .reperfilar-main-content .articulo {
   padding-top: 6px;
-  border-top: 1px solid #555;
+  border-top: 1px solid #656565;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2156,7 +2156,7 @@
   }
 
   .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(1) .meta-content .firma-home {
-    border-top: 1px solid #555;
+    border-top: 1px solid #656565;
   }
 
   .supercontenedor.reperfilar .reperfilar-main-content .articulo:nth-child(2) {

@@ -1969,9 +1969,10 @@
   color: #343a40;
   margin-bottom: 2px;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   border-radius: 2px;
   border-bottom: 1px solid #d4d4d4;
+  font-size: 1.25rem;
   padding: 6px 0;
 }
 
@@ -2009,7 +2010,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 0 10px 0 0;
-  border: 1px solid #555;
+  border: 1px solid #656565;
 }
 
 .perfil-noticia .supercontenedor .container .main-article .news-body .autor .autor-nota-arriba figure img {
@@ -2140,7 +2141,7 @@
   float: left;
   display: block;
   margin: 14px 4px 0 0;
-  color: #555;
+  color: #656565;
 }
 
 .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .noticias-relacionadas {
@@ -2292,7 +2293,7 @@
 }
 
 .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news {
-  margin: 0 20px 20px 20px;
+  margin: 0 5% 20px 5%;
 }
 
 .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news h4 {
@@ -2318,7 +2319,7 @@
   font-size: 1rem;
   font-size: 5vw;
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  margin-left: 8px;
+  margin-left: 4px;
   line-height: 1.05em;
   margin-bottom: 10px;
   position: relative;
@@ -2339,7 +2340,7 @@
 }
 
 .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news ul li a {
-  color: #969696;
+  color: #656565;
   text-decoration: none;
   -webkit-box-shadow: none;
           box-shadow: none;

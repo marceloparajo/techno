@@ -261,7 +261,7 @@
   .supercontenedor .contenido.autor .cuatro-notas:nth-child(odd) .articulo:nth-child(2):after {
     content: ' ';
     height: 2px;
-    background: #555;
+    background: #656565;
     display: block;
     position: absolute;
     bottom: -20px;

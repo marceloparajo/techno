@@ -7,6 +7,8 @@ body {
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   max-width: 100%;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -281,7 +283,7 @@ figure img {
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   font-size: 11px;
   text-transform: uppercase;
-  color: #555;
+  color: #656565;
   line-height: 1em;
   display: block;
   width: 140px;
@@ -919,7 +921,7 @@ ul.canales li.nav-item a:hover {
 
 .main-footer .footer-redes a {
   margin: 0 8px;
-  color: #555;
+  color: #656565;
   -ms-flex-item-align: center;
       align-self: center;
 }

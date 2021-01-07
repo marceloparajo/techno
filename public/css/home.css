@@ -4258,7 +4258,7 @@ REVISTAS
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 10px;
-  border-top: 1px solid #555;
+  border-top: 1px solid #656565;
   margin: 0 10px 10px 10px;
   width: auto;
 }
@@ -4283,7 +4283,7 @@ REVISTAS
 
 .video .container .notas-video .articulo.devideo .meta-content .firma-home {
   color: white;
-  border-top: 1px solid #555;
+  border-top: 1px solid #656565;
 }
 
 .video .container .notas-video .articulo.devideo .meta-content .firma-home a {
@@ -4523,7 +4523,7 @@ REVISTAS
 
   .video .container .notas-video .grupotres .articulo.devideo:last-of-type {
     margin-bottom: 0;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #656565;
   }
 
   .video .container .notas-video .grupotres .articulo.devideo:hover figure a img {
