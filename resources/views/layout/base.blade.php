@@ -146,7 +146,7 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
             window.paywallConfig.socketHoursPeriodicitySubs = 24
         </script>
         @yield('paywall-config')
-        {{--<script defer type="text/javascript" src="{{ mix('js/mi-perfil.js') }}"></script>--}}
+        <script defer type="text/javascript" src="{{ mix('js/mi-perfil.js') }}"></script>
 
         @yield('js')
 
