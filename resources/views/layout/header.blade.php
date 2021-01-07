@@ -35,7 +35,6 @@
 					x.classList.toggle("change");
 					var menues = document.querySelector('#menues');
 					menues.classList.toggle('temuestro');
-//					$("#menues").toggleClass("tescondo temuestro");
 				}
 			</script>
 			<figure>
