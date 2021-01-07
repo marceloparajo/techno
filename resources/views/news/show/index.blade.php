@@ -136,16 +136,22 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
 							<div class="autor">{{ $noticia['credit'] }}</div>
 						@endif
+						<div></div>
 						<div class="fecha">
 							{{ $noticia['date_available_human'] }}
 						</div>
 					</div>
 
-					@include('news.show.partials.news-tags')
 
 					@include('news.show.partials.social-top', ['shareText' => __('share')] )
 
 					<div class="news-content">
+
+						{{-- Más Noticias (para los crawlers) --}}
+						@include('news.show.partials.more-news-crawlers')
+
+
+
 						{!! $body !!}
 
 						{{-- Embed Code --}}
@@ -174,9 +180,6 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 						@include('news.show.partials.news-tags')
 
 					</div>
-
-					{{-- Más Noticias (para los crawlers) --}}
-					@include('news.show.partials.more-news-crawlers')
 
 				</div>
 				{{-- /Article Body --}}
