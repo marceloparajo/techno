@@ -90,6 +90,10 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 @section('body')
 
 
+	@include('partials.reperfilar-header')
+
+
+
 	<main class="supercontenedor {{ $noticia['channel']['slug']}}" id="page">
 
 		<header class="articulo-header">
