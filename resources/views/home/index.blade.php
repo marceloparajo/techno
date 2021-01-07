@@ -1,6 +1,3 @@
-@inject('shortcodeConverter', "App\Http\Helpers\shortCodeConverter ")
-@inject('imageHelper', "App\Http\Helpers\ImageHelper")
-
 @extends('layout.base')
 
 @section('ads-sec',  'home')

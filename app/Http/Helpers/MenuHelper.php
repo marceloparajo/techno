@@ -9,6 +9,7 @@
 namespace App\Http\Helpers;
 
 
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Facades\Storage;
 
 class MenuHelper
@@ -20,7 +21,7 @@ class MenuHelper
 
     /**
      * MenuHelper constructor.
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws FileNotFoundException
      */
     public function __construct()
     {
@@ -37,7 +38,7 @@ class MenuHelper
     }
 
     /**
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws FileNotFoundException
      */
     protected function _load_menu()
     {

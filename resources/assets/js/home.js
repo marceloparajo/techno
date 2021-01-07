@@ -4,6 +4,25 @@ const SnippetHome = function () {
 
 	const initialize = () => {
 		initLazyload()
+		initRadioTicker()
+	}
+
+	const initRadioTicker = () => {
+		const _container = document.getElementById('radio-ticker')
+
+		if (_container === null) return 0
+
+		const _ticker_elements = document.getElementsByClassName('radio-news')
+		let tickerIndex = 1
+
+		setInterval(() => {
+			Array.from(_ticker_elements).forEach((el, index) => {
+				el.style.display = 'none'
+			})
+
+			_ticker_elements[tickerIndex].style.display = 'block'
+			tickerIndex = ((tickerIndex + 1) >= _ticker_elements.length) ? 0 : tickerIndex + 1;
+		}, 5000)
 	}
 
 	const initLazyload = () => {
@@ -18,9 +37,3 @@ const SnippetHome = function () {
 }()
 
 document.addEventListener('DOMContentLoaded',  () => SnippetHome.init());
-
-/*$(window).resize(function(){
-	if( $(window).width() < 1262) {
-		$(".supercontenedor").removeClass("conmega");
-	}
-});*/
