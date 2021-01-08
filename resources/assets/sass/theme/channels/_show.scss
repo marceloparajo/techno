@@ -74,25 +74,62 @@
 		}
 		.cuatro-notas {
 			.articulo {
-				margin-bottom: 25px;
+				margin-bottom: 10px;
+				display: flex;
+				justify-content: space-between;
+				border-top: 1px solid $linea;
+				padding-top: 10px;
+				figure {
+					flex-basis: 35%;
+				}
 				.meta-content {
+					flex-basis: 63%;
+					padding: 0 10px 0 0;
 					a {
-
-						h2 {
-							letter-spacing: -0.02em;
-							font-size: 1.6rem;
-							font-size: 7.2vw;
+						.hat {
+							display: none;
 						}
-						p.date-time {
-							font:{
-								family: $font-sinserif;
-								weight: normal;
-								size: .8rem;
-								size: 3vw;
+						h2 {
+							font-family: $font-serif;
+							letter-spacing: -0.02em;
+							font-size: 1.17rem;
+							font-size: 5.2vw;
+							line-height: 1em;
+							font-weight: 500;
+						}
+						p {
+							display: none;
+						}
+					}
+					.firma-home {
+						font: {
+							family: $font-sinserif;
+							size: .76rem;
+							size: 3.4vw;
+							weight: normal;
+						}
+						line-height: 1em;
+						margin-top: 6px;
+						padding-top: 5px;
+						border-top: 1px solid $linea;
+						display: inline-block;
+						text-transform: uppercase;
+					}
+				}
+				&:first-of-type {
+					flex-direction: column;
+					figure {
+						flex-basis: auto;
+					}
+					.meta-content {
+						flex-basis: auto;
+						padding: 0 10px;
+						a {
+							h2 {
+								letter-spacing: -0.02em;
+								font-size: 1.6rem;
+								font-size: 7.2vw;
 							}
-							text-transform: uppercase;
-							color: $linea-oscura;
-							margin: 10px 0 0 0;
 						}
 					}
 				}

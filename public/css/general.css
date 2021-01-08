@@ -4,7 +4,7 @@
 
 html,
 body {
-  font-family: "Crimson Pro", Times, serif;
+  font-family: "Roboto", Helvetica, Arial, serif;
   max-width: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +28,7 @@ a {
 }
 
 a:hover {
-  color: #b9dfff;
+  color: #343a40;
   text-decoration: none;
 }
 

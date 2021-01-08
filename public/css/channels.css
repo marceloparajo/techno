@@ -1814,25 +1814,90 @@
 
 .supercontenedor .contenido.canal .cuatro-notas .articulo,
 .supercontenedor .contenido.autor .cuatro-notas .articulo {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 10px;
+}
+
+.supercontenedor .contenido.canal .cuatro-notas .articulo figure,
+.supercontenedor .contenido.autor .cuatro-notas .articulo figure {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.supercontenedor .contenido.canal .cuatro-notas .articulo .meta-content,
+.supercontenedor .contenido.autor .cuatro-notas .articulo .meta-content {
+  -ms-flex-preferred-size: 63%;
+      flex-basis: 63%;
+  padding: 0 10px 0 0;
+}
+
+.supercontenedor .contenido.canal .cuatro-notas .articulo .meta-content a .hat,
+.supercontenedor .contenido.autor .cuatro-notas .articulo .meta-content a .hat {
+  display: none;
 }
 
 .supercontenedor .contenido.canal .cuatro-notas .articulo .meta-content a h2,
 .supercontenedor .contenido.autor .cuatro-notas .articulo .meta-content a h2 {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  letter-spacing: -0.02em;
+  font-size: 1.17rem;
+  font-size: 5.2vw;
+  line-height: 1em;
+  font-weight: 500;
+}
+
+.supercontenedor .contenido.canal .cuatro-notas .articulo .meta-content a p,
+.supercontenedor .contenido.autor .cuatro-notas .articulo .meta-content a p {
+  display: none;
+}
+
+.supercontenedor .contenido.canal .cuatro-notas .articulo .meta-content .firma-home,
+.supercontenedor .contenido.autor .cuatro-notas .articulo .meta-content .firma-home {
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+  font-size: .76rem;
+  font-size: 3.4vw;
+  font-weight: normal;
+  line-height: 1em;
+  margin-top: 6px;
+  padding-top: 5px;
+  border-top: 1px solid #d4d4d4;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.supercontenedor .contenido.canal .cuatro-notas .articulo:first-of-type,
+.supercontenedor .contenido.autor .cuatro-notas .articulo:first-of-type {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.supercontenedor .contenido.canal .cuatro-notas .articulo:first-of-type figure,
+.supercontenedor .contenido.autor .cuatro-notas .articulo:first-of-type figure {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+.supercontenedor .contenido.canal .cuatro-notas .articulo:first-of-type .meta-content,
+.supercontenedor .contenido.autor .cuatro-notas .articulo:first-of-type .meta-content {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  padding: 0 10px;
+}
+
+.supercontenedor .contenido.canal .cuatro-notas .articulo:first-of-type .meta-content a h2,
+.supercontenedor .contenido.autor .cuatro-notas .articulo:first-of-type .meta-content a h2 {
   letter-spacing: -0.02em;
   font-size: 1.6rem;
   font-size: 7.2vw;
-}
-
-.supercontenedor .contenido.canal .cuatro-notas .articulo .meta-content a p.date-time,
-.supercontenedor .contenido.autor .cuatro-notas .articulo .meta-content a p.date-time {
-  font-family: "Roboto", Helvetica, Arial, Sans-serif;
-  font-weight: normal;
-  font-size: .8rem;
-  font-size: 3vw;
-  text-transform: uppercase;
-  color: #656565;
-  margin: 10px 0 0 0;
 }
 
 .sticky-social {

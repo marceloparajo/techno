@@ -1,6 +1,6 @@
 html,
 body {
-	font-family: "Crimson Pro", Times, serif;
+	font-family: "Roboto", Helvetica, Arial, serif;
 	max-width: 100%;
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
@@ -18,7 +18,7 @@ a {
 	color: $negro;
 	text-decoration: none;
 	&:hover {
-		color: $hover;
+		color: $dark;
 		text-decoration: none;
 	}
 }
