@@ -4,7 +4,7 @@
 
 html,
 body {
-  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+  font-family: "Crimson Pro", Times, serif;
   max-width: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -23,7 +23,7 @@ body {
 }
 
 a {
-  color: #4295da;
+  color: #171717;
   text-decoration: none;
 }
 

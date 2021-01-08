@@ -1,6 +1,6 @@
 html,
 body {
-	font-family: "Roboto", Helvetica, Arial, Sans-serif;
+	font-family: "Crimson Pro", Times, serif;
 	max-width: 100%;
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
@@ -15,7 +15,7 @@ body {
 	padding: 0;
 }
 a {
-	color: $link;
+	color: $negro;
 	text-decoration: none;
 	&:hover {
 		color: $hover;

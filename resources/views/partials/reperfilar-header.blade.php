@@ -1,4 +1,3 @@
-<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap" rel="stylesheet">
 <div class="header-reperfilar">
 	<div class="supercontenedor">
 		<div class="reperfilar-logo">Reperfilar</div>
