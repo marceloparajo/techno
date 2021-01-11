@@ -173,7 +173,7 @@ class ChannelsController extends Controller
             default:
 
                 if (! $this->_channelExists($page)) abort(404);
-                $payload = $this->apiHelper->getNewsFromMainChannel($channel, $page);
+                $payload = $this->apiHelper->getNewsFromMainChannel($channel, $page, 40);
                 $posts = [];
 
                 foreach ($payload->DATA as $post)
