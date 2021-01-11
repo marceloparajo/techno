@@ -1,6 +1,10 @@
 <div class="header-reperfilar">
 	<div class="supercontenedor">
-		<div class="reperfilar-logo">Reperfilar</div>
+		<div class="reperfilar-logo">
+			<a href="/reperfilar">
+				Reperfilar
+			</a>
+		</div>
 		<nav class="reperfilar-menu">
 
 			<div class="secciones">
