@@ -12,6 +12,10 @@
 	<noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-home-responsive.css') }}"></noscript>
 @endsection
 
+@section('js')
+	<script defer type="text/javascript" src="{{ mix('js/channels-show.js') }}"></script>
+@endsection
+
 @section('page-title', $page_title)
 
 @section('body')
@@ -82,14 +86,14 @@
 						<div class="seccion-nombre">Programas completos</div>
 					</div>
 					<div class="seccion programacion">
-						<div class="articulo-flexible">
-							<article class="articulo tipo-reperfilar">
+						<div class="articulo">
+							<article class="articulo">
 								<div class="video-player">
 									@if ($subchannel['posts'][0]['embed_code'] != '' && (\Illuminate\Support\Str::contains($subchannel['posts'][0]['embed_code'], ['rudo', 'tube'])))
 										{!! $subchannel['posts'][0]['embed_code'] !!}
 									@else
 										<figure>
-											<x-lazy-image :src="$post['main_image']['srcs']['original']" />
+											<x-lazy-image :src="$post['main_image']['srcs']['original']" :alt="$post['main_image']['caption']" class="img-fluid" max-width="240" :play-button="$post['has_video']" :camera-button="$post['has_gallery']" />
 										</figure>
 									@endif
 								</div>
@@ -129,10 +133,10 @@
 					</div>
 					<hr >
 					@foreach (array_slice($subchannel['posts'], 0, 5) as $post)
-						<article class="articulo tipo-reperfilar">
+						<article class="articulo">
 							<figure>
 								<a href="{{ $post['permalink'] }}">
-									<x-lazy-image :src="$post['main_image']['srcs']['original']" play-button="true" />
+									<x-lazy-image :src="$post['main_image']['srcs']['original']" :alt="$post['main_image']['caption']" class="img-fluid" max-width="240" :play-button="$post['has_video']" :camera-button="$post['has_gallery']" />
 								</a>
 							</figure>
 							<div class="meta-content">

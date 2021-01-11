@@ -163,10 +163,10 @@
 
   .supercontenedor .contenido.canal .autor-pagina figure,
   .supercontenedor .contenido.autor .autor-pagina figure {
-    -ms-flex-preferred-size: 100px;
-        flex-basis: 100px;
-    width: 100px;
-    height: 100px;
+    -ms-flex-preferred-size: 80px;
+        flex-basis: 80px;
+    width: 80px;
+    height: 80px;
   }
 
   .supercontenedor .contenido.canal .autor-pagina figure img,
