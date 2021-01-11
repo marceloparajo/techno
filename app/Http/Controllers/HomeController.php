@@ -13,7 +13,10 @@ use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 
@@ -42,7 +45,7 @@ class HomeController extends Controller
 
     /**
      * @param BloquesHelper $bloquesHelper
-     * @return Factory|View
+     * @return Application|ResponseFactory|Response
      * @throws FileNotFoundException
      */
     public function index(BloquesHelper $bloquesHelper)
@@ -72,7 +75,8 @@ class HomeController extends Controller
             'section' => "sitios.$site.home"
         ];
 
-        return view('home.index', compact('home_content', 'analytics_data', 'amphtml', 'sidebar_content'));
+        $view_content = view('home.index', compact('home_content', 'analytics_data', 'amphtml', 'sidebar_content'));
+        return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 
     public function amp(BloquesHelper $bloquesHelper)

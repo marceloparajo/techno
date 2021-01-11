@@ -13,7 +13,10 @@ use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Response;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\View as ViewFacade;
 use Illuminate\View\View;
@@ -46,7 +49,7 @@ class NewsController extends Controller
     /**
      * @param Route $route
      * @param BloquesHelper $bloquesHelper
-     * @return Factory|View
+     * @return Application|ResponseFactory|Response
      * @throws FileNotFoundException
      */
     public function show(Route $route, BloquesHelper $bloquesHelper)
@@ -140,7 +143,10 @@ class NewsController extends Controller
                 $view = 'news.show.index';
         }
 
-        return view($view, compact('noticia', 'jsonStructured', 'sidebar_content', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));
+        $view_content = view($view, compact('noticia', 'jsonStructured', 'sidebar_content', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));
+        return response($view_content)->header('Cache-Control', 'max-age=300, public');
+
+
     }
 
     /**
