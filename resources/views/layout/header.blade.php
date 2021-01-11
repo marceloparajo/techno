@@ -25,18 +25,11 @@
 <header class="main-header supercontenedor">
 	<div class="header-top">
 		<div class="elisologo">
-			<div id="hamburguesa" class="hamburguer" onclick="myFunction(this)">
+			<div id="hamburguesa" class="hamburguer">
 				<div class="bar1"></div>
 				<div class="bar2"></div>
 				<div class="bar3"></div>
 			</div>
-			<script>
-				function myFunction(x) {
-					x.classList.toggle("change");
-					var menues = document.querySelector('#menues');
-					menues.classList.toggle('temuestro');
-				}
-			</script>
 			<figure>
 				<a href="/">
 					<img src="{{ asset('img/logo_perfil.svg') }}">

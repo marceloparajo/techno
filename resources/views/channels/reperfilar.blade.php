@@ -21,7 +21,6 @@
 @section('body')
 
     @include('partials.reperfilar-header')
-    
 
     <div class="contenedorGeneral reperfilar" id="reperfilar">
         <div class="noticias">

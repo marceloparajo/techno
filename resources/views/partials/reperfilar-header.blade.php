@@ -4,23 +4,13 @@
 		<nav class="reperfilar-menu">
 
 			<div class="secciones">
-				<div class="menu-secciones-barras"  onclick="mFunction(this)">
+				<div class="menu-secciones-barras" id="btn-toggle-menu-reperfilar">
 					<div class="barra1"></div>
 					<div class="barra2"></div>
 					<div class="barra3"></div>
 				</div>
 				<span>Secciones</span>
 			</div>
-
-
-			<script>
-				function mFunction(y) {
-					y.classList.toggle("change");
-					var navegar = document.querySelector('#reperfilar-nav');
-					navegar.classList.toggle('temuestro');
-				}
-			</script>
-
 
 			<ul id="reperfilar-nav" class="">
 				<li>
