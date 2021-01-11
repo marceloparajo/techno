@@ -203,9 +203,10 @@
 						color: $dark;
 						margin-bottom: 2px;
 						font-weight: 600;
-						letter-spacing: -0.02em;
+						letter-spacing: -0.03em;
 						border-radius: 2px;
 						border-bottom: 1px solid $linea;
+						font-size: 1.25rem;
 						padding: 6px 0;
 						p.autor-about {
 							display: none;
@@ -466,7 +467,7 @@
 						}
 					}
 					.previous_news {
-						margin: 0 20px 20px 20px;
+						margin: 0 5% 20px 5%;
 						h4 {
 							font: {
 								family: $font-sinserif;
@@ -491,7 +492,7 @@
 									size: 5vw;
 									family: $font-serif;
 								}
-								margin-left: 8px;
+								margin-left: 4px;
 								line-height: 1.05em;
 								margin-bottom: 10px;
 								position: relative;
@@ -509,7 +510,7 @@
 									font-size: 30px;
 								}
 								a {
-									color: $link-mobile;
+									color: $linea-oscura;
 									text-decoration: none;
 									box-shadow: none;
 									&:hover {

@@ -134,8 +134,6 @@
 							}
 						}
 						.previous_news {
-							margin: 0 40px 10px 40px;
-							grid-area: bottom;
 							h4 {
 								font-size: .9rem;
 							}
@@ -145,6 +143,10 @@
 									font-weight: 600;
 									a {
 										color: $linea-oscura;
+									}
+									&:last-of-type {
+										padding-bottom: 10px;
+										border-bottom: 1px solid $dark;
 									}
 								}
 							}
@@ -271,6 +273,11 @@
 										display: none;
 									}
 								}
+							}
+						}
+						.fecha-autor {
+							.autor {
+								font-size: 1.25rem;
 							}
 						}
 					}
@@ -479,9 +486,10 @@
 									list-style: none;
 									li {
 										font-size: 1.12rem;
-										padding: 0;
-										margin: 10px 0 0 0;
+										padding: 0 0 5px 0;
+										margin: 6px 0 0 0;
 										line-height: 1.15em;
+										border-bottom: 1px solid $linea;
 										a {
 											&:hover {
 												text-decoration: none;
@@ -490,6 +498,9 @@
 										}
 										&:before {
 											display: none;
+										}
+										&:last-of-type {
+											border-bottom: 1px solid $negro;
 										}
 									}
 								}

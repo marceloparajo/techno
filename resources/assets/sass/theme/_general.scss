@@ -1,10 +1,7 @@
 html,
 body {
-	font-family: "Roboto", Helvetica, Arial, serif;
-	max-width: 100%;
 	width: 100%;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	max-width: 100%;
 }
 body {
 	overflow-x: hidden;
@@ -15,10 +12,10 @@ body {
 	padding: 0;
 }
 a {
-	color: $negro;
+	color: $link;
 	text-decoration: none;
 	&:hover {
-		color: $dark;
+		color: $hover;
 		text-decoration: none;
 	}
 }
@@ -29,6 +26,16 @@ figure img {
 .image-responsive {
 	width: 100%;
 	height: auto;
+}
+
+.bg-ads-space {
+	background: repeating-linear-gradient(-45deg,#fafafa,#fafafa 5px,#fff,#fff 7px)!important;
+	border: 0 !important;
+
+	p {
+		color: $pf_font_color_headline_light;
+		margin: 0;
+	}
 }
 
 .iframe-container {
