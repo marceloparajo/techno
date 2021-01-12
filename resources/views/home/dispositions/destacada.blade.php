@@ -49,7 +49,7 @@
 				</div>
 			</article>
 
-			@if($key == 0)
+			@if($loop->first)
 				<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
 			@endif
 
