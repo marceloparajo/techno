@@ -136,20 +136,24 @@
     font-size: 1.4rem;
   }
 
+  .contenedor-general .destacada .articulo.nota-1,
   .contenedor-general .destacada .articulo.nota-2 {
     display: block;
     border-top: none;
     padding-top: 0;
   }
 
+  .contenedor-general .destacada .articulo.nota-1 .meta-content,
   .contenedor-general .destacada .articulo.nota-2 .meta-content {
     padding: 5px 0;
   }
 
+  .contenedor-general .destacada .articulo.nota-1 .meta-content span.hat,
   .contenedor-general .destacada .articulo.nota-2 .meta-content span.hat {
     display: block;
   }
 
+  .contenedor-general .destacada .articulo.nota-1 .meta-content h2,
   .contenedor-general .destacada .articulo.nota-2 .meta-content h2 {
     font-size: 1.4rem;
   }
@@ -185,6 +189,7 @@
   .contenedor-general .destacada .articulo.nota-1 {
     grid-area: b;
     margin-bottom: 20px;
+    border-bottom: none;
   }
 
   .contenedor-general .destacada .articulo.nota-1 figure {
