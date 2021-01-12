@@ -12,8 +12,10 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 @section('page-title', $noticia['home_title'])
 
 @section('head-css')
-	<link rel="preload" href="{{ mix('css/reperfilar-news.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-news.css') }}"></noscript>
+	<link rel="stylesheet" href="{{ mix('css/reperfilar-news-high.css') }}">
+
+	<link rel="preload" href="{{ mix('css/reperfilar-news-low.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-news-low.css') }}"></noscript>
 
 	<link rel="preload" href="{{ mix('css/reperfilar-news-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-news-responsive.css') }}"></noscript>
@@ -153,7 +155,7 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 						{{-- Más Noticias (para los crawlers) --}}
 						@include('news.show.partials.more-news-crawlers')
 
-					
+
 						{!! $body !!}
 
 						{{-- Embed Code --}}

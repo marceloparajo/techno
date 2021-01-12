@@ -12,8 +12,10 @@ Imagen Portada: {{ $noticia['main_image']['id'] }}
 @section('page-title', $noticia['home_title'])
 
 @section('head-css')
-	<link rel="preload" href="{{ mix('css/news.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/news.css') }}"></noscript>
+	<link rel="stylesheet" href="{{ mix('css/news-high.css') }}">
+
+	<link rel="preload" href="{{ mix('css/news-low.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ mix('css/news-low.css') }}"></noscript>
 
 	<link rel="preload" href="{{ mix('css/news-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="{{ mix('css/news-responsive.css') }}"></noscript>

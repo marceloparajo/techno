@@ -13,11 +13,13 @@
 @endsection
 
 @section('head-css')
-	<link rel="preload" href="{{ mix('css/channels.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/news.css') }}"></noscript>
+	<link rel="stylesheet" href="{{ mix('css/channels-high.css') }}">
+
+	<link rel="preload" href="{{ mix('css/channels-low.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ mix('css/channels-low.css') }}"></noscript>
 
 	<link rel="preload" href="{{ mix('css/channels-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/news-responsive.css') }}"></noscript>
+	<noscript><link rel="stylesheet" href="{{ mix('css/channels-responsive.css') }}"></noscript>
 @endsection
 
 @section('body-class', 'pf-channel-show')

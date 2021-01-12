@@ -1,10 +1,12 @@
 import Lazyload from 'vanilla-lazyload'
+import handleToggleHeaderMenu from './modules/header-menu'
 
 const SnippetHome = function () {
 
 	const initialize = () => {
 		initLazyload()
 		initRadioTicker()
+		handleToggleHeaderMenu()
 	}
 
 	const initRadioTicker = () => {

@@ -11,8 +11,10 @@
 @endsection
 
 @section('head-css')
-	<link rel="preload" href="{{ mix('css/home.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/home.css') }}"></noscript>
+	<link rel="stylesheet" href="{{ mix('css/home-high.css') }}">
+
+	<link rel="preload" href="{{ mix('css/home-low.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ mix('css/home-low.css') }}"></noscript>
 
 	<link rel="preload" href="{{ mix('css/home-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="{{ mix('css/home-responsive.css') }}"></noscript>

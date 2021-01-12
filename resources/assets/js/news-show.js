@@ -1,4 +1,5 @@
 import LazyLoad from 'vanilla-lazyload'
+import handleToggleHeaderMenu from './modules/header-menu'
 import 'lightgallery.js'
 import 'lg-thumbnail.js'
 
@@ -9,6 +10,7 @@ const SnippetShowNews = function () {
 	const initialize = () => {
 		initLazyLoad()
 		handleClickOpenGallery()
+		handleToggleHeaderMenu()
 	}
 
 	const handleClickOpenGallery = () => {
