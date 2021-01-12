@@ -1104,6 +1104,13 @@ ul.canales li.nav-item a:hover {
   line-height: 24px;
   border: 1px solid #ccdfef;
   background: #eef3f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1em;
 }
 
 #pw-suscripcion #pw-logged .pw-logged-avatar,
@@ -1162,21 +1169,6 @@ ul.canales li.nav-item a:hover {
   line-height: 1.2em;
 }
 
-#pw-suscripcion #pw-logged .pw-logged-info ul li:before,
-#pw-suscripcion .pw-logged .pw-logged-info ul li:before,
-.pw-suscripcion #pw-logged .pw-logged-info ul li:before,
-.pw-suscripcion .pw-logged .pw-logged-info ul li:before {
-  content: "\F111";
-  font-family: "FontAwesome";
-  font-size: 7px;
-  color: #aacce8;
-  float: left;
-  display: block;
-  width: 12px;
-  line-height: 1em;
-  padding-top: 4px;
-}
-
 #pw-suscripcion #pw-logged .pw-logged-info ul li a,
 #pw-suscripcion .pw-logged .pw-logged-info ul li a,
 .pw-suscripcion #pw-logged .pw-logged-info ul li a,
@@ -1203,6 +1195,13 @@ ul.canales li.nav-item a:hover {
 .pw-suscripcion #pw-logged .pw-logged-info ul li:last-of-type,
 .pw-suscripcion .pw-logged .pw-logged-info ul li:last-of-type {
   border-bottom: none;
+}
+
+#pw-suscripcion #pw-logged .pw-logged-info ul li.suscribite-logged,
+#pw-suscripcion .pw-logged .pw-logged-info ul li.suscribite-logged,
+.pw-suscripcion #pw-logged .pw-logged-info ul li.suscribite-logged,
+.pw-suscripcion .pw-logged .pw-logged-info ul li.suscribite-logged {
+  display: none;
 }
 
 #pw-suscripcion #pw-logged .pw-logged-info ul:before,
@@ -1261,6 +1260,7 @@ ul.canales li.nav-item a:hover {
     background-color: transparent;
     color: #0072c7;
     padding: 5px 0;
+    display: none;
   }
 
   .pw-suscripcion .pw-ingresar {
@@ -1272,6 +1272,10 @@ ul.canales li.nav-item a:hover {
 
   .pw-suscripcion .pw-ingresar:before {
     display: none;
+  }
+
+  .pw-suscripcion .pw-logged .pw-logged-info ul li.suscribite-logged {
+    display: block;
   }
 }
 
@@ -1428,18 +1432,25 @@ ul.canales li.nav-item a:hover {
 }
 
 #pw-zocalo .pw-zocalo-container .pw-zocalo-acciones .pw-boton-suscripcion:after {
-  content: "\F061";
-  font-weight: normal;
-  font-family: "FontAwesome";
+  content: "";
   display: inline-block;
-  font-size: 20px;
+  width: 20px;
+  height: 20px;
   margin-left: 10px;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  background-image: url(/images/next.svg?19a20ea17c1957a6a49ee86974ed76dd);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 0 0;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 #pw-zocalo .pw-zocalo-container .pw-zocalo-acciones p.mensaje {
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1em;
   margin: 4px 0 0 0;
   color: white;
@@ -1503,7 +1514,7 @@ ul.canales li.nav-item a:hover {
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 28px;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.05em;
   margin: auto 0 0 0;
   color: #000;
@@ -1583,7 +1594,7 @@ ul.canales li.nav-item a:hover {
 
 #pw-pienota .pw-piedenota-row-noframe .p {
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 #pw-pienota .pw-piedenota-row-noframe .p.pw-piedenota-mensaje-a {
@@ -1700,7 +1711,7 @@ ul.canales li.nav-item a:hover {
 
 #pw-pienota .pw-piedenota-row .pw-piedenota-content .p {
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  font-weight: 600;
+  font-weight: 500;
   line-height: initial;
 }
 
@@ -1754,7 +1765,7 @@ ul.canales li.nav-item a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1864,7 +1875,7 @@ ul.canales li.nav-item a:hover {
 }
 
 #pw-modal .pw-modal-box .pw-modal-content .pw-perfil-logo figure {
-  width: 200px;
+  width: 140px;
   margin: 0 auto;
 }
 
@@ -2048,12 +2059,19 @@ ul.canales li.nav-item a:hover {
 }
 
 #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row .pw-boton-suscripcion:after {
-  content: "\F061";
-  font-family: "FontAwesome";
+  content: "";
   display: inline-block;
-  font-size: 20px;
+  width: 20px;
+  height: 20px;
   margin-left: 10px;
-  font-weight: normal;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  background-image: url(/images/next.svg?19a20ea17c1957a6a49ee86974ed76dd);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 0 0;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 #pw-modal .pw-modal-box .pw-modal-content.mensaje-b .pw-modal-top {
@@ -2167,7 +2185,7 @@ ul.canales li.nav-item a:hover {
 #pw-modal .pw-modal-box .pw-modal-content.mensaje-b .pw-meta-content h4 {
   margin: 20px auto;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 500;
   color: #000;
   max-width: 90%;
 }
@@ -2597,12 +2615,52 @@ ul.canales li.nav-item a:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row p.pw-modal-mensaje-b {
+    font-size: 24px;
+    line-height: 1em;
+  }
+
+  #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row p.pw-modal-mensaje-d {
+    font-size: 20px;
+    line-height: 1em;
+    margin-top: 20px;
+  }
+
+  #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row p.pw-modal-mensaje-d span {
+    display: inline-block;
+    padding: 6px 0;
+  }
+
+  #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row p.pw-modal-mensaje-e {
+    font-size: 20px;
+    line-height: 1em;
+  }
+
   #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row p.pw-modal-mensaje-f {
+    font-size: 20px;
+    line-height: 1em;
     margin-bottom: 10px;
   }
 
   #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row p.pw-modal-mensaje-f br {
     display: block;
+  }
+
+  #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row p.pw-modal-mensaje-g {
+    margin: 30px auto 10px auto;
+  }
+
+  #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row p.pw-modal-mensaje-g:before {
+    left: -20px;
+  }
+
+  #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row p.pw-modal-mensaje-g:after {
+    right: -20px;
+    bottom: -20px;
+  }
+
+  #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row .pw-boton-suscripcion:after {
+    content: none;
   }
 
   #pw-pienota .pw-piedenota-row-noframe .p.pw-piedenota-mensaje-a {
@@ -2644,6 +2702,77 @@ ul.canales li.nav-item a:hover {
   #pw-pienota .pw-piedenota-row .pw-piedenota-content .p.pw-piedenota-mensaje-c {
     margin-left: 10px;
     text-align: center;
+  }
+
+  #pw-zocalo,
+  #pw-zocalo.pw-color-invertido {
+    height: auto;
+  }
+
+  #pw-zocalo .pw-zocalo-container,
+  #pw-zocalo.pw-color-invertido .pw-zocalo-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  #pw-zocalo .pw-zocalo-container .pw-zocalo-bloque-b,
+  #pw-zocalo.pw-color-invertido .pw-zocalo-container .pw-zocalo-bloque-b {
+    background: #171717;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    border-right: none;
+    text-align: center;
+  }
+
+  #pw-zocalo .pw-zocalo-container .pw-zocalo-bloque-b h6,
+  #pw-zocalo.pw-color-invertido .pw-zocalo-container .pw-zocalo-bloque-b h6 {
+    font-size: 30px;
+    color: white;
+  }
+
+  #pw-zocalo .pw-zocalo-container .pw-zocalo-bloque-b p.pw-zocalo-bajada,
+  #pw-zocalo.pw-color-invertido .pw-zocalo-container .pw-zocalo-bloque-b p.pw-zocalo-bajada {
+    margin-top: 10px;
+    color: white;
+  }
+
+  #pw-zocalo .pw-zocalo-container .pw-zocalo-acciones,
+  #pw-zocalo.pw-color-invertido .pw-zocalo-container .pw-zocalo-acciones {
+    padding: 0;
+    width: 100%;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    text-align: center;
+  }
+
+  #pw-zocalo .pw-zocalo-container .pw-zocalo-acciones .pw-boton-suscripcion,
+  #pw-zocalo.pw-color-invertido .pw-zocalo-container .pw-zocalo-acciones .pw-boton-suscripcion {
+    margin: 10px auto;
+  }
+
+  #pw-zocalo .pw-zocalo-top .pw-zocalo-container,
+  #pw-zocalo.pw-color-invertido .pw-zocalo-top .pw-zocalo-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  #pw-zocalo.closed,
+  #pw-zocalo.pw-color-invertido.closed {
+    bottom: -330px;
   }
 
   #header-principal .contenedorGeneral #header-content .pw-suscripcion .pw-ingresar {

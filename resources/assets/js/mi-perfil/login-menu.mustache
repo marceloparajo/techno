@@ -4,6 +4,9 @@
     {{user.first_name}} {{user.last_name}}
     <div class="pw-logged-info">
       <ul>
+        {{#unsubscribed}}
+          <li class="suscribite-logged"><strong><a href="{{paywall_url}}">Suscribite</a></strong></li>
+        {{/unsubscribed}}
         <li><a href="{{paywall_url}}id/perfil">Mi Perfil</a></li>
         {{^unsubscribed}}
           <li><a href="{{paywall_url}}mi-suscripcion">Mi suscripción</a></li>
