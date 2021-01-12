@@ -18,6 +18,7 @@
 						}
 					}
 				}
+				&.nota-1,
 				&.nota-2 {
 					display: block;
 					border-top: none;
@@ -64,6 +65,7 @@
 				&.nota-1 {
 					grid-area: b;
 					margin-bottom: 20px;
+					border-bottom: none;
 					figure {
 						display: none;
 					}
