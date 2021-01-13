@@ -392,7 +392,6 @@
 			width: 100%;
 			padding: 10px;
 			box-sizing: border-box;
-			border-bottom: 1px solid #ddd;
 			margin: 0;
 			background-color: white;
 			border-radius: 0 0 6px 6px;
@@ -470,7 +469,7 @@
 				line-height: 50px;
 			}
 		}
-		#rankPerfilcom {
+		.ranking {
 			width: 100%;
 			article.masleidas {
 				width: 100%;
@@ -494,22 +493,26 @@
 						font-size: 1.1rem;
 						font-size: 5vw;
 						line-height: 1.05em;
-						font-weight: 600;
-						letter-spacing: -0.01em;
+						font-weight: 500;
+						letter-spacing: -0.02em;
 						font-family: $font-serif;
 						margin: 0;
-						padding: 0 0 0 40px;
+						padding: 0;
+						height: 62px;
 						.rankOrder {
 							width: 40px;
-							margin: 0 0 0 -40px;;
+							height: 40px;
+							margin: 0 10px 0 0;
 							text-align: right;
-							display: inline-block;
+							display: block;
 							padding: 0 8px 0 0;
 							font-size: 2em;
 							color: #999;
 							transform: translateY(10px);
+							font-family: $font-condensada;
 							font-weight: 400;
 							letter-spacing: -0.03em;
+							float: left;
 						}
 					}
 				}
@@ -535,7 +538,8 @@
 							left: 0;
 							right: 0px;
 							color: white;
-							padding: 50px 10px 10px 40px;
+							height: auto;
+							padding: 50px 10px 10px 10px;
 							.rankOrder {
 								color: white;
 							}
@@ -705,6 +709,12 @@
 			background-color: white;
 			border-top: 1px solid $linea;
 			border-radius: 0 0 6px 6px;
+			background:{
+				image: url('../../../img/glyph/slide.svg');
+				position: 10px center;
+				size: 50px;
+				repeat: no-repeat;
+			}
 			a {
 				font-family: $font-sinserif;
 				font-size: 14px;
@@ -806,7 +816,7 @@
 		}
 
 		#masLeidasSidebar {
-			#rankPerfilcom {
+			.ranking {
 				column-count: 2;
 				column-gap: 2em;
 				column-rule: 1px solid $linea;
@@ -886,6 +896,9 @@
 					}
 				}
 			}
+			footer {
+				background-image: none;
+			}
 		}
 	}
 
@@ -936,7 +949,7 @@
 			}
 		}
 		#masLeidasSidebar {
-			#rankPerfilcom {
+			.ranking {
 				column-count: 1;
 				article.masleidas {
 					padding: 5px 10px;
