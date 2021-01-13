@@ -637,7 +637,7 @@
     overflow: hidden;
     background-image: url(/images/radio-ticker.jpg?94f7468376033adb640b1b4aa58906ac);
     background-repeat: no-repeat;
-    background-position: 0 1px;
+    background-position: 0 2px;
   }
 
   .supercontenedor.radio-ticker .contenedor-general .radio-news {
@@ -674,8 +674,8 @@
     float: left;
     background-image: url(/images/bullet.svg?d6d561b7b050562af0fd0b0179e497d8);
     background-repeat: no-repeat;
-    background-size: 10px;
-    background-position: 0 1px;
+    background-size: 8px;
+    background-position: 0 2px;
   }
 
 @-webkit-keyframes animateright {

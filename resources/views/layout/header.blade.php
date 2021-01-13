@@ -38,16 +38,16 @@
 			<nav class="menu-primario">
 				<ul class="menu-destacado">
 					<li>
-						<a href="#">Últimas Noticias</a>
+						<a href="/ultimo-momento">Últimas Noticias</a>
 					</li>
 					<li>
-						<a href="#">Política</a>
+						<a href="/seccion/politica">Política</a>
 					</li>
 					<li>
-						<a href="#">Opinión</a>
+						<a href="/seccion/opinion">Opinión</a>
 					</li>
 					<li>
-						<a href="#">Sociedad</a>
+						<a href="/seccion/sociedad">Sociedad</a>
 					</li>
 				</ul>
 			</nav>

@@ -153,7 +153,8 @@
 	#periodismopuro,
 	#panorama,
 	#reperfilar,
-	#videocolumnas {
+	#videocolumnas,
+	#educacion {
 		background: #fff;
 		width: 100%;
 		margin: 0 0 20px 0;
@@ -219,13 +220,6 @@
 				font-size: 24px;
 				font-weight: 600;
 				background: url('../../../img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
-				.fas {
-					color: #c3ced8;
-					margin: 0 3px 0 0;
-					font-weight: normal;
-					font-size: 20px;
-					font-weight: bold;
-				}
 				a {
 					display: inline-block;
 					color: #000;
@@ -242,11 +236,6 @@
 				font-size: 24px;
 				font-weight: 600;
 				background: url('../../../img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
-				.fa {
-					color: #c3ced8;
-					margin: 0 3px 0 0;
-					font-size: 20px;
-				}
 				a {
 					display: inline-block;
 					color: #000;
@@ -307,6 +296,17 @@
 					display: inline-block;
 					color: #000;
 				}
+			}
+			.educacion-titulo {
+				font-family: $font-serif;
+				width: 280px;
+				height: 30px;
+				line-height: 44px;
+				display: block;
+				margin: 0;
+				text-transform: uppercase;
+				font-size: 24px;
+				font-weight: 600;
 			}
 		}
 		article {
@@ -433,7 +433,8 @@
 
 	#opinion,
 	#panorama,
-	#videocolumnas {
+	#videocolumnas,
+	#educacion {
 		header {
 			background: linear-gradient(to bottom,  rgba(228,226,232,0) 0%,rgba(228,226,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e4e2e8', endColorstr='#e4e2e8',GradientType=0 ); /* IE6-9 */
@@ -460,7 +461,7 @@
 			margin: 10px 10px 5px 10px;
 			text-transform: uppercase;
 			font-family: $font-serif;
-			font-size:18px;
+			font-size:24px;
 			font-weight: 600;
 			background: url('../../../img/perfil-logo-xs-sidebar.png') right center no-repeat;
 			a {
@@ -498,7 +499,8 @@
 						font-family: $font-serif;
 						margin: 0;
 						padding: 0;
-						height: 62px;
+						max-height: 56px;
+						overflow: hidden;
 						.rankOrder {
 							width: 40px;
 							height: 40px;
@@ -540,6 +542,7 @@
 							color: white;
 							height: auto;
 							padding: 50px 10px 10px 10px;
+							max-height: 300px;
 							.rankOrder {
 								color: white;
 							}
@@ -592,6 +595,11 @@
 					color: #444;
 				}
 			}
+		}
+	}
+	#educacion {
+		footer {
+			display: none;
 		}
 	}
 	#columnistas {
@@ -746,6 +754,104 @@
 		}
 	}
 
+	.divisas {
+		width: 100%;
+		background: white;
+		box-shadow: 0 3px 7px 0 rgba(0,0,0,.2);
+		padding: 5px 10px 0 10px;
+		.title-divisas {
+			font-family: $font-serif;
+			font-size: 24px;
+			font-weight: 600;
+			border-bottom: 2px solid $azul;
+			text-transform: uppercase;
+		}
+		.content-divisas {
+			font-size: .8rem;
+			display: grid;
+			grid-template-areas: 
+				'empty venta compra'
+				'do doventa docompra'
+				'db dbventa dbcompra'
+				'eo eoventa eocompra'
+				'eb ebventa ebcompra';
+			grid-template-columns: 3fr 2fr 2fr;
+			grid-row-gap: 1px;
+			transform: translateY(-24px);
+			>div {
+				border-bottom: 1px solid $linea;
+				padding: 5px 0;
+				&.venta,
+				&.compra {
+					border-bottom: none;
+				}
+			}
+			.venta {
+				grid-area: venta;
+				text-align: right;
+				text-transform: uppercase;
+			}
+			.compra {
+				grid-area: compra;
+				text-align: right;
+				text-transform: uppercase;
+			}
+			.do {
+				grid-area: do;
+			}
+			.doventa {
+				grid-area: doventa;
+				text-align: right;
+				font-weight: bold;
+			}
+			.docompra {
+				grid-area: docompra;
+				text-align: right;
+				font-weight: bold;
+			}
+			.db {
+				grid-area: db;
+			}
+			.dbventa {
+				grid-area: dbventa;
+				text-align: right;
+				font-weight: bold;
+			}
+			.dbcompra {
+				grid-area: dbcompra;
+				text-align: right;
+				font-weight: bold;
+			}
+
+			.eo {
+				grid-area: eo;
+			}
+			.eoventa {
+				grid-area: eoventa;
+				text-align: right;
+				font-weight: bold;
+			}
+			.eocompra {
+				grid-area: eocompra;
+				text-align: right;
+				font-weight: bold;
+			}
+			.eb {
+				grid-area: eb;
+			}
+			.ebventa {
+				grid-area: ebventa;
+				text-align: right;
+				font-weight: bold;
+			}
+			.ebcompra {
+				grid-area: ebcompra;
+				text-align: right;
+				font-weight: bold;
+			}
+		}
+	}
+
 
 	@include media-breakpoint-up(sm) {
 		#exitoina,
@@ -755,7 +861,8 @@
 		#periodismopuro,
 		#panorama,
 		#reperfilar,
-		#videocolumnas {
+		#videocolumnas,
+		#educacion {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -869,7 +976,8 @@
 		#periodismopuro,
 		#panorama,
 		#reperfilar,
-		#videocolumnas {
+		#videocolumnas,
+		#educacion {
 			article {
 				width: 25%;
 				a {
@@ -911,7 +1019,8 @@
 		#periodismopuro,
 		#panorama,
 		#reperfilar,
-		#videocolumnas {
+		#videocolumnas,
+		#educacion {
 			display: flex;
 			flex-direction: column;
 			article {

@@ -103,8 +103,28 @@
 
 
 
+{{-- TODO: Divisas --}}
 
-
-
+	<div class="divisas">
+		<header class="title-divisas">
+			Divisas
+		</header>
+		<div class="content-divisas">
+			<div class="venta">Venta</div>
+			<div class="compra">Compra</div>
+			<div class="do">Dólar Oficial</div>
+			<div class="doventa">91.09</div>
+			<div class="docompra">85.09</div>
+			<div class="db">Dólar blue</div>
+			<div class="dbventa">159.33</div>
+			<div class="dbcompra">154.00</div>
+			<div class="eo">Euro Oficial</div>
+			<div class="eoventa">97.95</div>
+			<div class="eocompra">91.49</div>
+			<div class="eb">Euro blue</div>
+			<div class="ebventa">171.33</div>
+			<div class="ebcompra">165.59</div>
+		</div>
+	</div>
 
 </div>
