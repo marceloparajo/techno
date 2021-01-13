@@ -203,7 +203,8 @@
 .sidebar #periodismopuro,
 .sidebar #panorama,
 .sidebar #reperfilar,
-.sidebar #videocolumnas {
+.sidebar #videocolumnas,
+.sidebar #educacion {
   background: #fff;
   width: 100%;
   margin: 0 0 20px 0;
@@ -221,7 +222,8 @@
 .sidebar #periodismopuro header,
 .sidebar #panorama header,
 .sidebar #reperfilar header,
-.sidebar #videocolumnas header {
+.sidebar #videocolumnas header,
+.sidebar #educacion header {
   width: 100%;
   padding: 10px 10px 5px 10px;
   -webkit-box-sizing: border-box;
@@ -246,7 +248,8 @@
 .sidebar #periodismopuro header .exitoina-titulo,
 .sidebar #panorama header .exitoina-titulo,
 .sidebar #reperfilar header .exitoina-titulo,
-.sidebar #videocolumnas header .exitoina-titulo {
+.sidebar #videocolumnas header .exitoina-titulo,
+.sidebar #educacion header .exitoina-titulo {
   text-indent: -9999px;
   width: 180px;
   height: 26px;
@@ -262,7 +265,8 @@
 .sidebar #periodismopuro header .exitoina-titulo a,
 .sidebar #panorama header .exitoina-titulo a,
 .sidebar #reperfilar header .exitoina-titulo a,
-.sidebar #videocolumnas header .exitoina-titulo a {
+.sidebar #videocolumnas header .exitoina-titulo a,
+.sidebar #educacion header .exitoina-titulo a {
   display: block;
   width: 180px;
   height: 26px;
@@ -275,7 +279,8 @@
 .sidebar #periodismopuro header .net-titulo,
 .sidebar #panorama header .net-titulo,
 .sidebar #reperfilar header .net-titulo,
-.sidebar #videocolumnas header .net-titulo {
+.sidebar #videocolumnas header .net-titulo,
+.sidebar #educacion header .net-titulo {
   text-indent: -9999px;
   width: 70px;
   height: 29px;
@@ -291,7 +296,8 @@
 .sidebar #periodismopuro header .net-titulo a,
 .sidebar #panorama header .net-titulo a,
 .sidebar #reperfilar header .net-titulo a,
-.sidebar #videocolumnas header .net-titulo a {
+.sidebar #videocolumnas header .net-titulo a,
+.sidebar #educacion header .net-titulo a {
   display: block;
   width: 70px;
   width: 29px;
@@ -304,7 +310,8 @@
 .sidebar #periodismopuro header .investigacion-titulo,
 .sidebar #panorama header .investigacion-titulo,
 .sidebar #reperfilar header .investigacion-titulo,
-.sidebar #videocolumnas header .investigacion-titulo {
+.sidebar #videocolumnas header .investigacion-titulo,
+.sidebar #educacion header .investigacion-titulo {
   text-indent: -9999px;
   width: 280px;
   height: 35px;
@@ -320,7 +327,8 @@
 .sidebar #periodismopuro header .investigacion-titulo a,
 .sidebar #panorama header .investigacion-titulo a,
 .sidebar #reperfilar header .investigacion-titulo a,
-.sidebar #videocolumnas header .investigacion-titulo a {
+.sidebar #videocolumnas header .investigacion-titulo a,
+.sidebar #educacion header .investigacion-titulo a {
   display: block;
   width: 280px;
   height: 35px;
@@ -333,7 +341,8 @@
 .sidebar #periodismopuro header .opinion-titulo,
 .sidebar #panorama header .opinion-titulo,
 .sidebar #reperfilar header .opinion-titulo,
-.sidebar #videocolumnas header .opinion-titulo {
+.sidebar #videocolumnas header .opinion-titulo,
+.sidebar #educacion header .opinion-titulo {
   width: 100%;
   height: 30px;
   line-height: 44px;
@@ -346,21 +355,6 @@
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right 0 no-repeat;
 }
 
-.sidebar #exitoina header .opinion-titulo .fas,
-.sidebar #net header .opinion-titulo .fas,
-.sidebar #investigacion header .opinion-titulo .fas,
-.sidebar #opinion header .opinion-titulo .fas,
-.sidebar #periodismopuro header .opinion-titulo .fas,
-.sidebar #panorama header .opinion-titulo .fas,
-.sidebar #reperfilar header .opinion-titulo .fas,
-.sidebar #videocolumnas header .opinion-titulo .fas {
-  color: #c3ced8;
-  margin: 0 3px 0 0;
-  font-weight: normal;
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .sidebar #exitoina header .opinion-titulo a,
 .sidebar #net header .opinion-titulo a,
 .sidebar #investigacion header .opinion-titulo a,
@@ -368,7 +362,8 @@
 .sidebar #periodismopuro header .opinion-titulo a,
 .sidebar #panorama header .opinion-titulo a,
 .sidebar #reperfilar header .opinion-titulo a,
-.sidebar #videocolumnas header .opinion-titulo a {
+.sidebar #videocolumnas header .opinion-titulo a,
+.sidebar #educacion header .opinion-titulo a {
   display: inline-block;
   color: #000;
 }
@@ -380,7 +375,8 @@
 .sidebar #periodismopuro header .panorama-titulo,
 .sidebar #panorama header .panorama-titulo,
 .sidebar #reperfilar header .panorama-titulo,
-.sidebar #videocolumnas header .panorama-titulo {
+.sidebar #videocolumnas header .panorama-titulo,
+.sidebar #educacion header .panorama-titulo {
   width: 280px;
   height: 30px;
   line-height: 44px;
@@ -393,19 +389,6 @@
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right 0 no-repeat;
 }
 
-.sidebar #exitoina header .panorama-titulo .fa,
-.sidebar #net header .panorama-titulo .fa,
-.sidebar #investigacion header .panorama-titulo .fa,
-.sidebar #opinion header .panorama-titulo .fa,
-.sidebar #periodismopuro header .panorama-titulo .fa,
-.sidebar #panorama header .panorama-titulo .fa,
-.sidebar #reperfilar header .panorama-titulo .fa,
-.sidebar #videocolumnas header .panorama-titulo .fa {
-  color: #c3ced8;
-  margin: 0 3px 0 0;
-  font-size: 20px;
-}
-
 .sidebar #exitoina header .panorama-titulo a,
 .sidebar #net header .panorama-titulo a,
 .sidebar #investigacion header .panorama-titulo a,
@@ -413,7 +396,8 @@
 .sidebar #periodismopuro header .panorama-titulo a,
 .sidebar #panorama header .panorama-titulo a,
 .sidebar #reperfilar header .panorama-titulo a,
-.sidebar #videocolumnas header .panorama-titulo a {
+.sidebar #videocolumnas header .panorama-titulo a,
+.sidebar #educacion header .panorama-titulo a {
   display: inline-block;
   color: #000;
 }
@@ -425,7 +409,8 @@
 .sidebar #periodismopuro header .periodismopuro-titulo,
 .sidebar #panorama header .periodismopuro-titulo,
 .sidebar #reperfilar header .periodismopuro-titulo,
-.sidebar #videocolumnas header .periodismopuro-titulo {
+.sidebar #videocolumnas header .periodismopuro-titulo,
+.sidebar #educacion header .periodismopuro-titulo {
   text-indent: -9999px;
   width: 183px;
   height: 49px;
@@ -442,7 +427,8 @@
 .sidebar #periodismopuro header .periodismopuro-titulo a,
 .sidebar #panorama header .periodismopuro-titulo a,
 .sidebar #reperfilar header .periodismopuro-titulo a,
-.sidebar #videocolumnas header .periodismopuro-titulo a {
+.sidebar #videocolumnas header .periodismopuro-titulo a,
+.sidebar #educacion header .periodismopuro-titulo a {
   display: block;
   width: 183px;
   width: 49px;
@@ -456,7 +442,8 @@
 .sidebar #periodismopuro header.pp,
 .sidebar #panorama header.pp,
 .sidebar #reperfilar header.pp,
-.sidebar #videocolumnas header.pp {
+.sidebar #videocolumnas header.pp,
+.sidebar #educacion header.pp {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -470,7 +457,8 @@
 .sidebar #periodismopuro header.pp h4,
 .sidebar #panorama header.pp h4,
 .sidebar #reperfilar header.pp h4,
-.sidebar #videocolumnas header.pp h4 {
+.sidebar #videocolumnas header.pp h4,
+.sidebar #educacion header.pp h4 {
   border-top: 1px solid #d4d4d4;
   margin-top: 10px;
   padding-top: 5px;
@@ -488,7 +476,8 @@
 .sidebar #periodismopuro header .reperfilar-titulo,
 .sidebar #panorama header .reperfilar-titulo,
 .sidebar #reperfilar header .reperfilar-titulo,
-.sidebar #videocolumnas header .reperfilar-titulo {
+.sidebar #videocolumnas header .reperfilar-titulo,
+.sidebar #educacion header .reperfilar-titulo {
   text-indent: -9999px;
   width: 210px;
   height: 42px;
@@ -504,7 +493,8 @@
 .sidebar #periodismopuro header .reperfilar-titulo a,
 .sidebar #panorama header .reperfilar-titulo a,
 .sidebar #reperfilar header .reperfilar-titulo a,
-.sidebar #videocolumnas header .reperfilar-titulo a {
+.sidebar #videocolumnas header .reperfilar-titulo a,
+.sidebar #educacion header .reperfilar-titulo a {
   display: block;
   width: 210px;
   height: 42px;
@@ -517,7 +507,8 @@
 .sidebar #periodismopuro header .videocolumnas-titulo,
 .sidebar #panorama header .videocolumnas-titulo,
 .sidebar #reperfilar header .videocolumnas-titulo,
-.sidebar #videocolumnas header .videocolumnas-titulo {
+.sidebar #videocolumnas header .videocolumnas-titulo,
+.sidebar #educacion header .videocolumnas-titulo {
   width: 280px;
   height: 30px;
   line-height: 44px;
@@ -536,9 +527,30 @@
 .sidebar #periodismopuro header .videocolumnas-titulo a,
 .sidebar #panorama header .videocolumnas-titulo a,
 .sidebar #reperfilar header .videocolumnas-titulo a,
-.sidebar #videocolumnas header .videocolumnas-titulo a {
+.sidebar #videocolumnas header .videocolumnas-titulo a,
+.sidebar #educacion header .videocolumnas-titulo a {
   display: inline-block;
   color: #000;
+}
+
+.sidebar #exitoina header .educacion-titulo,
+.sidebar #net header .educacion-titulo,
+.sidebar #investigacion header .educacion-titulo,
+.sidebar #opinion header .educacion-titulo,
+.sidebar #periodismopuro header .educacion-titulo,
+.sidebar #panorama header .educacion-titulo,
+.sidebar #reperfilar header .educacion-titulo,
+.sidebar #videocolumnas header .educacion-titulo,
+.sidebar #educacion header .educacion-titulo {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  width: 280px;
+  height: 30px;
+  line-height: 44px;
+  display: block;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .sidebar #exitoina article,
@@ -548,7 +560,8 @@
 .sidebar #periodismopuro article,
 .sidebar #panorama article,
 .sidebar #reperfilar article,
-.sidebar #videocolumnas article {
+.sidebar #videocolumnas article,
+.sidebar #educacion article {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -566,7 +579,8 @@
 .sidebar #periodismopuro article a,
 .sidebar #panorama article a,
 .sidebar #reperfilar article a,
-.sidebar #videocolumnas article a {
+.sidebar #videocolumnas article a,
+.sidebar #educacion article a {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -583,7 +597,8 @@
 .sidebar #periodismopuro article a figure,
 .sidebar #panorama article a figure,
 .sidebar #reperfilar article a figure,
-.sidebar #videocolumnas article a figure {
+.sidebar #videocolumnas article a figure,
+.sidebar #educacion article a figure {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   height: auto;
@@ -597,7 +612,8 @@
 .sidebar #periodismopuro article a figure img,
 .sidebar #panorama article a figure img,
 .sidebar #reperfilar article a figure img,
-.sidebar #videocolumnas article a figure img {
+.sidebar #videocolumnas article a figure img,
+.sidebar #educacion article a figure img {
   width: 100%;
 }
 
@@ -608,7 +624,8 @@
 .sidebar #periodismopuro article a .content,
 .sidebar #panorama article a .content,
 .sidebar #reperfilar article a .content,
-.sidebar #videocolumnas article a .content {
+.sidebar #videocolumnas article a .content,
+.sidebar #educacion article a .content {
   -ms-flex-preferred-size: 63%;
       flex-basis: 63%;
 }
@@ -620,7 +637,8 @@
 .sidebar #periodismopuro article a .content h3,
 .sidebar #panorama article a .content h3,
 .sidebar #reperfilar article a .content h3,
-.sidebar #videocolumnas article a .content h3 {
+.sidebar #videocolumnas article a .content h3,
+.sidebar #educacion article a .content h3 {
   color: #171717;
   font-size: 1.3rem;
   font-size: 5.7vw;
@@ -637,7 +655,8 @@
 .sidebar #periodismopuro article a .content .firma-home,
 .sidebar #panorama article a .content .firma-home,
 .sidebar #reperfilar article a .content .firma-home,
-.sidebar #videocolumnas article a .content .firma-home {
+.sidebar #videocolumnas article a .content .firma-home,
+.sidebar #educacion article a .content .firma-home {
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   font-size: .8rem;
   font-size: 3.3vw;
@@ -654,7 +673,8 @@
 .sidebar #periodismopuro article:after,
 .sidebar #panorama article:after,
 .sidebar #reperfilar article:after,
-.sidebar #videocolumnas article:after {
+.sidebar #videocolumnas article:after,
+.sidebar #educacion article:after {
   display: block;
   content: " ";
   clear: both;
@@ -669,7 +689,8 @@
 .sidebar #periodismopuro article:hover,
 .sidebar #panorama article:hover,
 .sidebar #reperfilar article:hover,
-.sidebar #videocolumnas article:hover {
+.sidebar #videocolumnas article:hover,
+.sidebar #educacion article:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -680,7 +701,8 @@
 .sidebar #periodismopuro article:hover a h3,
 .sidebar #panorama article:hover a h3,
 .sidebar #reperfilar article:hover a h3,
-.sidebar #videocolumnas article:hover a h3 {
+.sidebar #videocolumnas article:hover a h3,
+.sidebar #educacion article:hover a h3 {
   color: #000;
 }
 
@@ -691,7 +713,8 @@
 .sidebar #periodismopuro article:first-of-type a,
 .sidebar #panorama article:first-of-type a,
 .sidebar #reperfilar article:first-of-type a,
-.sidebar #videocolumnas article:first-of-type a {
+.sidebar #videocolumnas article:first-of-type a,
+.sidebar #educacion article:first-of-type a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -705,7 +728,8 @@
 .sidebar #periodismopuro article:first-of-type a figure,
 .sidebar #panorama article:first-of-type a figure,
 .sidebar #reperfilar article:first-of-type a figure,
-.sidebar #videocolumnas article:first-of-type a figure {
+.sidebar #videocolumnas article:first-of-type a figure,
+.sidebar #educacion article:first-of-type a figure {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   height: auto;
@@ -723,7 +747,8 @@
 .sidebar #periodismopuro article:first-of-type a .content,
 .sidebar #panorama article:first-of-type a .content,
 .sidebar #reperfilar article:first-of-type a .content,
-.sidebar #videocolumnas article:first-of-type a .content {
+.sidebar #videocolumnas article:first-of-type a .content,
+.sidebar #educacion article:first-of-type a .content {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
@@ -735,7 +760,8 @@
 .sidebar #periodismopuro article:first-of-type a .content h3,
 .sidebar #panorama article:first-of-type a .content h3,
 .sidebar #reperfilar article:first-of-type a .content h3,
-.sidebar #videocolumnas article:first-of-type a .content h3 {
+.sidebar #videocolumnas article:first-of-type a .content h3,
+.sidebar #educacion article:first-of-type a .content h3 {
   font-size: 1.5rem;
   font-size: 6.5vw;
   line-height: 1.03em;
@@ -748,12 +774,12 @@
 .sidebar #periodismopuro footer,
 .sidebar #panorama footer,
 .sidebar #reperfilar footer,
-.sidebar #videocolumnas footer {
+.sidebar #videocolumnas footer,
+.sidebar #educacion footer {
   width: 100%;
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-bottom: 1px solid #ddd;
   margin: 0;
   background-color: white;
   border-radius: 0 0 6px 6px;
@@ -766,7 +792,8 @@
 .sidebar #periodismopuro footer a,
 .sidebar #panorama footer a,
 .sidebar #reperfilar footer a,
-.sidebar #videocolumnas footer a {
+.sidebar #videocolumnas footer a,
+.sidebar #educacion footer a {
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -789,7 +816,8 @@
 .sidebar #periodismopuro footer a:after,
 .sidebar #panorama footer a:after,
 .sidebar #reperfilar footer a:after,
-.sidebar #videocolumnas footer a:after {
+.sidebar #videocolumnas footer a:after,
+.sidebar #educacion footer a:after {
   content: " ";
   display: block;
   width: 20px;
@@ -810,7 +838,8 @@
 .sidebar #periodismopuro footer a:hover,
 .sidebar #panorama footer a:hover,
 .sidebar #reperfilar footer a:hover,
-.sidebar #videocolumnas footer a:hover {
+.sidebar #videocolumnas footer a:hover,
+.sidebar #educacion footer a:hover {
   color: #444;
 }
 
@@ -821,13 +850,15 @@
 .sidebar #periodismopuro footer.edi a,
 .sidebar #panorama footer.edi a,
 .sidebar #reperfilar footer.edi a,
-.sidebar #videocolumnas footer.edi a {
+.sidebar #videocolumnas footer.edi a,
+.sidebar #educacion footer.edi a {
   letter-spacing: 0.02em;
 }
 
 .sidebar #opinion header,
 .sidebar #panorama header,
-.sidebar #videocolumnas header {
+.sidebar #videocolumnas header,
+.sidebar #educacion header {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 226, 232, 0)), to(#e4e2e8));
   background: linear-gradient(to bottom, rgba(228, 226, 232, 0) 0%, #e4e2e8 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -862,7 +893,7 @@
   margin: 10px 10px 5px 10px;
   text-transform: uppercase;
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right center no-repeat;
 }
@@ -873,11 +904,11 @@
   line-height: 50px;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom {
+.sidebar #masLeidasSidebar .ranking {
   width: 100%;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas {
+.sidebar #masLeidasSidebar .ranking article.masleidas {
   width: 100%;
   padding: 5px 10px;
   border-top: 1px solid #d4d4d4;
@@ -886,61 +917,66 @@
   transition: ease .3s;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a {
+.sidebar #masLeidasSidebar .ranking article.masleidas a {
   width: 100%;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
+.sidebar #masLeidasSidebar .ranking article.masleidas a figure {
   width: 100%;
   margin: 0;
   border-radius: 3px;
   overflow: hidden;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a figure img {
+.sidebar #masLeidasSidebar .ranking article.masleidas a figure img {
   width: 100%;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a h3 {
+.sidebar #masLeidasSidebar .ranking article.masleidas a h3 {
   color: #343a40;
   font-size: 1.1rem;
   font-size: 5vw;
   line-height: 1.05em;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   margin: 0;
-  padding: 0 0 0 40px;
+  padding: 0;
+  max-height: 56px;
+  overflow: hidden;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a h3 .rankOrder {
+.sidebar #masLeidasSidebar .ranking article.masleidas a h3 .rankOrder {
   width: 40px;
-  margin: 0 0 0 -40px;
+  height: 40px;
+  margin: 0 10px 0 0;
   text-align: right;
-  display: inline-block;
+  display: block;
   padding: 0 8px 0 0;
   font-size: 2em;
   color: #999;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
+  font-family: "Oswald", Helvetica, Arial, Sans-serif;
   font-weight: 400;
   letter-spacing: -0.03em;
+  float: left;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas:hover {
+.sidebar #masLeidasSidebar .ranking article.masleidas:hover {
   background: #ededed;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas:hover a h3 {
+.sidebar #masLeidasSidebar .ranking article.masleidas:hover a h3 {
   color: #171717;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas:first-of-type {
+.sidebar #masLeidasSidebar .ranking article.masleidas:first-of-type {
   position: relative;
   padding: 0;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas:first-of-type a h3 {
+.sidebar #masLeidasSidebar .ranking article.masleidas:first-of-type a h3 {
   display: block;
   background: rgba(0, 0, 0, 0);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
@@ -951,14 +987,16 @@
   left: 0;
   right: 0px;
   color: white;
-  padding: 50px 10px 10px 40px;
+  height: auto;
+  padding: 50px 10px 10px 10px;
+  max-height: 300px;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas:first-of-type a h3 .rankOrder {
+.sidebar #masLeidasSidebar .ranking article.masleidas:first-of-type a h3 .rankOrder {
   color: white;
 }
 
-.sidebar #masLeidasSidebar #rankPerfilcom article.masleidas:first-of-type:hover a h3 {
+.sidebar #masLeidasSidebar .ranking article.masleidas:first-of-type:hover a h3 {
   color: white;
 }
 
@@ -1006,6 +1044,10 @@
 
 .sidebar #masLeidasSidebar footer a:hover {
   color: #444;
+}
+
+.sidebar #educacion footer {
+  display: none;
 }
 
 .sidebar #columnistas {
@@ -1158,6 +1200,10 @@
   background-color: white;
   border-top: 1px solid #d4d4d4;
   border-radius: 0 0 6px 6px;
+  background-image: url(/images/slide.svg?2b9ce6f52ce9c2c543370a416e2a8b5b);
+  background-position: 10px center;
+  background-size: 50px;
+  background-repeat: no-repeat;
 }
 
 .sidebar #columnistas footer a {
@@ -1194,6 +1240,118 @@
   color: #444;
 }
 
+.sidebar .divisas {
+  width: 100%;
+  background: white;
+  -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px 10px 0 10px;
+}
+
+.sidebar .divisas .title-divisas {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  border-bottom: 2px solid #557c9c;
+  text-transform: uppercase;
+}
+
+.sidebar .divisas .content-divisas {
+  font-size: .8rem;
+  display: grid;
+  grid-template-areas: 'empty venta compra' 'do doventa docompra' 'db dbventa dbcompra' 'eo eoventa eocompra' 'eb ebventa ebcompra';
+  grid-template-columns: 3fr 2fr 2fr;
+  grid-row-gap: 1px;
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+}
+
+.sidebar .divisas .content-divisas > div {
+  border-bottom: 1px solid #d4d4d4;
+  padding: 5px 0;
+}
+
+.sidebar .divisas .content-divisas > div.venta,
+.sidebar .divisas .content-divisas > div.compra {
+  border-bottom: none;
+}
+
+.sidebar .divisas .content-divisas .venta {
+  grid-area: venta;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.sidebar .divisas .content-divisas .compra {
+  grid-area: compra;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.sidebar .divisas .content-divisas .do {
+  grid-area: do;
+}
+
+.sidebar .divisas .content-divisas .doventa {
+  grid-area: doventa;
+  text-align: right;
+  font-weight: bold;
+}
+
+.sidebar .divisas .content-divisas .docompra {
+  grid-area: docompra;
+  text-align: right;
+  font-weight: bold;
+}
+
+.sidebar .divisas .content-divisas .db {
+  grid-area: db;
+}
+
+.sidebar .divisas .content-divisas .dbventa {
+  grid-area: dbventa;
+  text-align: right;
+  font-weight: bold;
+}
+
+.sidebar .divisas .content-divisas .dbcompra {
+  grid-area: dbcompra;
+  text-align: right;
+  font-weight: bold;
+}
+
+.sidebar .divisas .content-divisas .eo {
+  grid-area: eo;
+}
+
+.sidebar .divisas .content-divisas .eoventa {
+  grid-area: eoventa;
+  text-align: right;
+  font-weight: bold;
+}
+
+.sidebar .divisas .content-divisas .eocompra {
+  grid-area: eocompra;
+  text-align: right;
+  font-weight: bold;
+}
+
+.sidebar .divisas .content-divisas .eb {
+  grid-area: eb;
+}
+
+.sidebar .divisas .content-divisas .ebventa {
+  grid-area: ebventa;
+  text-align: right;
+  font-weight: bold;
+}
+
+.sidebar .divisas .content-divisas .ebcompra {
+  grid-area: ebcompra;
+  text-align: right;
+  font-weight: bold;
+}
+
 @media (min-width: 576px) {
   .sidebar #exitoina,
   .sidebar #net,
@@ -1202,7 +1360,8 @@
   .sidebar #periodismopuro,
   .sidebar #panorama,
   .sidebar #reperfilar,
-  .sidebar #videocolumnas {
+  .sidebar #videocolumnas,
+  .sidebar #educacion {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1220,7 +1379,8 @@
   .sidebar #periodismopuro article,
   .sidebar #panorama article,
   .sidebar #reperfilar article,
-  .sidebar #videocolumnas article {
+  .sidebar #videocolumnas article,
+  .sidebar #educacion article {
     width: 49%;
   }
 
@@ -1231,7 +1391,8 @@
   .sidebar #periodismopuro article a,
   .sidebar #panorama article a,
   .sidebar #reperfilar article a,
-  .sidebar #videocolumnas article a {
+  .sidebar #videocolumnas article a,
+  .sidebar #educacion article a {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1248,7 +1409,8 @@
   .sidebar #periodismopuro article a figure,
   .sidebar #panorama article a figure,
   .sidebar #reperfilar article a figure,
-  .sidebar #videocolumnas article a figure {
+  .sidebar #videocolumnas article a figure,
+  .sidebar #educacion article a figure {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1260,7 +1422,8 @@
   .sidebar #periodismopuro article a .content,
   .sidebar #panorama article a .content,
   .sidebar #reperfilar article a .content,
-  .sidebar #videocolumnas article a .content {
+  .sidebar #videocolumnas article a .content,
+  .sidebar #educacion article a .content {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1272,7 +1435,8 @@
   .sidebar #periodismopuro article a .content h3,
   .sidebar #panorama article a .content h3,
   .sidebar #reperfilar article a .content h3,
-  .sidebar #videocolumnas article a .content h3 {
+  .sidebar #videocolumnas article a .content h3,
+  .sidebar #educacion article a .content h3 {
     font-size: 1.1rem;
   }
 
@@ -1283,7 +1447,8 @@
   .sidebar #periodismopuro article a .content .firma-home,
   .sidebar #panorama article a .content .firma-home,
   .sidebar #reperfilar article a .content .firma-home,
-  .sidebar #videocolumnas article a .content .firma-home {
+  .sidebar #videocolumnas article a .content .firma-home,
+  .sidebar #educacion article a .content .firma-home {
     font-size: .8rem;
   }
 
@@ -1294,7 +1459,8 @@
   .sidebar #periodismopuro article:first-of-type a figure,
   .sidebar #panorama article:first-of-type a figure,
   .sidebar #reperfilar article:first-of-type a figure,
-  .sidebar #videocolumnas article:first-of-type a figure {
+  .sidebar #videocolumnas article:first-of-type a figure,
+  .sidebar #educacion article:first-of-type a figure {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin: 0;
@@ -1307,7 +1473,8 @@
   .sidebar #periodismopuro article:first-of-type a .content,
   .sidebar #panorama article:first-of-type a .content,
   .sidebar #reperfilar article:first-of-type a .content,
-  .sidebar #videocolumnas article:first-of-type a .content {
+  .sidebar #videocolumnas article:first-of-type a .content,
+  .sidebar #educacion article:first-of-type a .content {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1319,7 +1486,8 @@
   .sidebar #periodismopuro article:first-of-type a .content h3,
   .sidebar #panorama article:first-of-type a .content h3,
   .sidebar #reperfilar article:first-of-type a .content h3,
-  .sidebar #videocolumnas article:first-of-type a .content h3 {
+  .sidebar #videocolumnas article:first-of-type a .content h3,
+  .sidebar #educacion article:first-of-type a .content h3 {
     font-size: 1.1rem;
   }
 
@@ -1330,7 +1498,8 @@
   .sidebar #periodismopuro header .opinion-titulo,
   .sidebar #panorama header .opinion-titulo,
   .sidebar #reperfilar header .opinion-titulo,
-  .sidebar #videocolumnas header .opinion-titulo {
+  .sidebar #videocolumnas header .opinion-titulo,
+  .sidebar #educacion header .opinion-titulo {
     width: 100%;
   }
 
@@ -1341,7 +1510,8 @@
   .sidebar #periodismopuro header.pp,
   .sidebar #panorama header.pp,
   .sidebar #reperfilar header.pp,
-  .sidebar #videocolumnas header.pp {
+  .sidebar #videocolumnas header.pp,
+  .sidebar #educacion header.pp {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1358,7 +1528,8 @@
   .sidebar #periodismopuro header.pp .periodismopuro-titulo,
   .sidebar #panorama header.pp .periodismopuro-titulo,
   .sidebar #reperfilar header.pp .periodismopuro-titulo,
-  .sidebar #videocolumnas header.pp .periodismopuro-titulo {
+  .sidebar #videocolumnas header.pp .periodismopuro-titulo,
+  .sidebar #educacion header.pp .periodismopuro-titulo {
     margin-left: 0;
   }
 
@@ -1369,7 +1540,8 @@
   .sidebar #periodismopuro header.pp h4,
   .sidebar #panorama header.pp h4,
   .sidebar #reperfilar header.pp h4,
-  .sidebar #videocolumnas header.pp h4 {
+  .sidebar #videocolumnas header.pp h4,
+  .sidebar #educacion header.pp h4 {
     display: inline-block;
     border-top: none;
     width: auto;
@@ -1382,12 +1554,13 @@
   .sidebar #periodismopuro footer,
   .sidebar #panorama footer,
   .sidebar #reperfilar footer,
-  .sidebar #videocolumnas footer {
+  .sidebar #videocolumnas footer,
+  .sidebar #educacion footer {
     clear: both;
     width: 100%;
   }
 
-  .sidebar #masLeidasSidebar #rankPerfilcom {
+  .sidebar #masLeidasSidebar .ranking {
     -webkit-column-count: 2;
             column-count: 2;
     -webkit-column-gap: 2em;
@@ -1396,17 +1569,17 @@
             column-rule: 1px solid #d4d4d4;
   }
 
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas {
+  .sidebar #masLeidasSidebar .ranking article.masleidas {
     -webkit-column-break-inside: avoid;
             break-inside: avoid-column;
     padding: 5px 0;
   }
 
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a h3 {
+  .sidebar #masLeidasSidebar .ranking article.masleidas a h3 {
     font-size: 1.1rem;
   }
 
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
+  .sidebar #masLeidasSidebar .ranking article.masleidas a figure {
     height: 190px;
   }
 
@@ -1437,7 +1610,8 @@
   .sidebar #periodismopuro article,
   .sidebar #panorama article,
   .sidebar #reperfilar article,
-  .sidebar #videocolumnas article {
+  .sidebar #videocolumnas article,
+  .sidebar #educacion article {
     width: 25%;
   }
 
@@ -1448,7 +1622,8 @@
   .sidebar #periodismopuro article a .content .firma-home,
   .sidebar #panorama article a .content .firma-home,
   .sidebar #reperfilar article a .content .firma-home,
-  .sidebar #videocolumnas article a .content .firma-home {
+  .sidebar #videocolumnas article a .content .firma-home,
+  .sidebar #educacion article a .content .firma-home {
     font-size: .7rem;
   }
 
@@ -1465,6 +1640,10 @@
   .sidebar #columnistas .columnistas-general #columnistas-caja .grupo-columnistas article.articulo-columnista {
     overflow: hidden;
   }
+
+  .sidebar #columnistas footer {
+    background-image: none;
+  }
 }
 
 @media (min-width: 1020px) {
@@ -1475,7 +1654,8 @@
   .sidebar #periodismopuro,
   .sidebar #panorama,
   .sidebar #reperfilar,
-  .sidebar #videocolumnas {
+  .sidebar #videocolumnas,
+  .sidebar #educacion {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1492,7 +1672,8 @@
   .sidebar #periodismopuro article,
   .sidebar #panorama article,
   .sidebar #reperfilar article,
-  .sidebar #videocolumnas article {
+  .sidebar #videocolumnas article,
+  .sidebar #educacion article {
     width: 100%;
     margin: 0;
   }
@@ -1504,7 +1685,8 @@
   .sidebar #periodismopuro article a,
   .sidebar #panorama article a,
   .sidebar #reperfilar article a,
-  .sidebar #videocolumnas article a {
+  .sidebar #videocolumnas article a,
+  .sidebar #educacion article a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1524,7 +1706,8 @@
   .sidebar #periodismopuro article a figure,
   .sidebar #panorama article a figure,
   .sidebar #reperfilar article a figure,
-  .sidebar #videocolumnas article a figure {
+  .sidebar #videocolumnas article a figure,
+  .sidebar #educacion article a figure {
     -ms-flex-preferred-size: 35%;
         flex-basis: 35%;
   }
@@ -1536,7 +1719,8 @@
   .sidebar #periodismopuro article a .content,
   .sidebar #panorama article a .content,
   .sidebar #reperfilar article a .content,
-  .sidebar #videocolumnas article a .content {
+  .sidebar #videocolumnas article a .content,
+  .sidebar #educacion article a .content {
     -ms-flex-preferred-size: 63%;
         flex-basis: 63%;
   }
@@ -1548,7 +1732,8 @@
   .sidebar #periodismopuro article:first-of-type a,
   .sidebar #panorama article:first-of-type a,
   .sidebar #reperfilar article:first-of-type a,
-  .sidebar #videocolumnas article:first-of-type a {
+  .sidebar #videocolumnas article:first-of-type a,
+  .sidebar #educacion article:first-of-type a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1564,7 +1749,8 @@
   .sidebar #periodismopuro article:first-of-type a figure,
   .sidebar #panorama article:first-of-type a figure,
   .sidebar #reperfilar article:first-of-type a figure,
-  .sidebar #videocolumnas article:first-of-type a figure {
+  .sidebar #videocolumnas article:first-of-type a figure,
+  .sidebar #educacion article:first-of-type a figure {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     height: auto;
@@ -1578,7 +1764,8 @@
   .sidebar #periodismopuro article:first-of-type a .content,
   .sidebar #panorama article:first-of-type a .content,
   .sidebar #reperfilar article:first-of-type a .content,
-  .sidebar #videocolumnas article:first-of-type a .content {
+  .sidebar #videocolumnas article:first-of-type a .content,
+  .sidebar #educacion article:first-of-type a .content {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1590,23 +1777,24 @@
   .sidebar #periodismopuro article:first-of-type a .content h3,
   .sidebar #panorama article:first-of-type a .content h3,
   .sidebar #reperfilar article:first-of-type a .content h3,
-  .sidebar #videocolumnas article:first-of-type a .content h3 {
+  .sidebar #videocolumnas article:first-of-type a .content h3,
+  .sidebar #educacion article:first-of-type a .content h3 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
     font-size: 18px;
   }
 
-  .sidebar #masLeidasSidebar #rankPerfilcom {
+  .sidebar #masLeidasSidebar .ranking {
     -webkit-column-count: 1;
             column-count: 1;
   }
 
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas {
+  .sidebar #masLeidasSidebar .ranking article.masleidas {
     padding: 5px 10px;
   }
 
-  .sidebar #masLeidasSidebar #rankPerfilcom article.masleidas a figure {
+  .sidebar #masLeidasSidebar .ranking article.masleidas a figure {
     height: auto;
   }
 
