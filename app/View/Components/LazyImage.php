@@ -25,8 +25,10 @@ class LazyImage extends Component
     public $class;
 
     /**
-     * @var string
+     * @var false|string[]
      */
+    public $request_sizes;
+
     public $sizes;
 
     /**
@@ -45,6 +47,11 @@ class LazyImage extends Component
     public $max_width;
 
     /**
+     * @var bool
+     */
+    public $external_image;
+
+    /**
      * Create a new component instance.
      *
      * @param string $src
@@ -54,8 +61,10 @@ class LazyImage extends Component
      * @param bool $cameraButton
      * @param int|null $maxWidth
      * @param bool $cleanSource
+     * @param string $sizes
+     * @param bool $externalImage
      */
-    public function __construct(string $src, string $alt = '', string $class = '', bool $playButton = false, bool $cameraButton = false, int $maxWidth = null, bool $cleanSource = false)
+    public function __construct(string $src, string $alt = '', string $class = '', bool $playButton = false, bool $cameraButton = false, int $maxWidth = null, bool $cleanSource = false, string $sizes = '', bool $externalImage = false)
     {
         $this->src = ($cleanSource) ? $this->_cleanSource($src) : $src;
         $this->alt = $alt;
@@ -63,6 +72,18 @@ class LazyImage extends Component
         $this->play_button = $playButton;
         $this->camera_button = $cameraButton;
         $this->max_width = $maxWidth;
+        $this->request_sizes = ($sizes != '') ? explode(',', $sizes) : [];
+        $this->external_image = $externalImage;
+
+        $this->sizes = [
+            ['size' => 200, 'version' => '/trim/200/113/', 'width' => '200px'],
+            ['size' => 300, 'version' => '/trim/300/180/', 'width' => '300px'],
+            ['size' => 500, 'version' => '/trim/540/304/', 'width' => '540px'],
+            ['size' => 700, 'version' => '/trim/720/405/', 'width' => '720px'],
+            ['size' => 900, 'version' => '/trim/960/540/', 'width' => '960px'],
+            ['size' => 1200, 'version' => '/trim/1280/720/', 'width' => '1280px'],
+            ['size' => 1500, 'version' => '/trim/1920/1080/', 'width' => '1500px'],
+        ];
     }
 
     /**
@@ -81,23 +102,26 @@ class LazyImage extends Component
     public function images()
     {
         $imagesHelper = new ImageHelper();
-        $srcs = $imagesHelper->parseVersionImages($this->src);
-
         $images = [];
 
-        if (is_null($this->max_width) || $this->max_width > 500)
-            array_push($images, ['src' => $srcs['medium-wide'], 'width' => '500px']);
+        foreach ($this->sizes as $element) {
 
-        if (is_null($this->max_width) || $this->max_width > 900)
-            array_push($images, ['src' => $srcs['large-wide'], 'width' => '900px']);
+            if (count($this->request_sizes) > 0)
+                $include = in_array($element['size'], $this->request_sizes);
+            else
+                $include = (is_null($this->max_width) || $this->max_width >= $element['size']);
 
-        if (is_null($this->max_width) || $this->max_width > 1000)
-            array_push($images, ['src' => $srcs['big-wide'], 'width' => '1200px']);
+            if ($include)
+                array_push($images, [
+                    'src' => $imagesHelper->generateUrlImage($this->src, $element['version']),
+                    'width' => $element['width']
+                ]);
+        }
 
-        if (is_null($this->max_width) || $this->max_width > 1900)
-            array_push($images, ['src' => $srcs['full-wide'], 'width' => '1600px']);
-
-        array_push($images, ['src' => $srcs['small-wide'], 'width' => '0px']);
+        /*array_push($images, [
+            'src' => $imagesHelper->generateUrlImage($this->src, '/trim/200/113/'),
+            'width' => '200px'
+        ]);*/
 
         return $images;
     }
@@ -107,7 +131,7 @@ class LazyImage extends Component
      */
     public function internalImage()
     {
-        return Str::contains($this->src, env('IMAGES_SERVER', 'https://fotos.perfil.com'));
+        return ! $this->external_image || Str::contains($this->src, env('IMAGES_SERVER', 'https://fotos.perfil.com'));
     }
 
     /**

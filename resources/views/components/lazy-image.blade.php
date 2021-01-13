@@ -4,7 +4,7 @@
             @if ($loop->last)
                 <img alt="{{ $alt }}" class="{{ $class }} lazyload" src="{{ $loadingImage() }}" data-src="{{ $image['src'] }}">
             @else
-                <source media="(min-width: {{ $image['width'] }})" data-srcset="{{ $image['src'] }}" />
+                <source media="(max-width: {{ $image['width'] }})" data-srcset="{{ $image['src'] }}" />
             @endif
         @endforeach
     </picture>

@@ -22,7 +22,7 @@
 								<article class="articulo-columnista">
 									<a href="{{ $new['permalink'] }}">
 										<figure>
-											<img src="https://fotos.perfil.com/autores/default/{{ $new['author']['username'] }}_50.jpg" alt="{{ $new['author']['fullname'] }}" />
+											<img alt="{{ $new['author']['fullname'] }}" class="lazyload" src="https://fotos.perfil.com/autores/default/{{ $new['author']['username'] }}_50.jpg">
 										</figure>
 
 										{{--

@@ -19,8 +19,12 @@
                     <article class="articulo decobertura">
                         <figure>
                             <a href="{{ $new['permalink'] }}">
-                                <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
-                                @if($key != 0)<p class="headline">{{ $new['headline'] }}</p>@endif
+                                @if ($loop->first)
+                                    <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+                                    <p class="headline">{{ $new['headline'] }}</p>
+                                @else
+                                    <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="300" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+                                @endif
                             </a>
                         </figure>
 
@@ -56,7 +60,7 @@
                     <article class="articulo decobertura">
                         <figure>
                             <a href="{{ $new['permalink'] }}">
-                                <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" />
+                                <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="300" />
                                 <p class="headline">{{ $new['headline'] }}</p>
                             </a>
                         </figure>
