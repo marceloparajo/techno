@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--
-Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
-@yield('page-info')
--->
+
 <html lang="{{ env('APP_TIME_LANGUAGE', 'en') }}" @yield('structured-data-type')>
     <head>
         <meta charset="utf-8">
@@ -10,6 +7,11 @@ Version: {{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}
         @shared()
         {{--<meta http-equiv="Refresh" content="600" />--}}
         <meta name="description" content="{{ isset($page_description) ? $page_description : env('SITE_DESCRIPTION', '') }}">
+
+        {{-- Page info --}}
+        <meta name="page-version" content="{{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}">
+        @yield('page-info')
+        {{-- /Page info --}}
 
         {{-- Ads --}}
         <meta name="ads-sec" content="@yield('ads-sec', 'articulo')">
