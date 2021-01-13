@@ -1,21 +1,3 @@
-@inject('imageHelper', "\App\Http\Helpers\ImageHelper")
-
-@php
-    switch (count($noticias)) {
-        case '1':
-            $relacionadasGroupClass = "groupxUno";
-            break;
-        case '2':
-            $relacionadasGroupClass = "groupxDos";
-            break;
-        case '3':
-            $relacionadasGroupClass = "groupxTres";
-            break;
-        default:
-            $relacionadasGroupClass = "group";
-    }
-@endphp
-
 <div class="noticias-relacionadas">
     <h6>{{ __('related news') }}</h6>
     <div class="related-news">
@@ -23,7 +5,7 @@
             <article class="related-new">
                 <figure class="related-img">
                     <a href="{{ $noticia['permalink'] }}" title="Read {{ $noticia['title'] }}">
-                    {!! $imageHelper->getLazyImages( $noticia['image']['srcs']['small'], 540, $noticia['image']['caption'],'img-fluid', '540x304') !!}
+                        <x-lazy-image :src="$noticia['image']['srcs']['original']" :alt="$noticia['image']['caption']" class="img-fluid" max-width="200" />
                     </a>
                 </figure>
                 <h5><a href="{{ $noticia['permalink'] }}">{{ $noticia['title'] }}</a></h5>
