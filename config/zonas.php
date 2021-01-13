@@ -124,6 +124,11 @@ return [
 		'id' => 'columnistas',
 		'template' => 'columnistas'
 	],
+
+	[
+		'id' => 'educacion',
+		'template' => 'educacion'
+	],
 	[
 		'id' => 'minuto-de-noticias',
 		'template' => 'minuto-de-noticias'
