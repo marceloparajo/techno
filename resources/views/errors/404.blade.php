@@ -6,44 +6,64 @@
 
 @section('page-title', 'No encontramos el contenido')
 
-@section('css')
-    <style type="text/css">
-        .article-link {
-            color: black
-        }
 
-        .article-link:hover {
-            text-decoration: none;
-        }
-    </style>
+
+
+
+@section('head-top')
+    <link rel="amphtml" href="{{ $amphtml?? "" }}">
 @endsection
 
-@section('body')
-    <div class="row p-0 m-0 mt-5">
-        <div class="col-12 text-center">
-            <h1>No hemos podido encontrar lo que andabas buscando.</h1>
-            <h2>Pero puede que te interese el siguiente contenido.</h2>
-        </div>
-    </div>
+@section('head-bottom')
+    @include('partials.taboola-sidebar-header')
+@endsection
 
-    <div class="row m-0 p-0 mt-3">
-        <div class="col-12 col-lg-10 offset-lg-1">
-            <div class="row">
+@section('head-css')
+    <link rel="preload" href="{{ mix('css/channels.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ mix('css/news.css') }}"></noscript>
+
+    <link rel="preload" href="{{ mix('css/channels-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ mix('css/news-responsive.css') }}"></noscript>
+@endsection
+
+@section('body-class', 'pf-channel-show')
+
+@section('js')
+    <script defer type="text/javascript" src="{{ mix('js/channels-show.js') }}"></script>
+@endsection
+
+
+
+@section('body')
+    <main class="supercontenedor">
+        <h1 class="seccion-titulo">No hemos podido encontrar lo que estabas buscando.</h1>
+
+        <div class="contenido canal">
+            <div class="cuatro-notas"> 
+
                 @foreach ($sidebarHelper->getMostViewed(null, 8) as $noticia)
-                    <div class="col-12 col-lg-3 mt-3">
-                        <a class="article-link" href="{{ $noticia['url'] }}">
-                            <article class="card" style="height: 400px;">
-                                <img src="{{ $noticia['image'] }}" class="card-img-top" alt="" style="height: 250px;">
-                                <div class="card-body">
-                                    <h4 class="card-title">{{ $noticia['title'] }}</h4>
-                                </div>
-                            </article>
-                        </a>
-                    </div>
+                    <article class="articulo">
+                        <figure>
+                            <a class="article-link" href="{{ $noticia['url'] }}">
+                                <img src="{{ $noticia['image'] }}" class="  card-img-top" alt="" style="height: 250px;">
+                            </a>
+                        </figure>
+                        <div class="meta-content">
+                            <a class="article-link" href="{{ $noticia['url'] }}">
+                                <h4 class="card-title">{{ $noticia['title'] }}</h4>
+                            </a>
+                        </div>
+                    </article>
                 @endforeach
             </div>
         </div>
-    </div>
+
+
+
+        <div class="sidebar">
+        </div>
+
+    </main>
 
 
 @endsection
