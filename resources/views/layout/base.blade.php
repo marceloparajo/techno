@@ -62,6 +62,8 @@
         <link rel="preconnect" href="https://ad.doubleclick.net">
         <link rel="preconnect" href="https://ut.e-planning.video">
         --}}
+        <link rel="preconnect" href="https://connect.facebook.net">
+        <link rel="preconnect" href="https://libs.lavoz.com.ar">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         @yield('head-top')
 
