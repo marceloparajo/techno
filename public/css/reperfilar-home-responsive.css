@@ -624,7 +624,6 @@
 
   .supercontenedor .contenido.columnistas .box-columnista .info-columnista a .nombre-columnista {
     text-align: left;
-    overflow-x: hidden;
   }
 
   .supercontenedor .contenido.columnistas .box-columnista .articulo {
@@ -745,6 +744,8 @@
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
+    padding-left: 10px;
+    border-left: 1px solid white;
   }
 
   .supercontenedor .contenido.columnistas .box-columnista:nth-child(2) .articulo a .fechayhora,
@@ -780,6 +781,8 @@
     -webkit-box-pack: strech;
         -ms-flex-pack: strech;
             justify-content: strech;
+    padding-left: 10px;
+    border-left: 1px solid #d4d4d4;
   }
 
   .supercontenedor .contenido.columnistas .box-columnista.main-columnista .articulo a {
@@ -827,8 +830,6 @@
             flex: 1 1 0;
     border-top: none;
     padding-top: 0;
-    padding-left: 10px;
-    border-left: 1px solid #d4d4d4;
   }
 
   .supercontenedor .contenido.columnistas .box-columnista.main-columnista .articulo:last-of-type a p.headline {

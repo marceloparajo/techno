@@ -1,5 +1,5 @@
 @if (isset($news) && count($news) > 0)
-	<div class="container revistas mb-4">
+	<div class="container revistas">
 		<h6>Revista</h6>
 
 			<div class="notas-revistas">

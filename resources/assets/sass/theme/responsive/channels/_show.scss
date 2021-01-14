@@ -399,7 +399,6 @@
 						}
 						.nombre-columnista {
 							text-align: left;
-							overflow-x: hidden;
 						}
 					}
 				}
@@ -498,6 +497,8 @@
 					}
 					.articulo {
 						flex: 1 1 0;
+						padding-left: 10px;
+						border-left: 1px solid white;
 						a {
 							.fechayhora {
 								border-top: 1px solid white;
@@ -522,6 +523,8 @@
 					}
 					.articulo {
 						justify-content: strech;
+						padding-left: 10px;
+						border-left: 1px solid $linea;
 						a {
 							display: flex;
 							flex-direction: column;
@@ -549,8 +552,6 @@
 							flex: 1 1 0;
 							border-top: none;
 							padding-top: 0;
-							padding-left: 10px;
-							border-left: 1px solid $linea;
 							a {
 								p.headline {
 									display: none;

@@ -1,5 +1,22 @@
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<div class="contenido columnistas">
 
 			<div class="box-columnista main-columnista">
