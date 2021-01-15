@@ -32,7 +32,7 @@
 
 	<main class="supercontenedor">
 
-		<h1 class="seccion-titulo">{{ $sectionTitle }}</h1>
+		<h1 class="seccion-titulo {{ $sectionTitle }}">{{ $sectionTitle }}</h1>
 
 
 {{-- TODO: Sacar el if else que pregunta si es seccion columnistas --}}

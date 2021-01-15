@@ -107,3 +107,23 @@ figure img {
 .embed-responsive-16by9 {
 	padding-bottom: 56.25%;
 }
+
+
+//TIPOGRAFIAS
+
+.perfil-noticia {
+	.supercontenedor {
+		.articulo-header {
+			.h1 {font-family: $font-serif}
+			.h2 {font-family: $font-serif}
+		}
+		.main-article {
+			.news-body {
+				.fecha-autor {
+					.autor {font-family: $font-serif}
+				}
+				.news-content {font-family: $font-serif}
+			}
+		}
+	}
+}
