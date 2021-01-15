@@ -542,6 +542,25 @@
 				}
 			}
 		}
+		//TODO BLOOMBERG PASAR A UNA HOJA DE ESTILOS QUE CARGUE SOLO EN BLOOMBERG
+		&.bloomberg {
+			.articulo-header {
+				h2.headline {
+					&:after {
+						content: '';
+						height: 60px;
+						width: 100%;
+						margin: 20px 0 0 0;
+						box-sizing: border-box;
+						background-image: url(../../../img/bloomberg/bloomberg_nota.png);
+						background-repeat: no-repeat;
+						background-position: 0 0;
+						clear: both;
+						display: block;
+					}
+				}
+			}
+		}
 	}
 	.float-button {
 		position:fixed;
