@@ -87,3 +87,45 @@
 		}
 	}
 }
+
+.coronavirus {
+	@include media-breakpoint-only(sm) {
+		article {
+			a {
+				h2 {
+					font-size: 1.3rem;
+				}
+				p {
+					font-size: 1rem;
+					margin: 5px 0;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		article {
+			font-family: $font-condensada;
+			margin-bottom: 0;
+			a {
+				padding: 0;
+				h2 {
+					margin: 0;
+					font-size: 1.3rem;
+					font-weight: 400;
+					color: $linea;
+				}
+				p {
+					font-size: 1.3rem;
+					margin: 0;
+					br {
+						display: none;
+					}
+					.pipe {
+						display: inline-block;
+						margin: 0 10px;;
+					}
+				}
+			}			
+		}
+	}
+}

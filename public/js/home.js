@@ -1,1 +1,676 @@
-!function(t){var e={};function n(o){if(e[o])return e[o].exports;var s=e[o]={i:o,l:!1,exports:{}};return t[o].call(s.exports,s,s.exports,n),s.l=!0,s.exports}n.m=t,n.c=e,n.d=function(t,e,o){n.o(t,e)||Object.defineProperty(t,e,{configurable:!1,enumerable:!0,get:o})},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="/",n(n.s=1)}({1:function(t,e,n){t.exports=n("hjul")},hjul:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var o,s,i=n("jPrc"),l=n("tqM+"),r=(o=function(){if(null===document.getElementById("radio-ticker"))return 0;var t=document.getElementsByClassName("radio-news"),e=1;setInterval(function(){Array.from(t).forEach(function(t,e){t.style.display="none"}),t[e].style.display="block",e=e+1>=t.length?0:e+1},5e3)},s=function(){new i.a({elements_selector:".lazyload"})},{init:function(){return s(),o(),void Object(l.a)()}});document.addEventListener("DOMContentLoaded",function(){return r.init()})},jPrc:function(t,e,n){"use strict";const o=function(t){return t.getBoundingClientRect().top+window.pageYOffset-t.ownerDocument.documentElement.clientTop},s=function(t,e,n){return(e===window?window.innerHeight+window.pageYOffset:o(e)+e.offsetHeight)<=o(t)-n},i=function(t){return t.getBoundingClientRect().left+window.pageXOffset-t.ownerDocument.documentElement.clientLeft},l=function(t,e,n){const o=window.innerWidth;return(e===window?o+window.pageXOffset:i(e)+o)<=i(t)-n},r=function(t,e,n){return(e===window?window.pageYOffset:o(e))>=o(t)+n+t.offsetHeight},a=function(t,e,n){return(e===window?window.pageXOffset:i(e))>=i(t)+n+t.offsetWidth};const c=function(t,e){var n;let o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)};const u=(t,e)=>e?t.replace(/\.(jpe?g|png)/gi,".webp"):t,d="undefined"!=typeof window,h=d&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),f=d&&"classList"in document.createElement("p"),_=d&&(!(!(p=document.createElement("canvas")).getContext||!p.getContext("2d"))&&0===p.toDataURL("image/webp").indexOf("data:image/webp"));var p;const g=(t,e)=>{f?t.classList.add(e):t.className+=(t.className?" ":"")+e},m=(t,e)=>t.getAttribute("data-"+e),w=t=>(t=t,b="was-processed",E="true",L="data-"+b,void(null!==E?t.setAttribute(L,E):t.removeAttribute(L)));var v,b,E,L;const y=t=>"true"===m(t,"was-processed"),T=function(t,e,n,o){for(let s,i=0;s=t.children[i];i+=1)if("SOURCE"===s.tagName){let t=m(s,n);O(s,e,t,o)}},O=function(t,e,n,o){n&&t.setAttribute(e,u(n,o))},S={IMG:(t,e)=>{const n=_&&e.to_webp,o=e.data_srcset,s=t.parentNode;s&&"PICTURE"===s.tagName&&T(s,"srcset",o,n);const i=m(t,e.data_sizes);O(t,"sizes",i);const l=m(t,o);O(t,"srcset",l,n);const r=m(t,e.data_src);O(t,"src",r,n)},IFRAME:(t,e)=>{const n=m(t,e.data_src);O(t,"src",n)},VIDEO:(t,e)=>{const n=e.data_src,o=m(t,n);T(t,"src",n),O(t,"src",o),t.load()}},H=(t,e)=>{const n=t.tagName,o=S[n];o?o(t,e):((t,e)=>{const n=_&&e.to_webp,o=m(t,e.data_src);if(o){let e=u(o,n);t.style.backgroundImage=`url("${e}")`}})(t,e)},k=function(t,e){t&&t(e)},I=(t,e,n)=>{t.addEventListener(e,n)},N=(t,e,n)=>{t.removeEventListener(e,n)},z=(t,e,n)=>{N(t,"load",e),N(t,"loadeddata",e),N(t,"error",n)},x=function(t,e,n){const o=e?n.class_loaded:n.class_error,s=e?n.callback_load:n.callback_error,i=t.target;((t,e)=>{f?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")})(i,n.class_loading),g(i,o),k(s,i)},A=(t,e)=>{const n=s=>{x(s,!0,e),z(t,n,o)},o=s=>{x(s,!1,e),z(t,n,o)};((t,e,n)=>{I(t,"load",e),I(t,"loadeddata",e),I(t,"error",n)})(t,n,o)},C=["IMG","IFRAME","VIDEO"];const j=(t,e)=>{for(;e.length;)t.splice(e.pop(),1)},D=function(t){this._settings=Object.assign({},(()=>({elements_selector:"img",container:window,threshold:300,throttle:150,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",class_loading:"loading",class_loaded:"loaded",class_error:"error",class_initial:"initial",skip_invisible:!0,callback_load:null,callback_error:null,callback_set:null,callback_processed:null,callback_enter:null,to_webp:!1}))(),t),this._queryOriginNode=this._settings.container===window?document:this._settings.container,this._previousLoopTime=0,this._loopTimeout=null,this._boundHandleScroll=this.handleScroll.bind(this),this._isFirstLoop=!0,window.addEventListener("resize",this._boundHandleScroll),this.update()};D.prototype={_loopThroughElements:function(t){const e=this._settings,n=this._elements,o=n?n.length:0;let i,c=[],u=this._isFirstLoop;if(u&&(this._isFirstLoop=!1),0!==o){for(i=0;i<o;i++){let o=n[i];e.skip_invisible&&null===o.offsetParent||(!h&&!t&&(o=o,f=e.container,_=e.threshold,s(o,f,_)||r(o,f,_)||l(o,f,_)||a(o,f,_))||(u&&g(o,e.class_initial),this.load(o),c.push(i)))}var d,f,_;j(n,c)}else this._stopScrollHandler()},_purgeElements:function(){const t=this._elements,e=t.length;let n,o=[];for(n=0;n<e;n++)y(t[n])&&o.push(n);j(t,o)},_startScrollHandler:function(){this._isHandlingScroll||(this._isHandlingScroll=!0,this._settings.container.addEventListener("scroll",this._boundHandleScroll))},_stopScrollHandler:function(){this._isHandlingScroll&&(this._isHandlingScroll=!1,this._settings.container.removeEventListener("scroll",this._boundHandleScroll))},handleScroll:function(){const t=this._settings.throttle;if(0!==t){let e=Date.now(),n=t-(e-this._previousLoopTime);n<=0||n>t?(this._loopTimeout&&(clearTimeout(this._loopTimeout),this._loopTimeout=null),this._previousLoopTime=e,this._loopThroughElements()):this._loopTimeout||(this._loopTimeout=setTimeout(function(){this._previousLoopTime=Date.now(),this._loopTimeout=null,this._loopThroughElements()}.bind(this),n))}else this._loopThroughElements()},loadAll:function(){this._loopThroughElements(!0)},update:function(){this._elements=Array.prototype.slice.call(this._queryOriginNode.querySelectorAll(this._settings.elements_selector)),this._purgeElements(),this._loopThroughElements(),this._startScrollHandler()},destroy:function(){window.removeEventListener("resize",this._boundHandleScroll),this._loopTimeout&&(clearTimeout(this._loopTimeout),this._loopTimeout=null),this._stopScrollHandler(),this._elements=null,this._queryOriginNode=null,this._settings=null},load:function(t,e){!function(t,e,n){!n&&y(t)||(k(e.callback_enter,t),C.indexOf(t.tagName)>-1&&(A(t,e),g(t,e.class_loading)),H(t,e),w(t),k(e.callback_set,t))}(t,this._settings,e)}},d&&function(t,e){if(e)if(e.length)for(let n,o=0;n=e[o];o+=1)c(t,n);else c(t,e)}(D,window.lazyLoadOptions),e.a=D},"tqM+":function(t,e,n){"use strict";e.a=function(){!function(){var t=document.getElementById("btn-toggle-menu-reperfilar"),e=document.getElementById("reperfilar-nav");if(null===t)return 0;t.addEventListener("click",function(n){n.preventDefault(),t.classList.toggle("change"),e.classList.toggle("temuestro")})}(),function(){var t=document.getElementById("hamburguesa"),e=document.getElementById("menues");if(null===t)return 0;t.addEventListener("click",function(n){n.preventDefault(),t.classList.toggle("change"),e.classList.toggle("temuestro")})}()}}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./node_modules/vanilla-lazyload/dist/lazyload.es2015.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var getDefaultSettings = () => ({
+	elements_selector: "img",
+	container: window,
+	threshold: 300,
+	throttle: 150,
+	data_src: "src",
+	data_srcset: "srcset",
+	data_sizes: "sizes",
+	class_loading: "loading",
+	class_loaded: "loaded",
+	class_error: "error",
+	class_initial: "initial",
+	skip_invisible: true,
+	callback_load: null,
+	callback_error: null,
+	callback_set: null,
+	callback_processed: null,
+	callback_enter: null,
+	to_webp: false
+});
+
+const getTopOffset = function(element) {
+	return (
+		element.getBoundingClientRect().top +
+		window.pageYOffset -
+		element.ownerDocument.documentElement.clientTop
+	);
+};
+
+const isBelowViewport = function(element, container, threshold) {
+	const fold =
+		container === window
+			? window.innerHeight + window.pageYOffset
+			: getTopOffset(container) + container.offsetHeight;
+	return fold <= getTopOffset(element) - threshold;
+};
+
+const getLeftOffset = function(element) {
+	return (
+		element.getBoundingClientRect().left +
+		window.pageXOffset -
+		element.ownerDocument.documentElement.clientLeft
+	);
+};
+
+const isAtRightOfViewport = function(element, container, threshold) {
+	const documentWidth = window.innerWidth;
+	const fold =
+		container === window
+			? documentWidth + window.pageXOffset
+			: getLeftOffset(container) + documentWidth;
+	return fold <= getLeftOffset(element) - threshold;
+};
+
+const isAboveViewport = function(element, container, threshold) {
+	const fold =
+		container === window ? window.pageYOffset : getTopOffset(container);
+	return fold >= getTopOffset(element) + threshold + element.offsetHeight;
+};
+
+const isAtLeftOfViewport = function(element, container, threshold) {
+	const fold =
+		container === window ? window.pageXOffset : getLeftOffset(container);
+	return fold >= getLeftOffset(element) + threshold + element.offsetWidth;
+};
+
+function isInsideViewport(element, container, threshold) {
+	return (
+		!isBelowViewport(element, container, threshold) &&
+		!isAboveViewport(element, container, threshold) &&
+		!isAtRightOfViewport(element, container, threshold) &&
+		!isAtLeftOfViewport(element, container, threshold)
+	);
+}
+
+/* Creates instance and notifies it through the window element */
+const createInstance = function(classObj, options) {
+	var event;
+	let eventString = "LazyLoad::Initialized";
+	let instance = new classObj(options);
+	try {
+		// Works in modern browsers
+		event = new CustomEvent(eventString, { detail: { instance } });
+	} catch (err) {
+		// Works in Internet Explorer (all versions)
+		event = document.createEvent("CustomEvent");
+		event.initCustomEvent(eventString, false, false, { instance });
+	}
+	window.dispatchEvent(event);
+};
+
+/* Auto initialization of one or more instances of lazyload, depending on the 
+    options passed in (plain object or an array) */
+function autoInitialize(classObj, options) {
+	if (!options) {
+		return;
+	}
+	if (!options.length) {
+		// Plain object
+		createInstance(classObj, options);
+	} else {
+		// Array of objects
+		for (let i = 0, optionsItem; (optionsItem = options[i]); i += 1) {
+			createInstance(classObj, optionsItem);
+		}
+	}
+}
+
+const replaceExtToWebp = (value, condition) =>
+	condition ? value.replace(/\.(jpe?g|png)/gi, ".webp") : value;
+
+const detectWebp = () => {
+	var webpString = "image/webp";
+	var canvas = document.createElement("canvas");
+
+	if (canvas.getContext && canvas.getContext("2d")) {
+		return canvas.toDataURL(webpString).indexOf(`data:${webpString}`) === 0;
+	}
+
+	return false;
+};
+
+const runningOnBrowser = typeof window !== "undefined";
+
+const isBot =
+	(runningOnBrowser && !("onscroll" in window)) ||
+	/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent);
+const supportsClassList =
+	runningOnBrowser && "classList" in document.createElement("p");
+
+const supportsWebp = runningOnBrowser && detectWebp();
+
+const addClass = (element, className) => {
+	if (supportsClassList) {
+		element.classList.add(className);
+		return;
+	}
+	element.className += (element.className ? " " : "") + className;
+};
+
+const removeClass = (element, className) => {
+	if (supportsClassList) {
+		element.classList.remove(className);
+		return;
+	}
+	element.className = element.className.
+		replace(new RegExp("(^|\\s+)" + className + "(\\s+|$)"), " ").
+		replace(/^\s+/, "").
+		replace(/\s+$/, "");
+};
+
+const dataPrefix = "data-";
+const processedDataName = "was-processed";
+const processedDataValue = "true";
+
+const getData = (element, attribute) => {
+	return element.getAttribute(dataPrefix + attribute);
+};
+
+const setData = (element, attribute, value) => {
+	var attrName = dataPrefix + attribute;
+	if (value === null) {
+		element.removeAttribute(attrName);
+		return;
+	}
+	element.setAttribute(attrName, value);
+};
+
+const setWasProcessedData = element =>
+	setData(element, processedDataName, processedDataValue);
+
+const getWasProcessedData = element =>
+	getData(element, processedDataName) === processedDataValue;
+
+const setSourcesInChildren = function(
+	parentTag,
+	attrName,
+	dataAttrName,
+	toWebpFlag
+) {
+	for (let i = 0, childTag; (childTag = parentTag.children[i]); i += 1) {
+		if (childTag.tagName === "SOURCE") {
+			let attrValue = getData(childTag, dataAttrName);
+			setAttributeIfValue(childTag, attrName, attrValue, toWebpFlag);
+		}
+	}
+};
+
+const setAttributeIfValue = function(
+	element,
+	attrName,
+	value,
+	toWebpFlag
+) {
+	if (!value) {
+		return;
+	}
+	element.setAttribute(attrName, replaceExtToWebp(value, toWebpFlag));
+};
+
+const setSourcesImg = (element, settings) => {
+	const toWebpFlag = supportsWebp && settings.to_webp;
+	const srcsetDataName = settings.data_srcset;
+	const parent = element.parentNode;
+
+	if (parent && parent.tagName === "PICTURE") {
+		setSourcesInChildren(parent, "srcset", srcsetDataName, toWebpFlag);
+	}
+	const sizesDataValue = getData(element, settings.data_sizes);
+	setAttributeIfValue(element, "sizes", sizesDataValue);
+	const srcsetDataValue = getData(element, srcsetDataName);
+	setAttributeIfValue(element, "srcset", srcsetDataValue, toWebpFlag);
+	const srcDataValue = getData(element, settings.data_src);
+	setAttributeIfValue(element, "src", srcDataValue, toWebpFlag);
+};
+
+const setSourcesIframe = (element, settings) => {
+	const srcDataValue = getData(element, settings.data_src);
+
+	setAttributeIfValue(element, "src", srcDataValue);
+};
+
+const setSourcesVideo = (element, settings) => {
+	const srcDataName = settings.data_src;
+	const srcDataValue = getData(element, srcDataName);
+
+	setSourcesInChildren(element, "src", srcDataName);
+	setAttributeIfValue(element, "src", srcDataValue);
+	element.load();
+};
+
+const setSourcesBgImage = (element, settings) => {
+	const toWebpFlag = supportsWebp && settings.to_webp;
+	const srcDataValue = getData(element, settings.data_src);
+
+	if (srcDataValue) {
+		let setValue = replaceExtToWebp(srcDataValue, toWebpFlag);
+		element.style.backgroundImage = `url("${setValue}")`;
+	}
+};
+
+const setSourcesFunctions = {
+	IMG: setSourcesImg,
+	IFRAME: setSourcesIframe,
+	VIDEO: setSourcesVideo
+};
+
+const setSources = (element, settings) => {
+	const tagName = element.tagName;
+	const setSourcesFunction = setSourcesFunctions[tagName];
+	if (setSourcesFunction) {
+		setSourcesFunction(element, settings);
+		return;
+	}
+	setSourcesBgImage(element, settings);
+};
+
+const callbackIfSet = function(callback, argument) {
+	if (callback) {
+		callback(argument);
+	}
+};
+
+const genericLoadEventName = "load";
+const mediaLoadEventName = "loadeddata";
+const errorEventName = "error";
+
+const addEventListener = (element, eventName, handler) => {
+	element.addEventListener(eventName, handler);
+};
+
+const removeEventListener = (element, eventName, handler) => {
+	element.removeEventListener(eventName, handler);
+};
+
+const addAllEventListeners = (element, loadHandler, errorHandler) => {
+	addEventListener(element, genericLoadEventName, loadHandler);
+	addEventListener(element, mediaLoadEventName, loadHandler);
+	addEventListener(element, errorEventName, errorHandler);
+};
+
+const removeAllEventListeners = (element, loadHandler, errorHandler) => {
+	removeEventListener(element, genericLoadEventName, loadHandler);
+	removeEventListener(element, mediaLoadEventName, loadHandler);
+	removeEventListener(element, errorEventName, errorHandler);
+};
+
+const eventHandler = function(event, success, settings) {
+	const className = success ? settings.class_loaded : settings.class_error;
+	const callback = success ? settings.callback_load : settings.callback_error;
+	const element = event.target;
+
+	removeClass(element, settings.class_loading);
+	addClass(element, className);
+	callbackIfSet(callback, element);
+};
+
+const addOneShotEventListeners = (element, settings) => {
+	const loadHandler = event => {
+		eventHandler(event, true, settings);
+		removeAllEventListeners(element, loadHandler, errorHandler);
+	};
+	const errorHandler = event => {
+		eventHandler(event, false, settings);
+		removeAllEventListeners(element, loadHandler, errorHandler);
+	};
+	addAllEventListeners(element, loadHandler, errorHandler);
+};
+
+const managedTags = ["IMG", "IFRAME", "VIDEO"];
+
+function revealElement(element, settings, force) {
+	if (!force && getWasProcessedData(element)) {
+		return; // element has already been processed and force wasn't true
+	}
+	callbackIfSet(settings.callback_enter, element);
+	if (managedTags.indexOf(element.tagName) > -1) {
+		addOneShotEventListeners(element, settings);
+		addClass(element, settings.class_loading);
+	}
+	setSources(element, settings);
+	setWasProcessedData(element);
+	callbackIfSet(settings.callback_set, element);
+}
+
+const removeFromArray = (elements, indexes) => {
+	while (indexes.length) {
+		elements.splice(indexes.pop(), 1);
+	}
+};
+
+/*
+ * Constructor
+ */
+
+const LazyLoad = function(instanceSettings) {
+	this._settings = Object.assign({}, getDefaultSettings(), instanceSettings);
+	this._queryOriginNode =
+		this._settings.container === window
+			? document
+			: this._settings.container;
+
+	this._previousLoopTime = 0;
+	this._loopTimeout = null;
+	this._boundHandleScroll = this.handleScroll.bind(this);
+
+	this._isFirstLoop = true;
+	window.addEventListener("resize", this._boundHandleScroll);
+	this.update();
+};
+
+LazyLoad.prototype = {
+	_loopThroughElements: function(forceDownload) {
+		const settings = this._settings,
+			elements = this._elements,
+			elementsLength = !elements ? 0 : elements.length;
+		let i,
+			processedIndexes = [],
+			isFirstLoop = this._isFirstLoop;
+
+		if (isFirstLoop) {
+			this._isFirstLoop = false;
+		}
+
+		if (elementsLength === 0) {
+			this._stopScrollHandler();
+			return;
+		}
+
+		for (i = 0; i < elementsLength; i++) {
+			let element = elements[i];
+			/* If must skip_invisible and element is invisible, skip it */
+			if (settings.skip_invisible && element.offsetParent === null) {
+				continue;
+			}
+
+			if (
+				isBot ||
+				forceDownload ||
+				isInsideViewport(
+					element,
+					settings.container,
+					settings.threshold
+				)
+			) {
+				if (isFirstLoop) {
+					addClass(element, settings.class_initial);
+				}
+				this.load(element);
+				processedIndexes.push(i);
+			}
+		}
+
+		// Removing processed elements from this._elements.
+		removeFromArray(elements, processedIndexes);
+	},
+
+	_purgeElements: function() {
+		const elements = this._elements,
+			elementsLength = elements.length;
+		let i,
+			processedIndexes = [];
+
+		for (i = 0; i < elementsLength; i++) {
+			if (getWasProcessedData(elements[i])) {
+				processedIndexes.push(i);
+			}
+		}
+		removeFromArray(elements, processedIndexes);
+	},
+
+	_startScrollHandler: function() {
+		if (!this._isHandlingScroll) {
+			this._isHandlingScroll = true;
+			this._settings.container.addEventListener(
+				"scroll",
+				this._boundHandleScroll
+			);
+		}
+	},
+
+	_stopScrollHandler: function() {
+		if (this._isHandlingScroll) {
+			this._isHandlingScroll = false;
+			this._settings.container.removeEventListener(
+				"scroll",
+				this._boundHandleScroll
+			);
+		}
+	},
+
+	handleScroll: function() {
+		const throttle = this._settings.throttle;
+
+		if (throttle !== 0) {
+			let now = Date.now();
+			let remainingTime = throttle - (now - this._previousLoopTime);
+			if (remainingTime <= 0 || remainingTime > throttle) {
+				if (this._loopTimeout) {
+					clearTimeout(this._loopTimeout);
+					this._loopTimeout = null;
+				}
+				this._previousLoopTime = now;
+				this._loopThroughElements();
+			} else if (!this._loopTimeout) {
+				this._loopTimeout = setTimeout(
+					function() {
+						this._previousLoopTime = Date.now();
+						this._loopTimeout = null;
+						this._loopThroughElements();
+					}.bind(this),
+					remainingTime
+				);
+			}
+		} else {
+			this._loopThroughElements();
+		}
+	},
+
+	loadAll: function() {
+		this._loopThroughElements(true);
+	},
+
+	update: function() {
+		// Converts to array the nodeset obtained querying the DOM from _queryOriginNode with elements_selector
+		this._elements = Array.prototype.slice.call(
+			this._queryOriginNode.querySelectorAll(
+				this._settings.elements_selector
+			)
+		);
+		this._purgeElements();
+		this._loopThroughElements();
+		this._startScrollHandler();
+	},
+
+	destroy: function() {
+		window.removeEventListener("resize", this._boundHandleScroll);
+		if (this._loopTimeout) {
+			clearTimeout(this._loopTimeout);
+			this._loopTimeout = null;
+		}
+		this._stopScrollHandler();
+		this._elements = null;
+		this._queryOriginNode = null;
+		this._settings = null;
+	},
+
+	load: function(element, force) {
+		revealElement(element, this._settings, force);
+	}
+};
+
+/* Automatic instances creation if required (useful for async script loading) */
+if (runningOnBrowser) {
+	autoInitialize(LazyLoad, window.lazyLoadOptions);
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (LazyLoad);
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/home.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vanilla_lazyload__ = __webpack_require__("./node_modules/vanilla-lazyload/dist/lazyload.es2015.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_header_menu__ = __webpack_require__("./resources/assets/js/modules/header-menu.js");
+
+
+
+var SnippetHome = function () {
+
+	var initialize = function initialize() {
+		initLazyload();
+		initRadioTicker();
+		Object(__WEBPACK_IMPORTED_MODULE_1__modules_header_menu__["a" /* default */])();
+	};
+
+	var initRadioTicker = function initRadioTicker() {
+		var _container = document.getElementById('radio-ticker');
+
+		if (_container === null) return 0;
+
+		var _ticker_elements = document.getElementsByClassName('radio-news');
+		var tickerIndex = 1;
+
+		setInterval(function () {
+			Array.from(_ticker_elements).forEach(function (el, index) {
+				el.style.display = 'none';
+			});
+
+			_ticker_elements[tickerIndex].style.display = 'block';
+			tickerIndex = tickerIndex + 1 >= _ticker_elements.length ? 0 : tickerIndex + 1;
+		}, 5000);
+	};
+
+	var initLazyload = function initLazyload() {
+		var lazyLoad = new __WEBPACK_IMPORTED_MODULE_0_vanilla_lazyload__["a" /* default */]({
+			elements_selector: '.lazyload'
+		});
+	};
+
+	return {
+		init: function init() {
+			return initialize();
+		}
+	};
+}();
+
+document.addEventListener('DOMContentLoaded', function () {
+	return SnippetHome.init();
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/modules/header-menu.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var handleToggleReperfilarMenu = function handleToggleReperfilarMenu() {
+	var _button = document.getElementById('btn-toggle-menu-reperfilar');
+	var _container = document.getElementById('reperfilar-nav');
+
+	if (_button === null) return 0;
+
+	_button.addEventListener('click', function (e) {
+		e.preventDefault();
+
+		_button.classList.toggle('change');
+		_container.classList.toggle('temuestro');
+	});
+};
+
+var handleToggleMainMenu = function handleToggleMainMenu() {
+	var _button = document.getElementById('hamburguesa');
+	var _container = document.getElementById('menues');
+
+	if (_button === null) return 0;
+
+	_button.addEventListener('click', function (e) {
+		e.preventDefault();
+
+		_button.classList.toggle('change');
+		_container.classList.toggle('temuestro');
+	});
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+	handleToggleReperfilarMenu();
+	handleToggleMainMenu();
+});
+
+/***/ }),
+
+/***/ 1:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./resources/assets/js/home.js");
+
+
+/***/ })
+
+/******/ });
