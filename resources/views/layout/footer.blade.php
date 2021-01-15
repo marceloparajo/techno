@@ -3,16 +3,16 @@
 <footer class="main-footer super-contenedor">
 	<figure>
 		<a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}" itemprop="url">
-			<img src="{{ asset('img/logo_perfil.svg') }}">
+			<img src="{{ asset('img/logo_perfil.svg') }}" style="width: 120px; height: 27px;">
 		</a>
 	</figure>
 	<div class="footer-redes">
-		<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" class="link-social-facebook mr-3" itemprop="sameAs"><img src="/images/glyph/footer/facebook.svg" /></a>
-		<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" class="link-social-twitter mr-3" itemprop="sameAs"><img src="/images/glyph/footer/twitter.svg" /></a>
-		<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" class="link-social-youtube mr-3" itemprop="sameAs"><img src="/images/glyph/footer/youtube.svg" /></a>
-		<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" class="link-social-instagram mr-3" itemprop="sameAs"><img src="/images/glyph/footer/instagram.svg" /></a>
-		<a href="{{ route('feeds.lastposts') }}" target="_blank" class="link-social-rss mr-3"><img src="/images/glyph/footer/rss.svg" /></a>
-		<a href="https://www.{{ env('APP_NAME', '') }}.com.ar/sitemap" target="_blank" class="link-social-sitemap"><img src="/images/glyph/footer/sitemap.svg" /></a>
+		<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" class="link-social-facebook mr-3" itemprop="sameAs"><img src="/images/glyph/footer/facebook.svg" style="width: 20px; height: 19px;"/></a>
+		<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" class="link-social-twitter mr-3" itemprop="sameAs"><img src="/images/glyph/footer/twitter.svg" style="width: 20px; height: 16px;"/></a>
+		<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" class="link-social-youtube mr-3" itemprop="sameAs"><img src="/images/glyph/footer/youtube.svg" style="width: 20px; height: 14px;" /></a>
+		<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" class="link-social-instagram mr-3" itemprop="sameAs"><img src="/images/glyph/footer/instagram.svg" style="width: 20px; height: 20px;" /></a>
+		<a href="{{ route('feeds.lastposts') }}" target="_blank" class="link-social-rss mr-3"><img src="/images/glyph/footer/rss.svg" style="width: 17px; height: 17px;" /></a>
+		<a href="https://www.{{ env('APP_NAME', '') }}.com.ar/sitemap" target="_blank" class="link-social-sitemap"><img src="/images/glyph/footer/sitemap.svg" style="width: 20px; height: 15px;" /></a>
 	</div>
 	<nav class="nav-footer">
 		<ul class="footer-revistas">

@@ -2,7 +2,7 @@
     <picture>
         @foreach ($images() as $image)
             @if ($loop->last)
-                <img alt="{{ $alt }}" class="{{ $class }} lazyload" src="{{ $loadingImage() }}" data-src="{{ $image['src'] }}">
+                <img alt="{{ $alt }}" class="{{ $class }} lazyload" src="{{ $loadingImage() }}" data-src="{{ $image['src'] }}" style="width: 100%">
             @else
                 <source media="(max-width: {{ $image['width'] }})" data-srcset="{{ $image['src'] }}" />
             @endif

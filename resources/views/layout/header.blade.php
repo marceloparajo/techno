@@ -16,7 +16,7 @@
 		<div class="buscador" id="header-search">
 			<form method="get" action="{{ route('search.index') }}">
 				<input class="form-control" name="q" type="text" placeholder="{{ __('search') }}" aria-label="{{ __('search') }}" value="{{ Request::get('q') }}">
-				<button type="submit" class="btn"><img src="/images/glyph/search.svg"></button>
+				<button type="submit" class="btn"><img src="/images/glyph/search.svg" style="width: 13px; height: 13px;"></button>
 			</form>
 		</div>
 	</div>
@@ -32,7 +32,7 @@
 			</div>
 			<figure>
 				<a href="/">
-					<img src="{{ asset('img/logo_perfil.svg') }}">
+					<img src="{{ asset('img/logo_perfil.svg') }}" style="width: 170px; height: 38px;F">
 				</a>
 			</figure>
 			<nav class="menu-primario">
@@ -54,8 +54,8 @@
 		</div><!-- elisologo -->
 		<div class="radio-perfil">
 			<a href="//radio.perfil.com">
-				<img src="/images/glyph/radio-play.svg" class="radio-play">
-				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil"><span>FM 101.9</span>
+				<img src="/images/glyph/radio-play.svg" class="radio-play" style="width: 22px; height: 22px;">
+				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil" style="width: 100px; height: 9px;"><span>FM 101.9</span>
 			</a>
 		</div>
 		<div id="paywall-login-container" class="pw-suscripcion">
@@ -67,7 +67,7 @@
 		<nav id="menues" class="">
 			<ul>
 				<li><a href="/ultimo-momento/">Último momento</a></li>
-				<li><a><img src="/images/glyph/chevron.svg" class="chevron">Temas de hoy</a>
+				<li><a><img src="/images/glyph/chevron.svg" class="chevron" style="width: 6px; height: 10px;">Temas de hoy</a>
 					<ul>
 					@foreach ($menuHelper->getMenuItems('temas') as $item)
 						<li>
@@ -78,7 +78,7 @@
 					@endforeach
 					</ul>
 				</li>
-				<li><a><img src="/images/glyph/chevron.svg" class="chevron" >Secciones</a>
+				<li><a><img src="/images/glyph/chevron.svg" class="chevron" style="width: 6px; height: 10px;">Secciones</a>
 					<ul>
 						@foreach ($menuHelper->getMenuItems('principal') as $item)
 						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">{{ $item['text'] }}</a></li>
@@ -86,7 +86,7 @@
 					</ul>
 				</li>
 
-				<li><a><img src="/images/glyph/chevron.svg" class="chevron" >Revistas</a>
+				<li><a><img src="/images/glyph/chevron.svg" class="chevron" style="width: 6px; height: 10px;">Revistas</a>
 					<ul>
 					@foreach ($menuHelper->getMenuItems('revistas') as $item)
 						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">{{ $item['text'] }}</a></li>
