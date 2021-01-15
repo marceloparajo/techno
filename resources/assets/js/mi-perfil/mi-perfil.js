@@ -139,7 +139,7 @@ window.pw_render_bottom_socket = () => {
 				hours: periodicity
 			})
 
-			if (compareAsc(new Date(), Date.parse(border_date)))
+			if (compareAsc(Date.parse(border_date), new Date()))
 				show = true
 		} else
 			show = true
