@@ -127,6 +127,9 @@ window.pw_render_bottom_socket = () => {
 
 	if (! paywallConfig.enableSocket) return false
 
+	// Si el usuario tiene email de la empresa, no ejecuto esta acción
+	if (paywall.auth.isLogged() && user.email.indexOf('@perfil.com') > -1) return 0
+
 	if (!paywall.auth.isLogged() || !user.subscribed) {
 		const last_display = Cookies.get('pw_bottom_socket_last_display_n', {domain: window.paywallConfig.cookieDomain})
 		let show = false
@@ -139,7 +142,7 @@ window.pw_render_bottom_socket = () => {
 				hours: periodicity
 			})
 
-			if (compareAsc(Date.parse(border_date), new Date()))
+			if (! compareAsc(Date.parse(border_date), new Date()))
 				show = true
 		} else
 			show = true
