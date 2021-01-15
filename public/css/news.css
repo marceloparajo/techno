@@ -2464,8 +2464,14 @@
   color: #343a40;
   text-decoration: none;
   background: #f1f1f1;
+  border: 1px solid #d4d4d4;
   padding: 3px .5em;
   border-radius: 3px;
+}
+
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .tags ul li a:hover {
+  color: #171717;
+  background: white;
 }
 
 .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .tags ul li:before {
@@ -2565,20 +2571,6 @@
 
 .perfil-noticia .supercontenedor .container .main-article .news-body .galeria-imagenes a img {
   width: 100%;
-}
-
-.perfil-noticia .supercontenedor.bloomberg .articulo-header h2.headline:after {
-  content: '';
-  height: 60px;
-  width: 100%;
-  margin: 20px 0 0 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-image: url(/images/bloomberg_nota.png?c086fdc344accda944c0dc11ae6c80e5);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  clear: both;
-  display: block;
 }
 
 .perfil-noticia .float-button {
@@ -3157,5 +3149,44 @@
     grid-area: tl;
     border-bottom: none;
   }
+}
+
+.perfil-noticia .supercontenedor.bloomberg .articulo-header .hat {
+  color: #00bbe9;
+}
+
+.perfil-noticia .supercontenedor.bloomberg .articulo-header h2.headline {
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+  color: #969696;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.perfil-noticia .supercontenedor.bloomberg .articulo-header h2.headline:after {
+  content: '';
+  height: 60px;
+  width: 100%;
+  margin: 20px 0 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(/images/bloomberg_nota.png?c086fdc344accda944c0dc11ae6c80e5);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  clear: both;
+  display: block;
+}
+
+.perfil-noticia .supercontenedor.bloomberg .container .main-article .news-body .news-content p a,
+.perfil-noticia .supercontenedor.bloomberg .container .main-article .news-body .news-content ul a,
+.perfil-noticia .supercontenedor.bloomberg .container .main-article .news-body .news-content ol a,
+.perfil-noticia .supercontenedor.bloomberg .container .main-article .news-body .news-content li a,
+.perfil-noticia .supercontenedor.bloomberg .container .main-article .news-body .news-content b a,
+.perfil-noticia .supercontenedor.bloomberg .container .main-article .news-body .news-content strong a {
+  color: #00bbe9;
+}
+
+.perfil-noticia .supercontenedor.bloomberg .container .main-article .news-body .news-content .previous_news ul a,
+.perfil-noticia .supercontenedor.bloomberg .container .main-article .news-body .news-content .previous_news li a {
+  color: #343a40;
 }
 

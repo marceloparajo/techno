@@ -111,6 +111,10 @@
     padding: 0 0 5px 0;
   }
 
+  .supercontenedor h1.seccion-titulo.Bloomberg {
+    background-position: 0 0;
+  }
+
   .supercontenedor .contenido.canal .autor-pagina,
   .supercontenedor .contenido.autor .autor-pagina {
     margin: 0 0 20px 0;
@@ -203,6 +207,13 @@
   .supercontenedor .contenido.canal .cuatro-notas .articulo:first-of-type .meta-content a h2,
   .supercontenedor .contenido.autor .cuatro-notas .articulo:first-of-type .meta-content a h2 {
     font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1020px) {
+  .supercontenedor h1.seccion-titulo.Bloomberg {
+    background-position: 0 -78px;
+    height: 50px;
   }
 }
 

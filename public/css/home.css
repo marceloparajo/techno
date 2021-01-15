@@ -1996,8 +1996,8 @@
 
 .articulo .meta-content a h2 {
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  font-size: 1.1rem;
-  font-size: 5vw;
+  font-size: 1.2rem;
+  font-size: 5.4vw;
   font-weight: 500;
   color: #171717;
   line-height: 1em;
@@ -2141,13 +2141,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
-  padding: 0;
-}
-
-.contenedor-general .destacada .articulo.nota-1 .meta-content h2,
-.contenedor-general .destacada .articulo.nota-2 .meta-content h2 {
-  font-size: 1.2rem;
-  font-size: 5.4vw;
+  padding: 0 10px 0 0;
 }
 
 .contenedor-general .destacada .articulo.nota-0 {

@@ -1996,8 +1996,8 @@
 
 .articulo .meta-content a h2 {
   font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
-  font-size: 1.1rem;
-  font-size: 5vw;
+  font-size: 1.2rem;
+  font-size: 5.4vw;
   font-weight: 500;
   color: #171717;
   line-height: 1em;
@@ -2110,6 +2110,17 @@
   padding: 0 0 5px 10px;
   border-bottom: 1px solid #d4d4d4;
   width: 100%;
+}
+
+.supercontenedor h1.seccion-titulo.Bloomberg {
+  text-indent: -9999px;
+  display: block;
+  clear: both;
+  height: 26px;
+  text-indent: -9999px;
+  background-image: url(/images/bloomberg_menu.png?fcafc99b379ae271d21b337f7f2acb1e);
+  background-repeat: no-repeat;
+  background-position: 10px 0;
 }
 
 .supercontenedor .contenido.canal .autor-pagina,
@@ -2257,6 +2268,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-top: none;
 }
 
 .supercontenedor .contenido.canal .cuatro-notas .articulo:first-of-type figure,

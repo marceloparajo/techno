@@ -12,6 +12,18 @@
 		padding: 0 0 5px 10px;
 		border-bottom: 1px solid $linea;
 		width: 100%;
+		&.Bloomberg {
+			text-indent: -9999px;
+			display: block;
+			clear: both;
+			height: 26px;
+			text-indent: -9999px;
+			background:{
+				image: url('../../../img/bloomberg_menu.png');
+				repeat: no-repeat;
+				position: 10px 0;
+			}
+		}
 	}
 	.contenido.canal,
 	.contenido.autor {
@@ -118,6 +130,7 @@
 				}
 				&:first-of-type {
 					flex-direction: column;
+					border-top: none;
 					figure {
 						flex-basis: auto;
 					}
