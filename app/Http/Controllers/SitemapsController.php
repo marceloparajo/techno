@@ -14,6 +14,9 @@ use App\Http\Helpers\ParseHelper;
 use App\Http\Helpers\SimpleXMLExtended;
 use Carbon\Carbon;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use SimpleXMLElement;
 use Spatie\ArrayToXml\ArrayToXml;
@@ -42,7 +45,7 @@ class SitemapsController extends Controller
     }
 
     /**
-     * @return mixed
+     * @return Application|ResponseFactory|Response
      */
     public function showGoogleNewsIndex()
     {
@@ -76,14 +79,15 @@ class SitemapsController extends Controller
             $sitemap->addChild('lastmod', $item['lastmod']);
         }
 
-        return response($xml->asXML(), 200)->header('Content-Type', 'text/xml');
+
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=300, public']);
     }
 
     /**
      * @param Int $year
      * @param Int $month
      * @param Int $day
-     * @return mixed
+     * @return Application|ResponseFactory|Response
      */
     public function showGoogleNewsDay(Int $year, Int $month, Int $day)
     {
@@ -117,11 +121,11 @@ class SitemapsController extends Controller
             $news->addChild('news:keywords', $post['tags']);
         }
 
-        return response($xml->asXML(), 200)->header('Content-Type', 'text/xml');
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=60, public']);
     }
 
     /**
-     * @return mixed
+     * @return Application|ResponseFactory|Response
      * @throws FileNotFoundException
      */
     public function showGoogleNewsVideos()
@@ -156,11 +160,11 @@ class SitemapsController extends Controller
             }
         }
 
-        return response($xml->asXML(), 200)->header('Content-Type', 'text/xml');
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=60, public']);
     }
 
     /**
-     * @return mixed
+     * @return Application|ResponseFactory|Response
      * @throws FileNotFoundException
      */
     public function showIndex()
@@ -201,11 +205,11 @@ class SitemapsController extends Controller
         $sitemap = $xml->addChild('sitemap');
         $sitemap->addChild('loc', route('sitemaps.channels'));
 
-        return response($xml->asXML(), 200)->header('Content-Type', 'text/xml');
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=60, public']);
     }
 
     /**
-     * @return mixed
+     * @return Application|ResponseFactory|Response
      * @throws FileNotFoundException
      */
     public function showChannels()
@@ -229,13 +233,13 @@ class SitemapsController extends Controller
             $url->addChild('changefreq', 'weekly');
         }
 
-        return response($xml->asXML(), 200)->header('Content-Type', 'text/xml');
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=60, public']);
     }
 
     /**
      * @param Int $year
      * @param Int $month
-     * @return mixed
+     * @return Application|ResponseFactory|Response
      * @throws FileNotFoundException
      */
     public function showMonth(Int $year, Int $month)
@@ -260,6 +264,6 @@ class SitemapsController extends Controller
             $url->addChild('priority', $item['priority']);
         }
 
-        return response($xml->asXML(), 200)->header('Content-Type', 'text/xml');
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=300, public']);
     }
 }

@@ -4,21 +4,21 @@
 
 @section('ads-sec', 'seccion')
 
-@section('head-top')
-	<link rel="amphtml" href="{{ $amphtml?? "" }}">
-@endsection
-
-@section('head-bottom')
-	@include('partials.taboola-sidebar-header')
-@endsection
-
 @section('body-class', 'pf-channel-show')
+
+@section('head-css')
+	<link rel="stylesheet" href="{{ mix('css/channels-high.css') }}">
+
+	<link rel="preload" href="{{ mix('css/channels-low.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ mix('css/channels-low.css') }}"></noscript>
+
+	<link rel="preload" href="{{ mix('css/channels-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ mix('css/channels-responsive.css') }}"></noscript>
+@endsection
 
 @section('js')
 	<script type="text/javascript" src="{{ mix('js/channels-show.js') }}"></script>
 @endsection
-
-
 
 @section('body')
 
