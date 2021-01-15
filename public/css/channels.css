@@ -2088,6 +2088,120 @@
   font-size: 7.2vw;
 }
 
+.supercontenedor .contenido.columnistas {
+  width: 100%;
+}
+
+.supercontenedor .contenido.columnistas .info-columnista a figure {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #656565;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista {
+  margin: 10px;
+  padding: 10px 10px 0 10px;
+  border: 1px solid #d4d4d4;
+  -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+}
+
+.supercontenedor .contenido.columnistas .box-columnista.main-columnista {
+  border: none;
+  padding: 10px;
+  background: white;
+  -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista .info-columnista {
+  margin: 0 0 10px 0;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista .info-columnista a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista .info-columnista a figure {
+  -ms-flex-preferred-size: 50px;
+      flex-basis: 50px;
+  margin: 0 10px 0 0;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista .info-columnista a .nombre-columnista {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  margin: auto 0;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  font-size: 1rem;
+  font-size: 5vw;
+  font-weight: 500;
+  color: #171717;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista .articulo {
+  padding: 10px 0;
+  border-top: 1px solid #d4d4d4;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista .articulo a .hat {
+  font-family: "Roboto", Helvetica, Arial, Sans-serif;
+  font-size: .9rem;
+  font-size: 4vw;
+  font-weight: bold;
+  line-height: .8em;
+  color: #557c9c;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista .articulo a h2 {
+  font-size: 1.6rem;
+  font-size: 7vw;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  font-weight: 500;
+  font-letter-spacing: -0.02em;
+  line-height: 1em;
+  color: #171717;
+  margin: 0 0 10px 0;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista .articulo a p.headline {
+  font-size: 0.9rem;
+  font-size: 4vw;
+  font-weight: normal;
+  color: #343a40;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista .articulo a .fechayhora {
+  font-size: .8rem;
+  font-size: 3.5vw;
+  display: block;
+  text-transform: uppercase;
+  padding-top: 10px;
+  color: #343a40;
+}
+
+.supercontenedor .contenido.columnistas .box-columnista:nth-child(2),
+.supercontenedor .contenido.columnistas .box-columnista:nth-child(3),
+.supercontenedor .contenido.columnistas .box-columnista:nth-child(5) {
+  border: none;
+  background: #dee0e2;
+  padding: 10px;
+  border-bottom: 1px solid #343a40;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .sticky-social {
   left: 0;
   position: fixed;

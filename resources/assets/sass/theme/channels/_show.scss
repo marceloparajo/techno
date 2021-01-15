@@ -136,4 +136,114 @@
 			}
 		}
 	}
+
+
+// TODO - SEPARAR ESTILO PARA PAGINA COLUMNISTAS
+	.contenido.columnistas {
+		width: 100%;
+		.info-columnista {
+			a {
+				figure {
+					width: 50px;
+					height: 50px;
+					overflow: hidden;
+					border-radius: 50%;
+					border: 1px solid $linea-oscura;
+				}
+			}
+		}
+		.box-columnista {
+			margin: 10px;
+			padding: 10px 10px 0 10px;
+			border: 1px solid $linea;
+			box-shadow: 0 3px 7px 0 rgba(0,0,0,.2);
+			&.main-columnista {
+				border: none;
+				padding: 10px;
+				background: white;
+				box-shadow: 0 3px 7px 0 rgba(0,0,0,.3);
+				border-radius: 3px;
+			}
+			.info-columnista {
+				margin: 0 0 10px 0;
+				a {
+					display: flex;
+					align-items: center;
+					figure {
+						flex-basis: 50px;
+						margin: 0 10px 0 0;
+					}
+					.nombre-columnista {
+						flex: 1 1 0;
+						margin: auto 0;
+						font:{
+							family: $font-serif;
+							size: 1rem;
+							size: 5vw;
+							weight: 500;
+						}
+						color: $negro;
+					}
+				}
+			}
+			.articulo {
+				padding: 10px 0;
+				border-top: 1px solid $linea;
+				a {
+					.hat {
+						font:{
+							family: $font-sinserif;
+							size: .9rem;
+							size: 4vw;
+							weight: bold;
+						}
+						line-height: .8em;
+						color: $azul;
+						margin: 0 0 8px 0;
+						text-transform: uppercase;
+					}
+					h2 {
+						font:{
+							size: 1.6rem;
+							size: 7vw;
+							family: $font-serif;
+							weight: 500;
+							letter-spacing: -0.02em;
+						} 
+						line-height: 1em;
+						color: $negro;
+						margin: 0 0 10px 0;
+					}
+					p.headline {
+						font: {
+							size: 0.9rem;
+							size: 4vw;
+							weight: normal;
+						}
+						color: $dark;
+					}
+					.fechayhora {
+						font:{
+							size: .8rem;
+							size: 3.5vw;
+						}
+						display: block;
+						text-transform: uppercase;
+						padding-top: 10px;
+						color: $dark;
+					}
+				}
+			}
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(5)
+			 {
+			 	border: none;
+				background: $fondo-gris;
+				padding: 10px;
+				border-bottom: 1px solid $dark;
+				box-shadow: none;
+			}
+		}
+	}
 }
