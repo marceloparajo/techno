@@ -9,7 +9,7 @@
 							@if ($key == 4)
 								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="700" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 							@else
-								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" sizes="200,300" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 							@endif
 
 							<p class="headline">{{ $new['headline'] }}</p>
@@ -46,7 +46,7 @@
 					<article class="articulo">
 						<figure>
 							<a href="{{ $new['permalink'] }}">
-								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="300" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 
 								<p class="headline">{{ $new['headline'] }}</p>
 							</a>
@@ -88,7 +88,7 @@
 					<article class="articulo">
 						<figure>
 							<a href="{{ $new['permalink'] }}">
-								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="300" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 
 								<p class="headline">{{ $new['headline'] }}</p>
 							</a>

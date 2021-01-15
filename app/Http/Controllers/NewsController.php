@@ -144,7 +144,7 @@ class NewsController extends Controller
         }
 
         $view_content = view($view, compact('noticia', 'jsonStructured', 'sidebar_content', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));
-        return response($view_content)->header('Cache-Control', 'max-age=300, public');
+        return response($view_content)->header('Cache-Control', 'max-age=14400, public');
 
 
     }

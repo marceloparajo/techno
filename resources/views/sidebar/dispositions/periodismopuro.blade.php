@@ -9,7 +9,11 @@
 			<article class="notaPeriodismopuro">
 				<a href="{{ $new['permalink'] }}">
 					<figure>
-						<x-lazy-image :src="$new['main_image']['srcs']['original']" alt="$new['main_image']['caption']" sizes="(min-width: 540px) 30vw, 100vw" />
+						@if ($loop->first)
+							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" max-width="300" />
+						@else
+							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" max-width="200" />
+						@endif
 					</figure>
 					<div class="content">
 						<h3>{{ $new['home_title'] }}</h3>

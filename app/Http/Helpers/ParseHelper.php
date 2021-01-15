@@ -437,6 +437,7 @@ class ParseHelper
                 'headline' => $noticia['headline'] ?? '',
                 'image' => [
                     'srcs' => [
+                        'original' => $noticia['image'],
                         'medium'    => $this->imageHelper->generateUrlImage($noticia['image'], '/trim/500/281/'),
                         'small'     => $this->imageHelper->generateUrlImage($noticia['image'], '/trim/200/112/'),
                         'thumb' => $this->imageHelper->generateUrlImage($noticia['image'], '/trim/64/64/')

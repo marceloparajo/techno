@@ -1,8 +1,8 @@
 @extends('layout.base')
 
 @section('page-info')
-ID: {{ $noticia['id'] }}
-Imagen Portada: {{ $noticia['main_image']['id'] }}
+	<meta name="article-id" content="{{ $noticia['id'] }}">
+	<meta name="featured-image-id" content="{{ $noticia['main_image']['id'] }}">
 @endsection
 
 @section('structured-data-type', 'itemscope itemtype="https://schema.org/NewsArticle"')

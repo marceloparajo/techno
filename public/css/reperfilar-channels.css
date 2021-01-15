@@ -1259,7 +1259,7 @@
 .sidebar .divisas .content-divisas {
   font-size: .8rem;
   display: grid;
-  grid-template-areas: 'empty venta compra' 'do doventa docompra' 'db dbventa dbcompra' 'eo eoventa eocompra' 'eb ebventa ebcompra';
+  grid-template-areas: 'empty venta compra' 'do doventa docompra' 'db dbventa dbcompra' 'eo eoventa eocompra' 'eb ebventa ebcompra';
   grid-template-columns: 3fr 2fr 2fr;
   grid-row-gap: 1px;
   -webkit-transform: translateY(-24px);
@@ -2925,5 +2925,110 @@ body {
   -webkit-box-shadow: 0 3px 7px 0 #656565;
           box-shadow: 0 3px 7px 0 #656565;
   z-index: 9;
+}
+
+@media (min-width: 576px) {
+  .supercontenedor {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .supercontenedor {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .supercontenedor {
+    max-width: 960px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .supercontenedor .sidebar {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 0 20px;
+    padding: 0;
+  }
+
+  .supercontenedor .sidebar .content-sidebar {
+    width: 300px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .supercontenedor .contenido {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+}
+
+@media (min-width: 1295px) {
+  .supercontenedor {
+    max-width: 1140px;
+  }
+
+  .supercontenedor .sidebar {
+    margin: 0 0 0 25px;
+  }
+}
+
+@media (min-width: 1360px) {
+  .supercontenedor {
+    max-width: 1260px;
+  }
+}
+
+.w3-animate-right {
+  position: relative;
+  -webkit-animation: animateright 0.1s;
+          animation: animateright 0.1s;
+}
+
+@-webkit-keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
 }
 
