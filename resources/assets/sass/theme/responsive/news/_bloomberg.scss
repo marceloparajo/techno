@@ -1,0 +1,66 @@
+.perfil-noticia {
+	.supercontenedor {
+		&.bloomberg {
+			@include media-breakpoint-up(md) {
+				.articulo-header {
+					h2.headline {
+						font-size: 1.3rem;
+					}
+				}
+				.container {
+					.main-article {
+						.news-body {
+							.news-content {
+								p,
+								ul,
+								ol,
+								li,
+								b,
+								strong {
+									a {
+										color: $negro;
+										box-shadow: inset 0 -2px 0 $bloomberg;
+										&:hover {
+											box-shadow: inset 0 -23px 0 $bloomberg;
+										}
+									}
+								}
+								.previous_news {
+									ul,
+									li {
+										a {
+											box-shadow: none;
+											&:hover {
+												box-shadow: none;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			@include media-breakpoint-up(lg) {
+				.articulo-header {
+					h2.headline {
+						font-size: 1.5rem;
+						&:after {
+							content: url('../../../../img/bloomberg/bloomberg_avatar.jpg');
+							height: 107px;
+							width: 100%;
+							margin: 30px 0 10px 0;
+							padding-left: 30px;
+							box-sizing: border-box;
+							background-image: url(../../../../img/bloomberg/puntitos.png);
+							background-repeat: repeat-x;
+							background-position: 0 41px;
+							clear: both;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

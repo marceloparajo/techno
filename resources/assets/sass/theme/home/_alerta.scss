@@ -48,18 +48,22 @@
 .coronavirus {
 	margin: 0 auto;
 	width: 100%;
-	padding: 0 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid $negro;
+	background: #271428 url('../../../img/bg-covid.jpg') right center no-repeat;
 	article {
-		font-family: $font-condensada;
+		font-family: $font-sinserif;
 		text-transform: uppercase;
 		border-bottom: 1px solid $linea;
-		padding-bottom: 5px;
-		margin: 0 0 5px 0;
+		padding-bottom: 0;
+		margin: 0;
 		line-height: 1.5em;
+		border-bottom: none;
 		a {
 			h2 {
-				color: $dark;
-				font-weight: 400;
+				color: white;
+				font-weight: 600;
 				font-size: 1rem;
 				font-size: 5vw;
 				letter-spacing: -0.01em;
@@ -67,52 +71,16 @@
 			}
 			p {
 				font-weight: 400;
-				color: #999;
+				color: white;
 				font-size: .9rem;
-				font-size: 4.5vw;
+				font-size: 4vw;
 				letter-spacing: -0.01em;
-				margin: 0;
+				margin: 5px 0 0 20px;
+				line-height: 1.3em;
 				.pipe {
 					display: none;
 				}
 			}
-		}
-	}
-	@include media-breakpoint-only(sm) {
-		padding: 0;
-		article {
-			a {
-				h2 {
-					font-size: 1.3rem;
-				}
-				p {
-					font-size: 1.1rem;
-				}
-			}
-		}
-	}
-	@include media-breakpoint-up(md) {
-		padding: 0;
-		article {
-			margin-bottom: 20px;
-			a {
-				padding: 0;
-				h2 {
-					margin: 0;
-					font-size: 1.3rem;
-				}
-				p {
-					font-size: 1.3rem;
-					margin-bottom: 0;
-					br {
-						display: none;
-					}
-					.pipe {
-						display: inline-block;
-						margin: 0 10px;;
-					}
-				}
-			}			
 		}
 	}
 }

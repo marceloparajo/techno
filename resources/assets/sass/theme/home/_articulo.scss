@@ -77,8 +77,8 @@
 			h2 {
 				font: {
 					family: $font-serif;
-					size: 1.1rem;
-					size: 5vw;
+					size: 1.2rem;
+					size: 5.4vw;
 					weight: 500;
 				}
 				color: $negro;
@@ -122,69 +122,6 @@
 		.meta-content {
 			h2 {
 				color: $dark;
-			}
-		}
-	}
-	@include media-breakpoint-up(sm) {
-		.meta-content {
-			padding: 5px 0;
-			a {
-				h2 {
-					font-size: 1.4rem;
-				}
-			}
-		}
-	}
-	@include media-breakpoint-up(lg) {
-		margin: 0 0 20px 0;
-		figure {
-			a {
-				p.headline {
-					display: block;
-				}
-			}
-		}
-		.meta-content {
-			a {
-				.hat {
-					font-size: .9em;
-				}
-				h2 {
-					font-size: 1.3rem;
-				}
-			}
-			.firma-home {
-				margin: 10px 0 0 0;
-			}
-		}
-		&:hover {
-			figure {
-				a {
-					img {
-						filter: brightness(30%);
-						transform: scale(1.03);
-					}
-					p.headline {
-						top: 0;
-						opacity: 1;
-						z-index: 9;
-					}
-					.galeria-video {
-						opacity: 0;
-					} 
-				}
-			}
-		}
-	}
-	@include media-breakpoint-up(xl) {
-		.meta-content {
-			a {
-				h2 {
-					font-size: 1.4rem;
-				}
-				p.headline {
-					margin-top: 10px;
-				}
 			}
 		}
 	}
