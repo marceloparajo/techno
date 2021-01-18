@@ -644,8 +644,9 @@ Se usa para Radio Perfil
 								width: auto;
 								a {
 									img {
-										height: 100%;
-										width: auto;
+										width: 100%;
+										height: auto;
+										min-height: 100%;
 										margin: 0 0 0 60%;
 										left: -60%;
 										position: absolute;

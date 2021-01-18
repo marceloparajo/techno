@@ -2924,8 +2924,9 @@ Se usa para Radio Perfil
   }
 
   .cajageneral .caja-contenido .notas-cajageneral.radio-perfil .contenido-notas .articulo.caja-nota:first-of-type figure a img {
-    height: 100%;
-    width: auto;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
     margin: 0 0 0 60%;
     left: -60%;
     position: absolute;
