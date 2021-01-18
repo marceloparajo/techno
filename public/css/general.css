@@ -141,6 +141,22 @@ figure img {
   padding-bottom: 56.25%;
 }
 
+.perfil-noticia .supercontenedor .articulo-header .h1 {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+}
+
+.perfil-noticia .supercontenedor .articulo-header .h2 {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+}
+
+.perfil-noticia .supercontenedor .main-article .news-body .fecha-autor .autor {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+}
+
+.perfil-noticia .supercontenedor .main-article .news-body .news-content {
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+}
+
 .main-header {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

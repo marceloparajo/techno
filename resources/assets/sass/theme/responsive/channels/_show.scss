@@ -3,6 +3,9 @@
 		h1.seccion-titulo {
 			font-size: 1.6rem;
 			padding: 0 0 5px 0;
+			&.Bloomberg {
+				background-position: 0 0;
+			}
 		}
 		.contenido.canal,
 		.contenido.autor {
@@ -83,6 +86,12 @@
 					}
 				}
 			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		h1.seccion-titulo.Bloomberg {
+			background-position: 0 -78px;
+			height: 50px;
 		}
 	}
 	@include media-breakpoint-up(xl) {

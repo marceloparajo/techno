@@ -32,7 +32,7 @@
 
 	<main class="supercontenedor">
 
-		<h1 class="seccion-titulo">{{ $sectionTitle }}</h1>
+		<h1 class="seccion-titulo {{ $sectionTitle }}">{{ $sectionTitle }}</h1>
 
 		<div class="contenido canal {{ $sectionTitle }}">
 			<div class="cuatro-notas">

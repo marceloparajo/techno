@@ -1,0 +1,55 @@
+.perfil-noticia {
+	.supercontenedor {
+		&.bloomberg {
+			.articulo-header {
+				.hat {
+					color: $bloomberg;
+				}
+				h2.headline {
+					font-family: $font-sinserif;
+					color: $link-mobile;
+					font-weight: bold;
+					font-size: 1.2rem;
+					&:after {
+						content: '';
+						height: 60px;
+						width: 100%;
+						margin: 20px 0 0 0;
+						box-sizing: border-box;
+						background-image: url(../../../img/bloomberg/bloomberg_nota.png);
+						background-repeat: no-repeat;
+						background-position: 0 0;
+						clear: both;
+						display: block;
+					}
+				}
+			}
+			.container {
+				.main-article {
+					.news-body {
+						.news-content {
+							p,
+							ul,
+							ol,
+							li,
+							b,
+							strong {
+								a {
+									color: $bloomberg;
+								}
+							}
+							.previous_news {
+								ul,
+								li {
+									a {
+										color: $dark;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
