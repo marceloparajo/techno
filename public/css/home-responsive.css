@@ -6,7 +6,7 @@
   }
 
   .articulo .meta-content a h2 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 }
 
@@ -105,11 +105,6 @@
   .contenedor-general .destacada .articulo.nota-1 .meta-content span.hat,
   .contenedor-general .destacada .articulo.nota-2 .meta-content span.hat {
     display: block;
-  }
-
-  .contenedor-general .destacada .articulo.nota-1 .meta-content h2,
-  .contenedor-general .destacada .articulo.nota-2 .meta-content h2 {
-    font-size: 1.4rem;
   }
 
   .contenedor-general .destacada .articulo.nota-0 {

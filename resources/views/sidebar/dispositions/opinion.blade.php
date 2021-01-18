@@ -1,7 +1,7 @@
 @if (isset($news) && count($news) > 0)
 	<section id="opinion">
 		<header>
-			<div class="opinion-titulo"><i class="fas fa-quote-right"></i> <a href="https://www.perfil.com/seccion/opinion/" target="_blank">Opinión</a></div>
+			<div class="opinion-titulo"><i class="fas fa-quote-right"></i> <a href="/seccion/opinion/" target="_blank">Opinión</a></div>
 		</header>
 
 		@foreach(array_slice($news, 0, 4) as $key => $new)
@@ -32,7 +32,7 @@
 		@endforeach
 
 		<footer>
-			<a href="https://www.perfil.com/seccion/opinion/" target="_blank">Más en Opinión </a>
+			<a href="/seccion/opinion/" target="_blank">Más en Opinión </a>
 		</footer>
 	</section>
 @endif

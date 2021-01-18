@@ -152,6 +152,16 @@
     font-size: .85rem;
   }
 
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .twitter-tweet,
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .twitter-tweet-rendered {
+    margin: auto;
+  }
+
+  .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news {
+    background: transparent;
+    border-bottom: none;
+  }
+
   .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news h4 {
     font-size: .9rem;
   }
@@ -366,21 +376,6 @@
     width: 300px;
     margin: 0 0 0 25px;
   }
-
-  .perfil-noticia .supercontenedor.bloomberg .articulo-header h2.headline:after {
-    content: url(/images/bloomberg_avatar.jpg?02824bae55c3e826ba2f64a733bca8c3);
-    height: 107px;
-    width: 100%;
-    margin: 30px 0 10px 0;
-    padding-left: 30px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    background-image: url(/images/puntitos.png?58c65d36a06c62427a7ff0aa44a9fce0);
-    background-repeat: repeat-x;
-    background-position: 0 41px;
-    clear: both;
-    display: block;
-  }
 }
 
 @media (min-width: 1295px) {
@@ -539,8 +534,8 @@
   }
 
   .perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li:hover a img {
-    -webkit-filter: brightness(255%);
-            filter: brightness(255%);
+    -webkit-filter: brightness(0%) invert(1);
+            filter: brightness(0%) invert(1);
   }
 
   .perfil-noticia .supercontenedor .container .main-article .news-body .social-topsharing ul li.facebook:hover {

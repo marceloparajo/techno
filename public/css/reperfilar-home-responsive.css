@@ -903,25 +903,25 @@
   }
 
   .supercontenedor.reperfilar .reperfilar-secciones .reperfilar-seccion .seguinos-vermas .redes ul li.facebook a {
-    background-image: url(/images/facebook.svg?ee8c88ad210f827d877dbedc3004c024);
+    background-image: url(/images/facebook.svg?d051fa4c94c6d96d219a7c499d3451bc);
   }
 
   .supercontenedor.reperfilar .reperfilar-secciones .reperfilar-seccion .seguinos-vermas .redes ul li.instagram a {
-    background-image: url(/images/instagram.svg?fef1135d42ee03658876b4747cec093e);
+    background-image: url(/images/instagram.svg?fc36a1c0cf6e00c4399f3adb405c60a6);
   }
 
   .supercontenedor.reperfilar .reperfilar-secciones .reperfilar-seccion .seguinos-vermas .redes ul li.twitter a {
-    background-image: url(/images/twitter.svg?06a788a8c38a0a97106ef82432d2eef5);
+    background-image: url(/images/twitter.svg?4e8cd3a95e497865d913b11f514a39cd);
   }
 
   .supercontenedor.reperfilar .reperfilar-secciones .reperfilar-seccion .seguinos-vermas .redes ul li.youtube a {
-    background-image: url(/images/youtube.svg?42ebe3bbd45add532cdab5b3841900d8);
+    background-image: url(/images/youtube.svg?803e4751bcceb447d1f0cc0f70a058b2);
   }
 
   .supercontenedor.reperfilar .reperfilar-secciones .reperfilar-seccion .seguinos-vermas .redes ul li.followus {
     text-transform: uppercase;
     color: #171717;
-    font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+    font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
     font-size: 1rem;
     margin: 2px 0;
   }

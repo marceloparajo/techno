@@ -37,60 +37,13 @@
 			}
 			figure {
 				margin: 0;
-				padding: 10px 0 0 0;
+				padding: 10px 0 5px 0;
 				img {
 					width: 170px;
 				}
 			}
 			.menu-primario {
-				ul.menu-destacado {
-					padding: 18px 10px 0 10px;
-					margin: 0;
-					list-style: none;
-					font-family: $font-general;
-					font-size: 14px;
-					li {
-						display: inline-block;
-						float: left;
-						padding: 0;
-						margin: 0;
-						text-transform: uppercase;
-						a {
-							display: block;
-							padding: 10px;
-							color: $dark;
-						}
-					}
-					@include media-breakpoint-down(lg) {
-						display: none;
-					}
-				}
-			}
-			@include media-breakpoint-down(md) {
-				figure {
-					padding-bottom: 5px;
-				}
-			}
-			@include media-breakpoint-down(sm) {
-				figure {
-					padding-top: 5px;
-					padding-bottom: 5px;
-					img {
-						width: 140px;
-					}
-				}
-				.hamburguer {
-					margin-top: 5px;
-					.bar1,
-					.bar2,
-					.bar3 {
-						width: 26px;
-						height: 2px;
-					}
-					&.change .bar3 {
-						transform: rotate(45deg) translate(-7px, -6px);
-					}
-				}
+				display: none;
 			}
 		}
 		.radio-perfil {
@@ -124,27 +77,6 @@
 			background: $linea;
 			height: 1px;
 			overflow: hidden;
-		}
-	}
-	@include media-breakpoint-up(sm) {
-		box-shadow: none;
-		.header-top {
-			padding: 0;
-		}
-	}
-	@include media-breakpoint-up(md) {
-		.header-top {
-			.radio-perfil {
-				display: block;
-			}
-		}
-	}
-	@include media-breakpoint-up(lg) {
-		.header-top {
-			padding: 0 0 10px 0;
-			.radio-perfil {
-				margin: 0 0 5px auto;
-			}
 		}
 	}
 }
@@ -217,19 +149,52 @@
 		padding-top: 5px;
 		display: none;
 	}
-	@include media-breakpoint-up(sm) {
+}
+
+@include media-breakpoint-up(sm) {
+	.main-header {
+		box-shadow: none;
+		.header-top {
+			padding: 0;
+		}
+	}
+	.pre-header {
 		padding: 3px 0;
 		background-color: white;
 		border-bottom: 1px solid $linea;
 	}
-	@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(md) {
+	.main-header {
+		.header-top {
+			.elisologo {
+				figure {
+					padding-bottom: 0;
+				}
+			}
+			.radio-perfil {
+				display: block;
+			}
+		}
+	}
+	.pre-header {
 		display: flex;
 		justify-content: space-between;
 		.header-fecha {
 			display: block;
 		}
 	}
-	@include media-breakpoint-up(lg) {
+}
+@include media-breakpoint-up(lg) {
+	.main-header {
+		.header-top {
+			padding: 0 0 10px 0;
+			.radio-perfil {
+				margin: 0 0 5px auto;
+			}
+		}
+	}
+	.pre-header {
 		.header-data {
 			.more-sites {
 				display: block;
@@ -237,7 +202,36 @@
 		}
 	}
 }
-
+@include media-breakpoint-up(xl) {
+	.main-header {
+		.header-top {
+			.elisologo {
+				.menu-primario {
+					display: block;
+					ul.menu-destacado {
+						padding: 18px 10px 0 10px;
+						margin: 0;
+						list-style: none;
+						font-family: $font-general;
+						font-size: 14px;
+						li {
+							display: inline-block;
+							float: left;
+							padding: 0;
+							margin: 0;
+							text-transform: uppercase;
+							a {
+								display: block;
+								padding: 10px;
+								color: $dark;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 #contenedor-header-menu {
 	position: relative;
 	width: 100%;

@@ -31,7 +31,7 @@
 }
 
 .podcasts-radio header .titulo .podcasts {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 28px;
   font-weight: 600;
   line-height: .9em;
@@ -110,7 +110,7 @@
   line-height: 1.05em;
   font-weight: 600;
   letter-spacing: -0.01em;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
 }
 
 .podcasts-radio .notaPodcast a .content h5 {
@@ -349,7 +349,7 @@
   display: block;
   margin: 0;
   text-transform: uppercase;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right 0 no-repeat;
@@ -383,7 +383,7 @@
   display: block;
   margin: 0;
   text-transform: uppercase;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right 0 no-repeat;
@@ -515,7 +515,7 @@
   display: block;
   margin: 0;
   text-transform: uppercase;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
 }
@@ -542,7 +542,7 @@
 .sidebar #reperfilar header .educacion-titulo,
 .sidebar #videocolumnas header .educacion-titulo,
 .sidebar #educacion header .educacion-titulo {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   width: 280px;
   height: 30px;
   line-height: 44px;
@@ -643,7 +643,7 @@
   font-size: 1.3rem;
   font-size: 5.7vw;
   font-weight: 400;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   line-height: 1.05em;
   letter-spacing: -0.01em;
 }
@@ -892,7 +892,7 @@
   display: block;
   margin: 10px 10px 5px 10px;
   text-transform: uppercase;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right center no-repeat;
@@ -939,7 +939,7 @@
   line-height: 1.05em;
   font-weight: 500;
   letter-spacing: -0.02em;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   margin: 0;
   padding: 0;
   max-height: 56px;
@@ -1091,7 +1091,7 @@
   display: block;
   margin: 0;
   text-transform: uppercase;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   color: #171717;
@@ -1151,7 +1151,7 @@
 
 .sidebar #columnistas .columnistas-general #columnistas-caja .grupo-columnistas .articulo-columnista a {
   color: #343a40;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 400;
 }
 
@@ -1249,7 +1249,7 @@
 }
 
 .sidebar .divisas .title-divisas {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   border-bottom: 2px solid #557c9c;
@@ -1995,9 +1995,8 @@
 }
 
 .articulo .meta-content a h2 {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
-  font-size: 1.2rem;
-  font-size: 5.4vw;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
+  font-size: 1.35rem;
   font-weight: 500;
   color: #171717;
   line-height: 1em;
@@ -2041,9 +2040,8 @@
 }
 
 .supercontenedor h1.seccion-titulo {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 1.6rem;
-  font-size: 7.2vw;
   font-weight: 600;
   color: #171717;
   text-transform: uppercase;
@@ -2062,6 +2060,13 @@
   background-image: url(/images/bloomberg_menu.png?fcafc99b379ae271d21b337f7f2acb1e);
   background-repeat: no-repeat;
   background-position: 10px 0;
+}
+
+.supercontenedor h1.seccion-titulo .tema {
+  text-transform: none;
+  font-size: .8em;
+  letter-spacing: -0.03em;
+  color: #343a40;
 }
 
 .supercontenedor .contenido.canal .autor-pagina,
@@ -2105,7 +2110,7 @@
 .supercontenedor .contenido.autor .autor-pagina .meta-autor .nombre-autor {
   display: block;
   font-size: 1.2rem;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 500;
   margin: 0 0 5px 0;
   letter-spacing: -0.02em;
@@ -2176,10 +2181,9 @@
 
 .supercontenedor .contenido.canal .cuatro-notas .articulo .meta-content a h2,
 .supercontenedor .contenido.autor .cuatro-notas .articulo .meta-content a h2 {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   letter-spacing: -0.02em;
   font-size: 1.17rem;
-  font-size: 5.2vw;
   line-height: 1em;
   font-weight: 500;
 }
@@ -2193,7 +2197,6 @@
 .supercontenedor .contenido.autor .cuatro-notas .articulo .meta-content .firma-home {
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   font-size: .76rem;
-  font-size: 3.4vw;
   font-weight: normal;
   line-height: 1em;
   margin-top: 6px;
@@ -2229,7 +2232,6 @@
 .supercontenedor .contenido.autor .cuatro-notas .articulo:first-of-type .meta-content a h2 {
   letter-spacing: -0.02em;
   font-size: 1.6rem;
-  font-size: 7.2vw;
 }
 
 .supercontenedor .contenido.columnistas {
@@ -2285,7 +2287,7 @@
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   margin: auto 0;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 1rem;
   font-size: 5vw;
   font-weight: 500;
@@ -2311,7 +2313,7 @@
 .supercontenedor .contenido.columnistas .box-columnista .articulo a h2 {
   font-size: 1.6rem;
   font-size: 7vw;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 500;
   font-letter-spacing: -0.02em;
   line-height: 1em;
@@ -2834,7 +2836,7 @@
   border-top: 1px solid #656565;
   text-transform: uppercase;
   text-align: right;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 1rem;
   text-transform: uppercase;
   padding-top: 5px;
@@ -2932,7 +2934,7 @@ body {
 .header-reperfilar .supercontenedor .reperfilar-menu .secciones .menu-secciones-barras {
   display: inline-block;
   width: 25px;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   cursor: pointer;
   color: white;
   position: absolute;
@@ -3034,19 +3036,19 @@ body {
 }
 
 .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav li ul li a span.facebook {
-  background-image: url(/images/facebook.svg?ee8c88ad210f827d877dbedc3004c024);
+  background-image: url(/images/facebook.svg?d051fa4c94c6d96d219a7c499d3451bc);
 }
 
 .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav li ul li a span.twitter {
-  background-image: url(/images/twitter.svg?06a788a8c38a0a97106ef82432d2eef5);
+  background-image: url(/images/twitter.svg?4e8cd3a95e497865d913b11f514a39cd);
 }
 
 .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav li ul li a span.instagram {
-  background-image: url(/images/instagram.svg?fef1135d42ee03658876b4747cec093e);
+  background-image: url(/images/instagram.svg?fc36a1c0cf6e00c4399f3adb405c60a6);
 }
 
 .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav li ul li a span.youtube {
-  background-image: url(/images/youtube.svg?42ebe3bbd45add532cdab5b3841900d8);
+  background-image: url(/images/youtube.svg?803e4751bcceb447d1f0cc0f70a058b2);
 }
 
 .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav.temuestro {

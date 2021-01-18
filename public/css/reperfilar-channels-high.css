@@ -142,19 +142,19 @@ figure img {
 }
 
 .perfil-noticia .supercontenedor .articulo-header .h1 {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
 }
 
 .perfil-noticia .supercontenedor .articulo-header .h2 {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
 }
 
 .perfil-noticia .supercontenedor .main-article .news-body .fecha-autor .autor {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
 }
 
 .perfil-noticia .supercontenedor .main-article .news-body .news-content {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
 }
 
 .main-header {
@@ -222,72 +222,15 @@ figure img {
 
 .main-header .header-top .elisologo figure {
   margin: 0;
-  padding: 10px 0 0 0;
+  padding: 10px 0 5px 0;
 }
 
 .main-header .header-top .elisologo figure img {
   width: 170px;
 }
 
-.main-header .header-top .elisologo .menu-primario ul.menu-destacado {
-  padding: 18px 10px 0 10px;
-  margin: 0;
-  list-style: none;
-  font-family: "Roboto", Helvetica, Arial, Sans-serif;
-  font-size: 14px;
-}
-
-.main-header .header-top .elisologo .menu-primario ul.menu-destacado li {
-  display: inline-block;
-  float: left;
-  padding: 0;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.main-header .header-top .elisologo .menu-primario ul.menu-destacado li a {
-  display: block;
-  padding: 10px;
-  color: #343a40;
-}
-
-@media (max-width: 1294.98px) {
-  .main-header .header-top .elisologo .menu-primario ul.menu-destacado {
-    display: none;
-  }
-}
-
-@media (max-width: 1019.98px) {
-  .main-header .header-top .elisologo figure {
-    padding-bottom: 5px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .main-header .header-top .elisologo figure {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-  .main-header .header-top .elisologo figure img {
-    width: 140px;
-  }
-
-  .main-header .header-top .elisologo .hamburguer {
-    margin-top: 5px;
-  }
-
-  .main-header .header-top .elisologo .hamburguer .bar1,
-  .main-header .header-top .elisologo .hamburguer .bar2,
-  .main-header .header-top .elisologo .hamburguer .bar3 {
-    width: 26px;
-    height: 2px;
-  }
-
-  .main-header .header-top .elisologo .hamburguer.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-7px, -6px);
-            transform: rotate(45deg) translate(-7px, -6px);
-  }
+.main-header .header-top .elisologo .menu-primario {
+  display: none;
 }
 
 .main-header .header-top .radio-perfil {
@@ -328,33 +271,6 @@ figure img {
     background: #d4d4d4;
     height: 1px;
     overflow: hidden;
-  }
-}
-
-@media (min-width: 576px) {
-  .main-header {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-
-  .main-header .header-top {
-    padding: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .main-header .header-top .radio-perfil {
-    display: block;
-  }
-}
-
-@media (min-width: 1020px) {
-  .main-header .header-top {
-    padding: 0 0 10px 0;
-  }
-
-  .main-header .header-top .radio-perfil {
-    margin: 0 0 5px auto;
   }
 }
 
@@ -458,6 +374,15 @@ figure img {
 }
 
 @media (min-width: 576px) {
+  .main-header {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .main-header .header-top {
+    padding: 0;
+  }
+
   .pre-header {
     padding: 3px 0;
     background-color: white;
@@ -466,6 +391,14 @@ figure img {
 }
 
 @media (min-width: 768px) {
+  .main-header .header-top .elisologo figure {
+    padding-bottom: 0;
+  }
+
+  .main-header .header-top .radio-perfil {
+    display: block;
+  }
+
   .pre-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -481,8 +414,44 @@ figure img {
 }
 
 @media (min-width: 1020px) {
+  .main-header .header-top {
+    padding: 0 0 10px 0;
+  }
+
+  .main-header .header-top .radio-perfil {
+    margin: 0 0 5px auto;
+  }
+
   .pre-header .header-data .more-sites {
     display: block;
+  }
+}
+
+@media (min-width: 1295px) {
+  .main-header .header-top .elisologo .menu-primario {
+    display: block;
+  }
+
+  .main-header .header-top .elisologo .menu-primario ul.menu-destacado {
+    padding: 18px 10px 0 10px;
+    margin: 0;
+    list-style: none;
+    font-family: "Roboto", Helvetica, Arial, Sans-serif;
+    font-size: 14px;
+  }
+
+  .main-header .header-top .elisologo .menu-primario ul.menu-destacado li {
+    display: inline-block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .main-header .header-top .elisologo .menu-primario ul.menu-destacado li a {
+    display: block;
+    padding: 10px;
+    color: #343a40;
   }
 }
 
@@ -964,7 +933,7 @@ body {
 .header-reperfilar .supercontenedor .reperfilar-menu .secciones .menu-secciones-barras {
   display: inline-block;
   width: 25px;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   cursor: pointer;
   color: white;
   position: absolute;
@@ -1066,19 +1035,19 @@ body {
 }
 
 .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav li ul li a span.facebook {
-  background-image: url(/images/facebook.svg?ee8c88ad210f827d877dbedc3004c024);
+  background-image: url(/images/facebook.svg?d051fa4c94c6d96d219a7c499d3451bc);
 }
 
 .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav li ul li a span.twitter {
-  background-image: url(/images/twitter.svg?06a788a8c38a0a97106ef82432d2eef5);
+  background-image: url(/images/twitter.svg?4e8cd3a95e497865d913b11f514a39cd);
 }
 
 .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav li ul li a span.instagram {
-  background-image: url(/images/instagram.svg?fef1135d42ee03658876b4747cec093e);
+  background-image: url(/images/instagram.svg?fc36a1c0cf6e00c4399f3adb405c60a6);
 }
 
 .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav li ul li a span.youtube {
-  background-image: url(/images/youtube.svg?42ebe3bbd45add532cdab5b3841900d8);
+  background-image: url(/images/youtube.svg?803e4751bcceb447d1f0cc0f70a058b2);
 }
 
 .header-reperfilar .supercontenedor .reperfilar-menu ul#reperfilar-nav.temuestro {
@@ -1657,7 +1626,7 @@ body {
 }
 
 #pw-zocalo .pw-zocalo-container .pw-zocalo-acciones p.mensaje {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 1em;
@@ -1680,7 +1649,7 @@ body {
   text-align: right;
   line-height: 1.1em;
   margin: 0 0 10px 0;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-style: italic;
   font-size: 20px;
   font-weight: 600;
@@ -1710,7 +1679,7 @@ body {
 }
 
 #pw-zocalo .pw-zocalo-container .pw-zocalo-bloque-b h6 {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 80px;
   margin: 0;
   line-height: 40px;
@@ -1720,7 +1689,7 @@ body {
 }
 
 #pw-zocalo .pw-zocalo-container .pw-zocalo-bloque-b p.pw-zocalo-bajada {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 28px;
   color: white;
   font-weight: 500;
@@ -1802,7 +1771,7 @@ body {
 }
 
 #pw-pienota .pw-piedenota-row-noframe .p {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 500;
 }
 
@@ -1919,7 +1888,7 @@ body {
 }
 
 #pw-pienota .pw-piedenota-row .pw-piedenota-content .p {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 500;
   line-height: initial;
 }
@@ -2098,7 +2067,7 @@ body {
 }
 
 #pw-modal .pw-modal-box .pw-modal-content .pw-modal-row p {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 600;
   margin: 10px;
 }
@@ -2356,7 +2325,7 @@ body {
 }
 
 #pw-modal .pw-modal-box .pw-modal-content.mensaje-b .pw-meta-content p {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 30px;
   font-weight: normal;
   position: relative;

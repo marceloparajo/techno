@@ -31,7 +31,7 @@
 }
 
 .podcasts-radio header .titulo .podcasts {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 28px;
   font-weight: 600;
   line-height: .9em;
@@ -110,7 +110,7 @@
   line-height: 1.05em;
   font-weight: 600;
   letter-spacing: -0.01em;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
 }
 
 .podcasts-radio .notaPodcast a .content h5 {
@@ -349,7 +349,7 @@
   display: block;
   margin: 0;
   text-transform: uppercase;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right 0 no-repeat;
@@ -383,7 +383,7 @@
   display: block;
   margin: 0;
   text-transform: uppercase;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right 0 no-repeat;
@@ -515,7 +515,7 @@
   display: block;
   margin: 0;
   text-transform: uppercase;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
 }
@@ -542,7 +542,7 @@
 .sidebar #reperfilar header .educacion-titulo,
 .sidebar #videocolumnas header .educacion-titulo,
 .sidebar #educacion header .educacion-titulo {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   width: 280px;
   height: 30px;
   line-height: 44px;
@@ -643,7 +643,7 @@
   font-size: 1.3rem;
   font-size: 5.7vw;
   font-weight: 400;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   line-height: 1.05em;
   letter-spacing: -0.01em;
 }
@@ -892,7 +892,7 @@
   display: block;
   margin: 10px 10px 5px 10px;
   text-transform: uppercase;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   background: url(/images/perfil-logo-xs-sidebar.png?9be1a3f1af70ffa4d1f18318126a3ff5) right center no-repeat;
@@ -939,7 +939,7 @@
   line-height: 1.05em;
   font-weight: 500;
   letter-spacing: -0.02em;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   margin: 0;
   padding: 0;
   max-height: 56px;
@@ -1091,7 +1091,7 @@
   display: block;
   margin: 0;
   text-transform: uppercase;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   color: #171717;
@@ -1151,7 +1151,7 @@
 
 .sidebar #columnistas .columnistas-general #columnistas-caja .grupo-columnistas .articulo-columnista a {
   color: #343a40;
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 400;
 }
 
@@ -1249,7 +1249,7 @@
 }
 
 .sidebar .divisas .title-divisas {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   border-bottom: 2px solid #557c9c;
@@ -1924,11 +1924,6 @@
   display: none;
 }
 
-.contenedor-general .destacada .articulo .meta-content a h2 {
-  font-size: 1.4rem;
-  font-size: 6vw;
-}
-
 .contenedor-general .destacada .articulo.nota-1,
 .contenedor-general .destacada .articulo.nota-2 {
   display: -webkit-box;
@@ -2179,7 +2174,7 @@ ARTE Y CULTURA
 }
 
 .cobertura h6 {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 600;
   font-size: 1.5rem;
   font-size: 5vw;
@@ -3088,7 +3083,7 @@ Se usa para Radio Perfil
 }
 
 .arteycultura h6 {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 600;
   font-size: 1.5rem;
   font-size: 5vw;
@@ -3910,7 +3905,7 @@ REVISTAS
 }
 
 .fotogaleria h6 {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 600;
   font-size: 1.5rem;
   font-size: 5vw;
@@ -4228,7 +4223,7 @@ REVISTAS
 }
 
 .video h6 {
-  font-family: "Crimson Pro", Didot, Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: "Crimson Pro", "Times New Roman", Times, Georgia, serif;
   font-weight: 600;
   font-size: 1.5rem;
   font-size: 5vw;
@@ -6038,8 +6033,7 @@ REVISTAS
 .coronavirus article a h2 {
   color: white;
   font-weight: 600;
-  font-size: 1rem;
-  font-size: 5vw;
+  font-size: 1.13rem;
   letter-spacing: -0.01em;
   margin: 0;
 }
@@ -6048,7 +6042,6 @@ REVISTAS
   font-weight: 400;
   color: white;
   font-size: .9rem;
-  font-size: 4vw;
   letter-spacing: -0.01em;
   margin: 5px 0 0 20px;
   line-height: 1.3em;
