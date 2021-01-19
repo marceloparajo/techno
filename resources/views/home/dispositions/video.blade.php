@@ -1,20 +1,15 @@
-
-
-<h1>Acá va video</h1>
-
 @if (isset($news) && count($news) > 0)
 
 
 		<div class="video">
 
-			<div class="container">
 				<h6>Videos</h6>
 
 				<div class="notas-video">
 
-					@foreach(array_slice($news, 0, 5) as $key => $new)
+					@foreach(array_slice($news, 0, 4) as $key => $new)
 
-					<article class="articulo devideo">
+					<article class="articulo">
 						<figure>
 							<a href="{{ $new['permalink'] }}">
 								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera_button="$new['has_gallery']" />
@@ -43,28 +38,20 @@
 							</div>
 						</a>
 
-						@if ($key == 4)
-							<div class="miramas">
-								<a href="/seccion/video/">Más Videos</a>
-							</div>
-						@endif
-
 
 					</article>
 
-					@if($key == 0)
-						<div class="grupotres">
-					@endif
-
-					@if($key == 3)
-						</div>
-					@endif
 
 					@endforeach
-
 				</div><!-- notas-video -->
 
-			</div><!-- container -->
+
+
+				<div class="miramas">
+					<a href="/seccion/video/"><img src="/images/next.svg" style="width:12px">Más Videos</a>
+				</div>
+
+
 
 		</div><!-- video -->
 
