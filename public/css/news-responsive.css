@@ -104,11 +104,11 @@
     width: 100px;
   }
 
-  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a h6 {
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a .leermas {
     font-size: .75rem;
   }
 
-  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a h5 {
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a .titulorelacionada {
     font-size: 1.2rem;
   }
 
@@ -162,7 +162,7 @@
     border-bottom: none;
   }
 
-  .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news h4 {
+  .perfil-noticia .supercontenedor .container .main-article .news-body .previous_news .previous-titulo {
     font-size: .9rem;
   }
 
@@ -453,6 +453,8 @@
     height: 10px;
     float: left;
     margin: 0 3px 0 0;
+    -webkit-filter: grayscale(1) brightness(0.7) invert(1);
+            filter: grayscale(1) brightness(0.7) invert(1);
   }
 
   .perfil-noticia .supercontenedor .container .main-article .news-body .fecha-autor .autor .autor-nota-arriba p.autor-about span img.facebook {
@@ -474,7 +476,7 @@
   }
 
   .perfil-noticia .supercontenedor .container .main-article .news-body .fecha-autor .autor .autor-nota-arriba p.autor-about span a {
-    color: #999;
+    color: #656565;
   }
 
   .perfil-noticia .supercontenedor .container .main-article .news-body .fecha-autor .autor .autor-nota-arriba figure {
@@ -579,7 +581,7 @@
     margin: 0;
   }
 
-  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .previous_news h4 {
+  .perfil-noticia .supercontenedor .container .main-article .news-body .news-content .previous_news .previous-titulo {
     font-size: 1rem;
     margin-top: 6px;
     padding-top: 0;

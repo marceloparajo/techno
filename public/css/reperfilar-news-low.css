@@ -2359,23 +2359,22 @@
   width: 100%;
 }
 
-.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a h6 {
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a .leermas {
   color: #171717;
   font-weight: normal;
   text-transform: uppercase;
   font-size: .75rem;
-  font-size: 3.5vw;
   margin: 0 0 2px 0;
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
 
-.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a h5 {
+.perfil-noticia .supercontenedor .container .main-article .news-body .news-content .media.noticia-relacionada a .titulorelacionada {
   color: #171717;
-  font-size: 1rem;
-  font-size: 5vw;
+  font-size: 1.2rem;
   line-height: 1em;
+  font-weight: bold;
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
 }
 
@@ -2442,7 +2441,7 @@
   border-bottom: 1px solid #343a40;
 }
 
-.perfil-noticia .supercontenedor .container .main-article .news-body .previous_news h4 {
+.perfil-noticia .supercontenedor .container .main-article .news-body .previous_news .previous-titulo {
   font-family: "Roboto", Helvetica, Arial, Sans-serif;
   font-size: .9rem;
   font-size: 4.5vw;
