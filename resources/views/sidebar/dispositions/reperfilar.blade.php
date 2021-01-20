@@ -3,7 +3,7 @@
 
 <section id="reperfilar">
 	<header>
-		<div class="reperfilar-titulo"><a href="https://www.perfil.com/reperfilar/" target="_blank">Reperfilar</a></div>
+		<div class="reperfilar-titulo"><a href="/reperfilar" target="_blank">Reperfilar</a></div>
 	</header>
 
 	@foreach(array_slice($news, 0, 4) as $key => $new)
@@ -33,7 +33,7 @@
 	</article>
 	@endforeach
 	<footer>
-		<a href="https://www.perfil.com/reperfilar/" target="_blank">Más en RePerfilAr </a>
+		<a href="/reperfilar" target="_blank">Más en RePerfilAr </a>
 	</footer>
 </section>
 

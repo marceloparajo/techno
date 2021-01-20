@@ -3,7 +3,7 @@
 	@if (isset($news[2]))
 
 		<!-- Cobertura -->
-		<div class="container cobertura mb-4">
+		<div class="cobertura">
 
 			<h6>{{ $news[0]['hat'] ?? '' }}</h6>
 

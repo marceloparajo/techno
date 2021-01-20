@@ -112,6 +112,10 @@
 							color: $link-mobile;
 							text-decoration: underline;
 						}
+						img {
+							width: 100%;
+							height: auto;
+						}
 					}
 					ul {
 						li {
@@ -417,7 +421,10 @@
 						}
 					}
 					.previous_news {
-						margin: 0 5% 20px 5%;
+						margin: 0 0 20px 0;
+						background: #e9ecef;
+						padding: 0 5%;
+						border-bottom: 1px solid $dark;
 						h4 {
 							font: {
 								family: $font-sinserif;
@@ -437,7 +444,7 @@
 							margin: 0 0 20px 0;
 							li {
 								font: {
-									weight: 600;
+									weight: 500;
 									size: 1rem;
 									size: 5vw;
 									family: $font-serif;
@@ -445,6 +452,8 @@
 								margin-left: 4px;
 								line-height: 1.05em;
 								margin-bottom: 10px;
+								padding-bottom: 10px;
+								border-bottom: 1px solid $linea;
 								position: relative;
 								letter-spacing: -0.02em;
 								padding-left: 10px;
@@ -468,6 +477,9 @@
 										color: $dark;
 										box-shadow: none;
 									}
+								}
+								&:last-of-type {
+									border-bottom: none;
 								}
 							}
 						}

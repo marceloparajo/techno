@@ -2,7 +2,7 @@
 
 	@if (isset($news[2]))
 
-		<div class="container fotogaleria mb-4">
+		<div class="container fotogaleria">
 
 			<h6>Fotogalerías</h6>
 

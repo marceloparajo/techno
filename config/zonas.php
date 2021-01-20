@@ -97,18 +97,12 @@ return [
 		'template' => 'bloomberg'
 	],
 	[
-		'id' => 'opinion-sidebar',
-		'template' => 'opinion'
-	],
-	[
-		'id' => 'video-columnas',
-		'template' => 'videocolumnas'
-	],
-	[
 		'id' => 'reperfilar-sidebar',
 		'template' => 'reperfilar'
-	],
-	[
+	],	[
+		'id' => 'video-columnas',
+		'template' => 'videocolumnas'
+	],	[
 		'id' => 'ppuro-sidebar',
 		'template' => 'periodismopuro'
 	],
@@ -124,10 +118,13 @@ return [
 		'id' => 'columnistas',
 		'template' => 'columnistas'
 	],
-
 	[
 		'id' => 'educacion',
 		'template' => 'educacion'
+	],
+	[
+		'id' => 'opinion-sidebar',
+		'template' => 'opinion'
 	],
 	[
 		'id' => 'minuto-de-noticias',
