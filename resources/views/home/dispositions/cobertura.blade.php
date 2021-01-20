@@ -1,6 +1,5 @@
-@if (isset($news) && count($news) > 0)
+@if (isset($news) && count($news) > 2)
 
-	@if (isset($news[2]))
 
 		<!-- Cobertura -->
 		<div class="cobertura">
@@ -87,10 +86,6 @@
 					</article>
 					@endforeach
 
-
-
-						<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
-
 				</div>
 
 				@endif
@@ -100,6 +95,7 @@
 		</div><!-- cobertura -->
 
 
-	@endif
+		<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
+
 
 @endif

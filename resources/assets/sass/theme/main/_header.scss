@@ -264,15 +264,15 @@
 				border-bottom: 1px solid #e0e0e0;
 				transition: ease .15s;
 				cursor: pointer;
+				img.chevron {
+					float: right;
+					margin-top: 5px;
+					height: 10px;
+					width: auto;
+				}
 				a {
 					color: #333;
 					width: 100%;
-					img {
-						float: right;
-						height: 10px;
-						width: auto;
-						transform: translateY(5px);
-					}
 				}
 				&:hover {
 					background: #d2ecff;

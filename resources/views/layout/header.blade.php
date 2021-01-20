@@ -8,15 +8,15 @@
 			<ul>
 				<li class="menu-reperfilar"><a href="/reperfilar">RePerfilAr</a></li>
 				<li class="menu-bloomberg"><a href="/seccion/bloomberg/">Bloomberg</a></li>
-				<li class="menu-noticias"><a href="https://noticias.perfil.com">Noticias</a></li>
-				<li class="menu-caras"><a href="https://caras.perfil.com">Caras</a></li>
-				<li class="menu-exitoina"><a href="https://exitoina.perfil.com">Exitoina</a></li>
+				<li class="menu-noticias"><a href="https://noticias.perfil.com" rel="noreferrer">Noticias</a></li>
+				<li class="menu-caras"><a href="https://caras.perfil.com" rel="noreferrer">Caras</a></li>
+				<li class="menu-exitoina"><a href="https://exitoina.perfil.com" rel="noreferrer">Exitoina</a></li>
 			</ul>
 		</nav>
 		<div class="buscador" id="header-search">
 			<form method="get" action="{{ route('search.index') }}">
 				<input class="form-control" name="q" type="text" placeholder="{{ __('search') }}" aria-label="{{ __('search') }}" value="{{ Request::get('q') }}">
-				<button type="submit" class="btn"><img src="/images/glyph/search.svg"></button>
+				<button type="submit" class="btn"><img src="/images/glyph/search.svg" alt="Search" style="width:13px;height:13px"></button>
 			</form>
 		</div>
 	</div>
@@ -67,7 +67,7 @@
 		<nav id="menues" class="">
 			<ul>
 				<li><a href="/ultimo-momento/">Último momento</a></li>
-				<li><a><img src="/images/glyph/chevron.svg" class="chevron">Temas de hoy</a>
+				<li><img src="/images/glyph/chevron.svg" class="chevron" style="height:10px">Temas de hoy
 					<ul>
 					@foreach ($menuHelper->getMenuItems('temas') as $item)
 						<li>
@@ -78,7 +78,7 @@
 					@endforeach
 					</ul>
 				</li>
-				<li><a><img src="/images/glyph/chevron.svg" class="chevron" >Secciones</a>
+				<li><img src="/images/glyph/chevron.svg" class="chevron" style="height:10px">Secciones
 					<ul>
 						@foreach ($menuHelper->getMenuItems('principal') as $item)
 						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">{{ $item['text'] }}</a></li>
@@ -86,10 +86,10 @@
 					</ul>
 				</li>
 
-				<li><a><img src="/images/glyph/chevron.svg" class="chevron" >Revistas</a>
+				<li><img src="/images/glyph/chevron.svg" class="chevron" style="height:10px">Revistas
 					<ul>
 					@foreach ($menuHelper->getMenuItems('revistas') as $item)
-						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">{{ $item['text'] }}</a></li>
+						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
 					@endforeach
 					</ul>
 				</li>

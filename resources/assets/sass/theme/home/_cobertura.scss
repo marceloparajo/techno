@@ -190,6 +190,9 @@ ARTE Y CULTURA
 							font-size: .8em;
 						}
 					}
+					figure {
+						display: none;
+					}
 					&:before {
 						content: "";
 						position: absolute;
@@ -287,6 +290,17 @@ ARTE Y CULTURA
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.notas-cobertura {
+			.columna-tercio {
+				.articulo.decobertura {
+					figure {
+						display: block;
 					}
 				}
 			}
@@ -644,12 +658,12 @@ Se usa para Radio Perfil
 								width: auto;
 								a {
 									img {
-										width: 100%;
-										height: auto;
+										min-width: 100%;
 										min-height: 100%;
 										margin: 0 0 0 60%;
 										left: -60%;
 										position: absolute;
+										object-fit: cover;
 									}
 								}
 							}

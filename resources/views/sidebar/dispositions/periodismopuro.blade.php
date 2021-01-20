@@ -1,7 +1,7 @@
 @if (isset($news) && count($news) > 0)
 	<section id="periodismopuro">
 		<header>
-			<div class="periodismopuro-titulo"><i class="fa fa-quote-right" aria-hidden="true"></i> <a href="https://www.canalnet.tv/programas/periodismo-puro/" target="_blank">Periodismo Puro</a></div>
+			<div class="periodismopuro-titulo"><i class="fa fa-quote-right" aria-hidden="true"></i> <a href="https://www.canalnet.tv/programas/periodismo-puro/" target="_blank" rel="noreferrer">Periodismo Puro</a></div>
 		</header>
 
 		@foreach(array_slice($news, 0, 4) as $key => $new)
@@ -32,7 +32,7 @@
 		@endforeach
 
 		<footer>
-			<a href="https://www.canalnet.tv/programas/periodismo-puro/" target="_blank">Más Periodismo Puro </a>
+			<a href="https://www.canalnet.tv/programas/periodismo-puro/" target="_blank" rel="noreferrer">Más Periodismo Puro </a>
 		</footer>
 	</section>
 @endif

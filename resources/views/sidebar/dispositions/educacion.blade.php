@@ -1,7 +1,7 @@
 @if (isset($news) && count($news) > 0)
 	<section id="educacion">
 		<header>
-			<div class="educacion-titulo"><a href="https://www.perfileducacion.com.ar/" target="_blank">Perfil Educación</a></div>
+			<div class="educacion-titulo"><a href="https://www.perfileducacion.com.ar/" target="_blank" rel="noreferrer">Perfil Educación</a></div>
 		</header>
 
 		@foreach(array_slice($news, 0, 4) as $key => $new)
