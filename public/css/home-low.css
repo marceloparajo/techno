@@ -2406,6 +2406,10 @@ ARTE Y CULTURA
     font-size: .8em;
   }
 
+  .cobertura .notas-cobertura .columna-tercio .articulo.decobertura figure {
+    display: none;
+  }
+
   .cobertura .notas-cobertura .columna-tercio .articulo.decobertura:before {
     content: "";
     position: absolute;
@@ -2509,6 +2513,12 @@ ARTE Y CULTURA
 
   .cobertura .notas-cobertura .columna-ancha .articulo.decobertura:hover figure a p.headline {
     display: none;
+  }
+}
+
+@media (min-width: 1295px) {
+  .cobertura .notas-cobertura .columna-tercio .articulo.decobertura figure {
+    display: block;
   }
 }
 
@@ -2924,12 +2934,13 @@ Se usa para Radio Perfil
   }
 
   .cajageneral .caja-contenido .notas-cajageneral.radio-perfil .contenido-notas .articulo.caja-nota:first-of-type figure a img {
-    width: 100%;
-    height: auto;
+    min-width: 100%;
     min-height: 100%;
     margin: 0 0 0 60%;
     left: -60%;
     position: absolute;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .cajageneral .caja-contenido .notas-cajageneral.radio-perfil .contenido-notas .articulo.caja-nota:first-of-type .meta-content {

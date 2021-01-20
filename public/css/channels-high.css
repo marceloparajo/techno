@@ -500,17 +500,16 @@ figure picture {
   cursor: pointer;
 }
 
+#contenedor-header-menu #menues ul li img.chevron {
+  float: right;
+  margin-top: 5px;
+  height: 10px;
+  width: auto;
+}
+
 #contenedor-header-menu #menues ul li a {
   color: #333;
   width: 100%;
-}
-
-#contenedor-header-menu #menues ul li a img {
-  float: right;
-  height: 10px;
-  width: auto;
-  -webkit-transform: translateY(5px);
-          transform: translateY(5px);
 }
 
 #contenedor-header-menu #menues ul li:hover {

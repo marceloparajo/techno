@@ -24,7 +24,7 @@
 			<article class="masleidas">
 				<a href="#">
 					<figure>
-						<img src="https://fotos.perfil.com/2020/06/11/300/0/berni-encabezo-desinfeccion-y-llevo-mas-policias-en-la-zona-de-villa-madero-la-matanza-970432.jpg">
+						<img src="https://fotos.perfil.com/2020/06/11/300/0/berni-encabezo-desinfeccion-y-llevo-mas-policias-en-la-zona-de-villa-madero-la-matanza-970432.jpg" alt="Un diputado de JxC chicaneó a un gremialista docente que rechaza clases presenciales">
 					</figure>
 					<h3>
 						<span class="rankOrder">1</span>Un diputado de JxC chicaneó a un gremialista docente que rechaza clases presenciales

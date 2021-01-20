@@ -15,7 +15,7 @@
 							<article class="articulo seccion">
 
 								<figure>
-									<a href="{{ $new['permalink'] }}" target="_blank">
+									<a href="{{ $new['permalink'] }}" target="_blank"  rel="noreferrer">
 										<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 										<p class="headline">
 											{{ $new['headline'] }}
@@ -24,7 +24,7 @@
 								</figure>
 
 								<div class="meta-content">
-									<a href="{{ $new['permalink'] }}" target="_blank">
+									<a href="{{ $new['permalink'] }}" target="_blank"  rel="noreferrer">
 										@if ($new['hat'] != '')
 											<span class="hat">{{ $new['hat'] }} </span>
 										@endif
