@@ -32,7 +32,7 @@
 			</div>
 			<figure>
 				<a href="/">
-					<img src="{{ asset('img/logo_perfil.svg') }}" alt="Perfil.com" style="widht:170px;">
+					<img src="{{ asset('img/logo_perfil.svg') }}" alt="Perfil.com" style="width:170px;">
 				</a>
 			</figure>
 			<nav class="menu-primario">
@@ -54,7 +54,7 @@
 		</div><!-- elisologo -->
 		<div class="radio-perfil">
 			<a href="//radio.perfil.com">
-				<img src="/images/glyph/radio-play.svg" class="radio-play" alt="Radio Perfil" style="width:22px;height:auto">
+				<img src="/images/glyph/radio-play.svg" class="radio-play" alt="Radio Perfil" style="width:22px;height:22px">
 				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil"><span>FM 101.9</span>
 			</a>
 		</div>
@@ -81,7 +81,7 @@
 				<li><img src="/images/glyph/chevron.svg" class="chevron" style="height:10px">Secciones
 					<ul>
 						@foreach ($menuHelper->getMenuItems('principal') as $item)
-						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">{{ $item['text'] }}</a></li>
+						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
 					@endforeach
 					</ul>
 				</li>

@@ -13,6 +13,10 @@ body {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
 }
 a {
 	color: $negro;
@@ -117,8 +121,10 @@ figure {
 .perfil-noticia {
 	.supercontenedor {
 		.articulo-header {
-			.h1 {font-family: $font-serif}
-			.h2 {font-family: $font-serif}
+			h1,
+			h2 {
+				font-family: $font-serif
+			}
 		}
 		.main-article {
 			.news-body {

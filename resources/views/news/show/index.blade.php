@@ -111,7 +111,7 @@
 
 		<div class="container" id="noticia">
 
-			<article class="main-article">
+			<article class="main-article" style="max-width:935px;">
 
 				{{-- Featured Image or Video --}}
 				@if ($noticia['featured_content'] == 'embed_code')
