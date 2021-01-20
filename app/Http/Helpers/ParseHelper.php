@@ -21,6 +21,11 @@ class ParseHelper
     protected $shortCodeConverter;
 
     /**
+     * @var PostBodyHelper
+     */
+    protected $postBodyHelper;
+
+    /**
      * @var imageHelper
      */
     protected $imageHelper;
@@ -28,10 +33,13 @@ class ParseHelper
     /**
      * ParseHelper constructor.
      * @param shortCodeConverter $shortCodeConverter
+     * @param PostBodyHelper $postBodyHelper
      */
-    public function __construct(shortCodeConverter $shortCodeConverter)
+    public function __construct(shortCodeConverter $shortCodeConverter, PostBodyHelper $postBodyHelper)
     {
         $this->shortCodeConverter = $shortCodeConverter;
+        $this->postBodyHelper = $postBodyHelper;
+
         Carbon::setlocale(env('APP_TIME_LANGUAGE'));
         $this->imageHelper = new ImageHelper();
     }
@@ -178,7 +186,7 @@ class ParseHelper
         }
 
         // Body
-        $body = (isset($noticia['body']) && $noticia['body'] != '') ? $noticia['body'] : '';
+        $body = (isset($noticia['body']) && $noticia['body'] != '') ? $this->postBodyHelper->process($noticia['body']) : '';
 
         // Permalink
         $permalink = $this->generatePermalink($noticia['permalink']);
