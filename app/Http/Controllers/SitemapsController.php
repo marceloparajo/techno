@@ -173,7 +173,7 @@ class SitemapsController extends Controller
 
         // Articles
         $disk = Storage::disk('rsc');
-        $dir_path = 'resources/sitemaps/' . strtolower(env('APP_NAME', '')) . '/articles';
+        $dir_path = 'resources/sitemaps/' . strtolower(env('SITE_CODE', '')) . '/articles';
 
         $files = $disk->files($dir_path);
 
@@ -246,7 +246,7 @@ class SitemapsController extends Controller
     {
         $disk = Storage::disk('rsc');
         $month = str_pad($month, 2, '0', STR_PAD_LEFT);
-        $path = 'resources/sitemaps/' . strtolower(env('APP_NAME', '')) . "/articles/$year-$month.json";
+        $path = 'resources/sitemaps/' . strtolower(env('SITE_CODE', '')) . "/articles/$year-$month.json";
 
         if (! $disk->exists($path))
             abort(404);
@@ -257,7 +257,7 @@ class SitemapsController extends Controller
         $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?><urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
 
         foreach ($items as $item) {
-            $src = str_replace('/noticias/', '/news/', $item['url']);
+            $src = str_replace('/noticias/', '/noticias/', $item['url']);
             $url = $xml->addChild('url');
             $url->addChild('loc', $src);
             $url->addChild('lastmod', $item['lastmod']);
