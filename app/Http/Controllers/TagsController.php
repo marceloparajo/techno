@@ -12,7 +12,13 @@ namespace App\Http\Controllers;
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Response;
 use Illuminate\Routing\Route;
+use Illuminate\View\View;
 
 class TagsController extends Controller
 {
@@ -40,8 +46,8 @@ class TagsController extends Controller
     /**
      * @param Route $route
      * @param BloquesHelper $bloquesHelper
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @return Application|ResponseFactory|Response
+     * @throws FileNotFoundException
      */
     public function show(Route $route, BloquesHelper $bloquesHelper)
     {
@@ -74,18 +80,21 @@ class TagsController extends Controller
         $sectionTitle = __('news of') ." ". $tag_title;
         $page_description = $sectionTitle.". ". env('SITE_DESCRIPTION','');
 
-        $type = explode("/",$route->uri)[0];
-        $amphtml = route($this->_getRouteName($type,'amp'), $tag);
-
         $site = strtolower(env('APP_NAME', ''));
         $analytics_data = [
             'tag' => $tag,
             'section' => "sitios.$site.tag",
         ];
 
-        return view('tags.index', compact('noticias', 'sidebar_content', 'tag', 'tag_title', 'sectionTitle', 'page_description', 'analytics_data','amphtml'));
+        $view_content = view('tags.index', compact('noticias', 'sidebar_content', 'tag', 'tag_title', 'sectionTitle', 'page_description', 'analytics_data'));
+        return response($view_content)->header('Cache-Control', 'max-age=300, public');
     }
 
+    /**
+     * @param string $key
+     * @param string $format
+     * @return string
+     */
     protected function _getRouteName( $key ='', $format = "show" ):string
     {
         $retValue = '';
@@ -106,7 +115,7 @@ class TagsController extends Controller
             //case 'topics':
                 $retValue = "tags.themes.".$format;
                 break;
-            
+
             default:
                 $retValue = "tags.".$key.".".$format;
                 break;
@@ -114,6 +123,11 @@ class TagsController extends Controller
         return $retValue;
     }
 
+    /**
+     * @param Route $route
+     * @param BloquesHelper $bloquesHelper
+     * @return Application|Factory|View
+     */
     public function amp(Route $route, BloquesHelper $bloquesHelper)
     {
         $tag = $route->parameter('tag');

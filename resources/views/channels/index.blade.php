@@ -34,23 +34,6 @@
 
 		<h1 class="seccion-titulo {{ $sectionTitle }}">{{ $sectionTitle }}</h1>
 
-
-{{-- TODO: Sacar el if else que pregunta si es seccion columnistas --}}
-
-		@if($sectionTitle == 'columnistas')
-
-		 @include('channels.columnistas') 
-{{--
-	TODO: Este sería el include de una list, pero no sé ponerle dos notas al primer columnista. El archivo channels.columnistas está harcodeado.
-		<div class="contenido columnistas">
-			@foreach ($noticias as $key => $noticia)
-				@include('lists.columnistas', ['noticia' => $noticia])
-			@endforeach
-		</div>
---}}
-
-		@else
-
 		<div class="contenido canal {{ $sectionTitle }}">
 			<div class="cuatro-notas">
 
@@ -59,7 +42,6 @@
 				@endforeach
 			</div>
 		</div>
-		@endif
 
 		<div class="sidebar">
 			@include('sidebar.index', ['content' => $sidebar_content])

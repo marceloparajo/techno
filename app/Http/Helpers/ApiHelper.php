@@ -30,6 +30,17 @@ class ApiHelper
     }
 
     /**
+     * @param int $limit
+     * @return object
+     */
+    public function getColumnistas(int $limit = 50)
+    {
+        $call = $this->api_server . "&metodo=getColumnistas&maxrows=$limit";
+        $payload = file_get_contents($call);
+        return (object) json_decode($payload, true);
+    }
+
+    /**
      * @param string $canal
      * @param int $limit
      * @return object

@@ -4,13 +4,7 @@
 
 @section('ads-sec', 'seccion')
 
-@section('head-top')
-	<link rel="amphtml" href="{{ $amphtml?? "" }}">
-@endsection
-
-@section('head-bottom')
-	@include('partials.taboola-sidebar-header')
-@endsection
+@section('body-class', 'pf-channel-show')
 
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/channels-high.css') }}">

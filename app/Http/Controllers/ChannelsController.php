@@ -11,10 +11,15 @@ namespace App\Http\Controllers;
 
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BloquesHelper;
+use App\Http\Helpers\ImageHelper;
 use App\Http\Helpers\ParseHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Response;
 use Illuminate\Routing\Route;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
@@ -51,7 +56,8 @@ class ChannelsController extends Controller
 
     /**
      * @param Route $route
-     * @return Factory|View
+     * @return Application|ResponseFactory|Response
+     * @throws FileNotFoundException
      */
     public function show(Route $route)
     {
@@ -86,9 +92,64 @@ class ChannelsController extends Controller
             'section' => "sitios.$site.canal",
         ];
 
-        return view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'sidebar_content', 'page_description', 'analytics_data', 'amphtml'));
+        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'sidebar_content', 'page_description', 'analytics_data', 'amphtml'));
+        return response($view_content)->header('Cache-Control', 'max-age=300, public');
     }
 
+    /**
+     * @param ImageHelper $imageHelper
+     * @return Application|ResponseFactory|Response
+     * @throws FileNotFoundException
+     */
+    public function showColumnistas(ImageHelper $imageHelper)
+    {
+        $payload = $this->apiHelper->getColumnistas();
+        $content = [];
+
+        $author_piority_order = ['jfontevecchia', 'ncastro', 'jduranbarba', 'ggonzalez', 'jcalvo', 'qquintin', 'jpetrarca'];
+
+        // Recorro el contenido y lo agrupo por autor.
+        foreach ($payload->DATA as $item) {
+            if (! isset($content[$item['author_username']])) {
+                $position = array_search($item['author_username'], $author_piority_order);
+
+                $content[$item['author_username']] = [
+                    'username' => $item['author_username'],
+                    'first_name' => $item['author_firstname'],
+                    'last_name' => $item['author_lastname'],
+                    'slug' => $item['author_slug'],
+                    'twitter' => $item['author_twitter'],
+                    'facebook' => $item['author_facebook'],
+                    'instagram' => $item['author_instagram'],
+                    'google_plus' => $item['author_googleplus'],
+                    'site' => $item['author_blogsite'],
+                    'about' => $item['author_about'],
+                    'image' => $imageHelper->generateUrlImageAuthor($item['author_username']),
+                    'position' => ($position !== false) ? $position + 1 : 999,
+                    'count_show_posts' => ($item['author_username'] == 'jfontevecchia') ? 2 : 1,
+                    'posts' => []
+                ];
+            }
+
+            array_push($content[$item['author_username']]['posts'], $this->parseHelper->parseNoticia($item));
+        }
+
+        $authors = array_values(Arr::sort($content, function($value) {
+            return $value['position'];
+        }));
+
+        $homedata = $this->bloquesHelper->generateHomedata(['sidebar']);
+        $sidebar_content = $this->bloquesHelper->generateContent($homedata)['sidebar'];
+
+        $view_content = view('channels.columnistas', compact('authors', 'sidebar_content'));
+        return response($view_content)->header('Cache-Control', 'max-age=600, public');
+    }
+
+    /**
+     * @param Route $route
+     * @param BloquesHelper $bloquesHelper
+     * @return Application|Factory|View
+     */
     public function amp(Route $route, BloquesHelper $bloquesHelper){
         $channel = $route->parameter('channel');
         $payload = $this->apiHelper->getNewsFromChannel($channel);
@@ -120,6 +181,11 @@ class ChannelsController extends Controller
         return view('amp.lists', compact('channel', 'noticias', 'sectionTitle', 'page_description', 'analytics_data', 'canonical'));
     }
 
+    /**
+     * @param Route $route
+     * @return Application|Factory|View
+     * @throws FileNotFoundException
+     */
     public function showCustomizable(Route $route)
     {
         $subchannels_list = [
@@ -168,7 +234,9 @@ class ChannelsController extends Controller
                 }
 
                 $page_title = str_replace('{canal}', '', $page_title);
-                return view("home.$channel", compact('page_title', 'subchannels_list', 'destaque_posts', 'subchannel_posts'));
+
+                $view_content = view("home.$channel", compact('page_title', 'subchannels_list', 'destaque_posts', 'subchannel_posts'));
+                return response($view_content)->header('Cache-Control', 'max-age=300, public');
 
             default:
 
@@ -180,14 +248,10 @@ class ChannelsController extends Controller
                     array_push($posts, $this->parseHelper->parseNoticia($post));
 
                 $page_title = str_replace('{canal}', ' | ' . ucfirst($page), $page_title);
-                return view("channels.$channel", compact('posts', 'page_title', 'page', 'subchannels_list'));
+
+                $view_content = view("channels.$channel", compact('posts', 'page_title', 'page', 'subchannels_list'));
+                return response($view_content)->header('Cache-Control', 'max-age=300, public');
         }
-
-
-
-
-
-
     }
 
     /**

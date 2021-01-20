@@ -12,7 +12,13 @@ namespace App\Http\Controllers;
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Response;
 use Illuminate\Routing\Route;
+use Illuminate\View\View;
 
 class LastNewsController extends Controller
 {
@@ -38,12 +44,11 @@ class LastNewsController extends Controller
     }
 
     /**
-     * @param Route $route
      * @param BloquesHelper $bloquesHelper
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @return Application|ResponseFactory|Response
+     * @throws FileNotFoundException
      */
-    public function show(Route $route, BloquesHelper $bloquesHelper)
+    public function show(BloquesHelper $bloquesHelper)
     {
         $channel = "ultimas-noticias";
         $payload = $this->apiHelper->getLastPost();
@@ -81,10 +86,14 @@ class LastNewsController extends Controller
             'section' => "sitios.$site.canal",
         ];
 
-        return view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'sidebar_content', 'page_description', 'analytics_data', 'amphtml'));
+        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'sidebar_content', 'page_description', 'analytics_data', 'amphtml'));
+        return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 
-    public function amp(Route $route, BloquesHelper $bloquesHelper)
+    /**
+     * @return Application|Factory|View
+     */
+    public function amp()
     {
         $channel = "ultimas-noticias";
         $payload = $this->apiHelper->getLastPost();

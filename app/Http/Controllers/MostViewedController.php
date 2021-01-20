@@ -8,6 +8,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Contracts\Filesystem\Filesystem;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
@@ -15,11 +21,12 @@ use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
 use Illuminate\Routing\Route;
+use Illuminate\View\View;
 
 class MostViewedController extends Controller
 {
     /**
-     * @var \Illuminate\Contracts\Filesystem\Filesystem
+     * @var Filesystem
      */
     protected $diskSrc;
 
@@ -40,19 +47,18 @@ class MostViewedController extends Controller
      */
     public function __construct(ApiHelper $apiHelper, ParseHelper $parseHelper)
     {
-            
+
         $this->diskSrc = Storage::disk('rsc');
         $this->apiHelper = $apiHelper;
         $this->parseHelper = $parseHelper;
     }
 
     /**
-     * @param Route $route
      * @param BloquesHelper $bloquesHelper
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @return Application|ResponseFactory|Response
+     * @throws FileNotFoundException
      */
-    public function show( Route $route, BloquesHelper $bloquesHelper, Request $request )
+    public function show(BloquesHelper $bloquesHelper)
     {
         $channel = "mas-leidas";
         $payload = $this->_getMostViewed();
@@ -82,11 +88,15 @@ class MostViewedController extends Controller
             'section' => "sitios.$site.canal",
         ];
 
-        return view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'sidebar_content', 'page_description', 'analytics_data', 'amphtml'));
+        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'sidebar_content', 'page_description', 'analytics_data', 'amphtml'));
+        return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 
-
-    public function amp( Route $route, BloquesHelper $bloquesHelper, Request $request )
+    /**
+     * @return Application|Factory|View
+     * @throws FileNotFoundException
+     */
+    public function amp()
     {
         $channel = "mas-leidas";
         $payload = $this->_getMostViewed();
@@ -121,11 +131,9 @@ class MostViewedController extends Controller
     }
 
 
-
     /**
-     * @param String $site
      * @return array|object
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws FileNotFoundException
      */
     protected function _getMostViewed()
     {
