@@ -9,6 +9,8 @@
 namespace App\Http\Helpers;
 
 
+use Illuminate\Support\Facades\Cache;
+
 class ApiHelper
 {
     /**
@@ -95,9 +97,11 @@ class ApiHelper
      */
     public function getNewsFromChannel(String $channel_slug)
     {
-        $call = $this->api_server . "&metodo=getnewsfromchannel&canal=$channel_slug&maxrows=70";
-        $payload = file_get_contents($call);
-        return (object) json_decode($payload, true);
+        return Cache::remember('api-helper-newsfromchannel', 0.30, function () use ($channel_slug) {
+            $call = $this->api_server . "&metodo=getnewsfromchannel&canal=$channel_slug&maxrows=70";
+            $payload = file_get_contents($call);
+            return (object) json_decode($payload, true);
+        });
     }
 
     /**
@@ -105,22 +109,26 @@ class ApiHelper
      */
     public function getHomeNews()
     {
-        $call = $this->api_server . "&metodo=gethomenews&maxrows=200";
-        $payload = file_get_contents($call);
-        return (object) json_decode($payload, true);
+        return Cache::remember('api-helper-homenews', 0.30, function () {
+            $call = $this->api_server . "&metodo=gethomenews&maxrows=200";
+            $payload = file_get_contents($call);
+            return (object) json_decode($payload, true);
+        });
     }
 
     /**
      * @param Int $cant
-     * @param Int $withoutlinks
+     * @param bool $withoutlinks
      * @return object
      */
     public function getLastPost(Int $cant = 100, Bool $withoutlinks = false)
     {
-        $withoutlinks = ($withoutlinks) ? 1 : 0;
-        $call = $this->api_server . "&metodo=getlastpost&maxrows=$cant&withoutlinks=$withoutlinks";
-        $payload = file_get_contents($call);
-        return (object) json_decode($payload, true);
+        return Cache::remember('api-helper-lastpost', 0.30, function () use ($cant, $withoutlinks) {
+            $withoutlinks = ($withoutlinks) ? 1 : 0;
+            $call = $this->api_server . "&metodo=getlastpost&maxrows=$cant&withoutlinks=$withoutlinks";
+            $payload = file_get_contents($call);
+            return (object) json_decode($payload, true);
+        });
     }
 
     /**

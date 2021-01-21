@@ -39,7 +39,9 @@
 				@if ($key == 'central-footer')
 					</div>
 					<div class="sidebar">
-							@include('sidebar.index', ['content' => $sidebar_content])
+						<div class="content-sidebar">
+							<x-sidebar />
+						</div>
 					</div>
 				@endif
 

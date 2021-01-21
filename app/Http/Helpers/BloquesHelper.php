@@ -101,13 +101,13 @@ class BloquesHelper
 
             if ($item['zone'] == '') continue;
 
-            if ($item['zone'] == 'sidebar') {
+            /*if ($item['zone'] == 'sidebar') {
                 if (count($sidebarContent) <= 0)
                     $sidebarContent = $this->_getSidebarNewsFromJson();
                 $bloque_news = Arr::where($sidebarContent, function ($value, $key) use ($item) {
                     return $value['zone'] == $item['id'];
                 });
-            } else {
+            } else {*/
 
                 if ( $item['id'] == 'ultimas-noticias' ) {
                     if (count($lastPostsContent) <= 0) {
@@ -128,7 +128,7 @@ class BloquesHelper
                     $bloque_news = $news->where('zone', $item['id']);
                 }
 
-            }
+            //}
 
             $zona = $item['zone'];
             $item_news = [];

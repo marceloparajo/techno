@@ -191,6 +191,9 @@ class ParseHelper
         // Permalink
         $permalink = $this->generatePermalink($noticia['permalink']);
 
+        // Embed code
+        $embed_code = $noticia['embed_code'] ?? '';
+
         return [
             'id' => $noticia['id'],
             'slug' => $noticia['slug'] ?? '',
@@ -237,8 +240,8 @@ class ParseHelper
             ],
             'credit' => $noticia['credit'] ?? '',
             'google_amp' => isset($noticia['flag_google_amp']) && $noticia['flag_google_amp'] === 1,
-            'embed_code' => $noticia['embed_code_convert'] ?? $noticia['embed_code'],
-            'embed_code_original' => $noticia['embed_code_original'] ?? $noticia['embed_code'],
+            'embed_code' => $noticia['embed_code_convert'] ?? $embed_code,
+            'embed_code_original' => $noticia['embed_code_original'] ?? $embed_code,
             'tags' => $noticia['tags'] ?? '',
             'tags_list'             => $tags,
             'tags_celebrities_list' => $celebrities,
@@ -425,6 +428,42 @@ class ParseHelper
 
         return $structured;
 
+    }
+
+    /**
+     * @param array $item
+     * @param string $site
+     * @return array
+     */
+    public function _parseMostViewedArticle(Array $item, String $site = 'weekend')
+    {
+        // Sites URLS
+        $sites_urls = [
+            'perfil' => 'https://www.perfil.com',
+            strtolower( env('SITE_CODE', '') ) => 'https://'.strtolower( env('APP_NAME', '') ).'.perfil.com'
+        ];
+
+        // Imagen
+        if (isset($item['imgSrc']) && $item['imgSrc'] != '')
+            $imagen = $item['imgSrc'];
+        else
+            $imagen = 'http://fotos.perfil.com/2016/07/26/default.jpg';
+
+        // Url
+        $url = ($site == strtolower(env('APP_NAME', 'www'))) ? asset(ltrim($item['pagePath']?? '')) : $sites_urls[$site] . $item['pagePath']?? '';
+
+        return [
+            'title' => $item['pageTitle']?? '',
+            'permalink' => $url,
+            'main_image' => [ 'srcs' => ['small-wide' => $imagen],'src' => $imagen, 'title' => '', 'caption'=> $item['pageTitle']?? '' ],
+            'hat'=> '',
+            'home_title' => $item['pageTitle']?? '',
+            'headline' => '',
+            'credit' => '',
+            'author' => ['fullname'=>''],
+            'date_available' => '',
+            'signed' => 'N'
+        ];
     }
 
     /**

@@ -1,5 +1,6 @@
 import Lazyload from 'vanilla-lazyload'
 import handleToggleHeaderMenu from './modules/header-menu'
+import SidebarWidgets from './modules/sidebar'
 
 const SnippetHome = function () {
 
@@ -7,6 +8,7 @@ const SnippetHome = function () {
 		initLazyload()
 		initRadioTicker()
 		handleToggleHeaderMenu()
+		SidebarWidgets()
 	}
 
 	const initRadioTicker = () => {

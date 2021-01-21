@@ -8,6 +8,11 @@
 
 Route::group(['prefix' => __("path authors")], function () {
 
+    Route::get('', [
+        'as' => 'authors.index',
+        'uses' => 'AuthorsController@index'
+    ]);
+
     Route::get('{username}', [
         'as' => 'authors.show',
         'uses' => 'AuthorsController@show'

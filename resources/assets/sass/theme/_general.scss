@@ -1,3 +1,5 @@
+@import './_normalize.scss';
+
 html,
 body {
 	width: 100%;
@@ -93,7 +95,7 @@ figure img {
 	height: 0;
 	padding: 0;
 	overflow: hidden;
-	.embed-responsive-item, 
+	.embed-responsive-item,
 	embed,
 	iframe,
 	object,

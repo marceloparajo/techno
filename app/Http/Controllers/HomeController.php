@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Helpers\ApiHelper;
+use App\Http\Helpers\BlockDistributionsHelper;
 use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
@@ -44,28 +45,12 @@ class HomeController extends Controller
     }
 
     /**
-     * @param BloquesHelper $bloquesHelper
+     * @param BlockDistributionsHelper $blockDistributionsHelper
      * @return Application|ResponseFactory|Response
-     * @throws FileNotFoundException
      */
-    public function index(BloquesHelper $bloquesHelper)
+    public function index(BlockDistributionsHelper $blockDistributionsHelper)
     {
-        $site = strtolower(env('SITE_CODE', ''));
-
-        // Obtengo datos de homedata
-        if (env('RESOURCES_SOURCE', 'file') == 'file') {
-            $diskRsc = Storage::disk('rsc');
-            $pathHomeData = str_replace('-sitecode-', $site, env('HOMEDATA_FILE', ''));
-            $homedata = ($diskRsc->exists($pathHomeData)) ? collect(json_decode($diskRsc->get($pathHomeData), true)) : [];
-        } else {
-            $pathHomeData = str_replace('-sitecode-', $site, env('HOMEDATA_URL', ''));
-            $content = file_get_contents($pathHomeData);
-            $homedata = collect(json_decode($content, true));
-        }
-
-        // Obtengo las noticias
-        $home_content = $bloquesHelper->generateContent($homedata);
-        $sidebar_content = (isset($home_content['sidebar'])) ? $home_content['sidebar'] : [];
+        $home_content = $blockDistributionsHelper->getHomedata();
 
         $amphtml = route('home.amp');
 
@@ -75,7 +60,7 @@ class HomeController extends Controller
             'section' => "sitios.$site.home"
         ];
 
-        $view_content = view('home.index', compact('home_content', 'analytics_data', 'amphtml', 'sidebar_content'));
+        $view_content = view('home.index', compact('home_content', 'analytics_data', 'amphtml'));
         return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 
