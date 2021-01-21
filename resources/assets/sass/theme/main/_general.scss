@@ -26,6 +26,11 @@ a {
 		text-decoration: none;
 	}
 }
+h1,
+h2 {
+	font-family: $font-serif;
+	line-height: 1em;
+}
 figure {
 	img,
 	picture {
@@ -115,23 +120,20 @@ figure {
 	padding-bottom: 56.25%;
 }
 
-
 //TIPOGRAFIAS
 
 .perfil-noticia {
 	.supercontenedor {
-		.articulo-header {
-			h1,
-			h2 {
-				font-family: $font-serif
-			}
-		}
 		.main-article {
 			.news-body {
 				.fecha-autor {
-					.autor {font-family: $font-serif}
+					.autor {
+						font-family: $font-serif
+					}
 				}
-				.news-content {font-family: $font-serif}
+				.news-content {
+					font-family: $font-serif
+				}
 			}
 		}
 	}

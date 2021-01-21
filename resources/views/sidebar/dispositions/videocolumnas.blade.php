@@ -33,7 +33,7 @@
 		@endforeach
 
 		<footer>
-			<a href="https://www.perfil.com/reperfilar/columnistas" target="_blank" rel="noreferrer">Más en Opinión </a>
+			<a href="https://www.perfil.com/reperfilar/columnistas" target="_blank" rel="noreferrer">Más Videocolumnas </a>
 		</footer>
 	</section>
 @endif

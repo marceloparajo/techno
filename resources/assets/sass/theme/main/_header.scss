@@ -93,50 +93,6 @@
 		align-items: baseline;
 		.more-sites {
 			display: none;
-			ul {
-				display: flex;
-				justify-content: flex-end;
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				li {
-					background: url('../../../img/menu-sprite.png');
-					background-repeat: no-repeat;
-					text-indent: -9999px;
-					margin: 0 0 0 12px;
-					display: block;
-					a {
-						display: block;
-						width: 100%;
-						height: 20px;
-						background: rgba(255,255,255,.2);
-						transition: ease .3s;
-						&:hover {
-							background: rgba(255,255,255,0);
-						}
-					}
-					&.menu-exitoina {
-						background-position: 0 -121px;
-						width: 92px;
-					}
-					&.menu-caras {
-						background-position: 0 -89px;
-						width: 40px;
-					}
-					&.menu-noticias {
-						background-position: 0 -59px;
-						width: 54px;
-					}
-					&.menu-bloomberg {
-						background-position: 0 -29px;
-						width: 94px;
-					}
-					&.menu-reperfilar {
-						background-position: 0 1px;
-						width: 102px;
-					}
-				}
-			}
 		}
 	}
 	.header-fecha {
@@ -198,6 +154,50 @@
 		.header-data {
 			.more-sites {
 				display: block;
+				ul {
+					display: flex;
+					justify-content: flex-end;
+					list-style: none;
+					padding: 0;
+					margin: 0;
+					li {
+						background: url('../../../img/menu-sprite.png');
+						background-repeat: no-repeat;
+						text-indent: -9999px;
+						margin: 0 0 0 12px;
+						display: block;
+						a {
+							display: block;
+							width: 100%;
+							height: 20px;
+							background: rgba(255,255,255,.2);
+							transition: ease .3s;
+							&:hover {
+								background: rgba(255,255,255,0);
+							}
+						}
+						&.menu-exitoina {
+							background-position: 0 -121px;
+							width: 92px;
+						}
+						&.menu-caras {
+							background-position: 0 -89px;
+							width: 40px;
+						}
+						&.menu-noticias {
+							background-position: 0 -59px;
+							width: 54px;
+						}
+						&.menu-bloomberg {
+							background-position: 0 -29px;
+							width: 94px;
+						}
+						&.menu-reperfilar {
+							background-position: 0 1px;
+							width: 102px;
+						}
+					}
+				}
 			}
 		}
 	}

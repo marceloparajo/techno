@@ -43,9 +43,9 @@
 			</div>
 		</div>
 
-		<div class="sidebar">
-			@include('sidebar.index', ['content' => $sidebar_content])
-		</div>
+		<aside class="sidebar">
+			<x-sidebar />
+		</aside>
 
 	</main>
 
