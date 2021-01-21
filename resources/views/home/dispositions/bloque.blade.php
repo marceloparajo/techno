@@ -57,9 +57,9 @@
 								@if ($new['hat'] != '')<span class="hat">{{ $new['hat'] }}</span>@endif
 
 								@if ($new['has_video'])
-									<div class="galeria-video"><img src="/images/glyph/hasvideo-azul.svg" class="hasvideo"></div>
+									<div class="galeria-video"><img src="/images/glyph/hasvideo-azul.svg" class="hasvideo" alt="video" style="width:20px;height:20px"></div>
 								@elseif ($new['has_gallery'])
-									<div class="galeria-video"><img src="/images/glyph/hasgallery-azul.svg" class="hasgallery"></div>
+									<div class="galeria-video"><img src="/images/glyph/hasgallery-azul.svg" class="hasgallery" alt="galeria" style="width:20px;height:20px"></div>
 								@endif
 
 								<h2>{{ $new['home_title'] }}</h2>
@@ -99,9 +99,9 @@
 								@if ($new['hat'] != '')<span class="hat">{{ $new['hat'] }}</span>@endif
 
 								@if ($new['has_video'])
-									<div class="galeria-video"><img src="/images/glyph/hasvideo-azul.svg" class="hasvideo"></div>
+									<div class="galeria-video"><img src="/images/glyph/hasvideo-azul.svg" class="hasvideo" alt="video" style="width:20px;height:20px"></div>
 								@elseif ($new['has_gallery'])
-									<div class="galeria-video"><img src="/images/glyph/hasgallery-azul.svg" class="hasgallery"></div>
+									<div class="galeria-video"><img src="/images/glyph/hasgallery-azul.svg" class="hasgallery" alt="galeria" style="width:20px;height:20px"></div>
 								@endif
 
 								<h2>{{ $new['home_title'] }}</h2>

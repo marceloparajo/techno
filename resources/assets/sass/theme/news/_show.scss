@@ -4,6 +4,58 @@
 		&.main-header {
 			padding-top: 0;
 		} 
+		.articulo-header {
+			width: 100%;
+			padding: 0 10px;
+			display: flex;
+			flex-direction: column;
+			.hat {
+				line-height: 1em;
+				padding: 0 0 5px 0;
+				border-bottom: 1px solid $linea;
+				font: {
+					family: $font-sinserif;
+					size: 0.9rem;
+					weight: 400;
+				}
+				color: $azul;
+				a {
+					display: none;
+					color: $dark;
+					font-weight: 600;
+					text-transform: uppercase;
+				}
+				span {
+					&.volanta {
+						font-weight: 600;
+						text-transform: uppercase;
+					}
+				}
+			}
+			h1 {
+				font: {
+					family: $font-serif;
+					size: 2.47rem;
+					weight: 600;
+				}
+				line-height: 1em;
+				letter-spacing: -0.03em;
+				color: $negro;
+			}
+			h2 {
+				font:{
+					size: 1.45rem;
+					family: $font-serif;
+					weight: 400;
+				}
+				margin: 10px 0;
+				letter-spacing: -0.02em;
+			}
+			h3 {
+				font-size: 1.2em;
+				margin: 16px 0 10px 0;
+			}
+		}
 		.container {
 			.main-article {
 				width: 100%;
@@ -36,7 +88,6 @@
 					figcaption {
 						color: $dark;
 						font-size: .85rem;
-						font-size: 4vw;
 						line-height: 1.3em;
 						padding: 5px;
 						font-family: $font-sinserif;
@@ -79,7 +130,6 @@
 					position: relative;
 					font-family: $font-serif;
 					font-size: 1.35rem;
-					font-size: 3vw;
 					padding: 0 10px;
 					color: $dark;
 					strong,
@@ -96,7 +146,6 @@
 					ol,
 					li {
 						font-size: 1.35rem;
-						font-size: 6vw;
 						font-family: $font-serif;
 						line-height: 1.35em;
 						letter-spacing: -0.01em;
@@ -196,8 +245,7 @@
     					padding-top: 10px;
 					}
 					.fecha {
-						font-size: .8rem;
-						font-size: 4vw;
+						font-size: .9rem;
 						font-weight: 400;
 						color: #999;
 						font-family: $font-sinserif;
@@ -302,7 +350,6 @@
 									family: $font-serif;
 									weight: 600;
 									size: 1.2rem;
-									size: 5vw;
 								}
 							}
 							.related-news {
@@ -320,8 +367,7 @@
 										margin: 0 10px 0 0;
 									}
 									h5 {
-										font-size: 1rem;
-										font-size: 4.7vw;
+										font-size: 1.05rem;
 										line-height: 1em;
 										letter-spacing: -0.02em;
 										a {
@@ -392,7 +438,6 @@
 									font:{
 										family: $font-sinserif;
 										size: .85rem;
-										size: 4vw;
 									}
 									a {
 										color: $dark;
@@ -427,8 +472,7 @@
 						.previous-titulo {
 							font: {
 								family: $font-sinserif;
-					    		size: .9rem;
-					    		size: 4.5vw;
+					    		size: 1rem;
 					    		weight: 600;
 					    	}
 					    	color: $negro;
@@ -444,8 +488,7 @@
 							li {
 								font: {
 									weight: 500;
-									size: 1rem;
-									size: 5vw;
+									size: 1.12rem;
 									family: $font-serif;
 								}
 								margin-left: 4px;

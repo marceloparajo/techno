@@ -1,6 +1,6 @@
 @if (isset($news) && count($news) > 0)
 	<div class="container revistas">
-		<span class="nombre-revista">Revista</span>
+		<span class="nombre-revista">Revista  </span>
 
 			<div class="notas-revistas">
 				@foreach(array_slice($news, 0, 4) as $key => $new)
