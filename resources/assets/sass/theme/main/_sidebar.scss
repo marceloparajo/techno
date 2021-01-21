@@ -333,8 +333,7 @@
 					h3 {
 						color: $negro;
 						font:{
-							size: 1.3rem;
-							size: 5.7vw;
+							size: 1.28rem;
 							weight: 400;
 							family: $font-serif;
 						}
@@ -344,7 +343,6 @@
 					.firma-home {
 						font-family: $font-sinserif;
 						font-size: .8rem;
-						font-size: 3.3vw;
 						margin-top: 5px;
 						text-transform: uppercase;
 						color: $dark;
@@ -380,8 +378,7 @@
 					.content {
 						flex-basis: 100%;
 						h3 {
-							font-size: 1.5rem;
-							font-size: 6.5vw;
+							font-size: 1.46rem;
 							line-height: 1.03em;
 						}
 					}
@@ -491,8 +488,7 @@
 					}
 					h3 {
 						color: $dark;
-						font-size: 1.1rem;
-						font-size: 5vw;
+						font-size: 1.12rem;
 						line-height: 1.05em;
 						font-weight: 500;
 						letter-spacing: -0.02em;
@@ -508,12 +504,12 @@
 							text-align: right;
 							display: block;
 							padding: 0 8px 0 0;
-							font-size: 2em;
+							font-size: 1.8em;
 							color: #999;
 							transform: translateY(10px);
-							font-family: $font-condensada;
+							font-family: $font-sinserif;
 							font-weight: 400;
-							letter-spacing: -0.03em;
+							letter-spacing: -0.15em;
 							float: left;
 						}
 					}
@@ -690,16 +686,14 @@
 							h3 {
 								padding: 0;
 								margin: 0;
-								font-size: 1rem;
-								font-size: 5vw;
+								font-size: 1.15rem;
 								line-height: 1em;
 								color: $negro;
 							}
 							.firma-home {
 								padding: 0;
 								margin: 0;
-								font-size: .8rem;
-								font-size: 4.5vw;
+								font-size: 1rem;
 								color: $dark;
 								font-style: italic;
 							}

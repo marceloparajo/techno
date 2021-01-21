@@ -9,7 +9,7 @@
                 <a href="{{ $getPath('', $site) }}" rel="noreferrer"><div class="logo-revista">{{ $site }}</div></a>
                 <a href="{{ $noticia['pagePath'] }}" title="{{ $noticia['pageTitle'] }}" rel="noreferrer">
                     <figure>
-                        <x-lazy-image :src="$noticia['imgSrc']" :alt="$noticia['pageTitle']" max-width="500" clean-source="true" />
+                        <x-lazy-image :src="$noticia['imgSrc']" :alt="$noticia['pageTitle']" max-width="200" clean-source="true" />
                     </figure>
                     <h2>{{ $noticia['pageTitle'] }}</h2>
                 </a>

@@ -52,8 +52,7 @@
 		h2 {
 			font: {
 				family: $font-general;
-				size: 1rem;
-				size: 4vw;
+				size: .9rem;
 				weight: 600;
 			}
 			line-height: 1em;
@@ -73,6 +72,7 @@
 		display: block;
 		background-image: url('/img/revistas.png');
 		background-repeat: no-repeat;
+		text-indent: -9999px;
 	}
 	&.marieclaire {
 		background-color: white;
