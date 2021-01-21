@@ -10,7 +10,6 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Helpers\ApiHelper;
-use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ImageHelper;
 use App\Http\Helpers\ParseHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
@@ -37,27 +36,19 @@ class ChannelsController extends Controller
     protected $parseHelper;
 
     /**
-     * @var BloquesHelper
-     */
-    protected $bloquesHelper;
-
-    /**
      * ChannelsController constructor.
      * @param ApiHelper $apiHelper
      * @param ParseHelper $parseHelper
-     * @param BloquesHelper $bloquesHelper
      */
-    public function __construct(ApiHelper $apiHelper, ParseHelper $parseHelper, BloquesHelper $bloquesHelper)
+    public function __construct(ApiHelper $apiHelper, ParseHelper $parseHelper)
     {
         $this->apiHelper = $apiHelper;
         $this->parseHelper = $parseHelper;
-        $this->bloquesHelper = $bloquesHelper;
     }
 
     /**
      * @param Route $route
      * @return Application|ResponseFactory|Response
-     * @throws FileNotFoundException
      */
     public function show(Route $route)
     {
@@ -79,11 +70,6 @@ class ChannelsController extends Controller
             array_push($noticias, $new);
         }
 
-        //dd($noticias);
-
-        $homedata = $this->bloquesHelper->generateHomedata(['sidebar']);
-        $sidebar_content = $this->bloquesHelper->generateContent($homedata)['sidebar'];
-
         $amphtml = route('channels.amp', $channel);
 
         $site = strtolower(env('SITE_CODE', ''));
@@ -92,14 +78,13 @@ class ChannelsController extends Controller
             'section' => "sitios.$site.canal",
         ];
 
-        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'sidebar_content', 'page_description', 'analytics_data', 'amphtml'));
+        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'page_description', 'analytics_data', 'amphtml'));
         return response($view_content)->header('Cache-Control', 'max-age=300, public');
     }
 
     /**
      * @param ImageHelper $imageHelper
      * @return Application|ResponseFactory|Response
-     * @throws FileNotFoundException
      */
     public function showColumnistas(ImageHelper $imageHelper)
     {
@@ -138,19 +123,13 @@ class ChannelsController extends Controller
             return $value['position'];
         }));
 
-        $homedata = $this->bloquesHelper->generateHomedata(['sidebar']);
-        $sidebar_content = $this->bloquesHelper->generateContent($homedata)['sidebar'];
-
-        $view_content = view('channels.columnistas', compact('authors', 'sidebar_content'));
+        $view_content = view('channels.columnistas', compact('authors'));
         return response($view_content)->header('Cache-Control', 'max-age=600, public');
     }
 
-    /**
-     * @param Route $route
-     * @param BloquesHelper $bloquesHelper
-     * @return Application|Factory|View
-     */
-    public function amp(Route $route, BloquesHelper $bloquesHelper){
+
+    /*public function amp(Route $route)
+    {
         $channel = $route->parameter('channel');
         $payload = $this->apiHelper->getNewsFromChannel($channel);
 
@@ -179,7 +158,7 @@ class ChannelsController extends Controller
         ];
 
         return view('amp.lists', compact('channel', 'noticias', 'sectionTitle', 'page_description', 'analytics_data', 'canonical'));
-    }
+    }*/
 
     /**
      * @param Route $route

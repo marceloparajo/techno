@@ -10,7 +10,6 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Helpers\ApiHelper;
-use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\Foundation\Application;
@@ -48,11 +47,9 @@ class NewsController extends Controller
 
     /**
      * @param Route $route
-     * @param BloquesHelper $bloquesHelper
      * @return Application|ResponseFactory|Response
-     * @throws FileNotFoundException
      */
-    public function show(Route $route, BloquesHelper $bloquesHelper)
+    public function show(Route $route)
     {
         $slug = Str::slug($route->parameter('slug') ?? '');
 
@@ -65,10 +62,6 @@ class NewsController extends Controller
 
         if ($payload->DATA['published'] != 1 && !env('APP_MODE_PREVIEW', false))
             abort(404);
-
-        $homedata = $bloquesHelper->generateHomedata(['sidebar']);
-        $content = $bloquesHelper->generateContent($homedata);
-        $sidebar_content = (isset($content['sidebar'])) ? $content['sidebar'] : [];
 
         $noticia = $this->parseHelper->parseNoticia($payload->DATA);
         $jsonStructured = $this->parseHelper->parseNoticiaStructuredData($noticia);
@@ -143,10 +136,8 @@ class NewsController extends Controller
                 $view = 'news.show.index';
         }
 
-        $view_content = view($view, compact('noticia', 'jsonStructured', 'sidebar_content', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));
+        $view_content = view($view, compact('noticia', 'jsonStructured', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));
         return response($view_content)->header('Cache-Control', 'max-age=300, public');
-
-
     }
 
     /**

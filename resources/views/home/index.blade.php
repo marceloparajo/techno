@@ -6,10 +6,6 @@
 	<meta http-equiv="refresh" content="600" />
 @endsection
 
-@section('head-top')
-	<link rel="amphtml" href="{{ $amphtml?? "" }}">
-@endsection
-
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/home-high.css') }}">
 

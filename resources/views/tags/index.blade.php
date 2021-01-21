@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<div class="sidebar">
-			@include('sidebar.index', ['content' => $sidebar_content])
+			<x-sidebar />
 		</div>
 
 	</main>

@@ -62,6 +62,11 @@ class BlockDistributionsHelper
         });
     }
 
+    /**
+     * @param string $site_code
+     * @return array
+     * @throws FileNotFoundException
+     */
     public function getLastsPosts(string $site_code)
     {
         $news = $this->_getLastPostsOfSite($site_code);

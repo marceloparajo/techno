@@ -19,7 +19,6 @@ use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use SimpleXMLElement;
-use Spatie\ArrayToXml\ArrayToXml;
 
 class SitemapsController extends Controller
 {

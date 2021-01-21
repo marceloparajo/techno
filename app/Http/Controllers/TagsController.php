@@ -10,7 +10,6 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Helpers\ApiHelper;
-use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\Foundation\Application;
@@ -45,11 +44,9 @@ class TagsController extends Controller
 
     /**
      * @param Route $route
-     * @param BloquesHelper $bloquesHelper
      * @return Application|ResponseFactory|Response
-     * @throws FileNotFoundException
      */
-    public function show(Route $route, BloquesHelper $bloquesHelper)
+    public function show(Route $route)
     {
         $tag = $route->parameter('tag');
         $payload = $this->apiHelper->getNewsFromTag($tag);
@@ -73,9 +70,6 @@ class TagsController extends Controller
             array_push($noticias, $new);
         }
 
-        $homedata = $bloquesHelper->generateHomedata(['sidebar']);
-        $sidebar_content = $bloquesHelper->generateContent($homedata)['sidebar'];
-
         $tag_title = str_replace("-", " ", $tag) ;
         $sectionTitle = __('news of') ." ". $tag_title;
         $page_description = $sectionTitle.". ". env('SITE_DESCRIPTION','');
@@ -86,7 +80,7 @@ class TagsController extends Controller
             'section' => "sitios.$site.tag",
         ];
 
-        $view_content = view('tags.index', compact('noticias', 'sidebar_content', 'tag', 'tag_title', 'sectionTitle', 'page_description', 'analytics_data'));
+        $view_content = view('tags.index', compact('noticias', 'tag', 'tag_title', 'sectionTitle', 'page_description', 'analytics_data'));
         return response($view_content)->header('Cache-Control', 'max-age=300, public');
     }
 
@@ -125,10 +119,9 @@ class TagsController extends Controller
 
     /**
      * @param Route $route
-     * @param BloquesHelper $bloquesHelper
      * @return Application|Factory|View
      */
-    public function amp(Route $route, BloquesHelper $bloquesHelper)
+    public function amp(Route $route)
     {
         $tag = $route->parameter('tag');
         $payload = $this->apiHelper->getNewsFromTag($tag);
