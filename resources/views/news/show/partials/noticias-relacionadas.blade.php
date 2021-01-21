@@ -1,5 +1,5 @@
 <div class="noticias-relacionadas">
-    <h6>{{ __('related news') }}</h6>
+    <div class="titulo-relacionadas">{{ __('related news') }}</div>
     <div class="related-news">
         @foreach (array_slice($noticias, 0, 4) as $noticia)
             <article class="related-new">

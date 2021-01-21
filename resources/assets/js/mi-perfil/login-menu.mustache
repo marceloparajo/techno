@@ -5,22 +5,22 @@
     <div class="pw-logged-info">
       <ul>
         {{#unsubscribed}}
-          <li class="suscribite-logged"><strong><a href="{{paywall_url}}">Suscribite</a></strong></li>
+          <li class="suscribite-logged"><strong><a href="{{paywall_url}}" rel="noreferrer">Suscribite</a></strong></li>
         {{/unsubscribed}}
-        <li><a href="{{paywall_url}}id/perfil">Mi Perfil</a></li>
+        <li><a href="{{paywall_url}}id/perfil" rel="noreferrer">Mi Perfil</a></li>
         {{^unsubscribed}}
-          <li><a href="{{paywall_url}}mi-suscripcion">Mi suscripción</a></li>
+          <li><a href="{{paywall_url}}mi-suscripcion" rel="noreferrer">Mi suscripción</a></li>
         {{/unsubscribed}}
         <li><a href="{{paywall_url}}id/logout">Cerrar sesión</a></li>
       </ul>
     </div>
   </div>
   {{#unsubscribed}}
-    <a href="{{paywall_url}}" class="pw-suscribite">Suscribite</a>
+    <a href="{{paywall_url}}" class="pw-suscribite" rel="noreferrer">Suscribite</a>
   {{/unsubscribed}}
 {{/user_logged}}
 
 {{^user_logged}}
-  <a href="{{paywall_url}}id/login/?continue={{current_url}}" class="pw-ingresar">Ingresar</a>
-  <a href="{{paywall_url}}" class="pw-suscribite">Suscribite</a>
+  <a href="{{paywall_url}}id/login/?continue={{current_url}}" class="pw-ingresar" rel="noreferrer">Ingresar</a>
+  <a href="{{paywall_url}}" class="pw-suscribite" rel="noreferrer">Suscribite</a>
 {{/user_logged}}
