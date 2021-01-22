@@ -193,8 +193,7 @@
 						margin: auto 0;
 						font:{
 							family: $font-serif;
-							size: 1rem;
-							size: 5vw;
+							size: 1.15rem;
 							weight: 500;
 						}
 						color: $negro;
@@ -209,7 +208,6 @@
 						font:{
 							family: $font-sinserif;
 							size: .9rem;
-							size: 4vw;
 							weight: bold;
 						}
 						line-height: .8em;
@@ -220,7 +218,6 @@
 					h2 {
 						font:{
 							size: 1.6rem;
-							size: 7vw;
 							family: $font-serif;
 							weight: 500;
 							letter-spacing: -0.02em;
@@ -232,7 +229,6 @@
 					p.headline {
 						font: {
 							size: 0.9rem;
-							size: 4vw;
 							weight: normal;
 						}
 						color: $dark;
@@ -240,7 +236,6 @@
 					.fechayhora {
 						font:{
 							size: .8rem;
-							size: 3.5vw;
 						}
 						display: block;
 						text-transform: uppercase;

@@ -34,9 +34,13 @@
 
 				<div class="box-columnista @if ($loop->first) main-columnista @endif">
 					<div class="info-columnista">
-						<a href="#">
+						<a href="{{ route('authors.show', $author['username']) }}">
 							<figure>
-								<img src="{{ $author['image'] }}" class="lazyload" />
+								@if ($loop->index < 3) 
+								<img src="{{ $author['image'] }}" class="lazyload" alt="{{ $author['first_name'] }} {{ $author['last_name'] }}" />
+								@else
+								<img src="https://fotos.perfil.com/autores/default/{{ $author['username'] }}_50.jpg" class="lazyload" alt="{{ $author['first_name'] }} {{ $author['last_name'] }}">
+								@endif
 							</figure>
 							<span class="nombre-columnista">{{ $author['first_name'] }} {{ $author['last_name'] }}</span>
 						</a>
@@ -48,7 +52,11 @@
 								<span class="hat">{{ $post['hat'] }}</span>
 								<h2>{{ $post['title'] }}</h2>
 								<p class="headline">{{ $post['headline'] }}</p>
-								<span class="fechayhora">Domingo 10 de enero de 2021</span>
+								@if ( isset($post['date_available_human']) && !empty($post['date_available_human']) )
+									<span class="fechayhora">
+										{{ $post['date_available_human'] }}
+									</span>
+								@endif
 							</a>
 						</article>
 					@endforeach
@@ -58,8 +66,8 @@
 
 		</div>
 
-		<div class="sidebar">
-			@include('sidebar.index', ['content' => $sidebar_content])
-		</div>
+		<aside class="sidebar">
+			<x-sidebar />
+		</aside>
 	</main>
 @endsection

@@ -205,7 +205,7 @@
 			</article>
 
 			<aside class="sidebar">
-				@include('sidebar.index', ['content' => $sidebar_content])
+				<x-sidebar />
 			</aside>
 
 		</div><!-- noticia -->
