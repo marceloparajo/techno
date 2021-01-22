@@ -21,9 +21,9 @@ class ParseHelper
     protected $shortCodeConverter;
 
     /**
-     * @var PostBodyHelper
+     * @var OptimizerHelper
      */
-    protected $postBodyHelper;
+    protected $optimizerHelper;
 
     /**
      * @var imageHelper
@@ -33,12 +33,12 @@ class ParseHelper
     /**
      * ParseHelper constructor.
      * @param shortCodeConverter $shortCodeConverter
-     * @param PostBodyHelper $postBodyHelper
+     * @param OptimizerHelper $optimizerHelper
      */
-    public function __construct(shortCodeConverter $shortCodeConverter, PostBodyHelper $postBodyHelper)
+    public function __construct(shortCodeConverter $shortCodeConverter, OptimizerHelper $optimizerHelper)
     {
         $this->shortCodeConverter = $shortCodeConverter;
-        $this->postBodyHelper = $postBodyHelper;
+        $this->optimizerHelper = $optimizerHelper;
 
         Carbon::setlocale(env('APP_TIME_LANGUAGE'));
         $this->imageHelper = new ImageHelper();
@@ -186,13 +186,13 @@ class ParseHelper
         }
 
         // Body
-        $body = (isset($noticia['body']) && $noticia['body'] != '') ? $this->postBodyHelper->process($noticia['body']) : '';
+        $body = (isset($noticia['body']) && $noticia['body'] != '') ? $this->optimizerHelper->processAll($noticia['body']) : '';
 
         // Permalink
         $permalink = $this->generatePermalink($noticia['permalink']);
 
         // Embed code
-        $embed_code = $noticia['embed_code'] ?? '';
+        $embed_code = $this->optimizerHelper->optimizeIframes($noticia['embed_code'] ?? '');
 
         return [
             'id' => $noticia['id'],

@@ -30,12 +30,12 @@ const SnippetShowNews = function () {
 		})
 	}
 
-	const handleClickGallery = () => {
+	/*const handleClickGallery = () => {
 		$('.btn-open-gallery').click((e) => {
 			e.preventDefault()
 			$('#gallery-thumbnails a').first().trigger('click')
 		})
-	}
+	}*/
 
 	const initLazyLoad = () => {
 		const lazyLoad = new LazyLoad({
@@ -43,7 +43,7 @@ const SnippetShowNews = function () {
 		})
 	}
 
-	const initBottomGallery = () => {
+	/*const initBottomGallery = () => {
 		const el = $('#gallery-thumbnails')
 
 		el.lightGallery({
@@ -53,7 +53,7 @@ const SnippetShowNews = function () {
 		el.on('onBeforeSlide.lg', (event, prevIndex, index) => {
 			//sendHitGalleryAnalytics(index)
 		})
-	}
+	}*/
 
 	return {
 		init: () => initialize()
