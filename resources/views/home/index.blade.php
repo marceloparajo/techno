@@ -44,7 +44,7 @@
 
 				<section id="{{ $key }}" class="contenedor-general">
 					@foreach($value as $item)
-						@include('home.dispositions.' . $item['template'], ['news' => $item['news']])
+						@include('home.dispositions.' . $item['template'], ['news' => $item['news'], 'id' => $item['id']])
 					@endforeach
 				</section>
 			@endif
