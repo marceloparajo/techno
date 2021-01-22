@@ -154,7 +154,8 @@
 	#panorama,
 	#reperfilar,
 	#videocolumnas,
-	#educacion {
+	#educacion,
+	#batimes {
 		background: #fff;
 		width: 100%;
 		margin: 0 0 20px 0;
@@ -308,6 +309,20 @@
 				font-size: 24px;
 				font-weight: 600;
 			}
+			.batimes-titulo {
+				text-indent: -9999px;
+				width: 280px;
+				height: 35px;
+				display: block;
+				margin: 0;
+				background: url('../../../img/batimes.png') 0 15px no-repeat;
+				a {
+					display: block;
+					width: 280px;
+					height: 35px;
+				}
+			}
+
 		}
 		article {
 			width: 100%;
@@ -598,6 +613,13 @@
 			display: none;
 		}
 	}
+	#batimes {
+		footer {
+			a {
+				letter-spacing: 0;
+			}
+		}
+	}
 	#columnistas {
 		background: #fff;
 		width: 100%;
@@ -753,6 +775,7 @@
 		background: white;
 		box-shadow: 0 3px 7px 0 rgba(0,0,0,.2);
 		padding: 5px 10px 0 10px;
+		margin: 0 0 20px 0;
 		.title-divisas {
 			font-family: $font-serif;
 			font-size: 24px;
@@ -764,11 +787,12 @@
 			font-size: .8rem;
 			display: grid;
 			grid-template-areas: 
-				'empty venta compra'
-				'do doventa docompra'
-				'db dbventa dbcompra'
-				'eo eoventa eocompra'
-				'eb ebventa ebcompra';
+				'empty compra venta'
+				'do docompra doventa'
+				'db dbcompra dbventa'
+				'ds dscompra dsventa'
+				'eo eocompra eoventa'
+				'eb ebcompra ebventa';
 			grid-template-columns: 3fr 2fr 2fr;
 			grid-row-gap: 1px;
 			transform: translateY(-24px);
@@ -816,7 +840,19 @@
 				text-align: right;
 				font-weight: bold;
 			}
-
+			.ds {
+				grid-area: ds;
+			}
+			.dsventa {
+				grid-area: dsventa;
+				text-align: right;
+				font-weight: bold;
+			}
+			.dscompra {
+				grid-area: dscompra;
+				text-align: right;
+				font-weight: bold;
+			}
 			.eo {
 				grid-area: eo;
 			}
@@ -856,7 +892,8 @@
 		#panorama,
 		#reperfilar,
 		#videocolumnas,
-		#educacion {
+		#educacion,
+		#batimes {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -971,7 +1008,8 @@
 		#panorama,
 		#reperfilar,
 		#videocolumnas,
-		#educacion {
+		#educacion,
+		#batimes {
 			article {
 				width: 25%;
 				a {
@@ -1014,7 +1052,8 @@
 		#panorama,
 		#reperfilar,
 		#videocolumnas,
-		#educacion {
+		#educacion,
+		#batimes {
 			display: flex;
 			flex-direction: column;
 			article {
@@ -1146,6 +1185,9 @@
 						text-decoration: none;
 						margin: 0 5px;
 						cursor: pointer;
+						&:nth-child(n+10) {
+							display: none;
+						}
 					}
 				}
 			}

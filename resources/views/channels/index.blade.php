@@ -39,9 +39,9 @@
 			</div>
 		</div>
 
-		<div class="sidebar">
+		<aside class="sidebar">
 			<x-sidebar />
-		</div>
+		</aside>
 
 	</main>
 
