@@ -6,10 +6,6 @@
 	<meta http-equiv="refresh" content="600" />
 @endsection
 
-@section('head-top')
-	<link rel="amphtml" href="{{ $amphtml?? "" }}">
-@endsection
-
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/home-high.css') }}">
 
@@ -48,7 +44,7 @@
 
 				<section id="{{ $key }}" class="contenedor-general">
 					@foreach($value as $item)
-						@include('home.dispositions.' . $item['template'], ['news' => $item['news']])
+						@include('home.dispositions.' . $item['template'], ['news' => $item['news'], 'id' => $item['id']])
 					@endforeach
 				</section>
 			@endif

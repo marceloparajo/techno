@@ -13,7 +13,7 @@ use PHPHtmlParser\Exceptions\LogicalException;
 use PHPHtmlParser\Exceptions\NotLoadedException;
 use PHPHtmlParser\Exceptions\StrictException;
 
-class PostBodyHelper
+class OptimizerHelper
 {
     /**
      * @var ImageHelper
@@ -32,10 +32,55 @@ class PostBodyHelper
     /**
      * @param string $text
      * @return string
+     * @throws ChildNotFoundException
+     * @throws CircularException
+     * @throws ContentLengthException
+     * @throws LogicalException
+     * @throws NotLoadedException
+     * @throws StrictException
      */
-    public function process(string $text): string
+    public function processAll(string $text): string
     {
-        $text = $this->_replaceImages($text);
+        $text = $this->replaceImages($text);
+        $text = $this->optimizeIframes($text);
+        $text = $this->optimizeScripts($text);
+
+        return $text;
+    }
+
+    /**
+     * @param string $text
+     * @return string
+     */
+    public function optimizeScripts(string $text): string
+    {
+        $to_edit = [];
+        $pos_script = strpos($text, '<script');
+
+        while ($pos_script) {
+            $pos_start = $pos_script;
+            $pos_end = strpos($text, '</script>', $pos_start);
+            $script_element = substr($text, $pos_start, ($pos_end + 9) - $pos_start);
+
+            if (Str::contains($script_element, 'async'))
+                $html = str_replace('async', 'defer', $script_element);
+            elseif (! Str::contains($script_element, 'defer'))
+                $html = substr_replace($script_element, ' defer', 7);
+            else
+                $html = $script_element;
+
+            array_push($to_edit, [
+                'search' => $script_element,
+                'replace' => $html
+            ]);
+
+            $pos_script = strpos($text, '<script', $pos_start + 6);
+        }
+
+        // Reemplazo
+        foreach ($to_edit as $row) {
+            $text = str_replace($row['search'], $row['replace'], $text);
+        }
 
         return $text;
     }
@@ -50,13 +95,60 @@ class PostBodyHelper
      * @throws NotLoadedException
      * @throws StrictException
      */
-    protected function _replaceImages(string $text): string
+    public function optimizeIframes(string $text): string
+    {
+        $to_edit = [];
+        $pos_iframe = strpos($text, '<iframe');
+
+        while ($pos_iframe) {
+            $pos_start = $pos_iframe;
+            $pos_end = strpos($text, '</iframe>', $pos_start);
+            $iframe_element = substr($text, $pos_start, ($pos_end + 9) - $pos_start);
+
+            $dom = new Dom;
+            $dom->loadStr($iframe_element);
+            $iframe = $dom->find('iframe')[0];
+
+            if (is_null($iframe)) {
+                $pos_iframe = strpos($text, '<iframe', $pos_start + 7);
+                continue;
+            }
+
+            $iframe->setAttribute('loading', 'lazy');
+
+            array_push($to_edit, [
+                'search' => $iframe_element,
+                'replace' => $iframe->outerHtml
+            ]);
+
+            $pos_iframe = strpos($text, '<iframe', $pos_start + 7);
+        }
+
+        // Reemplazo
+        foreach ($to_edit as $row) {
+            $text = str_replace($row['search'], $row['replace'], $text);
+        }
+
+        return $text;
+    }
+
+    /**
+     * @param string $text
+     * @return string
+     * @throws ChildNotFoundException
+     * @throws CircularException
+     * @throws ContentLengthException
+     * @throws LogicalException
+     * @throws NotLoadedException
+     * @throws StrictException
+     */
+    public function replaceImages(string $text): string
     {
         $to_edit = [];
 
         $pos_img = strpos($text, '<img');
 
-        while ($pos_img != false) {
+        while ($pos_img) {
             $pos_start = $pos_img;
             $pos_end = strpos($text, '>', $pos_start);
             $image_element = substr($text, $pos_start, ($pos_end +1) - $pos_start);

@@ -1,32 +1,16 @@
-<div class="box-columnista 
-	@if($loop->first)
-		main-columnista
-	@endif
-	">
-	<div class="info-columnista">
+<article class="articulo">
+	<figure>
 		<a href="{{ $noticia['permalink'] }}">
-			<figure>
-				<img src="https://fotos.perfil.com/autores/default/{{ $noticia['author']['username'] }}_80.jpg" />
-			</figure>
-			<span class="nombre-columnista">
-				{{ $noticia['author']['fullname'] }}
-			</span>
+			<div class="masleidas-orden">
+				{{ $loop-> index + 1 }}
+			</div>
+
+			<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['caption']" class="img-fluid" max-width="300" :play-button="$noticia['has_video']" :camera-button="$noticia['has_gallery']" />
+		</a>
+	</figure>
+	<div class="meta-content">
+		<a href="{{ $noticia['permalink'] }}">
+			<h2>{{ $noticia['home_title'] }}</h2>
 		</a>
 	</div>
-	<article class="articulo">
-		<a href="{{ $noticia['permalink'] }}">
-			@if ($noticia['hat'] != '')
-				<span class="hat">Marchas y contramarchas</span>
-			@endif
-			<h2>{{ $noticia['home_title'] }}</h2>
-			<p class="headline">
-				{{ $noticia['headline'] }}
-			</p>
-			@if ( isset($noticia['date_available_human']) && !empty($noticia['date_available_human']) )
-			<span class="fechayhora">
-				{{ $noticia['date_available_human'] }}
-			</span>
-			@endif
-		</a>
-	</article>
-</div>
+</article>

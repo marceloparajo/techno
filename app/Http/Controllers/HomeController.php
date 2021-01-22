@@ -11,15 +11,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\BlockDistributionsHelper;
-use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\View\View;
 
 class HomeController extends Controller
 {
@@ -64,7 +59,7 @@ class HomeController extends Controller
         return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 
-    public function amp(BloquesHelper $bloquesHelper)
+    /*public function amp()
     {
         $site = strtolower(env('SITE_CODE', ''));
 
@@ -100,5 +95,5 @@ class HomeController extends Controller
         ];
 
         return view('amp.lists', compact('channel', 'noticias','sectionTitle', 'page_description', 'analytics_data', 'canonical'));
-    }
+    }*/
 }

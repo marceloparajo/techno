@@ -41,7 +41,20 @@
 					@include('lists.index', ['noticia' => $noticia])
 				@endforeach
 			</div>
+
 		</div>
+
+
+
+		<div class="contenido masleidas">
+			@foreach ($noticias as $key => $noticia)
+				@include('lists.masleidas', ['noticia' => $noticia])
+			@endforeach
+		</div>
+
+
+
+
 
 		<aside class="sidebar">
 			<x-sidebar />

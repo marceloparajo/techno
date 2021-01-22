@@ -10,10 +10,12 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Helpers\ApiHelper;
-use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Routing\Route;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class SearchController extends Controller
 {
@@ -39,12 +41,11 @@ class SearchController extends Controller
     }
 
     /**
-     * [index description]
-     * @param  Route         $route         [description]
-     * @param  BloquesHelper $bloquesHelper [description]
-     * @return [type]                       [description]
+     * @param Route $route
+     * @param Request $request
+     * @return Application|Factory|View
      */
-    public function index(Route $route, BloquesHelper $bloquesHelper, Request $request)
+    public function index(Route $route, Request $request)
     {
         $sectionTitle = __('news search')." ". env('APP_ALTER_NAME', '');
 
@@ -54,16 +55,13 @@ class SearchController extends Controller
 
         $page_description = $sectionTitle.". ". env('SITE_DESCRIPTION','');
 
-        $homedata = $bloquesHelper->generateHomedata(['sidebar']);
-        $sidebar_content = $bloquesHelper->generateContent($homedata)['sidebar'];
-
         $site = strtolower(env('APP_NAME', ''));
         $analytics_data = [
             'channel' => 'buscador',
             'section' => "sitios.$site.canal",
         ];
 
-        return view('search.index', compact('sectionTitle', 'page_description', 'sidebar_content', 'analytics_data'));
+        return view('search.index', compact('sectionTitle', 'page_description', 'analytics_data'));
     }
 
 }

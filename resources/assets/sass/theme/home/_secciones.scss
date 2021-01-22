@@ -22,12 +22,12 @@ $shows: #e43d3d;
 			h6 {
 				margin: 0;
 				font: {
-					family: $font-condensada;
+					family: $font-serif;
 					size: 6vw;
 					weight: 400;
 				}
 				text-transform: uppercase;
-				color: white;
+				color: dark;
 				background: $mujer;
 				padding: 3px 10px;
 				&:before {
@@ -75,6 +75,7 @@ $shows: #e43d3d;
 			&.deportes {
 				h6 {
 					background: $sports;
+					color: white;
 					&:before {
 						content: "Deportes";
 					}
@@ -86,17 +87,13 @@ $shows: #e43d3d;
 			&.espectaculos {
 				h6 {
 					background: $shows;
+					color: white;
 					&:before {
 						content: "Espectaculos";
 					}
 				}
 				.contenedor-notas {
 					border-bottom: 4px solid $shows;
-				}
-			}
-			&.mujer {
-				h6 {
-					color: $dark;
 				}
 			}
 		}
@@ -896,6 +893,28 @@ $shows: #e43d3d;
 	margin:0 auto 20px auto;
 	padding: 0;
 	border: 1px solid $linea;
+	.titulo-revista {
+		height:30px;
+		display: block;
+		background: url('../../../img/logos-revistas.png');
+		background-repeat: no-repeat;
+		text-indent: -9999px;
+		margin-top: 10px;
+		&.rev-caras {background-position:0 0;}
+		&.rev-noticias {background-position:0 -50px}
+		&.rev-weekend {background-position: 0 -200px}
+		&.rev-fortuna {background-position: 0 -250px}
+		&.rev-parabrisas {background-position: 0 -150px}
+		&.rev-supercampo {background-position: 0 -500px}
+		&.rev-luz {background-position: 0 -400px}
+		&.rev-hombre {background-position: 0 -300px}
+		&.rev-mia {background-position: 0 -350px}
+		&.rev-look {background-position: 0 -99px}
+		&.rev-lunateen {background-position: 0 -450px}
+		&.rev-marieclaire {background-position: 0 -100px}
+		&.rev-delirio {background-position: 0 190px}
+		filter: saturate(0) brightness(150%);
+	}
 	.notas-revistas {
 		.articulo.derevistas {
 			margin: 0;
