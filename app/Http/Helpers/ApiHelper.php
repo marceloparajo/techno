@@ -32,14 +32,32 @@ class ApiHelper
     }
 
     /**
+     * @return mixed
+     */
+    public function getAllAuthors()
+    {
+        $cache_name = md5('api-get-all-authors');
+
+        return Cache::remember($cache_name, 0.3, function () {
+            $call = $this->api_server . "&metodo=getAllAuthors";
+            $payload = file_get_contents($call);
+            return (object) json_decode($payload, true);
+        });
+    }
+
+    /**
      * @param int $limit
      * @return object
      */
     public function getColumnistas(int $limit = 50)
     {
-        $call = $this->api_server . "&metodo=getColumnistas&maxrows=$limit";
-        $payload = file_get_contents($call);
-        return (object) json_decode($payload, true);
+        $cache_name = md5("api-get-columnistas-$limit");
+
+        return Cache::remember($cache_name, 0.3, function () use ($limit) {
+            $call = $this->api_server . "&metodo=getColumnistas&maxrows=$limit";
+            $payload = file_get_contents($call);
+            return (object) json_decode($payload, true);
+        });
     }
 
     /**
@@ -49,9 +67,13 @@ class ApiHelper
      */
     public function getNewsWithDestaqueFromChannel(string $canal, int $limit = 5)
     {
-        $call = $this->api_server . "&metodo=getNewsWithDestaqueFromChannel&canal=$canal&maxrows=$limit";
-        $payload = file_get_contents($call);
-        return (object) json_decode($payload, true);
+        $cache_name = md5("api-get-news-with-destaque-from-channel-$canal-$limit");
+
+        return Cache::remember($cache_name, 0.3, function () use ($canal, $limit) {
+            $call = $this->api_server . "&metodo=getNewsWithDestaqueFromChannel&canal=$canal&maxrows=$limit";
+            $payload = file_get_contents($call);
+            return (object) json_decode($payload, true);
+        });
     }
 
     /**
@@ -62,9 +84,14 @@ class ApiHelper
      */
     public function getNewsFromMainChannel(string $canal, string $subcanales, int $limit = 5)
     {
-        $call = $this->api_server . "&metodo=getNewsFromMainChannel&canal=$canal&subcanales=$subcanales&maxrows=$limit";
-        $payload = file_get_contents($call);
-        return (object) json_decode($payload, true);
+        $cache_name = md5("api-get-news-from-main-channel-$canal-$subcanales-$limit");
+
+        return Cache::remember($cache_name, 0.3, function ($canal, $subcanales, $limit) {
+            $call = $this->api_server . "&metodo=getNewsFromMainChannel&canal=$canal&subcanales=$subcanales&maxrows=$limit";
+            $payload = file_get_contents($call);
+            return (object) json_decode($payload, true);
+        });
+
     }
 
     /**
@@ -86,9 +113,13 @@ class ApiHelper
      */
     public function getNoticia(String $slug, String $type = '')
     {
-        $call = $this->api_server . "&metodo=getnoticia&slugpage=$slug&type=$type&optimize";
-        $payload = file_get_contents($call);
-        return (object) json_decode($payload, true);
+        $cache_name = md5("api-get-noticia-$slug-$type");
+
+        return Cache::remember($cache_name, 0.3, function () use ($slug, $type) {
+            $call = $this->api_server . "&metodo=getnoticia&slugpage=$slug&type=$type&optimize";
+            $payload = file_get_contents($call);
+            return (object) json_decode($payload, true);
+        });
     }
 
     /**
@@ -97,7 +128,9 @@ class ApiHelper
      */
     public function getNewsFromChannel(String $channel_slug)
     {
-        return Cache::remember('api-helper-newsfromchannel', 0.30, function () use ($channel_slug) {
+        $cache_name = md5("api-get-news-from-channel-$channel_slug");
+
+        return Cache::remember($cache_name, 0.30, function () use ($channel_slug) {
             $call = $this->api_server . "&metodo=getnewsfromchannel&canal=$channel_slug&maxrows=70";
             $payload = file_get_contents($call);
             return (object) json_decode($payload, true);
@@ -109,7 +142,9 @@ class ApiHelper
      */
     public function getHomeNews()
     {
-        return Cache::remember('api-helper-homenews', 0.30, function () {
+        $cache_name = md5('api-helper-homenews');
+
+        return Cache::remember($cache_name, 0.30, function () {
             $call = $this->api_server . "&metodo=gethomenews&maxrows=200";
             $payload = file_get_contents($call);
             return (object) json_decode($payload, true);
@@ -123,7 +158,9 @@ class ApiHelper
      */
     public function getLastPost(Int $cant = 100, Bool $withoutlinks = false)
     {
-        return Cache::remember('api-helper-lastpost', 0.30, function () use ($cant, $withoutlinks) {
+        $cache_name = md5("api-get-last-post-$cant-$withoutlinks");
+
+        return Cache::remember($cache_name, 0.30, function () use ($cant, $withoutlinks) {
             $withoutlinks = ($withoutlinks) ? 1 : 0;
             $call = $this->api_server . "&metodo=getlastpost&maxrows=$cant&withoutlinks=$withoutlinks";
             $payload = file_get_contents($call);
@@ -137,9 +174,13 @@ class ApiHelper
      */
     public function getPostsFromAuthor(String $username)
     {
-        $call = $this->api_server . "&metodo=getnewsfromauthor&maxrows=50&codeauthor=$username";
-        $payload = file_get_contents($call);
-        return (object) json_decode($payload, true);
+        $cache_name = md5("api-get-posts-from-author-$username");
+
+        return Cache::remember($cache_name, 0.3, function () use ($username) {
+            $call = $this->api_server . "&metodo=getnewsfromauthor&maxrows=50&codeauthor=$username";
+            $payload = file_get_contents($call);
+            return (object) json_decode($payload, true);
+        });
     }
 
     /**
@@ -158,9 +199,13 @@ class ApiHelper
      */
     public function getLastDatesAvailables(Int $days = 5)
     {
-        $call = $this->api_server . "&metodo=getlastdatesavailables&days=$days";
-        $payload = file_get_contents($call);
-        return json_decode($payload, true);
+        $cache_name = md5("api-get-last-dates-availables-$days");
+
+        return Cache::remember($cache_name, 0.3, function () use ($days) {
+            $call = $this->api_server . "&metodo=getlastdatesavailables&days=$days";
+            $payload = file_get_contents($call);
+            return json_decode($payload, true);
+        });
     }
 
     /**
@@ -171,9 +216,13 @@ class ApiHelper
      */
     public function getLastDateAvailableFromDay(Int $year, Int $month, Int $day)
     {
-        $call = $this->api_server . "&metodo=getlastdateavailablefromday&year=$year&month=$month&day=$day";
-        $payload = file_get_contents($call);
-        return json_decode($payload, true);
+        $cache_name = md5("api-get-last-date-available-from-day-$year-$month-$day");
+
+        return Cache::remember($cache_name, 0.3, function () use ($year, $month, $day) {
+            $call = $this->api_server . "&metodo=getlastdateavailablefromday&year=$year&month=$month&day=$day";
+            $payload = file_get_contents($call);
+            return json_decode($payload, true);
+        });
     }
 
     /**
@@ -184,9 +233,13 @@ class ApiHelper
      */
     public function getNewsFromDay(Int $year, Int $month, Int $day)
     {
-        $call = $this->api_server . "&metodo=getnewsfromday&year=$year&month=$month&day=$day";
-        $payload = file_get_contents($call);
-        return json_decode($payload, true);
+        $cache_name = md5("api-get-news-from-day-$year-$month-$day");
+
+        return Cache::remember($cache_name, 0.3, function () use ($year, $month, $day) {
+            $call = $this->api_server . "&metodo=getnewsfromday&year=$year&month=$month&day=$day";
+            $payload = file_get_contents($call);
+            return json_decode($payload, true);
+        });
     }
 
     /**
@@ -195,10 +248,14 @@ class ApiHelper
      */
     public function getNewsFromTag(String $tag)
     {
-        $tag = urlencode($tag);
-        $call = $this->api_server . "&metodo=getnewfromtag&tag=$tag";
-        $payload = file_get_contents($call);
-        return json_decode($payload, true);
+        $cache_name = md5("api-get-news-from-tag-$tag");
+
+        return Cache::remember($cache_name, 0.3, function () use ($tag) {
+            $tag = urlencode($tag);
+            $call = $this->api_server . "&metodo=getnewfromtag&tag=$tag";
+            $payload = file_get_contents($call);
+            return json_decode($payload, true);
+        });
     }
 
     /**
@@ -208,9 +265,13 @@ class ApiHelper
      */
     public function getNewsFromChannelWithBody(String $channel, Int $rows = 20)
     {
-        $call = $this->api_server . "&metodo=getnewsfromchannelwithbody&canal=$channel&maxrows=$rows";
-        $payload = file_get_contents($call);
-        return json_decode($payload, true);
+        $cache_name = md5("api-get-news-from-channel-with-body-$channel-$rows");
+
+        return Cache::remember($cache_name, 0.3, function () use ($channel, $rows) {
+            $call = $this->api_server . "&metodo=getnewsfromchannelwithbody&canal=$channel&maxrows=$rows";
+            $payload = file_get_contents($call);
+            return json_decode($payload, true);
+        });
     }
 
     /**
@@ -220,9 +281,13 @@ class ApiHelper
      */
     public function getLastNewsWithBody(String $type = '', Int $rows = 50)
     {
-        $call = $this->api_server . "&metodo=getlastnewswithbody&maxrows=$rows&type=$type";
-        $payload = file_get_contents($call);
-        return json_decode($payload, true);
+        $cache_name = md5("api-get-last-news-with-body-$type-$rows");
+
+        return Cache::remember($cache_name, 0.3, function () use ($type, $rows) {
+            $call = $this->api_server . "&metodo=getlastnewswithbody&maxrows=$rows&type=$type";
+            $payload = file_get_contents($call);
+            return json_decode($payload, true);
+        });
     }
 
 

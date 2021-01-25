@@ -11,7 +11,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\ParseHelper;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Routing\Route;
 use Illuminate\View\View;
@@ -57,7 +56,7 @@ class AuthorsController extends Controller
 
         $author['blog'] = $author['blogsite'];
         $author['fullname'] = $author['firstname']." ". $author['lastname'];
-        //dd($author);
+
         unset($payload->DATA['author']);
         $noticias = [];
         foreach ($payload->DATA as $key => $item) {
@@ -78,7 +77,7 @@ class AuthorsController extends Controller
         return view('authors.index', compact('noticias', 'author', 'sectionTitle', 'analytics_data'));
     }
 
-    public function amp(Route $route, BloquesHelper $bloquesHelper)
+    /*public function amp(Route $route, BloquesHelper $bloquesHelper)
     {
         $username = $route->parameter('username');
         $payload = $this->apiHelper->getPostsFromAuthor($username);
@@ -114,5 +113,5 @@ class AuthorsController extends Controller
         ];
 
         return view('amp.lists', compact('noticias', 'author', 'sectionTitle', 'page_description', 'analytics_data', 'canonical'));
-    }
+    }*/
 }
