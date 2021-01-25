@@ -1,7 +1,7 @@
 @if (isset($news) && count($news) > 0)
     <div id="columnistas">
         <header>
-            <a href="{{ route('authors.index') }}">Columnistas</a>
+            <a href="/columnistas">Columnistas</a>
         </header>
 
         <div class="columnistas-general">
@@ -37,7 +37,7 @@
             </div>
         </div>
         <footer>
-            <a href="{{ route('authors.index') }}">Más columnistas</a>
+            <a href="/columnistas">Más columnistas</a>
         </footer>
     </div>
 @endif

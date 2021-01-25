@@ -572,4 +572,46 @@
 			}
 		}
 	}
+
+	// TODO : HASTA ACÁ PAGINA COLUMNISTAS
+
+
+
+	// TODO: PAGINA MAS-LEIDAS
+
+	@include media-breakpoint-up(sm) {
+		.contenido.masleidas {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			flex-direction: row;
+			.articulo {
+				display: block;
+				padding: 0;
+				border-bottom: none;
+				width: 48%;
+				margin: 0 0 20px 0;
+				figure {
+					width: 100%;
+					margin: 0;
+				}
+				.meta-content {
+					width: 100%;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.contenido.masleidas {
+			.articulo {
+				width: 32%;
+			}
+		}
+	}
+
+
+	// TODO: HASTA ACÁ PAGINA MAS LEIDAS
+
+
+
 }

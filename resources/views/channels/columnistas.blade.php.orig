@@ -66,8 +66,14 @@
 
 		</div>
 
+<<<<<<< HEAD
 		<aside class="sidebar">
 			<x-sidebar />
 		</aside>
+=======
+		<div class="sidebar">
+			<x-sidebar />
+		</div>
+>>>>>>> 55922959afb2a74ca838e444f2ab03c791b2d2b9
 	</main>
 @endsection

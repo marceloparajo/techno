@@ -1054,6 +1054,7 @@ Se usa para Radio Perfil
 		}
 	}
 	@include media-breakpoint-up(xxl) {
+		padding-bottom: 10px;
 		.notas-ayc {
 			.articulo.ayc {
 				.meta-content {
@@ -1087,13 +1088,15 @@ Se usa para Radio Perfil
 				flex: 1 1 0;
 				margin: 0 20px;
 				width: auto;
-				margin-bottom: 10px;
 				.meta-content {
 					a {
 						h2 {
 							font-size: 1.6rem;
 						}
 					}
+				}
+				figure {
+					height: 100%;
 				}
 			}
 			.columna-dosnotas {
