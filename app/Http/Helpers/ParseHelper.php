@@ -455,14 +455,24 @@ class ParseHelper
         return [
             'title' => $item['pageTitle']?? '',
             'permalink' => $url,
-            'main_image' => [ 'srcs' => ['small-wide' => $imagen],'src' => $imagen, 'title' => '', 'caption'=> $item['pageTitle']?? '' ],
+            'main_image' => [
+                'srcs' => [
+                    'original' => $imagen,
+                    'small-wide' => $imagen
+                ],
+                'src' => $imagen,
+                'title' => '',
+                'caption'=> $item['pageTitle']?? ''
+            ],
             'hat'=> '',
             'home_title' => $item['pageTitle']?? '',
             'headline' => '',
             'credit' => '',
             'author' => ['fullname'=>''],
             'date_available' => '',
-            'signed' => 'N'
+            'signed' => 'N',
+            'has_video' => false,
+            'has_gallery' => false
         ];
     }
 
