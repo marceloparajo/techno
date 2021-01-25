@@ -1,4 +1,6 @@
 <div class="content-sidebar">
+    <div id="" class="ads-space text-center" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false" style="width: 300px; height: 250px;"></div>
+
     @foreach ($content as $item)
 
         @switch($item['id'])

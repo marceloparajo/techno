@@ -1,13 +1,16 @@
 @if (isset($news) && count($news) > 0)
 	<!-- Destacada -->
 	<div class="caja-contenido destacada">
+
 		@foreach(array_slice($news, 0, 3) as $key => $new)
 
 			<article class="articulo nota-{{ $key }}">
 
 				{{-- Embed Code --}}
 				@if ($new['embed_code_original'] != '' && (strpos($new['embed_code_original'], 'rudo') || strpos($new['embed_code_original'], 'tube')))
-					{!! $new['embed_code'] !!}
+					<div class="embed-responsive embed-responsive-16by9 videoContainer">
+						{!! $new['embed_code'] !!}
+					</div>
 				@else
 				<figure>
 					<a href="{{ $new['permalink'] }}">

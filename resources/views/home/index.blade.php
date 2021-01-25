@@ -28,7 +28,6 @@
 
 @section('body')
 
-
 		@foreach($home_content as $key => $value)
 			@if ($key != 'sidebar')
 

@@ -115,7 +115,9 @@
 
 				{{-- Featured Image or Video --}}
 				@if ($noticia['featured_content'] == 'embed_code')
-					{!! $noticia['embed_code'] !!}
+					<div class="embed-responsive embed-responsive-16by9 videoContainer">
+						{!! $noticia['embed_code'] !!}
+					</div>
 				@else
 					<figure class="figure btn-open-gallery" itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
 						@if (count($noticia['gallery']) > 1)
@@ -151,8 +153,6 @@
 
 						{{-- Más Noticias (para los crawlers) --}}
 						@include('news.show.partials.more-news-crawlers')
-
-
 
 						{!! $body !!}
 
