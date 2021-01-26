@@ -1,4 +1,3 @@
-<div class="content-sidebar">
     @foreach ($content as $item)
 		{{ dd($item) }}
 		<x-sidebar />
@@ -14,15 +13,3 @@
 	@endif
 
 
-
-{{-- TODO: Las más leidas en sidebar. Esto es solo html harcodeado --}}
-
-
-
-
-
-{{-- TODO: Divisas --}}
-
-
-
-</div>

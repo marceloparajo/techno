@@ -35,9 +35,7 @@
 				@if ($key == 'central-footer')
 					</div>
 					<div class="sidebar">
-						<div class="content-sidebar">
-							<x-sidebar />
-						</div>
+						<x-sidebar />
 					</div>
 				@endif
 
