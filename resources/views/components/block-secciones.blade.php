@@ -4,7 +4,7 @@
 
         <div class="seccionfija {{ $id_seccion }}">
 
-            <h6></h6>
+            <div class="seccion-fija-titulo"></div>
 
             <div class="contenedor-notas">
 

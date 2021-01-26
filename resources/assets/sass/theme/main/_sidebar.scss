@@ -348,12 +348,11 @@
 					h3 {
 						color: $negro;
 						font:{
-							size: 1.28rem;
-							weight: 400;
-							family: $font-serif;
+							size: 1.25rem;
+							weight: 500;
 						}
 						line-height: 1.05em;
-						letter-spacing: -0.01em;
+						letter-spacing: -0.02em;
 					}
 					.firma-home {
 						font-family: $font-sinserif;
@@ -362,6 +361,13 @@
 						text-transform: uppercase;
 						color: $dark;
 						display: inline-block;
+					}
+					@include media-breakpoint-only(xs) {
+						transform: translateY(-4px);
+						h3 {
+							letter-spacing: -0.03em;
+							line-height: 1em;
+						}
 					}
 				}
 			}
@@ -395,6 +401,9 @@
 						h3 {
 							font-size: 1.46rem;
 							line-height: 1.03em;
+						}
+						@include media-breakpoint-up(xs) {
+							transform: none;
 						}
 					}
 				}
@@ -777,13 +786,13 @@
 		padding: 5px 10px 0 10px;
 		margin: 0 0 20px 0;
 		.title-divisas {
-			font-family: $font-serif;
 			font-size: 24px;
 			font-weight: 600;
 			border-bottom: 2px solid $azul;
 			text-transform: uppercase;
 		}
 		.content-divisas {
+			font-family: $font-sinserif;
 			font-size: .8rem;
 			display: grid;
 			grid-template-areas: 
