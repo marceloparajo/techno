@@ -14,13 +14,13 @@
             <div class="dbcompra">{{ $format_number($content['blue']['value_buy']) }}</div>
             <div class="ds">Dólar Solidario</div>
             <div class="dsventa">{{ $dolar_solidario }}</div>
-            <div class="dscompra"> - </div>
+            <div class="dscompra"></div>
             <div class="eo">Euro oficial</div>
-            <div class="eoventa">171.33</div>
-            <div class="eocompra">165.59</div>
+            <div class="eoventa">{{ $format_number($content['oficial_euro']['value_sell']) }}</div>
+            <div class="eocompra">{{ $format_number($content['oficial_euro']['value_buy']) }}</div>
             <div class="eb">Euro blue</div>
-            <div class="ebventa">171.33</div>
-            <div class="ebcompra">165.59</div>
+            <div class="ebventa">{{ $format_number($content['blue_euro']['value_sell']) }}</div>
+            <div class="ebcompra">{{ $format_number($content['blue_euro']['value_buy']) }}</div>
         </div>
     </div>
 @endif
