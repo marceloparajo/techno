@@ -4,10 +4,6 @@
 
 @section('ads-sec', 'seccion')
 
-@section('head-top')
-	<link rel="amphtml" href="{{ $amphtml?? "" }}">
-@endsection
-
 @section('head-bottom')
 	@include('partials.taboola-sidebar-header')
 @endsection
@@ -42,9 +38,8 @@
 			</div>
 		</div>
 
-
 		<div class="sidebar">
-			@include('sidebar.index', ['content' => $sidebar_content])
+			<x-sidebar />
 		</div>
 
 	</main>

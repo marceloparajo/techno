@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Helpers\BlockDistributionsHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Contracts\Foundation\Application;
@@ -16,11 +17,8 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\Request;
 use App\Http\Helpers\ApiHelper;
-use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
-use Illuminate\Routing\Route;
 use Illuminate\View\View;
 
 class MostViewedController extends Controller
@@ -54,41 +52,21 @@ class MostViewedController extends Controller
     }
 
     /**
-     * @param BloquesHelper $bloquesHelper
+     * @param BlockDistributionsHelper $blockDistributionsHelper
      * @return Application|ResponseFactory|Response
-     * @throws FileNotFoundException
      */
-    public function show(BloquesHelper $bloquesHelper)
+    public function show(BlockDistributionsHelper $blockDistributionsHelper)
     {
         $channel = "mas-leidas";
-        $payload = $this->_getMostViewed();
+        $noticias = $blockDistributionsHelper->getMostViewed(env('SITE_CODE', 'perfil'));
 
-        if (is_null($payload) || count($payload) < 1)
-            abort(404);
-
-        $sectionTitle = __('most viewed of') ." ". env('APP_ALTER_NAME','APP_NAME');
-        $page_description = $sectionTitle.". ". env('SITE_DESCRIPTION','');
-
-        $noticias = [];
-        foreach ($payload as $key => $new) {
-            $new['hat'] = '#'.($key+1);
-            $new['bloque'] = 'middle';
-            //dd($new);
-            array_push($noticias, $new);
-        }
-
-        $homedata = $bloquesHelper->generateHomedata(['sidebar']);
-        $sidebar_content = $bloquesHelper->generateContent($homedata)['sidebar'];
-
-        $amphtml = route('mostviewed.amp');
-
-        $site = strtolower(env('APP_NAME', ''));
+        $site = strtolower(env('SITE_CODE', 'perfil'));
         $analytics_data = [
             'channel' => $channel,
             'section' => "sitios.$site.canal",
         ];
 
-        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'sidebar_content', 'page_description', 'analytics_data', 'amphtml'));
+        $view_content = view('channels.most-viewed', compact('channel', 'noticias', 'analytics_data'));
         return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 

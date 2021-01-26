@@ -33,6 +33,11 @@ Route::group(['prefix' => 'sitemap'], function () {
         'uses' => 'SitemapsController@showIndex'
     ]);
 
+    Route::get('autores', [
+        'as' => 'sitemaps.authors',
+        'uses' => 'SitemapsController@showAuthors'
+    ]);
+
     Route::get('{year}/{month}', [
         'as' => 'sitemaps.show.month',
         'uses' => 'SitemapsController@showMonth'
