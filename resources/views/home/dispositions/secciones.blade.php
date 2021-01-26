@@ -6,7 +6,7 @@
 
 				<div class="seccionfija {{ $news[0]['channel']['slug'] }}">
 
-					<h6></h6>
+					<div class="seccion-fija-titulo"></div>
 
 					<div class="contenedor-notas">
 

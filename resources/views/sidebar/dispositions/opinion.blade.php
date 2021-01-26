@@ -4,6 +4,7 @@
 			<div class="opinion-titulo"><i class="fas fa-quote-right"></i> <a href="/seccion/opinion/">Opinión</a></div>
 		</header>
 
+
 		@foreach(array_slice($news, 0, 4) as $key => $new)
 
 			<article class="notaOpinion">

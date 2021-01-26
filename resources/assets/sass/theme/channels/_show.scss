@@ -1,7 +1,6 @@
 .supercontenedor {
 	h1.seccion-titulo {
 		font:{
-			family: $font-serif;
 			size: 1.6rem;
 			weight: 600;
 		}
@@ -107,7 +106,6 @@
 							display: none;
 						}
 						h2 {
-							font-family: $font-serif;
 							letter-spacing: -0.02em;
 							font-size: 1.17rem;
 							line-height: 1em;
@@ -192,7 +190,6 @@
 						flex: 1 1 0;
 						margin: auto 0;
 						font:{
-							family: $font-serif;
 							size: 1.15rem;
 							weight: 500;
 						}
@@ -218,7 +215,6 @@
 					h2 {
 						font:{
 							size: 1.6rem;
-							family: $font-serif;
 							weight: 500;
 							letter-spacing: -0.02em;
 						} 
