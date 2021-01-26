@@ -212,7 +212,7 @@
 						padding: 18px 10px 0 10px;
 						margin: 0;
 						list-style: none;
-						font-family: $font-general;
+						font-family: $font-sinserif;
 						font-size: 14px;
 						li {
 							display: inline-block;
@@ -236,7 +236,7 @@
 	position: relative;
 	width: 100%;
 	margin: auto;
-	font-family: $font-general;
+	font-family: $font-sinserif;
 	#menues {
 		position: absolute;
 		top: 0;
@@ -378,7 +378,7 @@
 	display: none;
 }
 ul.temas {
-	font-family: $font-general;
+	font-family: $font-sinserif;
 	height: 2em;
 	overflow: hidden;
 	padding: 0 10px;
@@ -389,7 +389,7 @@ ul.temas {
 		line-height: 2em;
 		a {
 			font:{
-				family: $font-general;
+				family: $font-sinserif;
 				size: 14px;
 				weight: 400;
 			}
@@ -427,13 +427,13 @@ ul.temas {
 	}
 }
 ul.canales {
-	font-family: $font-general;
+	font-family: $font-sinserif;
 	li.nav-item {
 		text-align: left;
 		padding: 0;
 		a {
 			font:{
-				family: $font-general;
+				family: $font-sinserif;
 				size: 15px;
 				weight: 400;
 			}

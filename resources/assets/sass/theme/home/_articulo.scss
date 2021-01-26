@@ -76,14 +76,17 @@
 			}
 			h2 {
 				font: {
-					family: $font-serif;
 					size: 1.35rem;
 					weight: 500;
 				}
 				color: $negro;
 				line-height: 1em;
 				letter-spacing: -0.03em;
-				transition: ease .3s;
+				transition: ease .2s;
+				-webkit-perspective: 1000;
+				-webkit-backface-visibility: hidden;
+				-webkit-font-smoothing: antialiased !important; 
+				font-smoothing: antialiased !important; 
 			}
 			p.headline {
 				font:{
@@ -120,7 +123,7 @@
 	&:hover {
 		.meta-content {
 			h2 {
-				color: $dark;
+				color: $linea-oscura;
 			}
 		}
 	}

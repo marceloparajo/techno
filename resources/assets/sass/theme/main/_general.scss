@@ -1,6 +1,6 @@
 html,
 body {
-	font-family: "Roboto", Helvetica, Arial, serif;
+	font-family: $font-serif;
 	max-width: 100%;
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
@@ -28,7 +28,6 @@ a {
 }
 h1,
 h2 {
-	font-family: $font-serif;
 	line-height: 1em;
 }
 figure {
@@ -130,9 +129,6 @@ figure {
 					.autor {
 						font-family: $font-serif
 					}
-				}
-				.news-content {
-					font-family: $font-serif
 				}
 			}
 		}

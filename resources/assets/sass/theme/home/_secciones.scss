@@ -19,11 +19,10 @@ $shows: #e43d3d;
 	margin: 0 auto 20px auto;
 	.caja-contenido {
 		.seccionfija {
-			h6 {
+			.seccion-fija-titulo {
 				margin: 0;
 				font: {
-					family: $font-serif;
-					size: 6vw;
+					size: 1.3rem;
 					weight: 400;
 				}
 				text-transform: uppercase;
@@ -104,7 +103,7 @@ $shows: #e43d3d;
 	@include media-breakpoint-up(sm) {
 		.caja-contenido {
 			.seccionfija {
-				h6 {
+				.seccion-fija-titulo {
 					font-size: 1.4rem;
 				}
 				.contenedor-notas {
@@ -648,6 +647,9 @@ $shows: #e43d3d;
 	}
 	@include media-breakpoint-up(xl) {
 		.notas-fotogaleria {
+			.secundarias {
+				flex-basis: 260px;
+			}
 			>.articulo.defotogaleria {
 				display: flex;
 				flex-direction: row-reverse;
@@ -673,6 +675,13 @@ $shows: #e43d3d;
 					flex: 1 1 0;
 					width: auto;
 				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xxl) {
+		.notas-fotogaleria {
+			.secundarias {
+				flex-basis: 300px;
 			}
 		}
 	}

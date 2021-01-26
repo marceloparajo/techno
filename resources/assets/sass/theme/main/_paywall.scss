@@ -361,7 +361,6 @@
 			}
 
 			p.mensaje {
-				font-family: $font-serif;
 				font-size: 20px;
 				font-weight: 500;
 				line-height: 1em;
@@ -382,7 +381,6 @@
 				line-height: 1.1em;
 				margin: 0 0 10px 0;
 				font:{
-					family: $font-serif;
 					style: italic;
 					size: 20px;
 					weight: 600;
@@ -402,7 +400,6 @@
 			margin-bottom: -40px;
 			box-shadow: 0 3px 7px 0 rgba(0,0,0,0.3);
 			h6 {
-				font-family: $font-serif;
 				font-size: 80px;
 				margin: 0;
 				line-height: 40px;
@@ -411,7 +408,6 @@
 				cursor: pointer;
 			}
 			p.pw-zocalo-bajada {
-				font-family: $font-serif;
 				font-size: 28px;
 				color: white;
 				font-weight: 500;
@@ -479,7 +475,6 @@
 		width: 100%;
 		padding: 10px 10px 10px 180px;
 		.p {
-			font-family: $font-serif;
 			font-weight: 500;
 			&.pw-piedenota-mensaje-a {
 				font-size: 30px;
@@ -569,7 +564,6 @@
 		.pw-piedenota-content {
 			flex: 1 1 0;
 			.p {
-				font-family: $font-serif;
 				font-weight: 500;
 				line-height: initial;
 				&.pw-piedenota-mensaje-b {
@@ -710,7 +704,6 @@
 				text-align: center;
 				p {
 					font:{
-						family: $font-serif;
 						weight: 600;
 					}
 					margin: 10px;
@@ -936,7 +929,6 @@
 				.pw-meta-content {
 					p {
 						font:{
-							family: $font-serif;
 							size: 30px;
 							weight: normal;
 						}

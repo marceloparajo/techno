@@ -4,7 +4,7 @@
 		<!-- Cobertura -->
 		<div class="cobertura">
 
-			<h6>{{ $news[0]['hat'] ?? '' }}</h6>
+			<div class="cobertura-titulo">{{ $news[0]['hat'] ?? '' }}</div>
 
 			<div class="notas-cobertura">
 
