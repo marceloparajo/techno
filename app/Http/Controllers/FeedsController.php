@@ -10,13 +10,16 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Helpers\ApiHelper;
+use App\Http\Helpers\FacebookIAHelper;
 use App\Http\Helpers\ParseHelper;
 use App\Http\Helpers\SimpleXMLExtended;
 use Carbon\Carbon;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\View;
 
 class FeedsController extends Controller
 {
@@ -188,7 +191,7 @@ class FeedsController extends Controller
      */
     public function googlenews(Request $request)
     {
-        $key = env('GOOGNEWS_KEY', '1234');
+        $key = env('FEED_GOOGLE_NEWS_KEY', '1234');
         if (! $request->has('key') || $key != $request->get('key'))
             abort(404, 'Not found');
 
@@ -261,5 +264,60 @@ class FeedsController extends Controller
         }
 
         return response($rss->asXML(), 200)->header('Content-Type', 'text/xml');
+    }
+
+    /**
+     * @param Request $request
+     * @param FacebookIAHelper $facebookIA
+     * @return Application|ResponseFactory|Response
+     */
+    public function facebook(Request $request, FacebookIAHelper $facebookIA)
+    {
+        $key = env('FEED_FACEBOOK_KEY', '1234');
+        if (! $request->has('key') || $key != $request->get('key'))
+            abort(404, 'Not found');
+
+        $data = $this->apiHelper->getLastNewsWithFacebookFlag();
+
+        $posts = $data['DATA'];
+
+        $site_title = env('APP_ALTER_NAME', '');
+        $site_description = env('SITE_DESCRIPTION', '');
+        $currentDate = Carbon::now();
+
+        $rss = new SimpleXMLExtended('<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"></rss>');
+        $channel = $rss->addChild('channel');
+        $channel->addChild('title', $site_title);
+        $channel->addChild('link', asset(''));
+        $channel->addChild('description', $site_description);
+        $channel->addChild('language', config('app.locale'));
+        $channel->addChild('lastBuildDate', $currentDate->toIso8601String());
+
+        foreach ($posts as $post) {
+            $article = $this->parseHelper->parseNoticia($post);
+            $item = $channel->addChild('item');
+
+            $item->addChildWithCDATA('title', $article['title']);
+            $item->addChild('link', $article['permalink']);
+            $item->addChild('guid', $article['id']);
+            $item->addChild('pubDate', $article['date_available']->toIso8601String());
+
+            if ($article['credit'] != '')
+                $author_name = $article['credit'];
+            else
+                $author_name = $article['author']['fullname'];
+            $item->addChild('author', htmlspecialchars($author_name));
+            $item->addChildWithCDATA('description', $article['headline']);
+
+            $article['body'] = $facebookIA::fixBody($article['body']);
+            $bodyView = View::make('news.show.instant-article', ['noticia' => $article]);
+            $body = $bodyView->render();
+
+            $item->addChildWithCDATA('content:encoded', $body, 'http://purl.org/rss/1.0/modules/content/');
+
+        }
+
+        return response($rss->asXML(), 200)->header('Content-Type', 'text/xml');
+
     }
 }

@@ -6,6 +6,10 @@
 	<meta http-equiv="refresh" content="600" />
 @endsection
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="homepage" />
+@endsection
+
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/home-high.css') }}">
 

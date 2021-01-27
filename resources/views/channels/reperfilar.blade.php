@@ -2,6 +2,10 @@
 
 @section('page-title', $page_title)
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="vitrina de notas" />
+@endsection
+
 @section('ads-sec', 'seccion')
 
 @section('head-css')

@@ -17,4 +17,6 @@ Route::group(['prefix' => 'feed'], function () {
 
     Route::get('googlenews', 'FeedsController@googlenews');
 
+    Route::get('facebook', 'FeedsController@facebook');
+
 });

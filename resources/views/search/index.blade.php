@@ -2,6 +2,10 @@
 
 @section('page-title', ucwords('buscador'))
 
+@section('google-tag-manager')
+    <x-google-tag-manager category="buscador" :info="['searchTerm' => $search_term]" />
+@endsection
+
 @section('ads-sec', 'seccion')
 
 @section('head-bottom')
@@ -55,7 +59,7 @@
 
                     {{-- Sidebar --}}
                     <div class="d-none d-lg-block col-lg-4 col-xxl-3 pf-sidebar">
-                        @include('sidebar.index', ['content' => $sidebar_content])
+                        <x-sidebar />
                     </div>
                 </div>
             </div>

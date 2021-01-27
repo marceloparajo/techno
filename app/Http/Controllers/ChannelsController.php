@@ -55,7 +55,6 @@ class ChannelsController extends Controller
         $channel = $route->parameter('channel');
         $payload = $this->apiHelper->getNewsFromChannel($channel);
 
-        //dd($payload);
         if (is_null($payload->DATA))
             abort(404);
 
@@ -70,15 +69,7 @@ class ChannelsController extends Controller
             array_push($noticias, $new);
         }
 
-        $amphtml = route('channels.amp', $channel);
-
-        $site = strtolower(env('SITE_CODE', ''));
-        $analytics_data = [
-            'channel' => $channel,
-            'section' => "sitios.$site.canal",
-        ];
-
-        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'page_description', 'analytics_data', 'amphtml'));
+        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'page_description'));
         return response($view_content)->header('Cache-Control', 'max-age=300, public');
     }
 

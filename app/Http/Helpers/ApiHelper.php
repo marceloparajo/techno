@@ -290,5 +290,19 @@ class ApiHelper
         });
     }
 
+    /**
+     * @return mixed
+     */
+    public function getLastNewsWithFacebookFlag()
+    {
+        $cache_name = md5('api-get-last-news-with-facebook-flag');
+
+        return Cache::remember($cache_name, 0.3, function () {
+            $call = $this->api_server . '&metodo=getlastnewswithfacebookflag';
+            $payload = file_get_contents($call);
+            return json_decode($payload, true);
+        });
+    }
+
 
 }
