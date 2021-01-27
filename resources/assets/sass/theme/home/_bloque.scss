@@ -10,9 +10,9 @@
 				display: flex;
 				justify-content: space-between;
 				border-bottom: 1px solid $linea;
+				padding-bottom: 10px;
 				figure {						
 					width: 30%;
-					margin-bottom: 5px;
 				}
 				.meta-content {
 					padding: 0 10px 0 0;
@@ -22,11 +22,19 @@
 							display: none;
 						}
 					}
+					@include media-breakpoint-only(xs) {
+						transform: translateY(-4px);
+					}
 				}
 				&:first-of-type {
 					display: block;
 					figure {
 						width: 100%;
+					}
+					.meta-content {
+						@include media-breakpoint-only(xs) {
+							transform: translateY(0);
+						}
 					}
 				}
 			}
@@ -50,6 +58,9 @@
 						.galeria-video {
 							display: none;
 						}
+					}
+					@include media-breakpoint-only(xs) {
+						transform: translateY(-4px);
 					}
 				}
 			}

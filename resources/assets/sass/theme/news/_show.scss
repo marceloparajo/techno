@@ -147,7 +147,7 @@
 						font-family: $font-serif;
 						line-height: 1.35em;
 						letter-spacing: -0.01em;
-						color: $dark;
+						color: $negro;
 						strong,
 						a strong {
 							font-weight: 600;
@@ -462,15 +462,12 @@
 							}
 						}
 					}
-					.previous_news {
+					.noticias-relacionadas {
 						margin: 0 0 20px 0;
-						background: #e9ecef;
 						padding: 0 5%;
-						border-bottom: 1px solid $dark;
-						.previous-titulo {
+						.relacionadas-titulo {
 							font: {
-								family: $font-sinserif;
-					    		size: 1rem;
+					    		size: 1.2rem;
 					    		weight: 600;
 					    	}
 					    	color: $negro;
@@ -519,7 +516,7 @@
 									}
 								}
 								&:last-of-type {
-									border-bottom: none;
+									border-bottom: 2px solid $negro;
 								}
 							}
 						}
