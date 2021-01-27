@@ -1,24 +1,4 @@
 .contenedor-general {
-	@include media-breakpoint-only(xs) {
-		.bloque {
-			.columna-dostercios {
-				.articulo {
-					&:first-of-type {
-						.meta-content {
-						padding: 5px 10px;
-						width: 100%;
-							a {
-								h2 {
-									font-size: 1.4rem;
-									font-size: 6vw;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 	@include media-breakpoint-up(sm) {
 		.bloque {
 			.columna-dostercios {
@@ -31,6 +11,7 @@
 					padding-bottom: 10px;
 					figure {
 						width: 100%;
+						margin-bottom: 5px;
 					}
 					.meta-content {
 						width: 100%;

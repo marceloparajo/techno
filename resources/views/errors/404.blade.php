@@ -77,8 +77,8 @@
 				<a href="https://radio.perfil.com/en-vivo/radio" class="radio-error"><img src="/images/radio-perfil.png" alt="Radio Perfil"></a>
 			</div>
 			<div class="box-error">
-				<p>Podés ver NET en televisión abierta</p>
-				<a href="https://www.canalnet.tv" class="net-error"><img src="/images/net-logo-sidebar.png" alt="Radio Perfil"></a>
+				<p>Podés ver NET en televisión abierta o desde la web</p>
+				<a href="https://www.canalnet.tv/page/senal-en-vivo" class="net-error"><img src="/images/net-logo-sidebar.png" alt="Radio Perfil"></a>
 			</div>
 		</div>
 

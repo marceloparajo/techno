@@ -15,9 +15,13 @@
 			display: block;
 			flex: 1 1 0;
 		}
+		.supercontenedor {
+			padding: 0;
+		}
 	}
 	@include media-breakpoint-up(xl) {
 		.supercontenedor {
+			padding: 0;
 			justify-content: flex-start;
 			.reperfilar-menu {
 				display: flex;

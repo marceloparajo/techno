@@ -31,9 +31,17 @@
 					figure {
 						width: 100%;
 					}
-					.meta-content {
-						@include media-breakpoint-only(xs) {
+					@include media-breakpoint-only(xs) {
+						.meta-content {
 							transform: translateY(0);
+							padding: 5px 10px;
+							width: 100%;
+							a {
+								h2 {
+									font-size: 1.4rem;
+									font-size: 6vw;
+								}
+							}
 						}
 					}
 				}

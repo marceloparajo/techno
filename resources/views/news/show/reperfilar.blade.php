@@ -152,9 +152,9 @@
 
 					<div class="news-content">
 
-						{{-- Más Noticias (para los crawlers) --}}
+						{{-- Más Noticias (para los crawlers)
 						@include('news.show.partials.more-news-crawlers')
-
+ 						--}}
 
 						{!! $body !!}
 
@@ -180,6 +180,10 @@
 							@include('news.show.partials.author-bottom', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 						@endif
 						--}}
+
+
+						@include('news.show.partials.noticias-relacionadas')
+
 
 						@include('news.show.partials.news-tags')
 

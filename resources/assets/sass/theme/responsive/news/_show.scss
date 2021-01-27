@@ -227,7 +227,7 @@
 		.supercontenedor {
 			.articulo-header {
 				h1 {
-					font-size: 4rem;
+					font-size: 3.6rem;
 					margin-bottom: 20px;
 				}
 				h2 {
@@ -257,6 +257,11 @@
 	}
 	@include media-breakpoint-up(xl) {
 		.supercontenedor {
+			.articulo-header {
+				h1 {
+					font-size: 4rem;
+				}
+			}
 			.container {
 				max-width: 1260px;
 				.main-article {
