@@ -1,6 +1,6 @@
 <span class="autor-nota-arriba" itemscope itemprop="author" itemtype="https://schema.org/Person">
 	<figure>
-		<img class="autor-img" src="{{ $author['image'] }}" alt="{{ $author['fullname'] }}" itemprop="image">
+		<img class="autor-img" src="{{ $author['image'] }}" alt="{{ $author['fullname'] }}" itemprop="image" style="width:48px;height:48px;">
 	</figure>
 	<a href="{{ route('authors.show', $author['username']) }}" itemprop="url" class="nombreautor"><span itemprop="name">{{ $author['fullname'] }}</span></a>
 	@if ( $author['about'] != '')
@@ -15,12 +15,12 @@
 			@endif
 			@if ($author['twitter'] != '')
 				<span>
-					<a href="https://twitter.com/{{ $author['twitter'] }}" itemprop="sameAs" target="_blank"><img src="/images/glyph/share/twitter.svg" class="twitter" alt="tw" > {{ $author['twitter'] }}</a>
+					<a href="https://twitter.com/{{ $author['twitter'] }}" itemprop="sameAs" target="_blank"><img src="/images/glyph/share/twitter.svg" class="twitter" alt="tw" style="width:13.53px;height:11px;"> {{ $author['twitter'] }}</a>
 				</span>
 			@endif
 			@if ($author['instagram'] != '')
 				<span>
-					<a href="https://www.instagram.com/{{ $author['instagram'] }}" itemprop="sameAs" target="_blank"><img src="/images/glyph/share/instagram.svg" class="instagram" alt="ig" ></i>{{ $author['instagram'] }}</a>
+					<a href="https://www.instagram.com/{{ $author['instagram'] }}" itemprop="sameAs" target="_blank"><img src="/images/glyph/share/instagram.svg" class="instagram" alt="ig" style="width:12px;height:12px;"></i>{{ $author['instagram'] }}</a>
 				</span>
 			@endif
 			@if ($author['blog'] != '')
@@ -29,7 +29,7 @@
 				</span>
 			@endif
 				<span>
-					<a href="{{ route('authors.show', $author['username']) }}" itemprop="url"><img src="/images/glyph/bullet.svg" class="bullet" alt="Mas notas de {{ $author['fullname'] }}"><span class="redsocial">Más notas de {{ $author['fullname'] }}</span></a>
+					<a href="{{ route('authors.show', $author['username']) }}" itemprop="url"><img src="/images/glyph/bullet.svg" class="bullet" alt="Mas notas de {{ $author['fullname'] }}" style="width:10px;height:10px;"><span class="redsocial">Más notas de {{ $author['fullname'] }}</span></a>
 				</span>
 		</p>
 	@endif
