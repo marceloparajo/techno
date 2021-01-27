@@ -17,15 +17,10 @@
 
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/news-high.css') }}">
-
-	<link rel="preload" href="{{ mix('css/news-low.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/news-low.css') }}"></noscript>
-
-	<link rel="preload" href="{{ mix('css/news-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/news-responsive.css') }}"></noscript>
-
-	<link rel="preload" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}"></noscript>
+	
+	<link rel="stylesheet" href="{{ mix('css/news-low.css') }}" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="{{ mix('css/news-responsive.css') }}" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}" media="print" onload="this.media='all'">
 @endsection
 
 @section('js')
