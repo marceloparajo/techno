@@ -5,6 +5,10 @@
 	<meta name="featured-image-id" content="{{ $noticia['main_image']['id'] }}">
 @endsection
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="nota" :info="$noticia" />
+@endsection
+
 @section('structured-data-type', 'itemscope itemtype="https://schema.org/NewsArticle"')
 
 @section('ads-sec', 'articulo')

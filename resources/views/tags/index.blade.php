@@ -2,6 +2,10 @@
 
 @section('page-title', ucwords($tag))
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="vitrina de notas" />
+@endsection
+
 @section('ads-sec', 'seccion')
 
 @section('body-class', 'pf-channel-show')

@@ -41,27 +41,21 @@ class SearchController extends Controller
     }
 
     /**
-     * @param Route $route
      * @param Request $request
      * @return Application|Factory|View
      */
-    public function index(Route $route, Request $request)
+    public function index(Request $request)
     {
         $sectionTitle = __('news search')." ". env('APP_ALTER_NAME', '');
+        $search_term = $request->get('q') ?? '';
 
         if(isset($request->q) && !empty($request->q)){
-            $sectionTitle = __('search result of') ." '". str_replace("-", " ", $request->q) ."'";
+            $sectionTitle = __('search result of') ." '". str_replace("-", " ", $search_term) ."'";
         }
 
         $page_description = $sectionTitle.". ". env('SITE_DESCRIPTION','');
 
-        $site = strtolower(env('APP_NAME', ''));
-        $analytics_data = [
-            'channel' => 'buscador',
-            'section' => "sitios.$site.canal",
-        ];
-
-        return view('search.index', compact('sectionTitle', 'page_description', 'analytics_data'));
+        return view('search.index', compact('sectionTitle', 'page_description', 'search_term'));
     }
 
 }

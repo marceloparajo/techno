@@ -2,6 +2,10 @@
 
 @section('page-title', ucwords($channel))
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="vitrina de notas" />
+@endsection
+
 @section('ads-sec', 'seccion')
 
 @section('head-top')
@@ -43,18 +47,6 @@
 			</div>
 
 		</div>
-
-
-
-		<div class="contenido masleidas">
-			@foreach ($noticias as $key => $noticia)
-				@include('lists.masleidas', ['noticia' => $noticia])
-			@endforeach
-		</div>
-
-
-
-
 
 		<aside class="sidebar">
 			<x-sidebar />

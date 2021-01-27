@@ -1,5 +1,9 @@
 @extends('layout.base')
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="vitrina de notas" />
+@endsection
+
 @section('page-title', 'Noticias de ' . $author['fullname'])
 
 @section('ads-sec', 'seccion')

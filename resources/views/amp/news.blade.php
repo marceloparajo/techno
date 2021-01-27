@@ -43,26 +43,7 @@
     </head>
 
     <body>
-        @if (env('ANALYTICS_SHOW', false))
-            <amp-analytics type="googleanalytics">
-                <script type="application/json">
-                    {
-                        "vars": {
-                            "account": "{{ $analytics_data['client'] }}"
-                        },
-                        "triggers": {
-                            "trackPageviewWithCustomUrl": {
-                                  "on": "visible",
-                                  "request": "pageview",
-                                  "vars": {
-                                    "documentLocation": "{{ $analytics_data['url'] }}"
-                                  }
-                            }
-                        }
-                    }
-                </script>
-            </amp-analytics>
-        @endif
+        <x-google-tag-manager category="nota" format="amp" :info="$noticia" />
 
         @if (env('NAVEGG_ENABLE', false))
             <amp-analytics type="navegg" id="navegg56362">
@@ -118,14 +99,14 @@
 
                 {{-- Temas/tags --}}
                 @include('news.show.partials.news-tags')
-                
+
                 {{-- Comentarios --}}
                 <amp-facebook-comments width=486 height=657
                                        layout="responsive"
                                        data-numposts="5"
                                        data-href="{{ $noticia['permalink'] }}">
                 </amp-facebook-comments>
-                
+
                 {{-- Noticias Relacionadas --}}
                 <div class="relacionadas">
                     <h4>{{ __('related news') }}</h4>

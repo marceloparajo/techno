@@ -2,6 +2,10 @@
 
 @section('page-title', 'Columnistas')
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="vitrina de notas" />
+@endsection
+
 @section('ads-sec', 'seccion')
 
 @section('head-bottom')
@@ -36,7 +40,7 @@
 					<div class="info-columnista">
 						<a href="{{ route('authors.show', $author['username']) }}">
 							<figure>
-								@if ($loop->index < 3) 
+								@if ($loop->index < 3)
 								<img src="{{ $author['image'] }}" class="lazyload" alt="{{ $author['first_name'] }} {{ $author['last_name'] }}" />
 								@else
 								<img src="https://fotos.perfil.com/autores/default/{{ $author['username'] }}_50.jpg" class="lazyload" alt="{{ $author['first_name'] }} {{ $author['last_name'] }}">

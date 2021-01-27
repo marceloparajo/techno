@@ -47,15 +47,13 @@ class HomeController extends Controller
     {
         $home_content = $blockDistributionsHelper->getHomedata();
 
-        $amphtml = route('home.amp');
-
         // Analytics
         $site = strtolower(env('APP_NAME', ''));
         $analytics_data = [
             'section' => "sitios.$site.home"
         ];
 
-        $view_content = view('home.index', compact('home_content', 'analytics_data', 'amphtml'));
+        $view_content = view('home.index', compact('home_content', 'analytics_data'));
         return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 
