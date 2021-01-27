@@ -17,7 +17,7 @@
 
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/news-high.css') }}">
-	
+
 	<link rel="stylesheet" href="{{ mix('css/news-low.css') }}" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="{{ mix('css/news-responsive.css') }}" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}" media="print" onload="this.media='all'">
@@ -148,11 +148,6 @@
 
 					<div class="news-content">
 
-						{{-- Más Noticias (para los crawlers)
-						@include('news.show.partials.more-news-crawlers')
-						 --}}
-
-
 						{!! $body !!}
 
 						{{-- Embed Code --}}
@@ -172,14 +167,7 @@
 							</div>
 						@endif
 
-						{{-- Author
-						@if ($noticia['signed'])
-							@include('news.show.partials.author-bottom', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
-						@endif
-						--}}
-
-
-						@include('news.show.partials.noticias-relacionadas')
+						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
 
 						@include('news.show.partials.news-tags')

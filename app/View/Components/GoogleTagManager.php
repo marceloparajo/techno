@@ -2,7 +2,6 @@
 
 namespace App\View\Components;
 
-use Illuminate\Routing\Route;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 

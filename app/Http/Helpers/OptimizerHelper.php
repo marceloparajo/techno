@@ -239,7 +239,7 @@ class OptimizerHelper
         $pos = strpos($src, 'fotos.perfil.com');
         $src = substr($src, $pos);
 
-        $src = str_replace('//', '/', $src);
+        $src = preg_replace('/(\/+)/','/', $src);
 
         $explode_src = explode('/', $src);
         $src = 'https://' . $explode_src[0] . '/' . $explode_src[1] . '/' . $explode_src[2] . '/' . $explode_src[3] . '/' . end($explode_src);

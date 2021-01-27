@@ -75,7 +75,7 @@ class NewsController extends Controller
         else
             $noticia['featured_content'] = 'image';
 
-        $body = $this->_insertContentMiddle($noticia);
+        $body = $noticia['body']; //$this->_insertContentMiddle($noticia);
 
         $site = strtolower(env('APP_NAME', ''));
 
