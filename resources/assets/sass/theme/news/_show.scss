@@ -9,6 +9,7 @@
 			padding: 0 10px;
 			display: flex;
 			flex-direction: column;
+			margin-bottom: 1em;
 			.hat {
 				line-height: 1em;
 				padding: 0 0 5px 0;
@@ -35,11 +36,10 @@
 			h1 {
 				font: {
 					size: 2.47rem;
-					weight: 600;
 				}
-				line-height: 1em;
-				letter-spacing: -0.03em;
+				letter-spacing: -0.02em;
 				color: $negro;
+				margin-bottom: .15em;
 			}
 			h2 {
 				font:{
@@ -60,7 +60,6 @@
 				figure {
 					width: 100%;
 					position: relative;
-					margin-top: 10px;
 					display: block;
 					a.btn-open-gallery.fotogaleria {
 						width: 100%;
