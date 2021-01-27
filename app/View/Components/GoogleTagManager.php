@@ -44,6 +44,11 @@ class GoogleTagManager extends Component
     public $gtm_fbia_id;
 
     /**
+     * @var bool
+     */
+    public $widget_enable;
+
+    /**
      * Create a new component instance.
      *
      * @param string $category
@@ -63,6 +68,7 @@ class GoogleTagManager extends Component
         $this->gtm_id = env('ANALYTICS_GTM_ID','');
         $this->gtm_amp_id = env('ANALYTICS_GTM_AMP_ID', '');
         $this->gtm_fbia_id = env('ANALYTICS_GTM_FBIA_ID', '');
+        $this->widget_enable = env('ANALYTICS_ENABLE', false);
 
         $this->content = [
             'brand' => env('SITE_CODE', 'perfil'),
