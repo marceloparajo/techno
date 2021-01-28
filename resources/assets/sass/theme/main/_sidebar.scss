@@ -1,59 +1,36 @@
 .podcasts-radio {
-	background: #1c313a;
+	background: $dark;
 	border-radius: 4px;
 	overflow: hidden;
 	margin: 0 0 20px 0;
 	width: 100%;
-	header {
-		background-color: #161227;
+	header.titulo {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		background-color: $negro;
 		width: 100%;
-		.titulo {
-			width: 100%;
-			padding: 10px;
-			box-sizing: border-box;
-			display: flex;
-			justify-content: space-between;
-			align-items: flex-end;
-			.podcasts {
-				font-family: $font-serif;
-				font-size: 28px;
-				font-weight: 600;
-				line-height: .9em;
-				letter-spacing: -0.02em;
-				flex: 1 1 0;
+		font-size: 28px;
+		font-weight: 600;
+		line-height: .9em;
+		letter-spacing: -0.02em;
+		padding: 5px 10px;
+		a {
+			color: #fff;
+			&:hover {
 				color: #fff;
-				transform: translateY(4px);
-				a {
-					color: #fff;
-					&:hover {
-						color: #fff;
-					}
-				}
 			}
-			.logo-radio {
-				display: block;
-				float: right;
-				margin: 0 0 0 10px;
-				flex-basis: 140px;
-				height: 45px;
-				background-image: url('../../../img/radio-perfil-isologo.png');
-				background-position: 0 0;
-				background-repeat: no-repeat;
-				background-size: 140px;
-				a {
-					display: block;
-					width: 140px;
-					height: 45px;
-				}
-			}
-			border-bottom: 2px solid #ddd;
+		}
+		img {
+			width: 120px;
+			height: auto;
 		}
 	}
 	.notaPodcast {
 		width: 100%;
 		padding: 5px 10px;
-		border-bottom: 1px solid #455a64;
-		background: #1c313a;
+		border-bottom: 1px solid $linea-oscura;
+		background: $dark;
 		transition: ease .3s;
 		box-sizing: border-box;
 		a {
@@ -87,7 +64,7 @@
 			}
 		}
 		&:hover {
-			background: #455a64;
+			background: $linea-oscura;
 		}
 		&:after {
 			display: block;
@@ -99,7 +76,7 @@
 	}
 	footer {
 		width: 100%;
-		padding: 10px 0;
+		padding: 10px;
 		border-bottom: 1px solid #ddd;
 		margin: 0;
 		a {
@@ -125,22 +102,11 @@
 					position: 0 0;
 				}
 				transform: translateY(-2px);
+				filter: invert(1);
 			}
 		}
 	}
-	//@media only screen and (max-width: 890px) {
-	@include media-breakpoint-down(md) {
-		flex-direction: column;
-		.notaPodcast {
-			flex-basis: 100%;
-			a {
-				flex-direction: row;
-				figure {
-					flex-basis: 100px;
-				}
-			}
-		}
-	}
+
 }
 
 
@@ -171,158 +137,6 @@
 			align-items: flex-end;
 			border-bottom: 1px solid #ddd;
 			margin: 0;
-			.exitoina-titulo {
-				text-indent: -9999px;
-				width: 180px;
-				height: 26px;
-				display: block;
-				margin: 0;
-				background: url('../../../img/exitoina-logo-sidebar.png') 0 0 no-repeat;
-				a {
-					display: block;
-					width: 180px;
-					height: 26px;
-				}
-			}
-			.net-titulo {
-				text-indent: -9999px;
-				width: 70px;
-				height: 29px;
-				display: block;
-				margin: 0;
-				background: url('../../../img/net-logo-sidebar.png') 0 0 no-repeat;
-				a {
-					display: block;
-					width: 70px;
-					width: 29px;
-				}
-			}
-			.investigacion-titulo {
-				text-indent: -9999px;
-				width: 280px;
-				height: 35px;
-				display: block;
-				margin: 0;
-				background: url('../../../img/investigacion-logo-sidebar.png') 0 0 no-repeat;
-				a {
-					display: block;
-					width: 280px;
-					height: 35px;
-				}
-			}
-			.opinion-titulo {
-				width: 100%;
-				height: 30px;
-				line-height: 44px;
-				display: block;
-				margin: 0;
-				text-transform: uppercase;
-				font-family: $font-serif;
-				font-size: 24px;
-				font-weight: 600;
-				background: url('../../../img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
-				a {
-					display: inline-block;
-					color: #000;
-				}
-			}
-			.panorama-titulo {
-				width: 280px;
-				height: 30px;
-				line-height: 44px;
-				display: block;
-				margin: 0;
-				text-transform: uppercase;
-				font-family: $font-serif;
-				font-size: 24px;
-				font-weight: 600;
-				background: url('../../../img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
-				a {
-					display: inline-block;
-					color: #000;
-				}
-			}
-			.periodismopuro-titulo {
-				text-indent: -9999px;
-				width: 183px;
-				height: 49px;
-				display: block;
-				margin: 0 auto;
-				background: url('../../../img/periodismo-puro-logo-sidebar.png') 0 0 no-repeat;
-				background-position: center center;
-				a {
-					display: block;
-					width: 183px;
-					width: 49px;
-					margin: auto;
-				}
-			}
-			&.pp {
-				flex-direction: column;
-				h4 {
-					border-top: 1px solid #d4d4d4;
-					margin-top: 10px;
-					padding-top: 5px;
-					text-align: right;
-					font-size: 15px;
-					font-style: italic;
-					display: block;
-					width: 100%;
-				}
-			}
-			.reperfilar-titulo {
-				text-indent: -9999px;
-				width: 210px;
-				height: 42px;
-				display: block;
-				margin: 0;
-				background: url('../../../img/reperfilar-logo-sidebar.png') -3px 0 no-repeat;
-				a {
-					display: block;
-					width: 210px;
-					height: 42px;
-				}
-			}
-			.videocolumnas-titulo {
-				width: 280px;
-				height: 30px;
-				line-height: 44px;
-				display: block;
-				margin: 0;
-				text-transform: uppercase;
-				font-family: $font-serif;
-				font-size: 24px;
-				font-weight: 600;
-				a {
-					display: inline-block;
-					color: #000;
-				}
-			}
-			.educacion-titulo {
-				font-family: $font-serif;
-				width: 280px;
-				height: 30px;
-				line-height: 44px;
-				display: block;
-				margin: 0;
-				text-transform: uppercase;
-				font-size: 24px;
-				font-weight: 600;
-			}
-			.batimes-titulo {
-				text-indent: -9999px;
-				width: 280px;
-				height: 35px;
-				display: block;
-				margin: 0;
-				background: url('../../../img/batimes.png') 0 15px no-repeat;
-				a {
-					display: block;
-					width: 280px;
-					height: 35px;
-				}
-			}
-
 		}
 		article {
 			width: 100%;
@@ -346,7 +160,6 @@
 				.content {
 					flex-basis: 63%;
 					h3 {
-						color: $negro;
 						font:{
 							size: 1.25rem;
 							weight: 500;
@@ -421,7 +234,6 @@
 				font-size: 14px;
 				font-weight: 600;
 				letter-spacing: 0.2em;
-				color: #000;
 				text-transform: uppercase;
 				display: flex;
 				justify-content: flex-end;
@@ -452,8 +264,116 @@
 		}
 	}
 
+	#exitoina header .exitoina-titulo {
+		text-indent: -9999px;
+		width: 180px;
+		height: 26px;
+		display: block;
+		margin: 0;
+		background: url('../../../img/exitoina-logo-sidebar.png') 0 0 no-repeat;
+		a {
+			display: block;
+			width: 180px;
+			height: 26px;
+		}
+	}
+	#net header .net-titulo {
+		text-indent: -9999px;
+		width: 70px;
+		height: 29px;
+		display: block;
+		margin: 0;
+		background: url('../../../img/net-logo-sidebar.png') 0 0 no-repeat;
+		a {
+			display: block;
+			width: 70px;
+			width: 29px;
+		}
+	}
+	#investigacion header .investigacion-titulo {
+		text-indent: -9999px;
+		width: 280px;
+		height: 35px;
+		display: block;
+		margin: 0;
+		background: url('../../../img/investigacion-logo-sidebar.png') 0 0 no-repeat;
+		a {
+			display: block;
+			width: 280px;
+			height: 35px;
+		}
+	}
+	#opinion header .opinion-titulo {
+		width: 100%;
+		height: 30px;
+		line-height: 44px;
+		display: block;
+		margin: 0;
+		text-transform: uppercase;
+		font-family: $font-serif;
+		font-size: 24px;
+		font-weight: 600;
+		background: url('../../../img/perfil-logo-xs-sidebar.png') right 0 no-repeat;
+		a {
+			display: inline-block;
+			color: #000;
+		}
+	}
+	#periodismopuro header .periodismopuro-titulo {
+		text-indent: -9999px;
+		width: 183px;
+		height: 49px;
+		display: block;
+		margin: 0 auto;
+		background: url('../../../img/periodismo-puro-logo-sidebar.png') 0 0 no-repeat;
+		background-position: center center;
+		a {
+			display: block;
+			width: 183px;
+			width: 49px;
+			margin: auto;
+		}
+	}
+	#periodismopuro header .pp {
+		flex-direction: column;
+		h4 {
+			border-top: 1px solid #d4d4d4;
+			margin-top: 10px;
+			padding-top: 5px;
+			text-align: right;
+			font-size: 15px;
+			font-style: italic;
+			display: block;
+			width: 100%;
+		}
+	}
+	#videocolumnas header .videocolumnas-titulo {
+		width: 280px;
+		height: 30px;
+		line-height: 44px;
+		display: block;
+		margin: 0;
+		text-transform: uppercase;
+		font-family: $font-serif;
+		font-size: 24px;
+		font-weight: 600;
+		a {
+			display: inline-block;
+			color: #000;
+		}
+	}
+	#educacion header .educacion-titulo {
+		font-family: $font-serif;
+		width: 280px;
+		height: 30px;
+		line-height: 44px;
+		display: block;
+		margin: 0;
+		text-transform: uppercase;
+		font-size: 24px;
+		font-weight: 600;
+	}
 	#opinion,
-	#panorama,
 	#videocolumnas,
 	#educacion {
 		header {
@@ -467,6 +387,19 @@
 			background: #4285f4;
 			padding: 0;
 			height: 42px;
+			.reperfilar-titulo {
+				text-indent: -9999px;
+				width: 210px;
+				height: 42px;
+				display: block;
+				margin: 0;
+				background: url('../../../img/reperfilar-logo-sidebar.png') -3px 0 no-repeat;
+				a {
+					display: block;
+					width: 210px;
+					height: 42px;
+				}
+			}
 		}
 	}
 	#masLeidasSidebar {
@@ -622,7 +555,20 @@
 			display: none;
 		}
 	}
-	#batimes {
+	#batimes { 
+		header .batimes-titulo {
+			text-indent: -9999px;
+			width: 280px;
+			height: 35px;
+			display: block;
+			margin: 0;
+			background: url('../../../img/batimes.png') 0 15px no-repeat;
+			a {
+				display: block;
+				width: 280px;
+				height: 35px;
+			}
+		}
 		footer {
 			a {
 				letter-spacing: 0;

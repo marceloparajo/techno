@@ -72,11 +72,11 @@
 	}
 
 	#pw-logged, .pw-logged {
-		height: 34px;
+		height: 24px;
 		box-sizing: border-box;
 		color: #333;
-		padding: 3px 10px 3px 3px;
-		border-radius: 16px;
+		padding: 0 10px 0 0;
+		border-radius: 12px 3px 3px 12px;;
 		position: relative;
 		cursor: pointer;
 		transition: ease .3s;
@@ -86,10 +86,10 @@
 		display: flex;
 		align-items: center;
 		line-height: 1em;
-
 		.pw-logged-avatar {
-			width: 26px;
-			height: 26px;
+			width: 22px;
+			height: 22px;
+			background: white;
 			border-radius: 50%;
 			overflow: hidden;
 			display: block;
@@ -100,7 +100,7 @@
 		.pw-logged-info {
 			display: none;
 			position: absolute;
-			top: 26px;
+			top: 18px;
 			left: 2px;
 			right: 0;
 			z-index: 9;
@@ -178,14 +178,6 @@
 @include media-breakpoint-down(md) {
 
 	.pw-suscripcion {
-		margin: 0 0 18px 10px;
-	}
-
-}
-
-@include media-breakpoint-down(sm) {
-
-	.pw-suscripcion {
 		margin: 0 0 12px 10px;
 	}
 
@@ -196,7 +188,6 @@
 	.pw-suscripcion {
 		font-size: 11px;
 		font-weight: normal;
-		margin-bottom: 6px;
 
 		.pw-suscribite {
 			background-color: transparent;

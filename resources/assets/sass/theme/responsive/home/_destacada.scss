@@ -58,11 +58,17 @@
 			.articulo {
 				&.nota-0 {
 					grid-area: a;
+					.meta-content {
+						a {
+							 p.headline {
+							 	display: none;
+							 }
+						}
+					}
 				}
 				&.nota-1 {
 					grid-area: b;
 					margin-bottom: 20px;
-					border-bottom: none;
 					figure {
 						display: none;
 					}
@@ -75,7 +81,6 @@
 				}
 				&.nota-2 {
 					grid-area: c;
-					border-top: 1px solid $linea;
 					padding-top: 10px;
 					border-bottom: 1px solid $linea;
 					padding-bottom: 10px;
@@ -112,6 +117,9 @@
 								font-weight: normal;
 								margin-left: -15px;
 								margin-bottom: 0;
+							}
+							p.headline {
+								display: block;
 							}
 						}
 					}
@@ -186,7 +194,6 @@
 					}
 				}
 				&.nota-1 {
-					margin-bottom: 20px;
 					.meta-content {
 						a {
 							p.headline {
@@ -194,9 +201,6 @@
 							}
 						}
 					}
-				}
-				&.nota-2 {
-					padding-top: 25px;
 				}
 			}
 		}		

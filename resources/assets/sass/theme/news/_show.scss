@@ -22,9 +22,6 @@
 				color: $azul;
 				a {
 					display: none;
-					color: $dark;
-					font-weight: 600;
-					text-transform: uppercase;
 				}
 				span {
 					&.volanta {
@@ -37,9 +34,6 @@
 				font: {
 					size: 2.47rem;
 				}
-				letter-spacing: -0.02em;
-				color: $negro;
-				margin-bottom: .15em;
 			}
 			h2 {
 				font:{
@@ -47,7 +41,6 @@
 					weight: 400;
 				}
 				margin: 10px 0;
-				letter-spacing: -0.02em;
 			}
 			h3 {
 				font-size: 1.2em;
@@ -83,7 +76,6 @@
 						display: block;
 					}
 					figcaption {
-						color: $dark;
 						font-size: .85rem;
 						line-height: 1.3em;
 						padding: 5px;
@@ -125,10 +117,8 @@
 				}
 				.news-body {
 					position: relative;
-					font-family: $font-serif;
 					font-size: 1.35rem;
 					padding: 0 10px;
-					color: $dark;
 					strong,
 					a strong {
 						font-weight: 600;
@@ -143,10 +133,8 @@
 					ol,
 					li {
 						font-size: 1.35rem;
-						font-family: $font-serif;
 						line-height: 1.35em;
 						letter-spacing: -0.01em;
-						color: $negro;
 						strong,
 						a strong {
 							font-weight: 600;
@@ -244,7 +232,7 @@
 					.fecha {
 						font-size: .9rem;
 						font-weight: 400;
-						color: #999;
+						color: $linea-oscura;
 						font-family: $font-sinserif;
 						margin-bottom: 10px;
 					}

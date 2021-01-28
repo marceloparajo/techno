@@ -26,9 +26,14 @@ a {
 		text-decoration: none;
 	}
 }
-h1,
+h1 {
+	line-height: 1em;
+	margin-bottom: .15em;
+	letter-spacing: -0.02em;
+}
 h2 {
 	line-height: 1em;
+	letter-spacing: -0.02em;
 }
 figure {
 	img,
@@ -117,20 +122,4 @@ figure {
 }
 .embed-responsive-16by9 {
 	padding-bottom: 56.25%;
-}
-
-//TIPOGRAFIAS
-
-.perfil-noticia {
-	.supercontenedor {
-		.main-article {
-			.news-body {
-				.fecha-autor {
-					.autor {
-						font-family: $font-serif
-					}
-				}
-			}
-		}
-	}
 }

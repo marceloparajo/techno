@@ -1,13 +1,13 @@
 @if (isset($news) && count($news) > 0)
-	<section id="exitoina">
-		<header>
-			PODCASTS RADIO
-			{{--<div class="exitoina-titulo"><a href="https://exitoina.perfil.com/" target="_blank" rel="noreferrer"></a></div>--}}
+	<section class="podcasts-radio">
+		<header class="titulo">
+			<a href="https://radio.perfil.com/seccion/podcasts" target="_blank" rel="noreferrer">Podcasts</a>
+			<img src="/images/radio-perfil-sidebar.png" alt="Radio Perfil" style="width:120px;height:40px">
 		</header>
 
 		@foreach(array_slice($news, 0, 4) as $key => $new)
 
-			<article class="notaExitoina">
+			<article class="notaPodcast">
 				<a href="{{ $new['permalink'] }}">
 					<figure>
 						@if ($loop->first)
@@ -34,7 +34,7 @@
 		@endforeach
 
 		<footer>
-			<a href="https://exitoina.perfil.com/" target="_blank" rel="noreferrer">Más en Exitoína </a>
+			<a href="https://radio.perfil.com/seccion/podcasts" target="_blank" rel="noreferrer">Más Podcasts </a>
 		</footer>
 	</section>
 @endif
