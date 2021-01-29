@@ -4,45 +4,27 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	margin: 0 0 6px 10px;
 	font:{
 		family: $font-sinserif;
-		size: 12px;
-		weight: bold;
+		size: 11px;
 	}
 	line-height: 1em;
 	letter-spacing: 0.04em;
 
 	#pw-suscribite, .pw-suscribite {
-		height: 24px;
-		background-color: $pw-azul;
-		color: white;
-		display: block;
-		padding: 6px 10px 4px 10px;
-		border-radius: 3px;
-		box-sizing: border-box;
-		margin: 0 0 0 10px;
-		cursor: pointer;
-		transition: ease .3s;
-		text-transform: uppercase;
-		&:hover {
-			background: $pw-azul-claro;
-		}
+		display: none;
 	}
 
 	#pw-ingresar, .pw-ingresar {
 		height: 24px;
-		box-sizing: border-box;
-		background: white;
-		color: $pw-azul;
-		padding: 5px 10px 0 28px;
+		background: $light;
 		border-radius: 3px;
 		position: relative;
 		cursor: pointer;
 		transition: ease .3s;
 		text-transform: uppercase;
-		border: 1px solid $linea;
-
+		padding: 6px 10px 0 28px;
+		color: $pw-azul;
 		&:before {
 			content: "";
 			display: block;
@@ -63,46 +45,38 @@
 			}
 		}
 
-		&:hover {
-			color: #222;
-			&:before {
-				background-color: $pw-azul-claro;
-			}
-		}
 	}
 
 	#pw-logged, .pw-logged {
 		height: 24px;
 		box-sizing: border-box;
 		color: #333;
-		padding: 0 10px 0 0;
-		border-radius: 12px 3px 3px 12px;;
+		padding: 0 10px 0 26px;
+		border-radius: 12px;
 		position: relative;
 		cursor: pointer;
 		transition: ease .3s;
 		line-height: 24px;
-		border: 1px solid #ccdfef;
-		background: #eef3f7;
+		border: 1px solid $linea;
+		line-height: 1em;
 		display: flex;
 		align-items: center;
-		line-height: 1em;
+		max-width: 120px;
+		background:{
+			image:url('../../../img/glyph/paywall-user.svg');
+			repeat: no-repeat;
+			size: 20px;
+			position: 1px 1px;
+		}
 		.pw-logged-avatar {
-			width: 22px;
-			height: 22px;
-			background: white;
-			border-radius: 50%;
-			overflow: hidden;
-			display: block;
-			float: left;
-			margin: 0 5px 0 0;
+			display: none;
 		}
 
 		.pw-logged-info {
 			display: none;
 			position: absolute;
 			top: 18px;
-			left: 2px;
-			right: 0;
+			right: 2px;
 			z-index: 9;
 			width: 100%;
 			padding: 10px 0;
@@ -123,28 +97,8 @@
 					border-bottom: 1px solid #dfeefb;
 					font-size: 13px;
 					line-height: 1.2em;
-
-					a {
-						color: #888;
-					}
-
-					&:hover {
-
-						a {
-							color: #000;
-						}
-
-						&:before {
-							color: $pw-azul;
-						}
-					}
-
 					&:last-of-type {
 						border-bottom: none;
-					}
-
-					&.suscribite-logged {
-						display: none;
 					}
 				}
 
@@ -152,7 +106,7 @@
 					content: "";
 					position: absolute;
 					top: -6px;
-					left: 30px;
+					right: 30px;
 					display: block;
 					width: 10px;
 					height: 10px;
@@ -165,9 +119,7 @@
 		}
 
 		&:hover {
-			color: #000;
-			background: white;
-
+			color: $negro;
 			>.pw-logged-info {
 				display: block;
 			}
@@ -175,49 +127,50 @@
 	}
 }
 
-@include media-breakpoint-down(md) {
-
+@include media-breakpoint-up(sm) {
 	.pw-suscripcion {
-		margin: 0 0 12px 10px;
-	}
-
-}
-
-@include media-breakpoint-down(xs) {
-
-	.pw-suscripcion {
-		font-size: 11px;
-		font-weight: normal;
-
-		.pw-suscribite {
-			background-color: transparent;
-			color: $pw-azul-claro;
-			padding: 5px 0;
-			display: none;
-		}
-
 		.pw-ingresar {
-			background-color: transparent;
-			border: none;
-			padding: 5px 0;
-			color: #444;
-			&:before {
-				display: none;
+			&:hover {
+				color: #222;
+				&:before {
+					background-color: $pw-azul-claro;
+				}
 			}
 		}
-
+		.pw-suscribite {		
+			height: 24px;
+			background-color: $pw-azul;
+			color: white;
+			display: block;
+			padding: 6px 10px 4px 10px;
+			border-radius: 3px;
+			box-sizing: border-box;
+			margin: 0 0 0 10px;
+			cursor: pointer;
+			transition: ease .3s;
+			text-transform: uppercase;
+			&:hover {
+				background: $pw-azul-claro;
+			}
+		}
 		.pw-logged {
+			max-width: 100%;
 			.pw-logged-info {
+				right: auto;
+				left: 2px;
 				ul {
+					&:before {
+						right: auto;
+						left: 30px;
+					}
 					li.suscribite-logged {
-						display: block;
+						display: none;
 					}
 				}
 			}
 		}
 	}
 }
-
 #pw-zocalo {
 	box-sizing: border-box;
 	position: fixed;

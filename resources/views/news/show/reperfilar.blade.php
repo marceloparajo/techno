@@ -181,7 +181,7 @@
 						--}}
 
 
-						@include('news.show.partials.noticias-relacionadas')
+						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
 
 						@include('news.show.partials.news-tags')

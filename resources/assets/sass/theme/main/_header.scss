@@ -7,22 +7,22 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-end;
+		align-items: center;
 		padding: 0 10px;
 		.elisologo {
 			display: flex;
 			.hamburguer {
 				display: inline-block;
 				cursor: pointer;
-				margin: 13px 10px 0 0;
+				margin: 8px 10px 0 0;
 				float: left;
 				.bar1,
 				.bar2,
 				.bar3 {
 					width: 30px;
-					height: 3px;
+					height: 2px;
 					background-color: #333;
-					margin: 6px 0;
+					margin: 7px 0;
 					transition: 0.4s;
 				}
 				&.change .bar1 {
@@ -36,10 +36,13 @@
 				}
 			}
 			figure {
-				margin: 0;
-				padding: 10px 0 5px 0;
-				img {
+				margin: 5px 0;
+				a {
 					width: 170px;
+					height: 38px;
+					img {
+						width: 170px;
+					}
 				}
 			}
 			.menu-primario {
@@ -47,26 +50,6 @@
 			}
 		}
 		.radio-perfil {
-			margin: 0 0 11px auto;
-			a {
-				font-family: $font-sinserif;
-				font-size: 11px;
-				text-transform: uppercase;
-				color: $linea-oscura;
-				line-height: 1em;
-				display: block;
-				width: 140px;
-				img {
-					width: 100px;
-					height: auto;
-				}
-				.radio-play {
-					width: 22px;
-					margin: 0 5px 0 0;
-					transform: translateY(-1px);
-					float: left;
-				}
-			}
 			display: none;
 		}
 	}

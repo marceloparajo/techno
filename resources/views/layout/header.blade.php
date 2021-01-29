@@ -32,7 +32,7 @@
 			</div>
 			<figure>
 				<a href="/">
-					<img src="{{ asset('img/logo_perfil.svg') }}" alt="Perfil.com" style="width:170px;">
+					<img src="{{ asset('img/logo_perfil.svg') }}" alt="Perfil.com" style="width:170px;height:38px">
 				</a>
 			</figure>
 			<nav class="menu-primario">
@@ -55,7 +55,7 @@
 		<div class="radio-perfil">
 			<a href="//radio.perfil.com">
 				<img src="/images/glyph/radio-play.svg" class="radio-play" alt="Radio Perfil" style="width:22px;height:22px">
-				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil"><span>FM 101.9</span>
+				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil" style="width:100px;height:8.66px"><span>FM 101.9</span>
 			</a>
 		</div>
 		<div id="paywall-login-container" class="pw-suscripcion">
