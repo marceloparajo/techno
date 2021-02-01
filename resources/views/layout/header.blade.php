@@ -1,7 +1,16 @@
 @inject('menuHelper', "App\Http\Helpers\MenuHelper")
 <div class="pre-header supercontenedor">
 	<div class="header-fecha">
-		Jueves 22 de octubre de 2020
+		{{--
+			TODO: Poner la fecha en español. 
+		--}}
+		@php
+			$mytime = Carbon\Carbon::now();
+			$mytime->settings([
+				'toStringFormat' => 'jS \d\e F \d\e Y',
+			]);
+			echo $mytime;
+		@endphp
 	</div>
 	<div class="header-data">
 		<nav class="more-sites">

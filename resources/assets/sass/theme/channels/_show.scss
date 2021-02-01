@@ -97,6 +97,31 @@
 				padding-top: 10px;
 				figure {
 					flex-basis: 35%;
+					position: relative;
+					a {
+						.galeria-video {
+							position: absolute;
+							bottom: 5px;
+							left: 5px;
+							border-radius: 50%;
+							width: 40px;
+							height: 40px;
+							display: block;
+							text-align: center;
+							line-height: 36px;
+							transition: .3s ease;
+							border: 2px solid #fff;
+							display: flex;
+							background: rgba(0,0,0,.3);
+							img {
+								width: 20px;
+								margin: auto;
+								&.has-video {
+									padding-left: 4px;
+								}
+							}
+						}
+					}
 				}
 				.meta-content {
 					flex-basis: 63%;
