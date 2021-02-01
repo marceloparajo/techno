@@ -86,7 +86,7 @@ class ApiHelper
     {
         $cache_name = md5("api-get-news-from-main-channel-$canal-$subcanales-$limit");
 
-        return Cache::remember($cache_name, 0.3, function ($canal, $subcanales, $limit) {
+        return Cache::remember($cache_name, 0.3, function () use ($canal, $subcanales, $limit) {
             $call = $this->api_server . "&metodo=getNewsFromMainChannel&canal=$canal&subcanales=$subcanales&maxrows=$limit";
             $payload = file_get_contents($call);
             return (object) json_decode($payload, true);
