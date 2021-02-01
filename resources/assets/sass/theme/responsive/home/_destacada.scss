@@ -172,7 +172,7 @@
 	@include media-breakpoint-up(xxl) {
 		.destacada {
 			grid-template-columns: 1fr 1fr 300px;
-		    grid-column-gap: 25px;
+		    grid-column-gap: 30px;
 			.articulo {
 				&.nota-0 {
 					.meta-content {

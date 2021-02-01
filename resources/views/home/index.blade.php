@@ -49,7 +49,7 @@
 			@endif
 			@if ($key == 'central-header')
 			<main class="supercontenedor">
-				<div class="contenido" style="max-width:935px">
+				<div class="contenido" style="max-width:970px">
 			@endif
 		@endforeach
 	</main>

@@ -174,7 +174,7 @@
 				align-self: flex-start;
 				flex: 1 1 0;
 				.articulo {
-					flex-basis: 48%;
+					flex-basis: 47.4%;
 					&:nth-child(n+5) {
 						display: flex;
 						flex-basis: 100%;
@@ -197,7 +197,7 @@
 			}
 			.columna-tercio {
 				flex-basis: 300px;
-				margin-left: 25px;
+				margin-left: 30px;
 				flex-direction: column;
 				justify-content: flex-start;
 				.columna-tercio-derecha {
