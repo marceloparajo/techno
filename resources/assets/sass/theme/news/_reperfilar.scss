@@ -51,7 +51,7 @@
 								font-family: $font-serif;
 							}
 						}
-						.previous_news {
+						.noticias-relacionadas {
 							ul {
 								li {
 									a {
@@ -73,6 +73,7 @@
 										line-height: 13px;
 										text-transform: uppercase;
 										letter-spacing: 0.02em;
+										border: 1px solid #a94e47;
 										&:hover {
 											color: $negro;
 										}

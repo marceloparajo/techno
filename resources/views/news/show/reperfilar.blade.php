@@ -5,6 +5,10 @@
 	<meta name="featured-image-id" content="{{ $noticia['main_image']['id'] }}">
 @endsection
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="nota" :info="$noticia" />
+@endsection
+
 @section('structured-data-type', 'itemscope itemtype="https://schema.org/NewsArticle"')
 
 @section('ads-sec', 'articulo')
@@ -14,14 +18,9 @@
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/reperfilar-news-high.css') }}">
 
-	<link rel="preload" href="{{ mix('css/reperfilar-news-low.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-news-low.css') }}"></noscript>
-
-	<link rel="preload" href="{{ mix('css/reperfilar-news-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-news-responsive.css') }}"></noscript>
-
-	<link rel="preload" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}"></noscript>
+	<link rel="stylesheet" href="{{ mix('css/reperfilar-news-low.css') }}" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="{{ mix('css/reperfilar-news-responsive.css') }}" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}" media="print" onload="this.media='all'">
 @endsection
 
 @section('js')
@@ -152,9 +151,9 @@
 
 					<div class="news-content">
 
-						{{-- Más Noticias (para los crawlers) --}}
+						{{-- Más Noticias (para los crawlers)
 						@include('news.show.partials.more-news-crawlers')
-
+ 						--}}
 
 						{!! $body !!}
 
@@ -180,6 +179,10 @@
 							@include('news.show.partials.author-bottom', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 						@endif
 						--}}
+
+
+						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
+
 
 						@include('news.show.partials.news-tags')
 

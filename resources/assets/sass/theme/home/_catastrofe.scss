@@ -22,7 +22,7 @@
 					padding:0;
 					span.hat {
 						font:{
-							family: $font-general;
+							family: $font-sinserif;
 							size: 14px;
 							height: 700;
 						}
@@ -33,13 +33,9 @@
 					}
 					h2 {
 						font:{
-							family: $font-destacada;
 							size: 1.6rem;
-							size: 7vw;
-							weight: 400;
 						}
 						color: white;
-						letter-spacing: -0.01em;
 						margin: 0 0 10px 0;
 						line-height: 1.03em;
 						.hat {
@@ -50,7 +46,7 @@
 								content: " / ";
 								font-size: .8em;
 								font-weight: normal;
-								font-family: $font-general;
+								font-family: $font-sinserif;
 								color: $azul;
 								display: inline-block;
 								transform: translateY(-2px);
@@ -60,7 +56,7 @@
 					h4 {
 						color: $linea;
 						font: {
-							family: $font-general;
+							family: $font-sinserif;
 							size: 16px;
 							weight: 400;
 						}
@@ -88,12 +84,12 @@
 					margin: 0;
 				}
 				.meta-content {
-					flex-basis: 65%;
+					flex-basis: 67%;
 					transform: translateY(-3px);
-					padding-right: 10px;
+					padding: 0 10px;
 					span.hat {
 						font:{
-							family: $font-general;
+							family: $font-sinserif;
 							size: 14px;
 							height: 700;
 						}
@@ -105,13 +101,11 @@
 					}
 					h2 {
 						font:{
-							family: $font-destacada;
 							size: 1.2em;
-							weight: 400;
+							weight: 500;
 						}
 						line-height: 1.08em;
 						color: white;
-						letter-spacing: -0.01em;
 						margin-bottom:0;
 						.hat {
 							color: $azul;
@@ -119,7 +113,7 @@
 								content: " / ";
 								font-size: .8em;
 								font-weight: normal;
-								font-family: $font-general;
+								font-family: $font-sinserif;
 								color: $azul;
 								display: inline-block;
 								transform: translateY(-2px);
@@ -146,7 +140,7 @@
 			article.catastrofe-grande {
 				.meta-content {
 					h2 {
-						font-size: 1.6rem;
+						font-size: 2rem;
 					}
 				}
 			}
@@ -198,7 +192,7 @@
 					margin-bottom: 0;
 					figure {
 						flex-basis: auto;
-						margin: 0 0 10px 0;
+						margin: 0 0 4px 0;
 					}
 					.meta-content {
 						flex-basis: auto;

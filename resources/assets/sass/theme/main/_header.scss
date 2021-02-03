@@ -7,22 +7,22 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-end;
+		align-items: center;
 		padding: 0 10px;
 		.elisologo {
 			display: flex;
 			.hamburguer {
 				display: inline-block;
 				cursor: pointer;
-				margin: 13px 10px 0 0;
+				margin: 8px 10px 0 0;
 				float: left;
 				.bar1,
 				.bar2,
 				.bar3 {
 					width: 30px;
-					height: 3px;
+					height: 2px;
 					background-color: #333;
-					margin: 6px 0;
+					margin: 7px 0;
 					transition: 0.4s;
 				}
 				&.change .bar1 {
@@ -36,10 +36,13 @@
 				}
 			}
 			figure {
-				margin: 0;
-				padding: 10px 0 5px 0;
-				img {
+				margin: 5px 0;
+				a {
 					width: 170px;
+					height: 38px;
+					img {
+						width: 170px;
+					}
 				}
 			}
 			.menu-primario {
@@ -47,26 +50,6 @@
 			}
 		}
 		.radio-perfil {
-			margin: 0 0 13px auto;
-			a {
-				font-family: $font-sinserif;
-				font-size: 11px;
-				text-transform: uppercase;
-				color: $linea-oscura;
-				line-height: 1em;
-				display: block;
-				width: 140px;
-				img {
-					width: 100px;
-					height: auto;
-				}
-				.radio-play {
-					width: 22px;
-					margin: 0 5px 0 0;
-					transform: translateY(-1px);
-					float: left;
-				}
-			}
 			display: none;
 		}
 	}
@@ -100,149 +83,21 @@
 		font:{
 			family:$font-sinserif;
 			size: 13px;
-			weight: normal;
 		}
 		padding-top: 5px;
 		display: none;
-	}
-}
-
-@include media-breakpoint-up(sm) {
-	.main-header {
-		box-shadow: none;
-		.header-top {
-			padding: 0;
-		}
-	}
-	.pre-header {
-		padding: 3px 0;
-		background-color: white;
-		border-bottom: 1px solid $linea;
-	}
-}
-@include media-breakpoint-up(md) {
-	.main-header {
-		.header-top {
-			.elisologo {
-				figure {
-					padding-bottom: 0;
-				}
-			}
-			.radio-perfil {
-				display: block;
-			}
-		}
-	}
-	.pre-header {
-		display: flex;
-		justify-content: space-between;
-		.header-fecha {
-			display: block;
-		}
-	}
-}
-@include media-breakpoint-up(lg) {
-	.main-header {
-		.header-top {
-			padding: 0 0 10px 0;
-			.radio-perfil {
-				margin: 0 0 5px auto;
-			}
-		}
-	}
-	.pre-header {
-		.header-data {
-			.more-sites {
-				display: block;
-				ul {
-					display: flex;
-					justify-content: flex-end;
-					list-style: none;
-					padding: 0;
-					margin: 0;
-					li {
-						background: url('../../../img/menu-sprite.png');
-						background-repeat: no-repeat;
-						text-indent: -9999px;
-						margin: 0 0 0 12px;
-						display: block;
-						a {
-							display: block;
-							width: 100%;
-							height: 20px;
-							background: rgba(255,255,255,.2);
-							transition: ease .3s;
-							&:hover {
-								background: rgba(255,255,255,0);
-							}
-						}
-						&.menu-exitoina {
-							background-position: 0 -121px;
-							width: 92px;
-						}
-						&.menu-caras {
-							background-position: 0 -89px;
-							width: 40px;
-						}
-						&.menu-noticias {
-							background-position: 0 -59px;
-							width: 54px;
-						}
-						&.menu-bloomberg {
-							background-position: 0 -29px;
-							width: 94px;
-						}
-						&.menu-reperfilar {
-							background-position: 0 1px;
-							width: 102px;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-@include media-breakpoint-up(xl) {
-	.main-header {
-		.header-top {
-			.elisologo {
-				.menu-primario {
-					display: block;
-					ul.menu-destacado {
-						padding: 18px 10px 0 10px;
-						margin: 0;
-						list-style: none;
-						font-family: $font-general;
-						font-size: 14px;
-						li {
-							display: inline-block;
-							float: left;
-							padding: 0;
-							margin: 0;
-							text-transform: uppercase;
-							a {
-								display: block;
-								padding: 10px;
-								color: $dark;
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 }
 #contenedor-header-menu {
 	position: relative;
 	width: 100%;
 	margin: auto;
-	font-family: $font-general;
+	font-family: $font-sinserif;
 	#menues {
 		position: absolute;
 		top: 0;
 		left: 0;
 		z-index: 999;
-		transition: ease .9s;
 		display: none;
 		ul {
 			list-style:none;
@@ -255,10 +110,8 @@
 			li {
 				padding: 8px;
 				display: block;
-				box-sizing: border-box;
 				width: 160px;
 				font-size: 14px;
-				color: #666;
 				border-left: 1px solid #e0e0e0;
 				border-right: 1px solid #e0e0e0;
 				border-bottom: 1px solid #e0e0e0;
@@ -330,9 +183,6 @@
 			display: block;
 		}
 	}
-	@include media-breakpoint-up(xl) {
-		max-width: 1260px;
-	}
 }
 
 
@@ -370,15 +220,12 @@
 			}
 		}
 	}
-	@include media-breakpoint-up(md) {
-		display: block;
-	}
 }
 .buscador-alt {
 	display: none;
 }
 ul.temas {
-	font-family: $font-general;
+	font-family: $font-sinserif;
 	height: 2em;
 	overflow: hidden;
 	padding: 0 10px;
@@ -387,24 +234,17 @@ ul.temas {
 		display: inline-block;
 		float: left;
 		line-height: 2em;
+		width: 100%;
+		clear: both;
+		border-bottom: 1px solid #bebebe;
 		a {
 			font:{
-				family: $font-general;
+				family: $font-sinserif;
 				size: 14px;
-				weight: 400;
 			}
 			color: $light;
 			&:hover {
 				color: white;
-			}
-			&:after {
-				content: "\00b7";
-				font-size: 20px;
-				margin: 0 5px;
-				line-height: 12px;
-				display: inline-block;
-				transform: translateY(2px);
-				color: $linea;
 			}
 		}
 		&:last-child {
@@ -414,28 +254,20 @@ ul.temas {
 				}
 			}
 		}
-		@include media-breakpoint-down(lg) {
-			width: 100%;
-			clear: both;
-			border-bottom: 1px solid #bebebe;
-			a {
-				&:after {
-					display: none;
-				}
-			}
-		}
 	}
 }
 ul.canales {
-	font-family: $font-general;
+	font-family: $font-sinserif;
 	li.nav-item {
 		text-align: left;
 		padding: 0;
+		width: 100%;
+		clear: both;
+		border-bottom: 1px solid #ebebeb;
 		a {
 			font:{
-				family: $font-general;
-				size: 15px;
-				weight: 400;
+				family: $font-sinserif;
+				size: 13px;
 			}
 			text-transform: uppercase;
 			letter-spacing:0;
@@ -443,26 +275,6 @@ ul.canales {
 			color: $dark;
 			&:hover {
 				color: $hover !important;
-			}
-		}
-		/*
-		&:nth-child(n+6) {
-			display: none;
-		}
-		*/
-		@include media-breakpoint-down(xs) {
-			width: 100%;
-			clear: both;
-			border-bottom: 1px solid #ebebeb;
-			a {
-				font-size: 13px;
-			}
-		}
-		@include media-breakpoint-up(xl) {
-			text-align: center;
-			padding: 0 5px;
-			a {
-				padding:5px 10px 0 10px;
 			}
 		}
 	}
@@ -488,26 +300,6 @@ ul.canales {
 }
 .buscador-header {
 	margin:5px 2px;
-}
-
-
-
-@include media-breakpoint-up(md) {
-	.nav-temas {
-		justify-content: space-between;
-		ul {
-			flex: 1 1 0;
-			border-top: none;
-			width: auto;
-			padding-left: 18px;
-			li {
-				a {
-					padding: 5px 18px;
-					font-size: 14px;
-				}
-			}
-		}
-	}
 }
 
 @media (min-width: 979px) {
@@ -536,9 +328,6 @@ ul.canales {
 		font-weight: 900!important;
 		color: $negro!important;
 	}
-	@include media-breakpoint-up(xl) {
-		display: block!important;
-	}
 }
 
 .mainnavbar {
@@ -558,27 +347,4 @@ ul.canales {
 
 .menudetemas {
 	background: $negro;
-	@include media-breakpoint-up(xl) {
-		.container.elmenu {
-			max-width: 1260px;
-		}
-	}
-}
-
-
-
-@include media-breakpoint-up(xxl) {
-	.main-header.supercontenedor {
-		max-width: 100%;
-		.header-top {
-			max-width: 1260px;
-			margin: 0 auto;
-		}
-		.header-bottom {
-			ul.temas {
-				max-width: 1260px;
-				margin: 0 auto;
-			}
-		}
-	}
 }

@@ -20,7 +20,7 @@ html, body {
 		color: white;
 		display: flex;
 		justify-content: space-between;
-		padding: 0;
+		padding: 0!important;
 		flex-direction: row;
 		.reperfilar-logo {
 			text-indent: -9999px;
@@ -50,7 +50,6 @@ html, body {
 				.menu-secciones-barras {
 					display: inline-block;
 					width: 25px;
-					font-family: $font-serif;
 					cursor: pointer;
 					color: white;
 					position: absolute;

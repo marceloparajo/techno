@@ -8,16 +8,12 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Http\Helpers\ApiHelper;
-use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Response;
-use Illuminate\Routing\Route;
 use Illuminate\View\View;
 
 class LastNewsController extends Controller
@@ -44,11 +40,9 @@ class LastNewsController extends Controller
     }
 
     /**
-     * @param BloquesHelper $bloquesHelper
      * @return Application|ResponseFactory|Response
-     * @throws FileNotFoundException
      */
-    public function show(BloquesHelper $bloquesHelper)
+    public function show()
     {
         $channel = "ultimas-noticias";
         $payload = $this->apiHelper->getLastPost();
@@ -75,25 +69,20 @@ class LastNewsController extends Controller
             array_push($noticias, $new);
         }
 
-        $homedata = $bloquesHelper->generateHomedata(['sidebar']);
-        $sidebar_content = $bloquesHelper->generateContent($homedata)['sidebar'];
-
-        $amphtml = route('lastnews.amp');
-
         $site = strtolower(env('APP_NAME', ''));
         $analytics_data = [
             'channel' => $channel,
             'section' => "sitios.$site.canal",
         ];
 
-        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'sidebar_content', 'page_description', 'analytics_data', 'amphtml'));
+        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'page_description', 'analytics_data'));
         return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 
     /**
      * @return Application|Factory|View
      */
-    public function amp()
+    /*public function amp()
     {
         $channel = "ultimas-noticias";
         $payload = $this->apiHelper->getLastPost();
@@ -123,5 +112,5 @@ class LastNewsController extends Controller
         ];
 
         return view('amp.lists', compact('channel', 'noticias', 'sectionTitle', 'page_description', 'analytics_data', 'canonical'));
-    }
+    }*/
 }

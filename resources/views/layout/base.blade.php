@@ -68,14 +68,16 @@
         @yield('head-top')
 
         {{-- Font --}}
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Oswald:wght@400;600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" onload="this.rel='stylesheet'" />
-        {{-- /Font --}}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Oswald:wght@400;600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" media="print" onload="this.media='all'" />
+         {{-- /Font --}}
 
         @yield('head-css')
 
         @yield('head-bottom')
 
         {{-- Google Tag Manager --}}
+        @yield('google-tag-manager')
+
         @if (env('ANALYTICS_ENABLE', false) && env('ANALYTICS_GTM_ID', '') != '')
         <script>{!! $gtmTag?? "" !!}(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ env('ANALYTICS_GTM_ID','')}}');</script>
         @endif

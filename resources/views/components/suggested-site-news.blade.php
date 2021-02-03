@@ -1,7 +1,7 @@
 @if( count($news) > 0 )
     <div class="mas-en-perfil">
         <div class="mas-en-perfil-titulo">
-            {{ __('more in') }} <a href="//www.perfil.com"><img src="https://www.perfil.com/static/css/img/logo_perfil.svg" class="img-mas-en-perfil" alt="Perfil.com" style="height:24px;width:auto"></a>
+            {{ __('more in') }} <a href="//www.perfil.com"><img src="https://www.perfil.com/static/css/img/logo_perfil.svg" class="img-mas-en-perfil" alt="Perfil.com" style="height:24px;width:106px"></a>
         </div>
 
         @foreach ($news as $site => $noticia)

@@ -6,14 +6,15 @@
 	<meta http-equiv="refresh" content="600" />
 @endsection
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="homepage" />
+@endsection
+
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/home-high.css') }}">
 
-	<link rel="preload" href="{{ mix('css/home-low.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/home-low.css') }}"></noscript>
-
-	<link rel="preload" href="{{ mix('css/home-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/home-responsive.css') }}"></noscript>
+	<link rel="stylesheet" href="{{ mix('css/home-low.css') }}" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="{{ mix('css/home-responsive.css') }}" media="print" onload="this.media='all'">
 @endsection
 
 @section('head-bottom')
@@ -34,9 +35,7 @@
 				@if ($key == 'central-footer')
 					</div>
 					<div class="sidebar">
-						<div class="content-sidebar">
-							<x-sidebar />
-						</div>
+						<x-sidebar />
 					</div>
 				@endif
 
@@ -49,7 +48,7 @@
 			@endif
 			@if ($key == 'central-header')
 			<main class="supercontenedor">
-				<div class="contenido" style="max-width:935px">
+				<div class="contenido" style="max-width:970px">
 			@endif
 		@endforeach
 	</main>

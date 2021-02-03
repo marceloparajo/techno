@@ -1,6 +1,6 @@
 html,
 body {
-	font-family: "Roboto", Helvetica, Arial, serif;
+	font-family: $font-serif;
 	max-width: 100%;
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
@@ -26,10 +26,14 @@ a {
 		text-decoration: none;
 	}
 }
-h1,
-h2 {
-	font-family: $font-serif;
+h1 {
 	line-height: 1em;
+	margin-bottom: .15em;
+	letter-spacing: -0.02em;
+}
+h2 {
+	line-height: 1em;
+	letter-spacing: -0.02em;
 }
 figure {
 	img,
@@ -60,8 +64,8 @@ figure {
 .supercontenedor {
 	width: 100%;
 	height: 100%;
+	max-width: 1300px;
 	margin: 0 auto;
-	width: 100%;
 	padding: 20px 0 0 0;
 	display: flex;
 	justify-content: space-between;
@@ -118,23 +122,4 @@ figure {
 }
 .embed-responsive-16by9 {
 	padding-bottom: 56.25%;
-}
-
-//TIPOGRAFIAS
-
-.perfil-noticia {
-	.supercontenedor {
-		.main-article {
-			.news-body {
-				.fecha-autor {
-					.autor {
-						font-family: $font-serif
-					}
-				}
-				.news-content {
-					font-family: $font-serif
-				}
-			}
-		}
-	}
 }

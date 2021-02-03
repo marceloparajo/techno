@@ -46,13 +46,13 @@
 									</h2>
 								</a>
 								@if ($new['signed'])
-								<h5 class="firma-home">
+								<span class="firma-home">
 									<a href="/autores/{{$new['author']['username']}}">
 										{{ __('by') }} {{ $new['author']['fullname'] }}
 									</a>
-								</h5>
+								</span>
 								@elseif ($new['credit'] != '')
-									<h5>{{ $new['credit'] }}</h5>
+									<span>{{ $new['credit'] }}</span>
 								@endif
 							</div>
 						@endif

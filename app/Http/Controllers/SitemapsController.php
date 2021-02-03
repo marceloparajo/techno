@@ -204,7 +204,31 @@ class SitemapsController extends Controller
         $sitemap = $xml->addChild('sitemap');
         $sitemap->addChild('loc', route('sitemaps.channels'));
 
+        // Authors
+        $sitemap = $xml->addChild('sitemap');
+        $sitemap->addChild('loc', route('sitemaps.authors'));
+
         return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=60, public']);
+    }
+
+    /**
+     * @return Application|ResponseFactory|Response
+     */
+    public function showAuthors()
+    {
+        $authors = $this->apiHelper->getAllAuthors();
+
+        $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?><urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
+
+        foreach ($authors->DATA as $author) {
+            $loc = route('authors.show', $author['username']);
+
+            $url = $xml->addChild('url');
+            $url->addChild('loc', $loc);
+            $url->addChild('changefreq', 'weekly');
+        }
+
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=600, public']);
     }
 
     /**

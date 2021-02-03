@@ -24,12 +24,10 @@ ARTE Y CULTURA
 		left: -1px;
 		top: -4px;
 	}
-	h6 {
+	.cobertura-titulo {
 		font:{
-			family: $font-serif;
 			weight: 600;
-			size: 1.5rem;
-			size: 5vw;
+			size: 1.2rem;
 		}
 		text-transform: uppercase;
 		padding: 0;
@@ -118,7 +116,7 @@ ARTE Y CULTURA
 		}
 	}
 	@include media-breakpoint-up(sm) {
-		h6 {
+		.cobertura-titulo {
 			padding: 0;
 			font-size: 1.4rem;
 		}
@@ -805,12 +803,10 @@ Se usa para Radio Perfil
 		left: -1px;
 		top: -4px;
 	}
-	h6 {
+	.ayc-titulo {
 		font:{
-			family: $font-serif;
 			weight: 600;
-			size: 1.5rem;
-			size: 5vw;
+			size: 1.2rem;
 		}
 		text-transform: uppercase;
 		padding: 0 10px;
@@ -822,6 +818,7 @@ Se usa para Radio Perfil
 			justify-content: space-between;
 			border-top: 1px solid $linea;
 			padding-top: 5px;
+			padding-bottom: 10px;
 			figure {
 				width: 30%;
 			}
@@ -857,7 +854,7 @@ Se usa para Radio Perfil
 		}
 	}
 	@include media-breakpoint-up(sm) {
-		h6 {
+		.ayc-titulo {
 			padding: 0;
 			font-size: 1.5rem;
 		}
@@ -900,6 +897,7 @@ Se usa para Radio Perfil
 					}
 					.meta-content {
 						width: 100%;
+						padding: 0;
 					}
 				}
 			}
@@ -918,6 +916,7 @@ Se usa para Radio Perfil
 	@include media-breakpoint-only(md) {
 		.notas-ayc {
 			.meta-content {
+				padding: 0;
 				a {
 					h2 {
 						font-size: 1.1rem;
@@ -948,9 +947,6 @@ Se usa para Radio Perfil
 						border-top: none;
 						padding-top: 0;
 					}
-					figure {
-						margin-bottom: 20px;
-					}
 				}
 			}
 		}
@@ -966,6 +962,7 @@ Se usa para Radio Perfil
 		.notas-ayc {
 			display: flex;
 			justify-content: space-between;
+			padding-bottom: 10px;
 			.articulo.ayc {
 				border-top: none;
 				padding-top: 0;
@@ -976,6 +973,7 @@ Se usa para Radio Perfil
 				.articulo.ayc {
 					position: relative;
 					display: block;
+					padding: 0;
 					figure {
 						width: 100%;
 						h4 {
@@ -1018,6 +1016,7 @@ Se usa para Radio Perfil
 				width: 49%;
 				order: 1;
 				position: relative;
+				padding-bottom: 0;
 				.meta-content {
 					position: absolute;
 					bottom: 0;
@@ -1039,6 +1038,19 @@ Se usa para Radio Perfil
 						}
 					}
 				}
+				margin-bottom: 0;
+				figure {
+					margin-bottom: 0;
+					height: 100%;
+					background-size: cover;
+					background-position: center;
+					img {
+						display: none;
+					}
+				}
+				.meta-content {
+					padding-bottom: 10px;
+				}
 			}
 			>.articulo.ayc:last-of-type {
 				width: 24%;
@@ -1054,6 +1066,7 @@ Se usa para Radio Perfil
 		}
 	}
 	@include media-breakpoint-up(xxl) {
+		padding-bottom: 10px;
 		.notas-ayc {
 			.articulo.ayc {
 				.meta-content {
@@ -1085,9 +1098,8 @@ Se usa para Radio Perfil
 			}
 			>.articulo.ayc:first-of-type {
 				flex: 1 1 0;
-				margin: 0 20px;
+				margin: 0 30px;
 				width: auto;
-				margin-bottom: 10px;
 				.meta-content {
 					a {
 						h2 {

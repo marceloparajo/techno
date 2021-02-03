@@ -1,7 +1,6 @@
 .supercontenedor {
 	h1.seccion-titulo {
 		font:{
-			family: $font-serif;
 			size: 1.6rem;
 			weight: 600;
 		}
@@ -98,6 +97,31 @@
 				padding-top: 10px;
 				figure {
 					flex-basis: 35%;
+					position: relative;
+					a {
+						.galeria-video {
+							position: absolute;
+							bottom: 5px;
+							left: 5px;
+							border-radius: 50%;
+							width: 40px;
+							height: 40px;
+							display: block;
+							text-align: center;
+							line-height: 36px;
+							transition: .3s ease;
+							border: 2px solid #fff;
+							display: flex;
+							background: rgba(0,0,0,.3);
+							img {
+								width: 20px;
+								margin: auto;
+								&.has-video {
+									padding-left: 4px;
+								}
+							}
+						}
+					}
 				}
 				.meta-content {
 					flex-basis: 63%;
@@ -107,7 +131,6 @@
 							display: none;
 						}
 						h2 {
-							font-family: $font-serif;
 							letter-spacing: -0.02em;
 							font-size: 1.17rem;
 							line-height: 1em;
@@ -192,9 +215,7 @@
 						flex: 1 1 0;
 						margin: auto 0;
 						font:{
-							family: $font-serif;
-							size: 1rem;
-							size: 5vw;
+							size: 1.15rem;
 							weight: 500;
 						}
 						color: $negro;
@@ -209,7 +230,6 @@
 						font:{
 							family: $font-sinserif;
 							size: .9rem;
-							size: 4vw;
 							weight: bold;
 						}
 						line-height: .8em;
@@ -220,8 +240,6 @@
 					h2 {
 						font:{
 							size: 1.6rem;
-							size: 7vw;
-							family: $font-serif;
 							weight: 500;
 							letter-spacing: -0.02em;
 						} 
@@ -232,7 +250,6 @@
 					p.headline {
 						font: {
 							size: 0.9rem;
-							size: 4vw;
 							weight: normal;
 						}
 						color: $dark;
@@ -240,7 +257,6 @@
 					.fechayhora {
 						font:{
 							size: .8rem;
-							size: 3.5vw;
 						}
 						display: block;
 						text-transform: uppercase;
@@ -258,6 +274,217 @@
 				padding: 10px;
 				border-bottom: 1px solid $dark;
 				box-shadow: none;
+			}
+		}
+	} // TODO: HASTA ACÁ ESTILO COLUMNISTAS
+
+}
+
+
+// TODO - SEPARAR ESTILO PARA PAGINA MAS LEIDAS
+	.contenido.masleidas {
+		width: 100%;
+		.articulo {
+			display: flex;
+			padding: 8px 10px;
+			border-bottom: 1px solid $linea;
+			align-items: flex-start;
+			figure {
+				position: relative;
+				flex-basis: 38%;
+				margin-right: 10px;
+				img {
+					display: block;
+				}
+				.masleidas-orden {
+					width: 25%;
+					font-weight: bold;
+					color: white;
+					text-align: center;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					background: rgba(0,0,0,.3);
+					text-shadow: 2px 2px 2px rgba(0,0,0,.8);
+					font-size: 2rem;
+				}
+			}
+			.meta-content {
+				flex: 1 1 0;
+				a {
+					h2 {
+						font-size: 1.1rem;
+						font-weight: 500;
+						letter-spacing: -0.02em;
+					}
+				}
+			}
+			@include media-breakpoint-only(xs){
+				&:first-of-type {
+					padding: 0;
+					display: block;
+					position: relative;
+					figure {
+						width: 100%;
+						margin: 0;
+						.masleidas-orden {
+							width: 10%;
+						}
+					}
+					.meta-content {
+						width: 100%;
+						padding: 0 10px 10px;
+						a {
+							h2 {
+								font-size: 1.3rem;
+							}
+						}
+					}
+				}				
+			}
+		}
+	} // TODO: HASTA ACÁ ESTILO PAGINA MAS LEIDAS
+
+
+// TODO - SEPARAR ESTILO PARA PAGINA ERROR 404 
+
+.supercontenedor.error {
+	display: block;
+	.elerror {
+		font-size: 7rem;
+		color: #999;
+		margin: 0 auto 30px auto;
+		text-align: center;
+		font-weight: 600;
+		letter-spacing: -0.05em;
+		line-height: .8em;
+	}
+	h1.error-titulo {
+		font-size: 1.8rem;
+		line-height: 1em;
+		text-align: center;
+		margin: 10px 0;
+		background: #ececec;
+		padding: 10px;
+	}
+	h2.error-subtitulo {
+		font-size: 1.4rem;
+		text-align: center;
+		margin: 20px auto;
+		padding: 0 10px;
+	}
+	.contenedor-error {
+		width: 100%;
+		p.main-page {
+			font-family: 'Roboto',Helvetica,arial,sans-serif;
+			margin: 10px auto 30px auto;
+			font-size: 1rem;
+			text-align: center;
+			font-weight: bold;
+			 a {
+				border: 1px solid #557c9c;
+				color: #557c9c;
+				border-radius: 3px;
+				display: inline-block;
+				padding: 10px;
+				transition: ease .3s;
+				&:hover {
+					background: #ececec;
+				}
+			}
+		}
+		.box-error {
+			padding: 20px 10px 10px;
+			border-top: 1px solid #ddd;
+			ul {
+				font-family: 'Roboto',Helvetica,Arial,sans-serif;
+				column-count: 2;
+				column-gap: 2em;
+				column-rule: 1px solid #d4d4d4;
+				li {
+					padding: 0 0 0 20px;
+					margin: 0 0 12px 0;
+					font-size: 1rem;
+					position: relative;
+					&:before {
+						content: "";
+						display: block;
+						width: 20px;
+						height: 20px;
+						position: absolute;
+						left: 0;
+						background: url('/images/glyph/bullet.svg') center no-repeat;
+						background-size: 6px;
+					}
+				}
+				&.lostemas {
+					li:first-of-type {
+						display: none;
+					}
+				} 
+			}
+			p {
+				font-weight: 600;
+				color: #171717;
+				font-size: 1.4rem;
+				line-height: 1em;
+				margin: 0 0 16px 0;
+				text-align: center;
+				letter-spacing: -0.02em;
+			}
+			a.radio-error {
+				text-align: center;
+				margin: 20px 0;
+				display: block;
+				img {
+					width: 120px;
+				}
+			}
+			a.net-error {
+				text-align: center;
+				margin: 20px 0;
+				display: block;
+			}
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		.contenedor-error {
+			.box-error {
+				padding: 20px 0 10px 0;
+			}
+		}
+	}
+	@include media-breakpoint-up(md) {
+		.contenedor-error {
+			.box-error {
+				ul {
+					column-count: 3;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.contenedor-error {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			p.main-page {
+				width: 100%;
+				margin-bottom: 50px;
+			}
+			.box-error {
+				width: 100%;
+				margin: 0 0 20px 0;
+				ul {
+					column-count: 1;
+				}
+				&.sugerencias {
+					width: 31%;
+					p {
+						text-align: left;
+					}
+				}
 			}
 		}
 	}

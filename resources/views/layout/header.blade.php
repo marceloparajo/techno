@@ -1,7 +1,16 @@
 @inject('menuHelper', "App\Http\Helpers\MenuHelper")
 <div class="pre-header supercontenedor">
 	<div class="header-fecha">
-		Jueves 22 de octubre de 2020
+		{{--
+			TODO: Poner la fecha en español. 
+		--}}
+		@php
+			$mytime = Carbon\Carbon::now();
+			$mytime->settings([
+				'toStringFormat' => 'jS \d\e F \d\e Y',
+			]);
+			echo $mytime;
+		@endphp
 	</div>
 	<div class="header-data">
 		<nav class="more-sites">
@@ -32,7 +41,7 @@
 			</div>
 			<figure>
 				<a href="/">
-					<img src="{{ asset('img/logo_perfil.svg') }}" alt="Perfil.com" style="width:170px;">
+					<img src="{{ asset('img/logo_perfil.svg') }}" alt="Perfil.com" style="width:170px;height:38px">
 				</a>
 			</figure>
 			<nav class="menu-primario">
@@ -55,7 +64,7 @@
 		<div class="radio-perfil">
 			<a href="//radio.perfil.com">
 				<img src="/images/glyph/radio-play.svg" class="radio-play" alt="Radio Perfil" style="width:22px;height:22px">
-				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil"><span>FM 101.9</span>
+				<img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil" style="width:100px;height:8.66px"><span>FM 101.9</span>
 			</a>
 		</div>
 		<div id="paywall-login-container" class="pw-suscripcion">
@@ -67,7 +76,7 @@
 		<nav id="menues" class="">
 			<ul>
 				<li><a href="/ultimo-momento/">Último momento</a></li>
-				<li><img src="/images/glyph/chevron.svg" class="chevron" style="height:10px">Temas de hoy
+				<li><img src="/images/glyph/chevron.svg" class="chevron" style="width:6px;height:10px">Temas de hoy
 					<ul>
 					@foreach ($menuHelper->getMenuItems('temas') as $item)
 						<li>
@@ -78,7 +87,7 @@
 					@endforeach
 					</ul>
 				</li>
-				<li><img src="/images/glyph/chevron.svg" class="chevron" style="height:10px">Secciones
+				<li><img src="/images/glyph/chevron.svg" class="chevron" style="width:6px;height:10px">Secciones
 					<ul>
 						@foreach ($menuHelper->getMenuItems('principal') as $item)
 						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
@@ -86,7 +95,7 @@
 					</ul>
 				</li>
 
-				<li><img src="/images/glyph/chevron.svg" class="chevron" style="height:10px">Revistas
+				<li><img src="/images/glyph/chevron.svg" class="chevron" style="width:6px;height:10px">Revistas
 					<ul>
 					@foreach ($menuHelper->getMenuItems('revistas') as $item)
 						<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
@@ -102,7 +111,7 @@
 		<ul class="temas">
 		@foreach ($menuHelper->getMenuItems('temas') as $item)
 		<li>
-		<a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="px-0 nav-link {{ $item['class'] }}" title="{{ $item['title'] }}">
+		<a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="nav-link {{ $item['class'] }}" title="{{ $item['title'] }}">
 		{!! $item['text'] !!}
 		</a>
 		</li>

@@ -2,9 +2,9 @@
 
 	@if (isset($news[2]))
 
-		<div class="container arteycultura mb-4">
+		<div class="container arteycultura">
 
-			<h6>Arte y cultura</h6>
+			<div class="ayc-titulo">Arte y cultura</div>
 
 			<div class="notas-ayc">
 

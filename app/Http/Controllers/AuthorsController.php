@@ -10,9 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Helpers\ApiHelper;
-use App\Http\Helpers\BloquesHelper;
 use App\Http\Helpers\ParseHelper;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Routing\Route;
 use Illuminate\View\View;
@@ -43,9 +41,8 @@ class AuthorsController extends Controller
     /**
      * @param Route $route
      * @return Factory|View
-     * @throws FileNotFoundException
      */
-    public function show(Route $route, BloquesHelper $bloquesHelper)
+    public function show(Route $route)
     {
         $username = $route->parameter('username');
         $payload = $this->apiHelper->getPostsFromAuthor($username);
@@ -59,7 +56,7 @@ class AuthorsController extends Controller
 
         $author['blog'] = $author['blogsite'];
         $author['fullname'] = $author['firstname']." ". $author['lastname'];
-        //dd($author);
+
         unset($payload->DATA['author']);
         $noticias = [];
         foreach ($payload->DATA as $key => $item) {
@@ -68,15 +65,7 @@ class AuthorsController extends Controller
             array_push($noticias, $new);
         }
 
-        //dd($noticias);
-
         $sectionTitle = __('news of') ." ". $author['firstname']." ". $author['lastname'];
-        $page_description = $sectionTitle.". ". env('SITE_DESCRIPTION','');
-
-        $homedata = $bloquesHelper->generateHomedata(['sidebar']);
-        $sidebar_content = $bloquesHelper->generateContent($homedata)['sidebar'];
-
-        $amphtml = route('authors.amp', $author);
 
         $site = strtolower(env('APP_NAME', ''));
         $analytics_data = [
@@ -85,10 +74,10 @@ class AuthorsController extends Controller
             'author_name' => $author['fullname']
         ];
 
-        return view('authors.index', compact('noticias', 'author', 'sidebar_content', 'sectionTitle', 'page_description', 'analytics_data', 'amphtml'));
+        return view('authors.index', compact('noticias', 'author', 'sectionTitle', 'analytics_data'));
     }
 
-    public function amp(Route $route, BloquesHelper $bloquesHelper)
+    /*public function amp(Route $route, BloquesHelper $bloquesHelper)
     {
         $username = $route->parameter('username');
         $payload = $this->apiHelper->getPostsFromAuthor($username);
@@ -124,5 +113,5 @@ class AuthorsController extends Controller
         ];
 
         return view('amp.lists', compact('noticias', 'author', 'sectionTitle', 'page_description', 'analytics_data', 'canonical'));
-    }
+    }*/
 }

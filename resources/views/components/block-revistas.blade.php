@@ -1,5 +1,5 @@
 <div class="container revistas">
-    <span class="nombre-revista">Revista {{ $title() }}</span>
+    <span class="titulo-revista {{ $id_revista }}">{{ $title() }}</span>
 
     <div class="notas-revistas">
         <article class="articulo derevistas">

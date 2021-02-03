@@ -1,12 +1,12 @@
 @extends('layout.base')
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="vitrina de notas" />
+@endsection
+
 @section('page-title', 'Noticias de ' . $author['fullname'])
 
 @section('ads-sec', 'seccion')
-
-@section('head-top')
-	<link rel="amphtml" href="{{ $amphtml?? "" }}">
-@endsection
 
 @section('head-bottom')
 	@include('partials.taboola-sidebar-header')
@@ -15,11 +15,8 @@
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/channels-high.css') }}">
 
-	<link rel="preload" href="{{ mix('css/channels-low.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/channels-low.css') }}"></noscript>
-
-	<link rel="preload" href="{{ mix('css/channels-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="{{ mix('css/news-responsive.css') }}"></noscript>
+	<link rel="stylesheet" href="{{ mix('css/channels-low.css') }}" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="{{ mix('css/channels-responsive.css') }}" media="print" onload="this.media='all'">
 @endsection
 
 @section('body-class', 'pf-channel-show')
@@ -42,9 +39,8 @@
 			</div>
 		</div>
 
-
 		<div class="sidebar">
-			@include('sidebar.index', ['content' => $sidebar_content])
+			<x-sidebar />
 		</div>
 
 	</main>

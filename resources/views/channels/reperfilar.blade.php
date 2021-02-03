@@ -2,16 +2,17 @@
 
 @section('page-title', $page_title)
 
+@section('google-tag-manager')
+	<x-google-tag-manager category="vitrina de notas" />
+@endsection
+
 @section('ads-sec', 'seccion')
 
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/reperfilar-channels-high.css') }}">
 
-    <link rel="preload" href="{{ mix('css/reperfilar-channels-low.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-channels-low.css') }}"></noscript>
-
-    <link rel="preload" href="{{ mix('css/reperfilar-channels-responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ mix('css/reperfilar-channels-responsive.css') }}"></noscript>
+	<link rel="stylesheet" href="{{ mix('css/reperfilar-channels-low.css') }}" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="{{ mix('css/reperfilar-channels-responsive.css') }}" media="print" onload="this.media='all'">
 @endsection
 
 @section('js')

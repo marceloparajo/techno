@@ -9,7 +9,6 @@
 	background: white;
 	h5 {
 		font:{
-			family: $font-destacada;
 			weight: 700;
 			size: 1.3rem;
 		}
@@ -46,7 +45,6 @@
 				}
 				h2 {
 					font: {
-						family: $font-destacada;
 						size: 18px;
 						weight: bold;
 					}
@@ -73,7 +71,7 @@
 						float: none;
 						.order-num {
 							font: {
-								family: $font-general;
+								family: $font-sinserif;
 								size: 24px;
 								weight: bold;
 							}
@@ -127,7 +125,7 @@
 						}
 						.order-num {
 							font: {
-								family: $font-general;
+								family: $font-sinserif;
 								size: 48px;
 								weight: bold;
 							}

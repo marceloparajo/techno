@@ -9,6 +9,7 @@
 			padding: 0 10px;
 			display: flex;
 			flex-direction: column;
+			margin-bottom: 1em;
 			.hat {
 				line-height: 1em;
 				padding: 0 0 5px 0;
@@ -21,9 +22,6 @@
 				color: $azul;
 				a {
 					display: none;
-					color: $dark;
-					font-weight: 600;
-					text-transform: uppercase;
 				}
 				span {
 					&.volanta {
@@ -34,22 +32,15 @@
 			}
 			h1 {
 				font: {
-					family: $font-serif;
 					size: 2.47rem;
-					weight: 600;
 				}
-				line-height: 1em;
-				letter-spacing: -0.03em;
-				color: $negro;
 			}
 			h2 {
 				font:{
 					size: 1.45rem;
-					family: $font-serif;
 					weight: 400;
 				}
 				margin: 10px 0;
-				letter-spacing: -0.02em;
 			}
 			h3 {
 				font-size: 1.2em;
@@ -62,7 +53,6 @@
 				figure {
 					width: 100%;
 					position: relative;
-					margin-top: 10px;
 					display: block;
 					a.btn-open-gallery.fotogaleria {
 						width: 100%;
@@ -86,7 +76,6 @@
 						display: block;
 					}
 					figcaption {
-						color: $dark;
 						font-size: .85rem;
 						line-height: 1.3em;
 						padding: 5px;
@@ -128,10 +117,8 @@
 				}
 				.news-body {
 					position: relative;
-					font-family: $font-serif;
 					font-size: 1.35rem;
 					padding: 0 10px;
-					color: $dark;
 					strong,
 					a strong {
 						font-weight: 600;
@@ -146,10 +133,8 @@
 					ol,
 					li {
 						font-size: 1.35rem;
-						font-family: $font-serif;
 						line-height: 1.35em;
 						letter-spacing: -0.01em;
-						color: $dark;
 						strong,
 						a strong {
 							font-weight: 600;
@@ -247,7 +232,7 @@
 					.fecha {
 						font-size: .9rem;
 						font-weight: 400;
-						color: #999;
+						color: $linea-oscura;
 						font-family: $font-sinserif;
 						margin-bottom: 10px;
 					}
@@ -464,15 +449,12 @@
 							}
 						}
 					}
-					.previous_news {
+					.noticias-relacionadas {
 						margin: 0 0 20px 0;
-						background: #e9ecef;
 						padding: 0 5%;
-						border-bottom: 1px solid $dark;
-						.previous-titulo {
+						.relacionadas-titulo {
 							font: {
-								family: $font-sinserif;
-					    		size: 1rem;
+					    		size: 1.2rem;
 					    		weight: 600;
 					    	}
 					    	color: $negro;
@@ -521,7 +503,7 @@
 									}
 								}
 								&:last-of-type {
-									border-bottom: none;
+									border-bottom: 2px solid $negro;
 								}
 							}
 						}

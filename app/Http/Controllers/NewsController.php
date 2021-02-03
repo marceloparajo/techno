@@ -75,7 +75,7 @@ class NewsController extends Controller
         else
             $noticia['featured_content'] = 'image';
 
-        $body = $this->_insertContentMiddle($noticia);
+        $body = $noticia['body']; //$this->_insertContentMiddle($noticia);
 
         $site = strtolower(env('APP_NAME', ''));
 
@@ -182,6 +182,7 @@ class NewsController extends Controller
         $body = $noticia['body'];
         $cursor_pos = 0;
 
+
         // Busco <p> que sean hijos de ROOT (para agregar contenido dinámico luego)
         $paragraphs = $this->_getParagraphs($body, 0, 2);
 
@@ -191,7 +192,7 @@ class NewsController extends Controller
 
             // Inline (ads)
             $paragraphs = $this->_getParagraphs($body, $cursor_pos);
-            $html = '<div id="" class="ads-space text-center d-md-none" data-id="inline" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>';
+            $html = '<div id="" class="ads-space" data-id="inline" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>';
             $pos = $this->_getLastPosOfParagraph($body, $paragraphs[0]);
             $body = substr_replace($body, $html, $pos, 0);
             $cursor_pos = $pos + strlen($html);
@@ -261,6 +262,7 @@ class NewsController extends Controller
         }
 
         return array_slice($paragraphs, $jump);
+
     }
 
     /**
