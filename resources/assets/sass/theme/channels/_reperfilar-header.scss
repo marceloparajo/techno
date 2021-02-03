@@ -3,6 +3,10 @@ html, body {
 	scroll-behavior: smooth;
 }
 .main-header {
+	box-shadow: none;
+	.header-top {
+		padding: 0;
+	}
 	.header-bottom {
 		display: none;
 	}

@@ -65,6 +65,16 @@
 }
 
 
+
+// solo se muestra mayor a md
+.down-xs {
+	display: block;
+	@include media-breakpoint-up(xs) {
+		display: none;
+	}
+}
+
+
 // se muestra en pagina de canal cuando es mayor a XL y cuando es menor a MD
 .contenido.canal {
 	.cuatro-notas {
