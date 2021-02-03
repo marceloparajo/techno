@@ -115,6 +115,10 @@ return [
 		'template' => 'net'
 	],
 	[
+		'id' => 'directv',
+		'template' => 'comercial'
+	],
+	[
 		'id' => 'columnistas',
 		'template' => 'columnistas'
 	],
