@@ -116,24 +116,14 @@
     </head>
 
     <body class="@yield('body-class', '')">
-        {{-- Google Tag Manager --}}
-        @if (env('ANALYTICS_ENABLE', false) && env('ANALYTICS_GTM_ID', '') != '')
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ env('ANALYTICS_GTM_ID', '')}}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        @endif
-        {{-- /Google Tag Manager --}}
-
         @include('layout.header')
 
         @yield('body')
 
         <div id="pw-content"></div>
-        <div id="" class="ads-space" data-id="anuncioprevio" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>
-        @include('layout.footer')
+        <x-ad-space id="anuncioprevio" margin-top="0" margin-bottom="0" />
 
-        {{--<div class="sticky-bottom-ads d-md-none">
-            <button class="close-button" id="button-close-sticky-ads"><i class="fa fa-times"></i></button>
-            <div id="" class="ads-space text-center" data-id="float-footer" data-w="320" data-h="50" data-loaded="false" data-reload="true"></div>
-        </div>--}}
+        @include('layout.footer')
 
         @yield('templates')
 

@@ -1,5 +1,7 @@
 <div class="content-sidebar">
-    <div id="" class="ads-space text-center" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false" style="width: 300px; height: 250px;"></div>
+    <x-ad-space id="sidebar_300x250x-pos-" width="300" height="250" />
+
+    <x-divisas-widget />
 
     @foreach ($content as $item)
 
@@ -7,10 +9,6 @@
 
             @case('mas-leidas-de-perfil')
                 <x-mas-leidas-perfil-widget :rows="5" />
-                @break
-
-            @case('divisas')
-                <x-divisas-widget />
                 @break
 
             @case('columnistas')
@@ -25,12 +23,24 @@
                 <x-batimes-widget />
                 @break
 
+            @case('ventas-directas')
+                <div class="ventas-directas">
+                    <a href="{{ route('channels.show', 'guia-de-salud-pnt') }}"><img src="{{ asset('images/ventas/guia-salud.png') }}" style="margin:10px 0;border:none;"></a>
+
+                    <a href="{{ route('channels.show', 'guia-de-profesionales-pnt') }}"><img src="{{ asset('images/ventas/guia-profesionales.png') }}" style="margin:10px 0;border:none;"></a>
+                </div>
+                @break
+
             @default
                 @if (view()->exists('sidebar.dispositions.' . $item['template']))
                     @include('sidebar.dispositions.' . $item['template'], ['news' => $item['news']])
                 @endif
 
         @endswitch
+
+        @if ($loop->iteration % 2)
+            <x-ad-space id="sidebar_300x250x-pos-" width="300" height="250" />
+        @endif
 
     @endforeach
 </div>

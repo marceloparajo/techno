@@ -50,8 +50,10 @@
 				</div>
 
 			</div>
-
 		</div>
+
+		<x-ad-space id="bloomberg_970x90x1" width="970" height="90" margin-top="0" />
+
 
 	@endif
 

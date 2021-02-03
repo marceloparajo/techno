@@ -122,7 +122,8 @@ class BlockDistributionsHelper
                 array_push($payload, [
                     'id' => $item['id'],
                     'template' => $bloque->template ?? $item['id'],
-                    'news' => $item_news
+                    'news' => $item_news,
+                    'widget' => $item['maxNews'] <= 0
                 ]);
             }
 

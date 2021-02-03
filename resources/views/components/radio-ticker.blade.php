@@ -5,6 +5,4 @@
         @endforeach
     </div>
     <div class="frecuencia">FM 101.9</div>
-
-    <div id="" class="ads-space text-center" data-id="central_970x90x-pos-" data-w="970" data-h="90" data-loaded="false" data-reload="false" style="height: 90px; margin-top: 10px;"></div>
 </div>
