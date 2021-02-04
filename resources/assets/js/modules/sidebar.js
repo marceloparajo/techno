@@ -5,7 +5,6 @@ export default function () {
 
 const handleClickColumnistasWidgetRow = () => {
 	const _el = document.getElementById('columnistas')
-	console.log(_el)
 
 	if (_el === null) return 0
 

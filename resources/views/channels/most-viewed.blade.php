@@ -50,9 +50,9 @@
 					</div>
 				</article>
 
-				@if ($loop->iteration > 4 && $loop->iteration % 8 == 2)
-					<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" margin-top="0" class="d-none show-xxl" />
-					<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
+				@if ($loop->iteration > 4 && $loop->iteration % 4 == 1)
+					<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" margin-top="0" class="d-xs-none d-lg-none" />
+					<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-sm-none" />
 				@endif
 			@endforeach
 		</div>

@@ -244,7 +244,7 @@
     .social-share amp-social-share {
         margin: 10px 3px 3px 3px;
     }
-   
+
    .tags { border-bottom: 1px solid #e1e1e1; padding: 0 0 8px; }
   .tags  ul { padding:0px; margin:3px 0; }
   .tags li { margin: 2px 0;
@@ -255,8 +255,8 @@
     padding: 4px 8px;
     font-size: 14px;
     background: #666; border-radius: 3px;}
-   .tags li a { text-decoration: none; color:#FFF; }   
-   .tags li a:hover { color:#0076ba; }  
+   .tags li a { text-decoration: none; color:#FFF; }
+   .tags li a:hover { color:#0076ba; }
   .tags label {   letter-spacing: 1px;
     background: #0076ba;
     padding: 5px 10px;
@@ -272,16 +272,16 @@
     margin-bottom: 2px;
     border-bottom: 1px solid #e1e1e1;
     letter-spacing: normal;
-    padding-bottom: 3px; 
+    padding-bottom: 3px;
     margin-bottom:10px;}
     p {  font-size: 17.5px;
     line-height: 1.7em;
     letter-spacing: normal;
-    letter-spacing: normal; 
+    letter-spacing: normal;
     margin:20px 0;
     overflow-wrap: break-word;
 }
-.icon-expand {     
+.icon-expand {
     right: 20px;
     position: absolute;
     top: 20px;
@@ -293,7 +293,7 @@
 }
 amp-social-share.twitter {
     background-color: transparent;
-    background-image: url('https://www.perfil.com/static/img/social/twitter.png');
+    background-image: url('/images/social/twitter.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40px;
@@ -301,7 +301,7 @@ amp-social-share.twitter {
 
 amp-social-share.facebook {
     background-color: transparent;
-    background-image: url('https://www.perfil.com/static/img/social/facebook.png');
+    background-image: url('/images/social/facebook.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40px;
@@ -309,7 +309,7 @@ amp-social-share.facebook {
 
 amp-social-share.whatsapp {
     background-color: transparent;
-    background-image: url('https://www.perfil.com/static/img/social/whatsapp.png');
+    background-image: url('/images/social/whatsapp.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40px;
@@ -317,7 +317,7 @@ amp-social-share.whatsapp {
 
 amp-social-share.linkedin {
     background-color: transparent;
-    background-image: url('https://www.perfil.com/static/img/social/linkedin.png');
+    background-image: url('/images/social/linkedin.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40px;
@@ -325,7 +325,7 @@ amp-social-share.linkedin {
 
 amp-social-share.google {
     background-color: transparent;
-    background-image: url('https://www.perfil.com/static/img/social/gplus.png');
+    background-image: url('/images/social/gplus.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40px;
@@ -424,18 +424,18 @@ margin-bottom: 15px}
     border: 1px solid #ccc;
     border-radius: 50%;
     width: 20px;
-    text-align: center;} 
+    text-align: center;}
    .social-topsharing h4 {    display: inline-block;
     font-size: 11px;}
   .social-topsharing  a {color:#0076ba;}
 
-   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) 
+   @media only screen and (min-device-width: 320px) and (max-device-width: 568px)
 and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
 {
   .container { padding:5px; }
   p, h1, .tags { padding:10px 20px; }
   .hat { margin:5px 0px 0px 20px; font-size: 11px }
-} 
+}
 
 .list a {
     text-decoration: none;

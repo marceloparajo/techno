@@ -1261,7 +1261,11 @@
 .sidebar .divisas .content-divisas {
   font-size: .8rem;
   display: grid;
-  grid-template-areas: 'empty venta compra' 'do doventa docompra' 'db dbventa dbcompra' 'eo eoventa eocompra' 'eb ebventa ebcompra';
+  grid-template-areas: 'empty venta compra'
+ 'do doventa docompra'
+ 'db dbventa dbcompra'
+ 'eo eoventa eocompra'
+ 'eb ebventa ebcompra';
   grid-template-columns: 3fr 2fr 2fr;
   grid-row-gap: 1px;
   -webkit-transform: translateY(-24px);
@@ -2769,7 +2773,7 @@
   width: 100%;
   margin: 0;
   display: block;
-  background-image: url("/img/revistas.png");
+  background-image: url("/images/revistas.png");
   background-repeat: no-repeat;
 }
 

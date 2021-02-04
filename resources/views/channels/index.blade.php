@@ -73,23 +73,11 @@
 						</div>
 					</article>
 
-					@if (($loop->iteration + 4) % 8 == 0)
-						</div>
-						<div class="cuatro-notas"> 
-
-						<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" class="d-none show-xxl" style="grid-area:tl" />
-						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
-					@elseif ($loop->iteration % 4 == 0)
-						</div>
-						<div class="cuatro-notas"> 
-
+					@if ($loop->iteration > 4 && $loop->iteration % 4 == 1)
+						<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" class="d-xs-none d-lg-flex" />
+						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-sm-none" />
 					@endif
-
-					{{--
-					@if ($loop->iteration > 4 && $loop->iteration % 4 == 1)					@endif
-					--}}
 				@endforeach
-
 			</div>
 
 		</div>

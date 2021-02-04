@@ -4,53 +4,36 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        @shared()
-        {{--<meta http-equiv="Refresh" content="600" />--}}
         <meta name="description" content="{{ isset($page_description) ? $page_description : env('SITE_DESCRIPTION', '') }}">
+        <title>{{ env('APP_ALTER_NAME', 'Perfil') }} | @yield('page-title', '')</title>
+
+        @shared()
 
         {{-- Page info --}}
         <meta name="page-version" content="{{ \Carbon\Carbon::now()->format('d-m-Y H:i:s') }}">
         @yield('page-info')
         {{-- /Page info --}}
 
-        {{-- Ads --}}
-        <meta name="ads-sec" content="@yield('ads-sec', 'articulo')">
-        <meta name="ads-client" content="{{ env('ADS_CLIENT', '') }}">
-        {{-- /Ads --}}
-
-        {{-- Analytics/Comscore --}}
-        <meta name="analytics-path-name" content="{{ rtrim(env('ANALYTICS_PATH_NAME', ''), '/') }}">
-        <meta name="analytics-client-id" content="{{ env('ANALYTICS_CLIENT_ID', '') }}">
-        <meta name="analytics-enable" content="{{ env('ANALYTICS_ENABLE', '0') }}">
-        <meta name="analytics-view" content="@if (! is_null(\Route::getCurrentRoute())) {{ \Route::getCurrentRoute()->getName() }} @endif">
-        <meta name="analytics-data" content="{{ isset($analytics_data) ? json_encode($analytics_data) : '' }}">
-        <meta name="comscore-client-id" content="{{ env('COMSCORE_CLIENT_ID', '') }}">
-        {{-- /Analytics/Comscore --}}
-
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-
-        <meta name="last-render" content="{{ \Carbon\Carbon::now()->format('d-m-H H:i:s') }}">
         @yield('head-meta')
 
-        <title>{{ env('APP_ALTER_NAME', 'Perfil') }} | @yield('page-title', '')</title>
-
         {{-- Favicons --}}
-        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/favicon/apple-icon-57x57.png') }}">
-        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/favicon/apple-icon-60x60.png') }}">
-        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/favicon/apple-icon-72x72.png') }}">
-        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/favicon/apple-icon-76x76.png') }}">
-        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('img/favicon/apple-icon-114x114.png') }}">
-        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('img/favicon/apple-icon-120x120.png') }}">
-        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('img/favicon/apple-icon-144x144.png') }}">
-        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('img/favicon/apple-icon-152x152.png') }}">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon/apple-icon-180x180.png') }}">
-        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('img/favicon/android-icon-192x192.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('img/favicon/favicon-96x96.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ asset('img/favicon/manifest.json') }}">
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/favicon/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/favicon/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/favicon/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/favicon/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/favicon/apple-icon-120x120.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('images/favicon/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('images/favicon/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('images/favicon/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('images/favicon/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('images/favicon/manifest.json') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ asset('images/favicon/ms-icon-144x144.png') }}">
+        <meta name="theme-color" content="#ffffff">
         {{-- /Favicons --}}
 
         {{--
@@ -62,7 +45,6 @@
         <link rel="preconnect" href="https://ad.doubleclick.net">
         <link rel="preconnect" href="https://ut.e-planning.video">
         --}}
-        <link rel="preconnect" href="https://connect.facebook.net">
         <link rel="preconnect" href="https://libs.lavoz.com.ar">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         @yield('head-top')
