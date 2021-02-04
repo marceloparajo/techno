@@ -127,6 +127,8 @@
 					</figure>
 				@endif
 
+				<x-ad-space id="central_970x90x-pos-" width="970" height="90" />
+
 				{{-- Article Body --}}
 				<div class="news-body">
 					<div class="fecha-autor">
@@ -174,6 +176,7 @@
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
+						<x-ad-space id="central_970x90x-pos-" width="970" height="90" />
 
 						@include('news.show.partials.news-tags')
 

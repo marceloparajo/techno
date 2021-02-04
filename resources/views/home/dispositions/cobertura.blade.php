@@ -94,8 +94,6 @@
 
 		</div><!-- cobertura -->
 
-
-		<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
-
+		<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
 
 @endif

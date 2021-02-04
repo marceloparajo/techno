@@ -27,9 +27,7 @@
 
 <main class="supercontenedor reperfilar">
 		<div class="listado-subchannel">
-			@php
-				$key = 0;
-			@endphp
+
 			@foreach (array_slice($posts, 0, 40) as $post)
 				<article class="articulo">
 					<figure>
@@ -49,13 +47,10 @@
 						@endif
 					</div>
 				</article>
-				@php
-					$key++;
-				@endphp
-				@if($key % 5 == 0)
 
-				<div id="" class="ads-space ads-up-xl" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
-
+				@if($loop->iteration % 5 == 0)
+					<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" margin-top="20" class="d-none show-xl" />
+					<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
 				@endif
 			@endforeach
 		</div>

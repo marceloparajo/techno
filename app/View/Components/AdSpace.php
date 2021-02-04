@@ -43,6 +43,11 @@ class AdSpace extends Component
     public $margin_bottom;
 
     /**
+     * @var string
+     */
+    public $style_width;
+
+    /**
      * Create a new component instance.
      *
      * @param int $width
@@ -52,8 +57,9 @@ class AdSpace extends Component
      * @param string $class
      * @param int $marginTop
      * @param int $marginBottom
+     * @param string $styleWidth
      */
-    public function __construct(int $width = 1, int $height = 1, bool $reload = false, string $id = '', string $class = '', int $marginTop = 10, int $marginBottom = 10)
+    public function __construct(int $width = 1, int $height = 1, bool $reload = false, string $id = '', string $class = '', int $marginTop = 10, int $marginBottom = 10, string $styleWidth = '100%')
     {
         $this->width = $width;
         $this->height = $height;
@@ -61,6 +67,7 @@ class AdSpace extends Component
         $this->class = $class;
         $this->margin_bottom = $marginBottom;
         $this->margin_top = $marginTop;
+        $this->style_width = ($styleWidth == 'auto') ? $width . 'px' : $styleWidth;
         $this->id = $this->_generateId($id);
     }
 

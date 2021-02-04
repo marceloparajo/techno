@@ -40,7 +40,7 @@
 							</div>
 						</div>
 					@endfor
-						
+
 					</div>
 
 				</div>
@@ -49,7 +49,7 @@
 
 
 			<div class="d-flex banner-vertical">
-				<div id="" class="ads-space mx-auto text-center" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true"></div>
+				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
 			</div>
 		</div>
 	</div>

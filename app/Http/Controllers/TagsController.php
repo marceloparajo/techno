@@ -74,13 +74,14 @@ class TagsController extends Controller
         $sectionTitle = __('news of') ." ". $tag_title;
         $page_description = $sectionTitle.". ". env('SITE_DESCRIPTION','');
 
-        $site = strtolower(env('APP_NAME', ''));
-        $analytics_data = [
-            'tag' => $tag,
-            'section' => "sitios.$site.tag",
-        ];
+        share([
+            'eplanning' => [
+                'client' => env('ADS_CLIENT', ''),
+                'sec' => 'seccion_tag'
+            ]
+        ]);
 
-        $view_content = view('tags.index', compact('noticias', 'tag', 'tag_title', 'sectionTitle', 'page_description', 'analytics_data'));
+        $view_content = view('tags.index', compact('noticias', 'tag', 'tag_title', 'sectionTitle', 'page_description'));
         return response($view_content)->header('Cache-Control', 'max-age=300, public');
     }
 

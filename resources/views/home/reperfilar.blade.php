@@ -30,32 +30,29 @@
 		<div class="reperfilar-main-content" >
 
 				{{-- Primer artículo --}}
-				@php
-					$key = 0;
-				@endphp
 				@foreach (array_slice($destaque_posts, 0, 5) as $post)
 					<article class="articulo">
-							@if($key == 0)
-									@if ($post['embed_code'] != '' && \Illuminate\Support\Str::contains($post['embed_code'], ['rudo', 'tube']))
-										{!! $post['embed_code'] !!}
-									@else
-										<figure>
-											<a href="{{ $post['permalink'] }}">
-												<x-lazy-image :src="$post['main_image']['srcs']['original']" />
-											</a>
-										</figure>
-									@endif
+						@if($loop->first)
+							@if ($post['embed_code'] != '' && \Illuminate\Support\Str::contains($post['embed_code'], ['rudo', 'tube']))
+								{!! $post['embed_code'] !!}
 							@else
 								<figure>
 									<a href="{{ $post['permalink'] }}">
-										<x-lazy-image :src="$post['main_image']['srcs']['original']" play-button="true" />
+										<x-lazy-image :src="$post['main_image']['srcs']['original']" />
 									</a>
 								</figure>
 							@endif
+						@else
+							<figure>
+								<a href="{{ $post['permalink'] }}">
+									<x-lazy-image :src="$post['main_image']['srcs']['original']" play-button="true" />
+								</a>
+							</figure>
+						@endif
 						<div class="meta-content">
 							<a href="{{ $post['permalink'] }}">
 								<h2>{{ $post['home_title'] }}</h2>
-								@if($key == 0)
+								@if($loop->first)
 									<p class="headline">{{ $post['headline'] }}</p>
 								@endif
 							</a>
@@ -66,12 +63,12 @@
 							@endif
 						</div>
 					</article>
-					@php
-						$key++;
-					@endphp
 				@endforeach
 				{{-- /Primer artículo --}}
 		</div>
+
+		<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xl" />
+		<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
 
 		{{-- Secciones --}}
 		<div class="reperfilar-secciones">
@@ -126,7 +123,7 @@
 					--}}
 				@else
 					<div class="reperfilar-seccion {{ $subchannel['slug'] }}">
-						<a id="{{ $subchannel['slug'] }}" class="anchor"></a>
+						<a id="reperfilar_{{ $subchannel['slug'] }}" class="anchor"></a>
 						<div class="seccion-title">
 							{{ $subchannel['name'] }}
 						</div>
@@ -164,6 +161,11 @@
 						</div>
 					</div>
 				@endif
+
+					@if ($loop->iteration % 2 == 1)
+						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xl" />
+					@endif
+					<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
 			@endforeach
 		</div>
 		{{-- /Seccion --}}
