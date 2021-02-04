@@ -127,7 +127,7 @@
 					</figure>
 				@endif
 
-				<x-ad-space id="central_970x90x-pos-" width="970" height="90" />
+				<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xl" />
 
 				{{-- Article Body --}}
 				<div class="news-body">
@@ -176,7 +176,7 @@
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
-						<x-ad-space id="central_970x90x-pos-" width="970" height="90" />
+						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xl" />
 
 						@include('news.show.partials.news-tags')
 
