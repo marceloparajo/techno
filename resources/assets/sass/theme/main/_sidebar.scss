@@ -837,6 +837,9 @@
 		}
 	}
 
+	.ventas-directas {
+		text-align: center;
+	}
 
 	@include media-breakpoint-up(sm) {
 		#exitoina,
@@ -995,6 +998,10 @@
 				background-image: none;
 			}
 		}
+		.ventas-directas {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 
@@ -1146,6 +1153,9 @@
 					}
 				}
 			}
+		}
+		.ventas-directas {
+			display: block;
 		}
 
 	}

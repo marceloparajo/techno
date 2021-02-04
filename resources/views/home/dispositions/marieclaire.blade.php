@@ -43,7 +43,7 @@
 							</article>
 							@if($key == 0)
 								<div class="ad-marieclaire d-none d-xl-block">
-									<div id="" class="ads-space text-center d-none d-xl-block" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
+									<x-ad-space id="central_300x250x-pos-" width="300" height="250" />
 								</div>
 							@endif
 						@endforeach

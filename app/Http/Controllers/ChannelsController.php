@@ -69,6 +69,13 @@ class ChannelsController extends Controller
             array_push($noticias, $new);
         }
 
+        share([
+            'eplanning' => [
+                'client' => env('ADS_CLIENT', ''),
+                'sec' => 'seccion_' . $channel
+            ]
+        ]);
+
         $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'page_description'));
         return response($view_content)->header('Cache-Control', 'max-age=300, public');
     }
@@ -183,6 +190,13 @@ class ChannelsController extends Controller
         $page_title = 'Reperfilar{canal}';
         $page = $route->parameter('channel') ?? 'home';
         $channel = str_replace('/{channel}', '', $route->uri);
+
+        share([
+            'eplanning' => [
+                'client' => env('ADS_CLIENT', ''),
+                'sec' => 'seccion_reperfilar'
+            ]
+        ]);
 
         switch ($page) {
             case 'home':

@@ -35,8 +35,8 @@
 				figure {
 					width: 100%;
 				}
-				&:nth-child(6n+1),
-				&:nth-child(6n+2) {
+				&:nth-child(7n+1),
+				&:nth-child(7n+2) {
 					width: 48.5%;
 					padding-bottom: 0;
 					.meta-content {
@@ -54,8 +54,8 @@
 		}
 		@include media-breakpoint-up(lg) {
 			.articulo {
-				&:nth-child(6n+1),
-				&:nth-child(6n+2) {
+				&:nth-child(7n+1),
+				&:nth-child(7n+2) {
 					.meta-content {
 						a {
 							h2 {
@@ -68,13 +68,22 @@
 		}
 		@include media-breakpoint-up(xl) {
 			.articulo {
-				width: 24%;
+				width: 22%;
 				margin-bottom: 0;
 				margin-top: 20px;
 			}
 			.ads-up-xl {
 				width: 300px;
 				margin-top: 20px;
+			}
+		}
+		@include media-breakpoint-up(xl) {
+			.articulo {
+				width: 24%;
+				&:nth-child(7n+1),
+				&:nth-child(7n+2) {
+					width: 49%;
+				}
 			}
 		}
 	}

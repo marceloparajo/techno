@@ -123,6 +123,10 @@ class NewsController extends Controller
                 'author_id' => $noticia['author']['id'],
                 'author_username' => $noticia['author']['username'],
                 'author_fullname' => $noticia['author']['fullname']
+            ],
+            'eplanning' => [
+                'client' => env('ADS_CLIENT', ''),
+                'sec' => $noticia['channel']['slug'] . '_articulo'
             ]
         ]);
 

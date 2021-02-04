@@ -52,10 +52,12 @@
 						<span class="escucha"><a href="https://radio.perfil.com/en-vivo/radio"><img src="/images/glyph/radio/play.svg" alt="Escucha on line">Escuchá&nbsp;on&nbsp;line<br>FM 101.9</a></span>
 					</div>
 
-				</div><!-- notas-cajageneral -->
+				</div>
 
 			</div>
 		</div>
+
+		<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xl" />
 	@endif
 
 @endif

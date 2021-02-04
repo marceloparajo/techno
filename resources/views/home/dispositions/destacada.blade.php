@@ -1,13 +1,16 @@
 @if (isset($news) && count($news) > 0)
 	<!-- Destacada -->
 	<div class="caja-contenido destacada">
+
 		@foreach(array_slice($news, 0, 3) as $key => $new)
 
 			<article class="articulo nota-{{ $key }}">
 
 				{{-- Embed Code --}}
 				@if ($new['embed_code_original'] != '' && (strpos($new['embed_code_original'], 'rudo') || strpos($new['embed_code_original'], 'tube')))
-					{!! $new['embed_code'] !!}
+					<div class="embed-responsive embed-responsive-16by9 videoContainer">
+						{!! $new['embed_code'] !!}
+					</div>
 				@else
 				<figure>
 					<a href="{{ $new['permalink'] }}">
@@ -50,12 +53,11 @@
 			</article>
 
 			@if($loop->first)
-				<div id="" class="ads-space down-md" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="true" ></div>
+				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
 			@endif
 
 		@endforeach
-
-		<div id="" class="ads-space only-md up-xl" data-id="728x90x-pos-" data-w="728" data-h="90" data-loaded="false" data-reload="true" ></div>
-
 	</div>
+
+	<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xxl" style="text-align: center" />
 @endif

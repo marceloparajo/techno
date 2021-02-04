@@ -53,6 +53,13 @@ class HomeController extends Controller
             'section' => "sitios.$site.home"
         ];
 
+        share([
+            'eplanning' => [
+                'client' => env('ADS_CLIENT', ''),
+                'sec' => 'home'
+            ]
+        ]);
+
         $view_content = view('home.index', compact('home_content', 'analytics_data'));
         return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }

@@ -13,7 +13,6 @@ use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\ParseHelper;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
-use Illuminate\Routing\Route;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 

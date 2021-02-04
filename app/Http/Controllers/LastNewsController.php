@@ -69,13 +69,14 @@ class LastNewsController extends Controller
             array_push($noticias, $new);
         }
 
-        $site = strtolower(env('APP_NAME', ''));
-        $analytics_data = [
-            'channel' => $channel,
-            'section' => "sitios.$site.canal",
-        ];
+        share([
+            'eplanning' => [
+                'client' => env('ADS_CLIENT', ''),
+                'sec' => 'seccion_ultimo-momento'
+            ]
+        ]);
 
-        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'page_description', 'analytics_data'));
+        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'page_description'));
         return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 

@@ -193,7 +193,7 @@
 								}
 							}
 						}
-						&:nth-child(1) {
+						&:nth-child(3) {
 							width: 100%;
 							grid-area: tm;
 							border-bottom: 1px solid $linea;
@@ -205,7 +205,7 @@
 								}
 							}
 						}
-						&:nth-child(2) {
+						&:nth-child(4) {
 							grid-area: tr;
 							background: $black;
 							padding: 10px;
@@ -232,7 +232,7 @@
 								}
 							}
 						}
-						&:nth-child(3) {
+						&:nth-child(5) {
 							grid-area: bl;
 							display: flex;
 							.meta-content {
@@ -242,7 +242,7 @@
 								}
 							}
 						}
-						&:nth-child(4) {
+						&:nth-child(6) {
 							grid-area: br;
 							display: flex;
 							.meta-content {

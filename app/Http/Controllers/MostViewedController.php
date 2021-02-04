@@ -60,13 +60,14 @@ class MostViewedController extends Controller
         $channel = "mas-leidas";
         $noticias = $blockDistributionsHelper->getMostViewed(env('SITE_CODE', 'perfil'));
 
-        $site = strtolower(env('SITE_CODE', 'perfil'));
-        $analytics_data = [
-            'channel' => $channel,
-            'section' => "sitios.$site.canal",
-        ];
+        share([
+            'eplanning' => [
+                'client' => env('ADS_CLIENT', ''),
+                'sec' => 'seccion_ultimo-momento'
+            ]
+        ]);
 
-        $view_content = view('channels.most-viewed', compact('channel', 'noticias', 'analytics_data'));
+        $view_content = view('channels.most-viewed', compact('channel', 'noticias'));
         return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 

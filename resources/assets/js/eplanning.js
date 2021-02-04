@@ -1,10 +1,7 @@
 import { isElementVisible } from './modules/utils'
 
 const epl_initialize = async () => {
-	const sec = document.querySelector('meta[name="ads-sec"]').getAttribute('content')
-	const client = document.querySelector('meta[name="ads-client"]').getAttribute('content')
-
-	const res_initServer = await initServer(client, sec)
+	const res_initServer = await initServer()
 	if (res_initServer) {
 		const res_setSpaces = await setSpaces()
 
@@ -13,14 +10,15 @@ const epl_initialize = async () => {
 	}
 }
 
-const initServer = (client, sec) => {
-	const protocol = window.location.protocol
+const initServer = () => {
+	const {eplanning} = window.sharedData
+
 	const args = {
 		iIF: 1,
-		sV: `${protocol}//ads.us.e-planning.net/` ,
+		sV: `https://ads.us.e-planning.net/` ,
 		vV: "4",
-		sI: client,
-		sec: sec,
+		sI: eplanning.client,
+		sec: eplanning.sec,
 	}
 
 	if (document.epl) {
@@ -39,8 +37,10 @@ const setSpaces = () => {
 	const elements = document.getElementsByClassName('ads-space')
 
 	Array.from(elements).forEach(el => {
+		if (! isElementVisible(el)) return
+
 		let id = el.getAttribute('data-id')
-		let num = 1
+		let num
 
 		if (id in spaces) {
 			num = spaces[id]

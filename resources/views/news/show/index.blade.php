@@ -114,7 +114,9 @@
 
 				{{-- Featured Image or Video --}}
 				@if ($noticia['featured_content'] == 'embed_code')
-					{!! $noticia['embed_code'] !!}
+					<div class="embed-responsive embed-responsive-16by9 videoContainer">
+						{!! $noticia['embed_code'] !!}
+					</div>
 				@else
 					<figure class="figure btn-open-gallery" itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
 						@if (count($noticia['gallery']) > 1)
@@ -124,6 +126,8 @@
 						<figcaption class="figure-caption">{{ $noticia['main_image']['caption'] }}<span class="credito-foto"> | {{ $noticia['main_image']['credit']}}</span></figcaption>
 					</figure>
 				@endif
+
+				<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xxl" style="text-align:center" />
 
 				{{-- Article Body --}}
 				<div class="news-body">
@@ -148,6 +152,9 @@
 
 					<div class="news-content">
 
+						{{-- Más Noticias (para los crawlers)
+						@include('news.show.partials.more-news-crawlers')
+ 						--}}
 						{!! $body !!}
 
 						{{-- Embed Code --}}
@@ -169,6 +176,7 @@
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
+						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xxl" style="text-align: center" />
 
 						@include('news.show.partials.news-tags')
 

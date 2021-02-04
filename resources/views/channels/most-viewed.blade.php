@@ -49,6 +49,11 @@
 						</a>
 					</div>
 				</article>
+
+				@if ($loop->iteration > 4 && $loop->iteration % 8 == 2)
+					<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" margin-top="0" class="d-none show-xxl" />
+					<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
+				@endif
 			@endforeach
 		</div>
 
