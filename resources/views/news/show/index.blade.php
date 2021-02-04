@@ -127,7 +127,7 @@
 					</figure>
 				@endif
 
-				<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xl" />
+				<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
 
 				{{-- Article Body --}}
 				<div class="news-body">
@@ -153,7 +153,7 @@
 					<div class="news-content">
 
 						{{-- Más Noticias (para los crawlers) --}}
-						@include('news.show.partials.more-news-crawlers')
+						{{--@include('news.show.partials.more-news-crawlers')--}}
 
 						{!! $body !!}
 
@@ -176,7 +176,7 @@
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
-						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xl" />
+						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
 
 						@include('news.show.partials.news-tags')
 

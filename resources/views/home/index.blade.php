@@ -49,7 +49,7 @@
 			@if ($key == 'central-header')
 			<main class="supercontenedor">
 				<div class="contenido" style="max-width:970px">
-					<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xl" />
+					<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
 			@endif
 		@endforeach
 	</main>

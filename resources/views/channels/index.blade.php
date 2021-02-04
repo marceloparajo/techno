@@ -74,8 +74,8 @@
 					</article>
 
 					@if ($loop->iteration > 4 && $loop->iteration % 4 == 1)
-						<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" class="d-none show-lg" />
-						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
+						<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" class="d-xs-none d-lg-flex" />
+						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-sm-none" />
 					@endif
 				@endforeach
 			</div>

@@ -49,7 +49,7 @@
 
 
 			<div class="d-flex banner-vertical">
-				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
+				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-sm-none" />
 			</div>
 		</div>
 	</div>

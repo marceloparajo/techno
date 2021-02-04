@@ -121,3 +121,21 @@
     }
   }
 }
+
+@mixin display-and-visibility-elements($display, $breakpoint) {
+  @include media-breakpoint-up($breakpoint) {
+    .d-#{$breakpoint}-#{$display} {
+      display: #{$display} !important;
+    }
+  }
+}
+
+@mixin generate-display-and-visibility-elements() {
+  $breakpoints: ("xs", "sm", "md", "lg", "xl", "xxl", "xxxl");
+  $displays: ("none", "inline", "inline-block", "block", "grid", "table", "table-cell", "table-row", "flex", "inline-flex");
+  @each $breakpoint in $breakpoints {
+    @each $display in $displays {
+      @include display-and-visibility-elements($display, $breakpoint)
+    }
+  }
+}
