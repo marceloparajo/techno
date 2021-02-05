@@ -1,32 +1,11 @@
-.d-none {
-	display: none !important;
-}
-
 @include media-breakpoint-up(sm) {
 	.supercontenedor {
 		max-width: 540px;
 	}
-
-	.hide-sm {
-		display: none !important;
-	}
-
-	.show-sm {
-		display: block !important;
-	}
-
 }
 @include media-breakpoint-up(md) {
 	.supercontenedor {
 		max-width: 720px;
-	}
-
-	.hide-md {
-		display: none !important;
-	}
-
-	.show-md {
-		display: block !important;
 	}
 }
 @include media-breakpoint-up(lg) {
@@ -55,14 +34,6 @@
 			max-width: 640px;
 		}
 	}
-
-	.hide-lg {
-		display: none !important;
-	}
-
-	.show-lg {
-		display: block !important;
-	}
 }
 @include media-breakpoint-up(xl) {
 	.supercontenedor {
@@ -74,14 +45,6 @@
 			max-width: 815px;
 		}
 	}
-
-	.hide-xl {
-		display: none !important;
-	}
-
-	.show-xl {
-		display: block !important;
-	}
 }
 @include media-breakpoint-up(xxl) {
 	.supercontenedor {
@@ -90,17 +53,11 @@
 			max-width: 970px;
 		}
 	}
-
-	.hide-xxl {
-		display: none !important;
-	}
-
-	.show-xxl {
-		display: block !important;
-	}
 }
 .w3-animate-right {
 	position:relative;
 	animation:animateright 0.1s
 }
 @keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+
+@include generate-display-and-visibility-elements()

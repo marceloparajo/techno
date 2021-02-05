@@ -67,8 +67,8 @@
 				{{-- /Primer artículo --}}
 		</div>
 
-		<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xl" style="text-align: center" />
-		<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
+		<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
+		<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-sm-none" />
 
 		{{-- Secciones --}}
 		<div class="reperfilar-secciones">
@@ -163,9 +163,9 @@
 				@endif
 
 					@if ($loop->iteration % 2 == 1)
-						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-none show-xl" />
+						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
 					@endif
-					<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
+					<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-sm-none" />
 			@endforeach
 		</div>
 		{{-- /Seccion --}}
