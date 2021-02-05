@@ -25,9 +25,9 @@
 
             @case('ventas-directas')
                 <div class="ventas-directas">
-                    <a href="{{ route('channels.show', 'guia-de-salud-pnt') }}"><img src="{{ asset('images/ventas/guia-salud.png') }}" style="margin:10px 0;border:none;"></a>
+                    <a href="{{ route('channels.show', 'guia-de-salud-pnt') }}"><img src="{{ asset('images/ventas/guia-salud.png') }}" style="margin:10px 0;border:none;width:300px;height:50px;" alt="guia de la salud"></a>
 
-                    <a href="{{ route('channels.show', 'guia-de-profesionales-pnt') }}"><img src="{{ asset('images/ventas/guia-profesionales.png') }}" style="margin:10px 0;border:none;"></a>
+                    <a href="{{ route('channels.show', 'guia-de-profesionales-pnt') }}"><img src="{{ asset('images/ventas/guia-profesionales.png') }}" style="margin:10px 0;border:none;width:300px;height:50px" alt="guia de profesionales"></a>
                 </div>
                 @break
 
