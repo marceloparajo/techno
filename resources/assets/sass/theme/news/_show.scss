@@ -1,6 +1,9 @@
 .perfil-noticia {
 	.supercontenedor {
 		padding-top: 10px;
+		&.pre-header {
+			padding-top: 3px;
+		}
 		&.main-header {
 			padding-top: 0;
 		} 

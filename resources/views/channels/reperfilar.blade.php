@@ -49,7 +49,7 @@
 				</article>
 
 				@if($loop->iteration % 5 == 0)
-					<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" margin-top="20" class="d-xs-none d-lg-flex" />
+					<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" margin-top="20" class="d-xs-none d-xl-flex" />
 					<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-sm-none" />
 				@endif
 			@endforeach
