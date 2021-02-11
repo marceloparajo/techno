@@ -4,14 +4,13 @@
 
 		@foreach(array_slice($news, 0, 3) as $key => $new)
 
-			<article class="articulo nota-{{ $key }}">
 
 				{{-- Embed Code --}}
 				@if ($new['embed_code_original'] != '' && (strpos($new['embed_code_original'], 'rudo') || strpos($new['embed_code_original'], 'tube')))
-					<div class="embed-responsive embed-responsive-16by9 videoContainer">
-						{!! $new['embed_code'] !!}
-					</div>
+				<article class="articulo nota-{{ $key }} convideo" >
+					{!! $new['embed_code'] !!}
 				@else
+				<article class="articulo nota-{{ $key }}">
 				<figure>
 					<a href="{{ $new['permalink'] }}">
 						@if($key == 0)

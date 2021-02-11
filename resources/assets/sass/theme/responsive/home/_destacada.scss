@@ -29,6 +29,11 @@
 							display: block;
 						}
 					}
+					&.convideo {
+						.meta-content {
+							padding: 5px 0;
+						}
+					}
 				}
 				&.nota-0 {
 					flex-basis: 100%;
@@ -39,6 +44,20 @@
 								margin-bottom: 12px;
 								font-size: 2rem;
 							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-only(sm) {
+		.destacada {
+			.articulo {
+				&.nota-1,
+				&.nota-2 {
+					&.convideo {
+						.embed-responsive-16by9 {
+							padding-bottom: 61%;
 						}
 					}
 				}
@@ -198,6 +217,16 @@
 						a {
 							p.headline {
 								display: block;
+							}
+						}
+					}
+					&.convideo {
+						.meta-content {
+							a {
+								hat,
+								p.headline {
+									display: none;
+								}
 							}
 						}
 					}

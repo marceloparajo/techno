@@ -6,7 +6,7 @@
     <div class="ranking">
         @foreach(array_slice($news, 0, $rows) as $new)
             <article class="masleidas">
-                <a href="#">
+                <a href="{{ $new['permalink'] }}">
                     @if ($loop->first)
                         <x-lazy-image :src="$new['main_image']['src']" :alt="$new['main_image']['caption']" max-width="300" />
                     @endif
