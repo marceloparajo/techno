@@ -75,25 +75,28 @@
         {{-- Google Tag Manager --}}
         @yield('google-tag-manager')
 
-        @if (env('ANALYTICS_ENABLE', false) && env('ANALYTICS_GTM_ID', '') != '')
+        {{--}}@if (env('ANALYTICS_ENABLE', false) && env('ANALYTICS_GTM_ID', '') != '')
         <script>{!! $gtmTag?? "" !!}(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ env('ANALYTICS_GTM_ID','')}}');</script>
-        @endif
+        @endif--}}
         {{-- /Google Tag Manager --}}
 
-        {{-- One Signal --}}
-        @if (env('ONESIGNAL_ENABLE', false))
-            <link rel="manifest" href="{{ asset('onesignal-manifest.json') }}">
-            <script defer src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-            <script>
-                var OneSignal = window.OneSignal || [];
-                OneSignal.push(function() {
-                    OneSignal.init({
-                        appId: "{{ env('ONESIGNAL_APP_ID', '') }}",
-                    });
-                });
+        {{-- Titan PUSH --}}
+        @if (env('TITAN_PUSH_ENABLE', false) && env('TITAN_PUSH_ID', '') != '')
+            <script type="text/javascript">
+                if(!window['_WPN']) {
+                    (function(j,l,p,v,n,t,pu){j['_WPN']=n;j[n]=j[n]||function(){(j[n].q=j[n].q
+                        ||[]).push(arguments)},j[n].l=1*new
+                    Date();t=l.createElement(p),pu=l.getElementsByTagName(p)[0];t.async=1;
+                        t.src=v;pu.parentNode.insertBefore(t,pu);})(window,document,'script',
+                        'https://d12zyq17vm1xwx.cloudfront.net/v2/wpn.min.js','wpn');
+
+                    wpn('initialize', {{ env('TITAN_PUSH_ID') }});
+                    wpn('checkSubscription');
+                    wpn('pageView');
+                }
             </script>
         @endif
-        {{-- /One Signal --}}
+        {{-- / Titan PUSH --}}
 
         {{-- Navegg --}}
         @if (env('NAVEGG_ENABLE', false))
