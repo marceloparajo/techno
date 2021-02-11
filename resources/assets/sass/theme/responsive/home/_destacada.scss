@@ -50,6 +50,20 @@
 			}
 		}
 	}
+	@include media-breakpoint-only(sm) {
+		.destacada {
+			.articulo {
+				&.nota-1,
+				&.nota-2 {
+					&.convideo {
+						.embed-responsive-16by9 {
+							padding-bottom: 61%;
+						}
+					}
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(md) {
 		.destacada {
 			max-width: 100%;
@@ -209,6 +223,7 @@
 					&.convideo {
 						.meta-content {
 							a {
+								hat,
 								p.headline {
 									display: none;
 								}

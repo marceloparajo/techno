@@ -8,7 +8,7 @@
 				{{-- Embed Code --}}
 				@if ($new['embed_code_original'] != '' && (strpos($new['embed_code_original'], 'rudo') || strpos($new['embed_code_original'], 'tube')))
 				<article class="articulo nota-{{ $key }} convideo" >
-						{!! $new['embed_code'] !!}
+					{!! $new['embed_code'] !!}
 				@else
 				<article class="articulo nota-{{ $key }}">
 				<figure>
