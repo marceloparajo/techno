@@ -29,6 +29,11 @@
 							display: block;
 						}
 					}
+					&.convideo {
+						.meta-content {
+							padding: 5px 0;
+						}
+					}
 				}
 				&.nota-0 {
 					flex-basis: 100%;
@@ -198,6 +203,15 @@
 						a {
 							p.headline {
 								display: block;
+							}
+						}
+					}
+					&.convideo {
+						.meta-content {
+							a {
+								p.headline {
+									display: none;
+								}
 							}
 						}
 					}
