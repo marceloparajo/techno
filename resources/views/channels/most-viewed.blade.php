@@ -1,6 +1,6 @@
 @extends('layout.base')
 
-@section('page-title', ucwords($channel))
+@section('page-title', 'Más leídas | ' . env('APP_ALTER_NAME', 'Perfil'))
 
 @section('google-tag-manager')
 	<x-google-tag-manager category="vitrina de notas" />

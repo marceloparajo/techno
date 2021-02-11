@@ -66,9 +66,6 @@ class NewsController extends Controller
         $noticia = $this->parseHelper->parseNoticia($payload->DATA);
         $jsonStructured = $this->parseHelper->parseNoticiaStructuredData($noticia);
 
-        $page_title = env('APP_ALTER_NAME', '') . ' | ' . $noticia['home_title'];
-        $page_description = (isset($noticia['headline']) && !empty($noticia['headline']))? $noticia['home_title']. ". ". $noticia['headline']: $noticia['home_title'];
-
         // Si el embed code tiene Video de ePlanning, Youtube y Maps de Google lo seteo como featured content
         if (Str::contains($noticia['embed_code_original'], ['epvideo', 'eplanning', 'youtubelive', 'googlemaps', 'youtube', 'rudovideo']))
             $noticia['featured_content'] = 'embed_code';
@@ -77,16 +74,7 @@ class NewsController extends Controller
 
         $body = $noticia['body']; //$this->_insertContentMiddle($noticia);
 
-        $site = strtolower(env('APP_NAME', ''));
-
         $displayAuthor = ($noticia['signed']) ? "block":"none";
-        $analytics_data = [
-            'slug' => $noticia['slug'],
-            'section' => "sitios.$site.nota",
-            'author' => $noticia['author']['fullname'],
-            'date' => $noticia['date_available']->format('F, d Y H:i:s O'),
-            'id' => $noticia['id']
-        ];
 
         // ----- PAYWALL -----
         $has_edition = isset($noticia['issue']) && !is_null( $noticia['issue']);
@@ -140,7 +128,7 @@ class NewsController extends Controller
                 $view = 'news.show.index';
         }
 
-        $view_content = view($view, compact('noticia', 'jsonStructured', 'page_title', 'page_description', 'analytics_data', 'body', 'displayAuthor'));
+        $view_content = view($view, compact('noticia', 'jsonStructured', 'body', 'displayAuthor'));
         return response($view_content)->header('Cache-Control', 'max-age=300, public');
     }
 
@@ -162,17 +150,12 @@ class NewsController extends Controller
         $noticia = $this->parseHelper->parseNoticia($payload->DATA);
         $jsonStructured = $this->parseHelper->parseNoticiaStructuredData($noticia);
 
-        $analytics_data = [
-            'client' => env('ANALYTICS_CLIENT_ID', ''),
-            'url' => env('ANALYTICS_PATH_NAME', '') . '/amp' . $noticia['source_url']
-        ];
-
         // Publicidad en el medio del body
         $body = str_replace('-eplanning_client_id-', env('ADS_CLIENT', ''), $noticia['body']);
         $body = str_replace('-eplanning_ads_id-', '300x250x2', $body);
         $body = str_replace('-eplanning_sec-', 'new_amp', $body);
 
-        return view('amp.news', compact('noticia', 'analytics_data', 'jsonStructured', 'body'));
+        return view('amp.news', compact('noticia', 'jsonStructured', 'body'));
 
     }
 

@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import {formatRFC3339, add, compareAsc} from 'date-fns'
+import {formatISO, parseISO, add, compareAsc} from 'date-fns'
 import tmpl_login_menu from './login-menu.mustache'
 import tmpl_signwall_modal from './signwall-modal.mustache'
 import tmpl_bottom_socket from './bottom-socket.mustache'
@@ -22,7 +22,7 @@ window.pw_show_premium_modal = () => {
 		logged: paywall.auth.isLogged()
 	})
 
-	/*dataLayer.push({
+	dataLayer.push({
 		'event': 'wallModal',
 		'eventCategory': 'paywall',
 		'eventAction': 'modal-impresion',
@@ -38,7 +38,7 @@ window.pw_show_premium_modal = () => {
 					}]
 			}
 		}
-	})*/
+	})
 
 	const buttons = document.getElementsByClassName('pw-paywall-premium-modal-btn-call-to-action')
 
@@ -46,7 +46,7 @@ window.pw_show_premium_modal = () => {
 		el.addEventListener('click', e => {
 			e.preventDefault()
 
-			/*dataLayer.push({
+			dataLayer.push({
 				'event': 'wallModal',
 				'eventCategory': 'paywall',
 				'eventAction': 'modal-click',
@@ -62,7 +62,7 @@ window.pw_show_premium_modal = () => {
 							}]
 					}
 				}
-			})*/
+			})
 
 			location.href = `${window.paywallConfig.paywallUrl}?continue=${current_url}&limit=true&msg=exclusivo`
 		})
@@ -74,7 +74,7 @@ window.pw_show_metered_modal = () => {
 
 	_container.innerHTML = tmpl_metered_modal()
 
-	/*dataLayer.push({
+	dataLayer.push({
 		'event': 'wallModal',
 		'eventCategory': 'paywall',
 		'eventAction': 'modal-impresion',
@@ -90,7 +90,7 @@ window.pw_show_metered_modal = () => {
 					}]
 			}
 		}
-	})*/
+	})
 
 	const buttons = document.getElementsByClassName('pw-paywall-metered-modal-btn-call-to-action')
 
@@ -98,7 +98,7 @@ window.pw_show_metered_modal = () => {
 		el.addEventListener('click', e => {
 			e.preventDefault()
 
-			/*dataLayer.push({
+			dataLayer.push({
 				'event': 'wallModal',
 				'eventCategory': 'paywall',
 				'eventAction': 'modal-click',
@@ -114,7 +114,7 @@ window.pw_show_metered_modal = () => {
 							}]
 					}
 				}
-			})*/
+			})
 
 			location.href = `${window.paywallConfig.paywallUrl}?limit=true`
 		})
@@ -131,14 +131,14 @@ window.pw_render_bottom_socket = () => {
 	if (paywall.auth.isLogged() && user.email.indexOf('@perfil.com') > -1) return 0
 
 	if (!paywall.auth.isLogged() || !user.subscribed) {
-		const last_display = Cookies.get('pw_bottom_socket_last_display_n', {domain: window.paywallConfig.cookieDomain})
+		const last_display = Cookies.get('pw_bottom_socket_last_display', {domain: window.paywallConfig.cookieDomain})
 		let show = false
 
 		if (last_display !== undefined) {
 			const periodicity = (!paywall.auth.isLogged())
 				? paywallConfig.socketHoursPeriodicity || 3
 				: paywallConfig.socketHoursPeriodicitySubs || 24
-			const border_date = add(Date.parse(last_display), {
+			const border_date = add(parseISO(last_display), {
 				hours: periodicity
 			})
 
@@ -148,7 +148,7 @@ window.pw_render_bottom_socket = () => {
 			show = true
 
 		if (show)
-			setTimeout(pw_show_bottom_socket, 1000) // 45000
+			setTimeout(pw_show_bottom_socket, 45000)
 	}
 }
 
@@ -170,7 +170,7 @@ window.pw_show_bottom_socket = () => {
 			let target = ''
 
 			if (paywall.auth.isLogged()) {
-				/*dataLayer.push({
+				dataLayer.push({
 					'event': 'wallBanner',
 					'eventCategory': 'paywall',
 					'eventAction': 'banner-click',
@@ -186,10 +186,10 @@ window.pw_show_bottom_socket = () => {
 								}]
 						}
 					}
-				})*/
+				})
 				target = `${window.paywallConfig.paywallUrl}?continue=${current_url}`
 			} else {
-				/*dataLayer.push({
+				dataLayer.push({
 					'event': 'wallBanner',
 					'eventCategory': 'paywall',
 					'eventAction': 'banner-click',
@@ -205,11 +205,11 @@ window.pw_show_bottom_socket = () => {
 								}]
 						}
 					}
-				})*/
+				})
 				target = `${window.paywallConfig.paywallUrl}id/register?continue=${current_url}`
 			}
 
-			Cookies.set('pw_bottom_socket_last_display_n', formatRFC3339(new Date()), {domain: window.paywallConfig.cookieDomain})
+			Cookies.set('pw_bottom_socket_last_display_n', formatISO(new Date()), {domain: window.paywallConfig.cookieDomain})
 			location.href = target
 		})
 	})
@@ -220,7 +220,7 @@ window.pw_show_bottom_socket = () => {
 		const _socket = document.getElementById('pw-zocalo')
 		_socket.classList.remove('open')
 		_socket.classList.add('closed')
-		Cookies.set('pw_bottom_socket_last_display_n', formatRFC3339(new Date()), {domain: window.paywallConfig.cookieDomain})
+		Cookies.set('pw_bottom_socket_last_display', formatISO(new Date()), {domain: window.paywallConfig.cookieDomain})
 	})
 }
 
@@ -247,7 +247,7 @@ window.pw_show_signwall_modal = () => {
 	})
 
 	// Analytics
-	/*dataLayer.push({
+	dataLayer.push({
 		'event': 'wallModal',
 		'eventCategory': 'paywall',
 		'eventAction': 'modal-impresion',
@@ -263,12 +263,12 @@ window.pw_show_signwall_modal = () => {
 					}]
 			}
 		}
-	})*/
+	})
 
 	document.getElementById('pw-btn-register').addEventListener('click', e => {
 		e.preventDefault()
 
-		/*dataLayer.push({
+		dataLayer.push({
 			'event': 'wallModal',
 			'eventCategory': 'paywall',
 			'eventAction': 'modal-click',
@@ -284,7 +284,7 @@ window.pw_show_signwall_modal = () => {
 						}]
 				}
 			}
-		})*/
+		})
 
 		location.href = `${window.paywallConfig.paywallUrl}id/register?continue=${current_url}`
 	})
@@ -423,8 +423,10 @@ paywall.queue.push(['addEventListener', 'checked', () => {
 
 	pw_render_login_menu();
 
-	//send_fbq_pageView()
-	//send_fbq_viewContent()
+	if (typeof(fbq) !== 'undefined') {
+		send_fbq_pageView()
+		send_fbq_viewContent()
+	}
 
 	pw_render_bottom_socket()
 

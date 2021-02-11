@@ -67,14 +67,7 @@ class AuthorsController extends Controller
 
         $sectionTitle = __('news of') ." ". $author['firstname']." ". $author['lastname'];
 
-        $site = strtolower(env('APP_NAME', ''));
-        $analytics_data = [
-            'author_username' => $username,
-            'section' => "sitios.$site.autor",
-            'author_name' => $author['fullname']
-        ];
-
-        return view('authors.index', compact('noticias', 'author', 'sectionTitle', 'analytics_data'));
+        return view('authors.index', compact('noticias', 'author', 'sectionTitle'));
     }
 
     /*public function amp(Route $route, BloquesHelper $bloquesHelper)

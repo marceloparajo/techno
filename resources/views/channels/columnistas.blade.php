@@ -1,6 +1,6 @@
 @extends('layout.base')
 
-@section('page-title', 'Columnistas')
+@section('page-title', 'Columnistas | ' . env('APP_ALTER_NAME', 'Perfil'))
 
 @section('google-tag-manager')
 	<x-google-tag-manager category="vitrina de notas" />

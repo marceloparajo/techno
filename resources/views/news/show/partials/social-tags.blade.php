@@ -1,4 +1,5 @@
 		<link rel="profile" href="https://gmpg.org/xfn/11">
+
 		{{-- Facebook --}}
 		<meta property="fb:admins"              content="{{ env('FACEBOOK_ADMINS', '') }}">
 		<meta property="fb:app_id"              content="{{ env('FACEBOOK_APP_ID', '') }}">
@@ -29,21 +30,23 @@
 		<meta name="twitter:description"        content="{{ $noticia['headline'] }}">
 		<meta name="twitter:image"              content="{{ $noticia['main_image']['srcs']['big-wide'] }}">
 		<meta name="twitter:image:alt"          content='{{ $noticia['main_image']['caption'] }}'>
+
 		{{-- SCHEMA MICRODATA --}}
 		<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{ $noticia['permalink'] }}"/>
 		<meta itemprop="datePublished" 			content="{{ $noticia['date_available']->toIso8601String() }}"/>
 		<meta itemprop="dateModified" 			content="{{ $noticia['date_update']->toIso8601String() }}"/>
 		<meta itemprop="keywords" 				content="{{ $noticia['tags'] }}">
-		<meta itemprop="name" 					content="{{ $page_title }}">
+		<meta itemprop="name" 					content="{{ $noticia['short_title'] }}">
 		<meta itemprop="alternateName" 			content="{{ $noticia['short_title'] }}">
 		<meta itemprop="headline" 				content="{{ \Illuminate\Support\Str::limit($noticia['headline'],105) }}">
 		<meta itemprop="url" 					content="{{ $noticia['permalink'] }}">
 		<meta itemprop="articleSection" 		content="{{ $noticia['channel']['slug'] }}">
 		<meta itemprop="inLanguage" 			content="{{ config('app.locale') }}">
+
 		{{-- Generic --}}
 		<meta name="editoria" 					content="{{ env('APP_ALTER_NAME', '') }}" />
 		<meta name="dtnoticia" 					content="{{ $noticia['date_available']->toIso8601String() }}" />
-		<meta name="title" 						content="{{ $page_title }}" />
+		<meta name="title" 						content="{{ $noticia['short_title'] }}" />
 		<meta name="keywords" 					content="{{ $noticia['tags'] }}" />
 		<meta name="description" 				content="{{ $noticia['headline'] }}">
 		<meta name="news_keywords" 				content="{{ $noticia['tags'] }}">

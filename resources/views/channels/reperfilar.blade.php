@@ -1,6 +1,7 @@
 @extends('layout.base')
 
-@section('page-title', $page_title)
+@section('page-title', ucwords($page) . ' | Reperfilar')
+@section('page-description', 'Periodismo sin grieta con la mejor cobertura multiplataforma de la actualidad, la política y la economía.');
 
 @section('google-tag-manager')
 	<x-google-tag-manager category="vitrina de notas" />

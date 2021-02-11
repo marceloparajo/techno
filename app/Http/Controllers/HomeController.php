@@ -47,12 +47,6 @@ class HomeController extends Controller
     {
         $home_content = $blockDistributionsHelper->getHomedata();
 
-        // Analytics
-        $site = strtolower(env('APP_NAME', ''));
-        $analytics_data = [
-            'section' => "sitios.$site.home"
-        ];
-
         share([
             'eplanning' => [
                 'client' => env('ADS_CLIENT', ''),
@@ -60,7 +54,7 @@ class HomeController extends Controller
             ]
         ]);
 
-        $view_content = view('home.index', compact('home_content', 'analytics_data'));
+        $view_content = view('home.index', compact('home_content'));
         return response($view_content)->header('Cache-Control', 'max-age=120, public');
     }
 

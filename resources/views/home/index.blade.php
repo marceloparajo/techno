@@ -21,7 +21,7 @@
 {{--	@include('partials.taboola-sidebar-header')  --}}
 @endsection
 
-@section('page-title', env('HOME_TITLE','Home') )
+@section('page-title', 'Ultimas noticias de Argentina y el mundo')
 
 @section('js')
 	<script type="text/javascript" src="{{ mix('js/home.js') }}"></script>
@@ -49,7 +49,7 @@
 			@if ($key == 'central-header')
 			<main class="supercontenedor">
 				<div class="contenido" style="max-width:970px">
-					<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
+					<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" margin-top="0" />
 			@endif
 		@endforeach
 	</main>

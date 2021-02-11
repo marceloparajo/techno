@@ -59,7 +59,7 @@
 
     header {
         background-color: white;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
         height: 50px;
         position: fixed;
         text-align: center;
@@ -101,7 +101,7 @@
         font-size: 1.3rem;
     }
     .body a {
-        color: #0076ba;
+        color: #4295da;
         text-decoration: underline;
     }
 
@@ -132,12 +132,12 @@
     }
 
     .hat {
-        background-color: #0076ba;
-        color: #fff;
+        background-color: transparent;
+        color: #557c9c;
         font-size: 13px;
         font-weight: 700;
         text-transform: uppercase;
-        padding: 2px 10px;
+        padding: 2px 0;
         display: inline-block;
         font-family: 'Oswald', sans-serif;
     }
@@ -163,7 +163,7 @@
             font-weight: bold;
             font-size: 17px;
             text-transform: uppercase;
-            color: #0076ba;
+            color: #557c9c;
             margin: 5px 0;
             border-bottom: 2px solid #ccc;
             padding-bottom: 5px;
@@ -211,9 +211,8 @@
         text-transform: uppercase;
         color: #313133;
         text-decoration: none;
-        font-weight: 500;
         font-size: 13px;
-        letter-spacing: 0px;
+        letter-spacing: 0;
         font-weight: bold;
     }
 
@@ -256,9 +255,9 @@
     font-size: 14px;
     background: #666; border-radius: 3px;}
    .tags li a { text-decoration: none; color:#FFF; }
-   .tags li a:hover { color:#0076ba; }
+   .tags li a:hover { color:#557c9c; }
   .tags label {   letter-spacing: 1px;
-    background: #0076ba;
+    background: #557c9c;
     padding: 5px 10px;
     color: #fff;
     text-transform: uppercase;

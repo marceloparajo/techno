@@ -60,7 +60,6 @@ class ChannelsController extends Controller
 
         $posts = $payload->DATA;
         $sectionTitle = $posts[0]['channel_name'];
-        $page_description = $sectionTitle.". ". env('SITE_DESCRIPTION','');
 
         $noticias = [];
         foreach ($posts as $key => $item) {
@@ -76,7 +75,7 @@ class ChannelsController extends Controller
             ]
         ]);
 
-        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'page_description'));
+        $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle'));
         return response($view_content)->header('Cache-Control', 'max-age=300, public');
     }
 
@@ -187,7 +186,7 @@ class ChannelsController extends Controller
                 'name' => 'Programas'
             ]
         ];
-        $page_title = 'Reperfilar{canal}';
+
         $page = $route->parameter('channel') ?? 'home';
         $channel = str_replace('/{channel}', '', $route->uri);
 
@@ -217,9 +216,7 @@ class ChannelsController extends Controller
                     array_push($subchannel_posts, $item);
                 }
 
-                $page_title = str_replace('{canal}', '', $page_title);
-
-                $view_content = view("home.$channel", compact('page_title', 'subchannels_list', 'destaque_posts', 'subchannel_posts'));
+                $view_content = view("home.$channel", compact('subchannels_list', 'destaque_posts', 'subchannel_posts'));
                 return response($view_content)->header('Cache-Control', 'max-age=300, public');
 
             default:
@@ -231,9 +228,7 @@ class ChannelsController extends Controller
                 foreach ($payload->DATA as $post)
                     array_push($posts, $this->parseHelper->parseNoticia($post));
 
-                $page_title = str_replace('{canal}', ' | ' . ucfirst($page), $page_title);
-
-                $view_content = view("channels.$channel", compact('posts', 'page_title', 'page', 'subchannels_list'));
+                $view_content = view("channels.$channel", compact('posts', 'page', 'subchannels_list'));
                 return response($view_content)->header('Cache-Control', 'max-age=300, public');
         }
     }

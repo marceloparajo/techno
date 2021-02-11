@@ -1,16 +1,12 @@
 @extends('layout.base')
 
-@section('page-title', ucwords($channel))
+@section('page-title', ucwords($channel) . ' | ' . env('APP_ALTER_NAME', 'Perfil'))
 
 @section('google-tag-manager')
 	<x-google-tag-manager category="vitrina de notas" />
 @endsection
 
 @section('ads-sec', 'seccion')
-
-@section('head-top')
-    <link rel="amphtml" href="{{ $amphtml?? "" }}">
-@endsection
 
 @section('head-bottom')
 	@include('partials.taboola-sidebar-header')

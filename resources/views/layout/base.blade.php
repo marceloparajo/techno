@@ -4,8 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="{{ isset($page_description) ? $page_description : env('SITE_DESCRIPTION', '') }}">
-        <title>{{ env('APP_ALTER_NAME', 'Perfil') }} | @yield('page-title', '')</title>
+        <meta name="description" content="@yield('page-description', 'Periodismo Puro: breaking news, análisis y los mejores columnistas cubriendo los temas más importantes de la Argentina y el mundo')">
+        <title>@yield('page-title', env('APP_ALTER_NAME', 'Perfil'))</title>
 
         @shared()
 
@@ -57,6 +57,21 @@
 
         @yield('head-bottom')
 
+        {{-- Config Paywall --}}
+        <script type="text/javascript">
+            window.paywall = window.paywall || {}
+            window.paywallConfig = window.paywallConfig || {}
+            window.perfilContent = window.perfilContent || {}
+            paywall.queue = window.paywall.queue || []
+
+            window.paywallConfig.loginwallLimit = 40
+            window.paywallConfig.paywallLimit = 80
+            window.paywallConfig.enableSocket = true
+            window.paywallConfig.socketHoursPeriodicity = 3
+            window.paywallConfig.socketHoursPeriodicitySubs = 24
+        </script>
+        {{-- /Config Paywall --}}
+
         {{-- Google Tag Manager --}}
         @yield('google-tag-manager')
 
@@ -95,6 +110,23 @@
             </script>
         @endif
         {{-- /Naveg --}}
+
+        {{-- Facebook Pixel --}}
+        @if (env('FACEBOOK_PIXEL_ENABLE', false) && env('FACEBOOK_PIXEL_ID', '') != '')
+            <script>
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                    n.queue=[];t=b.createElement(e);t.async=!0;
+                    t.src=v;s=b.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t,s)}(window, document,'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+                window.paywallConfig.facebook_pixel = '{{ env('FACEBOOK_PIXEL_ID') }}'
+            </script>
+            <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{ env('FACEBOOK_PIXEL_ID') }}&ev=PageView&noscript=1"/></noscript>
+        @endif
+        {{-- /Facebook Pixel --}}
     </head>
 
     <body class="@yield('body-class', '')">
@@ -109,18 +141,6 @@
 
         @yield('templates')
 
-        <script type="text/javascript">
-            window.paywall = window.paywall || {}
-            window.paywallConfig = window.paywallConfig || {}
-            window.perfilContent = window.perfilContent || {}
-            paywall.queue = window.paywall.queue || []
-
-            window.paywallConfig.loginwallLimit = 40
-            window.paywallConfig.paywallLimit = 80
-            window.paywallConfig.enableSocket = true
-            window.paywallConfig.socketHoursPeriodicity = 3
-            window.paywallConfig.socketHoursPeriodicitySubs = 24
-        </script>
         @yield('paywall-config')
         <script defer type="text/javascript" src="{{ mix('js/mi-perfil.js') }}"></script>
 

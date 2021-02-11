@@ -6,7 +6,7 @@
         <meta property="op:markup_version" content="v1.0">
         <meta property="fb:likes_and_comments" content="enable">
         <meta property="fb:use_automatic_ad_placement" content="enable=true ad_density=default">
-        <title>{!! $noticia['title'] !!}</title>
+        <title>{!! $noticia['short_title'] !!} | {{ env('APP_ALTER_NAME', 'Perfil') }}</title>
         <link rel="canonical" href="{{ $noticia['permalink'] }}">
     </head>
     <body>
@@ -27,11 +27,6 @@
 
             <figure class="op-tracker">
                 <x-google-tag-manager category="nota" format="fbia" :info="$noticia" />
-                {{--<iframe>
-                    <script>{!! $gtmTag?? "" !!}
-                        (function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0];var j = d.createElement(s);var dl = l != 'dataLayer' ? "&amp;l=" + l : '';j.async = true;j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', '{{ env('ANALYTICS_GTM_IA','GTM-WND3CRX') }}');
-                    </script>
-                </iframe>--}}
             </figure>
             <figure class="op-tracker">
                 <iframe>

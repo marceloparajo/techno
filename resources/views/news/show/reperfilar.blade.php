@@ -13,7 +13,8 @@
 
 @section('ads-sec', 'articulo')
 
-@section('page-title', $noticia['home_title'])
+@section('page-title', $noticia['short_title'] . ' | Reperfilar')
+@section('page-description', $noticia['headline'])
 
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/reperfilar-news-high.css') }}">

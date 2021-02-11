@@ -4,7 +4,7 @@
 	<x-google-tag-manager category="vitrina de notas" />
 @endsection
 
-@section('page-title', 'Noticias de ' . $author['fullname'])
+@section('page-title', $author['fullname'] . ' | ' . env('APP_ALTER_NAME', 'Perfil'))
 
 @section('ads-sec', 'seccion')
 
@@ -70,12 +70,12 @@
 
 					@if (($loop->iteration + 4) % 8 == 0)
 						</div>
-						<div class="cuatro-notas"> 
+						<div class="cuatro-notas">
 						<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" class="d-none show-xxl" style="grid-area:tl" />
 						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="hide-sm" />
 					@elseif ($loop->iteration % 4 == 0)
 						</div>
-						<div class="cuatro-notas"> 
+						<div class="cuatro-notas">
 					@endif
 				@endforeach
 			</div>

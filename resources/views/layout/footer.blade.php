@@ -3,7 +3,7 @@
 <footer class="main-footer super-contenedor">
 	<figure>
 		<a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}" itemprop="url">
-			<img src="{{ asset('img/logo_perfil.svg') }}" alt="Perfil.com" style="width:120px;height:27px;">
+			<img src="{{ asset('images/logo_perfil.svg') }}" alt="Perfil.com" style="width:120px;height:27px;">
 		</a>
 	</figure>
 	<div class="footer-redes">

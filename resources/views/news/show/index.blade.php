@@ -13,7 +13,8 @@
 
 @section('ads-sec', 'articulo')
 
-@section('page-title', $noticia['home_title'])
+@section('page-title', $noticia['short_title'] . ' | ' . env('APP_ALTER_NAME', 'Perfil'))
+@section('page-description', $noticia['headline'])
 
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/news-high.css') }}">
@@ -128,6 +129,7 @@
 				@endif
 
 				<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
+				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-lg-none" />
 
 				{{-- Article Body --}}
 				<div class="news-body">
@@ -177,6 +179,7 @@
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
 						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
+						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-lg-none" />
 
 						@include('news.show.partials.news-tags')
 
