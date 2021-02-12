@@ -72,8 +72,8 @@
 					@if (($loop->iteration + 4) % 8 == 0)
 						</div>
 						<div class="cuatro-notas">
-						<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" class="d-xs-none d-lg-block" style="grid-area:tl" />
-						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-lg-none" />
+						<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" class="d-xs-none d-xxl-block" style="grid-area:tl" />
+						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-md-none" />
 					@elseif ($loop->iteration % 4 == 0)
 						</div>
 						<div class="cuatro-notas">
