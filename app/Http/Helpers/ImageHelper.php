@@ -105,7 +105,7 @@ class ImageHelper
      */
     public function generateUrlImageAuthor(string $username, int $size = 100): String
     {
-        return rtrim(env('IMAGE_SERVER', 'http://fotos.perfil.com'), '/') . "/autores/default/$username" . "_$size.jpg";
+        return rtrim(env('IMAGES_SERVER', 'https://fotos.perfil.com'), '/') . "/autores/default/$username" . "_$size.jpg";
     }
 
     /**
