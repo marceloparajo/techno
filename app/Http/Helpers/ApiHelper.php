@@ -145,7 +145,7 @@ class ApiHelper
         $cache_name = md5('api-helper-homenews');
 
         return Cache::remember($cache_name, 0.30, function () {
-            $call = $this->api_server . "&metodo=gethomenews&maxrows=200";
+            $call = $this->api_server . "&metodo=gethomenews&maxrows=250";
             $payload = file_get_contents($call);
             return (object) json_decode($payload, true);
         });
