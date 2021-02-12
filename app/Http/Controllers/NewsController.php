@@ -151,7 +151,7 @@ class NewsController extends Controller
         $jsonStructured = $this->parseHelper->parseNoticiaStructuredData($noticia);
 
         // Publicidad en el medio del body
-        $body = str_replace('-eplanning_client_id-', env('ADS_CLIENT', ''), $noticia['body']);
+        $body = str_replace('-eplanning_client_id-', '1e076', $noticia['body']);
         $body = str_replace('-eplanning_ads_id-', '300x250x2', $body);
         $body = str_replace('-eplanning_sec-', 'new_amp', $body);
 
