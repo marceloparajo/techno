@@ -158,7 +158,8 @@ window.pw_show_bottom_socket = () => {
 
 	_container.innerHTML += tmpl_bottom_socket({
 		logged: paywall.auth.isLogged(),
-		button_title: (paywall.auth.isLogged()) ? 'Suscribite' : 'Registrate',
+		message: (paywall.auth.isLogged()) ? 'Suscribite' : 'Registrate Gratis',
+		button_title: (paywall.auth.isLogged()) ? 'Suscribirme' : 'Registrarme',
 		add_class: (paywall.auth.isLogged()) ? 'pw-color-invertido' : '',
 	})
 
