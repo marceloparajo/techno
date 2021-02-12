@@ -69,4 +69,49 @@ class BlockRevistas extends Component
                 return $this->id_revista;
         }
     }
+
+
+    public function enlace()
+    {
+        switch ($this->id_revista) {
+            case 'rev-caras':
+                return 'https://caras.perfil.com';
+
+            case 'rev-marieclaire':
+                return 'https://marieclaire.perfil.com';
+
+            case 'rev-fortuna':
+                return 'https://fortuna.perfil.com';
+
+            case 'rev-luz':
+                return 'https://luz.perfil.com';
+
+            case 'rev-hombre':
+                return 'https://hombre.perfil.com';
+
+            case 'rev-mia':
+                return 'https://mia.perfil.com';
+
+            case 'rev-lunateen':
+                return 'https://lunateen.perfil.com';
+
+            case 'rev-supercampo':
+                return 'https://supercampo.perfil.com';
+
+            case 'rev-weekend':
+                return 'https://weekend.perfil.com';
+
+            case 'rev-parabrisas':
+                return 'https://parabrisas.perfil.com';
+
+            case 'rev-noticias':
+                return 'https://noticias.perfil.com';
+
+            default:
+                return 'https://www.perfil.com';
+        }
+    }
+
+
+
 }

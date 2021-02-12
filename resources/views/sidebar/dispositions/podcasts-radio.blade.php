@@ -2,7 +2,7 @@
 	<section class="podcasts-radio">
 		<header class="titulo">
 			<a href="https://radio.perfil.com/seccion/podcasts" target="_blank" rel="noreferrer">Podcasts</a>
-			<img src="/images/radio-perfil-sidebar.png" alt="Radio Perfil" style="width:120px;height:40px">
+			<a href="https://radio.perfil.com" target="_blank" rel="noreferrer"><img src="/images/radio-perfil-sidebar.png" alt="Radio Perfil" style="width:120px;height:40px"></a>
 		</header>
 
 		@foreach(array_slice($news, 0, 4) as $key => $new)

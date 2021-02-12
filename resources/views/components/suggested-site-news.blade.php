@@ -7,7 +7,7 @@
         @foreach ($news as $site => $noticia)
             <article class="sitio-externo {{ $site }}">
                 <a href="{{ $getPath('', $site) }}" rel="noreferrer"><div class="logo-revista">{{ $site }}</div></a>
-                <a href="{{ $noticia['pagePath'] }}" title="{{ $noticia['pageTitle'] }}" rel="noreferrer">
+                <a href="{{ $noticia['url'] }}" title="{{ $noticia['pageTitle'] }}" rel="noreferrer">
                     <figure>
                         <x-lazy-image :src="$noticia['imgSrc']" :alt="$noticia['pageTitle']" max-width="200" clean-source="true" />
                     </figure>

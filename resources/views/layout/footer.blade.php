@@ -22,10 +22,11 @@
 		</ul>
 	</nav>
 	<div class="disclaimer">
-		<span itemprop="name">Perfil.com - Editorial Perfil S.A.</span> | © Perfil.com 2006-{{ date('Y') }} - All rights reserved<br />
-		Intellectual Property Registry Number 5346433<br />
+		<span itemprop="name">Perfil.com - Editorial Perfil S.A.</span> | © Perfil.com 2006-{{ date('Y') }} - Todos los derechos reservados.<br />
+		Editor responsable: María José Bonacifa.<br>
+		Registro de la propiedad intelectual número 5346433<br />
 		<div class="d-none d-xl-block" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-		Address: <span itemprop="streetAddress">California 2715</span>, <span itemprop="postalCode">C1289ABI</span>, <span itemprop="addressLocality">CABA, Argentina</span>  | Phone: <span itemprop="telephone">(+5411) 7091-4921</span> / <span itemprop="telephone">(+5411) 7091-4922</span> | E-mail: <a href="mailto:perfilcom@perfil.com"><span itemprop="email">perfilcom@perfil.com</span></a>
+		Dirección: <span itemprop="streetAddress">California 2715</span>, <span itemprop="postalCode">C1289ABI</span>, <span itemprop="addressLocality">CABA, Argentina</span>  | Teléfono: <span itemprop="telephone">(+5411) 7091-4921</span> / <span itemprop="telephone">(+5411) 7091-4922</span> | E-mail: <a href="mailto:perfilcom@perfil.com"><span itemprop="email">perfilcom@perfil.com</span></a><br>
 		</div>
 	</div>
 </footer>

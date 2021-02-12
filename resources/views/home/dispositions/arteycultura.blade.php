@@ -4,7 +4,7 @@
 
 		<div class="container arteycultura">
 
-			<div class="ayc-titulo">Arte y cultura</div>
+			<div class="ayc-titulo"><a href="/seccion/cultura">Arte y cultura</a></div>
 
 			<div class="notas-ayc">
 
