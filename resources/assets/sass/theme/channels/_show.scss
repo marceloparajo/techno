@@ -219,6 +219,7 @@
 							weight: 500;
 						}
 						color: $negro;
+						letter-spacing: -0.02em;
 					}
 				}
 			}
@@ -251,12 +252,14 @@
 						font: {
 							size: 0.9rem;
 							weight: normal;
+							family: $font-sinserif;
 						}
 						color: $dark;
 					}
 					.fechayhora {
 						font:{
 							size: .8rem;
+							family: $font-sinserif;
 						}
 						display: block;
 						text-transform: uppercase;

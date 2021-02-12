@@ -100,8 +100,12 @@
 				@if($noticia['hat'] != '')
 				<span class="volanta">{{ $noticia['hat'] }}</span>
 				@endif
-			</div>
 
+				<div class="hat-fecha">
+					{{ $noticia['date_available_human'] }}
+				</div>
+
+			</div>
 			{{-- Titulos --}}
 			<h1>{{ $noticia['title'] }}</h1>
 			@if($noticia['headline'] != '.')

@@ -20,10 +20,14 @@
 			&:hover {
 				color: #fff;
 			}
+			img {
+				border: none;
+			}
 		}
 		img {
 			width: 120px;
 			height: auto;
+			border: none;
 		}
 	}
 	.notaPodcast {

@@ -1,13 +1,14 @@
 @if (isset($news) && count($news) > 0)
     <section id="batimes">
         <header>
-            <div class="batimes-titulo"><a href="https://batimes.perfil.com/" target="_blank" rel="noreferrer">Buenos Aires Times</a></div>
+            <div class="batimes-titulo"><a href="https://batimes.com.ar/" target="_blank" rel="noreferrer">Buenos Aires Times</a></div>
         </header>
 
         @foreach(array_slice($news, 0, 4) as $key => $new)
 
+
             <article class="notaBatimes">
-                <a href="{{ $new['permalink'] }}">
+                <a href="//batimes.com.ar{{ $new['source_url'] }}">
                     <figure>
                         @if ($loop->first)
                             <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" max-width="300" />
@@ -32,6 +33,6 @@
             </article>
         @endforeach
 
-        <footer><a href="https://batimes.perfil.com/" target="_blank" rel="noreferrer">Más en Buenos Aires Times</a></footer>
+        <footer><a href="https://batimes.com.ar/" target="_blank" rel="noreferrer">Más en Buenos Aires Times</a></footer>
     </section>
 @endif

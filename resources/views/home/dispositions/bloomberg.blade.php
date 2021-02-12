@@ -2,11 +2,11 @@
 
 	@if (isset($news[4]))
 		<!-- Bloomberg -->
-		<div class="container bloomberg px-0">
+		<div class="container bloomberg">
 
 			<div class="caja-contenido bloomberg">
 
-				<h6>Negocios</h6>
+				<div class="bl-titulo"><a href="seccion/bloomberg">Negocios</a></div>
 
 				<div class="caja-notas">
 

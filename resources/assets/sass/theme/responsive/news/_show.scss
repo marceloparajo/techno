@@ -232,6 +232,17 @@
 					font-size: 1.6rem;
 				}
 				border-bottom: 1px solid $linea;
+				.hat {
+					position: relative;
+					.hat-fecha {
+						display: block;
+						position: absolute;
+						color: $linea-oscura;
+						right: 0;
+						top: 0;
+						font-size: .8rem;
+					}
+				}
 			}
 			.container {
 				display: flex;

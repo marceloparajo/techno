@@ -1,10 +1,33 @@
+
+
 <div class="container secciones">
 
     <div class="caja-contenido">
 
         <div class="seccionfija {{ $id_seccion }}">
 
-            <div class="seccion-fija-titulo"></div>
+            <div class="seccion-fija-titulo">
+                
+
+
+            @switch($id_seccion)
+                @case('mujer')
+                    <a href="https://marieclaire.perfil.com" target="_blank" rel="noreferrer"><img src="/images/marieclaire.png" style="width:120px;height:20px;margin-top:4px;"></a>
+                    @break
+                @case('deportes')
+                    <a href="https://442.perfil.com" target="_blank" rel="noreferrer">Deportes</a>
+                    @break
+                @case('espectaculos')
+                    <a href="https://exitoina.perfil.com" target="_blank" rel="noreferrer">Espectáculos</a>
+                    @break
+                @default
+                    Más noticias
+            @endswitch
+
+
+
+
+            </div>
 
             <div class="contenedor-notas">
 

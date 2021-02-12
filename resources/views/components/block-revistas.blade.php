@@ -1,5 +1,5 @@
 <div class="container revistas">
-    <span class="titulo-revista {{ $id_revista }}">{{ $title() }}</span>
+    <a href="{{ $enlace() }}"><span class="titulo-revista {{ $id_revista }}">{{ $title() }}</span></a>
 
     <div class="notas-revistas">
         <article class="articulo derevistas">

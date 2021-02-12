@@ -3,7 +3,7 @@ $azul-bloomberg: #00bbe9;
 .container.bloomberg {
 	margin: 0 auto 20px auto;
 	padding: 10px 0;
-	h6 {
+	.bl-titulo {
 		display: block;
 		width: 100%;
 		height: 33px;
@@ -22,6 +22,10 @@ $azul-bloomberg: #00bbe9;
 			repeat: no-repeat;
 			position: 10px bottom;
 			size: 148px;
+		}
+		a {
+			color: $azul-bloomberg;
+			display: block;
 		}
 	}
 	.caja-contenido {

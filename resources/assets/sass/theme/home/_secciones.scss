@@ -29,11 +29,8 @@ $shows: #e43d3d;
 				color: dark;
 				background: $mujer;
 				padding: 3px 10px;
-				&:before {
-					content: "Mujer";
-					display: inline-block;
-					width: auto;
-					height: auto;
+				a {
+					color: $negro;
 				}
 			}
 			.contenedor-notas {
@@ -82,8 +79,8 @@ $shows: #e43d3d;
 				.seccion-fija-titulo {
 					background: $sports;
 					color: white;
-					&:before {
-						content: "Deportes";
+					a {
+						color: white;
 					}
 				}
 				.contenedor-notas {
@@ -94,8 +91,8 @@ $shows: #e43d3d;
 				.seccion-fija-titulo {
 					background: $shows;
 					color: white;
-					&:before {
-						content: "Espectaculos";
+					a {
+						color: white;
 					}
 				}
 				.contenedor-notas {

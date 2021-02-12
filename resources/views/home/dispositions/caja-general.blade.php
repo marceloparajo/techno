@@ -9,7 +9,8 @@
 				<div class="notas-cajageneral radio-perfil">
 
 					<div class="header-cajageneral">
-						<h6>Radio Perfil</h6>
+						<div class="radio-titulo">
+							<a href="https://radio.perfil.com" target="_blank" rel="noreferrer">Radio Perfil</a></div>
 					</div>
 
 					<div class="contenido-notas">
