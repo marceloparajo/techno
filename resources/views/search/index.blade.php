@@ -38,22 +38,8 @@
 		<h1 class="seccion-titulo {{ $sectionTitle }}">{{ $sectionTitle }}</h1>
 
 		<div class="contenido canal {{ $sectionTitle }}">
-
-			<!-- {{ env("APP_NAME","")}} search -->
-			<script>
-			  (function() {
-				var cx = '{{ env("BUSCADOR_ID_GOOGLE", "") }}';
-				var gcse = document.createElement('script');
-				gcse.type = 'text/javascript';
-				gcse.async = true;
-				gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(gcse, s);
-			  })();
-			</script>
-			<gcse:search></gcse:search>
-			<!-- /{{ env("APP_NAME","")}} search -->
-
+			<script async src="https://cse.google.com/cse.js?cx=3978ceed87019a67c"></script>
+			<div class="gcse-search"></div>
 		</div>
 
 		<aside class="sidebar">
