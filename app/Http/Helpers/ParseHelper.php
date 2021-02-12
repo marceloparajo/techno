@@ -353,7 +353,7 @@ class ParseHelper
                 'email' => env('ORG_EMAIL', ''),
                 'logo' => [
                     '@type' => 'ImageObject',
-                    'url' => asset('img/logo.png')
+                    'url' => asset('images/logo_perfil.png')
                 ],
                 'contactPoint' => [
                     [

@@ -21,7 +21,7 @@
 {{--	@include('partials.taboola-sidebar-header')  --}}
 @endsection
 
-@section('page-title', 'Ultimas noticias de Argentina y el mundo')
+@section('page-title', env('APP_ALTER_NAME', 'Perfil') . ' | Ultimas noticias de Argentina y el mundo')
 
 @section('js')
 	<script type="text/javascript" src="{{ mix('js/home.js') }}"></script>
