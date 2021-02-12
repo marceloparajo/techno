@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import {formatISO, parseISO, add, compareAsc} from 'date-fns'
+import {formatISO, parseISO, add, compareAsc, format} from 'date-fns'
 import tmpl_login_menu from './login-menu.mustache'
 import tmpl_signwall_modal from './signwall-modal.mustache'
 import tmpl_bottom_socket from './bottom-socket.mustache'
@@ -380,8 +380,8 @@ window.send_fbq_pageView = () => {
 }
 
 window.send_fbq_viewContent = () => {
-	if (! fbq || ! window.paywallConfig.facebook_pixel || ! window.perfilContent.id) return 0
-	const {id, title, paywall_type, canal, author, body_length, date_available} = window.perfilContent
+	if (! fbq || ! window.paywallConfig.facebook_pixel || window.perfilContent.id === undefined) return 0
+	const {id, title, paywall_type, canal, author, body_length, date} = window.perfilContent
 
 	// User status
 	let user_status = 'not registered'
@@ -391,9 +391,7 @@ window.send_fbq_viewContent = () => {
 	}
 
 	// Date
-	const _date = moment(date_available)
-	const date = _date.format('YYYY-MM-DD')
-	const hour = _date.format('HH:mm:ss')
+	const _date = parseISO(date)
 
 	// Session counts
 	const paywall_meter = Cookies.get('paywall_meter')
@@ -407,8 +405,8 @@ window.send_fbq_viewContent = () => {
 		content_category: canal,
 		user_status,
 		session_count_views,
-		date,
-		hour,
+		date: format(_date, 'yyyy-mm-dd'),
+		hour: format(_date, 'HH:mm:ss'),
 		author: author.fullname,
 		format: 'article',
 		length: body_length
