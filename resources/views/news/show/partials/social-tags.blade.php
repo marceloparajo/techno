@@ -1,9 +1,6 @@
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 
 		{{-- Facebook --}}
-		<meta property="fb:admins"              content="{{ env('FACEBOOK_ADMINS', '') }}">
-		<meta property="fb:app_id"              content="{{ env('FACEBOOK_APP_ID', '') }}">
-		<meta property="fb:pages"               content="{{ env('FACEBOOK_PAGE_ID', '') }}">
 		<meta property="og:url"                 content="{{ $noticia['permalink'] }}" />
 		<meta property="og:type"                content="article" />
 		<meta property="og:locale"              content="{{ env( "APP_TIME_LOCALE", config('app.locale') ) }}">

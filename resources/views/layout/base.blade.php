@@ -5,6 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="@yield('page-description', 'Periodismo Puro: breaking news, análisis y los mejores columnistas cubriendo los temas más importantes de la Argentina y el mundo')">
+        <meta property="fb:admins"              content="{{ env('FACEBOOK_ADMINS', '') }}">
+        <meta property="fb:app_id"              content="{{ env('FACEBOOK_APP_ID', '') }}">
+        <meta property="fb:pages"               content="{{ env('FACEBOOK_PAGE_ID', '') }}">
         <title>@yield('page-title', env('APP_ALTER_NAME', 'Perfil'))</title>
 
         @shared()
@@ -40,11 +43,10 @@
         <link rel="preconnect" href="https://bidder.criteo.com">
         <link rel="preconnect" href="https://player.performgroup.com">
         <link rel="preconnect" href="https://prg.smartadserver.com">
-        <link rel="preconnect" href="https://onesignal.com">
-        <link rel="preconnect" href="https://ads.us.e-planning.net">
         <link rel="preconnect" href="https://ad.doubleclick.net">
         <link rel="preconnect" href="https://ut.e-planning.video">
         --}}
+        <link rel="preconnect" href="https://ads.us.e-planning.net">
         <link rel="preconnect" href="https://libs.lavoz.com.ar">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         @yield('head-top')
