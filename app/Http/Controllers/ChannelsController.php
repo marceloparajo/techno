@@ -12,6 +12,7 @@ namespace App\Http\Controllers;
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\ImageHelper;
 use App\Http\Helpers\ParseHelper;
+use App\Http\Helpers\UtilsHelper;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
@@ -50,9 +51,12 @@ class ChannelsController extends Controller
      * @param Route $route
      * @return Application|ResponseFactory|Response
      */
-    public function show(Route $route)
+    public function show(Route $route, UtilsHelper $utilsHelper)
     {
         $channel = $route->parameter('channel');
+
+        if (! $utilsHelper->_channelExists($channel)) abort(404);
+
         $payload = $this->apiHelper->getNewsFromChannel($channel);
 
         if (is_null($payload->DATA))
@@ -159,10 +163,11 @@ class ChannelsController extends Controller
 
     /**
      * @param Route $route
+     * @param UtilsHelper $utilsHelper
      * @return Application|Factory|View
      * @throws FileNotFoundException
      */
-    public function showCustomizable(Route $route)
+    public function showCustomizable(Route $route, UtilsHelper $utilsHelper)
     {
         $subchannels_list = [
             [
@@ -221,7 +226,7 @@ class ChannelsController extends Controller
 
             default:
 
-                if (! $this->_channelExists($page)) abort(404);
+                if (! $utilsHelper->_channelExists($page)) abort(404);
                 $payload = $this->apiHelper->getNewsFromMainChannel($channel, $page, 40);
                 $posts = [];
 
@@ -231,29 +236,5 @@ class ChannelsController extends Controller
                 $view_content = view("channels.$channel", compact('posts', 'page', 'subchannels_list'));
                 return response($view_content)->header('Cache-Control', 'max-age=300, public');
         }
-    }
-
-    /**
-     * @param string $channel
-     * @return bool
-     * @throws FileNotFoundException
-     */
-    protected function _channelExists(string $channel)
-    {
-        $site = strtolower(env('SITE_CODE', 'perfil'));
-
-        if (env('RESOURCES_SOURCE', 'file') == 'file') {
-            $diskRsc = Storage::disk('rsc');
-            $path_channels = str_replace('-sitecode-', $site, env('CHANNELS_FILE', ''));
-            $channels = ($diskRsc->exists($path_channels)) ? json_decode($diskRsc->get($path_channels), true) : [];
-        } else {
-            $channels = Cache::remember('channels-list', 1, function () use ($site) {
-                $path = str_replace('-sitecode-', $site, env('CHANNELS_URL', ''));
-                $content = file_get_contents($path);
-                return (is_null($content)) ? null : json_decode($content, true);
-            });
-        }
-
-        return in_array($channel, $channels);
     }
 }

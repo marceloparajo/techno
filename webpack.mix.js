@@ -31,6 +31,7 @@ mix.sass('resources/assets/sass/home-high.scss', 'public/css')
 	.sass('resources/assets/sass/channels-high.scss', 'public/css')
 	.sass('resources/assets/sass/channels-low.scss', 'public/css')
 	.sass('resources/assets/sass/channels-responsive.scss', 'public/css')
+	.sass('resources/assets/sass/pages.scss', 'public/css')
 
 	// REPERFILAR
 	.sass('resources/assets/sass/reperfilar/reperfilar-home-high.scss', 'public/css')
@@ -59,6 +60,7 @@ mix.version([
 	'public/css/channels-high.css',
 	'public/css/channels-low.css',
 	'public/css/channels-responsive.css',
+	'public/css/pages.css',
 	'public/css/reperfilar-home-high.css',
 	'public/css/reperfilar-home-low.css',
 	'public/css/reperfilar-home-responsive.css',

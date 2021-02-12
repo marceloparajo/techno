@@ -6,17 +6,32 @@
  * Time: 11:52
  */
 
-Route::group(['prefix' => 'feed'], function () {
+// Retro-compatibilidad
+Route::get('rss/{channel}', function(string $channel) {
+    $channel = str_replace('.xml', '', $channel);
 
-    Route::get('', [
-        'as' => 'feeds.lastposts',
-        'uses' => 'FeedsController@ultimo_momento'
-    ]);
+    switch ($channel) {
+        case 'ultimo-momento':
+        case 'ultimomomento.xml':
+            return redirect()->route('feeds.channel', '');
+
+        default:
+            return redirect()->route('feeds.channel', $channel);
+
+    }
+});
+
+Route::group(['prefix' => 'feed'], function () {
 
     Route::get('msn', 'FeedsController@msn');
 
     Route::get('googlenews', 'FeedsController@googlenews');
 
     Route::get('facebook', 'FeedsController@facebook');
+
+    Route::get('{channel?}', [
+        'as' => 'feeds.channel',
+        'uses' => 'FeedsController@index'
+    ]);
 
 });

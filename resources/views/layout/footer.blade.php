@@ -11,7 +11,7 @@
 		<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" class="link-social-twitter" itemprop="sameAs" rel="noreferrer"><img src="/images/glyph/footer/twitter.svg"  style="width:20px;height:16.25px" alt="Seguinos en Twitter"  /></a>
 		<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" class="link-social-youtube" itemprop="sameAs" rel="noreferrer"><img src="/images/glyph/footer/youtube.svg"  style="width:20px;height:14px" alt="Seguinos en Youtube" /></a>
 		<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" class="link-social-instagram" itemprop="sameAs" rel="noreferrer"><img src="/images/glyph/footer/instagram.svg" alt="Seguinos en Instagram"  style="width:20px;height:20px" /></a>
-		<a href="{{ route('feeds.lastposts') }}" target="_blank" class="link-social-rss" rel="noreferrer"><img src="/images/glyph/footer/rss.svg"  alt="RSS"  style="width:17px;height:17px" /></a>
+		<a href="{{ route('feeds.channel', '') }}" target="_blank" class="link-social-rss" rel="noreferrer"><img src="/images/glyph/footer/rss.svg"  alt="RSS"  style="width:17px;height:17px" /></a>
 		<a href="https://www.{{ env('APP_NAME', '') }}.com.ar/sitemap" target="_blank" class="link-social-sitemap" rel="noreferrer"><img src="/images/glyph/footer/sitemap.svg"  style="width:20px;height:15px" alt="Sitemap" /></a>
 	</div>
 	<nav class="nav-footer">

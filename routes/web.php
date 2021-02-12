@@ -32,6 +32,8 @@ include (__DIR__ . '/web/lastnews.php');
 
 include (__DIR__ . '/web/mostviewed.php');
 
+include (__DIR__ . '/web/pages.php');
+
 include (__DIR__ . '/web/news.php');
 
 include (__DIR__ . '/web/redirects.php');

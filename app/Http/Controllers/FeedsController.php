@@ -13,7 +13,9 @@ use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\FacebookIAHelper;
 use App\Http\Helpers\ParseHelper;
 use App\Http\Helpers\SimpleXMLExtended;
+use App\Http\Helpers\UtilsHelper;
 use Carbon\Carbon;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
@@ -45,19 +47,30 @@ class FeedsController extends Controller
     }
 
     /**
+     * @param string $channel
+     * @param UtilsHelper|null $utilsHelper
      * @return mixed
+     * @throws FileNotFoundException
      */
-    public function ultimo_momento()
+    public function index(string $channel = '', UtilsHelper $utilsHelper)
     {
-        $data = $this->apiHelper->getLastPost(100, true);
+        if ($channel == '') {
+            $data = $this->apiHelper->getLastPost(50, true);
+            $title = env('APP_ALTER_NAME', 'Perfil');
+        } else {
+            if (! $utilsHelper->_channelExists($channel)) abort(404);
+            $data = $this->apiHelper->getNewsFromChannel($channel);
+            $title = ucwords($channel) . ' | ' . env('APP_ALTER_NAME', 'Perfil');
+        }
+
         $posts = $data->DATA;
 
         $xml = new SimpleXMLExtended('<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"></rss>');
 
         $channel = $xml->addChild('channel');
-        $channel->addChild('title', env('APP_ALTER_NAME', ''));
+        $channel->addChild('title', $title);
         $channel->addChild('link', env('APP_URL', ''));
-        $channel->addChild('description', 'Web de espectáculos de Perfil.com. Información de los famosos de Argentina y el mundo. Todo lo que pasa en la televisión, el teatro, la música y el entretenimiento.');
+        $channel->addChild('description', 'Periodismo Puro: breaking news, análisis y los mejores columnistas cubriendo los temas más importantes de la Argentina y el mundo');
         $channel->addChild('language', config('app.locale'));
         $channel->addChild('copyright', 'Copyright (c) ' . date('Y') . ' Perfil.com');
 
@@ -107,7 +120,7 @@ class FeedsController extends Controller
             }
         }
 
-        return response($xml->asXML(), 200)->header('Content-Type', 'text/xml');
+        return response($xml->asXML())->withHeaders(['Cache-Control' => 'max-age=300, public', 'Content-Type' => 'text/xml']);
     }
 
     /**
