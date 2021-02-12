@@ -1,7 +1,8 @@
 <div class="content-sidebar">
-    <x-ad-space id="sidebar_300x250x-pos-" width="300" height="250" margin-top="0" />
-
     <x-divisas-widget />
+
+    <x-ad-space id="sidebar_sticky" width="300" height="600" margin-top="0" class="d-xs-none d-lg-flex" />
+    <x-ad-space id="sidebar_300x250x-pos-" width="300" height="250" margin-top="0" class="d-lg-none" />
 
     @foreach ($content as $item)
 
@@ -38,7 +39,7 @@
 
         @endswitch
 
-        @if ($loop->iteration % 2)
+        @if ($loop->iteration % 2 && $loop->iteration < 11)
             <x-ad-space id="sidebar_300x250x-pos-" width="300" height="250" />
         @endif
 
