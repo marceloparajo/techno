@@ -19,6 +19,7 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\View as ViewFacade;
 use Illuminate\View\View;
+use simplehtmldom_1_5\simple_html_dom;
 use Sunra\PhpSimple\HtmlDomParser;
 use Illuminate\Support\Str;
 
@@ -72,7 +73,7 @@ class NewsController extends Controller
         else
             $noticia['featured_content'] = 'image';
 
-        $body = $noticia['body']; //$this->_insertContentMiddle($noticia);
+        $body = $this->_insertAdsMiddleBody($noticia['body']);
 
         $displayAuthor = ($noticia['signed']) ? "block":"none";
 
@@ -133,6 +134,19 @@ class NewsController extends Controller
     }
 
     /**
+     * @param string $body
+     * @return string
+     */
+    protected function _insertAdsMiddleBody(string $body): string
+    {
+        $ad_html = '<div style="width: 100%; max-height: 250px; height: 250px; display: flex; flex-direction: column; align-items: center; margin: 10px 0; overflow: hidden;" class="d-lg-none">
+    <div id="" class="ads-space d-lg-none" data-id="central_300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false"></div>
+</div>';
+
+        return $this->_insertContentBetweenParagraphs($body, 2, $ad_html);
+    }
+
+    /**
      * @param Route $route
      * @return Factory|View
      */
@@ -160,109 +174,20 @@ class NewsController extends Controller
     }
 
     /**
-     * @param array $noticia
-     * @param String $type
-     * @return mixed|string
+     * @param string $text
+     * @param int $position
+     * @param string $content
+     * @return simple_html_dom|string
      */
-    protected function _insertContentMiddle(Array $noticia, String $type = '')
+    protected function _insertContentBetweenParagraphs(string $text, int $position, string $content): string
     {
-        $body = $noticia['body'];
-        $cursor_pos = 0;
+        if ($text == '') return $text;
 
-
-        // Busco <p> que sean hijos de ROOT (para agregar contenido dinámico luego)
-        $paragraphs = $this->_getParagraphs($body, 0, 2);
-
-        if (count($paragraphs) >= 2) {
-
-            $relacionadas = $noticia['relacionadas'];
-
-            // Inline (ads)
-            $paragraphs = $this->_getParagraphs($body, $cursor_pos);
-            $html = '<div id="" class="ads-space" data-id="inline" data-w="1" data-h="1" data-loaded="false" data-reload="false"></div>';
-            $pos = $this->_getLastPosOfParagraph($body, $paragraphs[0]);
-            $body = substr_replace($body, $html, $pos, 0);
-            $cursor_pos = $pos + strlen($html);
-
-            // Ubico las demás relacionadas entre N párrafos
-            $destacadas_sin_ubicar = [];
-            foreach (array_slice($relacionadas, 1) as $item) {
-                $paragraphs = $this->_getParagraphs($body, $cursor_pos, env('JUMP_PARAGRAPHS_RELATED', 0));
-
-                if ($this->_checkAppropiateParagraphs($body, $paragraphs)) {
-                    $pos = $this->_getLastPosOfParagraph($body, $paragraphs[0]);
-                    $view = ViewFacade::make('news.show.partials.noticia-relacionada', ['image' => $item['image']['srcs']['thumb'], 'title' => $item['title'], 'url' => $item['permalink'], 'type' => $type]);
-                    $html = $view->render();
-                    $body = substr_replace($body, $html, $pos, 0);
-                    $cursor_pos = $pos + strlen($html);
-                } else
-                    array_push($destacadas_sin_ubicar, $item);
-            }
-
-            // Ubico destacadas que restan al final del cuerpo
-            if (count($destacadas_sin_ubicar)) {
-                $view = ViewFacade::make('news.show.partials.noticias-relacionadas', ['noticias' => $destacadas_sin_ubicar]);
-                $html = $view->render();
-                $body .= $html;
-            }
-        }
-
-        return $body;
-    }
-
-    /**
-     * @param String $body
-     * @param array $paragraphs
-     * @return bool
-     */
-    protected function _checkAppropiateParagraphs(String $body, Array $paragraphs)
-    {
-        if (count($paragraphs) < 2) return false;
-
-        for ($i = 0; $i<=1; $i++) {
-            $pos_start = $paragraphs[$i];
-            $pos_end = $this->_getLastPosOfParagraph($body, $pos_start);
-
-            if (($pos_end - $pos_start) < 25) return false;
-        }
-
-        return true;
-    }
-
-    /**
-     * @param String $body
-     * @param Int $from
-     * @param Int $jump
-     * @return array
-     */
-    protected function _getParagraphs(String $body, Int $from = 0, Int $jump = 0)
-    {
         $htmlDomParser = new HtmlDomParser;
+        $dom = $htmlDomParser::str_get_html($text);
+        $dom->find('p', $position)->innertext = $content;
+        $dom->save();
 
-        $paragraphs = [];
-        $dom = $htmlDomParser::str_get_html($body);
-        $elements = $dom->find('p');
-
-        foreach ($elements as $element) {
-            if ($element->parent->tag == 'root' && $element->tag_start >= $from)
-                array_push($paragraphs, $element->tag_start);
-        }
-
-        return array_slice($paragraphs, $jump);
-
-    }
-
-    /**
-     * @param String $body
-     * @param Int $pos_start
-     * @return bool|int|null
-     */
-    protected function _getLastPosOfParagraph(String $body, Int $pos_start)
-    {
-        if ($pos_start > strlen($body)) return strlen($body);
-
-        $pos = strpos($body, '</p>', $pos_start);
-
-        return ($pos === false) ? null : $pos+4;
+        return $dom;
     }
 }

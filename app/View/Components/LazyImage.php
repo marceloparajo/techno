@@ -118,11 +118,6 @@ class LazyImage extends Component
                 ]);
         }
 
-        /*array_push($images, [
-            'src' => $imagesHelper->generateUrlImage($this->src, '/trim/200/113/'),
-            'width' => '200px'
-        ]);*/
-
         return $images;
     }
 
@@ -148,20 +143,18 @@ class LazyImage extends Component
      * @param string $source
      * @return string|string[]
      */
-    protected function _cleanSource(string $source)
+    protected function _cleanSource(string $source): string
     {
-        $pos = strpos($source, 'trim/');
+        if (! $this->internalImage()) return $source;
 
-        if ($pos != false) {
-            $pos_start = $pos;
+        $source_work = str_replace('https://', '', $source);
+        $source_work = str_replace('http://', '', $source_work);
+        $source_work = rtrim($source_work, '/');
 
-            $pos_next = strpos($source, '/', $pos+5);
-            $pos_next = strpos($source, '/', $pos_next+1);
+        $array_source_work = explode('/', $source_work);
 
-            $pos_end = $pos_next +1;
-
-            $source = substr_replace($source, '', $pos_start, $pos_end - $pos_start);
-        }
+        if (count($array_source_work) > 5)
+            $source = 'https://' . $array_source_work[0] . '/' . $array_source_work[1] . '/' . $array_source_work[2] . '/' . $array_source_work[3] . '/' . end($array_source_work);
 
         return $source;
     }

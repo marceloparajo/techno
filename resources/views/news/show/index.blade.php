@@ -133,7 +133,7 @@
 				@endif
 
 				<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
-				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-lg-none" />
+				<x-ad-space id="320x50x1" width="320" height="50" class="d-lg-none" />
 
 				{{-- Article Body --}}
 				<div class="news-body">
