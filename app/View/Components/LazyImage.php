@@ -29,6 +29,9 @@ class LazyImage extends Component
      */
     public $request_sizes;
 
+    /**
+     * @var array[]
+     */
     public $sizes;
 
     /**
@@ -63,8 +66,9 @@ class LazyImage extends Component
      * @param bool $cleanSource
      * @param string $sizes
      * @param bool $externalImage
+     * @param bool $vertical
      */
-    public function __construct(string $src, string $alt = '', string $class = '', bool $playButton = false, bool $cameraButton = false, int $maxWidth = null, bool $cleanSource = false, string $sizes = '', bool $externalImage = false)
+    public function __construct(string $src, string $alt = '', string $class = '', bool $playButton = false, bool $cameraButton = false, int $maxWidth = null, bool $cleanSource = false, string $sizes = '', bool $externalImage = false, bool $vertical = false)
     {
         $this->src = ($cleanSource) ? $this->_cleanSource($src) : $src;
         $this->alt = $alt;
@@ -75,15 +79,26 @@ class LazyImage extends Component
         $this->request_sizes = ($sizes != '') ? explode(',', $sizes) : [];
         $this->external_image = $externalImage;
 
-        $this->sizes = [
-            ['size' => 200, 'version' => '/trim/200/113/', 'width' => '200px'],
-            ['size' => 300, 'version' => '/trim/300/180/', 'width' => '300px'],
-            ['size' => 500, 'version' => '/trim/540/304/', 'width' => '540px'],
-            ['size' => 700, 'version' => '/trim/720/405/', 'width' => '720px'],
-            ['size' => 900, 'version' => '/trim/960/540/', 'width' => '960px'],
-            ['size' => 1200, 'version' => '/trim/1280/720/', 'width' => '1280px'],
-            ['size' => 1500, 'version' => '/trim/1920/1080/', 'width' => '1500px'],
-        ];
+        if ($vertical)
+            $this->sizes = [
+                ['size' => 200, 'version' => '/200/0/', 'width' => '200px'],
+                ['size' => 300, 'version' => '/300/0/', 'width' => '300px'],
+                ['size' => 500, 'version' => '/540/0/', 'width' => '540px'],
+                ['size' => 700, 'version' => '/720/0/', 'width' => '720px'],
+                ['size' => 900, 'version' => '/960/0/', 'width' => '960px'],
+                ['size' => 1200, 'version' => '/1280/0/', 'width' => '1280px'],
+                ['size' => 1500, 'version' => '/1920/0/', 'width' => '1500px'],
+            ];
+        else
+            $this->sizes = [
+                ['size' => 200, 'version' => '/trim/200/113/', 'width' => '200px'],
+                ['size' => 300, 'version' => '/trim/300/180/', 'width' => '300px'],
+                ['size' => 500, 'version' => '/trim/540/304/', 'width' => '540px'],
+                ['size' => 700, 'version' => '/trim/720/405/', 'width' => '720px'],
+                ['size' => 900, 'version' => '/trim/960/540/', 'width' => '960px'],
+                ['size' => 1200, 'version' => '/trim/1280/720/', 'width' => '1280px'],
+                ['size' => 1500, 'version' => '/trim/1920/1080/', 'width' => '1500px'],
+            ];
     }
 
     /**
