@@ -9,8 +9,6 @@
 	<x-google-tag-manager category="nota" :info="$noticia" />
 @endsection
 
-@section('structured-data-type', 'itemscope itemtype="https://schema.org/NewsArticle"')
-
 @section('ads-sec', 'articulo')
 
 @section('page-title', $noticia['short_title'] . ' | Reperfilar')
@@ -121,7 +119,7 @@
 				@if ($noticia['featured_content'] == 'embed_code')
 					{!! $noticia['embed_code'] !!}
 				@else
-					<figure class="figure btn-open-gallery" itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
+					<figure class="figure btn-open-gallery">
 						@if (count($noticia['gallery']) > 1)
 							<a href="#" role="button" class="btn-open-gallery fotogaleria" title="{{ __('show fotogallery') }}"><i class="fas fa-expand-arrows-alt"></i></a>
 						@endif

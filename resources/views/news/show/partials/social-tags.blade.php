@@ -28,7 +28,7 @@
 		<meta name="twitter:image"              content="{{ $noticia['main_image']['srcs']['big-wide'] }}">
 		<meta name="twitter:image:alt"          content='{{ $noticia['main_image']['caption'] }}'>
 
-		{{-- SCHEMA MICRODATA --}}
+		{{-- SCHEMA MICRODATA
 		<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{ $noticia['permalink'] }}"/>
 		<meta itemprop="datePublished" 			content="{{ $noticia['date_available']->toIso8601String() }}"/>
 		<meta itemprop="dateModified" 			content="{{ $noticia['date_update']->toIso8601String() }}"/>
@@ -40,10 +40,10 @@
 		<meta itemprop="articleSection" 		content="{{ $noticia['channel']['slug'] }}">
 		<meta itemprop="inLanguage" 			content="{{ config('app.locale') }}">
 
-		{{-- Generic --}}
+		{{-- Generic
 		<meta name="editoria" 					content="{{ env('APP_ALTER_NAME', '') }}" />
 		<meta name="dtnoticia" 					content="{{ $noticia['date_available']->toIso8601String() }}" />
 		<meta name="title" 						content="{{ $noticia['short_title'] }}" />
 		<meta name="keywords" 					content="{{ $noticia['tags'] }}" />
 		<meta name="description" 				content="{{ $noticia['headline'] }}">
-		<meta name="news_keywords" 				content="{{ $noticia['tags'] }}">
+		<meta name="news_keywords" 				content="{{ $noticia['tags'] }}">--}}

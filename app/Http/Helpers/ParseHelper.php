@@ -327,9 +327,9 @@ class ParseHelper
             'dateline' => 'Buenos Aires, AR',
             'inLanguage' => env( 'APP_TIME_LOCALE',config('app.locale') ),
             'image' => [
-                $noticia['main_image']['srcs']['cropped']['1x1'],
-                $noticia['main_image']['srcs']['cropped']['4x3'],
-                $noticia['main_image']['srcs']['cropped']['16x9']
+                $this->imageHelper->generateUrlImage($noticia['main_image']['srcs']['original'], '/trim/900/900/'),
+                $this->imageHelper->generateUrlImage($noticia['main_image']['srcs']['original'], '/trim/1040/780/'),
+                $this->imageHelper->generateUrlImage($noticia['main_image']['srcs']['original'], '/trim/1280/720/')
             ],
             'datePublished' => $date_available,
             'dateModified' => $date_available,
