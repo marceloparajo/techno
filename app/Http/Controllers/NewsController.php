@@ -73,7 +73,7 @@ class NewsController extends Controller
         else
             $noticia['featured_content'] = 'image';
 
-        $body = $this->_insertAdsMiddleBody($noticia['body']);
+        $body = $noticia['body'];#$this->_insertAdsMiddleBody($noticia['body']);
 
         $displayAuthor = ($noticia['signed']) ? "block":"none";
 
