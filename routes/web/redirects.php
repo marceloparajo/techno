@@ -6,6 +6,12 @@
  * Time: 23:46
  */
 
+Route::get('amp/noticias/{channel}/{slug}', function (string $channel, string $slug) {
+    $slug = str_replace('.phtml', '', $slug);
+    $url = route('news.amp.show', [$channel, $slug]);
+    return redirect($url, 301);
+});
+
 Route::get('category/{channel}', function ($channel) {
     $route = route('channels.show', $channel);
     return redirect()->to($route, 301);
