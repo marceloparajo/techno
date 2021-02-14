@@ -152,7 +152,7 @@ class NewsController extends Controller
      */
     public function amp(Route $route)
     {
-        $slug = $route->parameter('slug') ?? '';
+        $slug = trim($route->parameter('slug') ?? '');
 
         if ($slug == '')
             abort(404);
