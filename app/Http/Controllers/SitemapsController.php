@@ -44,68 +44,90 @@ class SitemapsController extends Controller
     }
 
     /**
-     * @return Application|ResponseFactory|Response
+     * El índice mostrará los sitemaps disponibles
+     *
+     * /lastposts.xml - Listado de las últimas 100 notas subidas
+     * /google-news-lastposts.xml - Listado de las últimas 1000 noticias (o las que sean de las últimas 48 horas) con el markup de Google News
+     * /channels.xml - Listado de secciones del sitio
+     * /authors.xml - Listado de autores del sitio
+     * /videos.xml - Listado de videos con markup de Google
      */
-    public function showGoogleNewsIndex()
+    public function index()
     {
-        $dates = $this->apiHelper->getLastDatesAvailables();
-        $sitemaps = [];
+        $current_date = Carbon::now();
 
-        if (count($dates['DATA']) <= 0) abort(404);
+        $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?><sitemapindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></sitemapindex>');
 
-        foreach ($dates['DATA'] as $item) {
-            $date = Carbon::createFromFormat('Y-m-d', $item['date']);
-
-            $response = $this->apiHelper->getLastDateAvailableFromDay($date->year, $date->month, $date->day);
-
-            if (count($response) <= 0 || $response['DATA']['date'] == '') continue;
-
-            $date = Carbon::createFromFormat('F, d Y G:i:s P', $response['DATA']['date']);
-            array_push($sitemaps, [
-                'loc' => route('sitemaps.googlenews.day', [$date->year, $date->month, $date->day]),
-                'lastmod' => $date->format('c')
-            ]);
-        }
-
-        $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></sitemapindex>');
-
+        // /lastposts
         $sitemap = $xml->addChild('sitemap');
-        $sitemap->addChild('loc', route('sitemaps.googlenews.videos'));
+        $sitemap->addChild('loc', route('sitemaps.lastposts'));
+        $sitemap->addChild('lastmod', $current_date->toIso8601String());
 
-        foreach ($sitemaps as $item) {
-            $sitemap = $xml->addChild('sitemap');
-            $sitemap->addChild('loc', $item['loc']);
-            $sitemap->addChild('lastmod', $item['lastmod']);
-        }
+        // Google News Lastposts
+        $sitemap = $xml->addChild('sitemap');
+        $sitemap->addChild('loc', route('sitemaps.googlenews.lastposts'));
+        $sitemap->addChild('lastmod', $current_date->toIso8601String());
 
+        // Channels
+        $sitemap = $xml->addChild('sitemap');
+        $sitemap->addChild('loc', route('sitemaps.channels'));
+
+        // Authors
+        $sitemap = $xml->addChild('sitemap');
+        $sitemap->addChild('loc', route('sitemaps.authors'));
+
+        // Videos
+        $sitemap = $xml->addChild('sitemap');
+        $sitemap->addChild('loc', route('sitemaps.videos'));
 
         return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=300, public']);
     }
 
     /**
-     * @param Int $year
-     * @param Int $month
-     * @param Int $day
      * @return Application|ResponseFactory|Response
      */
-    public function showGoogleNewsDay(Int $year, Int $month, Int $day)
+    public function showLastPosts()
     {
-        $response = $this->apiHelper->getNewsFromDay($year, $month, $day);
+        $xml = new SimpleXMLExtended('<?xml version="1.0" encoding="UTF-8" ?><sitemapindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></sitemapindex>');
 
-        if (count($response) <= 0) abort(404);
+        $posts = $this->apiHelper->getLastPost(100, true);
 
-        $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml"></urlset>');
+        foreach ($posts->DATA as $post) {
+            $noticia = $this->parseHelper->parseNoticia($post);
 
-        foreach ($response['DATA'] as $item) {
-            $post = $this->parseHelper->parseNoticia($item);
+            $date_update = (! is_null($noticia['date_update'])) ? $noticia['date_update']->toIso8601String() : $noticia['date_available']->toIso8601String();
 
             $url = $xml->addChild('url');
-            $url->addChild('loc', $post['permalink']);
+            $url->addChild('loc', $noticia['permalink']);
+            $url->addChild('lastmod', $date_update);
+            $url->addChild('changefreq', 'always');
+            $url->addChild('priority', 0.5);
+        }
+
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=120, public']);
+    }
+
+    /**
+     * @return Application|ResponseFactory|Response
+     */
+    public function showGoogleNewsLastPosts()
+    {
+        $xml = new SimpleXMLExtended('<?xml version="1.0" encoding="UTF-8" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml"></urlset>');
+
+        $posts = $this->apiHelper->getLastPost(100, true);
+
+        foreach ($posts->DATA as $post) {
+            $noticia = $this->parseHelper->parseNoticia($post);
+
+            $date_update = (! is_null($noticia['date_update'])) ? $noticia['date_update']->toIso8601String() : $noticia['date_available']->toIso8601String();
+
+            $url = $xml->addChild('url');
+            $url->addChild('loc', $noticia['permalink']);
 
             $image = $url->addChild('image:image', '', 'http://www.google.com/schemas/sitemap-image/1.1');
-            $image->addChild('image:loc', $post['main_image']['srcs']['big-wide']);
-            $image->addChild('image:title', $post['main_image']['title']);
-            $image->addChild('image:caption', $post['main_image']['caption']);
+            $image->addChild('image:loc', $noticia['main_image']['srcs']['full-wide']);
+            $image->addChildWithCDATA('image:title', $noticia['main_image']['title']);
+            $image->addChildWithCDATA('image:caption', $noticia['main_image']['caption']);
 
             $news = $url->addChild('news:news', '', 'http://www.google.com/schemas/sitemap-news/0.9');
             $publication = $news->addChild('news:publication');
@@ -114,20 +136,76 @@ class SitemapsController extends Controller
 
             $news->addChild('news:genres', 'UserGenerated');
 
-            $news->addChild('news:publication_date', $post['date_available']->toIso8601String());
+            $news->addChild('news:publication_date', $date_update);
 
-            $news->addChild('news:title', $post['title']);
-            $news->addChild('news:keywords', $post['tags']);
+            $news->addChild('news:title', $noticia['title']);
+            $news->addChild('news:keywords', $noticia['tags']);
+
         }
 
-        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=60, public']);
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=120, public']);
+
     }
 
     /**
      * @return Application|ResponseFactory|Response
      * @throws FileNotFoundException
      */
-    public function showGoogleNewsVideos()
+    public function showChannels()
+    {
+        $disk = Storage::disk('rsc');
+        $path = 'resources/others/' . strtolower(env('APP_NAME', '')) . '/channels.json';
+
+        if (! $disk->exists($path))
+            abort(404);
+
+        $content = $disk->get($path);
+        $items = json_decode($content, true);
+        $current_date = Carbon::now();
+
+        $xml = new SimpleXMLExtended('<?xml version="1.0" encoding="UTF-8" ?><urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
+
+        foreach ($items as $item) {
+            $loc = route('channels.show', $item);
+
+            $url = $xml->addChild('url');
+            $url->addChild('loc', $loc);
+            $url->addChild('lastmod', $current_date->toIso8601String());
+            $url->addChild('changefreq', 'always');
+            $url->addChild('priority', 0.5);
+        }
+
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=600, public']);
+    }
+
+    /**
+     * @return Application|ResponseFactory|Response
+     */
+    public function showAuthors()
+    {
+        $authors = $this->apiHelper->getAllAuthors();
+        $current_date = Carbon::now();
+
+        $xml = new SimpleXMLExtended('<?xml version="1.0" encoding="UTF-8" ?><urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
+
+        foreach ($authors->DATA as $author) {
+            $loc = route('authors.show', $author['username']);
+
+            $url = $xml->addChild('url');
+            $url->addChild('loc', $loc);
+            $url->addChild('lastmod', $current_date->toIso8601String());
+            $url->addChild('changefreq', 'always');
+            $url->addChild('priority', 0.5);
+        }
+
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=600, public']);
+    }
+
+    /**
+     * @return Application|ResponseFactory|Response
+     * @throws FileNotFoundException
+     */
+    public function showVideos()
     {
         $disk = Storage::disk('rsc');
         $path = 'resources/sitemaps/' . strtolower(env('APP_NAME', '')) . '/videos.json';
@@ -159,14 +237,14 @@ class SitemapsController extends Controller
             }
         }
 
-        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=60, public']);
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=120, public']);
     }
 
     /**
      * @return Application|ResponseFactory|Response
      * @throws FileNotFoundException
      */
-    public function showIndex()
+    public function indexArchive()
     {
         $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?><sitemapindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></sitemapindex>');
 
@@ -193,79 +271,23 @@ class SitemapsController extends Controller
             if ($year <= 0 || $month <= 0)
                 continue;
 
-            $loc = route('sitemaps.show.month', [$date_parts[0], $date_parts[1]]);
+            $loc = route('sitemaps.archive.period', [$date_parts[0], $date_parts[1]]);
 
             $sitemap = $xml->addChild('sitemap');
             $sitemap->addChild('loc', $loc);
             $sitemap->addChild('lastmod', $last_mod);
         }
 
-        // Channels
-        $sitemap = $xml->addChild('sitemap');
-        $sitemap->addChild('loc', route('sitemaps.channels'));
-
-        // Authors
-        $sitemap = $xml->addChild('sitemap');
-        $sitemap->addChild('loc', route('sitemaps.authors'));
-
-        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=60, public']);
+        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=300, public']);
     }
 
     /**
-     * @return Application|ResponseFactory|Response
-     */
-    public function showAuthors()
-    {
-        $authors = $this->apiHelper->getAllAuthors();
-
-        $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?><urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
-
-        foreach ($authors->DATA as $author) {
-            $loc = route('authors.show', $author['username']);
-
-            $url = $xml->addChild('url');
-            $url->addChild('loc', $loc);
-            $url->addChild('changefreq', 'weekly');
-        }
-
-        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=600, public']);
-    }
-
-    /**
+     * @param int $year
+     * @param int $month
      * @return Application|ResponseFactory|Response
      * @throws FileNotFoundException
      */
-    public function showChannels()
-    {
-        $disk = Storage::disk('rsc');
-        $path = 'resources/others/' . strtolower(env('APP_NAME', '')) . '/channels.json';
-
-        if (! $disk->exists($path))
-            abort(404);
-
-        $content = $disk->get($path);
-        $items = json_decode($content, true);
-
-        $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?><urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
-
-        foreach ($items as $item) {
-            $loc = route('channels.show', $item);
-
-            $url = $xml->addChild('url');
-            $url->addChild('loc', $loc);
-            $url->addChild('changefreq', 'weekly');
-        }
-
-        return response($xml->asXML())->withHeaders(['Content-Type' => 'text/xml', 'Cache-Control' => 'max-age=60, public']);
-    }
-
-    /**
-     * @param Int $year
-     * @param Int $month
-     * @return Application|ResponseFactory|Response
-     * @throws FileNotFoundException
-     */
-    public function showMonth(Int $year, Int $month)
+    public function showArchivePeriod(int $year, int $month)
     {
         $disk = Storage::disk('rsc');
         $month = str_pad($month, 2, '0', STR_PAD_LEFT);
@@ -284,6 +306,7 @@ class SitemapsController extends Controller
             $url = $xml->addChild('url');
             $url->addChild('loc', $src);
             $url->addChild('lastmod', $item['lastmod']);
+            $url->addChild('changefreq', 'always');
             $url->addChild('priority', $item['priority']);
         }
 
