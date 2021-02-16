@@ -123,7 +123,7 @@
 				@else
 					<figure class="figure btn-open-gallery">
 						@if (count($noticia['gallery']) > 1)
-							<a href="#" role="button" class="btn-open-gallery fotogaleria" title="{{ __('show fotogallery') }}"><i class="fas fa-expand-arrows-alt"></i></a>
+							<a href="#" role="button" class="btn-open-gallery fotogaleria" title="{{ __('show fotogallery') }}"></a>
 						@endif
 						<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['caption']" max-width="900" />
 						<figcaption class="figure-caption">{{ $noticia['main_image']['caption'] }}<span class="credito-foto"> | {{ $noticia['main_image']['credit']}}</span></figcaption>
@@ -168,11 +168,11 @@
 
 						{{-- Gallery --}}
 						@if (count($noticia['gallery']) > 1)
-							<div class="galeria-imagenes">
-								<h3>{{ __('Image Gallery') }}</h3>
+							<h3>Galería de imágenes</h3>
+							<div class="galeria-imagenes" id="images-gallery">
 								@foreach ($noticia['gallery'] as $image)
 									<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
-										<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}">
+										<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}" class="lazyload" loading="lazy">
 									</a>
 								@endforeach
 							</div>

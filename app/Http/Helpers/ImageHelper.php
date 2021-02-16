@@ -55,6 +55,7 @@ class ImageHelper
             'small-square'      => $this->generateUrlImage($image, '/trim/200/200/'),
             'extra-small-square'=> $this->generateUrlImage($image, '/trim/100/100/'),
             'thumb' => [
+                '100' => $this->generateUrlImage($image, '/cropped/100/100/center/'),
                 '250' => $this->generateUrlImage($image, '/cropped/250/250/center/'),
             ],
             'cropped' => [
