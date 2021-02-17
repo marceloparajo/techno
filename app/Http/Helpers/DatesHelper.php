@@ -20,11 +20,11 @@ class DatesHelper
     public function getDateForHuman(Carbon $date)
     {
         if ($date->isToday()) {
-            return 'Today ' . $date->format('H:i');
+            return 'Hoy ' . $date->format('H:i');
         }
 
         if ($date->isYesterday())
-            return 'Yesterday ' . $date->format('H:i');
+            return 'Ayer ' . $date->format('H:i');
 
         return $date->format('d-m-Y H:i');
     }
