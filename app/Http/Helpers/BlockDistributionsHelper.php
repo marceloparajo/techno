@@ -360,10 +360,6 @@ class BlockDistributionsHelper
                 'template' => 'cobertura'
             ],
             [
-                'id' => 'marcadores-futbol',
-                'template' => 'cobertura'
-            ],
-            [
                 'id' => 'equipo-investigacion',
                 'template' => 'cobertura'
             ],
