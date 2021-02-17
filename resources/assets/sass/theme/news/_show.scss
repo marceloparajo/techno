@@ -121,22 +121,6 @@
 				.embed-responsive-16by9 {
 					padding-bottom: 56.25%;
 				}
-				iframe {
-					width: 100%;
-					&:before {
-						display: block;
-						content: "";
-						width: 100%;
-						padding-top: 56%;
-					}
-					html {
-						position: absolute;
-						top: 0;
-						left: 0;
-						right: 0;
-						bottom: 0;
-					}
-				}
 				.news-body {
 					position: relative;
 					font-size: 1.35rem;
