@@ -1,10 +1,10 @@
-@if (isset($news) && count($news) > 0)
+@if (isset($news) && count($news) > 2)
 
-    @if (isset($news[2]))
 
-        <div class="container cobertura">
+        <!-- Cobertura -->
+        <div class="cobertura">
 
-            <h6>{{ $news[0]['hat'] ?? '' }}</h6>
+            <div class="cobertura-titulo">{{ $news[0]['hat'] ?? '' }}</div>
 
             <div class="notas-cobertura">
 
@@ -19,12 +19,9 @@
                     <article class="articulo decobertura">
                         <figure>
                             <a href="{{ $new['permalink'] }}">
-                                @if ($loop->first)
-                                    <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
-                                    <p class="headline">{{ $new['headline'] }}</p>
-                                @else
-                                    <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="300" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
-                                @endif
+                                <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="700" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+
+                                @if($key != 0)<p class="headline">{{ $new['headline'] }}</p>@endif
                             </a>
                         </figure>
 
@@ -53,14 +50,14 @@
                     @endforeach
                 </div>
 
-                @if (isset($news[5]))
+                @if (isset($news[6]))
 
                 <div class="columna-ancha">
-                    @foreach(array_slice($news, 3, 3) as $key => $new)
+                    @foreach(array_slice($news, 3, 4) as $key => $new)
                     <article class="articulo decobertura">
                         <figure>
                             <a href="{{ $new['permalink'] }}">
-                                <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="300" />
+                                <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" />
                                 <p class="headline">{{ $new['headline'] }}</p>
                             </a>
                         </figure>
@@ -88,8 +85,6 @@
                         </a>
                     </article>
                     @endforeach
-
-                    <x-ad-space id="central_300x250x-pos-" width="300" height="250" />
 
                 </div>
 
@@ -99,7 +94,6 @@
 
         </div><!-- cobertura -->
 
-
-    @endif
+        <x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-md-none" />
 
 @endif
