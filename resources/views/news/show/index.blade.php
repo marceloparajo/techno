@@ -166,7 +166,7 @@
 							{!! $noticia['embed_code'] !!}
 						@endif
 
-						{{-- Gallery --}}
+						{{-- Gallery
 						@if (count($noticia['gallery']) > 1)
 							<h3>Galería de imágenes</h3>
 							<div class="galeria-imagenes" id="images-gallery">
@@ -176,7 +176,7 @@
 									</a>
 								@endforeach
 							</div>
-						@endif
+						@endif --}}
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
