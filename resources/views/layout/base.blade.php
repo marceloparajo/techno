@@ -66,10 +66,10 @@
             window.perfilContent = window.perfilContent || {}
             paywall.queue = window.paywall.queue || []
 
-            window.paywallConfig.loginwallLimit = 40
-            window.paywallConfig.paywallLimit = 80
+            window.paywallConfig.loginwallLimit = 35
+            window.paywallConfig.paywallLimit = 60
             window.paywallConfig.enableSocket = true
-            window.paywallConfig.socketHoursPeriodicity = 3
+            window.paywallConfig.socketHoursPeriodicity = 6
             window.paywallConfig.socketHoursPeriodicitySubs = 24
         </script>
         {{-- /Config Paywall --}}
