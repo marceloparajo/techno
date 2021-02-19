@@ -115,6 +115,52 @@ ARTE Y CULTURA
 			}
 		}
 	}
+	&.deportes {
+		background-color: white;
+		.cobertura-titulo {
+			background:{
+				image: url('../../../img/logo_442.svg');
+				position: right center;
+				repeat: no-repeat;
+			}
+		}
+		.notas-cobertura {
+			.articulo {
+				.embed-responsive-16by9 {
+					padding-bottom: 0;
+					height: 101px;
+					border-radius: 5px;
+				}
+			}
+		}
+		.deportes-doble {
+			width: 100%;
+			padding: 0;
+			.articulo.decobertura {
+				width: 100%;
+				figure {
+					margin: 0 0 5px 0;
+					position: relative;
+					.embed-responsive-16by9 {
+						position: absolute;
+						left: 10px;
+						right: 10px;
+						bottom: 5px;
+						background: rgba(255,255,255,.8);
+						height: 101px;
+					}
+				}
+				.meta-content {
+					padding: 0;
+					a {
+						.hat {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(sm) {
 		.cobertura-titulo {
 			padding: 0;
@@ -141,6 +187,9 @@ ARTE Y CULTURA
 					}
 				}
 			}
+		}
+		&.deportes {
+			padding: 10px 0;
 		}
 	}
 	@include media-breakpoint-up(md) {
@@ -227,11 +276,53 @@ ARTE Y CULTURA
 				}
 			}
 		}
+		&.deportes {
+			.columna-dostercios {
+				width: 65%;
+			}
+			.columna-tercio {
+				width: 33%;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				.articulo.decobertura {
+					width: 100%;
+					&:before {
+						content: none;
+					}
+					.meta-content {
+						padding: 0;
+						a {
+							.hat {
+								display: none;
+							}
+						}
+					}
+					&:first-of-type {
+						.meta-content {
+							p.headline {
+								margin: 7px 0 0 0;
+								display: block;
+								font-size: .8rem;
+							}
+						}
+						padding-bottom: 10px;
+						border-bottom: 1px solid $linea;
+					}
+				}
+			}
+			.deportes-doble {
+				display: flex;
+				justify-content: space-between;
+				.articulo.decobertura {
+					width: 48%;
+				}
+			}
+		}
 	}
 	@include media-breakpoint-up(lg) {
 		.notas-cobertura {
 			.columna-dostercios {
-				//width: 49%;
 				.articulo.decobertura {
 					position: relative;
 					height: 100%;
@@ -292,6 +383,17 @@ ARTE Y CULTURA
 				}
 			}
 		}
+		&.deportes {
+			.deportes-doble {
+				.articulo.decobertura {
+					figure {
+						.embed-responsive-16by9 {
+							height: 131px;
+						}
+					}
+				}
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {
 		.notas-cobertura {
@@ -299,6 +401,71 @@ ARTE Y CULTURA
 				.articulo.decobertura {
 					figure {
 						display: block;
+					}
+				}
+			}
+		}
+		&.deportes {
+			.notas-cobertura {
+				.columna-dostercios{
+					.articulo.decobertura {
+						.meta-content {
+							position: static;
+							padding: 0;
+						}
+						figure {
+							height: auto;
+							margin: 0 0 6px 0;
+						}
+					}
+				}
+				.columna-tercio {
+					.articulo.decobertura {
+						&:first-of-type {
+							.meta-content {
+								a {
+									p.headline {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.deportes-doble {
+				.articulo.decobertura {
+					figure {
+						.embed-responsive-16by9 {
+							height: 101px;
+						}
+					}
+				}				
+			}
+		}
+	}
+	@include media-breakpoint-up(xxl) {
+		&.deportes {
+			.notas-cobertura {
+				justify-content: space-between;
+				.columna-dostercios {
+					width: 49%;
+					.articulo.decobertura {
+						.meta-content {
+							padding: 10px;
+							position: absolute;
+						}
+					}
+				}
+				.columna-tercio {
+					justify-content: space-between;
+					width: 49%;
+					flex-direction: row;
+					.articulo.decobertura {
+						width: 48%;
+						&:before {
+							content: " ";
+						}
 					}
 				}
 			}

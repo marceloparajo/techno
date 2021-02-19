@@ -4,6 +4,7 @@
 	.catastrofe-todas {
 		padding: 0 0 10px 0;
 		background: $negro;
+		width: 100%;
 		article {
 			position: relative;
 			margin-bottom: 10px;
@@ -83,7 +84,7 @@
 			}
 		}
 		@include media-breakpoint-up(sm) {
-			padding: 15px;
+			padding: 10px 10px 1px 10px;
 			article.catastrofe-grande {
 				.meta-content {
 					padding: 0;
@@ -152,35 +153,9 @@
 			}
 		}
 	}
-	@include media-breakpoint-up(lg) {
-		display: flex;
-		.caja-notas {
-			flex: 1 1 0;
-		}
-		.caja-right {
-			flex-basis: 300px;
-			width: 300px;
-			margin: 0 0 0 20px;
-		}
-	}
-	@include media-breakpoint-only(lg) {
-		.caja-notas {
-			.catastrofe-todas {
-				.catastrofe-tres {
-					margin-bottom: 0;
-				}
-				article.catastrofe-grande {
-					.meta-content {
-						h4 {
-							display: none;
-						}
-					}
-				}
-			}
-		}
-	}
+
 	@include media-breakpoint-up(xl) {
-		>.catastrofe-todas {		
+		.catastrofe-todas {		
 			position: relative;
 			article {
 				&.catastrofe-grande {
@@ -199,6 +174,7 @@
 				}
 			}
 			.catastrofe-tres {
+				margin-bottom: 6px;
 				.catastrofe-chica {
 					margin: 0;
 				}

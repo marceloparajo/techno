@@ -1,5 +1,3 @@
-<h1>MARCADORES</h1>
-
 @if (isset($news) && count($news) > 0)
 	<section id="exitoina">
 		<header>
