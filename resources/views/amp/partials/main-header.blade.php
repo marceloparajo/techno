@@ -21,14 +21,14 @@
             @endif
         @endforeach
     </ul>
-    @if (count( $menuHelper->getMenuItems('temas') ) > 1)
+    {{--@if (count( $menuHelper->getMenuItems('temas') ) > 1)
     <ul id="temas-del-dia">
         <li class="link-without-padding"><a class="main-link" href="{{ route('lastnews.show') }}"><i class="fas fa-newspaper"></i> {{ __('topics') }}</a></li>
         @foreach (array_slice($menuHelper->getMenuItems('temas'),1) as $item)
             <li class="link"><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">{{ $item['text'] }}</a></li>
          @endforeach
     </ul>
-    @endif
+    @endif--}}
 </amp-sidebar>
 
 <header class="nav-down nav-transparent">
