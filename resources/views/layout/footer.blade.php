@@ -15,12 +15,32 @@
 		<a href="{{ route('sitemaps.index') }}" target="_blank" class="link-social-sitemap" rel="noreferrer"><img src="/images/glyph/footer/sitemap.svg"  style="width:20px;height:15px" alt="Sitemap" /></a>
 	</div>
 	<nav class="nav-footer">
+		<ul class="footer-secciones">
+			@foreach ($menuHelper->getMenuItems('principal') as $item)
+				<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
+			@endforeach
+		</ul>
+
 		<ul class="footer-revistas">
 			@foreach ($menuHelper->getMenuItems('revistas') as $item)
 			 <li class="{{ $item['class'] }}"><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
 			@endforeach
 		</ul>
+
+		<ul class="footer-fijas">
+			<li><a href="#">Canales RSS</a></li>
+			<li><a href="#">Quienes Somos</a></li>
+			<li><a href="#">Contáctenos</a></li>
+			<li><a href="#">Mediakit</a></li>
+			<li><a href="#">Biblioteca Perfil</a></li>
+			<li><a href="#">Privacidad</a></li>
+			<li><a href="#">Equipo</a></li>
+			<li><a href="#">Reglas de participación</a></li>
+			<li><a href="#">Tránsito</a></li>
+			<li><a href="#">Sitios Perfil</a></li>
+		</ul>
 	</nav>
+
 	<div class="disclaimer">
 		<span itemprop="name">Perfil.com - Editorial Perfil S.A.</span> | © Perfil.com 2006-{{ date('Y') }} - Todos los derechos reservados.<br />
 		Editor responsable: María José Bonacifa.<br>
