@@ -37,8 +37,8 @@
         <a href="{{ route('home.index') }}">
             <amp-img src="{{ asset('img/logo_perfil.svg') }}"
                      alt="Perfil"
-                     height="25"
-                     width="230"
+                     height="20"
+                     width="100"
                      layout="fixed">
             </amp-img>
         </a>

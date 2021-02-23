@@ -58,21 +58,18 @@
     }
 
     header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
         background-color: white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-        height: 50px;
+        height: 44px;
         position: fixed;
-        text-align: center;
         transition: top 0.5s ease-in-out;
         top:0;
         width: 100%;
         z-index: 99999;
-    }
-
-    header .logo {
-        margin: 0 auto;
-        padding: 10px 0 0;
-        width: 60%;
     }
 
     footer {
@@ -127,7 +124,6 @@
         color: black;
         border: 0;
         background-color: transparent;
-        margin: 10px 0 0 10px;
         font-size: 25px;
     }
 
@@ -202,9 +198,8 @@
     }
 
     .sidebar {
-        margin: 50px 0 0 0;
+        margin: 45px 0 0 0;
         padding: 20px 20px 0 0;
-        box-shadow: ;
     }
 
     .sidebar a {
