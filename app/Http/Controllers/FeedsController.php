@@ -129,7 +129,7 @@ class FeedsController extends Controller
      */
     public function msn(Request $request)
     {
-        $key = env('MSN_KEY', '1234');
+        $key = env('FEED_MSN_KEY', '1234');
         if (! $request->has('key') || $key != $request->get('key'))
             abort(404, 'Not found');
 
