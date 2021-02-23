@@ -11,10 +11,8 @@
                 <a href="//batimes.com.ar{{ $new['source_url'] }}">
                     <figure>
                         @if ($loop->first)
-                            <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" max-width="300" />
-                        @else
-                            <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" max-width="200" />
-                        @endif
+<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" sizes="200,300" />                        @else
+<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" sizes="100,200" />                        @endif
                     </figure>
                     <div class="content">
                         <h3>{{ $new['home_title'] }}</h3>
@@ -36,3 +34,7 @@
         <footer><a href="https://batimes.com.ar/" target="_blank" rel="noreferrer">Más en Buenos Aires Times</a></footer>
     </section>
 @endif
+
+
+
+<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" sizes="200,300" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />

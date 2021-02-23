@@ -338,7 +338,7 @@
 			flex-direction: column;
 			transform: translateY(-40px);
 			border-radius: 8px;
-			background: #0072c7;
+			background: $pw-azul-claro;
 			padding: 15px 15px 25px 15px;
 			height: 166px;
 			margin-bottom: -40px;
@@ -371,7 +371,7 @@
 	&.pw-color-invertido {
 		background: #d6dbe0;
 		.pw-zocalo-top {
-			background: #171717;
+			background: $negro;
 		}
 		.pw-zocalo-container {
 			.pw-zocalo-acciones {
@@ -1413,7 +1413,7 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			.pw-zocalo-bloque-b {
-				background: #171717;
+				background: $negro;
 				border-radius: 10px;
 				padding: 10px;
 				margin: 10px 0;

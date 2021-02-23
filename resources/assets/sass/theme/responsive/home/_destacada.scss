@@ -91,11 +91,13 @@
 					figure {
 						display: none;
 					}
-					.embed-responsive {
-						display: none;
-					}
 					.meta-content {
 						padding-top: 0;
+					}
+					&.convideo {
+						.embed-responsive-16by9 {
+							display: none;
+						}
 					}
 				}
 				&.nota-2 {
@@ -228,6 +230,9 @@
 									display: none;
 								}
 							}
+						}
+						.embed-responsive-16by9 {
+							display: block;
 						}
 					}
 				}

@@ -2,8 +2,9 @@
 	margin-bottom: 20px;
 	padding: 0;
 	.catastrofe-todas {
-		padding: 15px;
+		padding: 0 0 10px 0;
 		background: $negro;
+		width: 100%;
 		article {
 			position: relative;
 			margin-bottom: 10px;
@@ -19,39 +20,13 @@
 					}
 				}
 				.meta-content {
-					padding:0;
-					span.hat {
-						font:{
-							family: $font-sinserif;
-							size: 14px;
-							height: 700;
-						}
-						color: $azul;
-						margin: 0;
-						text-transform: uppercase;
-						padding: 0;
-					}
+					padding:0 10px;
 					h2 {
 						font:{
 							size: 1.6rem;
 						}
 						color: white;
 						margin: 0 0 10px 0;
-						line-height: 1.03em;
-						.hat {
-							color: $azul;
-							font-size: 0.98em;
-							font-weight: 600;
-							&:after {
-								content: " / ";
-								font-size: .8em;
-								font-weight: normal;
-								font-family: $font-sinserif;
-								color: $azul;
-								display: inline-block;
-								transform: translateY(-2px);
-							}
-						}
 					}
 					h4 {
 						color: $linea;
@@ -75,7 +50,7 @@
 				}
 			}
 			&.catastrofe-chica {
-				padding-top: 10px;
+				padding: 10px 10px 0 10px;
 				border-top: 1px solid $dark;
 				display: flex;
 				justify-content: space-between;
@@ -88,43 +63,15 @@
 					transform: translateY(-3px);
 					padding: 0 10px;
 					span.hat {
-						font:{
-							family: $font-sinserif;
-							size: 14px;
-							height: 700;
-						}
-						color: $azul;
-						margin: 0;
-						text-transform: uppercase;
-						padding: 0;
 						display: none;
 					}
 					h2 {
 						font:{
-							size: 1.2em;
-							weight: 500;
+							size: 1.2rem;
 						}
-						line-height: 1.08em;
 						color: white;
-						margin-bottom:0;
-						.hat {
-							color: $azul;
-							&:after {
-								content: " / ";
-								font-size: .8em;
-								font-weight: normal;
-								font-family: $font-sinserif;
-								color: $azul;
-								display: inline-block;
-								transform: translateY(-2px);
-							}
-						}
-					}
-					h4 {
-						display: none;
 					}
 					.firma-home {
-						margin-top: 8px;
 						border-top-color: $dark;
 						a {
 							color: $linea;
@@ -137,14 +84,17 @@
 			}
 		}
 		@include media-breakpoint-up(sm) {
+			padding: 10px 10px 1px 10px;
 			article.catastrofe-grande {
 				.meta-content {
+					padding: 0;
 					h2 {
 						font-size: 2rem;
 					}
 				}
 			}
 			article.catastrofe-chica {
+				padding: 10px 0 0 0;
 				.meta-content {
 					h2 {
 						font-size: 1.4rem;
@@ -179,9 +129,6 @@
 						h2 {
 							font-size: 2rem;
 						}
-						h4 {
-							display: block;
-						}
 					}
 				}
 				&.catastrofe-chica {
@@ -205,47 +152,10 @@
 				}
 			}
 		}
-		@include media-breakpoint-up(lg) {
-			article {
-				&.catastrofe-grande {
-					.meta-content {
-						h2 {
-							font-size: 2.4em;
-						}
-					}
-				}
-			}
-		}
 	}
-	@include media-breakpoint-up(lg) {
-		display: flex;
-		.caja-notas {
-			flex: 1 1 0;
-		}
-		.caja-right {
-			flex-basis: 300px;
-			width: 300px;
-			margin: 0 0 0 20px;
-		}
-	}
-	@include media-breakpoint-only(lg) {
-		.caja-notas {
-			.catastrofe-todas {
-				.catastrofe-tres {
-					margin-bottom: 0;
-				}
-				article.catastrofe-grande {
-					.meta-content {
-						h4 {
-							display: none;
-						}
-					}
-				}
-			}
-		}
-	}
+
 	@include media-breakpoint-up(xl) {
-		>.catastrofe-todas {		
+		.catastrofe-todas {		
 			position: relative;
 			article {
 				&.catastrofe-grande {
@@ -264,8 +174,91 @@
 				}
 			}
 			.catastrofe-tres {
+				margin-bottom: 6px;
 				.catastrofe-chica {
 					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+#central-header {
+	.catastrofe {
+		background: $negro;
+		.catastrofe-todas {
+			padding: 0;		
+		}
+		@include media-breakpoint-up(sm) {
+			.catastrofe-todas {
+				max-width: 540px;
+				margin: 0 auto;
+				padding: 10px 0;
+			}
+		}
+		@include media-breakpoint-up(md) {
+			.catastrofe-todas {
+				max-width: 720px;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			margin-top: 20px;
+			.catastrofe-todas {
+				max-width: 960px;
+				.articulo {
+					&.catastrofe-grande {
+						.meta-content {
+							h2 {
+								font-size: 2.4rem;
+							}
+							p.headline {
+								display: block;
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+		@include media-breakpoint-up(xl) {
+			.catastrofe-todas {
+				max-width: 1140px;
+			}
+		}
+		@include media-breakpoint-up(xxl) {
+			.catastrofe-todas {
+				max-width: 1300px;
+				width: 100%;
+				padding: 0;
+				.articulo {
+					&.catastrofe-grande {
+						margin: 10px 0;
+						.meta-content {
+							h2 {
+								font-size: 2.6rem;
+							}
+						}
+					}
+				}
+				.catastrofe-tres {
+					position: absolute;
+					bottom: 6px;
+					left: 0;
+					flex-direction: column;
+					width: 500px;
+					.articulo {
+						&.catastrofe-chica {
+							flex-direction: row;
+							justify-content: space-between;
+							width: 100%;
+							figure {
+								flex-basis: 24%;
+							}
+							.meta-content {
+								flex-basis: 74%;
+							}
+						}
+					}
 				}
 			}
 		}

@@ -78,7 +78,7 @@ return [
 	],
 	[
 		'id' => 'marcadores-futbol',
-		'template' => 'cobertura'
+		'template' => 'marcadores-futbol'
 	],
 	[
 		'id' => 'equipo-investigacion',

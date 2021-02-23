@@ -51,32 +51,98 @@
 	}
 	.nav-footer {
 		width: 100%;
-		background: $fondo-gris;
-		padding: 5px 0;
 		margin: 20px 0 0 0;
-		ul.footer-revistas {
-			font-family: $font-sinserif;
-			margin: 0;
-			padding: 0;
-			text-align: center;
+		font-family: $font-sinserif;
+		ul {
+			&.footer-revistas,
+			&.footer-secciones {
+				display: none;
+			}
+			padding: 10px;
+			column-count: 2;
 			li {
-				display: inline-block;
-				margin: 5px;
 				font-size: .7rem;
 				text-transform: uppercase;
 				a {
 					display: block;
-					border: 1px solid $fondo-gris;
-					border-radius: 3px;
 					padding: 2px 5px;
-					background: $fondo-gris;
-					transition: ease .2s;
-					&:hover {
-						background: white;
-					}
 				}
 			}
 		}
+		@include media-breakpoint-up(sm) {
+			display: flex;
+			text-align: left;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 10px 0;
+			margin: 20px auto 0 auto;
+			max-width: 540px;
+			ul {
+				&.footer-revistas,
+				&.footer-secciones {
+					display: block;
+				}
+				column-count: 1;
+				width: 33%;
+				border-left: 1px solid $linea;
+				padding: 10px 0 0 0;
+				li {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+		@include media-breakpoint-up(md) {
+			max-width: 720px;
+			ul {
+				column-count: 2;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			background: $light;
+			display: block;
+			padding: 10px 0 0 0;
+			max-width: 100%;
+			ul {
+				column-count: 1;
+				border-left: none;
+				padding-left: 0;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				li {
+					width: auto;
+					display: inline-block;
+					margin: 5px 1px;
+					a {
+						border: 1px solid $light;
+						border-radius: 3px;
+						background: $light;
+						transition: ease .2s;
+						&:hover {
+							background: white;
+						}
+					}
+				}
+				&.footer-fijas,
+				&.footer-revistas {
+					background: $fondo-gris;
+					li {
+						a {
+							border: 1px solid $fondo-gris;
+							background: $fondo-gris;
+							&:hover {
+								background: white;
+							}
+						}
+					}
+				}
+				&.footer-fijas {
+					border-top: 1px solid white;
+				}
+			}
+		} 
 	}
 }
 
