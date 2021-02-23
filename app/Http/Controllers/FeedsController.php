@@ -176,11 +176,11 @@ class FeedsController extends Controller
 
             $item->addChild('link', $article['permalink']);
 
-            $item->addChild('dcterms:alternative', $article['home_title'], 'https://purl.org/dc/terms/');
-            $item->addChild('mi:shortTitle', $article['short_title'], 'https://schemas.ingestion.microsoft.com/common/');
+            $item->addChildWithCDATA('dcterms:alternative', $article['home_title'], 'https://purl.org/dc/terms/');
+            $item->addChildWithCDATA('mi:shortTitle', $article['short_title'], 'https://schemas.ingestion.microsoft.com/common/');
 
             $item->addChild('mi:dateTimeWritten', $article['date_available']->toIso8601String(), 'https://schemas.ingestion.microsoft.com/common/');
-            $item->addChild('media:keywords', $post['tags'], 'https://search.yahoo.com/mrss/');
+            $item->addChildWithCDATA('media:keywords', $post['tags'], 'https://search.yahoo.com/mrss/');
 
             $item->addChildWithCDATA('description', $post['headline']);
 
@@ -191,10 +191,10 @@ class FeedsController extends Controller
             $main_image->addAttribute('url', $article['main_image']['srcs']['big-wide']);
             $main_image->addAttribute('type', 'image/jpeg');
             $main_image->addAttribute('medium', 'image');
-            $main_image->addChild('media:credit', $article['main_image']['credit']);
+            $main_image->addChildWithCDATA('media:credit', $article['main_image']['credit']);
         }
 
-        return response($rss->asXML(), 200)->header('Content-Type', 'text/xml');
+        return response($rss->asXML())->withHeaders(['Cache-Control' => 'max-age=300, public', 'Content-Type' => 'text/xml']);
 
     }
 
