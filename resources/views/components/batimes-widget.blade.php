@@ -34,7 +34,3 @@
         <footer><a href="https://batimes.com.ar/" target="_blank" rel="noreferrer">Más en Buenos Aires Times</a></footer>
     </section>
 @endif
-
-
-
-<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" sizes="200,300" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
