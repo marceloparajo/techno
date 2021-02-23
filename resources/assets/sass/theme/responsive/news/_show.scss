@@ -111,6 +111,15 @@
 								margin: auto;
 							}
 						}
+						.galeria-imagenes {
+							a {
+								width: 12%;
+								margin-right: .5%;
+								&:nth-child(n+9) {
+									display: none;
+								}
+							}
+						}
 					}
 					figure {
 						figcaption {
@@ -194,7 +203,8 @@
 									}
 								}
 							}
-							.galeria-imagenes {
+							.galeria-imagenes,
+							.masfotos-gallery {
 								a {
 									box-shadow: none;
 									&:hover {
