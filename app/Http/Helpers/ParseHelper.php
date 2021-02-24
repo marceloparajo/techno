@@ -12,6 +12,12 @@ namespace App\Http\Helpers;
 use Carbon\Carbon;
 use App\Http\Helpers\ImageHelper;
 use Illuminate\Support\Str;
+use PHPHtmlParser\Exceptions\ChildNotFoundException;
+use PHPHtmlParser\Exceptions\CircularException;
+use PHPHtmlParser\Exceptions\ContentLengthException;
+use PHPHtmlParser\Exceptions\LogicalException;
+use PHPHtmlParser\Exceptions\NotLoadedException;
+use PHPHtmlParser\Exceptions\StrictException;
 
 class ParseHelper
 {
@@ -46,9 +52,16 @@ class ParseHelper
 
     /**
      * @param array $noticia
+     * @param bool $process_body
      * @return array
+     * @throws ChildNotFoundException
+     * @throws CircularException
+     * @throws ContentLengthException
+     * @throws LogicalException
+     * @throws NotLoadedException
+     * @throws StrictException
      */
-    public function parseNoticia(Array $noticia)
+    public function parseNoticia(Array $noticia, bool $process_body = true)
     {
         $datesHelper = new DatesHelper();
 
@@ -186,7 +199,9 @@ class ParseHelper
         }
 
         // Body
-        $body = (isset($noticia['body']) && $noticia['body'] != '') ? $this->optimizerHelper->processAll($noticia['body']) : '';
+        $body = (isset($noticia['body']) && $noticia['body'] != '') ? $noticia['body'] : '';
+        if ($process_body)
+            $body = $this->optimizerHelper->processAll($body);
 
         // Permalink
         $permalink = $this->generatePermalink($noticia['permalink']);

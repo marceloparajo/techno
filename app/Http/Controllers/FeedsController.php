@@ -307,7 +307,7 @@ class FeedsController extends Controller
         $channel->addChild('lastBuildDate', $currentDate->toIso8601String());
 
         foreach ($posts as $post) {
-            $article = $this->parseHelper->parseNoticia($post);
+            $article = $this->parseHelper->parseNoticia($post, false);
             $item = $channel->addChild('item');
 
             $item->addChildWithCDATA('title', $article['title']);
