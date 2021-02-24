@@ -58,7 +58,7 @@
 			</div>
 		</div>
 
-		<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
+		<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-xxl-flex" />
 	@endif
 
 @endif
