@@ -8,10 +8,6 @@
 
 @section('ads-sec', 'seccion')
 
-@section('head-top')
-	<link rel="amphtml" href="{{ $amphtml?? "" }}">
-@endsection
-
 @section('head-bottom')
 	@include('partials.taboola-sidebar-header')
 @endsection

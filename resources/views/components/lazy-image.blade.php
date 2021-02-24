@@ -2,14 +2,22 @@
     <picture>
         @foreach ($images() as $image)
             @if ($loop->last)
-                <img alt="{{ $alt }}" class="{{ $class }} lazyload" src="{{ $loadingImage() }}" data-src="{{ $image['src'] }}" style="width: 100%"  loading="lazy">
+                @if ($lazy_load)
+                    <img alt="{{ $alt }}" class="{{ $class }} lazyload" src="{{ $loadingImage() }}" data-src="{{ $image['src'] }}" style="width: 100%"  loading="lazy">
+                @else
+                    <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $image['src'] }}" style="width: 100%">
+                @endif
             @else
-                <source media="(max-width: {{ $image['width'] }})" data-srcset="{{ $image['src'] }}" />
+                <source media="(max-width: {{ $image['width'] }})" @if ($lazy_load) data-srcset="{{ $image['src'] }}" @else srcset="{{ $image['src'] }}" @endif />
             @endif
         @endforeach
     </picture>
 @else
-    <img alt="{{ $alt }}" class="{{ $class }} lazyload" src="{{ $loadingImage() }}" data-src="{{ $src }}"  loading="lazy">
+    @if ($lazy_load)
+        <img alt="{{ $alt }}" class="{{ $class }} lazyload" src="{{ $loadingImage() }}" data-src="{{ $src }}"  loading="lazy">
+    @else
+        <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $src }}">
+    @endif
 @endif
 <noscript><img src="{{ $src }}" alt="{{ $alt }}" itemprop="url" loading="lazy"></noscript>
 @if ($play_button)

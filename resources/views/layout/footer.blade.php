@@ -28,16 +28,13 @@
 		</ul>
 
 		<ul class="footer-fijas">
-			<li><a href="#">Canales RSS</a></li>
-			<li><a href="#">Quienes Somos</a></li>
-			<li><a href="#">Contáctenos</a></li>
-			<li><a href="#">Mediakit</a></li>
-			<li><a href="#">Biblioteca Perfil</a></li>
-			<li><a href="#">Privacidad</a></li>
-			<li><a href="#">Equipo</a></li>
-			<li><a href="#">Reglas de participación</a></li>
-			<li><a href="#">Tránsito</a></li>
-			<li><a href="#">Sitios Perfil</a></li>
+			<li><a href="{{ route('pages.canales.rss') }}">Canales RSS</a></li>
+			<li><a href="{{ asset('static/docs/brochure_perfil.pdf') }}">Quienes Somos</a></li>
+			<li><a href="mailto:editores.online@gmail.com">Contáctenos</a></li>
+			<li><a href="{{ route('pages.tyc') }}">Privacidad</a></li>
+			<li><a href="{{ route('pages.staff') }}">Equipo</a></li>
+			<li><a href="{{ route('pages.reglas.participacion') }}">Reglas de participación</a></li>
+			<li><a href="{{ route('pages.transito') }}">Tránsito</a></li>
 		</ul>
 	</nav>
 

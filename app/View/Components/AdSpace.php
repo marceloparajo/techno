@@ -48,9 +48,14 @@ class AdSpace extends Component
     public $style_width;
 
     /**
-     * @var bool
+     * @var int
      */
-    public $set_max_height;
+    public $min_height;
+
+    /**
+     * @var int|null
+     */
+    public $max_height;
 
     /**
      * Create a new component instance.
@@ -63,9 +68,10 @@ class AdSpace extends Component
      * @param int $marginTop
      * @param int $marginBottom
      * @param string $styleWidth
-     * @param bool $limitHeight
+     * @param int|null $minHeight
+     * @param int|null $maxHeight
      */
-    public function __construct(int $width = 1, int $height = 1, bool $reload = false, string $id = '', string $class = '', int $marginTop = 10, int $marginBottom = 10, string $styleWidth = '100%', bool $limitHeight = true)
+    public function __construct(int $width = 1, int $height = 1, bool $reload = false, string $id = '', string $class = '', int $marginTop = 10, int $marginBottom = 10, string $styleWidth = '100%', int $minHeight = null, int $maxHeight = null)
     {
         $this->width = $width;
         $this->height = $height;
@@ -74,7 +80,8 @@ class AdSpace extends Component
         $this->margin_bottom = $marginBottom;
         $this->margin_top = $marginTop;
         $this->style_width = ($styleWidth == 'auto') ? $width . 'px' : $styleWidth;
-        $this->set_max_height = $limitHeight;
+        $this->min_height = (! is_null($minHeight) && $minHeight > 0) ? $minHeight : $height;
+        $this->max_height = $maxHeight;
         $this->id = $this->_generateId($id);
     }
 

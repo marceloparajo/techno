@@ -14,6 +14,14 @@
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
+    # Redirect m.perfil.com
+    #RewriteCond %{HTTP_HOST} ^(m.)?perfil.com$ [NC]
+    #RewriteRule ^(.*)$ https://www.perfil.com%{REQUEST_URI} [R=301,L]
+
+    # Redirect www.perfil.com.ar
+    RewriteCond %{HTTP_HOST} ^(www.)?perfil.com.ar$ [NC]
+    RewriteRule ^(.*)$ https://www.perfil.com%{REQUEST_URI} [R=302,L]
+
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f

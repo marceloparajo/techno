@@ -55,6 +55,11 @@ class LazyImage extends Component
     public $external_image;
 
     /**
+     * @var bool
+     */
+    public $lazy_load;
+
+    /**
      * Create a new component instance.
      *
      * @param string $src
@@ -68,7 +73,7 @@ class LazyImage extends Component
      * @param bool $externalImage
      * @param bool $vertical
      */
-    public function __construct(string $src, string $alt = '', string $class = '', bool $playButton = false, bool $cameraButton = false, int $maxWidth = null, bool $cleanSource = false, string $sizes = '', bool $externalImage = false, bool $vertical = false)
+    public function __construct(string $src, string $alt = '', string $class = '', bool $playButton = false, bool $cameraButton = false, int $maxWidth = null, bool $cleanSource = false, string $sizes = '', bool $externalImage = false, bool $vertical = false, bool $lazyLoad = true)
     {
         $this->src = ($cleanSource) ? $this->_cleanSource($src) : $src;
         $this->alt = $alt;
@@ -78,6 +83,7 @@ class LazyImage extends Component
         $this->max_width = $maxWidth;
         $this->request_sizes = ($sizes != '') ? explode(',', $sizes) : [];
         $this->external_image = $externalImage;
+        $this->lazy_load = $lazyLoad;
 
         if ($vertical)
             $this->sizes = [

@@ -1,8 +1,7 @@
 <div class="content-sidebar">
     <x-divisas-widget />
 
-    <x-ad-space id="sidebar_sticky" width="300" height="600" margin-top="0" class="d-xs-none d-lg-flex" />
-    <x-ad-space id="sidebar_300x250x-pos-" width="300" height="250" margin-top="0" class="d-lg-none" />
+    <x-ad-space id="sidebar_300x250x-pos-" width="300" height="250" margin-top="0" max-height="600" />
 
     @foreach ($content as $item)
 
