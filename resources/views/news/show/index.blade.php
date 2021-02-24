@@ -168,15 +168,19 @@
 
 						{{-- Gallery
 						@if (count($noticia['gallery']) > 1)
-							<h3>Galería de imágenes</h3>
+							<div class="title-gallery">Galería de imágenes</div>
 							<div class="galeria-imagenes" id="images-gallery">
 								@foreach ($noticia['gallery'] as $image)
 									<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
-										<img src="{{ $image['srcs']['thumb']['250'] }}" alt="{{ $image['caption'] }}" class="lazyload" loading="lazy">
+										<img src="{{ $image['srcs']['thumb']['100'] }}" alt="{{ $image['caption'] }}" class="lazyload" loading="lazy">
 									</a>
 								@endforeach
 							</div>
-						@endif --}}
+						@endif
+						<div class="masfotos-gallery">
+							<a href="#">Mirá más fotos</a>
+						</div> 
+						Gallery --}}
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
