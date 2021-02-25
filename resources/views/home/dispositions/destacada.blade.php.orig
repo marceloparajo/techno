@@ -58,5 +58,9 @@
 		@endforeach
 	</div>
 
-	<x-ad-space id="central_970x90x-pos-" width="970" height="90" margin-top="0" class="d-xs-none d-xxl-flex" min-height="90" max-height="280" />
+<<<<<<< HEAD
+	<x-ad-space id="central_970x90x-pos-" width="970" height="90" margin-top="0" class="d-xs-none d-xxl-flex" />
+=======
+	<x-ad-space id="central_970x90x-pos-" width="970" height="90" margin-top="0" class="d-xs-none d-lg-flex" min-height="90" max-height="280" />
+>>>>>>> 97fe011d85a53af4a148141953edcd6015218945
 @endif
