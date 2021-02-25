@@ -11,9 +11,16 @@ namespace App\Http\Controllers;
 
 use App\Http\Helpers\ApiHelper;
 use App\Http\Helpers\ParseHelper;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Routing\Route;
 use Illuminate\View\View;
+use PHPHtmlParser\Exceptions\ChildNotFoundException;
+use PHPHtmlParser\Exceptions\CircularException;
+use PHPHtmlParser\Exceptions\ContentLengthException;
+use PHPHtmlParser\Exceptions\LogicalException;
+use PHPHtmlParser\Exceptions\NotLoadedException;
+use PHPHtmlParser\Exceptions\StrictException;
 
 class AuthorsController extends Controller
 {
@@ -39,8 +46,25 @@ class AuthorsController extends Controller
     }
 
     /**
+     * @return Application|Factory|View
+     */
+    public function index()
+    {
+        abort(404);
+        $authors = $this->apiHelper->getAllAuthors();
+
+        return view('authors.index', compact('authors'));
+    }
+
+    /**
      * @param Route $route
      * @return Factory|View
+     * @throws ChildNotFoundException
+     * @throws CircularException
+     * @throws ContentLengthException
+     * @throws LogicalException
+     * @throws NotLoadedException
+     * @throws StrictException
      */
     public function show(Route $route)
     {
@@ -67,7 +91,7 @@ class AuthorsController extends Controller
 
         $sectionTitle = __('news of') ." ". $author['firstname']." ". $author['lastname'];
 
-        return view('authors.index', compact('noticias', 'author', 'sectionTitle'));
+        return view('authors.show', compact('noticias', 'author', 'sectionTitle'));
     }
 
     /*public function amp(Route $route, BloquesHelper $bloquesHelper)
