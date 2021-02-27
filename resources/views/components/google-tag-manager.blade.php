@@ -11,7 +11,7 @@
     @elseif ($format == 'fbia')
         <iframe>
             <script>
-                var dataLayer = [{ {!! json_encode( $content, JSON_FORCE_OBJECT | JSON_PRETTY_PRINT ) !!} }];
+                var dataLayer = [ {!! json_encode( $content, JSON_FORCE_OBJECT | JSON_PRETTY_PRINT ) !!} ];
                 (function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0];var j = d.createElement(s);var dl = l != 'dataLayer' ? "&amp;l=" + l : '';j.async = true;j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', '{{ $gtm_fbia_id }}');
             </script>
         </iframe>
