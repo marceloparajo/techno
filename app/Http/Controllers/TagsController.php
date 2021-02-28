@@ -51,7 +51,7 @@ class TagsController extends Controller
         $tag = $route->parameter('tag');
         $payload = $this->apiHelper->getNewsFromTag($tag);
 
-        if (count($payload) <= 0)
+        if (is_null($payload) || count($payload) <= 0)
             abort(404);
 
         $noticias = [];

@@ -253,7 +253,7 @@ class ApiHelper
         return Cache::remember($cache_name, 0.3, function () use ($tag) {
             $tag = urlencode($tag);
             $call = $this->api_server . "&metodo=getnewfromtag&tag=$tag";
-            $payload = file_get_contents($call);
+            @$payload = file_get_contents($call);
             return json_decode($payload, true);
         });
     }

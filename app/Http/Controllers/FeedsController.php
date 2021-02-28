@@ -84,7 +84,7 @@ class FeedsController extends Controller
             $article = $this->parseHelper->parseNoticia($post);
 
             $item = $channel->addChild('item');
-            $item->addChild('title', $article['title']);
+            $item->addChildWithCDATA('title', $article['title']);
             $item->addChild('link', $article['permalink']);
             $item->addChild('pubDate', $article['date_available']->toRfc7231String());
 
