@@ -71,7 +71,7 @@ class AuthorsController extends Controller
         $username = $route->parameter('username');
         $payload = $this->apiHelper->getPostsFromAuthor($username);
 
-        if (is_null($payload->DATA) || count($payload->DATA) <= 0)
+        if (is_null($payload) || is_null($payload->DATA) || count($payload->DATA) <= 0)
             abort(404);
 
         $author = $payload->DATA['author'];

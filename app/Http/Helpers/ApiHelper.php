@@ -10,6 +10,7 @@ namespace App\Http\Helpers;
 
 
 use Illuminate\Support\Facades\Cache;
+use phpDocumentor\Reflection\Element;
 
 class ApiHelper
 {
@@ -117,8 +118,8 @@ class ApiHelper
 
         return Cache::remember($cache_name, 0.3, function () use ($slug, $type) {
             $call = $this->api_server . "&metodo=getnoticia&slugpage=$slug&type=$type&optimize";
-            $payload = file_get_contents($call);
-            return (object) json_decode($payload, true);
+            @$payload = file_get_contents($call);
+            return ($payload) ? (object) json_decode($payload, true) : null;
         });
     }
 
@@ -178,8 +179,9 @@ class ApiHelper
 
         return Cache::remember($cache_name, 0.3, function () use ($username) {
             $call = $this->api_server . "&metodo=getnewsfromauthor&maxrows=50&codeauthor=$username";
-            $payload = file_get_contents($call);
-            return (object) json_decode($payload, true);
+            @$payload = file_get_contents($call);
+
+            return ($payload) ? (object) json_decode($payload, true) : null;
         });
     }
 

@@ -158,7 +158,8 @@ class NewsController extends Controller
             abort(404);
 
         $payload = $this->apiHelper->getNoticia($slug, 'amp');
-        if (is_null($payload->DATA))
+
+        if (is_null($payload) || is_null($payload->DATA))
             abort(404);
 
         $noticia = $this->parseHelper->parseNoticia($payload->DATA);
