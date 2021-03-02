@@ -1,4 +1,4 @@
-@if ($content != '')
+@if ($content->count() > 0)
     <div class="divisas">
         <header class="title-divisas">
             Divisas

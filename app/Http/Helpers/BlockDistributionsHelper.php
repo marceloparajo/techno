@@ -72,8 +72,9 @@ class BlockDistributionsHelper
         $news = $this->_getLastPostsOfSite($site_code);
 
         $payload = [];
-        foreach ($news as $new)
-            array_push($payload, $this->parseHelper->parseNoticia($new));
+        if (! is_null($news))
+            foreach ($news as $new)
+                array_push($payload, $this->parseHelper->parseNoticia($new));
 
         return $payload;
     }
@@ -111,9 +112,11 @@ class BlockDistributionsHelper
 
                 $bloque = (object) $bloques->where('id', $item['id'])->first();
 
-                $bloque_news = Arr::where($sidebarContent, function ($value) use ($item) {
-                    return $value['zone'] == $item['id'];
-                });
+                if (! is_null($sidebarContent))
+                    $bloque_news = Arr::where($sidebarContent, function ($value) use ($item) {
+                        return $value['zone'] == $item['id'];
+                    });
+                else $bloque_news = [];
 
                 $item_news = [];
                 foreach ($bloque_news as $new)
