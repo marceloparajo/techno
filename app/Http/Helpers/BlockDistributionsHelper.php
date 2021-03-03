@@ -10,6 +10,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class BlockDistributionsHelper
 {
@@ -89,8 +90,11 @@ class BlockDistributionsHelper
             $news = $this->_getMostViewedOfSite($site_code);
 
             $payload = [];
-            foreach ($news as $article)
+            foreach ($news as $article) {
+                if (Str::contains($article['pagePath'], '/sitios/')) continue;
                 array_push($payload, $this->parseHelper->_parseMostViewedArticle($article, $site_code));
+            }
+
 
             return $payload;
         });
