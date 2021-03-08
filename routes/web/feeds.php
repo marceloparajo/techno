@@ -29,6 +29,8 @@ Route::group(['prefix' => 'feed'], function () {
 
     Route::get('facebook', 'FeedsController@facebook');
 
+    Route::get('partners', 'FeedsController@partners');
+
     Route::get('{channel?}', [
         'as' => 'feeds.channel',
         'uses' => 'FeedsController@index'

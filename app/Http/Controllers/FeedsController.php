@@ -22,6 +22,12 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\View;
+use PHPHtmlParser\Exceptions\ChildNotFoundException;
+use PHPHtmlParser\Exceptions\CircularException;
+use PHPHtmlParser\Exceptions\ContentLengthException;
+use PHPHtmlParser\Exceptions\LogicalException;
+use PHPHtmlParser\Exceptions\NotLoadedException;
+use PHPHtmlParser\Exceptions\StrictException;
 
 class FeedsController extends Controller
 {
@@ -331,6 +337,87 @@ class FeedsController extends Controller
         }
 
         return response($rss->asXML(), 200)->header('Content-Type', 'text/xml');
+
+    }
+
+    /**
+     * @param Request $request
+     * @return Application|ResponseFactory|Response
+     * @throws ChildNotFoundException
+     * @throws CircularException
+     * @throws ContentLengthException
+     * @throws LogicalException
+     * @throws NotLoadedException
+     * @throws StrictException
+     */
+    public function partners(Request $request)
+    {
+        $key = env('FEED_PARTNERS_KEY', '1234');
+        if ($request->get('key', '') != $key)
+            abort(403, 'No tiene permiso');
+
+        $categ = $request->get('category', '');
+
+        $data = ($categ == '') ? $data = $this->apiHelper->getLastNewsWithBody() : $data = $this->apiHelper->getNewsFromChannelWithBody($categ);
+
+        $posts = $data['DATA'];
+
+        $xml = new SimpleXMLExtended('<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"></rss>');
+
+        $channel = $xml->addChild('channel');
+        $channel->addChild('title', env('APP_ALTER_NAME', ''));
+        $channel->addChild('link', env('APP_URL', ''));
+        $channel->addChildWithCDATA('description', env('SITE_DESCRIPTION', '') . ' (Servicio para Partners)');
+        $channel->addChild('language', config('app.locale'));
+        $channel->addChild('copyright', 'Copyright (c) ' . date('Y') . ' Perfil.com');
+
+        $logo = $channel->addChild('image');
+        $logo->addChild('url', asset('img/favicon/apple-icon-114x114.png'));
+        $logo->addChildWithCDATA('title', env('APP_ALTER_NAME', ''));
+        $logo->addChild('link', env('APP_URL', ''));
+
+        foreach ($posts as $post) {
+            $article = $this->parseHelper->parseNoticia($post);
+
+            $item = $channel->addChild('item');
+
+            $guid = $item->addChild('guid', $article['id']);
+            $guid->addAttribute('isPermaLink', 'false');
+
+            $item->addChildWithCDATA('title', $article['title']);
+            $item->addChild('link', $article['permalink']);
+            $item->addChild('pubDate', $article['date_available']->toRfc7231String());
+
+            $category = $item->addChild('category', $article['channel']['name']);
+            $category->addAttribute('slug', $article['channel']['slug']);
+
+            $image = $item->addChild('media:content', '', 'http://search.yahoo.com/mrss/');
+            $image->addAttribute('url', $article['main_image']['srcs']['full-wide']);
+            $image->addAttribute('medium', 'image');
+            $image->addAttribute('type', 'image/jpeg');
+            $image->addAttribute('width', '1920');
+            $image->addAttribute('height', '1080');
+
+            $enclosure = $item->addChild('enclosure');
+            $enclosure->addAttribute('url', $article['main_image']['srcs']['full-wide']);
+            $enclosure->addAttribute('length', 1920);
+            $enclosure->addAttribute('type', 'image/jpg');
+
+            $item->addChildWithCDATA('description', $article['headline']);
+
+            // Author
+            if ($article['credit'] != '')
+                $author = $article['credit'];
+            else
+                $author = $article['author']['fullname'];
+
+            $item->addChildWithCDATA('author', $author);
+
+            $body = preg_replace('/[\x00-\x1F\x7F]/', '', $post['body']);
+            $item->addChildWithCDATA('content:encoded', $body, 'https://purl.org/rss/1.0/modules/content/');
+        }
+
+        return response($xml->asXML(), 200)->header('Content-Type', 'text/xml');
 
     }
 }
