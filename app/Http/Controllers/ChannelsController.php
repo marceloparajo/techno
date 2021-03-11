@@ -23,6 +23,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
+use PHPHtmlParser\Exceptions\ContentLengthException;
 
 class ChannelsController extends Controller
 {
@@ -166,6 +167,12 @@ class ChannelsController extends Controller
      * @param UtilsHelper $utilsHelper
      * @return Application|Factory|View
      * @throws FileNotFoundException
+     * @throws \PHPHtmlParser\Exceptions\ChildNotFoundException
+     * @throws \PHPHtmlParser\Exceptions\CircularException
+     * @throws ContentLengthException
+     * @throws \PHPHtmlParser\Exceptions\LogicalException
+     * @throws \PHPHtmlParser\Exceptions\NotLoadedException
+     * @throws \PHPHtmlParser\Exceptions\StrictException
      */
     public function showCustomizable(Route $route, UtilsHelper $utilsHelper)
     {
@@ -193,7 +200,7 @@ class ChannelsController extends Controller
         ];
 
         $page = $route->parameter('channel') ?? 'home';
-        $channel = str_replace('/{channel}', '', $route->uri);
+        $channel = str_replace('/{channel?}', '', $route->uri);
 
         share([
             'eplanning' => [

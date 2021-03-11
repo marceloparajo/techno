@@ -8,7 +8,7 @@
 
 Route::get('columnistas', 'ChannelsController@showColumnistas')->name('channels.columnistas.show');
 
-Route::group(['prefix' => __('path section')], function () {
+Route::group(['prefix' => 'seccion'], function () {
 
     Route::get('{channel}', [
         'as' => 'channels.show',
