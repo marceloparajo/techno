@@ -130,7 +130,7 @@
     </head>
 
     <body class="@yield('body-class', '')">
-        @include('layout.header')
+        <x-header />
 
         @yield('body')
 
