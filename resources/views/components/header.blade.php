@@ -1,5 +1,5 @@
 <div class="pre-header supercontenedor">
-    <div class="header-fecha">{{ $current_date->isoFormat('DD [de] MMMM [del] YYYY') }}</div>
+    <div class="header-fecha">{{ $current_date->isoFormat('dddd DD [de] MMMM [del] YYYY') }}</div>
     <div class="header-data">
         <nav class="more-sites">
             <ul>

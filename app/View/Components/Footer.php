@@ -2,22 +2,13 @@
 
 namespace App\View\Components;
 
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
-class Header extends Component
+class Footer extends Component
 {
-    /**
-     * @var Carbon
-     */
-    public $current_date;
-
-    /**
-     * @var mixed
-     */
     protected $menu_items;
 
     /**
@@ -27,10 +18,8 @@ class Header extends Component
      */
     public function __construct()
     {
-        setlocale(LC_TIME, env('APP_TIME_LOCALE'));
-        $this->current_date = Carbon::now();
-
         $this->menu_items = $this->_load_menu();
+
     }
 
     /**
@@ -40,15 +29,7 @@ class Header extends Component
      */
     public function render()
     {
-        return view('components.header');
-    }
-
-    /**
-     * @return array
-     */
-    public function topics(): array
-    {
-        return $this->_get_menu('temas');
+        return view('components.footer');
     }
 
     /**

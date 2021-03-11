@@ -130,7 +130,7 @@
         <div id="pw-content"></div>
         {{--<x-ad-space id="anuncioprevio" margin-top="0" margin-bottom="0" width="1" height="1" />--}}
 
-        @include('layout.footer')
+        <x-footer />
 
         @yield('templates')
 
