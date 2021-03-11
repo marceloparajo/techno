@@ -39,13 +39,6 @@
         <meta name="theme-color" content="#ffffff">
         {{-- /Favicons --}}
 
-        {{--
-        <link rel="preconnect" href="https://bidder.criteo.com">
-        <link rel="preconnect" href="https://player.performgroup.com">
-        <link rel="preconnect" href="https://prg.smartadserver.com">
-        <link rel="preconnect" href="https://ad.doubleclick.net">
-        <link rel="preconnect" href="https://ut.e-planning.video">
-        --}}
         <link rel="preconnect" href="https://ads.us.e-planning.net">
         <link rel="preconnect" href="https://libs.lavoz.com.ar">
         <link rel="preconnect" href="https://fonts.gstatic.com">
