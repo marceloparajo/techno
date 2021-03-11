@@ -1,3 +1,5 @@
+@inject('menuHelper', "App\Http\Helpers\MenuHelper")
+
 <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay" side="left">
     <nav toolbar="(max-width: 767px)" toolbar-target="target-element">
         <ul>

@@ -1,5 +1,3 @@
-@inject('menuHelper', "App\Http\Helpers\MenuHelper")
-
 <!doctype html>
 <html amp lang="es">
     <head>
