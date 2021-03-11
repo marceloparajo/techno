@@ -190,6 +190,15 @@
 				</div>
 				{{-- /Article Body --}}
 
+				{{-- Facebook Comments --}}
+				<div class="comments">
+					<div class="col-12">
+						<h4></h4>
+						<div class="fb-comments" data-href="{{ $noticia['permalink'] }}" data-width="100%" data-numposts="3" data-colorscheme="light"></div>
+					</div>
+				</div>
+				{{-- / Facebook Comments --}}
+
 				{{-- Noticias sugeridas de otros sitios/revistas --}}
 				<x-suggested-site-news />
 
