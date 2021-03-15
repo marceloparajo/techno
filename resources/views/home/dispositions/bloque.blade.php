@@ -118,7 +118,7 @@
 
 				@endforeach
 
-				<x-ad-space id="central_300x250x-pos-" width="300" height="250" min-height="50" max-height="250" />
+				<x-ad-space id="central_300x250x-pos-" width="300" height="250" min-height="250" max-height="250" />
 			</div>
 
 		</div>

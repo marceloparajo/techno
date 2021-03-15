@@ -52,7 +52,7 @@
 			</article>
 
 			@if($loop->first)
-				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-sm-none" min-height="50" max-height="250" />
+				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-sm-none" min-height="250" max-height="250" />
 			@endif
 
 		@endforeach
