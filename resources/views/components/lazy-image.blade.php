@@ -3,7 +3,7 @@
         @foreach ($images() as $image)
             @if ($loop->last)
                 @if ($lazy_load)
-                    <img alt="{{ $alt }}" class="{{ $class }} lazyload" src="{{ $loadingImage() }}" data-src="{{ $image['src'] }}" style="width: 100%"  loading="lazy">
+                    <img alt="{{ $alt }}" class="{{ $class }} lazyload" src="{{ $loadingImage() }}" data-src="{{ $image['src'] }}" style="width: 100%">
                 @else
                     <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $image['src'] }}" style="width: 100%">
                 @endif
@@ -19,7 +19,6 @@
         <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $src }}">
     @endif
 @endif
-<noscript><img src="{{ $src }}" alt="{{ $alt }}" itemprop="url" loading="lazy"></noscript>
 @if ($play_button)
     <div class="galeria-video"><img src="{{ asset('images/glyph/hasvideo.svg') }}" class="hasvideo" style="width:20px;height:18px"></div>
 @endif

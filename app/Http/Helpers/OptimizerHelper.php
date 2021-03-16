@@ -4,6 +4,7 @@
 namespace App\Http\Helpers;
 
 
+use App\View\Components\LazyImage;
 use Illuminate\Support\Str;
 use PHPHtmlParser\Dom;
 use PHPHtmlParser\Exceptions\ChildNotFoundException;
@@ -201,7 +202,7 @@ class OptimizerHelper
      */
     protected function _generateSrcsetImages(string $src, string $alt = '')
     {
-        $html = '<picture>';
+        $html = '<figure><picture>';
 
         $image = $this->imageHelper->generateUrlImage($src, '/300/0/');
         $html .= '<source media="(max-width: 350px)" data-srcset="' . $image . '" />';
@@ -213,9 +214,9 @@ class OptimizerHelper
         $html .= '<source media="(max-width: 800px)" data-srcset="' . $image . '" />';
 
         $image = $this->imageHelper->generateUrlImage($src, '/960/0/');
-        $html .= '<img alt="' . $alt . '" class="lazyload" src="' . $image . '">';
+        $html .= '<img alt="' . $alt . '" class="lazyload" data-src="' . $image . '">';
 
-        $html .= '</picture>';
+        $html .= '</picture></figure>';
 
         return $html;
     }
