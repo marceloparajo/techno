@@ -1,58 +1,5 @@
 .perfil-noticia {
 	.supercontenedor {
-		padding-top: 10px;
-		&.pre-header {
-			padding-top: 3px;
-		}
-		&.main-header {
-			padding-top: 0;
-		}
-		.articulo-header {
-			width: 100%;
-			padding: 0 10px;
-			display: flex;
-			flex-direction: column;
-			margin-bottom: 1em;
-			.hat {
-				line-height: 1em;
-				padding: 0 0 5px 0;
-				border-bottom: 1px solid $linea;
-				font: {
-					family: $font-sinserif;
-					size: 0.9rem;
-					weight: 400;
-				}
-				color: $azul;
-				a {
-					display: none;
-				}
-				span {
-					&.volanta {
-						font-weight: 600;
-						text-transform: uppercase;
-					}
-				}
-				.hat-fecha {
-					display: none;
-				}
-			}
-			h1 {
-				font: {
-					size: 2.47rem;
-				}
-			}
-			h2 {
-				font:{
-					size: 1.45rem;
-					weight: 400;
-				}
-				margin: 10px 0;
-			}
-			h3 {
-				font-size: 1.2em;
-				margin: 16px 0 10px 0;
-			}
-		}
 		.container {
 			.main-article {
 				width: 100%;

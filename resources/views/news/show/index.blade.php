@@ -131,7 +131,7 @@
 				@endif
 
 				<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" min-height="90" max-height="280" />
-				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-lg-none" min-height="50" max-height="250" />
+				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-lg-none" min-height="250" max-height="250" />
 
 				{{-- Article Body --}}
 				<div class="news-body">
@@ -179,7 +179,7 @@
 						@endif
 						<div class="masfotos-gallery">
 							<a href="#">Mirá más fotos</a>
-						</div> 
+						</div>
 						Gallery --}}
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
