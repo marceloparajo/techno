@@ -66,7 +66,7 @@ class OptimizerHelper
             if (Str::contains($script_element, 'async'))
                 $html = str_replace('async', 'defer', $script_element);
             elseif (! Str::contains($script_element, 'defer'))
-                $html = substr_replace($script_element, ' defer', 7);
+                $html = substr_replace($script_element, ' defer', 7, 0);
             else
                 $html = $script_element;
 
