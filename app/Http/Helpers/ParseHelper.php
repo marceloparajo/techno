@@ -209,6 +209,17 @@ class ParseHelper
         // Embed code
         $embed_code = $this->optimizerHelper->optimizeIframes($noticia['embed_code'] ?? '');
 
+        // Issue (Edición impresa)
+        $issue = (! isset($noticia['issue']) || is_null($noticia['issue'])) ? null : [
+            'id' => $noticia['issue']['id'],
+            'name' => $noticia['issue']['name'],
+            'slug' => $noticia['issue']['slug'],
+            'date' => Carbon::createFromFormat('F, d Y H:i:s O', $noticia['issue']['date']),
+            'number' => $noticia['issue']['number'],
+            'year' => $noticia['issue']['year'],
+            'year_roman' => $noticia['issue']['year_roman']
+        ];
+
         return [
             'id' => $noticia['id'],
             'slug' => $noticia['slug'] ?? '',
@@ -268,7 +279,8 @@ class ParseHelper
             'metadata' => (isset($noticia['metadata'])) ? $noticia['metadata'] : [],
             'previous_news' => (isset($noticia['previous_news'])) ? $noticia['previous_news'] : [],
             'has_video'=> $noticia['has_video']?? false,
-            'has_gallery'=> $noticia['has_gallery']?? false
+            'has_gallery'=> $noticia['has_gallery']?? false,
+            'issue' => $issue
         ];
     }
 
