@@ -9,7 +9,7 @@
 			<article class="notaEducacion">
 				<a href="{{ $new['permalink'] }}">
 					<figure>
-						<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" max-width="300" />
+						<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" max-width="300" />
 					</figure>
 					<div class="content">
 						<h3>{{ $new['home_title'] }}</h3>

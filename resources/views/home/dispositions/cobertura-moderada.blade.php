@@ -39,7 +39,7 @@
 						<article class="cobertura-nota">
 							<a href="{{ $news[0]['permalink'] }}">
 								<figure>
-									<x-lazy-image :src="$news[0]['main_image']['srcs']['original']" :alt="$news[0]['main_image']['caption']" class="img-fluid" max-width="500" />
+									<x-lazy-image :src="$news[0]['main_image']['srcs']['original']" :alt="$news[0]['main_image']['title']" class="img-fluid" max-width="500" />
 								</figure>
 								<div class="meta-content">
 									<h2>{{ $news[0]['home_title'] }}</h2>
@@ -75,7 +75,7 @@
 						<article class="cobertura-nota-porcuatro">
 							<a href="{{ $new['permalink'] }}">
 								<figure>
-									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" />
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="500" />
 								</figure>
 								<div class="meta-content">
 									<h2>{{ $new['home_title'] }}</h2>
@@ -102,7 +102,7 @@
 						<article class="cobertura-nota-porcinco">
 							<a href="{{ $new['permalink'] }}">
 								<figure>
-									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" />
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="500" />
 								</figure>
 								<div class="meta-content">
 									<h2>{{ $new['home_title'] }}</h2>

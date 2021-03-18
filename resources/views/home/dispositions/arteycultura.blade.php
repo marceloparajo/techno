@@ -21,9 +21,9 @@
 						 >
 							<a href="{{ $new['permalink'] }}">
 								@if ($key == 0)
-									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 								@else
-									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="300" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="300" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 								@endif
 								@if($key != 0)
 								<p class="headline">{{ $new['headline'] }}</p>

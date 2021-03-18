@@ -11,9 +11,9 @@
 				<a href="{{ $new['permalink'] }}">
 					<figure>
 						@if ($loop->first)
-							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" sizes="200,300" />
+							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" sizes="200,300" />
 						@else
-							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" max-width="200" />
+							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" max-width="200" />
 						@endif
 					</figure>
 					<div class="content">

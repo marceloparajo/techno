@@ -8,14 +8,14 @@
 		<div class="notas-cobertura">
 			@if (count($news) == 2)
 
-				<div class="deportes-doble"> 
+				<div class="deportes-doble">
 
 					@foreach(array_slice($news, 0, 2) as $key => $new)
 
 						<article class="articulo decobertura">
 							<figure>
 								<a href="{{ $new['permalink'] }}">
-									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="700" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+									<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="700" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 
 									@if($key != 0)<p class="headline">{{ $new['headline'] }}</p>@endif
 								</a>
@@ -66,7 +66,7 @@
 					<article class="articulo decobertura">
 						<figure>
 							<a href="{{ $new['permalink'] }}">
-								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="700" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+								<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="700" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
 
 								@if($key != 0)<p class="headline">{{ $new['headline'] }}</p>@endif
 							</a>

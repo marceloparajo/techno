@@ -5,7 +5,7 @@
         <article class="articulo derevistas">
             <figure>
                 <a href="{{ $news[0]['permalink'] }}" rel="noreferrer">
-                    <x-lazy-image :src="$news[0]['main_image']['srcs']['original']" :alt="$news[0]['main_image']['caption']" class="img-fluid" max-width="500" />
+                    <x-lazy-image :src="$news[0]['main_image']['srcs']['original']" :alt="$news[0]['main_image']['title']" class="img-fluid" max-width="500" />
                 </a>
             </figure>
 
@@ -31,7 +31,7 @@
                 <article class="articulo derevistas">
                     <figure>
                         <a href="{{ $new['permalink'] }}" rel="noreferrer">
-                            <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" />
+                            <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="500" />
                         </a>
                     </figure>
 

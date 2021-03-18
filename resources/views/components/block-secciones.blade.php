@@ -7,7 +7,7 @@
         <div class="seccionfija {{ $id_seccion }}">
 
             <div class="seccion-fija-titulo">
-                
+
 
 
             @switch($id_seccion)
@@ -37,7 +37,7 @@
 
                         <figure>
                             <a href="{{ $new['permalink'] }}" target="_blank"  rel="noreferrer">
-                                <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
+                                <x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="500" :play-button="$new['has_video']" :camera-button="$new['has_gallery']" />
                                 <p class="headline">
                                     {{ $new['headline'] }}
                                 </p>

@@ -125,7 +125,7 @@
 						@if (count($noticia['gallery']) > 1)
 							<a href="#" role="button" class="btn-open-gallery fotogaleria" title="{{ __('show fotogallery') }}"></a>
 						@endif
-						<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['caption']" max-width="900" :lazy-load="false" />
+						<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['title']" max-width="900" :lazy-load="false" />
 						<figcaption class="figure-caption">{{ $noticia['main_image']['caption'] }}<span class="credito-foto"> | {{ $noticia['main_image']['credit']}}</span></figcaption>
 					</figure>
 				@endif

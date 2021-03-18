@@ -10,9 +10,9 @@
 				<a href="{{ $new['permalink'] }}">
 					<figure>
 						@if ($loop->first)
-							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" max-width="300" loading="lazy" class="img-fluid" />
+							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" max-width="300" loading="lazy" class="img-fluid" />
 						@else
-							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" max-width="200" loading="lazy" class="img-fluid" />
+							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" max-width="200" loading="lazy" class="img-fluid" />
 						@endif
 					</figure>
 					<div class="content">

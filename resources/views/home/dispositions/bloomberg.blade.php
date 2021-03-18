@@ -21,9 +21,9 @@
 							<figure>
 								<a href="{{ $new['permalink'] }}">
 									@if ($loop->iteration <= 2)
-										<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="500"/>
+										<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="500"/>
 									@else
-										<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="300"/>
+										<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="300"/>
 									@endif
 								</a>
 							</figure>

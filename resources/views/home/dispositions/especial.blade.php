@@ -5,7 +5,7 @@
 				<article class="articulo">
 					<figure>
 						<a href="{{ $new['permalink'] }}">
-							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['caption']" class="img-fluid" max-width="1000" />
+							<x-lazy-image :src="$new['main_image']['srcs']['original']" :alt="$new['main_image']['title']" class="img-fluid" max-width="1000" />
 						</a>
 					</figure>
 					<div class="meta-content">
