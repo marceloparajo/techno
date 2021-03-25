@@ -60,7 +60,7 @@ class ChannelsController extends Controller
 
         $payload = $this->apiHelper->getNewsFromChannel($channel);
 
-        if (is_null($payload->DATA))
+        if (is_null($payload->DATA) || count($payload->DATA) <= 0)
             abort(404);
 
         $posts = $payload->DATA;

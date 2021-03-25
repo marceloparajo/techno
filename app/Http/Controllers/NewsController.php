@@ -79,9 +79,11 @@ class NewsController extends Controller
 
         // ----- PAYWALL -----
         $has_edition = isset($noticia['issue']) && !is_null( $noticia['issue']);
-        $noticia['paywall_type'] = ($has_edition) || (!isset($noticia['paywall_type']) || is_null( $noticia['paywall_type']))
-            ? 'poroso'
-            : $noticia['paywall_type'];
+
+        if ($has_edition)
+            $noticia['paywall_type'] = 'magico';
+        else if (! isset($noticia['paywall_type']) || $noticia['paywall_type'] == '')
+            $noticia['paywall_type'] = 'poroso';
 
         switch ($noticia['paywall_type']) {
             case 'abierto':

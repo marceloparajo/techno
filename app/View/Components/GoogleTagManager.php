@@ -147,7 +147,19 @@ class GoogleTagManager extends Component
             'articleWordCounter' => str_word_count( strip_tags( $this->info['body'] ), 0 ),
 
             'articleLayout' => 'default',
-            'articleScrollLimit' => 'false'
+            'articleScrollLimit' => 'false',
+
+            // Paywall
+            "articlePaywallType" => $this->info['paywall_type'],
+
+            // Issue
+            "pressEditionNumber" => (! is_null($this->info['issue'])) ? $this->info['issue']['number'] : '',
+            "pressEditionYear" => (! is_null($this->info['issue']) && ! is_null($this->info['issue']['year'])  ) ? $this->info['issue']['year'] : '',
+            "pressEditionYearRoman" => (! is_null($this->info['issue'])) ? $this->info['issue']['year_roman'] : '',
+            "pressEditionSlug" => (! is_null($this->info['issue'])) ? $this->info['issue']['slug'] : '',
+            "pressEditionDescription" => (! is_null($this->info['issue'])) ? $this->info['issue']['name'] : ''
+
+
         ];
     }
 

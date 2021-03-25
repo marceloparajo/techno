@@ -61,7 +61,7 @@ class ParseHelper
      * @throws NotLoadedException
      * @throws StrictException
      */
-    public function parseNoticia(Array $noticia, bool $process_body = true)
+    public function parseNoticia(Array $noticia, bool $process_body = true): array
     {
         $datesHelper = new DatesHelper();
 
@@ -280,7 +280,8 @@ class ParseHelper
             'previous_news' => (isset($noticia['previous_news'])) ? $noticia['previous_news'] : [],
             'has_video'=> $noticia['has_video']?? false,
             'has_gallery'=> $noticia['has_gallery']?? false,
-            'issue' => $issue
+            'issue' => $issue,
+            'paywall_type' => $noticia['paywall_type'] ?? 'poroso'
         ];
     }
 
