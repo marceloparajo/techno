@@ -93,7 +93,7 @@ class ChannelsController extends Controller
         $payload = $this->apiHelper->getColumnistas();
         $content = [];
 
-        $author_piority_order = ['jfontevecchia', 'ncastro', 'jduranbarba', 'ggonzalez', 'jcalvo', 'qquintin', 'jpetrarca'];
+        $author_piority_order = ['jfontevecchia', 'ncastro', 'jduranbarba', 'ggonzalez', 'jcalvo', 'qquintin', 'jpetrarca', 'rlloret'];
 
         // Recorro el contenido y lo agrupo por autor.
         foreach ($payload->DATA as $item) {
