@@ -19,6 +19,12 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\View as ViewFacade;
 use Illuminate\View\View;
+use PHPHtmlParser\Exceptions\ChildNotFoundException;
+use PHPHtmlParser\Exceptions\CircularException;
+use PHPHtmlParser\Exceptions\ContentLengthException;
+use PHPHtmlParser\Exceptions\LogicalException;
+use PHPHtmlParser\Exceptions\NotLoadedException;
+use PHPHtmlParser\Exceptions\StrictException;
 use simplehtmldom_1_5\simple_html_dom;
 use Sunra\PhpSimple\HtmlDomParser;
 use Illuminate\Support\Str;
@@ -150,7 +156,13 @@ class NewsController extends Controller
 
     /**
      * @param Route $route
-     * @return Factory|View
+     * @return Application|ResponseFactory|Response
+     * @throws ChildNotFoundException
+     * @throws CircularException
+     * @throws ContentLengthException
+     * @throws LogicalException
+     * @throws NotLoadedException
+     * @throws StrictException
      */
     public function amp(Route $route)
     {
@@ -172,7 +184,8 @@ class NewsController extends Controller
         $body = str_replace('-eplanning_ads_id-', '300x250x2', $body);
         $body = str_replace('-eplanning_sec-', 'new_amp', $body);
 
-        return view('amp.news', compact('noticia', 'jsonStructured', 'body'));
+        $view_content = view('amp.news', compact('noticia', 'jsonStructured', 'body'));
+        return response($view_content)->header('Cache-Control', 'max-age=300, public');
 
     }
 
