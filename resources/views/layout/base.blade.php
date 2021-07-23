@@ -41,11 +41,12 @@
 
         <link rel="preconnect" href="https://ads.us.e-planning.net">
         <link rel="preconnect" href="https://libs.lavoz.com.ar">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         @yield('head-top')
 
         {{-- Font --}}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Oswald:wght@400;600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" media="print" onload="this.media='all'" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
          {{-- /Font --}}
 
         @yield('head-css')

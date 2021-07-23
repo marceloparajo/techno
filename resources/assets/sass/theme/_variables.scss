@@ -1,23 +1,43 @@
+@import "theme/mixins/_breakpoints.scss";
 
 // Body
-$body-bg: #fff;
+$body-bg: #e7e7e7;
 $body-bg-2: #333;
 
+// -- Caras colores --//
 
-// **** Perfil Custom Theme ****
-$pf_main_color: #EE2314;
-$pf_main_color_2: #e12111;
-$pf_main_color_3: #E4D20B;
-$pf_main_color_4: #FFFFFF;
-$pf_font_color: #313133;
-$pf_font_color_inverse: white;
-$pf_font_color_inverse_middle: #cacaca;
-$pf_font_color_headline: #4a4a4a;
-$pf_font_color_headline_light: #cccccc;
+$color-brand: #dd0202;
+$link: #9e1819;
+$gris-oscuro: #343a40;
+$gris-claro: #d7dee4;
+$gris-muy-claro: #e3ebf3;
+$negro: #171717;
+$linea: #dfdfdf;
 
-$pf_facebook_color: #4868AD;
+// --sombras -- //
+
+$box-shadow: 0 3px 7px 0 rgba(0,0,0,.2);
+$text-shadow: 0 3px 5px black;
+
+// -- Caras tipografías
+
+$font-size: 1rem;
+$line-height-base: 1.6;
+$font-base: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$font-titulos: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+$condensada: $font-titulos;
+
+
+// -- Paywall
+
+$pw-azul: #4538f3;
+$pw-azul-claro: #647ef1;
+
+
+// -- Redes
+
+$pf_facebook_color: #1877f2;
 $pf_twitter_color: #4295DA;
-$pf_google_color: #D95040;
 $pf_instagram_color: #C73F7A;
 $pf_youtube_color: #D95040;
 $pf_linkedin_color: #007bb6;
@@ -28,90 +48,4 @@ $pf_whatsapp_color: #25D366;
 $pf_rss_color: #ee802f;
 
 
-// -- Footer
-$pf_footer_bg: #333;
-$pf_footer_font_color: #666;
-
-// -- Sidebar
-$pf_sidebar_most_viewed_bg: $pf_font_color_headline;
-
-
-// Block - Mosaico
-$pf_b_mosaico_bg: #333;
-
-
-
-
-
-
-
-
-
-/** PERFIL **/
-
-@import "mixins/_breakpoints.scss";
-
-
-$grid-breakpoints: (
-	xs: 0,
-	sm: 576px,
-	md: 768px,
-	lg: 1020px,
-	xl: 1295px,
-	xxl: 1360px,
-	xxxl: 1690px
-);
-
-
-
-
-
-$font-sinserif: 'Roboto',Helvetica,Arial,Sans-serif;
-$font-serif: 'Crimson Pro','Times New Roman', Times, Georgia, serif;
-$font-condensada: 'Oswald',Helvetica,Arial,Sans-serif;
-
-//colores
-$negro: #171717;
-$black: #171717;
-$dark:#343a40;
-//$light: #ebebeb;
-$light: #f1f1f1;
-$azul: #557c9c;
-$miscelanea: #c51111;
-$miscelanea-light: #d0dbe4;
-$azul-light: #d0dbe4;
-// $azul-dark: #445e7c;
-$azul-dark: #3d5eab;
-$link: #4295da;
-$hover: #b9dfff;
-$linea: #d4d4d4;
-$linea-oscura: #656565;
-$fondo-gris: #dee0e2;
-$secondary: #6c757d;
-$link-mobile: #969696;
-
-// redes sociales
-$fb_color: #4868AD;
-$tw_color: #4295DA;
-$ig_color: #C73F7A;
-$yt_color: #ff0000;
-$linkedin_color: #0a66c2;
-$pinterest_color: #cc2127;
-$flickr_color: #ff0084;
-$tumblr_color: #32506d;
-$wa_color: #25D366;
-$rss_color: #ee802f;
-
-// paywall
-// $pw-azul: #005ca0;
-// $pw-azul-claro: #0072c7;
-
-$pw-azul: #547194;
-$pw-azul-claro: #6286b1;
-
-//reperfilar
-$reperfilar-azul: #4285f4;
-$reperfilar-rojo: #fa7268;
-
-//bloomberg
-$bloomberg: #00bbe9;
+@import "theme/mixins/_mixins.scss";

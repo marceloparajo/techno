@@ -28,7 +28,7 @@ class MasLeidasPerfilWidget extends Component
      */
     public function __construct(BlockDistributionsHelper $blockDistributionsHelper, int $rows = 5)
     {
-        $this->news = $blockDistributionsHelper->getMostViewed('perfil');
+        $this->news = $blockDistributionsHelper->getMostViewed('caras');
 
         $this->rows = $rows;
     }

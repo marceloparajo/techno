@@ -18,7 +18,6 @@
 	<link rel="stylesheet" href="{{ mix('css/news-high.css') }}">
 
 	<link rel="stylesheet" href="{{ mix('css/news-low.css') }}" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="{{ mix('css/news-responsive.css') }}" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="{{ asset('vendors/lightgallery/css/lightgallery.min.css') }}" media="print" onload="this.media='all'">
 @endsection
 
@@ -90,7 +89,7 @@
 @section('body')
 
 
-	<main class="supercontenedor {{ $noticia['channel']['slug']}}" id="page">
+	<main class="main-container max-width margin-auto">
 
 		<header class="articulo-header">
 			<div class="hat">

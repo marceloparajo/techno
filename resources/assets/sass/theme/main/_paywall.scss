@@ -5,7 +5,6 @@
 	justify-content: flex-end;
 	align-items: center;
 	font:{
-		family: $font-sinserif;
 		size: 11px;
 	}
 	line-height: 1em;
@@ -17,7 +16,6 @@
 
 	#pw-ingresar, .pw-ingresar {
 		height: 24px;
-		background: $light;
 		border-radius: 3px;
 		position: relative;
 		cursor: pointer;
@@ -272,7 +270,6 @@
 				cursor: pointer;
 				transition: ease .2s;
 				font:{
-					family: $font-sinserif;
 					weight: bold;
 					size: 18px;
 				}
@@ -447,7 +444,6 @@
 				height: 40px;
 				text-transform: uppercase;
 				font:{
-					family: $font-sinserif;
 					weight: bold;
 					size: 18px;
 				}
@@ -476,7 +472,6 @@
 				line-height: 1em;
 				font:{
 					size: 14px;
-					family: $font-sinserif;
 					weight: bold;
 				}
 				a {
@@ -759,7 +754,6 @@
 					}
 					&.pw-modal-enlaces {
 						font:{
-							family: $font-sinserif;
 							size: 14px;
 							weight: normal;
 						}
@@ -786,7 +780,6 @@
 					transition: ease .2s;
 					margin: 20px 0;
 					font:{
-						family: $font-sinserif;
 						weight: bold;
 						size: 18px;
 					}
@@ -921,7 +914,6 @@
 						height: 40px;
 						text-transform: uppercase;
 						font:{
-							family: $font-sinserif;
 							weight: bold;
 							size: 18px;
 						}

@@ -12,9 +12,7 @@
 
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/home-high.css') }}">
-
 	<link rel="stylesheet" href="{{ mix('css/home-low.css') }}" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="{{ mix('css/home-responsive.css') }}" media="print" onload="this.media='all'">
 @endsection
 
 @section('head-bottom')
@@ -29,31 +27,17 @@
 
 @section('body')
 
+	<main class="main-container max-width margin-auto">
 		@foreach($home_content as $key => $value)
 			@if ($key != 'sidebar')
-
-				@if ($key == 'central-footer')
-					</div>
-					<div class="sidebar">
-						<x-sidebar />
-					</div>
-				@endif
-
-
 				<section id="{{ $key }}" class="contenedor-general">
 					@foreach($value as $item)
 						@include('home.dispositions.' . $item['template'], ['news' => $item['news'], 'id' => $item['id']])
 					@endforeach
 				</section>
 			@endif
-			@if ($key == 'central-header')
-			<main class="supercontenedor">
-				<div class="contenido" style="max-width:970px">
-					<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-xxl-flex" margin-top="0" />
-			@endif
 		@endforeach
 	</main>
-
 
 @endsection
 

@@ -1,210 +1,195 @@
-.banner-masleidas {
-	flex-basis: 300px;
-	text-align: right;
-	margin-left: 30px;
-	margin-top: 38px;
+.masvistas {
+    background: white;
+    box-shadow: $box-shadow;
+    padding: 10px;
+    margin-bottom: 20px;
+    &__titulo {
+        background: $color-brand;
+        color: white;
+        font-family: $font-titulos;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: 5px;
+        text-align: center;
+        margin-bottom: 10px;
+        a {
+            color: white;
+        }
+    }
+    &__articulos {
+        padding: 0;
+        margin: 0;
+        .nota {
+            position: relative;
+            padding: 10px 0;
+            border-bottom: 1px solid $gris-claro;
+            .enlace {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                picture {
+                    width: 30%;
+                    display: block;
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                &__titulo {
+                    display: block;
+                    width: 66%;
+                    font-size: 1rem;
+                    font-family: $font-titulos;
+                    letter-spacing: -0.02em;
+                    line-height: 1.1em;
+                    font-weight: bold;
+                }
+                .rankOrder {
+                    position: absolute;
+                    z-index: 2;
+                    left: 10px;
+                    top: 10px;
+                    font-family: $font-titulos;
+                    font-size: 3rem;
+                    color: white;
+                    text-shadow: 0 3px 5px #000;
+                    transition: ease .3s;
+                }
+            }
+            &:first-of-type {
+                .enlace {
+                    display: block;
+                    picture {
+                        width: 100%
+                    }
+                    &__titulo {
+                        width: 100%;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.las-mas-leidas {
-	background: white;
-	h5 {
-		font:{
-			weight: 700;
-			size: 1.3rem;
-		}
-		text-transform: uppercase;
-	}
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		li {
-			padding: 0;
-			margin: 0;
-			width: 100%;
-			a {
-				figure {
-					width: 33%;
-					margin-right: 15px;
-					float: left;
-					position: relative;
-					.order-num {
-						position: absolute;
-						left: -30px;
-						top: 5px;
-						background: $hover;
-						border-radius: 50%;
-						width: 22px;
-						height: 22px;
-						color: #fff;
-						font-size: 20px;
-						text-align: center;
-						line-height: 1em;
-						font-weight: bold;
-					}
-				}
-				h2 {
-					font: {
-						size: 18px;
-						weight: bold;
-					}
-					letter-spacing: -0.01em;
-				}
-			}
-		}
-	}
-	@include media-breakpoint-only(md) {
-		ul {
-			display: flex;
-			margin-top: 20px;
-			li {
-				padding: 5px;
-				position: relative;
-				width: 20%;
-				a {
-					h2 {
-						font-size: 16px;
-					}
-					figure {
-						margin-bottom: 5px;
-						width: 100%;
-						float: none;
-						.order-num {
-							font: {
-								family: $font-sinserif;
-								size: 24px;
-								weight: bold;
-							}
-							position: absolute;
-							left: 10px;
-							top: -10px;
-							color: white;
-							display: block;
-							border-radius: 50%;
-							width: 28px;
-							height: 28px;
-							background: $hover;
-							z-index: 9;
-							line-height: 1em;
-							text-align: center;
-						}
-					}
-				}
-			}
-		}
-	}
-	@include media-breakpoint-up(lg) {
-		h5 {
-			font-size: 26px;
-		}
-		ul {
-			li {
-				width: 25%;
-				float: left; 
-				display: block;
-				position: relative;
-				overflow: hidden;
-				a {
-					h2 {
-						position :absolute;
-						bottom: -140px;
-						transition: ease 0.5s;
-						color: white;
-						padding: 10px;
-						font-size: 18px;
-					}
-					figure {
-						width: 100%;
-						height: auto;
-						margin: 0;
-						float: none;
-						img {
-							width: 100%;
-							height: auto;
-							transition: ease 0.5s;
-						}
-						.order-num {
-							font: {
-								family: $font-sinserif;
-								size: 48px;
-								weight: bold;
-							}
-							transition: ease 0.5s;
-							position: absolute;
-							left: 10px;
-							top: 10px;
-							color: white;
-							text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-							display: block;
-							border-radius: 50%;
-							width: 50px;
-							height: 50px;
-							background: $hover;
-							z-index: 9;
-							line-height: 1em;
-							text-align: center;
-						}
-					}
-				}
-				&:nth-child(1) {
-					width: 50%;
-					a {
-						h2 {
-							bottom: -110px;
-							font-size: 28px;
-						}
-					}
-				}
-				&:hover {
-					a {
-						h2 {
-							bottom: 0;
-						}
-						figure {
-							img {
-								filter: brightness(30%);
-							}
-							.order-num {
-								left: -56px;
-								display: block;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	@include media-breakpoint-down(sm) {
-		padding: 0 10px;
-		ul {
-			li {
-				a {
-					figure {
-						margin-left: 30px;
-					}
-					h2 {
-						font-size: 16px;
-					}
-				}
-				&:after {
-					content: " ";
-					background: $hover;
-					width: 100%;
-					height: 1px;
-					display: block;
-					margin: 5px 0;
-					clear: both;
-				}
-			}
-		}
-	}
-	@include media-breakpoint-down(xs) {
-		ul {
-			li {
-				figure {
-					width: 30%;
-				}
-			}
-		}
-	}
+@include media-breakpoint-up(sm) {
+    .masvistas {
+        &__articulos {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .nota {
+                width: 48%;
+                .enlace {
+                    display: block;
+                    picture {
+                        width: 100%;
+                    }
+                    &__titulo {
+                        width: 100%;
+                    }
+                }
+                &:first-of-type {
+                    width: 100%;
+                    .enlace {
+                        &__titulo {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .masvistas {
+        &__articulos {
+            .nota {
+                width: 18%;
+                border-bottom: none;
+                &:first-of-type {
+                    width: 18%;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .masvistas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__titulo {
+            width: 100%;
+        }
+        .ads {
+            flex-basis: 300px;
+            height: 250px;
+            margin: 0;
+        }
+        &__articulos {
+            flex: 1 1 0;
+            padding-right: 10px;
+            display: grid;
+            grid-template-areas:
+                'a b c'
+                'a d e';
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 1px;
+            .nota {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                .enlace {
+                    position: relative;
+                    overflow: hidden;
+                    height: 100%;
+                    &__titulo {
+                        position: absolute;
+                        color: white;
+                        padding: 0 5px;
+                        bottom: -90px;
+                        transition: ease .3s;
+                        text-shadow: $text-shadow;
+                        font-size: 1.2rem;
+                    }
+                    picture {
+                        height: 100%;
+                        img {
+                            height: 100%;
+                        }
+                    }
+                }
+                &.nota-0 {
+                    width: 100%;
+                    grid-area: a;
+                    .enlace {
+                        &__titulo {
+                            font-size: 1.5rem;
+                            padding: 0 10px;
+                        }
+                    }
+                }
+                &.nota-1 {
+                    grid-area: b;
+                }
+                &.nota-2 {
+                    grid-area: c;
+                }
+                &.nota-3 {
+                    grid-area: d;
+                }
+                &.nota-4 {
+                    grid-area: e;
+                }
+                &:hover {
+                    .enlace__titulo {
+                        bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
 }

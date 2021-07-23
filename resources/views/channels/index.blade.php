@@ -16,7 +16,6 @@
 	<link rel="stylesheet" href="{{ mix('css/channels-high.css') }}">
 
 	<link rel="stylesheet" href="{{ mix('css/channels-low.css') }}" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="{{ mix('css/channels-responsive.css') }}" media="print" onload="this.media='all'">
 @endsection
 
 @section('body-class', 'pf-channel-show')

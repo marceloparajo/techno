@@ -21,11 +21,6 @@
     border: 2px solid  $pf_twitter_color;
   }
 
-  .btn-share-google {
-    color: $pf_google_color !important;
-    border: 2px solid  $pf_google_color;
-  }
-
   .btn-share-whatsapp {
     color: $pf_whatsapp_color !important;
     border: 2px solid  $pf_whatsapp_color;
@@ -44,17 +39,13 @@
   a[class*="twitter"]:hover,
   a[class*="twitter"] span { background: $pf_twitter_color; }
 
-  a[class*="gplus"],
-  a[class*="gplus"]:hover,
-  a[class*="gplus"] span { background: $pf_google_color; }
-
   a[class*="linkedin"],
   a[class*="linkedin"]:hover,
   a[class*="linkedin"] span { background: $pf_linkedin_color; }
 
-  a[class*="instagrem"],
-  a[class*="instagrem"]:hover,
-  a[class*="instagrem"] span { background: $pf_instagram_color; }
+  a[class*="instagram"],
+  a[class*="instagram"]:hover,
+  a[class*="instagram"] span { background: $pf_instagram_color; }
 
   a[class*="pinterest"],
   a[class*="pinterest"]:hover,

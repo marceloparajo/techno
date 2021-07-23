@@ -15,6 +15,4 @@
 			@endforeach
 		</div>
 	</div>
-@else
-	<x-radio-ticker />
 @endif

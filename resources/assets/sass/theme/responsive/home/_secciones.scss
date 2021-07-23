@@ -598,7 +598,6 @@ $shows: #e43d3d;
 						right: -12px;
 						width: 1px;
 						display: block;
-						background: $linea-oscura;
 					}
 				}
 				&:nth-child(2) {
@@ -613,7 +612,6 @@ $shows: #e43d3d;
 						right: -12px;
 						width: 1px;
 						display: block;
-						background: $linea-oscura;
 					}
 				}
 				&:nth-child(3) {
@@ -623,7 +621,6 @@ $shows: #e43d3d;
 					grid-area: cuarta;
 					flex-direction: row;
 					justify-content: space-between;
-					border-top: 1px solid $linea-oscura;
 					padding-top: 10px;
 					figure {
 						width: 48%;

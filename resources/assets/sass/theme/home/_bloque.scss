@@ -1,77 +1,207 @@
-.contenedor-general {
+.bloque {
+	margin-bottom: 20px;
+	.articulo {
+		padding-bottom: 10px;
+		&::after {
+			@include filete-articulo;
+		}
+		a {
+			figure {
+				.galeria-video {
+					right: 25px;
+					top: 25px;
+				}
+				padding-bottom: 56.2%;
+				height: 0;
+				overflow: hidden;
+				picture img {
+					display: block;
+					position: absolute;
+					top: 0;
+					left:0;
+					right:0;
+					bottom:0;
+					width: 100%;
+				}
+			}
+			.meta-content {
+				display: flex;
+				flex-direction: column;
+				padding: 0 30px;
+				transform: translateY(-20px);
+				.hat {
+					margin: 0 0 5px auto;
+					transform: translateX(15px);
+				}
+			}
+		}
+		&.nota-0 {
+			background: $gris-oscuro;
+			a {
+				.meta-content {
+					h2 {
+						color: white;
+					}
+				}
+			}
+		}
+		&.nota-2 {
+			background: $color-brand;
+			a {
+				.meta-content {
+					.hat {
+						background: $gris-oscuro;
+					}
+					h2 {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+
+	.bloque-sidebar {
+		width: 100%;
+		.tapa {
+			background: $gris-claro;
+			padding: 10px;
+			figure {
+				width: 100%;
+				max-width: 300px;
+				margin: 0 auto;
+			}
+			.suscripcion-kiosco {
+				display: block;
+				width: 100%;
+				max-width: 300px;
+				padding: 10px 0;
+				margin: 0 auto;
+				a {
+					display: block;
+					width: 100%;
+					background: $color-brand;
+					color: white;
+					text-decoration: none;
+					text-align: center;
+					text-transform: uppercase;
+					padding: 10px;
+					border-radius: 20px;
+				}
+			}
+		}
+		.placa-home {
+			width: 100%;
+			max-width: 300px;
+			margin: 15px auto;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
 	.bloque {
 		display: flex;
-		width: 100%;
-		flex-direction: column;
-		.columna-dostercios {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.articulo {
+			box-shadow: $box-shadow;
+			width: 48%;
+			&.nota-0,
+			&.nota-1,
+			&.nota-2 {
+				width: 32%;
+				margin: 20px 0; 
+				.meta-content{
+					padding: 10px;
+					margin-bottom: -25px;
+					.hat {
+						transform: translateX(10px);
+					}
+				}
+				&:after {
+					content: none;
+				}
+			}
+		}
+		.bloque-sidebar {
 			display: flex;
-			flex-direction: column;
-			.articulo {
-				display: flex;
-				justify-content: space-between;
-				border-bottom: 1px solid $linea;
-				padding-bottom: 10px;
-				figure {						
-					width: 30%;
-				}
-				.meta-content {
-					padding: 0 10px 0 0;
-					width: 68%;
-					a {
-						span.hat {
-							display: none;
-						}
-					}
-					@include media-breakpoint-only(xs) {
-						transform: translateY(-4px);
-					}
-				}
-				&:first-of-type {
-					display: block;
-					figure {
-						width: 100%;
-					}
-					@include media-breakpoint-only(xs) {
-						.meta-content {
-							transform: translateY(0);
-							padding: 5px 10px;
-							width: 100%;
-							a {
-								h2 {
-									font-size: 1.4rem;
-									font-size: 6vw;
-								}
-							}
-						}
-					}
-				}
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.tapa {
+				width: 100%;
 			}
+			.placa-home {
+				width: 300px;
+			};
 		}
-		.columna-tercio {
-			.articulo {
-				display: flex;
-				justify-content: space-between;
-				border-bottom: 1px solid $linea;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.bloque {
+		display: grid;
+		grid-template-areas:
+			'a b sidebar'
+			'c d sidebar'
+			'e f sidebar';
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		.articulo {
+			&.nota-0,
+			&.nota-1,
+			&.nota-2,
+			&.nota-3,
+			&.nota-4,
+			&.nota-5 {
+				width: 100%;
+				margin: 0;
+				&:after {
+					content: none;
+				}
+				.meta-content{
+					padding: 10px;
+					margin-bottom: -25px;
+					.hat {
+						transform: translateX(10px);
+					}
+				}
 				figure {
-					flex-basis: 30%;
-					margin-bottom: 5px;
-				}
-				.meta-content {
-					flex-basis: 68%;
-					padding: 0 10px 0 0;
-					a {
-						span.hat {
-							display: none;
-						}
-						.galeria-video {
-							display: none;
-						}
-					}
-					@include media-breakpoint-only(xs) {
-						transform: translateY(-4px);
+					.galeria-video {
+						top: 10px;
+						right: 10px;
 					}
 				}
 			}
+			&.nota-0 {
+				grid-area: a;
+			}
+			&.nota-1 {
+				grid-area: b;
+			}
+			&.nota-2 {
+				grid-area: c;
+			}
+			&.nota-3 {
+				grid-area: e;
+			}
+			&.nota-4 {
+				grid-area: f;
+			}
 		}
+
+		.ad-300x250 {
+			grid-area: d;
+		}
+		.bloque-sidebar {
+			grid-area: sidebar;
+			display: block;
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.bloque {
+		grid-template-areas:
+			'a b c sidebar'
+			'd e f sidebar';
 	}
 }

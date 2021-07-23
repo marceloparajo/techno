@@ -1,109 +1,119 @@
-<div class="pre-header supercontenedor">
-    <div class="header-fecha">{{ $current_date->isoFormat('dddd DD [de] MMMM [del] YYYY') }}</div>
-    <div class="header-data">
-        <nav class="more-sites">
-            <ul>
-                <li class="menu-reperfilar"><a href="/reperfilar">RePerfilAr</a></li>
-                <li class="menu-bloomberg"><a href="/seccion/bloomberg/">Bloomberg</a></li>
-                <li class="menu-noticias"><a href="https://noticias.perfil.com" rel="noreferrer">Noticias</a></li>
-                <li class="menu-caras"><a href="https://caras.perfil.com" rel="noreferrer">Caras</a></li>
-                <li class="menu-exitoina"><a href="https://exitoina.perfil.com" rel="noreferrer">Exitoina</a></li>
-            </ul>
-        </nav>
-        <div class="buscador" id="header-search">
-            <form method="get" action="{{ route('search.index') }}">
-                <input class="form-control" name="q" type="text" placeholder="{{ __('search') }}" aria-label="{{ __('search') }}" value="{{ Request::get('q') }}">
-                <button type="submit" class="btn"><img src="/images/glyph/search.svg" alt="Search" style="width:13px;height:13px"></button>
-            </form>
-        </div>
-    </div>
+
+<div class="pre-header">
+	<div class="container max-width margin-auto">
+		<div class="time-top">{{ $current_date->isoFormat('dddd DD [de] MMMM [del] YYYY') }}</div>
+		<div class="perfil-logo">
+			<a href="https://www.perfil.com" target="_blank" title="Ir a Perfil.com">
+				<img src="{{ asset('img/perfil.svg') }}" alt="Perfil" width="90" height="20">
+			</a>
+		</div>
+	</div>
 </div>
 
-<header class="main-header supercontenedor">
-    <div class="header-top">
-        <div class="elisologo">
-            <div id="hamburguesa" class="hamburguer">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-            <figure>
-                <a href="/">
-                    <img src="{{ asset('img/logo_perfil.svg') }}" alt="Perfil.com" style="width:170px;height:38px">
-                </a>
-            </figure>
-            <nav class="menu-primario">
-                <ul class="menu-destacado">
-                    <li>
-                        <a href="/ultimo-momento">Últimas Noticias</a>
-                    </li>
-                    <li>
-                        <a href="/seccion/politica">Política</a>
-                    </li>
-                    <li>
-                        <a href="/seccion/opinion">Opinión</a>
-                    </li>
-                    <li>
-                        <a href="/seccion/sociedad">Sociedad</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="radio-perfil">
-            <a href="//radio.perfil.com">
-                <img src="/images/glyph/radio-play.svg" class="radio-play" alt="Radio Perfil" style="width:22px;height:22px">
-                <img src="{{ asset('img/radio-perfil.png') }}" alt="Radio Perfil" style="width:100px;height:8.66px"><span>FM 101.9</span>
-            </a>
-        </div>
-        <div id="paywall-login-container" class="pw-suscripcion">
-            <a href="https://mi.perfil.com/id/login/?continue=https://www.perfil.com/&amp;_ga=2.119616968.1355777437.1602594682-581691567.1598470282" class="pw-ingresar">Ingresar</a>
-            <a href="https://mi.perfil.com/" class="pw-suscribite">Suscribite</a>
-        </div>
-    </div>
-    <div id="contenedor-header-menu">
-        <nav id="menues" class="">
-            <ul>
-                <li><a href="/ultimo-momento/">Último momento</a></li>
-                <li><img src="/images/glyph/chevron.svg" class="chevron" style="width:6px;height:10px">Temas de hoy
-                    <ul>
-                        @foreach ($topics as $item)
-                            <li>
-                                <a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">
-                                    {{ $item['text'] }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </li>
-                <li><img src="/images/glyph/chevron.svg" class="chevron" style="width:6px;height:10px">Secciones
-                    <ul>
-                        @foreach ($main_menu as $item)
-                            <li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
-                        @endforeach
-                    </ul>
-                </li>
 
-                <li><img src="/images/glyph/chevron.svg" class="chevron" style="width:6px;height:10px">Revistas
-                    <ul>
-                        @foreach ($revistas as $item)
-                            <li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
-                        @endforeach
-                    </ul>
-                </li>
 
-                <li><a href="https://radio.perfil.com/en-vivo/radio">Radio Perfil en vivo</a></li>
+
+
+<header class="main-header">
+
+
+    <div class="container max-width margin-auto">
+		<button class="hamburguer" id="burguer" onclick="abreMenu()">
+				<div class="bar-1"></div>
+				<div class="bar-2"></div>
+				<div class="bar-3"></div>
+		</button>
+		<div class="caras-logo">
+			<a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}">
+				<img src="{{ asset('img/caras_logo.svg') }}" alt="{{ env('APP_NAME') }}">
+			</a>
+		</div>
+	</div>
+
+
+		
+	<nav class="navbar" id="main-menu">
+		<div class="container margin-auto max-width">
+			<ul class="nav main-menu">
+
+                @foreach ($main_menu as $item)
+
+
+                    @if (isset($item['children']) && count($item['children']) > 0)
+						<li class="has-children">
+						<a role="button" href="#" class="has-children-a {{ $item['class'] }}" data-toggle="dropdown">{{ $item['text'] }}</a>
+						<ul>
+							@foreach ($item['children'] as $children)
+								<li><a href="{{ $children['href'] }}" target="{{ $children['target'] }}">{{ $children['text'] }}</a></li>
+							@endforeach
+						</ul>
+					</li>
+					@else
+                        <li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
+    				@endif
+                @endforeach
+			</ul>
+
+
+
+			<ul class="nav topics">
+                @foreach ($topics as $item)
+                    <li>
+                        <a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">
+                            {{ $item['text'] }}
+                        </a>
+                    </li>
+                @endforeach
             </ul>
-        </nav>
-    </div>
-    <nav class="header-bottom">
-        <ul class="temas">
-            @foreach ($topics as $item)
-                <li>
-                    <a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="nav-link {{ $item['class'] }}" title="{{ $item['title'] }}">
-                        {!! $item['text'] !!}
-                    </a>
-                </li>
-            @endforeach
-        </ul>
-    </nav>
+
+			<ul class="nav">
+				<li>
+					<a>
+						Especiales
+					</a>
+				</li>
+				<li class="caras-like">
+					<a href="/seccion/caras-like">
+						CARAS Like
+					</a>
+				</li>
+				<li>
+					<a href="/seccion/caras-deco">
+						CARAS Deco
+					</a>
+				</li>
+				<li>
+					<a href="/seccion/caras-resto">
+						CARAS Restó
+					</a>
+				</li>
+			</ul>
+
+			<form method="get" action="{{ route('search.index') }}" class="search-form">
+				<input class="search-form__input" name="q" type="text" placeholder="{{ __('search') }}" aria-label="Buscar" value="{{ Request::get('q') }}">
+				<button class="search-form__btn" type="submit"><img src="/images/glyph/search.png" alt="Buscar" width="20" height="20"></button>
+			</form>
+
+
+			<div class="social-top">
+				<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" title="{{  ucfirst(env("APP_NAME")) }} {{ __("in instagram") }}" rel=“me nofollow”><img src="/images/glyph/share/instagram.svg" class="instagram" alt="Instagram" width="30"></a>
+				<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in facebook") }}" rel=“me nofollow”><img src="/images/glyph/share/facebook.svg" class="facebook" alt="Facebook" width="30"></a>
+				<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in twitter") }}" rel=“me nofollow”><img src="/images/glyph/share/twitter.svg" class="twitter" alt="twitter" width="30"></a>
+				<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in youtube") }}" rel=“me nofollow”><img src="/images/glyph/share/youtube.svg" class="youtube" alt="Youtube" width="30"></a>
+			</div>
+
+		</div>
+	</nav>
 </header>
+
+
+
+
+<script>
+	function abreMenu() {
+		var b = document.getElementById("burguer");
+		var n = document.getElementById("main-menu");
+	  	b.classList.toggle("open");
+	  	n.classList.toggle("mostrar");
+	}
+</script>
