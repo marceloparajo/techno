@@ -20,7 +20,7 @@
     @endif
 @endif
 @if ($play_button)
-    <div class="galeria-video"><img src="{{ asset('images/glyph/hasvideo.png') }}" class="hasvideo" style="width:20px;height:18px"></div>
+    <div class="galeria-video"><img src="{{ asset('images/glyph/hasvideo.png') }}" class="hasvideo" style="width:20px;height:18px" alt="Mira el video"></div>
 @elseif ($camera_button)
-    <div class="galeria-video"><img src="{{ asset('images/glyph/hasgallery.png') }}" class="hasgallery" style="width:20px;height:15px"></div>
+    <div class="galeria-video"><img src="{{ asset('images/glyph/hasgallery.png') }}" class="hasgallery" style="width:20px;height:15px" alt="Galeria de fotos"></div>
 @endif

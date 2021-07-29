@@ -308,7 +308,7 @@ class BlockDistributionsHelper
         return collect([
             [
                 'id' => 'cobertura-casacaras',
-                'template' => 'bloque-inferior'
+                'template' => 'cobertura'
             ],
             [
                 'id' => 'coronavirus-contador',
@@ -324,7 +324,7 @@ class BlockDistributionsHelper
             ],
             [
                 'id' => 'bloque-medio',
-                'template' => 'bloque'
+                'template' => 'bloque-con-widget'
             ],
             [
                 'id' => 'bloque-inferior',
@@ -367,108 +367,8 @@ class BlockDistributionsHelper
                 'template' => 'cobertura'
             ],
             [
-                'id' => 'equipo-investigacion',
-                'template' => 'cobertura'
-            ],
-            [
-                'id' => 'cobertura-cocacola',
-                'template' => 'cobertura'
-            ],
-            [
-                'id' => 'cobertura-parabrisas',
-                'template' => 'cobertura'
-            ],
-            [
-                'id' => 'reperfilar-sidebar',
-                'template' => 'reperfilar'
-            ],
-            [
-                'id' => 'video-columnas',
-                'template' => 'videocolumnas'
-            ],
-            [
-                'id' => 'ppuro-sidebar',
-                'template' => 'periodismopuro'
-            ],
-            [
-                'id' => 'exitoina-sidebar',
-                'template' => 'exitoina'
-            ],
-            [
-                'id' => 'net-sidebar',
-                'template' => 'net'
-            ],
-            [
-                'id' => 'opinion-sidebar',
-                'template' => 'opinion'
-            ],
-            [
                 'id' => 'ultimas-noticias',
                 'template' => 'bloque'
-            ],
-            [
-                'id' => 'deportes',
-                'template' => 'secciones'
-            ],
-            [
-                'id' => 'espectaculos',
-                'template' => 'secciones'
-            ],
-            [
-                'id' => 'mujer',
-                'template' => 'secciones'
-            ],
-            [
-                'id' => 'cobertura-marieclaire',
-                'template' => 'marieclaire'
-            ],
-            [
-                'id' => 'cobertura-radioperfil',
-                'template' => 'caja-general'
-            ],
-            [
-                'id' => 'rev-caras',
-                'template' => 'revistas'
-            ],
-            [
-                'id' => 'rev-noticias',
-                'template' => 'revistas'
-            ],
-            [
-                'id' => 'rev-marieclaire',
-                'template' => 'revistas'
-            ],
-            [
-                'id' => 'rev-parabrisas',
-                'template' => 'revistas'
-            ],
-            [
-                'id' => 'rev-weekend',
-                'template' => 'revistas'
-            ],
-            [
-                'id' => 'rev-supercampo',
-                'template' => 'revistas'
-            ],
-            [
-                'id' => 'rev-luz',
-                'template' => 'revistas'
-            ],
-            [
-                'id' => 'rev-hombre',
-                'template' => 'revistas'
-            ],
-            [
-                'id' => 'rev-fortuna',
-                'template' => 'revistas'
-            ],
-            [
-                'id' => 'rev-mia',
-                'template' => 'revistas'
-            ],
-            [
-                'id' => 'rev-lunateen',
-                'template' => 'revistas'
             ]
         ]);
     }

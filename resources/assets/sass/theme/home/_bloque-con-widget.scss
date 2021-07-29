@@ -1,0 +1,153 @@
+.bloquewidget {
+	padding: 0 10px;
+	margin-bottom: 20px;
+    &__encuesta {
+        width: 100%;
+        padding: 15px;
+        margin: 0 0 20px 0;
+		background: $gris-oscuro;
+		box-shadow: $box-shadow;
+		border-radius: 3px;
+        .titulo-widget {
+            font-family: $font-titulos;
+            font-size: 1.4rem;
+			margin-bottom: 6px;
+			color: white;
+			text-transform: uppercase;
+        }
+        .quiz-container {
+            width: 100%;
+			div {
+				width: 100%!important;
+			}
+			.bc-panel {
+				width: 100%;
+				border: none;
+				background: white;
+				h3 {
+					color: $gris-oscuro;
+					font-size: 1.2rem;
+				}
+				.radio {
+					label {
+						input[type=radio] {
+							margin-right: 10px;
+						}
+					}
+				}
+				#botonVotar.btn {
+					width: 100%;
+					border-radius: 30px;
+					text-transform: uppercase;
+					background-color: #407abd;
+					border: none;
+				}
+			}
+        }
+    }
+	.articulo {
+		a {
+			display: flex;
+			justify-content: space-between;
+			figure {
+				width: 40%;
+				picture {
+					img {
+						display: block;
+					}
+				}
+			}
+			.meta-content {
+				padding: 5px 10px;
+				width: 60%;
+				.hat {
+					display: none;
+				}
+				h2 {
+					font-size: 1.1rem;
+					letter-spacing: -0.02em;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.bloquewidget {
+		padding: 0;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.bloquewidget {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		&__encuesta {
+			width: 48%;
+		}
+		.articulo {
+			width: 48%;
+		}
+	}
+}
+
+
+@include media-breakpoint-up(lg) {
+	.bloquewidget {
+		display: grid;
+		grid-template-areas:
+			'a b c'
+			'a d e';
+		gap: 10px 20px;
+		grid-template-columns: 1fr 1fr 1fr;
+		&__encuesta {
+			grid-area: a;
+			width: 100%;
+			padding: 10px;
+			margin: 0;
+		}
+		.articulo {
+			width: 100%;
+			margin: 0;
+			a {
+				figure {
+					width: 50%;
+				}
+				.meta-content {
+					width: 50%;
+				}
+			}
+			&.nota-0 {
+				grid-area: b;
+			}
+			&.nota-1 {
+				grid-area: c;
+			}
+			&.nota-2 {
+				grid-area: d;
+			}
+			&.nota-3 {
+				grid-area: e;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.bloquewidget {
+		grid-template-columns: 2fr 3fr 3fr;
+		.articulo {
+			a {
+				.meta-content {
+					.hat {
+						display: block;
+						background: transparent;
+						padding: 0;
+						color: $color-brand;
+					}
+				}
+			}
+		}
+	}
+}

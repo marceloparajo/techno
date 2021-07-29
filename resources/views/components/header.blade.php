@@ -18,7 +18,7 @@
 
 
     <div class="container max-width margin-auto">
-		<button class="hamburguer" id="burguer" onclick="abreMenu()">
+		<button class="hamburguer" id="burguer" onclick="abreMenu()" title="menu">
 				<div class="bar-1"></div>
 				<div class="bar-2"></div>
 				<div class="bar-3"></div>

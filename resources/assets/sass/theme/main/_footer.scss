@@ -1,0 +1,41 @@
+.main-footer {
+    background: $color-brand;
+    padding: 10px 0;
+    figure {
+        margin: 10px auto;
+        width: 60px;
+        img {
+            width: 100%;
+        }
+    }
+    .footer-redes {
+        background: $gris-oscuro;
+        display: flex;
+        justify-content: center;
+        a {
+            margin: 10px;
+        }
+    }
+    .nav-footer {
+        background: $gris-oscuro;
+        display: flex;
+        flex-wrap: wrap;
+        ul {
+            list-style: none;
+            width: 50%;
+            padding: 10px;
+            li {
+                padding: 5px 0;
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+    .disclaimer {
+        background: $negro;
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
+}
