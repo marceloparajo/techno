@@ -89,52 +89,57 @@
 @section('body')
 
 
-	<main class="main-container max-width margin-auto">
+	<main class="main-container max-width margin-auto container-white considebar">
 
-		<header class="articulo-header">
-			<div class="hat">
-				<a href="/seccion/{{ $noticia['channel']['slug']}}">{{ strtoupper($noticia['channel']['name']) }}</a>
-				@if($noticia['hat'] != '')
-				<span class="volanta">{{ $noticia['hat'] }}</span>
-				@endif
+		<div class="seccion noticia" id="noticia">
 
-				<div class="hat-fecha">
-					{{ $noticia['date_available_human'] }}
+			<header class="articulo-header">
+				<div class="hat">
+					<a href="/seccion/{{ $noticia['channel']['slug']}}">{{ strtoupper($noticia['channel']['name']) }}</a>
+					<span class="hat__fecha">
+						{{ $noticia['date_available_human'] }}
+					</span>
+
 				</div>
-
-			</div>
-			{{-- Titulos --}}
-			<h1>{{ $noticia['title'] }}</h1>
-			@if($noticia['headline'] != '.')
-				<h2 class="headline">{{ $noticia['headline'] }}</h2>
-			@endif
-		</header>
-
-		<div class="container" id="noticia">
-
-			<article class="main-article" style="max-width:970px;">
-
-				{{-- Featured Image or Video --}}
-				@if ($noticia['featured_content'] == 'embed_code')
-					<div class="embed-responsive embed-responsive-16by9 videoContainer">
-						{!! $noticia['embed_code'] !!}
-					</div>
-				@else
-					<figure class="figure btn-open-gallery">
+				{{-- Titulos --}}
+				<h1>{{ $noticia['title'] }}</h1>
+				@if($noticia['headline'] != '.')
+					<h2 class="headline">
+						{{ $noticia['headline'] }}
 						@if (count($noticia['gallery']) > 1)
-							<a href="#" role="button" class="btn-open-gallery fotogaleria" title="{{ __('show fotogallery') }}"></a>
-						@endif
-						<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['title']" max-width="900" :lazy-load="false" />
-						<figcaption class="figure-caption">{{ $noticia['main_image']['caption'] }}<span class="credito-foto"> | {{ $noticia['main_image']['credit']}}</span></figcaption>
-					</figure>
+						<a href="#" role="button" class="abrirgaleria" title="Ver fotogaleria"><img src="/images/glyph/hasgallerytext.png" width="20" height="16" alt="Galería de fotos">Galería de fotos</a>
+					@endif
+					</h2>
 				@endif
 
-				<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" min-height="90" max-height="280" />
-				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-lg-none" min-height="250" max-height="250" />
+			</header>
+
+
+			{{-- Featured Image or Video --}}
+			
+			@if ($noticia['featured_content'] == 'embed_code')
+				<div class="media embed-responsive embed-responsive-16by9 videoContainer">
+					{!! $noticia['embed_code'] !!}
+				</div>
+			@else
+				<figure class="media figure btn-open-gallery">
+					@if (count($noticia['gallery']) > 1)
+						<a href="#" role="button" class="btn-open-gallery fotogaleria" title="Ver fotogaleria"></a>
+					@endif
+					<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['title']" max-width="900" :lazy-load="false" />
+					<figcaption class="figure-caption">{{ $noticia['main_image']['caption'] }}<span class="credito-foto"> | {{ $noticia['main_image']['credit']}}</span></figcaption>
+				</figure>
+			@endif
+
+
+
+			<article class="main-article">
+
+				<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-xxl-flex" min-height="90" max-height="280" />
+				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="ads d-lg-none" min-height="250" max-height="250" margin-bottom="20" />
 
 				{{-- Article Body --}}
 				<div class="news-body">
-					<div class="fecha-autor">
 						{{-- Author --}}
 						@if ($noticia['signed'])
 							<div class="autor">
@@ -144,11 +149,6 @@
 						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
 							<div class="autor">{{ $noticia['credit'] }}</div>
 						@endif
-						<div></div>
-						<div class="fecha">
-							{{ $noticia['date_available_human'] }}
-						</div>
-					</div>
 
 
 					@include('news.show.partials.social-top', ['shareText' => __('share')] )
@@ -183,8 +183,8 @@
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
-						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-lg-flex" />
-						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-lg-none" />
+						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-xxl-flex" />
+						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-xl-none" />
 
 						@include('news.show.partials.news-tags')
 
@@ -220,11 +220,11 @@
 
 			</article>
 
-			<aside class="sidebar">
-				<x-sidebar />
-			</aside>
-
 		</div><!-- noticia -->
+
+		<aside class="sidebar">
+			<x-sidebar />
+		</aside>
 
 
 

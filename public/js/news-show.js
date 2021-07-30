@@ -1,1 +1,2895 @@
-!function(e){var t={};function i(s){if(t[s])return t[s].exports;var l=t[s]={i:s,l:!1,exports:{}};return e[s].call(l.exports,l,l.exports,i),l.l=!0,l.exports}i.m=e,i.c=t,i.d=function(e,t,s){i.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:s})},i.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/",i(i.s=2)}({"0sbr":function(e,t,i){"use strict";t.a=function(){s(),l()};var s=function(){if(null===document.getElementById("columnistas"))return 0;var e=document.getElementsByClassName("btn-columnistas-widget-row"),t=document.getElementById("grupo-col-0"),i=t.clientWidth,s=0;Array.from(e).forEach(function(e){e.addEventListener("click",function(e){e.preventDefault();var l=e.currentTarget.dataset.index;s=-i*l,t.style.marginLeft=s+"px"})})},l=function(){var e=document.getElementById("perform-video");if(null===e)return 0;if(-1!==navigator.userAgent.search("Firefox"))return 0;var t=document.createElement("script");t.type="text/javascript",t.defer=!0,t.src="https://player.performgroup.com/eplayer.js#47b3f29670c0b844c32971e284.15c1379yp89d01tb3mar0jq831",e.appendChild(t)}},"19Qz":function(e,t,i){var s,l,o,r;r=function(e){"use strict";var t,i=(t=e)&&t.__esModule?t:{default:t};var s=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var i=arguments[t];for(var s in i)Object.prototype.hasOwnProperty.call(i,s)&&(e[s]=i[s])}return e};!function(){if("function"==typeof window.CustomEvent)return!1;function e(e,t){t=t||{bubbles:!1,cancelable:!1,detail:void 0};var i=document.createEvent("CustomEvent");return i.initCustomEvent(e,t.bubbles,t.cancelable,t.detail),i}e.prototype=window.Event.prototype,window.CustomEvent=e}(),window.utils=i.default,window.lgData={uid:0},window.lgModules={};var l={mode:"lg-slide",cssEasing:"ease",easing:"linear",speed:600,height:"100%",width:"100%",addClass:"",startClass:"lg-start-zoom",backdropDuration:150,hideBarsDelay:6e3,useLeft:!1,ariaLabelledby:"",ariaDescribedby:"",closable:!0,loop:!0,escKey:!0,keyPress:!0,controls:!0,slideEndAnimatoin:!0,hideControlOnEnd:!1,mousewheel:!1,getCaptionFromTitleOrAlt:!0,appendSubHtmlTo:".lg-sub-html",subHtmlSelectorRelative:!1,preload:1,showAfterLoad:!0,selector:"",selectWithin:"",nextHtml:"",prevHtml:"",index:!1,iframeMaxWidth:"100%",download:!0,counter:!0,appendCounterTo:".lg-toolbar",swipeThreshold:50,enableSwipe:!0,enableDrag:!0,dynamic:!1,dynamicEl:[],galleryId:1,supportLegacyBrowser:!0};function o(e,t){if(this.el=e,this.s=s({},l,t),this.s.dynamic&&"undefined"!==this.s.dynamicEl&&this.s.dynamicEl.constructor===Array&&!this.s.dynamicEl.length)throw"When using dynamic mode, you must also define dynamicEl as an Array.";return this.modules={},this.lGalleryOn=!1,this.lgBusy=!1,this.hideBartimeout=!1,this.isTouch="ontouchstart"in document.documentElement,this.s.slideEndAnimatoin&&(this.s.hideControlOnEnd=!1),this.items=[],this.s.dynamic?this.items=this.s.dynamicEl:"this"===this.s.selector?this.items.push(this.el):""!==this.s.selector?this.s.selectWithin?this.items=document.querySelector(this.s.selectWithin).querySelectorAll(this.s.selector):this.items=this.el.querySelectorAll(this.s.selector):this.items=this.el.children,this.___slide="",this.outer="",this.init(),this}o.prototype.init=function(){var e=this;e.s.preload>e.items.length&&(e.s.preload=e.items.length);var t=window.location.hash;if(t.indexOf("lg="+this.s.galleryId)>0&&(e.index=parseInt(t.split("&slide=")[1],10),i.default.addClass(document.body,"lg-from-hash"),i.default.hasClass(document.body,"lg-on")||(i.default.addClass(document.body,"lg-on"),setTimeout(function(){e.build(e.index)}))),e.s.dynamic)i.default.trigger(this.el,"onBeforeOpen"),e.index=e.s.index||0,i.default.hasClass(document.body,"lg-on")||(i.default.addClass(document.body,"lg-on"),setTimeout(function(){e.build(e.index)}));else for(var s=0;s<e.items.length;s++)!function(t){i.default.on(e.items[t],"click.lgcustom",function(s){s.preventDefault(),i.default.trigger(e.el,"onBeforeOpen"),e.index=e.s.index||t,i.default.hasClass(document.body,"lg-on")||(e.build(e.index),i.default.addClass(document.body,"lg-on"))})}(s)},o.prototype.build=function(e){var t=this;for(var s in t.structure(),window.lgModules)t.modules[s]=new window.lgModules[s](t.el);if(t.slide(e,!1,!1),t.s.keyPress&&t.keyPress(),t.items.length>1&&(t.arrow(),setTimeout(function(){t.enableDrag(),t.enableSwipe()},50),t.s.mousewheel&&t.mousewheel()),t.counter(),t.closeGallery(),i.default.trigger(t.el,"onAfterOpen"),t.s.hideBarsDelay>0){var l=setTimeout(function(){i.default.addClass(t.outer,"lg-hide-items")},t.s.hideBarsDelay);i.default.on(t.outer,"mousemove.lg click.lg touchstart.lg",function(){clearTimeout(l),i.default.removeClass(t.outer,"lg-hide-items"),clearTimeout(t.hideBartimeout),t.hideBartimeout=setTimeout(function(){i.default.addClass(t.outer,"lg-hide-items")},t.s.hideBarsDelay)})}},o.prototype.structure=function(){var e,t="",s="",l=0,o="",r=this;for(document.body.insertAdjacentHTML("beforeend",'<div class="lg-backdrop"></div>'),i.default.setVendor(document.querySelector(".lg-backdrop"),"TransitionDuration",this.s.backdropDuration+"ms"),l=0;l<this.items.length;l++)t+='<div class="lg-item"></div>';if(this.s.controls&&this.items.length>1&&(s='<div class="lg-actions"><button type="button" aria-label="Previous slide" class="lg-prev lg-icon">'+this.s.prevHtml+'</button><button type="button" aria-label="Next slide" class="lg-next lg-icon">'+this.s.nextHtml+"</button></div>"),".lg-sub-html"===this.s.appendSubHtmlTo&&(o='<div role="status" aria-live="polite" class="lg-sub-html"></div>'),e='<div tabindex="-1" aria-modal="true" '+(this.s.ariaLabelledby?'aria-labelledby="'+this.s.ariaLabelledby+'"':"")+" "+(this.s.ariaDescribedby?'aria-describedby="'+this.s.ariaDescribedby+'"':"")+' role="dialog" class="lg-outer '+this.s.addClass+" "+this.s.startClass+'"><div class="lg" style="width:'+this.s.width+"; height:"+this.s.height+'"><div class="lg-inner">'+t+'</div><div class="lg-toolbar lg-group"><button type="button" aria-label="Close gallery" class="lg-close lg-icon"></button></div>'+s+o+"</div></div>",document.body.insertAdjacentHTML("beforeend",e),this.outer=document.querySelector(".lg-outer"),this.outer.focus(),this.___slide=this.outer.querySelectorAll(".lg-item"),this.s.useLeft?(i.default.addClass(this.outer,"lg-use-left"),this.s.mode="lg-slide"):i.default.addClass(this.outer,"lg-use-css3"),r.setTop(),i.default.on(window,"resize.lg orientationchange.lg",function(){setTimeout(function(){r.setTop()},100)}),i.default.addClass(this.___slide[this.index],"lg-current"),this.doCss()?i.default.addClass(this.outer,"lg-css3"):(i.default.addClass(this.outer,"lg-css"),this.s.speed=0),i.default.addClass(this.outer,this.s.mode),this.s.enableDrag&&this.items.length>1&&i.default.addClass(this.outer,"lg-grab"),this.s.showAfterLoad&&i.default.addClass(this.outer,"lg-show-after-load"),this.doCss()){var n=this.outer.querySelector(".lg-inner");i.default.setVendor(n,"TransitionTimingFunction",this.s.cssEasing),i.default.setVendor(n,"TransitionDuration",this.s.speed+"ms")}setTimeout(function(){i.default.addClass(document.querySelector(".lg-backdrop"),"in")}),setTimeout(function(){i.default.addClass(r.outer,"lg-visible")},this.s.backdropDuration),this.s.download&&this.outer.querySelector(".lg-toolbar").insertAdjacentHTML("beforeend",'<a id="lg-download" aria-label="Download" target="_blank" download class="lg-download lg-icon"></a>'),this.prevScrollTop=document.documentElement.scrollTop||document.body.scrollTop},o.prototype.setTop=function(){if("100%"!==this.s.height){var e=window.innerHeight,t=(e-parseInt(this.s.height,10))/2,i=this.outer.querySelector(".lg");e>=parseInt(this.s.height,10)?i.style.top=t+"px":i.style.top="0px"}},o.prototype.doCss=function(){return!!function(){var e=["transition","MozTransition","WebkitTransition","OTransition","msTransition","KhtmlTransition"],t=document.documentElement,i=0;for(i=0;i<e.length;i++)if(e[i]in t.style)return!0}()},o.prototype.isVideo=function(e,t){var i;if(i=this.s.dynamic?this.s.dynamicEl[t].html:this.items[t].getAttribute("data-html"),!e&&i)return{html5:!0};var s=e.match(/\/\/(?:www\.)?youtu(?:\.be|be\.com|be-nocookie\.com)\/(?:watch\?v=|embed\/)?([a-z0-9\-\_\%]+)/i),l=e.match(/\/\/(?:www\.)?vimeo.com\/([0-9a-z\-_]+)/i),o=e.match(/\/\/(?:www\.)?dai.ly\/([0-9a-z\-_]+)/i),r=e.match(/\/\/(?:www\.)?(?:vk\.com|vkontakte\.ru)\/(?:video_ext\.php\?)(.*)/i);return s?{youtube:s}:l?{vimeo:l}:o?{dailymotion:o}:r?{vk:r}:void 0},o.prototype.counter=function(){this.s.counter&&this.outer.querySelector(this.s.appendCounterTo).insertAdjacentHTML("beforeend",'<div id="lg-counter" role="status" aria-live="polite"><span id="lg-counter-current">'+(parseInt(this.index,10)+1)+'</span> / <span id="lg-counter-all">'+this.items.length+"</span></div>")},o.prototype.addHtml=function(e){var t,s=null;if(this.s.dynamic?s=this.s.dynamicEl[e].subHtml:(s=(t=this.items[e]).getAttribute("data-sub-html"),this.s.getCaptionFromTitleOrAlt&&!s&&(s=t.getAttribute("title"))&&t.querySelector("img")&&(s=t.querySelector("img").getAttribute("alt"))),void 0!==s&&null!==s){var l=s.substring(0,1);"."!==l&&"#"!==l||(s=this.s.subHtmlSelectorRelative&&!this.s.dynamic?t.querySelector(s).innerHTML:document.querySelector(s).innerHTML)}else s="";".lg-sub-html"===this.s.appendSubHtmlTo?this.outer.querySelector(this.s.appendSubHtmlTo).innerHTML=s:this.___slide[e].insertAdjacentHTML("beforeend",s),void 0!==s&&null!==s&&(""===s?i.default.addClass(this.outer.querySelector(this.s.appendSubHtmlTo),"lg-empty-html"):i.default.removeClass(this.outer.querySelector(this.s.appendSubHtmlTo),"lg-empty-html")),i.default.trigger(this.el,"onAfterAppendSubHtml",{index:e})},o.prototype.preload=function(e){var t=1,i=1;for(t=1;t<=this.s.preload&&!(t>=this.items.length-e);t++)this.loadContent(e+t,!1,0);for(i=1;i<=this.s.preload&&!(e-i<0);i++)this.loadContent(e-i,!1,0)},o.prototype.loadContent=function(e,t,s){var l,o,r,n,a,u,d,c=this,h=!1,m=function(e){for(var t=[],i=[],s=0;s<e.length;s++){var l=e[s].split(" ");""===l[0]&&l.splice(0,1),i.push(l[0]),t.push(l[1])}for(var r=window.innerWidth,n=0;n<t.length;n++)if(parseInt(t[n],10)>r){o=i[n];break}};if(c.s.dynamic){if(c.s.dynamicEl[e].poster&&(h=!0,r=c.s.dynamicEl[e].poster),u=c.s.dynamicEl[e].html,o=c.s.dynamicEl[e].src,d=c.s.dynamicEl[e].alt,c.s.dynamicEl[e].responsive)m(c.s.dynamicEl[e].responsive.split(","));n=c.s.dynamicEl[e].srcset,a=c.s.dynamicEl[e].sizes}else{if(c.items[e].getAttribute("data-poster")&&(h=!0,r=c.items[e].getAttribute("data-poster")),u=c.items[e].getAttribute("data-html"),o=c.items[e].getAttribute("href")||c.items[e].getAttribute("data-src"),d=c.items[e].getAttribute("title"),c.items[e].querySelector("img")&&(d=d||c.items[e].querySelector("img").getAttribute("alt")),c.items[e].getAttribute("data-responsive"))m(c.items[e].getAttribute("data-responsive").split(","));n=c.items[e].getAttribute("data-srcset"),a=c.items[e].getAttribute("data-sizes")}var g=!1;c.s.dynamic?c.s.dynamicEl[e].iframe&&(g=!0):"true"===c.items[e].getAttribute("data-iframe")&&(g=!0);var f=c.isVideo(o,e);if(!i.default.hasClass(c.___slide[e],"lg-loaded")){if(g)c.___slide[e].insertAdjacentHTML("afterbegin",'<div class="lg-video-cont" style="max-width:'+c.s.iframeMaxWidth+'"><div class="lg-video"><iframe class="lg-object" frameborder="0" src="'+o+'"  allowfullscreen="true"></iframe></div></div>');else if(h){var b="";b=f&&f.youtube?"lg-has-youtube":f&&f.vimeo?"lg-has-vimeo":"lg-has-html5",c.___slide[e].insertAdjacentHTML("beforeend",'<div class="lg-video-cont '+b+' "><div class="lg-video"><span class="lg-video-play"></span><img class="lg-object lg-has-poster" src="'+r+'" /></div></div>')}else f?(c.___slide[e].insertAdjacentHTML("beforeend",'<div class="lg-video-cont "><div class="lg-video"></div></div>'),i.default.trigger(c.el,"hasVideo",{index:e,src:o,html:u})):(d=d?'alt="'+d+'"':"",c.___slide[e].insertAdjacentHTML("beforeend",'<div class="lg-img-wrap"><img class="lg-object lg-image" '+d+' src="'+o+'" /></div>'));if(i.default.trigger(c.el,"onAferAppendSlide",{index:e}),l=c.___slide[e].querySelector(".lg-object"),a&&l.setAttribute("sizes",a),n&&(l.setAttribute("srcset",n),this.s.supportLegacyBrowser))try{picturefill({elements:[l[0]]})}catch(e){console.warn("If you want srcset to be supported for older browsers, please include picturefil javascript library in your document.")}".lg-sub-html"!==this.s.appendSubHtmlTo&&c.addHtml(e),i.default.addClass(c.___slide[e],"lg-loaded")}i.default.on(c.___slide[e].querySelector(".lg-object"),"load.lg error.lg",function(){var t=0;s&&!i.default.hasClass(document.body,"lg-from-hash")&&(t=s),setTimeout(function(){i.default.addClass(c.___slide[e],"lg-complete"),i.default.trigger(c.el,"onSlideItemLoad",{index:e,delay:s||0})},t)}),f&&f.html5&&!h&&i.default.addClass(c.___slide[e],"lg-complete"),!0===t&&(i.default.hasClass(c.___slide[e],"lg-complete")?c.preload(e):i.default.on(c.___slide[e].querySelector(".lg-object"),"load.lg error.lg",function(){c.preload(e)}))},o.prototype.slide=function(e,t,s){for(var l=0,o=0;o<this.___slide.length;o++)if(i.default.hasClass(this.___slide[o],"lg-current")){l=o;break}var r=this;if(!r.lGalleryOn||l!==e){var n=this.___slide.length,a=r.lGalleryOn?this.s.speed:0,u=!1,d=!1;if(!r.lgBusy){var c;if(this.s.download)(c=r.s.dynamic?!1!==r.s.dynamicEl[e].downloadUrl&&(r.s.dynamicEl[e].downloadUrl||r.s.dynamicEl[e].src):"false"!==r.items[e].getAttribute("data-download-url")&&(r.items[e].getAttribute("data-download-url")||r.items[e].getAttribute("href")||r.items[e].getAttribute("data-src")))?(document.getElementById("lg-download").setAttribute("href",c),i.default.removeClass(r.outer,"lg-hide-download")):i.default.addClass(r.outer,"lg-hide-download");if(i.default.trigger(r.el,"onBeforeSlide",{prevIndex:l,index:e,fromTouch:t,fromThumb:s}),r.lgBusy=!0,clearTimeout(r.hideBartimeout),".lg-sub-html"===this.s.appendSubHtmlTo&&setTimeout(function(){r.addHtml(e)},a),this.arrowDisable(e),t){var h=e-1,m=e+1;0===e&&l===n-1?(m=0,h=n-1):e===n-1&&0===l&&(m=0,h=n-1),i.default.removeClass(r.outer.querySelector(".lg-prev-slide"),"lg-prev-slide"),i.default.removeClass(r.outer.querySelector(".lg-current"),"lg-current"),i.default.removeClass(r.outer.querySelector(".lg-next-slide"),"lg-next-slide"),i.default.addClass(r.___slide[h],"lg-prev-slide"),i.default.addClass(r.___slide[m],"lg-next-slide"),i.default.addClass(r.___slide[e],"lg-current")}else{i.default.addClass(r.outer,"lg-no-trans");for(var g=0;g<this.___slide.length;g++)i.default.removeClass(this.___slide[g],"lg-prev-slide"),i.default.removeClass(this.___slide[g],"lg-next-slide");e<l?(d=!0,0!==e||l!==n-1||s||(d=!1,u=!0)):e>l&&(u=!0,e!==n-1||0!==l||s||(d=!0,u=!1)),d?(i.default.addClass(this.___slide[e],"lg-prev-slide"),i.default.addClass(this.___slide[l],"lg-next-slide")):u&&(i.default.addClass(this.___slide[e],"lg-next-slide"),i.default.addClass(this.___slide[l],"lg-prev-slide")),setTimeout(function(){i.default.removeClass(r.outer.querySelector(".lg-current"),"lg-current"),i.default.addClass(r.___slide[e],"lg-current"),i.default.removeClass(r.outer,"lg-no-trans")},50)}r.lGalleryOn?(setTimeout(function(){r.loadContent(e,!0,0)},this.s.speed+50),setTimeout(function(){r.lgBusy=!1,i.default.trigger(r.el,"onAfterSlide",{prevIndex:l,index:e,fromTouch:t,fromThumb:s})},this.s.speed)):(r.loadContent(e,!0,r.s.backdropDuration),r.lgBusy=!1,i.default.trigger(r.el,"onAfterSlide",{prevIndex:l,index:e,fromTouch:t,fromThumb:s})),r.lGalleryOn=!0,this.s.counter&&document.getElementById("lg-counter-current")&&(document.getElementById("lg-counter-current").innerHTML=e+1)}}},o.prototype.goToNextSlide=function(e){var t=this;t.lgBusy||(t.index+1<t.___slide.length?(t.index++,i.default.trigger(t.el,"onBeforeNextSlide",{index:t.index}),t.slide(t.index,e,!1)):t.s.loop?(t.index=0,i.default.trigger(t.el,"onBeforeNextSlide",{index:t.index}),t.slide(t.index,e,!1)):t.s.slideEndAnimatoin&&(i.default.addClass(t.outer,"lg-right-end"),setTimeout(function(){i.default.removeClass(t.outer,"lg-right-end")},400)))},o.prototype.goToPrevSlide=function(e){var t=this;t.lgBusy||(t.index>0?(t.index--,i.default.trigger(t.el,"onBeforePrevSlide",{index:t.index,fromTouch:e}),t.slide(t.index,e,!1)):t.s.loop?(t.index=t.items.length-1,i.default.trigger(t.el,"onBeforePrevSlide",{index:t.index,fromTouch:e}),t.slide(t.index,e,!1)):t.s.slideEndAnimatoin&&(i.default.addClass(t.outer,"lg-left-end"),setTimeout(function(){i.default.removeClass(t.outer,"lg-left-end")},400)))},o.prototype.keyPress=function(){var e=this;this.items.length>1&&i.default.on(window,"keyup.lg",function(t){e.items.length>1&&(37===t.keyCode&&(t.preventDefault(),e.goToPrevSlide()),39===t.keyCode&&(t.preventDefault(),e.goToNextSlide()))}),i.default.on(window,"keydown.lg",function(t){!0===e.s.escKey&&27===t.keyCode&&(t.preventDefault(),i.default.hasClass(e.outer,"lg-thumb-open")?i.default.removeClass(e.outer,"lg-thumb-open"):e.destroy())})},o.prototype.arrow=function(){var e=this;i.default.on(this.outer.querySelector(".lg-prev"),"click.lg",function(){e.goToPrevSlide()}),i.default.on(this.outer.querySelector(".lg-next"),"click.lg",function(){e.goToNextSlide()})},o.prototype.arrowDisable=function(e){if(!this.s.loop&&this.s.hideControlOnEnd){var t=this.outer.querySelector(".lg-next"),s=this.outer.querySelector(".lg-prev");e+1<this.___slide.length?(t.removeAttribute("disabled"),i.default.removeClass(t,"disabled")):(t.setAttribute("disabled","disabled"),i.default.addClass(t,"disabled")),e>0?(s.removeAttribute("disabled"),i.default.removeClass(s,"disabled")):(s.setAttribute("disabled","disabled"),i.default.addClass(s,"disabled"))}},o.prototype.setTranslate=function(e,t,s){this.s.useLeft?e.style.left=t:i.default.setVendor(e,"Transform","translate3d("+t+"px, "+s+"px, 0px)")},o.prototype.touchMove=function(e,t){var s=t-e;Math.abs(s)>15&&(i.default.addClass(this.outer,"lg-dragging"),this.setTranslate(this.___slide[this.index],s,0),this.setTranslate(document.querySelector(".lg-prev-slide"),-this.___slide[this.index].clientWidth+s,0),this.setTranslate(document.querySelector(".lg-next-slide"),this.___slide[this.index].clientWidth+s,0))},o.prototype.touchEnd=function(e){var t=this;"lg-slide"!==t.s.mode&&i.default.addClass(t.outer,"lg-slide");for(var s=0;s<this.___slide.length;s++)i.default.hasClass(this.___slide[s],"lg-current")||i.default.hasClass(this.___slide[s],"lg-prev-slide")||i.default.hasClass(this.___slide[s],"lg-next-slide")||(this.___slide[s].style.opacity="0");setTimeout(function(){i.default.removeClass(t.outer,"lg-dragging"),e<0&&Math.abs(e)>t.s.swipeThreshold?t.goToNextSlide(!0):e>0&&Math.abs(e)>t.s.swipeThreshold?t.goToPrevSlide(!0):Math.abs(e)<5&&i.default.trigger(t.el,"onSlideClick");for(var s=0;s<t.___slide.length;s++)t.___slide[s].removeAttribute("style")}),setTimeout(function(){i.default.hasClass(t.outer,"lg-dragging")||"lg-slide"===t.s.mode||i.default.removeClass(t.outer,"lg-slide")},t.s.speed+100)},o.prototype.enableSwipe=function(){var e=this,t=0,s=0,l=!1;if(e.s.enableSwipe&&e.isTouch&&e.doCss()){for(var o=0;o<e.___slide.length;o++)i.default.on(e.___slide[o],"touchstart.lg",function(s){i.default.hasClass(e.outer,"lg-zoomed")||e.lgBusy||(s.preventDefault(),e.manageSwipeClass(),t=s.targetTouches[0].pageX)});for(var r=0;r<e.___slide.length;r++)i.default.on(e.___slide[r],"touchmove.lg",function(o){i.default.hasClass(e.outer,"lg-zoomed")||(o.preventDefault(),s=o.targetTouches[0].pageX,e.touchMove(t,s),l=!0)});for(var n=0;n<e.___slide.length;n++)i.default.on(e.___slide[n],"touchend.lg",function(){i.default.hasClass(e.outer,"lg-zoomed")||(l?(l=!1,e.touchEnd(s-t)):i.default.trigger(e.el,"onSlideClick"))})}},o.prototype.enableDrag=function(){var e=this,t=0,s=0,l=!1,o=!1;if(e.s.enableDrag&&!e.isTouch&&e.doCss()){for(var r=0;r<e.___slide.length;r++)i.default.on(e.___slide[r],"mousedown.lg",function(s){i.default.hasClass(e.outer,"lg-zoomed")||(i.default.hasClass(s.target,"lg-object")||i.default.hasClass(s.target,"lg-video-play"))&&(s.preventDefault(),e.lgBusy||(e.manageSwipeClass(),t=s.pageX,l=!0,e.outer.scrollLeft+=1,e.outer.scrollLeft-=1,i.default.removeClass(e.outer,"lg-grab"),i.default.addClass(e.outer,"lg-grabbing"),i.default.trigger(e.el,"onDragstart")))});i.default.on(window,"mousemove.lg",function(r){l&&(o=!0,s=r.pageX,e.touchMove(t,s),i.default.trigger(e.el,"onDragmove"))}),i.default.on(window,"mouseup.lg",function(r){o?(o=!1,e.touchEnd(s-t),i.default.trigger(e.el,"onDragend")):(i.default.hasClass(r.target,"lg-object")||i.default.hasClass(r.target,"lg-video-play"))&&i.default.trigger(e.el,"onSlideClick"),l&&(l=!1,i.default.removeClass(e.outer,"lg-grabbing"),i.default.addClass(e.outer,"lg-grab"))})}},o.prototype.manageSwipeClass=function(){var e=this.index+1,t=this.index-1,s=this.___slide.length;this.s.loop&&(0===this.index?t=s-1:this.index===s-1&&(e=0));for(var l=0;l<this.___slide.length;l++)i.default.removeClass(this.___slide[l],"lg-next-slide"),i.default.removeClass(this.___slide[l],"lg-prev-slide");t>-1&&i.default.addClass(this.___slide[t],"lg-prev-slide"),i.default.addClass(this.___slide[e],"lg-next-slide")},o.prototype.mousewheel=function(){var e=this;i.default.on(e.outer,"mousewheel.lg",function(t){t.deltaY&&(t.deltaY>0?e.goToPrevSlide():e.goToNextSlide(),t.preventDefault())})},o.prototype.closeGallery=function(){var e=this,t=!1;i.default.on(this.outer.querySelector(".lg-close"),"click.lg",function(){e.destroy()}),e.s.closable&&(i.default.on(e.outer,"mousedown.lg",function(e){t=!!(i.default.hasClass(e.target,"lg-outer")||i.default.hasClass(e.target,"lg-item")||i.default.hasClass(e.target,"lg-img-wrap"))}),i.default.on(e.outer,"mouseup.lg",function(s){(i.default.hasClass(s.target,"lg-outer")||i.default.hasClass(s.target,"lg-item")||i.default.hasClass(s.target,"lg-img-wrap")&&t)&&(i.default.hasClass(e.outer,"lg-dragging")||e.destroy())}))},o.prototype.destroy=function(e){var t=this;if(e||i.default.trigger(t.el,"onBeforeClose"),document.body.scrollTop=t.prevScrollTop,document.documentElement.scrollTop=t.prevScrollTop,e){if(!t.s.dynamic)for(var s=0;s<this.items.length;s++)i.default.off(this.items[s],".lg"),i.default.off(this.items[s],".lgcustom");var l=t.el.getAttribute("lg-uid");delete window.lgData[l],t.el.removeAttribute("lg-uid")}for(var o in i.default.off(this.el,".lgtm"),window.lgModules)t.modules[o]&&t.modules[o].destroy(e);this.lGalleryOn=!1,clearTimeout(t.hideBartimeout),this.hideBartimeout=!1,i.default.off(window,".lg"),i.default.removeClass(document.body,"lg-on"),i.default.removeClass(document.body,"lg-from-hash"),t.outer&&i.default.removeClass(t.outer,"lg-visible"),i.default.removeClass(document.querySelector(".lg-backdrop"),"in"),setTimeout(function(){try{t.outer&&t.outer.parentNode.removeChild(t.outer),document.querySelector(".lg-backdrop")&&document.querySelector(".lg-backdrop").parentNode.removeChild(document.querySelector(".lg-backdrop")),e||i.default.trigger(t.el,"onCloseAfter"),t.el.focus()}catch(e){}},t.s.backdropDuration+50)},window.lightGallery=function(e,t){if(e)try{if(e.getAttribute("lg-uid"))window.lgData[e.getAttribute("lg-uid")].init();else{var i="lg"+window.lgData.uid++;window.lgData[i]=new o(e,t),e.setAttribute("lg-uid",i)}}catch(e){console.error("lightGallery has not initiated properly",e)}}},l=[i("jta8")],void 0===(o="function"==typeof(s=r)?s.apply(t,l):s)||(e.exports=o)},2:function(e,t,i){e.exports=i("aUjn")},aUjn:function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s,l,o,r=i("jPrc"),n=i("tqM+"),a=i("0sbr"),u=i("m7LC"),d=i("19Qz"),c=(i.n(d),i("t0vw")),h=(i.n(c),s=window.sharedData.light_gallery_images,l=function(){var e=document.getElementsByClassName("btn-open-gallery"),t=document.getElementById("images-gallery");if(null!==t&&void 0!==t){var i=document.querySelector("#images-gallery a");lightGallery(t,{thumbnail:!0}),Array.from(e).forEach(function(e){e.addEventListener("click",function(e){e.preventDefault(),Object(u.b)(i)})})}else Array.from(e).forEach(function(e){e.addEventListener("click",function(e){e.preventDefault(),lightGallery(e.currentTarget,{dynamic:!0,dynamicEl:s,thumbnail:!0})})})},o=function(){new r.a({elements_selector:".lazyload"})},{init:function(){return o(),l(),Object(n.a)(),void Object(a.a)()}});document.addEventListener("DOMContentLoaded",function(){return h.init()})},jPrc:function(e,t,i){"use strict";const s=function(e){return e.getBoundingClientRect().top+window.pageYOffset-e.ownerDocument.documentElement.clientTop},l=function(e,t,i){return(t===window?window.innerHeight+window.pageYOffset:s(t)+t.offsetHeight)<=s(e)-i},o=function(e){return e.getBoundingClientRect().left+window.pageXOffset-e.ownerDocument.documentElement.clientLeft},r=function(e,t,i){const s=window.innerWidth;return(t===window?s+window.pageXOffset:o(t)+s)<=o(e)-i},n=function(e,t,i){return(t===window?window.pageYOffset:s(t))>=s(e)+i+e.offsetHeight},a=function(e,t,i){return(t===window?window.pageXOffset:o(t))>=o(e)+i+e.offsetWidth};const u=function(e,t){var i;let s=new e(t);try{i=new CustomEvent("LazyLoad::Initialized",{detail:{instance:s}})}catch(e){(i=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:s})}window.dispatchEvent(i)};const d=(e,t)=>t?e.replace(/\.(jpe?g|png)/gi,".webp"):e,c="undefined"!=typeof window,h=c&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),m=c&&"classList"in document.createElement("p"),g=c&&(!(!(f=document.createElement("canvas")).getContext||!f.getContext("2d"))&&0===f.toDataURL("image/webp").indexOf("data:image/webp"));var f;const b=(e,t)=>{m?e.classList.add(t):e.className+=(e.className?" ":"")+t},p=(e,t)=>e.getAttribute("data-"+t),v=e=>(e=e,_="was-processed",w="true",C="data-"+_,void(null!==w?e.setAttribute(C,w):e.removeAttribute(C)));var y,_,w,C;const T=e=>"true"===p(e,"was-processed"),S=function(e,t,i,s){for(let l,o=0;l=e.children[o];o+=1)if("SOURCE"===l.tagName){let e=p(l,i);x(l,t,e,s)}},x=function(e,t,i,s){i&&e.setAttribute(t,d(i,s))},E={IMG:(e,t)=>{const i=g&&t.to_webp,s=t.data_srcset,l=e.parentNode;l&&"PICTURE"===l.tagName&&S(l,"srcset",s,i);const o=p(e,t.data_sizes);x(e,"sizes",o);const r=p(e,s);x(e,"srcset",r,i);const n=p(e,t.data_src);x(e,"src",n,i)},IFRAME:(e,t)=>{const i=p(e,t.data_src);x(e,"src",i)},VIDEO:(e,t)=>{const i=t.data_src,s=p(e,i);S(e,"src",i),x(e,"src",s),e.load()}},A=(e,t)=>{const i=e.tagName,s=E[i];s?s(e,t):((e,t)=>{const i=g&&t.to_webp,s=p(e,t.data_src);if(s){let t=d(s,i);e.style.backgroundImage=`url("${t}")`}})(e,t)},L=function(e,t){e&&e(t)},O=(e,t,i)=>{e.addEventListener(t,i)},k=(e,t,i)=>{e.removeEventListener(t,i)},D=(e,t,i)=>{k(e,"load",t),k(e,"loadeddata",t),k(e,"error",i)},q=function(e,t,i){const s=t?i.class_loaded:i.class_error,l=t?i.callback_load:i.callback_error,o=e.target;((e,t)=>{m?e.classList.remove(t):e.className=e.className.replace(new RegExp("(^|\\s+)"+t+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")})(o,i.class_loading),b(o,s),L(l,o)},H=(e,t)=>{const i=l=>{q(l,!0,t),D(e,i,s)},s=l=>{q(l,!1,t),D(e,i,s)};((e,t,i)=>{O(e,"load",t),O(e,"loadeddata",t),O(e,"error",i)})(e,i,s)},B=["IMG","IFRAME","VIDEO"];const M=(e,t)=>{for(;t.length;)e.splice(t.pop(),1)},j=function(e){this._settings=Object.assign({},(()=>({elements_selector:"img",container:window,threshold:300,throttle:150,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",class_loading:"loading",class_loaded:"loaded",class_error:"error",class_initial:"initial",skip_invisible:!0,callback_load:null,callback_error:null,callback_set:null,callback_processed:null,callback_enter:null,to_webp:!1}))(),e),this._queryOriginNode=this._settings.container===window?document:this._settings.container,this._previousLoopTime=0,this._loopTimeout=null,this._boundHandleScroll=this.handleScroll.bind(this),this._isFirstLoop=!0,window.addEventListener("resize",this._boundHandleScroll),this.update()};j.prototype={_loopThroughElements:function(e){const t=this._settings,i=this._elements,s=i?i.length:0;let o,u=[],d=this._isFirstLoop;if(d&&(this._isFirstLoop=!1),0!==s){for(o=0;o<s;o++){let s=i[o];t.skip_invisible&&null===s.offsetParent||(!h&&!e&&(s=s,m=t.container,g=t.threshold,l(s,m,g)||n(s,m,g)||r(s,m,g)||a(s,m,g))||(d&&b(s,t.class_initial),this.load(s),u.push(o)))}var c,m,g;M(i,u)}else this._stopScrollHandler()},_purgeElements:function(){const e=this._elements,t=e.length;let i,s=[];for(i=0;i<t;i++)T(e[i])&&s.push(i);M(e,s)},_startScrollHandler:function(){this._isHandlingScroll||(this._isHandlingScroll=!0,this._settings.container.addEventListener("scroll",this._boundHandleScroll))},_stopScrollHandler:function(){this._isHandlingScroll&&(this._isHandlingScroll=!1,this._settings.container.removeEventListener("scroll",this._boundHandleScroll))},handleScroll:function(){const e=this._settings.throttle;if(0!==e){let t=Date.now(),i=e-(t-this._previousLoopTime);i<=0||i>e?(this._loopTimeout&&(clearTimeout(this._loopTimeout),this._loopTimeout=null),this._previousLoopTime=t,this._loopThroughElements()):this._loopTimeout||(this._loopTimeout=setTimeout(function(){this._previousLoopTime=Date.now(),this._loopTimeout=null,this._loopThroughElements()}.bind(this),i))}else this._loopThroughElements()},loadAll:function(){this._loopThroughElements(!0)},update:function(){this._elements=Array.prototype.slice.call(this._queryOriginNode.querySelectorAll(this._settings.elements_selector)),this._purgeElements(),this._loopThroughElements(),this._startScrollHandler()},destroy:function(){window.removeEventListener("resize",this._boundHandleScroll),this._loopTimeout&&(clearTimeout(this._loopTimeout),this._loopTimeout=null),this._stopScrollHandler(),this._elements=null,this._queryOriginNode=null,this._settings=null},load:function(e,t){!function(e,t,i){!i&&T(e)||(L(t.callback_enter,e),B.indexOf(e.tagName)>-1&&(H(e,t),b(e,t.class_loading)),A(e,t),v(e),L(t.callback_set,e))}(e,this._settings,t)}},c&&function(e,t){if(t)if(t.length)for(let i,s=0;i=t[s];s+=1)u(e,i);else u(e,t)}(j,window.lazyLoadOptions),t.a=j},jta8:function(e,t,i){var s,l,o,r;r=function(e){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var t={getAttribute:function(e,t){return e[t]},setAttribute:function(e,t,i){e[t]=i},wrap:function(e,t){if(e){var i=document.createElement("div");i.className=t,e.parentNode.insertBefore(i,e),e.parentNode.removeChild(e),i.appendChild(e)}},addClass:function(e,t){e&&(e.classList?e.classList.add(t):e.className+=" "+t)},removeClass:function(e,t){e&&(e.classList?e.classList.remove(t):e.className=e.className.replace(new RegExp("(^|\\b)"+t.split(" ").join("|")+"(\\b|$)","gi")," "))},hasClass:function(e,t){return e.classList?e.classList.contains(t):new RegExp("(^| )"+t+"( |$)","gi").test(e.className)},setVendor:function(e,t,i){e&&(e.style[t.charAt(0).toLowerCase()+t.slice(1)]=i,e.style["webkit"+t]=i,e.style["moz"+t]=i,e.style["ms"+t]=i,e.style["o"+t]=i)},trigger:function(e,t){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;if(e){var s=new CustomEvent(t,{detail:i});e.dispatchEvent(s)}},Listener:{uid:0},on:function(e,i,s){var l=this;e&&i.split(" ").forEach(function(i){var o=l.getAttribute(e,"lg-event-uid")||"";t.Listener.uid++,o+="&"+t.Listener.uid,l.setAttribute(e,"lg-event-uid",o),t.Listener[i+t.Listener.uid]=s,e.addEventListener(i.split(".")[0],s,!1)})},off:function(e,i){if(e){var s=this.getAttribute(e,"lg-event-uid");if(s){s=s.split("&");for(var l=0;l<s.length;l++)if(s[l]){var o=i+s[l];if("."===o.substring(0,1))for(var r in t.Listener)t.Listener.hasOwnProperty(r)&&r.split(".").indexOf(o.split(".")[1])>-1&&(e.removeEventListener(r.split(".")[0],t.Listener[r]),this.setAttribute(e,"lg-event-uid",this.getAttribute(e,"lg-event-uid").replace("&"+s[l],"")),delete t.Listener[r]);else e.removeEventListener(o.split(".")[0],t.Listener[o]),this.setAttribute(e,"lg-event-uid",this.getAttribute(e,"lg-event-uid").replace("&"+s[l],"")),delete t.Listener[o]}}}},param:function(e){return Object.keys(e).map(function(t){return encodeURIComponent(t)+"="+encodeURIComponent(e[t])}).join("&")}};e.default=t},l=[t],void 0===(o="function"==typeof(s=r)?s.apply(t,l):s)||(e.exports=o)},m7LC:function(e,t,i){"use strict";i.d(t,"a",function(){return s}),i.d(t,"b",function(){return l});var s=function(e){return"none"!==window.getComputedStyle(e).display},l=function(e){var t=new MouseEvent("click",{bubbles:!0,cancelable:!0,view:window});e.dispatchEvent(t)}},t0vw:function(e,t,i){var s,l;l=function(){return function(){return function e(t,i,l){function o(n,a){if(!i[n]){if(!t[n]){if(!a&&"function"==typeof s&&s)return s(n,!0);if(r)return r(n,!0);var u=new Error("Cannot find module '"+n+"'");throw u.code="MODULE_NOT_FOUND",u}var d=i[n]={exports:{}};t[n][0].call(d.exports,function(e){return o(t[n][1][e]||e)},d,d.exports,e,t,i,l)}return i[n].exports}for(var r="function"==typeof s&&s,n=0;n<l.length;n++)o(l[n]);return o}}()({1:[function(e,t,i){!function(e,t){if(void 0!==i)t();else{t(),e.lgThumbnail={}}}(this,function(){"use strict";var e=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var i=arguments[t];for(var s in i)Object.prototype.hasOwnProperty.call(i,s)&&(e[s]=i[s])}return e},t={thumbnail:!0,animateThumb:!0,currentPagerPosition:"middle",thumbWidth:100,thumbContHeight:100,thumbMargin:5,exThumbImage:!1,showThumbByDefault:!0,toggleThumb:!0,pullCaptionUp:!0,enableThumbDrag:!0,enableThumbSwipe:!0,swipeThreshold:50,loadYoutubeThumbnail:!0,youtubeThumbSize:1,loadVimeoThumbnail:!0,vimeoThumbSize:"thumbnail_small",loadDailymotionThumbnail:!0},i=function(i){return this.el=i,this.core=window.lgData[this.el.getAttribute("lg-uid")],this.core.s=e({},t,this.core.s),this.thumbOuter=null,this.thumbOuterWidth=0,this.thumbTotalWidth=this.core.items.length*(this.core.s.thumbWidth+this.core.s.thumbMargin),this.thumbIndex=this.core.index,this.left=0,this.init(),this};i.prototype.init=function(){var e=this;this.core.s.thumbnail&&this.core.items.length>1&&(this.core.s.showThumbByDefault&&setTimeout(function(){utils.addClass(e.core.outer,"lg-thumb-open")},700),this.core.s.pullCaptionUp&&utils.addClass(this.core.outer,"lg-pull-caption-up"),this.build(),this.core.s.animateThumb?(this.core.s.enableThumbDrag&&!this.core.isTouch&&this.core.doCss()&&this.enableThumbDrag(),this.core.s.enableThumbSwipe&&this.core.isTouch&&this.core.doCss()&&this.enableThumbSwipe(),this.thumbClickable=!1):this.thumbClickable=!0,this.toggle(),this.thumbkeyPress())},i.prototype.build=function(){var e,t=this,i="",s="";switch(this.core.s.vimeoThumbSize){case"thumbnail_large":s="640";break;case"thumbnail_medium":s="200x150";break;case"thumbnail_small":s="100x75"}function l(e,l,o){var r,n=t.core.isVideo(e,o)||{},a="";n.youtube||n.vimeo||n.dailymotion?n.youtube?r=t.core.s.loadYoutubeThumbnail?"//img.youtube.com/vi/"+n.youtube[1]+"/"+t.core.s.youtubeThumbSize+".jpg":l:n.vimeo?t.core.s.loadVimeoThumbnail?(r="//i.vimeocdn.com/video/error_"+s+".jpg",a=n.vimeo[1]):r=l:n.dailymotion&&(r=t.core.s.loadDailymotionThumbnail?"//www.dailymotion.com/thumbnail/video/"+n.dailymotion[1]:l):r=l,i+='<div data-vimeo-id="'+a+'" class="lg-thumb-item" style="width:'+t.core.s.thumbWidth+"px; margin-right: "+t.core.s.thumbMargin+'px"><img src="'+r+'" /></div>',a=""}if(utils.addClass(t.core.outer,"lg-has-thumb"),t.core.outer.querySelector(".lg").insertAdjacentHTML("beforeend",'<div class="lg-thumb-outer"><div class="lg-thumb group"></div></div>'),t.thumbOuter=t.core.outer.querySelector(".lg-thumb-outer"),t.thumbOuterWidth=t.thumbOuter.offsetWidth,t.core.s.animateThumb&&(t.core.outer.querySelector(".lg-thumb").style.width=t.thumbTotalWidth+"px",t.core.outer.querySelector(".lg-thumb").style.position="relative"),this.core.s.animateThumb&&(t.thumbOuter.style.height=t.core.s.thumbContHeight+"px"),t.core.s.dynamic)for(var o=0;o<t.core.s.dynamicEl.length;o++)l(t.core.s.dynamicEl[o].src,t.core.s.dynamicEl[o].thumb,o);else for(var r=0;r<t.core.items.length;r++)t.core.s.exThumbImage?l(t.core.items[r].getAttribute("href")||t.core.items[r].getAttribute("data-src"),t.core.items[r].getAttribute(t.core.s.exThumbImage),r):l(t.core.items[r].getAttribute("href")||t.core.items[r].getAttribute("data-src"),t.core.items[r].querySelector("img").getAttribute("src"),r);t.core.outer.querySelector(".lg-thumb").innerHTML=i,e=t.core.outer.querySelectorAll(".lg-thumb-item");for(var n=0;n<e.length;n++)!function(i){var s=e[n],l=s.getAttribute("data-vimeo-id");if(l){window["lgJsonP"+t.el.getAttribute("lg-uid")+n]=function(e){s.querySelector("img").setAttribute("src",e[0][t.core.s.vimeoThumbSize])};var o=document.createElement("script");o.className="lg-script",o.src="//www.vimeo.com/api/v2/video/"+l+".json?callback=lgJsonP"+t.el.getAttribute("lg-uid")+n,document.body.appendChild(o)}}();utils.addClass(e[t.core.index],"active"),utils.on(t.core.el,"onBeforeSlide.lgtm",function(){for(var i=0;i<e.length;i++)utils.removeClass(e[i],"active");utils.addClass(e[t.core.index],"active")});for(var a=0;a<e.length;a++)!function(i){utils.on(e[i],"click.lg touchend.lg",function(){setTimeout(function(){(t.thumbClickable&&!t.core.lgBusy||!t.core.doCss())&&(t.core.index=i,t.core.slide(t.core.index,!1,!0))},50)})}(a);utils.on(t.core.el,"onBeforeSlide.lgtm",function(){t.animateThumb(t.core.index)}),utils.on(window,"resize.lgthumb orientationchange.lgthumb",function(){setTimeout(function(){t.animateThumb(t.core.index),t.thumbOuterWidth=t.thumbOuter.offsetWidth},200)})},i.prototype.setTranslate=function(e){utils.setVendor(this.core.outer.querySelector(".lg-thumb"),"Transform","translate3d(-"+e+"px, 0px, 0px)")},i.prototype.animateThumb=function(e){var t=this.core.outer.querySelector(".lg-thumb");if(this.core.s.animateThumb){var i;switch(this.core.s.currentPagerPosition){case"left":i=0;break;case"middle":i=this.thumbOuterWidth/2-this.core.s.thumbWidth/2;break;case"right":i=this.thumbOuterWidth-this.core.s.thumbWidth}this.left=(this.core.s.thumbWidth+this.core.s.thumbMargin)*e-1-i,this.left>this.thumbTotalWidth-this.thumbOuterWidth&&(this.left=this.thumbTotalWidth-this.thumbOuterWidth),this.left<0&&(this.left=0),this.core.lGalleryOn?(utils.hasClass(t,"on")||utils.setVendor(this.core.outer.querySelector(".lg-thumb"),"TransitionDuration",this.core.s.speed+"ms"),this.core.doCss()||(t.style.left=-this.left+"px")):this.core.doCss()||(t.style.left=-this.left+"px"),this.setTranslate(this.left)}},i.prototype.enableThumbDrag=function(){var e=this,t=0,i=0,s=!1,l=!1,o=0;utils.addClass(e.thumbOuter,"lg-grab"),utils.on(e.core.outer.querySelector(".lg-thumb"),"mousedown.lgthumb",function(i){e.thumbTotalWidth>e.thumbOuterWidth&&(i.preventDefault(),t=i.pageX,s=!0,e.core.outer.scrollLeft+=1,e.core.outer.scrollLeft-=1,e.thumbClickable=!1,utils.removeClass(e.thumbOuter,"lg-grab"),utils.addClass(e.thumbOuter,"lg-grabbing"))}),utils.on(window,"mousemove.lgthumb",function(r){s&&(o=e.left,l=!0,i=r.pageX,utils.addClass(e.thumbOuter,"lg-dragging"),(o-=i-t)>e.thumbTotalWidth-e.thumbOuterWidth&&(o=e.thumbTotalWidth-e.thumbOuterWidth),o<0&&(o=0),e.setTranslate(o))}),utils.on(window,"mouseup.lgthumb",function(){l?(l=!1,utils.removeClass(e.thumbOuter,"lg-dragging"),e.left=o,Math.abs(i-t)<e.core.s.swipeThreshold&&(e.thumbClickable=!0)):e.thumbClickable=!0,s&&(s=!1,utils.removeClass(e.thumbOuter,"lg-grabbing"),utils.addClass(e.thumbOuter,"lg-grab"))})},i.prototype.enableThumbSwipe=function(){var e=this,t=0,i=0,s=!1,l=0;utils.on(e.core.outer.querySelector(".lg-thumb"),"touchstart.lg",function(i){e.thumbTotalWidth>e.thumbOuterWidth&&(i.preventDefault(),t=i.targetTouches[0].pageX,e.thumbClickable=!1)}),utils.on(e.core.outer.querySelector(".lg-thumb"),"touchmove.lg",function(o){e.thumbTotalWidth>e.thumbOuterWidth&&(o.preventDefault(),i=o.targetTouches[0].pageX,s=!0,utils.addClass(e.thumbOuter,"lg-dragging"),l=e.left,(l-=i-t)>e.thumbTotalWidth-e.thumbOuterWidth&&(l=e.thumbTotalWidth-e.thumbOuterWidth),l<0&&(l=0),e.setTranslate(l))}),utils.on(e.core.outer.querySelector(".lg-thumb"),"touchend.lg",function(){e.thumbTotalWidth>e.thumbOuterWidth&&s?(s=!1,utils.removeClass(e.thumbOuter,"lg-dragging"),Math.abs(i-t)<e.core.s.swipeThreshold&&(e.thumbClickable=!0),e.left=l):e.thumbClickable=!0})},i.prototype.toggle=function(){var e=this;e.core.s.toggleThumb&&(utils.addClass(e.core.outer,"lg-can-toggle"),e.thumbOuter.insertAdjacentHTML("beforeend",'<button aria-label="Toggle thumbnails" class="lg-toggle-thumb lg-icon"></button>'),utils.on(e.core.outer.querySelector(".lg-toggle-thumb"),"click.lg",function(){utils.hasClass(e.core.outer,"lg-thumb-open")?utils.removeClass(e.core.outer,"lg-thumb-open"):utils.addClass(e.core.outer,"lg-thumb-open")}))},i.prototype.thumbkeyPress=function(){var e=this;utils.on(window,"keydown.lgthumb",function(t){38===t.keyCode?(t.preventDefault(),utils.addClass(e.core.outer,"lg-thumb-open")):40===t.keyCode&&(t.preventDefault(),utils.removeClass(e.core.outer,"lg-thumb-open"))})},i.prototype.destroy=function(e){if(this.core.s.thumbnail&&this.core.items.length>1){utils.off(window,".lgthumb"),e||this.thumbOuter.parentNode.removeChild(this.thumbOuter),utils.removeClass(this.core.outer,"lg-has-thumb");for(var t=document.getElementsByClassName("lg-script");t[0];)t[0].parentNode.removeChild(t[0])}},window.lgModules.thumbnail=i})},{}]},{},[1])(1)},e.exports=l()},"tqM+":function(e,t,i){"use strict";t.a=function(){!function(){var e=document.getElementById("btn-toggle-menu-reperfilar"),t=document.getElementById("reperfilar-nav");if(null===e)return 0;e.addEventListener("click",function(i){i.preventDefault(),e.classList.toggle("change"),t.classList.toggle("temuestro")})}(),function(){var e=document.getElementById("hamburguesa"),t=document.getElementById("menues");if(null===e)return 0;e.addEventListener("click",function(i){i.preventDefault(),e.classList.toggle("change"),t.classList.toggle("temuestro")})}()}}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./node_modules/lg-thumbnail.js/dist/lg-thumbnail.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+var require;var require;/**!
+ * lg-thumbnail.js | 1.2.0 | May 20th 2020
+ * http://sachinchoolur.github.io/lg-thumbnail.js
+ * Copyright (c) 2016 Sachin N; 
+ * @license GPLv3 
+ */(function(f){if(true){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.LgThumbnail = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return require(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+(function (global, factory) {
+    if (typeof define === "function" && define.amd) {
+        define([], factory);
+    } else if (typeof exports !== "undefined") {
+        factory();
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory();
+        global.lgThumbnail = mod.exports;
+    }
+})(this, function () {
+    'use strict';
+
+    var _extends = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+
+            for (var key in source) {
+                if (Object.prototype.hasOwnProperty.call(source, key)) {
+                    target[key] = source[key];
+                }
+            }
+        }
+
+        return target;
+    };
+
+    var thumbnailDefaults = {
+        thumbnail: true,
+
+        animateThumb: true,
+        currentPagerPosition: 'middle',
+
+        thumbWidth: 100,
+        thumbContHeight: 100,
+        thumbMargin: 5,
+
+        exThumbImage: false,
+        showThumbByDefault: true,
+        toggleThumb: true,
+        pullCaptionUp: true,
+
+        enableThumbDrag: true,
+        enableThumbSwipe: true,
+        swipeThreshold: 50,
+
+        loadYoutubeThumbnail: true,
+        youtubeThumbSize: 1,
+
+        loadVimeoThumbnail: true,
+        vimeoThumbSize: 'thumbnail_small',
+
+        loadDailymotionThumbnail: true
+    };
+
+    var Thumbnail = function Thumbnail(element) {
+
+        this.el = element;
+
+        this.core = window.lgData[this.el.getAttribute('lg-uid')];
+        this.core.s = _extends({}, thumbnailDefaults, this.core.s);
+
+        this.thumbOuter = null;
+        this.thumbOuterWidth = 0;
+        this.thumbTotalWidth = this.core.items.length * (this.core.s.thumbWidth + this.core.s.thumbMargin);
+        this.thumbIndex = this.core.index;
+
+        // Thumbnail animation value
+        this.left = 0;
+
+        this.init();
+
+        return this;
+    };
+
+    Thumbnail.prototype.init = function () {
+        var _this = this;
+        if (this.core.s.thumbnail && this.core.items.length > 1) {
+            if (this.core.s.showThumbByDefault) {
+                setTimeout(function () {
+                    utils.addClass(_this.core.outer, 'lg-thumb-open');
+                }, 700);
+            }
+
+            if (this.core.s.pullCaptionUp) {
+                utils.addClass(this.core.outer, 'lg-pull-caption-up');
+            }
+
+            this.build();
+            if (this.core.s.animateThumb) {
+                if (this.core.s.enableThumbDrag && !this.core.isTouch && this.core.doCss()) {
+                    this.enableThumbDrag();
+                }
+
+                if (this.core.s.enableThumbSwipe && this.core.isTouch && this.core.doCss()) {
+                    this.enableThumbSwipe();
+                }
+
+                this.thumbClickable = false;
+            } else {
+                this.thumbClickable = true;
+            }
+
+            this.toggle();
+            this.thumbkeyPress();
+        }
+    };
+
+    Thumbnail.prototype.build = function () {
+        var _this = this;
+        var thumbList = '';
+        var vimeoErrorThumbSize = '';
+        var $thumb;
+        var html = '<div class="lg-thumb-outer">' + '<div class="lg-thumb group">' + '</div>' + '</div>';
+
+        switch (this.core.s.vimeoThumbSize) {
+            case 'thumbnail_large':
+                vimeoErrorThumbSize = '640';
+                break;
+            case 'thumbnail_medium':
+                vimeoErrorThumbSize = '200x150';
+                break;
+            case 'thumbnail_small':
+                vimeoErrorThumbSize = '100x75';
+        }
+
+        utils.addClass(_this.core.outer, 'lg-has-thumb');
+
+        _this.core.outer.querySelector('.lg').insertAdjacentHTML('beforeend', html);
+
+        _this.thumbOuter = _this.core.outer.querySelector('.lg-thumb-outer');
+        _this.thumbOuterWidth = _this.thumbOuter.offsetWidth;
+
+        if (_this.core.s.animateThumb) {
+            _this.core.outer.querySelector('.lg-thumb').style.width = _this.thumbTotalWidth + 'px';
+            _this.core.outer.querySelector('.lg-thumb').style.position = 'relative';
+        }
+
+        if (this.core.s.animateThumb) {
+            _this.thumbOuter.style.height = _this.core.s.thumbContHeight + 'px';
+        }
+
+        function getThumb(src, thumb, index) {
+            var isVideo = _this.core.isVideo(src, index) || {};
+            var thumbImg;
+            var vimeoId = '';
+
+            if (isVideo.youtube || isVideo.vimeo || isVideo.dailymotion) {
+                if (isVideo.youtube) {
+                    if (_this.core.s.loadYoutubeThumbnail) {
+                        thumbImg = '//img.youtube.com/vi/' + isVideo.youtube[1] + '/' + _this.core.s.youtubeThumbSize + '.jpg';
+                    } else {
+                        thumbImg = thumb;
+                    }
+                } else if (isVideo.vimeo) {
+                    if (_this.core.s.loadVimeoThumbnail) {
+                        thumbImg = '//i.vimeocdn.com/video/error_' + vimeoErrorThumbSize + '.jpg';
+                        vimeoId = isVideo.vimeo[1];
+                    } else {
+                        thumbImg = thumb;
+                    }
+                } else if (isVideo.dailymotion) {
+                    if (_this.core.s.loadDailymotionThumbnail) {
+                        thumbImg = '//www.dailymotion.com/thumbnail/video/' + isVideo.dailymotion[1];
+                    } else {
+                        thumbImg = thumb;
+                    }
+                }
+            } else {
+                thumbImg = thumb;
+            }
+
+            thumbList += '<div data-vimeo-id="' + vimeoId + '" class="lg-thumb-item" style="width:' + _this.core.s.thumbWidth + 'px; margin-right: ' + _this.core.s.thumbMargin + 'px"><img src="' + thumbImg + '" /></div>';
+            vimeoId = '';
+        }
+
+        if (_this.core.s.dynamic) {
+            for (var j = 0; j < _this.core.s.dynamicEl.length; j++) {
+                getThumb(_this.core.s.dynamicEl[j].src, _this.core.s.dynamicEl[j].thumb, j);
+            }
+        } else {
+            for (var i = 0; i < _this.core.items.length; i++) {
+                if (!_this.core.s.exThumbImage) {
+                    getThumb(_this.core.items[i].getAttribute('href') || _this.core.items[i].getAttribute('data-src'), _this.core.items[i].querySelector('img').getAttribute('src'), i);
+                } else {
+                    getThumb(_this.core.items[i].getAttribute('href') || _this.core.items[i].getAttribute('data-src'), _this.core.items[i].getAttribute(_this.core.s.exThumbImage), i);
+                }
+            }
+        }
+
+        _this.core.outer.querySelector('.lg-thumb').innerHTML = thumbList;
+
+        $thumb = _this.core.outer.querySelectorAll('.lg-thumb-item');
+
+        for (var n = 0; n < $thumb.length; n++) {
+
+            /*jshint loopfunc: true */
+            (function (index) {
+                var $this = $thumb[index];
+                var vimeoVideoId = $this.getAttribute('data-vimeo-id');
+                if (vimeoVideoId) {
+
+                    window['lgJsonP' + _this.el.getAttribute('lg-uid') + '' + n] = function (content) {
+                        $this.querySelector('img').setAttribute('src', content[0][_this.core.s.vimeoThumbSize]);
+                    };
+
+                    var script = document.createElement('script');
+                    script.className = 'lg-script';
+                    script.src = '//www.vimeo.com/api/v2/video/' + vimeoVideoId + '.json?callback=lgJsonP' + _this.el.getAttribute('lg-uid') + '' + n;
+                    document.body.appendChild(script);
+                }
+            })(n);
+        }
+
+        // manage active class for thumbnail
+        utils.addClass($thumb[_this.core.index], 'active');
+        utils.on(_this.core.el, 'onBeforeSlide.lgtm', function () {
+
+            for (var j = 0; j < $thumb.length; j++) {
+                utils.removeClass($thumb[j], 'active');
+            }
+
+            utils.addClass($thumb[_this.core.index], 'active');
+        });
+
+        for (var k = 0; k < $thumb.length; k++) {
+
+            /*jshint loopfunc: true */
+            (function (index) {
+
+                utils.on($thumb[index], 'click.lg touchend.lg', function () {
+
+                    setTimeout(function () {
+
+                        // In IE9 and bellow touch does not support
+                        // Go to slide if browser does not support css transitions
+                        if (_this.thumbClickable && !_this.core.lgBusy || !_this.core.doCss()) {
+                            _this.core.index = index;
+                            _this.core.slide(_this.core.index, false, true);
+                        }
+                    }, 50);
+                });
+            })(k);
+        }
+
+        utils.on(_this.core.el, 'onBeforeSlide.lgtm', function () {
+            _this.animateThumb(_this.core.index);
+        });
+
+        utils.on(window, 'resize.lgthumb orientationchange.lgthumb', function () {
+            setTimeout(function () {
+                _this.animateThumb(_this.core.index);
+                _this.thumbOuterWidth = _this.thumbOuter.offsetWidth;
+            }, 200);
+        });
+    };
+
+    Thumbnail.prototype.setTranslate = function (value) {
+        utils.setVendor(this.core.outer.querySelector('.lg-thumb'), 'Transform', 'translate3d(-' + value + 'px, 0px, 0px)');
+    };
+
+    Thumbnail.prototype.animateThumb = function (index) {
+        var $thumb = this.core.outer.querySelector('.lg-thumb');
+        if (this.core.s.animateThumb) {
+            var position;
+            switch (this.core.s.currentPagerPosition) {
+                case 'left':
+                    position = 0;
+                    break;
+                case 'middle':
+                    position = this.thumbOuterWidth / 2 - this.core.s.thumbWidth / 2;
+                    break;
+                case 'right':
+                    position = this.thumbOuterWidth - this.core.s.thumbWidth;
+            }
+            this.left = (this.core.s.thumbWidth + this.core.s.thumbMargin) * index - 1 - position;
+            if (this.left > this.thumbTotalWidth - this.thumbOuterWidth) {
+                this.left = this.thumbTotalWidth - this.thumbOuterWidth;
+            }
+
+            if (this.left < 0) {
+                this.left = 0;
+            }
+
+            if (this.core.lGalleryOn) {
+                if (!utils.hasClass($thumb, 'on')) {
+                    utils.setVendor(this.core.outer.querySelector('.lg-thumb'), 'TransitionDuration', this.core.s.speed + 'ms');
+                }
+
+                if (!this.core.doCss()) {
+                    $thumb.style.left = -this.left + 'px';
+                }
+            } else {
+                if (!this.core.doCss()) {
+                    $thumb.style.left = -this.left + 'px';
+                }
+            }
+
+            this.setTranslate(this.left);
+        }
+    };
+
+    // Enable thumbnail dragging and swiping
+    Thumbnail.prototype.enableThumbDrag = function () {
+
+        var _this = this;
+        var startCoords = 0;
+        var endCoords = 0;
+        var isDraging = false;
+        var isMoved = false;
+        var tempLeft = 0;
+
+        utils.addClass(_this.thumbOuter, 'lg-grab');
+
+        utils.on(_this.core.outer.querySelector('.lg-thumb'), 'mousedown.lgthumb', function (e) {
+            if (_this.thumbTotalWidth > _this.thumbOuterWidth) {
+                // execute only on .lg-object
+                e.preventDefault();
+                startCoords = e.pageX;
+                isDraging = true;
+
+                // ** Fix for webkit cursor issue https://code.google.com/p/chromium/issues/detail?id=26723
+                _this.core.outer.scrollLeft += 1;
+                _this.core.outer.scrollLeft -= 1;
+
+                // *
+                _this.thumbClickable = false;
+                utils.removeClass(_this.thumbOuter, 'lg-grab');
+                utils.addClass(_this.thumbOuter, 'lg-grabbing');
+            }
+        });
+
+        utils.on(window, 'mousemove.lgthumb', function (e) {
+            if (isDraging) {
+                tempLeft = _this.left;
+                isMoved = true;
+                endCoords = e.pageX;
+
+                utils.addClass(_this.thumbOuter, 'lg-dragging');
+
+                tempLeft = tempLeft - (endCoords - startCoords);
+
+                if (tempLeft > _this.thumbTotalWidth - _this.thumbOuterWidth) {
+                    tempLeft = _this.thumbTotalWidth - _this.thumbOuterWidth;
+                }
+
+                if (tempLeft < 0) {
+                    tempLeft = 0;
+                }
+
+                // move current slide
+                _this.setTranslate(tempLeft);
+            }
+        });
+
+        utils.on(window, 'mouseup.lgthumb', function () {
+            if (isMoved) {
+                isMoved = false;
+                utils.removeClass(_this.thumbOuter, 'lg-dragging');
+
+                _this.left = tempLeft;
+
+                if (Math.abs(endCoords - startCoords) < _this.core.s.swipeThreshold) {
+                    _this.thumbClickable = true;
+                }
+            } else {
+                _this.thumbClickable = true;
+            }
+
+            if (isDraging) {
+                isDraging = false;
+                utils.removeClass(_this.thumbOuter, 'lg-grabbing');
+                utils.addClass(_this.thumbOuter, 'lg-grab');
+            }
+        });
+    };
+
+    Thumbnail.prototype.enableThumbSwipe = function () {
+        var _this = this;
+        var startCoords = 0;
+        var endCoords = 0;
+        var isMoved = false;
+        var tempLeft = 0;
+
+        utils.on(_this.core.outer.querySelector('.lg-thumb'), 'touchstart.lg', function (e) {
+            if (_this.thumbTotalWidth > _this.thumbOuterWidth) {
+                e.preventDefault();
+                startCoords = e.targetTouches[0].pageX;
+                _this.thumbClickable = false;
+            }
+        });
+
+        utils.on(_this.core.outer.querySelector('.lg-thumb'), 'touchmove.lg', function (e) {
+            if (_this.thumbTotalWidth > _this.thumbOuterWidth) {
+                e.preventDefault();
+                endCoords = e.targetTouches[0].pageX;
+                isMoved = true;
+
+                utils.addClass(_this.thumbOuter, 'lg-dragging');
+
+                tempLeft = _this.left;
+
+                tempLeft = tempLeft - (endCoords - startCoords);
+
+                if (tempLeft > _this.thumbTotalWidth - _this.thumbOuterWidth) {
+                    tempLeft = _this.thumbTotalWidth - _this.thumbOuterWidth;
+                }
+
+                if (tempLeft < 0) {
+                    tempLeft = 0;
+                }
+
+                // move current slide
+                _this.setTranslate(tempLeft);
+            }
+        });
+
+        utils.on(_this.core.outer.querySelector('.lg-thumb'), 'touchend.lg', function () {
+            if (_this.thumbTotalWidth > _this.thumbOuterWidth) {
+
+                if (isMoved) {
+                    isMoved = false;
+                    utils.removeClass(_this.thumbOuter, 'lg-dragging');
+                    if (Math.abs(endCoords - startCoords) < _this.core.s.swipeThreshold) {
+                        _this.thumbClickable = true;
+                    }
+
+                    _this.left = tempLeft;
+                } else {
+                    _this.thumbClickable = true;
+                }
+            } else {
+                _this.thumbClickable = true;
+            }
+        });
+    };
+
+    Thumbnail.prototype.toggle = function () {
+        var _this = this;
+        if (_this.core.s.toggleThumb) {
+            utils.addClass(_this.core.outer, 'lg-can-toggle');
+            _this.thumbOuter.insertAdjacentHTML('beforeend', '<button aria-label="Toggle thumbnails" class="lg-toggle-thumb lg-icon"></button>');
+            utils.on(_this.core.outer.querySelector('.lg-toggle-thumb'), 'click.lg', function () {
+                if (utils.hasClass(_this.core.outer, 'lg-thumb-open')) {
+                    utils.removeClass(_this.core.outer, 'lg-thumb-open');
+                } else {
+                    utils.addClass(_this.core.outer, 'lg-thumb-open');
+                }
+            });
+        }
+    };
+
+    Thumbnail.prototype.thumbkeyPress = function () {
+        var _this = this;
+        utils.on(window, 'keydown.lgthumb', function (e) {
+            if (e.keyCode === 38) {
+                e.preventDefault();
+                utils.addClass(_this.core.outer, 'lg-thumb-open');
+            } else if (e.keyCode === 40) {
+                e.preventDefault();
+                utils.removeClass(_this.core.outer, 'lg-thumb-open');
+            }
+        });
+    };
+
+    Thumbnail.prototype.destroy = function (d) {
+        if (this.core.s.thumbnail && this.core.items.length > 1) {
+            utils.off(window, '.lgthumb');
+            if (!d) {
+                this.thumbOuter.parentNode.removeChild(this.thumbOuter);
+            }
+            utils.removeClass(this.core.outer, 'lg-has-thumb');
+
+            var lgScript = document.getElementsByClassName('lg-script');
+            while (lgScript[0]) {
+                lgScript[0].parentNode.removeChild(lgScript[0]);
+            }
+        }
+    };
+
+    window.lgModules.thumbnail = Thumbnail;
+});
+
+},{}]},{},[1])(1)
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/lightgallery.js/lib/js/lg-utils.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(exports);
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports);
+        global.lgUtils = mod.exports;
+    }
+})(this, function (exports) {
+    'use strict';
+
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var utils = {
+        getAttribute: function getAttribute(el, label) {
+            return el[label];
+        },
+
+        setAttribute: function setAttribute(el, label, value) {
+            el[label] = value;
+        },
+        wrap: function wrap(el, className) {
+            if (!el) {
+                return;
+            }
+
+            var wrapper = document.createElement('div');
+            wrapper.className = className;
+            el.parentNode.insertBefore(wrapper, el);
+            el.parentNode.removeChild(el);
+            wrapper.appendChild(el);
+        },
+
+        addClass: function addClass(el, className) {
+            if (!el) {
+                return;
+            }
+
+            if (el.classList) {
+                el.classList.add(className);
+            } else {
+                el.className += ' ' + className;
+            }
+        },
+
+        removeClass: function removeClass(el, className) {
+            if (!el) {
+                return;
+            }
+
+            if (el.classList) {
+                el.classList.remove(className);
+            } else {
+                el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+            }
+        },
+
+        hasClass: function hasClass(el, className) {
+            if (el.classList) {
+                return el.classList.contains(className);
+            } else {
+                return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+            }
+        },
+
+        // ex Transform
+        // ex TransitionTimingFunction
+        setVendor: function setVendor(el, property, value) {
+            if (!el) {
+                return;
+            }
+
+            el.style[property.charAt(0).toLowerCase() + property.slice(1)] = value;
+            el.style['webkit' + property] = value;
+            el.style['moz' + property] = value;
+            el.style['ms' + property] = value;
+            el.style['o' + property] = value;
+        },
+
+        trigger: function trigger(el, event) {
+            var detail = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+            if (!el) {
+                return;
+            }
+
+            var customEvent = new CustomEvent(event, {
+                detail: detail
+            });
+            el.dispatchEvent(customEvent);
+        },
+
+        Listener: {
+            uid: 0
+        },
+        on: function on(el, events, fn) {
+            var _this = this;
+
+            if (!el) {
+                return;
+            }
+
+            events.split(' ').forEach(function (event) {
+                var _id = _this.getAttribute(el, 'lg-event-uid') || '';
+                utils.Listener.uid++;
+                _id += '&' + utils.Listener.uid;
+                _this.setAttribute(el, 'lg-event-uid', _id);
+                utils.Listener[event + utils.Listener.uid] = fn;
+                el.addEventListener(event.split('.')[0], fn, false);
+            });
+        },
+
+        off: function off(el, event) {
+            if (!el) {
+                return;
+            }
+
+            var _id = this.getAttribute(el, 'lg-event-uid');
+            if (_id) {
+                _id = _id.split('&');
+                for (var i = 0; i < _id.length; i++) {
+                    if (_id[i]) {
+                        var _event = event + _id[i];
+                        if (_event.substring(0, 1) === '.') {
+                            for (var key in utils.Listener) {
+                                if (utils.Listener.hasOwnProperty(key)) {
+                                    if (key.split('.').indexOf(_event.split('.')[1]) > -1) {
+                                        el.removeEventListener(key.split('.')[0], utils.Listener[key]);
+                                        this.setAttribute(el, 'lg-event-uid', this.getAttribute(el, 'lg-event-uid').replace('&' + _id[i], ''));
+                                        delete utils.Listener[key];
+                                    }
+                                }
+                            }
+                        } else {
+                            el.removeEventListener(_event.split('.')[0], utils.Listener[_event]);
+                            this.setAttribute(el, 'lg-event-uid', this.getAttribute(el, 'lg-event-uid').replace('&' + _id[i], ''));
+                            delete utils.Listener[_event];
+                        }
+                    }
+                }
+            }
+        },
+
+        param: function param(obj) {
+            return Object.keys(obj).map(function (k) {
+                return encodeURIComponent(k) + '=' + encodeURIComponent(obj[k]);
+            }).join('&');
+        }
+    };
+
+    exports.default = utils;
+});
+
+/***/ }),
+
+/***/ "./node_modules/lightgallery.js/lib/js/lightgallery.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("./node_modules/lightgallery.js/lib/js/lg-utils.js")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(require('./lg-utils'));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(global.lgUtils);
+        global.lightgallery = mod.exports;
+    }
+})(this, function (_lgUtils) {
+    'use strict';
+
+    var _lgUtils2 = _interopRequireDefault(_lgUtils);
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+
+    var _extends = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+
+            for (var key in source) {
+                if (Object.prototype.hasOwnProperty.call(source, key)) {
+                    target[key] = source[key];
+                }
+            }
+        }
+
+        return target;
+    };
+
+    /** Polyfill the CustomEvent() constructor functionality in Internet Explorer 9 and higher */
+    (function () {
+
+        if (typeof window.CustomEvent === 'function') {
+            return false;
+        }
+
+        function CustomEvent(event, params) {
+            params = params || {
+                bubbles: false,
+                cancelable: false,
+                detail: undefined
+            };
+            var evt = document.createEvent('CustomEvent');
+            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+            return evt;
+        }
+
+        CustomEvent.prototype = window.Event.prototype;
+
+        window.CustomEvent = CustomEvent;
+    })();
+
+    window.utils = _lgUtils2.default;
+    window.lgData = {
+        uid: 0
+    };
+
+    window.lgModules = {};
+    var defaults = {
+
+        mode: 'lg-slide',
+
+        // Ex : 'ease'
+        cssEasing: 'ease',
+
+        //'for jquery animation'
+        easing: 'linear',
+        speed: 600,
+        height: '100%',
+        width: '100%',
+        addClass: '',
+        startClass: 'lg-start-zoom',
+        backdropDuration: 150,
+
+        // Set 0, if u don't want to hide the controls 
+        hideBarsDelay: 6000,
+
+        useLeft: false,
+
+        // aria-labelledby attribute fot gallery
+        ariaLabelledby: '',
+
+        //aria-describedby attribute for gallery
+        ariaDescribedby: '',
+
+        closable: true,
+        loop: true,
+        escKey: true,
+        keyPress: true,
+        controls: true,
+        slideEndAnimatoin: true,
+        hideControlOnEnd: false,
+        mousewheel: false,
+
+        getCaptionFromTitleOrAlt: true,
+
+        // .lg-item || '.lg-sub-html'
+        appendSubHtmlTo: '.lg-sub-html',
+
+        subHtmlSelectorRelative: false,
+
+        /**
+         * @desc number of preload slides
+         * will exicute only after the current slide is fully loaded.
+         *
+         * @ex you clicked on 4th image and if preload = 1 then 3rd slide and 5th
+         * slide will be loaded in the background after the 4th slide is fully loaded..
+         * if preload is 2 then 2nd 3rd 5th 6th slides will be preloaded.. ... ...
+         *
+         */
+        preload: 1,
+        showAfterLoad: true,
+        selector: '',
+        selectWithin: '',
+        nextHtml: '',
+        prevHtml: '',
+
+        // 0, 1
+        index: false,
+
+        iframeMaxWidth: '100%',
+
+        download: true,
+        counter: true,
+        appendCounterTo: '.lg-toolbar',
+
+        swipeThreshold: 50,
+        enableSwipe: true,
+        enableDrag: true,
+
+        dynamic: false,
+        dynamicEl: [],
+        galleryId: 1,
+        supportLegacyBrowser: true
+    };
+
+    function Plugin(element, options) {
+
+        // Current lightGallery element
+        this.el = element;
+
+        // lightGallery settings
+        this.s = _extends({}, defaults, options);
+
+        // When using dynamic mode, ensure dynamicEl is an array
+        if (this.s.dynamic && this.s.dynamicEl !== 'undefined' && this.s.dynamicEl.constructor === Array && !this.s.dynamicEl.length) {
+            throw 'When using dynamic mode, you must also define dynamicEl as an Array.';
+        }
+
+        // lightGallery modules
+        this.modules = {};
+
+        // false when lightgallery complete first slide;
+        this.lGalleryOn = false;
+
+        this.lgBusy = false;
+
+        // Timeout function for hiding controls;
+        this.hideBartimeout = false;
+
+        // To determine browser supports for touch events;
+        this.isTouch = 'ontouchstart' in document.documentElement;
+
+        // Disable hideControlOnEnd if sildeEndAnimation is true
+        if (this.s.slideEndAnimatoin) {
+            this.s.hideControlOnEnd = false;
+        }
+
+        this.items = [];
+
+        // Gallery items
+        if (this.s.dynamic) {
+            this.items = this.s.dynamicEl;
+        } else {
+            if (this.s.selector === 'this') {
+                this.items.push(this.el);
+            } else if (this.s.selector !== '') {
+                if (this.s.selectWithin) {
+                    this.items = document.querySelector(this.s.selectWithin).querySelectorAll(this.s.selector);
+                } else {
+                    this.items = this.el.querySelectorAll(this.s.selector);
+                }
+            } else {
+                this.items = this.el.children;
+            }
+        }
+
+        // .lg-item
+
+        this.___slide = '';
+
+        // .lg-outer
+        this.outer = '';
+
+        this.init();
+
+        return this;
+    }
+
+    Plugin.prototype.init = function () {
+
+        var _this = this;
+
+        // s.preload should not be more than $item.length
+        if (_this.s.preload > _this.items.length) {
+            _this.s.preload = _this.items.length;
+        }
+
+        // if dynamic option is enabled execute immediately
+        var _hash = window.location.hash;
+        if (_hash.indexOf('lg=' + this.s.galleryId) > 0) {
+
+            _this.index = parseInt(_hash.split('&slide=')[1], 10);
+
+            _lgUtils2.default.addClass(document.body, 'lg-from-hash');
+            if (!_lgUtils2.default.hasClass(document.body, 'lg-on')) {
+                _lgUtils2.default.addClass(document.body, 'lg-on');
+                setTimeout(function () {
+                    _this.build(_this.index);
+                });
+            }
+        }
+
+        if (_this.s.dynamic) {
+
+            _lgUtils2.default.trigger(this.el, 'onBeforeOpen');
+
+            _this.index = _this.s.index || 0;
+
+            // prevent accidental double execution
+            if (!_lgUtils2.default.hasClass(document.body, 'lg-on')) {
+                _lgUtils2.default.addClass(document.body, 'lg-on');
+                setTimeout(function () {
+                    _this.build(_this.index);
+                });
+            }
+        } else {
+
+            for (var i = 0; i < _this.items.length; i++) {
+
+                /*jshint loopfunc: true */
+                (function (index) {
+
+                    // Using different namespace for click because click event should not unbind if selector is same object('this')
+                    _lgUtils2.default.on(_this.items[index], 'click.lgcustom', function (e) {
+
+                        e.preventDefault();
+
+                        _lgUtils2.default.trigger(_this.el, 'onBeforeOpen');
+
+                        _this.index = _this.s.index || index;
+
+                        if (!_lgUtils2.default.hasClass(document.body, 'lg-on')) {
+                            _this.build(_this.index);
+                            _lgUtils2.default.addClass(document.body, 'lg-on');
+                        }
+                    });
+                })(i);
+            }
+        }
+    };
+
+    Plugin.prototype.build = function (index) {
+
+        var _this = this;
+
+        _this.structure();
+
+        for (var key in window.lgModules) {
+            _this.modules[key] = new window.lgModules[key](_this.el);
+        }
+
+        // initiate slide function
+        _this.slide(index, false, false);
+
+        if (_this.s.keyPress) {
+            _this.keyPress();
+        }
+
+        if (_this.items.length > 1) {
+
+            _this.arrow();
+
+            setTimeout(function () {
+                _this.enableDrag();
+                _this.enableSwipe();
+            }, 50);
+
+            if (_this.s.mousewheel) {
+                _this.mousewheel();
+            }
+        }
+
+        _this.counter();
+
+        _this.closeGallery();
+
+        _lgUtils2.default.trigger(_this.el, 'onAfterOpen');
+
+        // Hide controllers if mouse doesn't move for some period
+        if (_this.s.hideBarsDelay > 0) {
+
+            // Hide controls if user doesn't use mouse or touch after opening gallery
+            var initialHideBarTimeout = setTimeout(function () {
+                _lgUtils2.default.addClass(_this.outer, 'lg-hide-items');
+            }, _this.s.hideBarsDelay);
+            _lgUtils2.default.on(_this.outer, 'mousemove.lg click.lg touchstart.lg', function () {
+
+                // Cancel initalHideBarTimout if user uses mouse or touch events
+                // Before it fires
+                clearTimeout(initialHideBarTimeout);
+
+                _lgUtils2.default.removeClass(_this.outer, 'lg-hide-items');
+
+                clearTimeout(_this.hideBartimeout);
+
+                // Timeout will be cleared on each slide movement also
+                _this.hideBartimeout = setTimeout(function () {
+                    _lgUtils2.default.addClass(_this.outer, 'lg-hide-items');
+                }, _this.s.hideBarsDelay);
+            });
+        }
+    };
+
+    Plugin.prototype.structure = function () {
+        var list = '';
+        var controls = '';
+        var i = 0;
+        var subHtmlCont = '';
+        var template;
+        var _this = this;
+
+        document.body.insertAdjacentHTML('beforeend', '<div class="lg-backdrop"></div>');
+        _lgUtils2.default.setVendor(document.querySelector('.lg-backdrop'), 'TransitionDuration', this.s.backdropDuration + 'ms');
+
+        // Create gallery items
+        for (i = 0; i < this.items.length; i++) {
+            list += '<div class="lg-item"></div>';
+        }
+
+        // Create controlls
+        if (this.s.controls && this.items.length > 1) {
+            controls = '<div class="lg-actions">' + '<button type="button" aria-label="Previous slide" class="lg-prev lg-icon">' + this.s.prevHtml + '</button>' + '<button type="button" aria-label="Next slide" class="lg-next lg-icon">' + this.s.nextHtml + '</button>' + '</div>';
+        }
+
+        if (this.s.appendSubHtmlTo === '.lg-sub-html') {
+            subHtmlCont = '<div role="status" aria-live="polite" class="lg-sub-html"></div>';
+        }
+
+        var ariaLabelledby = this.s.ariaLabelledby ? 'aria-labelledby="' + this.s.ariaLabelledby + '"' : '';
+        var ariaDescribedby = this.s.ariaDescribedby ? 'aria-describedby="' + this.s.ariaDescribedby + '"' : '';
+
+        template = '<div tabindex="-1" aria-modal="true" ' + ariaLabelledby + ' ' + ariaDescribedby + ' role="dialog" class="lg-outer ' + this.s.addClass + ' ' + this.s.startClass + '">' + '<div class="lg" style="width:' + this.s.width + '; height:' + this.s.height + '">' + '<div class="lg-inner">' + list + '</div>' + '<div class="lg-toolbar lg-group">' + '<button type="button" aria-label="Close gallery" class="lg-close lg-icon"></button>' + '</div>' + controls + subHtmlCont + '</div>' + '</div>';
+
+        document.body.insertAdjacentHTML('beforeend', template);
+        this.outer = document.querySelector('.lg-outer');
+        this.outer.focus();
+        this.___slide = this.outer.querySelectorAll('.lg-item');
+
+        if (this.s.useLeft) {
+            _lgUtils2.default.addClass(this.outer, 'lg-use-left');
+
+            // Set mode lg-slide if use left is true;
+            this.s.mode = 'lg-slide';
+        } else {
+            _lgUtils2.default.addClass(this.outer, 'lg-use-css3');
+        }
+
+        // For fixed height gallery
+        _this.setTop();
+        _lgUtils2.default.on(window, 'resize.lg orientationchange.lg', function () {
+            setTimeout(function () {
+                _this.setTop();
+            }, 100);
+        });
+
+        // add class lg-current to remove initial transition
+        _lgUtils2.default.addClass(this.___slide[this.index], 'lg-current');
+
+        // add Class for css support and transition mode
+        if (this.doCss()) {
+            _lgUtils2.default.addClass(this.outer, 'lg-css3');
+        } else {
+            _lgUtils2.default.addClass(this.outer, 'lg-css');
+
+            // Set speed 0 because no animation will happen if browser doesn't support css3
+            this.s.speed = 0;
+        }
+
+        _lgUtils2.default.addClass(this.outer, this.s.mode);
+
+        if (this.s.enableDrag && this.items.length > 1) {
+            _lgUtils2.default.addClass(this.outer, 'lg-grab');
+        }
+
+        if (this.s.showAfterLoad) {
+            _lgUtils2.default.addClass(this.outer, 'lg-show-after-load');
+        }
+
+        if (this.doCss()) {
+            var inner = this.outer.querySelector('.lg-inner');
+            _lgUtils2.default.setVendor(inner, 'TransitionTimingFunction', this.s.cssEasing);
+            _lgUtils2.default.setVendor(inner, 'TransitionDuration', this.s.speed + 'ms');
+        }
+
+        setTimeout(function () {
+            _lgUtils2.default.addClass(document.querySelector('.lg-backdrop'), 'in');
+        });
+
+        setTimeout(function () {
+            _lgUtils2.default.addClass(_this.outer, 'lg-visible');
+        }, this.s.backdropDuration);
+
+        if (this.s.download) {
+            this.outer.querySelector('.lg-toolbar').insertAdjacentHTML('beforeend', '<a id="lg-download" aria-label="Download" target="_blank" download class="lg-download lg-icon"></a>');
+        }
+
+        // Store the current scroll top value to scroll back after closing the gallery..
+        this.prevScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    };
+
+    // For fixed height gallery
+    Plugin.prototype.setTop = function () {
+        if (this.s.height !== '100%') {
+            var wH = window.innerHeight;
+            var top = (wH - parseInt(this.s.height, 10)) / 2;
+            var lGallery = this.outer.querySelector('.lg');
+            if (wH >= parseInt(this.s.height, 10)) {
+                lGallery.style.top = top + 'px';
+            } else {
+                lGallery.style.top = '0px';
+            }
+        }
+    };
+
+    // Find css3 support
+    Plugin.prototype.doCss = function () {
+        // check for css animation support
+        var support = function support() {
+            var transition = ['transition', 'MozTransition', 'WebkitTransition', 'OTransition', 'msTransition', 'KhtmlTransition'];
+            var root = document.documentElement;
+            var i = 0;
+            for (i = 0; i < transition.length; i++) {
+                if (transition[i] in root.style) {
+                    return true;
+                }
+            }
+        };
+
+        if (support()) {
+            return true;
+        }
+
+        return false;
+    };
+
+    /**
+     *  @desc Check the given src is video
+     *  @param {String} src
+     *  @return {Object} video type
+     *  Ex:{ youtube  :  ["//www.youtube.com/watch?v=c0asJgSyxcY", "c0asJgSyxcY"] }
+     */
+    Plugin.prototype.isVideo = function (src, index) {
+
+        var html;
+        if (this.s.dynamic) {
+            html = this.s.dynamicEl[index].html;
+        } else {
+            html = this.items[index].getAttribute('data-html');
+        }
+
+        if (!src && html) {
+            return {
+                html5: true
+            };
+        }
+
+        var youtube = src.match(/\/\/(?:www\.)?youtu(?:\.be|be\.com|be-nocookie\.com)\/(?:watch\?v=|embed\/)?([a-z0-9\-\_\%]+)/i);
+        var vimeo = src.match(/\/\/(?:www\.)?vimeo.com\/([0-9a-z\-_]+)/i);
+        var dailymotion = src.match(/\/\/(?:www\.)?dai.ly\/([0-9a-z\-_]+)/i);
+        var vk = src.match(/\/\/(?:www\.)?(?:vk\.com|vkontakte\.ru)\/(?:video_ext\.php\?)(.*)/i);
+
+        if (youtube) {
+            return {
+                youtube: youtube
+            };
+        } else if (vimeo) {
+            return {
+                vimeo: vimeo
+            };
+        } else if (dailymotion) {
+            return {
+                dailymotion: dailymotion
+            };
+        } else if (vk) {
+            return {
+                vk: vk
+            };
+        }
+    };
+
+    /**
+     *  @desc Create image counter
+     *  Ex: 1/10
+     */
+    Plugin.prototype.counter = function () {
+        if (this.s.counter) {
+            this.outer.querySelector(this.s.appendCounterTo).insertAdjacentHTML('beforeend', '<div id="lg-counter" role="status" aria-live="polite"><span id="lg-counter-current">' + (parseInt(this.index, 10) + 1) + '</span> / <span id="lg-counter-all">' + this.items.length + '</span></div>');
+        }
+    };
+
+    /**
+     *  @desc add sub-html into the slide
+     *  @param {Number} index - index of the slide
+     */
+    Plugin.prototype.addHtml = function (index) {
+        var subHtml = null;
+        var currentEle;
+        if (this.s.dynamic) {
+            subHtml = this.s.dynamicEl[index].subHtml;
+        } else {
+            currentEle = this.items[index];
+            subHtml = currentEle.getAttribute('data-sub-html');
+            if (this.s.getCaptionFromTitleOrAlt && !subHtml) {
+                subHtml = currentEle.getAttribute('title');
+                if (subHtml && currentEle.querySelector('img')) {
+                    subHtml = currentEle.querySelector('img').getAttribute('alt');
+                }
+            }
+        }
+
+        if (typeof subHtml !== 'undefined' && subHtml !== null) {
+
+            // get first letter of subhtml
+            // if first letter starts with . or # get the html form the jQuery object
+            var fL = subHtml.substring(0, 1);
+            if (fL === '.' || fL === '#') {
+                if (this.s.subHtmlSelectorRelative && !this.s.dynamic) {
+                    subHtml = currentEle.querySelector(subHtml).innerHTML;
+                } else {
+                    subHtml = document.querySelector(subHtml).innerHTML;
+                }
+            }
+        } else {
+            subHtml = '';
+        }
+
+        if (this.s.appendSubHtmlTo === '.lg-sub-html') {
+            this.outer.querySelector(this.s.appendSubHtmlTo).innerHTML = subHtml;
+        } else {
+            this.___slide[index].insertAdjacentHTML('beforeend', subHtml);
+        }
+
+        // Add lg-empty-html class if title doesn't exist
+        if (typeof subHtml !== 'undefined' && subHtml !== null) {
+            if (subHtml === '') {
+                _lgUtils2.default.addClass(this.outer.querySelector(this.s.appendSubHtmlTo), 'lg-empty-html');
+            } else {
+                _lgUtils2.default.removeClass(this.outer.querySelector(this.s.appendSubHtmlTo), 'lg-empty-html');
+            }
+        }
+
+        _lgUtils2.default.trigger(this.el, 'onAfterAppendSubHtml', {
+            index: index
+        });
+    };
+
+    /**
+     *  @desc Preload slides
+     *  @param {Number} index - index of the slide
+     */
+    Plugin.prototype.preload = function (index) {
+        var i = 1;
+        var j = 1;
+        for (i = 1; i <= this.s.preload; i++) {
+            if (i >= this.items.length - index) {
+                break;
+            }
+
+            this.loadContent(index + i, false, 0);
+        }
+
+        for (j = 1; j <= this.s.preload; j++) {
+            if (index - j < 0) {
+                break;
+            }
+
+            this.loadContent(index - j, false, 0);
+        }
+    };
+
+    /**
+     *  @desc Load slide content into slide.
+     *  @param {Number} index - index of the slide.
+     *  @param {Boolean} rec - if true call loadcontent() function again.
+     *  @param {Boolean} delay - delay for adding complete class. it is 0 except first time.
+     */
+    Plugin.prototype.loadContent = function (index, rec, delay) {
+
+        var _this = this;
+        var _hasPoster = false;
+        var _img;
+        var _src;
+        var _poster;
+        var _srcset;
+        var _sizes;
+        var _html;
+        var _alt;
+        var getResponsiveSrc = function getResponsiveSrc(srcItms) {
+            var rsWidth = [];
+            var rsSrc = [];
+            for (var i = 0; i < srcItms.length; i++) {
+                var __src = srcItms[i].split(' ');
+
+                // Manage empty space
+                if (__src[0] === '') {
+                    __src.splice(0, 1);
+                }
+
+                rsSrc.push(__src[0]);
+                rsWidth.push(__src[1]);
+            }
+
+            var wWidth = window.innerWidth;
+            for (var j = 0; j < rsWidth.length; j++) {
+                if (parseInt(rsWidth[j], 10) > wWidth) {
+                    _src = rsSrc[j];
+                    break;
+                }
+            }
+        };
+
+        if (_this.s.dynamic) {
+
+            if (_this.s.dynamicEl[index].poster) {
+                _hasPoster = true;
+                _poster = _this.s.dynamicEl[index].poster;
+            }
+
+            _html = _this.s.dynamicEl[index].html;
+            _src = _this.s.dynamicEl[index].src;
+            _alt = _this.s.dynamicEl[index].alt;
+
+            if (_this.s.dynamicEl[index].responsive) {
+                var srcDyItms = _this.s.dynamicEl[index].responsive.split(',');
+                getResponsiveSrc(srcDyItms);
+            }
+
+            _srcset = _this.s.dynamicEl[index].srcset;
+            _sizes = _this.s.dynamicEl[index].sizes;
+        } else {
+
+            if (_this.items[index].getAttribute('data-poster')) {
+                _hasPoster = true;
+                _poster = _this.items[index].getAttribute('data-poster');
+            }
+
+            _html = _this.items[index].getAttribute('data-html');
+            _src = _this.items[index].getAttribute('href') || _this.items[index].getAttribute('data-src');
+            _alt = _this.items[index].getAttribute('title');
+
+            if (_this.items[index].querySelector('img')) {
+                _alt = _alt || _this.items[index].querySelector('img').getAttribute('alt');
+            }
+
+            if (_this.items[index].getAttribute('data-responsive')) {
+                var srcItms = _this.items[index].getAttribute('data-responsive').split(',');
+                getResponsiveSrc(srcItms);
+            }
+
+            _srcset = _this.items[index].getAttribute('data-srcset');
+            _sizes = _this.items[index].getAttribute('data-sizes');
+        }
+
+        //if (_src || _srcset || _sizes || _poster) {
+
+        var iframe = false;
+        if (_this.s.dynamic) {
+            if (_this.s.dynamicEl[index].iframe) {
+                iframe = true;
+            }
+        } else {
+            if (_this.items[index].getAttribute('data-iframe') === 'true') {
+                iframe = true;
+            }
+        }
+
+        var _isVideo = _this.isVideo(_src, index);
+        if (!_lgUtils2.default.hasClass(_this.___slide[index], 'lg-loaded')) {
+            if (iframe) {
+                _this.___slide[index].insertAdjacentHTML('afterbegin', '<div class="lg-video-cont" style="max-width:' + _this.s.iframeMaxWidth + '"><div class="lg-video"><iframe class="lg-object" frameborder="0" src="' + _src + '"  allowfullscreen="true"></iframe></div></div>');
+            } else if (_hasPoster) {
+                var videoClass = '';
+                if (_isVideo && _isVideo.youtube) {
+                    videoClass = 'lg-has-youtube';
+                } else if (_isVideo && _isVideo.vimeo) {
+                    videoClass = 'lg-has-vimeo';
+                } else {
+                    videoClass = 'lg-has-html5';
+                }
+
+                _this.___slide[index].insertAdjacentHTML('beforeend', '<div class="lg-video-cont ' + videoClass + ' "><div class="lg-video"><span class="lg-video-play"></span><img class="lg-object lg-has-poster" src="' + _poster + '" /></div></div>');
+            } else if (_isVideo) {
+                _this.___slide[index].insertAdjacentHTML('beforeend', '<div class="lg-video-cont "><div class="lg-video"></div></div>');
+                _lgUtils2.default.trigger(_this.el, 'hasVideo', {
+                    index: index,
+                    src: _src,
+                    html: _html
+                });
+            } else {
+                _alt = _alt ? 'alt="' + _alt + '"' : '';
+                _this.___slide[index].insertAdjacentHTML('beforeend', '<div class="lg-img-wrap"><img class="lg-object lg-image" ' + _alt + ' src="' + _src + '" /></div>');
+            }
+
+            _lgUtils2.default.trigger(_this.el, 'onAferAppendSlide', {
+                index: index
+            });
+
+            _img = _this.___slide[index].querySelector('.lg-object');
+            if (_sizes) {
+                _img.setAttribute('sizes', _sizes);
+            }
+
+            if (_srcset) {
+                _img.setAttribute('srcset', _srcset);
+
+                if (this.s.supportLegacyBrowser) {
+                    try {
+                        picturefill({
+                            elements: [_img[0]]
+                        });
+                    } catch (e) {
+                        console.warn('If you want srcset to be supported for older browsers, ' + 'please include picturefil javascript library in your document.');
+                    }
+                }
+            }
+
+            if (this.s.appendSubHtmlTo !== '.lg-sub-html') {
+                _this.addHtml(index);
+            }
+
+            _lgUtils2.default.addClass(_this.___slide[index], 'lg-loaded');
+        }
+
+        _lgUtils2.default.on(_this.___slide[index].querySelector('.lg-object'), 'load.lg error.lg', function () {
+
+            // For first time add some delay for displaying the start animation.
+            var _speed = 0;
+
+            // Do not change the delay value because it is required for zoom plugin.
+            // If gallery opened from direct url (hash) speed value should be 0
+            if (delay && !_lgUtils2.default.hasClass(document.body, 'lg-from-hash')) {
+                _speed = delay;
+            }
+
+            setTimeout(function () {
+                _lgUtils2.default.addClass(_this.___slide[index], 'lg-complete');
+
+                _lgUtils2.default.trigger(_this.el, 'onSlideItemLoad', {
+                    index: index,
+                    delay: delay || 0
+                });
+            }, _speed);
+        });
+
+        // @todo check load state for html5 videos
+        if (_isVideo && _isVideo.html5 && !_hasPoster) {
+            _lgUtils2.default.addClass(_this.___slide[index], 'lg-complete');
+        }
+
+        if (rec === true) {
+            if (!_lgUtils2.default.hasClass(_this.___slide[index], 'lg-complete')) {
+                _lgUtils2.default.on(_this.___slide[index].querySelector('.lg-object'), 'load.lg error.lg', function () {
+                    _this.preload(index);
+                });
+            } else {
+                _this.preload(index);
+            }
+        }
+
+        //}
+    };
+
+    /**
+    *   @desc slide function for lightgallery
+        ** Slide() gets call on start
+        ** ** Set lg.on true once slide() function gets called.
+        ** Call loadContent() on slide() function inside setTimeout
+        ** ** On first slide we do not want any animation like slide of fade
+        ** ** So on first slide( if lg.on if false that is first slide) loadContent() should start loading immediately
+        ** ** Else loadContent() should wait for the transition to complete.
+        ** ** So set timeout s.speed + 50
+    <=> ** loadContent() will load slide content in to the particular slide
+        ** ** It has recursion (rec) parameter. if rec === true loadContent() will call preload() function.
+        ** ** preload will execute only when the previous slide is fully loaded (images iframe)
+        ** ** avoid simultaneous image load
+    <=> ** Preload() will check for s.preload value and call loadContent() again accoring to preload value
+        ** loadContent()  <====> Preload();
+    
+    *   @param {Number} index - index of the slide
+    *   @param {Boolean} fromTouch - true if slide function called via touch event or mouse drag
+    *   @param {Boolean} fromThumb - true if slide function called via thumbnail click
+    */
+    Plugin.prototype.slide = function (index, fromTouch, fromThumb) {
+
+        var _prevIndex = 0;
+        for (var i = 0; i < this.___slide.length; i++) {
+            if (_lgUtils2.default.hasClass(this.___slide[i], 'lg-current')) {
+                _prevIndex = i;
+                break;
+            }
+        }
+
+        var _this = this;
+
+        // Prevent if multiple call
+        // Required for hsh plugin
+        if (_this.lGalleryOn && _prevIndex === index) {
+            return;
+        }
+
+        var _length = this.___slide.length;
+        var _time = _this.lGalleryOn ? this.s.speed : 0;
+        var _next = false;
+        var _prev = false;
+
+        if (!_this.lgBusy) {
+
+            if (this.s.download) {
+                var _src;
+                if (_this.s.dynamic) {
+                    _src = _this.s.dynamicEl[index].downloadUrl !== false && (_this.s.dynamicEl[index].downloadUrl || _this.s.dynamicEl[index].src);
+                } else {
+                    _src = _this.items[index].getAttribute('data-download-url') !== 'false' && (_this.items[index].getAttribute('data-download-url') || _this.items[index].getAttribute('href') || _this.items[index].getAttribute('data-src'));
+                }
+
+                if (_src) {
+                    document.getElementById('lg-download').setAttribute('href', _src);
+                    _lgUtils2.default.removeClass(_this.outer, 'lg-hide-download');
+                } else {
+                    _lgUtils2.default.addClass(_this.outer, 'lg-hide-download');
+                }
+            }
+
+            _lgUtils2.default.trigger(_this.el, 'onBeforeSlide', {
+                prevIndex: _prevIndex,
+                index: index,
+                fromTouch: fromTouch,
+                fromThumb: fromThumb
+            });
+
+            _this.lgBusy = true;
+
+            clearTimeout(_this.hideBartimeout);
+
+            // Add title if this.s.appendSubHtmlTo === lg-sub-html
+            if (this.s.appendSubHtmlTo === '.lg-sub-html') {
+
+                // wait for slide animation to complete
+                setTimeout(function () {
+                    _this.addHtml(index);
+                }, _time);
+            }
+
+            this.arrowDisable(index);
+
+            if (!fromTouch) {
+
+                // remove all transitions
+                _lgUtils2.default.addClass(_this.outer, 'lg-no-trans');
+
+                for (var j = 0; j < this.___slide.length; j++) {
+                    _lgUtils2.default.removeClass(this.___slide[j], 'lg-prev-slide');
+                    _lgUtils2.default.removeClass(this.___slide[j], 'lg-next-slide');
+                }
+
+                if (index < _prevIndex) {
+                    _prev = true;
+                    if (index === 0 && _prevIndex === _length - 1 && !fromThumb) {
+                        _prev = false;
+                        _next = true;
+                    }
+                } else if (index > _prevIndex) {
+                    _next = true;
+                    if (index === _length - 1 && _prevIndex === 0 && !fromThumb) {
+                        _prev = true;
+                        _next = false;
+                    }
+                }
+
+                if (_prev) {
+
+                    //prevslide
+                    _lgUtils2.default.addClass(this.___slide[index], 'lg-prev-slide');
+                    _lgUtils2.default.addClass(this.___slide[_prevIndex], 'lg-next-slide');
+                } else if (_next) {
+
+                    // next slide
+                    _lgUtils2.default.addClass(this.___slide[index], 'lg-next-slide');
+                    _lgUtils2.default.addClass(this.___slide[_prevIndex], 'lg-prev-slide');
+                }
+
+                // give 50 ms for browser to add/remove class
+                setTimeout(function () {
+                    _lgUtils2.default.removeClass(_this.outer.querySelector('.lg-current'), 'lg-current');
+
+                    //_this.$slide.eq(_prevIndex).removeClass('lg-current');
+                    _lgUtils2.default.addClass(_this.___slide[index], 'lg-current');
+
+                    // reset all transitions
+                    _lgUtils2.default.removeClass(_this.outer, 'lg-no-trans');
+                }, 50);
+            } else {
+
+                var touchPrev = index - 1;
+                var touchNext = index + 1;
+
+                if (index === 0 && _prevIndex === _length - 1) {
+
+                    // next slide
+                    touchNext = 0;
+                    touchPrev = _length - 1;
+                } else if (index === _length - 1 && _prevIndex === 0) {
+
+                    // prev slide
+                    touchNext = 0;
+                    touchPrev = _length - 1;
+                }
+
+                _lgUtils2.default.removeClass(_this.outer.querySelector('.lg-prev-slide'), 'lg-prev-slide');
+                _lgUtils2.default.removeClass(_this.outer.querySelector('.lg-current'), 'lg-current');
+                _lgUtils2.default.removeClass(_this.outer.querySelector('.lg-next-slide'), 'lg-next-slide');
+                _lgUtils2.default.addClass(_this.___slide[touchPrev], 'lg-prev-slide');
+                _lgUtils2.default.addClass(_this.___slide[touchNext], 'lg-next-slide');
+                _lgUtils2.default.addClass(_this.___slide[index], 'lg-current');
+            }
+
+            if (_this.lGalleryOn) {
+                setTimeout(function () {
+                    _this.loadContent(index, true, 0);
+                }, this.s.speed + 50);
+
+                setTimeout(function () {
+                    _this.lgBusy = false;
+                    _lgUtils2.default.trigger(_this.el, 'onAfterSlide', {
+                        prevIndex: _prevIndex,
+                        index: index,
+                        fromTouch: fromTouch,
+                        fromThumb: fromThumb
+                    });
+                }, this.s.speed);
+            } else {
+                _this.loadContent(index, true, _this.s.backdropDuration);
+
+                _this.lgBusy = false;
+                _lgUtils2.default.trigger(_this.el, 'onAfterSlide', {
+                    prevIndex: _prevIndex,
+                    index: index,
+                    fromTouch: fromTouch,
+                    fromThumb: fromThumb
+                });
+            }
+
+            _this.lGalleryOn = true;
+
+            if (this.s.counter) {
+                if (document.getElementById('lg-counter-current')) {
+                    document.getElementById('lg-counter-current').innerHTML = index + 1;
+                }
+            }
+        }
+    };
+
+    /**
+     *  @desc Go to next slide
+     *  @param {Boolean} fromTouch - true if slide function called via touch event
+     */
+    Plugin.prototype.goToNextSlide = function (fromTouch) {
+        var _this = this;
+        if (!_this.lgBusy) {
+            if (_this.index + 1 < _this.___slide.length) {
+                _this.index++;
+                _lgUtils2.default.trigger(_this.el, 'onBeforeNextSlide', {
+                    index: _this.index
+                });
+                _this.slide(_this.index, fromTouch, false);
+            } else {
+                if (_this.s.loop) {
+                    _this.index = 0;
+                    _lgUtils2.default.trigger(_this.el, 'onBeforeNextSlide', {
+                        index: _this.index
+                    });
+                    _this.slide(_this.index, fromTouch, false);
+                } else if (_this.s.slideEndAnimatoin) {
+                    _lgUtils2.default.addClass(_this.outer, 'lg-right-end');
+                    setTimeout(function () {
+                        _lgUtils2.default.removeClass(_this.outer, 'lg-right-end');
+                    }, 400);
+                }
+            }
+        }
+    };
+
+    /**
+     *  @desc Go to previous slide
+     *  @param {Boolean} fromTouch - true if slide function called via touch event
+     */
+    Plugin.prototype.goToPrevSlide = function (fromTouch) {
+        var _this = this;
+        if (!_this.lgBusy) {
+            if (_this.index > 0) {
+                _this.index--;
+                _lgUtils2.default.trigger(_this.el, 'onBeforePrevSlide', {
+                    index: _this.index,
+                    fromTouch: fromTouch
+                });
+                _this.slide(_this.index, fromTouch, false);
+            } else {
+                if (_this.s.loop) {
+                    _this.index = _this.items.length - 1;
+                    _lgUtils2.default.trigger(_this.el, 'onBeforePrevSlide', {
+                        index: _this.index,
+                        fromTouch: fromTouch
+                    });
+                    _this.slide(_this.index, fromTouch, false);
+                } else if (_this.s.slideEndAnimatoin) {
+                    _lgUtils2.default.addClass(_this.outer, 'lg-left-end');
+                    setTimeout(function () {
+                        _lgUtils2.default.removeClass(_this.outer, 'lg-left-end');
+                    }, 400);
+                }
+            }
+        }
+    };
+
+    Plugin.prototype.keyPress = function () {
+        var _this = this;
+        if (this.items.length > 1) {
+            _lgUtils2.default.on(window, 'keyup.lg', function (e) {
+                if (_this.items.length > 1) {
+                    if (e.keyCode === 37) {
+                        e.preventDefault();
+                        _this.goToPrevSlide();
+                    }
+
+                    if (e.keyCode === 39) {
+                        e.preventDefault();
+                        _this.goToNextSlide();
+                    }
+                }
+            });
+        }
+
+        _lgUtils2.default.on(window, 'keydown.lg', function (e) {
+            if (_this.s.escKey === true && e.keyCode === 27) {
+                e.preventDefault();
+                if (!_lgUtils2.default.hasClass(_this.outer, 'lg-thumb-open')) {
+                    _this.destroy();
+                } else {
+                    _lgUtils2.default.removeClass(_this.outer, 'lg-thumb-open');
+                }
+            }
+        });
+    };
+
+    Plugin.prototype.arrow = function () {
+        var _this = this;
+        _lgUtils2.default.on(this.outer.querySelector('.lg-prev'), 'click.lg', function () {
+            _this.goToPrevSlide();
+        });
+
+        _lgUtils2.default.on(this.outer.querySelector('.lg-next'), 'click.lg', function () {
+            _this.goToNextSlide();
+        });
+    };
+
+    Plugin.prototype.arrowDisable = function (index) {
+
+        // Disable arrows if s.hideControlOnEnd is true
+        if (!this.s.loop && this.s.hideControlOnEnd) {
+            var next = this.outer.querySelector('.lg-next');
+            var prev = this.outer.querySelector('.lg-prev');
+            if (index + 1 < this.___slide.length) {
+                next.removeAttribute('disabled');
+                _lgUtils2.default.removeClass(next, 'disabled');
+            } else {
+                next.setAttribute('disabled', 'disabled');
+                _lgUtils2.default.addClass(next, 'disabled');
+            }
+
+            if (index > 0) {
+                prev.removeAttribute('disabled');
+                _lgUtils2.default.removeClass(prev, 'disabled');
+            } else {
+                prev.setAttribute('disabled', 'disabled');
+                _lgUtils2.default.addClass(prev, 'disabled');
+            }
+        }
+    };
+
+    Plugin.prototype.setTranslate = function (el, xValue, yValue) {
+        // jQuery supports Automatic CSS prefixing since jQuery 1.8.0
+        if (this.s.useLeft) {
+            el.style.left = xValue;
+        } else {
+            _lgUtils2.default.setVendor(el, 'Transform', 'translate3d(' + xValue + 'px, ' + yValue + 'px, 0px)');
+        }
+    };
+
+    Plugin.prototype.touchMove = function (startCoords, endCoords) {
+
+        var distance = endCoords - startCoords;
+
+        if (Math.abs(distance) > 15) {
+            // reset opacity and transition duration
+            _lgUtils2.default.addClass(this.outer, 'lg-dragging');
+
+            // move current slide
+            this.setTranslate(this.___slide[this.index], distance, 0);
+
+            // move next and prev slide with current slide
+            this.setTranslate(document.querySelector('.lg-prev-slide'), -this.___slide[this.index].clientWidth + distance, 0);
+            this.setTranslate(document.querySelector('.lg-next-slide'), this.___slide[this.index].clientWidth + distance, 0);
+        }
+    };
+
+    Plugin.prototype.touchEnd = function (distance) {
+        var _this = this;
+
+        // keep slide animation for any mode while dragg/swipe
+        if (_this.s.mode !== 'lg-slide') {
+            _lgUtils2.default.addClass(_this.outer, 'lg-slide');
+        }
+
+        for (var i = 0; i < this.___slide.length; i++) {
+            if (!_lgUtils2.default.hasClass(this.___slide[i], 'lg-current') && !_lgUtils2.default.hasClass(this.___slide[i], 'lg-prev-slide') && !_lgUtils2.default.hasClass(this.___slide[i], 'lg-next-slide')) {
+                this.___slide[i].style.opacity = '0';
+            }
+        }
+
+        // set transition duration
+        setTimeout(function () {
+            _lgUtils2.default.removeClass(_this.outer, 'lg-dragging');
+            if (distance < 0 && Math.abs(distance) > _this.s.swipeThreshold) {
+                _this.goToNextSlide(true);
+            } else if (distance > 0 && Math.abs(distance) > _this.s.swipeThreshold) {
+                _this.goToPrevSlide(true);
+            } else if (Math.abs(distance) < 5) {
+
+                // Trigger click if distance is less than 5 pix
+                _lgUtils2.default.trigger(_this.el, 'onSlideClick');
+            }
+
+            for (var i = 0; i < _this.___slide.length; i++) {
+                _this.___slide[i].removeAttribute('style');
+            }
+        });
+
+        // remove slide class once drag/swipe is completed if mode is not slide
+        setTimeout(function () {
+            if (!_lgUtils2.default.hasClass(_this.outer, 'lg-dragging') && _this.s.mode !== 'lg-slide') {
+                _lgUtils2.default.removeClass(_this.outer, 'lg-slide');
+            }
+        }, _this.s.speed + 100);
+    };
+
+    Plugin.prototype.enableSwipe = function () {
+        var _this = this;
+        var startCoords = 0;
+        var endCoords = 0;
+        var isMoved = false;
+
+        if (_this.s.enableSwipe && _this.isTouch && _this.doCss()) {
+
+            for (var i = 0; i < _this.___slide.length; i++) {
+                /*jshint loopfunc: true */
+                _lgUtils2.default.on(_this.___slide[i], 'touchstart.lg', function (e) {
+                    if (!_lgUtils2.default.hasClass(_this.outer, 'lg-zoomed') && !_this.lgBusy) {
+                        e.preventDefault();
+                        _this.manageSwipeClass();
+                        startCoords = e.targetTouches[0].pageX;
+                    }
+                });
+            }
+
+            for (var j = 0; j < _this.___slide.length; j++) {
+                /*jshint loopfunc: true */
+                _lgUtils2.default.on(_this.___slide[j], 'touchmove.lg', function (e) {
+                    if (!_lgUtils2.default.hasClass(_this.outer, 'lg-zoomed')) {
+                        e.preventDefault();
+                        endCoords = e.targetTouches[0].pageX;
+                        _this.touchMove(startCoords, endCoords);
+                        isMoved = true;
+                    }
+                });
+            }
+
+            for (var k = 0; k < _this.___slide.length; k++) {
+                /*jshint loopfunc: true */
+                _lgUtils2.default.on(_this.___slide[k], 'touchend.lg', function () {
+                    if (!_lgUtils2.default.hasClass(_this.outer, 'lg-zoomed')) {
+                        if (isMoved) {
+                            isMoved = false;
+                            _this.touchEnd(endCoords - startCoords);
+                        } else {
+                            _lgUtils2.default.trigger(_this.el, 'onSlideClick');
+                        }
+                    }
+                });
+            }
+        }
+    };
+
+    Plugin.prototype.enableDrag = function () {
+        var _this = this;
+        var startCoords = 0;
+        var endCoords = 0;
+        var isDraging = false;
+        var isMoved = false;
+        if (_this.s.enableDrag && !_this.isTouch && _this.doCss()) {
+            for (var i = 0; i < _this.___slide.length; i++) {
+                /*jshint loopfunc: true */
+                _lgUtils2.default.on(_this.___slide[i], 'mousedown.lg', function (e) {
+                    // execute only on .lg-object
+                    if (!_lgUtils2.default.hasClass(_this.outer, 'lg-zoomed')) {
+                        if (_lgUtils2.default.hasClass(e.target, 'lg-object') || _lgUtils2.default.hasClass(e.target, 'lg-video-play')) {
+                            e.preventDefault();
+
+                            if (!_this.lgBusy) {
+                                _this.manageSwipeClass();
+                                startCoords = e.pageX;
+                                isDraging = true;
+
+                                // ** Fix for webkit cursor issue https://code.google.com/p/chromium/issues/detail?id=26723
+                                _this.outer.scrollLeft += 1;
+                                _this.outer.scrollLeft -= 1;
+
+                                // *
+
+                                _lgUtils2.default.removeClass(_this.outer, 'lg-grab');
+                                _lgUtils2.default.addClass(_this.outer, 'lg-grabbing');
+
+                                _lgUtils2.default.trigger(_this.el, 'onDragstart');
+                            }
+                        }
+                    }
+                });
+            }
+
+            _lgUtils2.default.on(window, 'mousemove.lg', function (e) {
+                if (isDraging) {
+                    isMoved = true;
+                    endCoords = e.pageX;
+                    _this.touchMove(startCoords, endCoords);
+                    _lgUtils2.default.trigger(_this.el, 'onDragmove');
+                }
+            });
+
+            _lgUtils2.default.on(window, 'mouseup.lg', function (e) {
+                if (isMoved) {
+                    isMoved = false;
+                    _this.touchEnd(endCoords - startCoords);
+                    _lgUtils2.default.trigger(_this.el, 'onDragend');
+                } else if (_lgUtils2.default.hasClass(e.target, 'lg-object') || _lgUtils2.default.hasClass(e.target, 'lg-video-play')) {
+                    _lgUtils2.default.trigger(_this.el, 'onSlideClick');
+                }
+
+                // Prevent execution on click
+                if (isDraging) {
+                    isDraging = false;
+                    _lgUtils2.default.removeClass(_this.outer, 'lg-grabbing');
+                    _lgUtils2.default.addClass(_this.outer, 'lg-grab');
+                }
+            });
+        }
+    };
+
+    Plugin.prototype.manageSwipeClass = function () {
+        var touchNext = this.index + 1;
+        var touchPrev = this.index - 1;
+        var length = this.___slide.length;
+        if (this.s.loop) {
+            if (this.index === 0) {
+                touchPrev = length - 1;
+            } else if (this.index === length - 1) {
+                touchNext = 0;
+            }
+        }
+
+        for (var i = 0; i < this.___slide.length; i++) {
+            _lgUtils2.default.removeClass(this.___slide[i], 'lg-next-slide');
+            _lgUtils2.default.removeClass(this.___slide[i], 'lg-prev-slide');
+        }
+
+        if (touchPrev > -1) {
+            _lgUtils2.default.addClass(this.___slide[touchPrev], 'lg-prev-slide');
+        }
+
+        _lgUtils2.default.addClass(this.___slide[touchNext], 'lg-next-slide');
+    };
+
+    Plugin.prototype.mousewheel = function () {
+        var _this = this;
+        _lgUtils2.default.on(_this.outer, 'mousewheel.lg', function (e) {
+
+            if (!e.deltaY) {
+                return;
+            }
+
+            if (e.deltaY > 0) {
+                _this.goToPrevSlide();
+            } else {
+                _this.goToNextSlide();
+            }
+
+            e.preventDefault();
+        });
+    };
+
+    Plugin.prototype.closeGallery = function () {
+
+        var _this = this;
+        var mousedown = false;
+        _lgUtils2.default.on(this.outer.querySelector('.lg-close'), 'click.lg', function () {
+            _this.destroy();
+        });
+
+        if (_this.s.closable) {
+
+            // If you drag the slide and release outside gallery gets close on chrome
+            // for preventing this check mousedown and mouseup happened on .lg-item or lg-outer
+            _lgUtils2.default.on(_this.outer, 'mousedown.lg', function (e) {
+
+                if (_lgUtils2.default.hasClass(e.target, 'lg-outer') || _lgUtils2.default.hasClass(e.target, 'lg-item') || _lgUtils2.default.hasClass(e.target, 'lg-img-wrap')) {
+                    mousedown = true;
+                } else {
+                    mousedown = false;
+                }
+            });
+
+            _lgUtils2.default.on(_this.outer, 'mouseup.lg', function (e) {
+
+                if (_lgUtils2.default.hasClass(e.target, 'lg-outer') || _lgUtils2.default.hasClass(e.target, 'lg-item') || _lgUtils2.default.hasClass(e.target, 'lg-img-wrap') && mousedown) {
+                    if (!_lgUtils2.default.hasClass(_this.outer, 'lg-dragging')) {
+                        _this.destroy();
+                    }
+                }
+            });
+        }
+    };
+
+    Plugin.prototype.destroy = function (d) {
+
+        var _this = this;
+
+        if (!d) {
+            _lgUtils2.default.trigger(_this.el, 'onBeforeClose');
+        }
+
+        document.body.scrollTop = _this.prevScrollTop;
+        document.documentElement.scrollTop = _this.prevScrollTop;
+
+        /**
+         * if d is false or undefined destroy will only close the gallery
+         * plugins instance remains with the element
+         *
+         * if d is true destroy will completely remove the plugin
+         */
+
+        if (d) {
+            if (!_this.s.dynamic) {
+                // only when not using dynamic mode is $items a jquery collection
+
+                for (var i = 0; i < this.items.length; i++) {
+                    _lgUtils2.default.off(this.items[i], '.lg');
+                    _lgUtils2.default.off(this.items[i], '.lgcustom');
+                }
+            }
+
+            var lguid = _this.el.getAttribute('lg-uid');
+            delete window.lgData[lguid];
+            _this.el.removeAttribute('lg-uid');
+        }
+
+        // Unbind all events added by lightGallery
+        _lgUtils2.default.off(this.el, '.lgtm');
+
+        // Distroy all lightGallery modules
+        for (var key in window.lgModules) {
+            if (_this.modules[key]) {
+                _this.modules[key].destroy(d);
+            }
+        }
+
+        this.lGalleryOn = false;
+
+        clearTimeout(_this.hideBartimeout);
+        this.hideBartimeout = false;
+        _lgUtils2.default.off(window, '.lg');
+        _lgUtils2.default.removeClass(document.body, 'lg-on');
+        _lgUtils2.default.removeClass(document.body, 'lg-from-hash');
+
+        if (_this.outer) {
+            _lgUtils2.default.removeClass(_this.outer, 'lg-visible');
+        }
+
+        _lgUtils2.default.removeClass(document.querySelector('.lg-backdrop'), 'in');
+        setTimeout(function () {
+            try {
+                if (_this.outer) {
+                    _this.outer.parentNode.removeChild(_this.outer);
+                }
+
+                if (document.querySelector('.lg-backdrop')) {
+                    document.querySelector('.lg-backdrop').parentNode.removeChild(document.querySelector('.lg-backdrop'));
+                }
+
+                if (!d) {
+                    _lgUtils2.default.trigger(_this.el, 'onCloseAfter');
+                }
+                _this.el.focus();
+            } catch (err) {}
+        }, _this.s.backdropDuration + 50);
+    };
+
+    window.lightGallery = function (el, options) {
+        if (!el) {
+            return;
+        }
+
+        try {
+            if (!el.getAttribute('lg-uid')) {
+                var uid = 'lg' + window.lgData.uid++;
+                window.lgData[uid] = new Plugin(el, options);
+                el.setAttribute('lg-uid', uid);
+            } else {
+                window.lgData[el.getAttribute('lg-uid')].init();
+            }
+        } catch (err) {
+            console.error('lightGallery has not initiated properly', err);
+        }
+    };
+});
+
+/***/ }),
+
+/***/ "./node_modules/vanilla-lazyload/dist/lazyload.es2015.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var getDefaultSettings = () => ({
+	elements_selector: "img",
+	container: window,
+	threshold: 300,
+	throttle: 150,
+	data_src: "src",
+	data_srcset: "srcset",
+	data_sizes: "sizes",
+	class_loading: "loading",
+	class_loaded: "loaded",
+	class_error: "error",
+	class_initial: "initial",
+	skip_invisible: true,
+	callback_load: null,
+	callback_error: null,
+	callback_set: null,
+	callback_processed: null,
+	callback_enter: null,
+	to_webp: false
+});
+
+const getTopOffset = function(element) {
+	return (
+		element.getBoundingClientRect().top +
+		window.pageYOffset -
+		element.ownerDocument.documentElement.clientTop
+	);
+};
+
+const isBelowViewport = function(element, container, threshold) {
+	const fold =
+		container === window
+			? window.innerHeight + window.pageYOffset
+			: getTopOffset(container) + container.offsetHeight;
+	return fold <= getTopOffset(element) - threshold;
+};
+
+const getLeftOffset = function(element) {
+	return (
+		element.getBoundingClientRect().left +
+		window.pageXOffset -
+		element.ownerDocument.documentElement.clientLeft
+	);
+};
+
+const isAtRightOfViewport = function(element, container, threshold) {
+	const documentWidth = window.innerWidth;
+	const fold =
+		container === window
+			? documentWidth + window.pageXOffset
+			: getLeftOffset(container) + documentWidth;
+	return fold <= getLeftOffset(element) - threshold;
+};
+
+const isAboveViewport = function(element, container, threshold) {
+	const fold =
+		container === window ? window.pageYOffset : getTopOffset(container);
+	return fold >= getTopOffset(element) + threshold + element.offsetHeight;
+};
+
+const isAtLeftOfViewport = function(element, container, threshold) {
+	const fold =
+		container === window ? window.pageXOffset : getLeftOffset(container);
+	return fold >= getLeftOffset(element) + threshold + element.offsetWidth;
+};
+
+function isInsideViewport(element, container, threshold) {
+	return (
+		!isBelowViewport(element, container, threshold) &&
+		!isAboveViewport(element, container, threshold) &&
+		!isAtRightOfViewport(element, container, threshold) &&
+		!isAtLeftOfViewport(element, container, threshold)
+	);
+}
+
+/* Creates instance and notifies it through the window element */
+const createInstance = function(classObj, options) {
+	var event;
+	let eventString = "LazyLoad::Initialized";
+	let instance = new classObj(options);
+	try {
+		// Works in modern browsers
+		event = new CustomEvent(eventString, { detail: { instance } });
+	} catch (err) {
+		// Works in Internet Explorer (all versions)
+		event = document.createEvent("CustomEvent");
+		event.initCustomEvent(eventString, false, false, { instance });
+	}
+	window.dispatchEvent(event);
+};
+
+/* Auto initialization of one or more instances of lazyload, depending on the 
+    options passed in (plain object or an array) */
+function autoInitialize(classObj, options) {
+	if (!options) {
+		return;
+	}
+	if (!options.length) {
+		// Plain object
+		createInstance(classObj, options);
+	} else {
+		// Array of objects
+		for (let i = 0, optionsItem; (optionsItem = options[i]); i += 1) {
+			createInstance(classObj, optionsItem);
+		}
+	}
+}
+
+const replaceExtToWebp = (value, condition) =>
+	condition ? value.replace(/\.(jpe?g|png)/gi, ".webp") : value;
+
+const detectWebp = () => {
+	var webpString = "image/webp";
+	var canvas = document.createElement("canvas");
+
+	if (canvas.getContext && canvas.getContext("2d")) {
+		return canvas.toDataURL(webpString).indexOf(`data:${webpString}`) === 0;
+	}
+
+	return false;
+};
+
+const runningOnBrowser = typeof window !== "undefined";
+
+const isBot =
+	(runningOnBrowser && !("onscroll" in window)) ||
+	/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent);
+const supportsClassList =
+	runningOnBrowser && "classList" in document.createElement("p");
+
+const supportsWebp = runningOnBrowser && detectWebp();
+
+const addClass = (element, className) => {
+	if (supportsClassList) {
+		element.classList.add(className);
+		return;
+	}
+	element.className += (element.className ? " " : "") + className;
+};
+
+const removeClass = (element, className) => {
+	if (supportsClassList) {
+		element.classList.remove(className);
+		return;
+	}
+	element.className = element.className.
+		replace(new RegExp("(^|\\s+)" + className + "(\\s+|$)"), " ").
+		replace(/^\s+/, "").
+		replace(/\s+$/, "");
+};
+
+const dataPrefix = "data-";
+const processedDataName = "was-processed";
+const processedDataValue = "true";
+
+const getData = (element, attribute) => {
+	return element.getAttribute(dataPrefix + attribute);
+};
+
+const setData = (element, attribute, value) => {
+	var attrName = dataPrefix + attribute;
+	if (value === null) {
+		element.removeAttribute(attrName);
+		return;
+	}
+	element.setAttribute(attrName, value);
+};
+
+const setWasProcessedData = element =>
+	setData(element, processedDataName, processedDataValue);
+
+const getWasProcessedData = element =>
+	getData(element, processedDataName) === processedDataValue;
+
+const setSourcesInChildren = function(
+	parentTag,
+	attrName,
+	dataAttrName,
+	toWebpFlag
+) {
+	for (let i = 0, childTag; (childTag = parentTag.children[i]); i += 1) {
+		if (childTag.tagName === "SOURCE") {
+			let attrValue = getData(childTag, dataAttrName);
+			setAttributeIfValue(childTag, attrName, attrValue, toWebpFlag);
+		}
+	}
+};
+
+const setAttributeIfValue = function(
+	element,
+	attrName,
+	value,
+	toWebpFlag
+) {
+	if (!value) {
+		return;
+	}
+	element.setAttribute(attrName, replaceExtToWebp(value, toWebpFlag));
+};
+
+const setSourcesImg = (element, settings) => {
+	const toWebpFlag = supportsWebp && settings.to_webp;
+	const srcsetDataName = settings.data_srcset;
+	const parent = element.parentNode;
+
+	if (parent && parent.tagName === "PICTURE") {
+		setSourcesInChildren(parent, "srcset", srcsetDataName, toWebpFlag);
+	}
+	const sizesDataValue = getData(element, settings.data_sizes);
+	setAttributeIfValue(element, "sizes", sizesDataValue);
+	const srcsetDataValue = getData(element, srcsetDataName);
+	setAttributeIfValue(element, "srcset", srcsetDataValue, toWebpFlag);
+	const srcDataValue = getData(element, settings.data_src);
+	setAttributeIfValue(element, "src", srcDataValue, toWebpFlag);
+};
+
+const setSourcesIframe = (element, settings) => {
+	const srcDataValue = getData(element, settings.data_src);
+
+	setAttributeIfValue(element, "src", srcDataValue);
+};
+
+const setSourcesVideo = (element, settings) => {
+	const srcDataName = settings.data_src;
+	const srcDataValue = getData(element, srcDataName);
+
+	setSourcesInChildren(element, "src", srcDataName);
+	setAttributeIfValue(element, "src", srcDataValue);
+	element.load();
+};
+
+const setSourcesBgImage = (element, settings) => {
+	const toWebpFlag = supportsWebp && settings.to_webp;
+	const srcDataValue = getData(element, settings.data_src);
+
+	if (srcDataValue) {
+		let setValue = replaceExtToWebp(srcDataValue, toWebpFlag);
+		element.style.backgroundImage = `url("${setValue}")`;
+	}
+};
+
+const setSourcesFunctions = {
+	IMG: setSourcesImg,
+	IFRAME: setSourcesIframe,
+	VIDEO: setSourcesVideo
+};
+
+const setSources = (element, settings) => {
+	const tagName = element.tagName;
+	const setSourcesFunction = setSourcesFunctions[tagName];
+	if (setSourcesFunction) {
+		setSourcesFunction(element, settings);
+		return;
+	}
+	setSourcesBgImage(element, settings);
+};
+
+const callbackIfSet = function(callback, argument) {
+	if (callback) {
+		callback(argument);
+	}
+};
+
+const genericLoadEventName = "load";
+const mediaLoadEventName = "loadeddata";
+const errorEventName = "error";
+
+const addEventListener = (element, eventName, handler) => {
+	element.addEventListener(eventName, handler);
+};
+
+const removeEventListener = (element, eventName, handler) => {
+	element.removeEventListener(eventName, handler);
+};
+
+const addAllEventListeners = (element, loadHandler, errorHandler) => {
+	addEventListener(element, genericLoadEventName, loadHandler);
+	addEventListener(element, mediaLoadEventName, loadHandler);
+	addEventListener(element, errorEventName, errorHandler);
+};
+
+const removeAllEventListeners = (element, loadHandler, errorHandler) => {
+	removeEventListener(element, genericLoadEventName, loadHandler);
+	removeEventListener(element, mediaLoadEventName, loadHandler);
+	removeEventListener(element, errorEventName, errorHandler);
+};
+
+const eventHandler = function(event, success, settings) {
+	const className = success ? settings.class_loaded : settings.class_error;
+	const callback = success ? settings.callback_load : settings.callback_error;
+	const element = event.target;
+
+	removeClass(element, settings.class_loading);
+	addClass(element, className);
+	callbackIfSet(callback, element);
+};
+
+const addOneShotEventListeners = (element, settings) => {
+	const loadHandler = event => {
+		eventHandler(event, true, settings);
+		removeAllEventListeners(element, loadHandler, errorHandler);
+	};
+	const errorHandler = event => {
+		eventHandler(event, false, settings);
+		removeAllEventListeners(element, loadHandler, errorHandler);
+	};
+	addAllEventListeners(element, loadHandler, errorHandler);
+};
+
+const managedTags = ["IMG", "IFRAME", "VIDEO"];
+
+function revealElement(element, settings, force) {
+	if (!force && getWasProcessedData(element)) {
+		return; // element has already been processed and force wasn't true
+	}
+	callbackIfSet(settings.callback_enter, element);
+	if (managedTags.indexOf(element.tagName) > -1) {
+		addOneShotEventListeners(element, settings);
+		addClass(element, settings.class_loading);
+	}
+	setSources(element, settings);
+	setWasProcessedData(element);
+	callbackIfSet(settings.callback_set, element);
+}
+
+const removeFromArray = (elements, indexes) => {
+	while (indexes.length) {
+		elements.splice(indexes.pop(), 1);
+	}
+};
+
+/*
+ * Constructor
+ */
+
+const LazyLoad = function(instanceSettings) {
+	this._settings = Object.assign({}, getDefaultSettings(), instanceSettings);
+	this._queryOriginNode =
+		this._settings.container === window
+			? document
+			: this._settings.container;
+
+	this._previousLoopTime = 0;
+	this._loopTimeout = null;
+	this._boundHandleScroll = this.handleScroll.bind(this);
+
+	this._isFirstLoop = true;
+	window.addEventListener("resize", this._boundHandleScroll);
+	this.update();
+};
+
+LazyLoad.prototype = {
+	_loopThroughElements: function(forceDownload) {
+		const settings = this._settings,
+			elements = this._elements,
+			elementsLength = !elements ? 0 : elements.length;
+		let i,
+			processedIndexes = [],
+			isFirstLoop = this._isFirstLoop;
+
+		if (isFirstLoop) {
+			this._isFirstLoop = false;
+		}
+
+		if (elementsLength === 0) {
+			this._stopScrollHandler();
+			return;
+		}
+
+		for (i = 0; i < elementsLength; i++) {
+			let element = elements[i];
+			/* If must skip_invisible and element is invisible, skip it */
+			if (settings.skip_invisible && element.offsetParent === null) {
+				continue;
+			}
+
+			if (
+				isBot ||
+				forceDownload ||
+				isInsideViewport(
+					element,
+					settings.container,
+					settings.threshold
+				)
+			) {
+				if (isFirstLoop) {
+					addClass(element, settings.class_initial);
+				}
+				this.load(element);
+				processedIndexes.push(i);
+			}
+		}
+
+		// Removing processed elements from this._elements.
+		removeFromArray(elements, processedIndexes);
+	},
+
+	_purgeElements: function() {
+		const elements = this._elements,
+			elementsLength = elements.length;
+		let i,
+			processedIndexes = [];
+
+		for (i = 0; i < elementsLength; i++) {
+			if (getWasProcessedData(elements[i])) {
+				processedIndexes.push(i);
+			}
+		}
+		removeFromArray(elements, processedIndexes);
+	},
+
+	_startScrollHandler: function() {
+		if (!this._isHandlingScroll) {
+			this._isHandlingScroll = true;
+			this._settings.container.addEventListener(
+				"scroll",
+				this._boundHandleScroll
+			);
+		}
+	},
+
+	_stopScrollHandler: function() {
+		if (this._isHandlingScroll) {
+			this._isHandlingScroll = false;
+			this._settings.container.removeEventListener(
+				"scroll",
+				this._boundHandleScroll
+			);
+		}
+	},
+
+	handleScroll: function() {
+		const throttle = this._settings.throttle;
+
+		if (throttle !== 0) {
+			let now = Date.now();
+			let remainingTime = throttle - (now - this._previousLoopTime);
+			if (remainingTime <= 0 || remainingTime > throttle) {
+				if (this._loopTimeout) {
+					clearTimeout(this._loopTimeout);
+					this._loopTimeout = null;
+				}
+				this._previousLoopTime = now;
+				this._loopThroughElements();
+			} else if (!this._loopTimeout) {
+				this._loopTimeout = setTimeout(
+					function() {
+						this._previousLoopTime = Date.now();
+						this._loopTimeout = null;
+						this._loopThroughElements();
+					}.bind(this),
+					remainingTime
+				);
+			}
+		} else {
+			this._loopThroughElements();
+		}
+	},
+
+	loadAll: function() {
+		this._loopThroughElements(true);
+	},
+
+	update: function() {
+		// Converts to array the nodeset obtained querying the DOM from _queryOriginNode with elements_selector
+		this._elements = Array.prototype.slice.call(
+			this._queryOriginNode.querySelectorAll(
+				this._settings.elements_selector
+			)
+		);
+		this._purgeElements();
+		this._loopThroughElements();
+		this._startScrollHandler();
+	},
+
+	destroy: function() {
+		window.removeEventListener("resize", this._boundHandleScroll);
+		if (this._loopTimeout) {
+			clearTimeout(this._loopTimeout);
+			this._loopTimeout = null;
+		}
+		this._stopScrollHandler();
+		this._elements = null;
+		this._queryOriginNode = null;
+		this._settings = null;
+	},
+
+	load: function(element, force) {
+		revealElement(element, this._settings, force);
+	}
+};
+
+/* Automatic instances creation if required (useful for async script loading) */
+if (runningOnBrowser) {
+	autoInitialize(LazyLoad, window.lazyLoadOptions);
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (LazyLoad);
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/modules/header-menu.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var handleToggleReperfilarMenu = function handleToggleReperfilarMenu() {
+	var _button = document.getElementById('btn-toggle-menu-reperfilar');
+	var _container = document.getElementById('reperfilar-nav');
+
+	if (_button === null) return 0;
+
+	_button.addEventListener('click', function (e) {
+		e.preventDefault();
+
+		_button.classList.toggle('change');
+		_container.classList.toggle('temuestro');
+	});
+};
+
+var handleToggleMainMenu = function handleToggleMainMenu() {
+	var _button = document.getElementById('hamburguesa');
+	var _container = document.getElementById('menues');
+
+	if (_button === null) return 0;
+
+	_button.addEventListener('click', function (e) {
+		e.preventDefault();
+
+		_button.classList.toggle('change');
+		_container.classList.toggle('temuestro');
+	});
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+	handleToggleReperfilarMenu();
+	handleToggleMainMenu();
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/modules/sidebar.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+	handleClickColumnistasWidgetRow();
+	initPerformVideo();
+});
+
+var handleClickColumnistasWidgetRow = function handleClickColumnistasWidgetRow() {
+	var _el = document.getElementById('columnistas');
+
+	if (_el === null) return 0;
+
+	var _buttons = document.getElementsByClassName('btn-columnistas-widget-row');
+	var _container = document.getElementById('grupo-col-0');
+	var width = _container.clientWidth;
+	var margin = 0;
+
+	Array.from(_buttons).forEach(function (_el) {
+		_el.addEventListener('click', function (e) {
+			e.preventDefault();
+			var index = e.currentTarget.dataset.index;
+			margin = -(width * index);
+
+			_container.style.marginLeft = margin + 'px';
+		});
+	});
+};
+
+var initPerformVideo = function initPerformVideo() {
+	var _container = document.getElementById('perform-video');
+
+	if (_container === null) return 0;
+
+	if (navigator.userAgent.search("Firefox") !== -1) return 0;
+
+	var script = document.createElement("script");
+	script.type = 'text/javascript';
+	script.defer = true;
+	script.src = 'https://player.performgroup.com/eplayer.js#47b3f29670c0b844c32971e284.15c1379yp89d01tb3mar0jq831';
+	_container.appendChild(script);
+};
+
+/***/ }),
+
+/***/ "./resources/assets/js/modules/utils.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isElementVisible; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return simulateClick; });
+var isElementVisible = function isElementVisible(el) {
+	var style = window.getComputedStyle(el);
+	return style.display !== 'none';
+};
+
+var simulateClick = function simulateClick(el) {
+	var evt = new MouseEvent('click', {
+		bubbles: true,
+		cancelable: true,
+		view: window
+	});
+
+	var canceled = !el.dispatchEvent(evt);
+};
+
+/***/ }),
+
+/***/ "./resources/assets/js/news-show.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vanilla_lazyload__ = __webpack_require__("./node_modules/vanilla-lazyload/dist/lazyload.es2015.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_header_menu__ = __webpack_require__("./resources/assets/js/modules/header-menu.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_sidebar__ = __webpack_require__("./resources/assets/js/modules/sidebar.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_utils__ = __webpack_require__("./resources/assets/js/modules/utils.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lightgallery_js__ = __webpack_require__("./node_modules/lightgallery.js/lib/js/lightgallery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lightgallery_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_lightgallery_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_lg_thumbnail_js__ = __webpack_require__("./node_modules/lg-thumbnail.js/dist/lg-thumbnail.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_lg_thumbnail_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_lg_thumbnail_js__);
+
+
+
+
+
+
+
+var SnippetShowNews = function () {
+	var light_gallery_images = window.sharedData.light_gallery_images;
+
+
+	var initialize = function initialize() {
+		initLazyLoad();
+		handleClickOpenGallery();
+		Object(__WEBPACK_IMPORTED_MODULE_1__modules_header_menu__["a" /* default */])();
+		Object(__WEBPACK_IMPORTED_MODULE_2__modules_sidebar__["a" /* default */])();
+	};
+
+	var handleClickOpenGallery = function handleClickOpenGallery() {
+		var buttons = document.getElementsByClassName('btn-open-gallery');
+		var _gallery_container = document.getElementById('images-gallery');
+
+		if (_gallery_container !== null && _gallery_container !== undefined) {
+			var _first_thumbnail = document.querySelector('#images-gallery a');
+
+			lightGallery(_gallery_container, {
+				thumbnail: true
+			});
+			Array.from(buttons).forEach(function (el) {
+				el.addEventListener('click', function (e) {
+					e.preventDefault();
+					Object(__WEBPACK_IMPORTED_MODULE_3__modules_utils__["b" /* simulateClick */])(_first_thumbnail);
+				});
+			});
+		} else Array.from(buttons).forEach(function (el) {
+			el.addEventListener('click', function (e) {
+				e.preventDefault();
+				lightGallery(e.currentTarget, {
+					dynamic: true,
+					dynamicEl: light_gallery_images,
+					thumbnail: true
+				});
+			});
+		});
+	};
+
+	var initLazyLoad = function initLazyLoad() {
+		var lazyLoad = new __WEBPACK_IMPORTED_MODULE_0_vanilla_lazyload__["a" /* default */]({
+			elements_selector: '.lazyload'
+		});
+	};
+
+	return {
+		init: function init() {
+			return initialize();
+		}
+	};
+}();
+
+document.addEventListener('DOMContentLoaded', function () {
+	return SnippetShowNews.init();
+});
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./resources/assets/js/news-show.js");
+
+
+/***/ })
+
+/******/ });

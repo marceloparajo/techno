@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns:serif="http://www.serif.com/"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.95px"
-	 height="19.914px" viewBox="0 0 19.95 19.914" enable-background="new 0 0 19.95 19.914" xml:space="preserve">
-<path fill="#0A66C2" d="M19.951,19.914v-7.295c0-3.583-0.774-6.337-4.959-6.337c-2.011,0-3.36,1.103-3.912,2.149h-0.057V6.612H7.061
-	v13.301h4.129v-6.579c0-1.735,0.328-3.417,2.479-3.417c2.122,0,2.148,1.984,2.148,3.527v6.468H19.951L19.951,19.914z M4.467,6.612
-	H0.329v13.301h4.138V6.612L4.467,6.612z M2.399,0C1.071,0,0,1.074,0,2.397s1.071,2.397,2.398,2.397c1.322,0,2.396-1.074,2.396-2.397
-	S3.721,0,2.399,0L2.399,0z"/>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="219px" height="219px" viewBox="0 0 219 219" enable-background="new 0 0 219 219" xml:space="preserve">
+<defs>
+</defs>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="187.2031" y1="32.1191" x2="32.1199" y2="187.2023">
+	<stop  offset="0" style="stop-color:#007AB5"/>
+	<stop  offset="1" style="stop-color:#0046E5"/>
+</linearGradient>
+<circle fill="url(#SVGID_1_)" cx="109.661" cy="109.66" r="109.661"/>
+<path fill="#FFFFFF" d="M63.672,89.236h21.239v68.228H63.672V89.236z M74.295,55.333c6.792,0,12.296,5.51,12.296,12.287
+	c0,6.787-5.504,12.306-12.296,12.306c-6.809,0-12.312-5.519-12.312-12.306C61.983,60.843,67.486,55.333,74.295,55.333"/>
+<path fill="#FFFFFF" d="M98.218,89.236h20.342v9.333h0.278c2.836-5.369,9.753-11.021,20.082-11.021
+	c21.471,0,25.43,14.121,25.43,32.496v37.42h-21.192v-33.171c0-7.918-0.155-18.093-11.022-18.093
+	c-11.039,0-12.723,8.618-12.723,17.515v33.749H98.218V89.236z"/>
 </svg>

@@ -1,5 +1,4 @@
 <div class="content-sidebar">
-    <x-divisas-widget />
 
     <x-ad-space id="sidebar_300x250x-pos-" width="300" height="250" margin-top="0" max-height="600" />
 
