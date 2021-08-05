@@ -269,8 +269,10 @@
 
 @include media-breakpoint-up(lg) {
 	.main-header {
+		position: static;
 		margin-bottom: 15px;
 		.navbar {
+			top: 76px;
 			.container {
 				grid-template-areas:
 					'a a b b c c'

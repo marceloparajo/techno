@@ -1,8 +1,10 @@
-<span class="autor-nota-arriba" itemscope itemprop="author" itemtype="https://schema.org/Person">
+<span class="autor__nota" itemscope itemprop="author" itemtype="https://schema.org/Person">
 	<figure>
-		<img class="autor-img" src="{{ $author['image'] }}" alt="{{ $author['fullname'] }}" itemprop="image" style="width:48px;height:48px;">
+		<img class="autor__nota__img" src="{{ $author['image'] }}" alt="{{ $author['fullname'] }}" itemprop="image" style="width:48px;height:48px;">
 	</figure>
-	<a href="{{ route('authors.show', $author['username']) }}" itemprop="url" class="nombreautor"><span itemprop="name">{{ $author['fullname'] }}</span></a>
+	<a href="{{ route('authors.show', $author['username']) }}" itemprop="url" class="autor__nota__nombre">
+		<span itemprop="name">{{ $author['fullname'] }}</span>
+	</a>
 	@if ( $author['about'] != '')
 		<p class="autor-about">{!! $author['about'] !!}
 

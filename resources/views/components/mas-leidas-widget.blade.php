@@ -1,6 +1,6 @@
-<div id="mas-leidas-perfil" class="masvistas">
+<div id="mas-leidas" class="masvistas">
     <header class="masvistas__titulo">
-        <a href="https://www.perfil.com/mas-leidas">Más leídas de Perfil</a>
+        <a href="{{ route('mostviewed.show') }}">Las más leídas</a>
     </header>
 
     @foreach(array_slice($news, 0, $rows) as $new)

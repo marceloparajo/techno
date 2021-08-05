@@ -2,7 +2,7 @@
 	<p>Compartí esta nota</p>
 	<ul>
 		<li class="share">
-			<img src="/images/glyph/share/share.svg" width="20" height="20" alt="Compartila en Facebook">
+			<img src="/images/glyph/share/share.svg" width="20" height="20" alt="Compartila">
 		</li>
 
 		<li class="facebook">

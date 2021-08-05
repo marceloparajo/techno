@@ -1,1 +1,1 @@
-<x-mas-leidas-perfil-widget :rows="5" />
+<x-mas-leidas-home-widget :rows="5" />

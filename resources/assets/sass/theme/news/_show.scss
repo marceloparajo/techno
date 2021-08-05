@@ -82,6 +82,31 @@
         order: 3;
         .news-body {
 
+            .autor {
+                width: 100%;
+                border: $borde;
+                padding: .25em .5em;
+                margin-bottom: 10px;
+                &__nota {
+                    display: flex;
+                    width: 100%;
+                    justify-content: flex-start;
+                    align-items: center;
+                    &__img {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin: 0 10px 0 0;
+                        border: $borde;
+                    }
+                    &__nombre {
+                        text-transform: uppercase;
+                        font-size: .9rem;
+                    }
+                }
+            }
+
             .social-topsharing {
                 position: sticky;
                 top: 0;
@@ -101,6 +126,11 @@
                         &.mailto {
                             display: none;
                         }
+                        a {
+                            img {
+                                display: block;
+                            }
+                        }
                     }
                 }
                 p {
@@ -118,7 +148,7 @@
                 h4,
                 h5,
                 h6 {
-                    margin: 10px;
+                    margin: 1em;
                     font-size: 1.2rem;
                     line-height: 1.6em;
                     color: $negro;
@@ -129,9 +159,8 @@
                 }
                 h2 {
                     line-height: 1.05em;
-                    font-size: 1.5rem;
-                    color: $gris-medio;
-                    margin-top: 20px;
+                    font-size: 1.8rem;
+                    margin: 1em .7em;
                 }
                 >p:first-of-type:first-letter {
                     color: $color-brand;
@@ -143,6 +172,96 @@
                     margin: 24px 10px 10px 0;
                     transform: translateY(-10px);
                 }
+                figure {
+                    img {
+                        display: block;
+                        border-bottom: 1px solid $gris-oscuro;
+                    }
+                    figcaption {
+                        font-size: .8em;
+                        padding: .2em .5em;
+                        border-bottom: 3px solid $gris-oscuro;
+                        font-weight: bold;
+                    }
+                }
+                .tags {
+                    width: 100%;
+                    border-top: $borde;
+                    padding: 1em;
+                    &__titulo {
+                        width: 100%;
+                        padding: 0;
+                        margin: .5em 0;
+                        font-family: $font-titulos;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: 1.3rem;
+                    }
+                    &__listado {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        label {
+                            font-size: .9rem;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            padding: .2em 0;
+                        }
+                        li {
+                            display: inline-block;
+                            margin: .5em 1em;
+                            font-size: .8rem;
+                            text-transform: uppercase;
+                            a {
+                                background: $gris-muy-claro;
+                                border: $borde;
+                                border-radius: 3px;
+                                display: block;
+                                padding: .2em .6em;
+                                color: $negro;
+                                &:hover {
+                                    background: white;
+                                    border: $borde;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .galeria-fotos {
+                    padding: 10px;
+                    width: 100%;
+                    margin: 20px 0;
+                    &__title {
+                        font:{
+                            family: $font-titulos;
+                            size: 1.2rem;
+                            weight: bold;
+                        }
+                        color: $color-brand;
+                        text-transform: uppercase;
+                        margin: 0 0 .2em 0;
+                    }
+                    &__fotos {
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        a {
+                            width: 32.5%;
+                            display: block;
+                            margin: 0 .5% 5px 0;
+                            img {
+                                width: 100%;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
                 &:before {
                     content: "";
                     display: block;
@@ -152,6 +271,11 @@
                     clear: both;
                 }
             }
+        }
+
+        .ads {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -180,6 +304,17 @@
                         li {
                             &.mailto {
                                 display: block;
+                            }
+                        }
+                    }
+                }
+                .news-content {
+                    .galeria-fotos {
+                        padding: 10px 0;
+                        &__fotos {
+                            a {
+                                width: 24%;
+                                margin: 0 1% 5px 0;
                             }
                         }
                     }
@@ -214,7 +349,19 @@
                     p {
                         display: inline-block;
                         color: $gris-claro;
-                        margin-bottom: 7px;
+                        font-family: $font-titulos;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+                .news-content {
+                    .galeria-fotos {
+                        &__fotos {
+                            a {
+                                width: 16%;
+                                margin: 0 .66666% 5px 0;
+                            }
+                        }
                     }
                 }
             }
@@ -225,20 +372,34 @@
 @include media-breakpoint-up(lg) {
     .noticia {
         .articulo-header {
+            display: flex;
+            flex-direction: column;
+            .hat {
+                padding: 0 3em .3em 3em;
+                border-bottom: 1px solid $gris-claro;
+                margin: 0 auto 1em auto;
+                text-align: center;
+            }
             h1 {
                 font-size: 3rem;
+                letter-spacing: -0.04em;
             }
         }
         .main-article {
             order: 0;
             .news-body {
+                .autor {
+                    margin-top: 20px;
+                }
                 .social-topsharing {
                     margin: 20px 0 10px 0;
-                    padding: 10px 0;
+                    padding: 10px;
+                    background: $gris-muy-claro;
                     position: static;
                     justify-content: space-between;
                     p {
                         color: $gris-oscuro;
+                        margin-bottom: 0;
                     }
                 }
                 .news-content {
@@ -246,17 +407,67 @@
                     ul,
                     ol,
                     li,
-                    h2,
                     h3,
                     h4,
                     h5,
                     h6 {
-                        margin: 10px 0;
+                        margin: 1em 0;
                         a {
                             color: $link;
+                            border-bottom: 2px dotted $link;
+                            transition: ease .3s;
+                            &:hover {
+                                color: $color-brand;
+                                border-bottom: 2px solid $color-brand;
+                            }
                         }
                     }
+                    h2 {
+                        margin: 1.5em 0 1em 0;
+                    }
+                    &:before {
+                        margin: 0 0 20px 0;
+                        background: $gris-medio;
+                        height: 1px;
+                        clear: both;
+                    }
                 }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .noticia {
+        .articulo-header {
+            h1 {
+                font-size: 3.6rem;
+                margin-bottom: .3em;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+        .main-article {
+            .news-body {
+                .news-content {
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .noticia {
+        .articulo-header {
+            h1 {
+                font-size: 4rem;
+            }
+            h2 {
+                font-size: 1.8rem;
             }
         }
     }

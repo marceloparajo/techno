@@ -6,7 +6,11 @@
 
         @switch($item['id'])
 
-            @case('mas-leidas-de-perfil')
+            @case('mas-leidas')
+                <x-mas-leidas-widget :rows="5" />
+                @break
+
+            @case('mas-leidas-perfil')
                 <x-mas-leidas-perfil-widget :rows="5" />
                 @break
 

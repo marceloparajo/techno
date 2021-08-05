@@ -135,7 +135,7 @@
 
 			<article class="main-article">
 
-				<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-xxl-flex" min-height="90" max-height="280" />
+				<x-ad-space id="central_728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" min-height="90" max-height="280" />
 				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="ads d-lg-none" min-height="250" max-height="250" margin-bottom="20" />
 
 				{{-- Article Body --}}
@@ -165,26 +165,25 @@
 							{!! $noticia['embed_code'] !!}
 						@endif
 
-						{{-- Gallery
+						{{-- Gallery --}}
 						@if (count($noticia['gallery']) > 1)
-							<div class="title-gallery">Galería de imágenes</div>
-							<div class="galeria-imagenes" id="images-gallery">
-								@foreach ($noticia['gallery'] as $image)
-									<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
-										<img src="{{ $image['srcs']['thumb']['100'] }}" alt="{{ $image['caption'] }}" class="lazyload" loading="lazy">
-									</a>
-								@endforeach
+							<div class="galeria-fotos">
+								<div class="galeria-fotos__title">Galería de imágenes</div>
+								<div class="galeria-fotos__fotos" id="images-gallery">
+									@foreach ($noticia['gallery'] as $image)
+										<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
+											<img src="{{ $image['srcs']['thumb']['100'] }}" alt="{{ $image['caption'] }}" class="lazyload" loading="lazy">
+										</a>
+									@endforeach
+								</div>
 							</div>
 						@endif
-						<div class="masfotos-gallery">
-							<a href="#">Mirá más fotos</a>
-						</div>
-						Gallery --}}
+						{{--  /Gallery --}}
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
-						<x-ad-space id="central_970x90x-pos-" width="970" height="90" class="d-xs-none d-xxl-flex" />
-						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-xl-none" />
+						<x-ad-space id="central_728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" />
+						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="ads d-xl-none" />
 
 						@include('news.show.partials.news-tags')
 

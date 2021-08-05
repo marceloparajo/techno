@@ -7,7 +7,7 @@ use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
-class MasLeidasPerfilWidget extends Component
+class MasLeidasHomeWidget extends Component
 {
     /**
      * @var array
@@ -28,7 +28,7 @@ class MasLeidasPerfilWidget extends Component
      */
     public function __construct(BlockDistributionsHelper $blockDistributionsHelper, int $rows = 5)
     {
-        $this->news = $blockDistributionsHelper->getMostViewed('perfil');
+        $this->news = $blockDistributionsHelper->getMostViewed('caras');
 
         $this->rows = $rows;
     }
@@ -40,6 +40,6 @@ class MasLeidasPerfilWidget extends Component
      */
     public function render()
     {
-        return view('components.mas-leidas-perfil-widget');
+        return view('components.mas-leidas-home-widget');
     }
 }
