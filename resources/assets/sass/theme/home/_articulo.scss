@@ -44,6 +44,22 @@
             p {
                 display: none;;
             }
+            .firma-home {
+                font-size: .8rem;
+                text-transform: uppercase;
+                margin: .4em 0 0 0;
+                color: $color-brand;
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: $gris-medio;
+                    float: left;
+                    margin: 5px 5px 0 0;
+                }
+            }
         }
     }
 }

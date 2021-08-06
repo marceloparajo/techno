@@ -1,6 +1,6 @@
 <span class="autor__nota" itemscope itemprop="author" itemtype="https://schema.org/Person">
 	<figure>
-		<img class="autor__nota__img" src="{{ $author['image'] }}" alt="{{ $author['fullname'] }}" itemprop="image" style="width:48px;height:48px;">
+		<img class="autor__nota__img" src="{{ $author['image'] }}" alt="{{ $author['fullname'] }}" itemprop="image" width="60" height="60">
 	</figure>
 	<a href="{{ route('authors.show', $author['username']) }}" itemprop="url" class="autor__nota__nombre">
 		<span itemprop="name">{{ $author['fullname'] }}</span>
@@ -25,14 +25,11 @@
 					<a href="https://www.instagram.com/{{ $author['instagram'] }}" itemprop="sameAs" target="_blank" rel="noreferrer"><img src="/images/glyph/share/instagram.svg" class="instagram" alt="ig" style="width:12px;height:12px;"></i>{{ $author['instagram'] }}</a>
 				</span>
 			@endif
-			@if ($author['blog'] != '')
+			@if ($author['blogsite'] != '')
 				<span>
 					<a href="{{ $author['blog'] }}" itemprop="sameAs" target="_blank">Web</a>
 				</span>
 			@endif
-				<span>
-					<a href="{{ route('authors.show', $author['username']) }}" itemprop="url"><img src="/images/glyph/bullet.svg" class="bullet" alt="Mas notas de {{ $author['fullname'] }}" style="width:10px;height:10px;"><span class="redsocial">Más notas de {{ $author['fullname'] }}</span></a>
-				</span>
 		</p>
 	@endif
 </span>
