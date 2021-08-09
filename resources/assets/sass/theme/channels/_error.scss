@@ -30,7 +30,6 @@
     &__contenido {
         text-align: center;
         font-family: $font-titulos;
-
         p.main-page {
             font-weight: bold;
             a {
@@ -64,7 +63,38 @@
                     margin: .3em 0;
                     a {
                         color: $color-brand;
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
+                }
+            }
+            img {
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .error {
+        &__number {
+            font-size: 10rem;
+        }
+        &__contenido {    
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            p.main-page {
+                width: 100%;
+                font-size: 1.6rem;
+                margin: 1em auto;
+            }
+            &__sugerencias {
+                width: 100%;
+                &:nth-child(-n+4) {
+                    width: 30%;
+                    border-top: none;
                 }
             }
         }

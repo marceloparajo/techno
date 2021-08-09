@@ -11,19 +11,17 @@
 		<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in youtube") }}" rel=“me nofollow”><img src="/images/glyph/share/youtube.svg" class="youtube" alt="Youtube" width="30"></a>
 
 
-        <a href="{{ route('feeds.channel', '') }}"
+        <a href="{{ route('feeds.channel', '') }}" rel=“me nofollow”
         target="_blank"
         class="link-social-rss">
-            <img src="/images/glyph/footer/rss.svg"
-                alt="RSS"
-                style="width:17px;height:17px" />
+            <img src="/images/glyph/share/rss.svg"
+                alt="RSS" width="30" alt="rss" />
         </a>
 
-        <a href="{{ route('sitemaps.index') }}"
+        <a href="{{ route('sitemaps.index') }}" rel=“me nofollow”
         target="_blank"
         class="link-social-sitemap">
-            <img src="/images/glyph/footer/sitemap.svg"
-                style="width:20px;height:15px"
+            <img src="/images/glyph/share/sitemap.svg" width="30"
                 alt="Sitemap" />
         </a>
 

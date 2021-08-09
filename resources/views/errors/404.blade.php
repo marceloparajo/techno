@@ -31,7 +31,7 @@
 		<div class="error__subtitulo">Podés seguir navegando en nuestros contenidos</div>
 
 		<div class="error__contenido">
-			<p class="main-page"><a hrf="/">Página principal</a></p>
+			<p class="main-page"><a href="/">Página principal</a></p>
 			<div class="error__contenido__sugerencias">
 				<p>Estos son los temas destacados de hoy</p>
 				<ul class="lostemas">
@@ -62,11 +62,11 @@
 			</div>
 			<div class="error__contenido__sugerencias">
 				<p>Podés seguirnos por radio en FM 101.9 o escuchar online</p>
-				<a href="https://radio.perfil.com/en-vivo/radio" class="radio-error"><img src="/images/radio-perfil.png" alt="Radio Perfil"></a>
+				<a href="https://radio.perfil.com/en-vivo/radio" class="radio-error"><img src="//perfil.com/images/radio-perfil.png" alt="Radio Perfil" width=120" height="38"></a>
 			</div>
 			<div class="error__contenido__sugerencias">
 				<p>Podés ver NET en televisión abierta o desde la web</p>
-				<a href="https://www.canalnet.tv/page/senal-en-vivo" class="net-error"><img src="/images/net-logo-sidebar.png" alt="Radio Perfil"></a>
+				<a href="https://www.canalnet.tv/page/senal-en-vivo" class="net-error"><img src="//perfil.com/images/net-logo-sidebar.png" alt="Net Television"></a>
 			</div>
 		</div>
 

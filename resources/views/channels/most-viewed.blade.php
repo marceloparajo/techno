@@ -15,8 +15,7 @@
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/channels-high.css') }}">
 
-	<link rel="stylesheet" href="{{ mix('css/channels-low.css') }}" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="{{ mix('css/channels-responsive.css') }}" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="{{ mix('css/masleidas-low.css') }}" media="print" onload="this.media='all'">
 @endsection
 
 @section('body-class', 'pf-channel-show')
@@ -27,39 +26,36 @@
 
 @section('body')
 
-	<main class="supercontenedor">
 
-		<h1 class="seccion-titulo">Más Leídas de Perfil</h1>
 
-		<div class="contenido masleidas">
-			@foreach ($noticias as $key => $noticia)
-				<article class="articulo">
-					<figure>
-						<a href="{{ $noticia['permalink'] }}">
-							<div class="masleidas-orden">
-								{{ $loop-> index + 1 }}
-							</div>
-							<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['caption']" class="img-fluid" sizes="200,300" :play-button="$noticia['has_video']" :camera-button="$noticia['has_gallery']" clean-source="true" />
-						</a>
-					</figure>
-					<div class="meta-content">
-						<a href="{{ $noticia['permalink'] }}">
-							<h2>{{ $noticia['home_title'] }}</h2>
-						</a>
-					</div>
-				</article>
+<main class="main-container max-width margin-auto container-white considebar">
 
-				@if ($loop->iteration > 4 && $loop->iteration % 4 == 1)
-					<x-ad-space id="central_300x250x-pos-" width="300" height="250" style-width="auto" margin-top="0" class="d-xs-none d-lg-none" />
-					<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-sm-none" />
-				@endif
-			@endforeach
-		</div>
+	<div class="seccion masleidas" id="masleidas">
 
-		<aside class="sidebar">
-			<x-sidebar />
-		</aside>
+		<h1 class="seccion-titulo">Las más leídas</h1>
 
-	</main>
 
+		@foreach ($noticias as $noticia)
+
+		<article class="articulo nota-{{ $loop->iteration }}">
+			<a href="{{ $noticia['permalink'] }}">
+				<figure>
+					<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['caption']" class="img-fluid" sizes="200,300" :play-button="$noticia['has_video']" :camera-button="$noticia['has_gallery']" clean-source="true" />
+				</figure>
+				<div class="meta-content">
+					<h2>{{ $noticia['home_title'] }}</h2>
+				</div>
+				<span class="articulo__ordenleidas">
+					{{ $loop-> index + 1 }}
+				</span>
+			</a>
+		</article>
+		@endforeach
+	</div>
+
+	<aside class="sidebar">
+		<x-sidebar />
+	</aside>
+
+</main>
 @endsection
