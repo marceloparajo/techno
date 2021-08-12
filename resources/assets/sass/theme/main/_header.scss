@@ -371,6 +371,9 @@
 						border-bottom: none;
 						width: auto;
 						display: inline-block;
+						font-family: $font-titulos-nowebfont;
+						font-size: .85rem;
+						letter-spacing: -0.03em;						
 						ul {
 							display: none;
 							li {
@@ -465,9 +468,26 @@
 					padding-right: 0;
 					background: transparent;
 					border-top: none;
+					height: 55px;
 					grid-area: c;
 					a {
 						margin: 0 0 0 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.wf-loaded {
+		.main-header {
+			.navbar {
+				.container {
+					ul.nav {
+						li {
+							font-family: $font-titulos;
+							font-size: 1rem;
+							letter-spacing: 0;
+						}
 					}
 				}
 			}

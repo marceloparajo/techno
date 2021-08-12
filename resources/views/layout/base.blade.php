@@ -46,7 +46,7 @@
         @yield('head-top')
 
         {{-- Font --}}
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all';">
          {{-- /Font --}}
 
         @yield('head-css')
@@ -121,6 +121,17 @@
             <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{ env('FACEBOOK_PIXEL_ID') }}&ev=PageView&noscript=1"/></noscript>
         @endif
         {{-- /Facebook Pixel --}}
+
+
+        {{-- Webfont is loaded --}}
+        <script>
+            document.fonts.onloadingdone = function (fontFaceSetEvent) {
+                document.getElementsByTagName("body")[0].classList.add("wf-loaded");
+            };
+        </script>
+        {{-- /Webfont is loaded --}}
+
+
     </head>
 
     <body class="@yield('body-class', '')">

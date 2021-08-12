@@ -225,8 +225,6 @@
 			<x-sidebar />
 		</aside>
 
-
-
 	</main> <!-- maincontainer -->
 
 	@if (env('APP_MODE_PREVIEW', false))

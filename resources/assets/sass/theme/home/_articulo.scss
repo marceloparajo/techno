@@ -26,20 +26,19 @@
             padding: 10px;
             .hat {
                 display: inline-block;
-                font-family: $font-titulos;
                 text-transform: uppercase;
                 background: $color-brand;
                 color: white;
-                font-size: .9rem;
                 padding: 3px 5px;
-                letter-spacing: .05em;
                 margin: 0 0 5px 0;
+                font-family: $font-titulos-nowebfont;
+                font-size: .85rem;
+                letter-spacing: 0;
             }
             h2 {
-                font-family: $font-titulos;
-                font-size: 1.4rem;
-                line-height: 1.1em;
-                letter-spacing: -0.02em;
+                letter-spacing: -0.07em;
+                font-size: 1.3rem;
+                line-height: 1.24em;         
             }
             p {
                 display: none;;
@@ -58,6 +57,26 @@
                     background: $gris-medio;
                     float: left;
                     margin: 5px 5px 0 0;
+                }
+            }
+        }
+    }
+}
+
+
+.wf-loaded {
+    .articulo {
+        a {
+            .meta-content {
+                .hat {
+                    font-family: $font-titulos;
+                    font-size: .9rem;
+                    letter-spacing: .05em;
+                }
+                h2 {
+                    font-size: 1.4rem;
+                    letter-spacing: -0.02em;
+                    line-height: 1.1em;   
                 }
             }
         }

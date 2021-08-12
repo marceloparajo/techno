@@ -1,7 +1,7 @@
 import LazyLoad from 'vanilla-lazyload'
 import handleToggleHeaderMenu from './modules/header-menu'
 import SidebarWidget from './modules/sidebar'
-import {simulateClick} from './modules/utils'
+import { handleFontsLoaded, simulateClick} from './modules/utils'
 import 'lightgallery.js'
 import 'lg-thumbnail.js'
 

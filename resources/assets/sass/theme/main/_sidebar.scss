@@ -1,0 +1,27 @@
+.masvistas {
+    width: 100%;
+    &__nota {
+        .enlace {
+            display: flex;
+            picture {
+                width: 40%;
+                height: 0;
+                padding-bottom: 24%;
+                position: relative;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+            .rankOrder {
+                width: 10%;
+            }
+            &__titulo {
+                width: 50%;
+            }
+        }
+    }
+}

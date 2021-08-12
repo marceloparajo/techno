@@ -20,16 +20,7 @@
         background: $gris-muy-claro;
         transition: ease .3s;
         .enlace {
-            display: flex;
-            picture {
-                width: 40%;
-                img {
-                    width: 100%;
-                    display: block;;
-                }
-            }
             .rankOrder {
-                width: 10%;
                 background: $color-brand;
                 color: white;
                 text-align: center;
@@ -39,7 +30,6 @@
                 font-size: 2rem;
             }
             &__titulo {
-                width: 50%;
                 padding: 0 .4em;
                 text-transform: uppercase;
                 font-family: $font-titulos;

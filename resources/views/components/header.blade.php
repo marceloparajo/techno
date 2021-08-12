@@ -3,7 +3,7 @@
 	<div class="container max-width margin-auto">
 		<div class="time-top">{{ $current_date->isoFormat('dddd DD [de] MMMM [del] YYYY') }}</div>
 		<div class="perfil-logo">
-			<a href="https://www.perfil.com" target="_blank" title="Ir a Perfil.com">
+			<a href="https://www.perfil.com" target="_blank" title="Ir a Perfil.com" rel="noreferrer">
 				<img src="{{ asset('img/perfil.svg') }}" alt="Perfil" width="90" height="20">
 			</a>
 		</div>
@@ -44,7 +44,7 @@
 						<a role="button" href="#" class="has-children-a {{ $item['class'] }}" data-toggle="dropdown">{{ $item['text'] }}</a>
 						<ul>
 							@foreach ($item['children'] as $children)
-								<li><a href="{{ $children['href'] }}" target="{{ $children['target'] }}">{{ $children['text'] }}</a></li>
+								<li><a href="{{ $children['href'] }}" target="{{ $children['target'] }}" rel="noreferrer">{{ $children['text'] }}</a></li>
 							@endforeach
 						</ul>
 					</li>
@@ -59,7 +59,7 @@
 			<ul class="nav topics">
                 @foreach ($topics as $item)
                     <li>
-                        <a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}">
+                        <a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">
                             {{ $item['text'] }}
                         </a>
                     </li>
@@ -73,17 +73,17 @@
 					</a>
 				</li>
 				<li class="caras-like">
-					<a href="/seccion/caras-like">
+					<a href="/seccion/caras-like" rel="noreferrer">
 						CARAS Like
 					</a>
 				</li>
 				<li>
-					<a href="/seccion/caras-deco">
+					<a href="/seccion/caras-deco" rel="noreferrer">
 						CARAS Deco
 					</a>
 				</li>
 				<li>
-					<a href="/seccion/caras-resto">
+					<a href="/seccion/caras-resto" rel="noreferrer">
 						CARAS Restó
 					</a>
 				</li>
@@ -96,10 +96,10 @@
 
 
 			<div class="social-top">
-				<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" title="{{  ucfirst(env("APP_NAME")) }} {{ __("in instagram") }}" rel=“me nofollow”><img src="/images/glyph/share/instagram.svg" class="instagram" alt="Instagram" width="30"></a>
-				<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in facebook") }}" rel=“me nofollow”><img src="/images/glyph/share/facebook.svg" class="facebook" alt="Facebook" width="30"></a>
-				<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in twitter") }}" rel=“me nofollow”><img src="/images/glyph/share/twitter.svg" class="twitter" alt="twitter" width="30"></a>
-				<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in youtube") }}" rel=“me nofollow”><img src="/images/glyph/share/youtube.svg" class="youtube" alt="Youtube" width="30"></a>
+				<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" title="{{  ucfirst(env("APP_NAME")) }} {{ __("in instagram") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/instagram.svg" class="instagram" alt="Instagram" width="30"></a>
+				<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in facebook") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/facebook.svg" class="facebook" alt="Facebook" width="30"></a>
+				<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in twitter") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/twitter.svg" class="twitter" alt="twitter" width="30"></a>
+				<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in youtube") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/youtube.svg" class="youtube" alt="Youtube" width="30"></a>
 			</div>
 
 		</div>

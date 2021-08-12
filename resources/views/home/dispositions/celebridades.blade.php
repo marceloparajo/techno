@@ -10,6 +10,7 @@
 				<div class="bar-1"></div>
 				<div class="bar-2"></div>
 				<div class="bar-3"></div>
+				Celebridades
 			</button>
 			Celebridades
 		</div>
