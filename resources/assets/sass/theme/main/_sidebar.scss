@@ -25,3 +25,16 @@
         }
     }
 }
+
+.placa-home {
+    border: $borde;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    a {
+        img {
+            width: 100%;
+            max-width: 300px;
+        }
+    };
+}
