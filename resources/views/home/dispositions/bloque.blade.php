@@ -32,14 +32,14 @@
 
 
 				<div class="placa-home">
-					<a href="/seccion/salud" title="Caras Salud">
+					<a href="/seccion/salud" title="Caras Salud" rel="noreferrer">
 						<img src="{{ asset('images/caras_salud.png') }}" alt="{{ env('APP_NAME') }}">
 					</a>
 				</div>
 
 
 				<div class="placa-home">
-					<a href="/seccion/horoscopo" title="Caras Horoscopo">
+					<a href="/seccion/horoscopo" title="Caras Horoscopo" rel="noreferrer">
 						<img src="{{ asset('images/caras_astrologia.png') }}" alt="{{ env('APP_NAME') }}">
 					</a>
 				</div>

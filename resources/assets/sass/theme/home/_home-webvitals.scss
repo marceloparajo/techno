@@ -32,6 +32,15 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
         .articulo {
+			&:first-of-type {
+				a {
+					.meta-content {
+						p.headline {
+							display: none;
+						}
+					}
+				}
+			}
 			&:nth-child(n+2) {
 				width: 48%;
 			}
