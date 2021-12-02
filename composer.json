@@ -16,7 +16,6 @@
         "ext-dom": "*",
         "ext-json": "*",
         "ext-simplexml": "*",
-        "caouecs/laravel-lang": "~3.0",
         "coderello/laravel-shared-data": "^3.1",
         "fideloper/proxy": "^4.4",
         "laravel/framework": "^7.29",

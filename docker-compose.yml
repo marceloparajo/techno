@@ -2,13 +2,11 @@ version: '3'
 services:
 
   #PHP
-  app:
+  carasv2:
     image: fedemramato/laravel-php7.3:latest
-    container_name: perfilcom-site
+    container_name: carasv2-site
     environment:
-      APACHE_RUN_USER: #${UID}
-      APACHE_RUN_GROUP: #${UID}
-      VIRTUAL_HOST: dev-new-perfil.perfil.com
+      VIRTUAL_HOST: dev-new-caras.perfil.com
     restart: unless-stopped
     expose:
       - "80"
