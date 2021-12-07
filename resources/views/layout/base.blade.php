@@ -53,7 +53,7 @@
 
         @yield('head-bottom')
 
-        {{-- Config Paywall --}}
+        {{-- Config Paywall
         <script type="text/javascript">
             window.paywall = window.paywall || {}
             window.paywallConfig = window.paywallConfig || {}
@@ -66,7 +66,7 @@
             window.paywallConfig.socketHoursPeriodicity = 6
             window.paywallConfig.socketHoursPeriodicitySubs = 24
         </script>
-        {{-- /Config Paywall --}}
+        /Config Paywall --}}
 
         {{-- Google Tag Manager --}}
         @yield('google-tag-manager')
@@ -105,7 +105,7 @@
         @endif
         {{-- /Naveg --}}
 
-        {{-- Facebook Pixel --}}
+        {{-- Facebook Pixel
         @if (env('FACEBOOK_PIXEL_ENABLE', false) && env('FACEBOOK_PIXEL_ID', '') != '')
             <script>
                 !function(f,b,e,v,n,t,s)
@@ -120,13 +120,13 @@
             </script>
             <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{ env('FACEBOOK_PIXEL_ID') }}&ev=PageView&noscript=1"/></noscript>
         @endif
-        {{-- /Facebook Pixel --}}
+        /Facebook Pixel --}}
 
 
         {{-- Webfont is loaded --}}
-        <script>
-            document.fonts.onloadingdone = function (fontFaceSetEvent) {
-                document.getElementsByTagName("body")[0].classList.add("wf-loaded");
+        <script type="text/javascript">
+            document.fonts.onloadingdone = function () {
+              document.getElementsByTagName("body")[0].classList.add("wf-loaded");
             };
         </script>
         {{-- /Webfont is loaded --}}
@@ -140,14 +140,13 @@
         @yield('body')
 
         <div id="pw-content"></div>
-        {{--<x-ad-space id="anuncioprevio" margin-top="0" margin-bottom="0" width="1" height="1" />--}}
 
         <x-footer />
 
         @yield('templates')
 
         @yield('paywall-config')
-        <script defer type="text/javascript" src="{{ mix('js/mi-perfil.js') }}"></script>
+        {{--<script defer type="text/javascript" src="{{ mix('js/mi-perfil.js') }}"></script>--}}
 
         @yield('js')
 

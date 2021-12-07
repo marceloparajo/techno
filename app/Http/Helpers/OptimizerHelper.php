@@ -13,6 +13,7 @@ use PHPHtmlParser\Exceptions\ContentLengthException;
 use PHPHtmlParser\Exceptions\LogicalException;
 use PHPHtmlParser\Exceptions\NotLoadedException;
 use PHPHtmlParser\Exceptions\StrictException;
+use PHPHtmlParser\Exceptions\UnknownChildTypeException;
 
 class OptimizerHelper
 {
@@ -42,7 +43,8 @@ class OptimizerHelper
      */
     public function processAll(string $text): string
     {
-        $text = $this->replaceImages($text);
+        $text = $this->optimizeImgWithLazyload($text);
+        #$text = $this->replaceImages($text);
         $text = $this->optimizeIframes($text);
         $text = $this->optimizeScripts($text);
 
@@ -126,6 +128,56 @@ class OptimizerHelper
         }
 
         // Reemplazo
+        foreach ($to_edit as $row) {
+            $text = str_replace($row['search'], $row['replace'], $text);
+        }
+
+        return $text;
+    }
+
+    /**
+     * @param string $text
+     * @return string
+     * @throws ChildNotFoundException
+     * @throws CircularException
+     * @throws ContentLengthException
+     * @throws LogicalException
+     * @throws NotLoadedException
+     * @throws StrictException
+     * @throws UnknownChildTypeException
+     */
+    public function optimizeImgWithLazyload(string $text): string
+    {
+        $pos_img = strpos($text, '<img');
+        $to_edit = [];
+
+        while ($pos_img) {
+            $pos_start = $pos_img;
+            $pos_end = strpos($text, '>', $pos_start);
+            $image_element = substr($text, $pos_start, ($pos_end +1) - $pos_start);
+
+            $dom = new Dom;
+            $dom->loadStr($image_element);
+
+            /** @var Dom\Node\HtmlNode $img */
+            $img = $dom->find('img')[0];
+
+            if (is_null($img)) {
+                $pos_img = strpos($text, '<img', $pos_start + 4);
+                continue;
+            }
+
+            $img->setAttribute('loading', 'lazy');
+
+            array_push($to_edit, [
+                'search' => $image_element,
+                'replace' => $img->outerHtml()
+            ]);
+
+            $pos_img = strpos($text, '<img', $pos_start + 4);
+            continue;
+        }
+
         foreach ($to_edit as $row) {
             $text = str_replace($row['search'], $row['replace'], $text);
         }

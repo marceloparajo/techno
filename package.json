@@ -10,27 +10,28 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.2.0",
-        "animate.css": "^3.7.0",
+        "@fortawesome/fontawesome-free": "^5.15.4",
+        "animate.css": "^3.7.2",
         "axios": "^0.18.1",
         "babel-plugin-transform-class-properties": "^6.24.1",
         "babel-preset-es2016": "^6.24.1",
-        "bootstrap": "^4.5.0",
+        "bootstrap": "^4.6.1",
         "bricklayer": "^0.4.3",
         "in-viewport": "^3.6.0",
-        "jquery": "^3.5.1",
-        "laravel-mix": "^2.0",
-        "lodash": "^4.17.15",
-        "popper.js": "^1.12",
-        "vue": "^2.5.7"
+        "jquery": "^3.6.0",
+        "laravel-mix": "^2.1.14",
+        "lodash": "^4.17.21",
+        "popper.js": "^1.16.1",
+        "vue": "^2.6.14"
     },
     "dependencies": {
-        "date-fns": "^2.16.1",
-        "is-mobile": "^2.0.0",
+        "cross-env": "^7.0.3",
+        "date-fns": "^2.27.0",
+        "is-mobile": "^2.2.2",
         "js-cookie": "^2.2.1",
         "lg-thumbnail.js": "^1.2.0",
         "lightgallery.js": "^1.4.0",
         "mustache-loader": "^1.4.3",
-        "vanilla-lazyload": "^8.15.2"
+        "vanilla-lazyload": "^8.17.0"
     }
 }

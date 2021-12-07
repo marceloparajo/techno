@@ -1,28 +1,5 @@
 export default function () {
-	handleClickColumnistasWidgetRow()
 	initPerformVideo()
-}
-
-const handleClickColumnistasWidgetRow = () => {
-	const _el = document.getElementById('columnistas')
-
-	if (_el === null) return 0
-
-	const _buttons = document.getElementsByClassName('btn-columnistas-widget-row')
-	const _container = document.getElementById('grupo-col-0')
-	const width = _container.clientWidth
-	let margin = 0
-
-
-	Array.from(_buttons).forEach(_el => {
-		_el.addEventListener('click', e => {
-			e.preventDefault()
-			const index = e.currentTarget.dataset.index
-			margin = -(width * index)
-
-			_container.style.marginLeft = margin + 'px';
-		})
-	})
 }
 
 const initPerformVideo = () => {

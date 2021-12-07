@@ -41,27 +41,6 @@
 	@endif
 @endsection
 
-@section('paywall-config')
-	<script type="text/javascript">
-		window.paywallConfig.contentType = 'articulo';
-		window.paywallConfig.type = window.sharedData.paywall.type;
-		window.perfilContent = {
-			id: window.sharedData.paywall.content_id,
-			canal: window.sharedData.paywall.content_canal,
-			title: window.sharedData.paywall.content_title,
-			show_metered_paywall: window.sharedData.paywall.show_metered_modal,
-			paywall_type: window.sharedData.paywall.type,
-			date: window.sharedData.paywall.content_date,
-			body_length: window.sharedData.paywall.content_length,
-			author: {
-				id: window.sharedData.paywall.author_id,
-				username: window.sharedData.paywall.author_username,
-				fullname: window.sharedData.paywall.author_fullname
-			}
-		}
-	</script>
-@endsection
-
 @section('head-top')
 
 	<link rel="preconnect" href="https://www.facebbook.com">
@@ -122,11 +101,14 @@
 					{!! $noticia['embed_code'] !!}
 				</div>
 			@else
-				<figure class="media figure btn-open-gallery">
+				<figure class="btn-open-gallery">
 					@if (count($noticia['gallery']) > 1)
 						<a href="#" role="button" class="btn-open-gallery fotogaleria" title="Ver fotogaleria"></a>
 					@endif
-					<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['title']" max-width="900" :lazy-load="false" />
+						<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['title']"
+									  class="img-fluid"
+									  :sizes="[['v' => 320, 'w' => 320, 'h' => 180], ['v' => 360, 'w' => 360, 'h' => 202], ['v' => 375, 'w' => 375, 'h' => 211], ['v' => 414, 'w' => 414, 'h' => 233], ['v' => 768, 'w' => 720, 'h' => 405], ['v' => 1024, 'w' => 635, 'h' => 357], ['v' => 1366, 'w' => 950, 'h' => 534]]"
+									  :lazy-load="false" />
 					<figcaption class="figure-caption">{{ $noticia['main_image']['caption'] }}<span class="credito-foto"> | {{ $noticia['main_image']['credit']}}</span></figcaption>
 				</figure>
 			@endif
@@ -172,7 +154,12 @@
 								<div class="galeria-fotos__fotos" id="images-gallery">
 									@foreach ($noticia['gallery'] as $image)
 										<a href="{{ $image['srcs']['original'] }}" title="{{ $image['caption'] }}">
-											<img src="{{ $image['srcs']['thumb']['100'] }}" alt="{{ $image['caption'] }}" class="lazyload" loading="lazy">
+											<x-lazy-image
+												:src="$image['src']"
+												:alt="$image['title']"
+												class="img-fluid"
+												:sizes="[['v' => 320, 'w' => 97, 'h' => 97], ['v' => 360, 'w' => 110, 'h' => 110], ['v' => 375, 'w' => 115, 'h' => 115], ['v' => 414, 'w' => 128, 'h' => 128], ['v' => 768, 'w' => 111, 'h' => 111], ['v' => 1024, 'w' => 96, 'h' => 96], ['v' => 1366, 'w' => 137, 'h' => 137]]"
+												:lazy-load="false" />
 										</a>
 									@endforeach
 								</div>

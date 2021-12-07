@@ -32,7 +32,17 @@
 			@if ($key != 'sidebar')
 				<section id="{{ $key }}" class="contenedor-general">
 					@foreach($value as $item)
-						@include('home.dispositions.' . $item['template'], ['news' => $item['news'], 'id' => $item['id']])
+
+						@switch ($item['template'])
+							@case('celebridades')
+								<x-celebridades :news="$item['news']" />
+								@break
+
+							@default
+								@if (view()->exists('home.dispositions.' . $item['template']))
+									@include('home.dispositions.' . $item['template'], ['news' => $item['news'], 'id' => $item['id']])
+								@endif
+						@endswitch
 					@endforeach
 				</section>
 			@endif

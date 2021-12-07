@@ -1,7 +1,5 @@
-import LazyLoad from 'vanilla-lazyload'
 import handleToggleHeaderMenu from './modules/header-menu'
-import SidebarWidget from './modules/sidebar'
-import { handleFontsLoaded, simulateClick} from './modules/utils'
+import { simulateClick} from './modules/utils'
 import 'lightgallery.js'
 import 'lg-thumbnail.js'
 
@@ -10,10 +8,8 @@ const SnippetShowNews = function () {
 	const {light_gallery_images} = window.sharedData
 
 	const initialize = () => {
-		initLazyLoad()
 		handleClickOpenGallery()
 		handleToggleHeaderMenu()
-		SidebarWidget()
 	}
 
 	const handleClickOpenGallery = () => {
@@ -43,12 +39,6 @@ const SnippetShowNews = function () {
 					})
 				})
 			})
-	}
-
-	const initLazyLoad = () => {
-		const lazyLoad = new LazyLoad({
-			elements_selector: '.lazyload'
-		})
 	}
 
 	return {
