@@ -68,7 +68,7 @@
 
 			<ul class="nav">
 				<li>
-					<a>
+					<a href="#">
 						Especiales
 					</a>
 				</li>
