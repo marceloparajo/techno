@@ -26,9 +26,9 @@
 							<x-lazy-image
 								:src="$new['main_image']['srcs']['original']"
 								:alt="$new['main_image']['title']"
-								:sizes="[['v' => 320, 'w' => 120, 'h' => 67], ['v' => 360, 'w' => 136, 'h' => 76], ['v' => 375, 'w' => 142, 'h' => 88], ['v' => 414, 'w' => 157, 'h' => 88], ['v' => 768, 'w' => 139, 'h' => 78], ['v' => 1024, 'w' => 153, 'h' => 86], ['v' => 1366, 'w' => 236, 'h' => 133]]"
+								:sizes="[['v' => 320, 'w' => 540, 'h' => 304], ['v' => 768, 'w' => 367, 'h' => 220]]"
 								class="img-fluid"
-								max-width="700"
+								max-width="720"
 								:play-button="$new['has_video']"
 								:camera-button="$new['has_gallery']" />
 						</figure>

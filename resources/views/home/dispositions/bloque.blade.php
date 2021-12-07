@@ -17,17 +17,18 @@
 									<x-lazy-image
 										:src="$new['main_image']['srcs']['original']"
 										:alt="$new['main_image']['title']"
-										:sizes="[['v' => 320, 'w' => 320, 'h' => 183], ['v' => 360, 'w' => 360, 'h' => 205], ['v' => 375, 'w' => 375, 'h' => 213], ['v' => 414, 'w' => 414, 'h' => 236], ['v' => 768, 'w' => 233, 'h' => 132], ['v' => 1024, 'w' => 366, 'h' => 172]]"
+										:sizes="[['v' => 320, 'w' => 540, 'h' => 304], ['v' => 768, 'w' => 367, 'h' => 220]]"
 										class="img-fluid"
-										max-width="700"
+										max-width="720"
 										:play-button="$new['has_video']"
 										:camera-button="$new['has_gallery']" />
 								@else
 									<x-lazy-image
 										:src="$new['main_image']['srcs']['original']"
 										:alt="$new['main_image']['title']"
-										:sizes="[['v' => 320, 'w' => 320, 'h' => 183], ['v' => 360, 'w' => 360, 'h' => 205], ['v' => 375, 'w' => 375, 'h' => 213], ['v' => 414, 'w' => 414, 'h' => 236], ['v' => 768, 'w' => 350, 'h' => 200], ['v' => 1024, 'w' => 366, 'h' => 172]]"
+										:sizes="[['v' => 320, 'w' => 540, 'h' => 304], ['v' => 768, 'w' => 367, 'h' => 220]]"
 										class="img-fluid"
+										max-width="720"
 										:play-button="$new['has_video']"
 										:camera-button="$new['has_gallery']" />
 								@endif

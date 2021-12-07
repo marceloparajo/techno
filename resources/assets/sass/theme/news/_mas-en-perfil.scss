@@ -11,7 +11,10 @@
         color: $color-brand;
         border-bottom: 1px solid $color-brand;
     }
-    &__notas {
+    &__noticias {
+        width: 100%;
+    }
+    &__nota {
         width: 100%;
         padding: 0 0 .3em 0;
         margin: 0 0 .3em 0;
@@ -24,7 +27,7 @@
             display: flex;
             justify-content: space-between;
             color: $gris-oscuro;
-            img {
+            figure {
                 width: 40%;
                 align-self: flex-start;
             }
@@ -120,17 +123,25 @@
 @include media-breakpoint-up(sm) {
     .relacionadas {
         padding: 0;
+        /*
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        */
+        &__noticias {
+            width: 100%;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+        }
         &__titulo {
             width: 100%;
         }
-        &__notas {
-            width: 48%;
+        &__nota {
+            // width: 48%;
             a {
                 flex-direction: column;
-                img {
+                figure {
                     width: 100%;
                 }
                 .relacionada-titulo-nota {
@@ -155,11 +166,13 @@
 }
 
 @include media-breakpoint-up(md) {
+    /*
     .relacionadas {
-        &__notas {
+        &__nota {
             width: 24%;
         }
     }
+    */
 
     .mas-en-perfil {
         &__nota {

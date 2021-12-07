@@ -58,7 +58,7 @@
 			'a b'
 			'a c'
 			'd d';
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: 1fr 1fr;
 		gap: 20px;
         .articulo {

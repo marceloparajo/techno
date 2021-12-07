@@ -14,7 +14,7 @@
 				padding-bottom: 56.2%;
 				height: 0;
 				overflow: hidden;
-				picture img {
+				>picture img {
 					display: block;
 					position: absolute;
 					top: 0;
@@ -75,6 +75,17 @@
 				width: 100%;
 				max-width: 300px;
 				margin: 0 auto;
+				picture.cls-optimized {
+					width: 100%;
+					height: auto;
+					overflow: visible;
+					padding: 0;
+					img {
+						position: static;
+						width: 100%;
+						height: auto;
+					}
+				}
 			}
 			.suscripcion-kiosco {
 				display: block;
@@ -209,5 +220,6 @@
 		grid-template-areas:
 			'a b c sidebar'
 			'd e f sidebar';
+		grid-template-columns: repeat(4,1fr);
 	}
 }

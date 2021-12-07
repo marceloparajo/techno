@@ -26,7 +26,7 @@
         <picture>
             <source srcset="{{ asset('images/hasvideo.webp') }}" type="image/webp">
             <source srcset="{{ asset('images/hasvideo.png') }}" type="image/png">
-            <img src="{{ asset('images/hasvideo.png') }}" class="hasvideo" alt="video" width="20" height="18" loading="lazy" style="width: 20px; height: 15px; margin-left: 8px; margin-top: 10px;">
+            <img src="{{ asset('images/hasvideo.png') }}" class="hasvideo" alt="video" width="20" height="18" loading="lazy" style="width: 20px; height: 18px;">
         </picture>
     </div>
 @endif
@@ -35,7 +35,7 @@
         <picture>
             <source srcset="{{ asset('images/hasgallery.webp') }}" type="image/webp">
             <source srcset="{{ asset('images/hasgallery.png') }}" type="image/png">
-            <img src="{{ asset('images/hasgallery.png') }}" class="hasgallery" alt="fotogaleria" width="20" height="15" loading="lazy" style="width: 20px; height: 15px; margin-left: 8px; margin-top: 10px;">
+            <img src="{{ asset('images/hasgallery.png') }}" class="hasgallery" alt="fotogaleria" width="20" height="15" loading="lazy" style="width: 20px; height: 15px;">
         </picture>
     </div>
 @endif

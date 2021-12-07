@@ -42,6 +42,21 @@
 @include media-breakpoint-up(lg) {
 	.destacada {
 		.articulo {
+			&.nota-0 {
+				height: 100%;
+				a {
+					>figure {
+						height: 100%;
+						>picture {
+							overflow: visible;
+							height: 100%;
+							img {
+								object-fit: cover;
+							}
+						}
+					}
+				}
+			}
 			&.nota-1,
 			&.nota-2 {
 				box-shadow: $box-shadow;
@@ -54,11 +69,11 @@
 						}
 					}
 					figure {
-						picture {
+						>picture {
+							overflow: visible;
+							height: 100%;
 							img {
-								display: block;
-								margin: 0;
-								padding: 0;
+								object-fit: cover;
 							}
 						}
 						.galeria-video {
@@ -83,6 +98,7 @@
 	.destacada {
 		.articulo {
 			&.nota-0 {
+				height: auto;
 				a {
 					.meta-content {
 						h2 {

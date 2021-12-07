@@ -45,15 +45,12 @@
             }
         }
     }
-    .media {
+    >figure {
         order: 1;
-        position: relative;
+        height: auto;
+        padding: 0;
         picture {
-            position: relative;
-            height: 0;
-            padding-bottom: 56.25%;
             img {
-                position: absolute;
                 display: block;
                 font-size: 1px;
             }
@@ -85,7 +82,7 @@
                 font-size: 2rem;
             }
         }
-        .media {
+        figure {
             order: 0;
             .figure-caption {
                 padding: 3px 0 10px 0;
@@ -169,7 +166,7 @@
                 line-height: 1.2em;
             }
         }
-        .media {
+        figure {
             .figure-caption {
                 font-size: .8rem;
                 letter-spacing: -0.01em;
