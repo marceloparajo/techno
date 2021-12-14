@@ -109,13 +109,18 @@
                 figure {
                     img {
                         display: block;
-                        border-bottom: 1px solid $gris-oscuro;
+                        height: auto;
                     }
                     figcaption {
-                        font-size: .8em;
-                        padding: .2em .5em;
-                        border-bottom: 3px solid $gris-oscuro;
+                        font-size: .9rem;
+                        padding: .2em 1.3em .5em 1.3em;
+                        border-bottom: 2px solid $color-brand;
                         font-weight: bold;
+                        text-transform: uppercase;
+                        font-family: $font-titulos;
+                        letter-spacing: -0.02em;
+                        line-height: 1em;
+                        text-align: left;;
                     }
                 }
                 .tags {
@@ -142,7 +147,7 @@
                             font-size: .9rem;
                             text-transform: uppercase;
                             font-weight: bold;
-                            padding: .2em 0;
+                            padding: .2em 1em;
                         }
                         li {
                             display: inline-block;
@@ -330,6 +335,11 @@
                         background: $gris-medio;
                         height: 1px;
                         clear: both;
+                    }
+                    figure {
+                        figcaption {
+                            padding: .3em 0 .5em 0;
+                        }
                     }
                 }
             }
