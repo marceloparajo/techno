@@ -82,7 +82,7 @@
 					</figure>
 
 					<span class="suscripcion-kiosco">
-						<a href="{{ env('SUBSCRIBE_URL')}}" target="_blank" rel="noreferrer">{{ __("subscribe now")}}</a>
+						<a href="//kioscoperfil.com/" target="_blank" rel="noreferrer">Suscribite</a>
 					</span>
 
 				</article>
