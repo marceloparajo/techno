@@ -123,7 +123,7 @@ class NewsController extends Controller
             ],
             'eplanning' => [
                 'client' => env('ADS_CLIENT', ''),
-                'sec' => $noticia['channel']['slug'] . '_articulo'
+                'sec' => 'articulo'
             ]
         ]);
 
