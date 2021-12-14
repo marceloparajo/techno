@@ -148,7 +148,7 @@ class NewsController extends Controller
     protected function _insertAdsMiddleBody(string $body): string
     {
         $ad_html = '<div style="width: 100%; max-height: 250px; height: 250px; display: flex; flex-direction: column; align-items: center; margin: 10px 0; overflow: hidden;" class="d-lg-none">
-    <div id="" class="ads-space d-lg-none" data-id="central_300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false"></div>
+    <div id="" class="ads-space d-lg-none" data-id="300x250x-pos-" data-w="300" data-h="250" data-loaded="false" data-reload="false"></div>
 </div>';
 
         return $this->_insertContentBetweenParagraphs($body, 2, $ad_html);

@@ -3,7 +3,7 @@
 	<!-- Bloque -->
 	<div class="seccion bloquewidget">
 
-		<x-ad-space id="central_300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ad-300x250 d-none d-md-block d-lg-none" />
+		<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ad-300x250 d-none d-md-block d-lg-none" />
 
 		<div class="bloquewidget__encuesta">
 			<header class="titulo-widget">¡Dejá tu opinión!</header>

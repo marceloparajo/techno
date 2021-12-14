@@ -58,6 +58,6 @@
 
 	</div><!-- cobertura -->
 
-	<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="d-md-none" />
+	<x-ad-space id="300x250x-pos-" width="300" height="250" class="d-md-none" />
 
 @endif

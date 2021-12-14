@@ -117,8 +117,8 @@
 
 			<article class="main-article">
 
-				<x-ad-space id="central_728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" min-height="90" max-height="280" />
-				<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="ads d-lg-none" min-height="250" max-height="250" margin-bottom="20" />
+				<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" min-height="90" max-height="280" />
+				<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-lg-none" min-height="250" max-height="250" margin-bottom="20" />
 
 				{{-- Article Body --}}
 				<div class="news-body">
@@ -169,8 +169,8 @@
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
-						<x-ad-space id="central_728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" />
-						<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="ads d-xl-none" />
+						<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" />
+						<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-xl-none" />
 
 						@include('news.show.partials.news-tags')
 
@@ -196,9 +196,9 @@
 					<div class="comments">
 						<div class="col-12">
 							<h4></h4>
-							<div class="OUTBRAIN" data-src="https://www.perfil.com/noticias/politica/sera-necesario-el-aval-del-congreso-para-tomar-deuda-en-moneda-extranjera.phtml" data-widget-id="AR_2" data-ob-template="perfil"></div>
+							<div class="OUTBRAIN" data-src="{{ $noticia['permalink'] }}" data-widget-id="AR_1" data-ob-template="carasperfil"></div>
 							<script defer type="text/javascript" src="https://widgets.outbrain.com/outbrain.js"></script>
-							<style type="text/css" media="screen">.AR_2.ob-widget .ob_what {top: -30px !important;} .AR_2.ob-widget {padding-left: 0 !important;}</style>
+							<style type="text/css" media="screen">.AR_1.ob-widget .ob_what {top: -30px !important;} .AR_1.ob-widget {padding-left: 0 !important;}</style>
 						</div>
 					</div>
 				@endif

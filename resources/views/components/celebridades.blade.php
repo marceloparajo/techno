@@ -72,7 +72,7 @@
             </article>
 
         @endforeach
-        <x-ad-space id="central_300x250x-pos-" width="300" height="250" margin-top="0" class=" d-md-none d-xxl-flex" />
+        <x-ad-space id="300x250x-pos-" width="300" height="250" margin-top="0" class=" d-md-none d-xxl-flex" />
     </div>
 
 </div>
