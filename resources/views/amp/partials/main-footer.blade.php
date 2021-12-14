@@ -1,10 +1,10 @@
 <footer>
-    <div class="logo-footer">
+    <div class="logo">
         <a href="{{ route('home.index') }}">
-            <amp-img src="{{ asset('images/logo_perfil_negativo.png') }}"
-                     alt="{{ env('APP_ALTER_NAME', '') }}"
-                     height="30"
-                     width="150"
+            <amp-img src="{{ asset('img/caras_logo.svg') }}"
+                     alt="Caras"
+                     height="27"
+                     width="60"
                      layout="fixed">
             </amp-img>
         </a>

@@ -14,7 +14,7 @@
                     role="button"
                     tabindex="0">
             </amp-img>
-            <figcaption><h4>{{ $noticia['main_image']['caption'] }} ({{ $noticia['main_image']['credit'] }})</h4></figcaption>
+            <figcaption>{{ $noticia['main_image']['caption'] }} <span> ({{ $noticia['main_image']['credit'] }})</span></figcaption>
         </figure>
         @foreach ($noticia['gallery'] as $img)
             @if ($img['id'] != $noticia['main_image']['id'])
@@ -28,7 +28,7 @@
                             role="button"
                             tabindex="0">
                     </amp-img>
-                    <figcaption><h4>{{ $img['caption'] }}<b> Foto: {{ $img['credit'] }}</b></h4></figcaption>
+                    <figcaption>{{ $img['caption'] }}<span> Foto: {{ $img['credit'] }}</span></figcaption>
                 </figure>
             @endif
         @endforeach
@@ -45,6 +45,6 @@
                 role="button"
                 tabindex="0">
         </amp-img>
-        <figcaption><h4>{{ $noticia['main_image']['caption'] }}<b> Foto: {{ $noticia['main_image']['credit'] }}</b></h4></figcaption>
+        <figcaption>{{ $noticia['main_image']['caption'] }}<span> Foto: {{ $noticia['main_image']['credit'] }}</span></figcaption>
     </figure>
 @endif
