@@ -69,7 +69,7 @@
 
                 <amp-ad width=300 height=250
                         type="eplanning"
-                        data-epl_si="24A92"
+                        data-epl_si="{{ env('ADS_CLIENT', '279a3') }}"
                         data-epl_sv="https://ads.us.e-planning.net"
                         data-epl_isv="https://us.img.e-planning.net"
                         data-epl_sec="new_amp"
@@ -85,7 +85,7 @@
                 <div class="ad">
                     <amp-ad width=300 height=250
                             type="eplanning"
-                            data-epl_si="24A92"
+                            data-epl_si="{{ env('ADS_CLIENT', '279a3') }}"
                             data-epl_sv="https://ads.us.e-planning.net"
                             data-epl_isv="https://us.img.e-planning.net"
                             data-epl_sec="new_amp"
@@ -141,7 +141,7 @@
             <amp-sticky-ad layout="nodisplay">
                 <amp-ad width="320" height="50"
                         type="eplanning"
-                        data-epl_si="24A92"
+                        data-epl_si="{{ env('ADS_CLIENT', '279a3') }}"
                         data-epl_sv="https://ads.us.e-planning.net"
                         data-epl_isv="https://us.img.e-planning.net"
                         data-epl_sec="new_amp"
