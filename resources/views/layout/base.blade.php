@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="@yield('page-description', 'Periodismo Puro: breaking news, análisis y los mejores columnistas cubriendo los temas más importantes de la Argentina y el mundo')">
+        <meta name="description" content="@yield('page-description', 'Portal web de la Revista Caras de Editorial Perfil. Información de los famosos de Argentina y el mundo. Todo lo que pasa en la televisión, el teatro, la música y el entretenimiento.')">
         <meta property="fb:admins"              content="{{ env('FACEBOOK_ADMINS', '') }}">
         <meta property="fb:app_id"              content="{{ env('FACEBOOK_APP_ID', '') }}">
         <meta property="fb:pages"               content="{{ env('FACEBOOK_PAGE_ID', '') }}">
