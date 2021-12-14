@@ -132,7 +132,7 @@
         line-height: 1.05em;
         margin: 0;
         padding: 10px 0;
-        font-family: "Roboto Condensed",Helvetica,Zsans-serif;
+        font-family: "Roboto Condensed",Helvetica,sans-serif;
         letter-spacing: -0.02em;
     }
 
@@ -491,8 +491,8 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
     text-decoration: none;
 }
 .list a h2 {
-    font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
-    color: #0a0a0a;
+    font-family: 'Roboto Condensed',Helvetica,Arial,sans-serif;
+    color: #171717;
     text-decoration: none;
     letter-spacing: 0;
     margin: 0 10px 20px 10px;
