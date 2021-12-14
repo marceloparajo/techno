@@ -76,7 +76,7 @@ class ChannelsController extends Controller
         share([
             'eplanning' => [
                 'client' => env('ADS_CLIENT', ''),
-                'sec' => 'seccion_' . $channel
+                'sec' => 'seccion'
             ]
         ]);
 

@@ -72,7 +72,7 @@ class LastNewsController extends Controller
         share([
             'eplanning' => [
                 'client' => env('ADS_CLIENT', ''),
-                'sec' => 'seccion_ultimo-momento'
+                'sec' => 'seccion'
             ]
         ]);
 

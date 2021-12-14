@@ -63,7 +63,7 @@
 			@endif
 		@endforeach
 
-		<x-ad-space id="central_300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ad-300x250" />
+		<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ad-300x250" />
 
 		<section class="bloque-sidebar">
 
@@ -103,7 +103,7 @@
 
 			@else
 				
-				<x-ad-space id="central_300x250x-pos-" width="300" height="250" min-height="250" max-height="250" />
+				<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" />
 
 			@endif
 

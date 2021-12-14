@@ -58,11 +58,11 @@
 			</article>
 
 			@if($loop->first)
-				<x-ad-space id="central_300x250x-pos-" class="d-md-none" width="300" height="250" min-height="250" max-height="250" />
+				<x-ad-space id="300x250x-pos-" class="d-md-none" width="300" height="250" min-height="250" max-height="250" />
 			@endif
 
 		@endforeach
 	</div>
 
-	<x-ad-space id="central_970x90x-pos-" width="970" height="90" margin-top="0" class="d-xs-none d-xxl-flex" min-height="90" max-height="280" />
+	<x-ad-space id="970x90x-pos-" width="970" height="90" margin-top="0" class="d-xs-none d-xxl-flex" min-height="90" max-height="280" />
 @endif

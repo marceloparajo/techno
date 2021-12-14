@@ -23,4 +23,4 @@
 
 </div>
 
-<x-ad-space id="central_300x250x-pos-" width="300" height="250" class="ads  d-md-none d-xl-flex" />
+<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads  d-md-none d-xl-flex" />
