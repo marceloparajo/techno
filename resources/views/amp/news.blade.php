@@ -114,6 +114,17 @@
                                        data-href="{{ $noticia['permalink'] }}">
                 </amp-facebook-comments>
 
+                {{-- TEADS --}}
+                <amp-ad width=300 height=1 type="eplanning"
+                        layout=responsive
+                        data-epl_si="{{ env('ADS_CLIENT', '279a3') }}"
+                        data-epl_sv="https://ads.us.e-planning.net/"
+                        data-epl_isv="https://us.img.e-planning.net/"
+                        data-epl_sec="new_amp"
+                        data-epl_kvs='{}'
+                        data-epl_e="Teads">
+                </amp-ad>
+
                 {{-- Noticias Relacionadas --}}
                 <div class="relacionadas">
                     <h4>{{ __('related news') }}</h4>
