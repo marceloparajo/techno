@@ -72,21 +72,8 @@
 						Especiales
 					</a>
 				</li>
-				<li class="caras-like">
-					<a href="/seccion/caras-like" rel="noreferrer">
-						CARAS Like
-					</a>
-				</li>
-				<li>
-					<a href="/seccion/caras-deco" rel="noreferrer">
-						CARAS Deco
-					</a>
-				</li>
-				<li>
-					<a href="/seccion/caras-resto" rel="noreferrer">
-						CARAS Restó
-					</a>
-				</li>
+			
+				
 			</ul>
 
 			<form method="get" action="{{ route('search.index') }}" class="search-form">
