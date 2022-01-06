@@ -5,7 +5,7 @@
 
 
 .main-header {
-	background: $color-brand;
+	background: white;
 	position: sticky;
 	top: 0;
 	z-index: 9;
@@ -51,8 +51,8 @@
 			}
 		}
 
-		.caras-logo {
-			width: 66px;
+		.logo {
+			width: 200px;
 			height: 30px;
 			
 			img {
@@ -213,12 +213,13 @@
 			.container {
 				background: white;
 				box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .2);
-				display: grid;
-				grid-template-areas:
-					'a b'
-					'a c'
-					'd e';
-				grid-template-columns: 1fr 1fr;
+				display: flex;
+				// display: grid;
+				// grid-template-areas:
+				// 	'a b'
+				// 	'a c'
+				// 	'd e';
+				// grid-template-columns: 1fr 1fr;
 				ul.nav {
 					width: 100%;
 					padding: 0 2%;

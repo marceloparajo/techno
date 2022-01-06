@@ -23,9 +23,9 @@
 				<div class="bar-2"></div>
 				<div class="bar-3"></div>
 		</button>
-		<div class="caras-logo">
+		<div class="logo">
 			<a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}">
-				<img src="{{ asset('img/caras_logo.svg') }}" alt="{{ env('APP_NAME') }}">
+				<img src="{{ asset('img/logo.webp') }}" alt="{{ env('APP_NAME') }}">
 			</a>
 		</div>
 	</div>

@@ -36,7 +36,7 @@
     </div>
     <div class="logo">
         <a href="{{ route('home.index') }}">
-            <amp-img src="{{ asset('img/caras_logo.svg') }}"
+            <amp-img src="{{ asset('img/logo.svg') }}"
                      alt="Caras"
                      height="27"
                      width="60"
