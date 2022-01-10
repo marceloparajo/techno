@@ -17,7 +17,7 @@
 <header class="main-header">
 
 
-    <div class="container max-width margin-auto">
+    <div class="container margin-auto">
 		<button class="hamburguer" id="burguer" onclick="abreMenu()" title="menu">
 				<div class="bar-1"></div>
 				<div class="bar-2"></div>
@@ -33,7 +33,7 @@
 
 		
 	<nav class="navbar" id="main-menu">
-		<div class="container margin-auto max-width">
+		<div class="container">
 			<ul class="nav main-menu">
 
                 @foreach ($main_menu as $item)
@@ -55,7 +55,7 @@
 			</ul>
 
 
-
+			
 			<ul class="nav topics">
                 @foreach ($topics as $item)
                     <li>
@@ -66,15 +66,7 @@
                 @endforeach
             </ul>
 
-			<ul class="nav">
-				<li>
-					<a href="#">
-						Especiales
-					</a>
-				</li>
 			
-				
-			</ul>
 
 			<form method="get" action="{{ route('search.index') }}" class="search-form">
 				<input class="search-form__input" name="q" type="text" placeholder="{{ __('search') }}" aria-label="Buscar" value="{{ Request::get('q') }}">

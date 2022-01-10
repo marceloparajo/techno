@@ -1,8 +1,8 @@
 <footer>
     <div class="logo">
         <a href="{{ route('home.index') }}">
-            <amp-img src="{{ asset('img/caras_logo.svg') }}"
-                     alt="Caras"
+            <amp-img src="{{ asset('img/logo.webp') }}"
+                     alt="Exitoina"
                      height="27"
                      width="60"
                      layout="fixed">

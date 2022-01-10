@@ -11,7 +11,7 @@
 	z-index: 9;
 	width: 100%;
 	//height: 50px;
-	//padding: 6px 10px;
+	padding: 10px;
     box-shadow: -6px 11px 22px -13px rgba(0,0,0,.58);
 
 	>.container {
@@ -20,8 +20,8 @@
 		align-items: center;
 
 		.hamburguer {
-			width: 30px;
-			height: 38px;
+			width: 28px;
+			height: 28px;
 			overflow: hidden;
 			margin: 0 10px 0 0;
 			background: transparent;
@@ -29,11 +29,11 @@
 			cursor: pointer;
 
 			div[class*="bar-"] {
-				width: 30px;
+				width: 25px;
 				height: 2px;
 				display: block;
-				background: white;
-				margin: 8px 0;
+				background: black;
+				margin: 5px 0;
 				transform: rotate(0);
 				transition: ease .3s;
 			}
@@ -52,8 +52,9 @@
 		}
 
 		.logo {
-			width: 200px;
-			height: 30px;
+			width: 150px;
+			height: 25px;
+			
 			
 			img {
 				width: 100%;
@@ -213,13 +214,12 @@
 			.container {
 				background: white;
 				box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .2);
-				display: flex;
-				// display: grid;
-				// grid-template-areas:
-				// 	'a b'
-				// 	'a c'
-				// 	'd e';
-				// grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-template-areas:
+					'a b'
+					'a c'
+					'd e';
+				grid-template-columns: 1fr 1fr;
 				ul.nav {
 					width: 100%;
 					padding: 0 2%;
@@ -324,9 +324,10 @@
 		height: 65px;
 		padding: 10px;
 		>.container {
-			.caras-logo {
-				width: 99px;
-				height: 45px;
+			.logo {
+				width: 200px;
+				height: 30px;
+				padding: 8px 8px 8px 10px;
 			}
 		}
 		.navbar {
@@ -337,17 +338,18 @@
 @include media-breakpoint-up(xxl) {
 	.main-header {
 		margin-bottom: 76px;
-		display: grid;
+		display: flex;
+		/* display:grid;
 		grid-template-areas:
 			'a b c d';
-		grid-template-columns: auto 100px 1200px auto;
-		box-shadow: -6px 11px 22px -13px rgba(0, 0, 0, .6), 0 60px 0 0 rgba(255,255,255,1), 0 61px 0 0 rgba(0,0,0,.1);
+		grid-template-columns: auto 100px 1200px auto; */
+		box-shadow: -6px 11px 22px -13px rgba(0, 0, 0, .6), 0 60px 0 0 $color-brand, 0 61px 0 0 rgba(0,0,0,.1);
 		>.container {
 			grid-area: b;
 			.hamburguer {
 				display: none;
 			}
-			.caras-logo {
+			.logo {
 				align-self: flex-start;
 			}
 		}
@@ -363,7 +365,7 @@
 				grid-template-areas:
 					'a b c'
 					'd d e';
-				grid-template-columns: auto 130px 220px;
+				grid-template-columns: auto 0px 220px;
 				ul.nav {
 					background: transparent;
 					display: flex;
@@ -372,7 +374,7 @@
 						border-bottom: none;
 						width: auto;
 						display: inline-block;
-						font-family: $font-titulos-nowebfont;
+						font-family: $font-titulos;
 						font-size: .85rem;
 						letter-spacing: -0.03em;						
 						ul {
@@ -411,18 +413,10 @@
 								content: none;
 							}
 						}
-						&.caras-like {
-							display: block;
-							width: 129px;
-							height: 30px;
-							margin-top: 7px;
-							border-bottom: none;
-							text-indent: -9999px;
-							background: url('/images/caras-like.png') 0 0 no-repeat;
-						}
+					
 						a {
 							padding: 15px 10px 0 10px;
-							color: white;
+							
 						}
 					}
 					&:nth-child(1) {
@@ -441,11 +435,12 @@
 						}
 					}
 					&.topics {
-						transform: translateX(-128px);
-						margin-top: 5px;
+						transform: translateX(-208px);
+						
+
 						li {
 							a {
-								color: black;
+								color: white;
 							}
 						}
 					}

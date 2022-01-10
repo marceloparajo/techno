@@ -33,19 +33,11 @@
 
     @endforeach
 
-    <div class="placa-home">
-        <a href="/seccion/salud" title="Caras Salud" rel="noreferrer">
-            <img src="{{ asset('images/caras_salud.png') }}" alt="{{ env('APP_NAME') }}" loading="lazy">
-        </a>
-    </div>
+   
 
     <x-ad-space id="300x250x-pos-" width="300" height="250" margin-top="0" max-height="600" />
 
-    <div class="placa-home">
-        <a href="/seccion/horoscopo" title="Caras Horoscopo" rel="noreferrer">
-            <img src="{{ asset('images/caras_astrologia.png') }}" alt="{{ env('APP_NAME') }}" loading="lazy">
-        </a>
-    </div>
+  
 
 
 </div>
