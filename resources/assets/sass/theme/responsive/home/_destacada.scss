@@ -5,9 +5,7 @@
 			flex-wrap: wrap;
 			justify-content: space-between;
 			.articulo {		
-				flex-basis: 48%;
-				flex-direction: column;
-				margin-bottom:  10px;
+				
 				.meta-content {
 					a {
 						span.hat {
@@ -56,13 +54,11 @@
 	@include media-breakpoint-up(md) {
 		.destacada {
 			max-width: 100%;
+			align-items: start;
 			display: grid;
-			grid-template-areas: 
-				'a a b'
-				'a a c'
-				'd d d';
-			grid-template-columns: repeat(3, 1fr);
-		    grid-column-gap: 20px;
+			grid-gap: 16px;
+			grid-template-columns: repeat(auto-fit, 300px);
+			justify-content: center;
 			.articulo {
 				&.nota-0 {
 					grid-area: a;

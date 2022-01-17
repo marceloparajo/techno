@@ -189,7 +189,7 @@
 				{{-- / Facebook Comments --}}
 
 				{{-- Noticias sugeridas de otros sitios/revistas --}}
-				<x-suggested-site-news />
+				<!-- <x-suggested-site-news /> -->
 
 				{{-- Outbrain --}}
 				@if (env('OUTBRAIN_ENABLE', false))
@@ -208,9 +208,9 @@
 
 		</div><!-- noticia -->
 
-		<aside class="sidebar">
+		{{-- <aside class="sidebar">
 			<x-sidebar />
-		</aside>
+		</aside> --}}
 
 	</main> <!-- maincontainer -->
 

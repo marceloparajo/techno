@@ -1,54 +1,29 @@
 .destacada {
 	.articulo {
-		&:first-of-type {
-			background-color: $gris-oscuro;
-			a {
-				.meta-content {
-					h2 {
-						color: white;
-					}
-					.firma-home {
-						color: white;
-					}
-				}
-			}
-		}
+		
+		background-color: #fff;
+		border-radius: 10px;
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+		overflow: hidden;
+		
 	}
 }
 
 @include media-breakpoint-up(md) {
 	.destacada {
-		.articulo {
-			&:first-of-type {
-				a {
-					.meta-content {
-						h2 {
-							font-size: 1.6rem;
-						}
-						p {
-							display: block;
-							margin: .5em 0;
-							font-size: 1.1rem;
-							line-height: 1.2em;
-							color: white;
-						}
-					}
-				}
-			}
-		}
+		
 	}
 }
 
 @include media-breakpoint-up(lg) {
 	.destacada {
 		.articulo {
-			&.nota-0 {
-				height: 100%;
+			
 				a {
 					>figure {
 						height: 100%;
 						>picture {
-							overflow: visible;
+							
 							height: 100%;
 							img {
 								object-fit: cover;
@@ -56,40 +31,10 @@
 						}
 					}
 				}
-			}
-			&.nota-1,
-			&.nota-2 {
-				box-shadow: $box-shadow;
-				a {
-					.meta-content {
-						padding: 0 10px;
-						.hat {
-							transform: translateX(10px);
-							margin-bottom: 10px;
-						}
-					}
-					figure {
-						>picture {
-							overflow: visible;
-							height: 100%;
-							img {
-								object-fit: cover;
-							}
-						}
-						.galeria-video {
-							right: 10px;
-							top: 10px;
-						}
-					}
-				}
-				&:after {
-					content: none;
-				}
-			}
+			
+		
 		}
-		.d-xs-none {
-			grid-area: d;
-		}
+	
 	}
 }
 
@@ -97,12 +42,14 @@
 @include media-breakpoint-up(xl) {
 	.destacada {
 		.articulo {
-			&.nota-0 {
+			&.nota-0,
+			.nota-1,
+			.nota-2  {
 				height: auto;
 				a {
 					.meta-content {
 						h2 {
-							font-size: 1.8rem;
+							font-size: 1.6rem;
 						}
 					}
 				}
@@ -115,11 +62,15 @@
 @include media-breakpoint-up(xxl) {
 	.destacada {
 		.articulo {
-			&.nota-0 {
+			&.nota-0,
+			.nota-1,
+			.nota-2 
+			 {
 				a {
 					.meta-content {
 						h2 {
-							font-size: 2rem;
+							font-size: 1.6rem;
+							padding: 1 rem
 						}
 					}
 				}
