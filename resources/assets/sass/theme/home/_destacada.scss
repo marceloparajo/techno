@@ -5,13 +5,24 @@
 		border-radius: 10px;
 		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 		overflow: hidden;
+		a {
+			.meta-content {
+				h2 {
+					letter-spacing: normal;
+					line-height: 1.2;
+					padding:10px 0 
+				}
+			}
+		}
 		
 	}
 }
 
 @include media-breakpoint-up(md) {
 	.destacada {
-		
+		.articulo {
+			min-height: 405px;
+		}
 	}
 }
 
@@ -59,22 +70,3 @@
 }
 
 
-@include media-breakpoint-up(xxl) {
-	.destacada {
-		.articulo {
-			&.nota-0,
-			.nota-1,
-			.nota-2 
-			 {
-				a {
-					.meta-content {
-						h2 {
-							font-size: 1.6rem;
-							padding: 1 rem
-						}
-					}
-				}
-			}
-		}
-	}
-}

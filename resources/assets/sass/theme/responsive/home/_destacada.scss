@@ -16,23 +16,7 @@
 						}
 					}
 				}
-				&.nota-1,
-				&.nota-2 {
-					display: block;
-					border-top: none;
-					padding-top: 0;
-					.meta-content {
-						padding: 5px 0;
-						span.hat {
-							display: block;
-						}
-					}
-					&.convideo {
-						.meta-content {
-							padding: 5px 0;
-						}
-					}
-				}
+			
 				
 			}
 		}
@@ -144,16 +128,7 @@
 					}
 				}
 			}
-			.nota-1,
-			.nota-2 {
-				.meta-content {
-					a {
-						h2 {
-							font-size: 1.4rem;
-						}
-					}
-				}
-			}
+			
 		}
 	}
 	@include media-breakpoint-up(xl) {
