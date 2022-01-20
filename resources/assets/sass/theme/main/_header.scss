@@ -136,8 +136,8 @@
 				justify-content: space-between;
 				width: 240px;
 				&__btn {
-					width: 40px;
-					height: 40px;
+					width: 30px;
+					height: 35px;
 					border-radius: 50%;
 					box-shadow: 2px 2px 5px 0 rgba(0,0,0,.3);
 					margin: 0 0 0 10px;
@@ -148,7 +148,7 @@
 				}
 				&__input {
 					width: 170px;
-					height: 40px;
+					height: 35px;
 					border: 1px solid $gris-claro;
 					border-radius: 3px;
 					background: white;
@@ -222,7 +222,7 @@
 				grid-template-columns: 1fr 1fr;
 				ul.nav {
 					width: 100%;
-					padding: 0 2%;
+					padding: 0 1%;
 					box-shadow: none;
 					&:nth-child(1) {
 						grid-area: a;
@@ -244,9 +244,9 @@
 					width: 100%;
 					box-shadow: none;
 					grid-area: e;
-					margin-top: 20px;
+					margin-top: 10px;
 					&__btn {
-						flex-basis: 40px;
+						flex-basis: 35px;
 					}
 					&__input {
 						flex: 1 1 0;
@@ -338,12 +338,12 @@
 @include media-breakpoint-up(xxl) {
 	.main-header {
 		margin-bottom: 76px;
-		display: flex;
-		/* display:grid;
+		//display: flex;
+		 display:grid;
 		grid-template-areas:
 			'a b c d';
-		grid-template-columns: auto 100px 1200px auto; */
-		box-shadow: -6px 11px 22px -13px rgba(0, 0, 0, .6), 0 60px 0 0 $color-brand, 0 61px 0 0 rgba(0,0,0,.1);
+		grid-template-columns: 0px 185px auto 0px; 
+		box-shadow: -6px 11px 22px -13px rgba(0, 0, 0, .6), 0 50px 0 0 $color-brand, 0 61px 0 0 rgba(0,0,0,.1);
 		>.container {
 			grid-area: b;
 			.hamburguer {
@@ -365,10 +365,10 @@
 				grid-template-areas:
 					'a b c'
 					'd d e';
-				grid-template-columns: auto 0px 220px;
+				grid-template-columns: auto 0px auto;
 				ul.nav {
 					background: transparent;
-					display: flex;
+					//display: flex;
 					flex-direction: row;
 					li {
 						border-bottom: none;
@@ -415,7 +415,7 @@
 						}
 					
 						a {
-							padding: 15px 10px 0 10px;
+							padding: 10px 10px 0 10px;
 							
 						}
 					}
@@ -435,12 +435,16 @@
 						}
 					}
 					&.topics {
-						transform: translateX(-208px);
-						
+						transform: translateX(-190px);
+						height: 50px;
+						overflow: hidden;
 
 						li {
 							a {
 								color: white;
+								padding: 15px 0.6rem 0;
+								font-size: .9rem;
+								
 							}
 						}
 					}
