@@ -30,8 +30,7 @@
 				padding: 0 30px;
 				transform: translateY(-20px);
 				.hat {
-					margin: 0 0 5px auto;
-					transform: translateX(15px);
+					margin: auto;
 				}
 			}
 		}
@@ -45,8 +44,7 @@
 					}
 					h2 {
 						color: white;
-						font-size:1.2rem;
-						text-align: center;
+					
 					}
 					.firma-home {
 						color: white;
@@ -120,9 +118,7 @@
 				.meta-content{
 					padding: 10px;
 					margin-bottom: -25px;
-					.hat {
-						transform: translateX(10px);
-					}
+				
 				}
 				&:after {
 					content: none;
@@ -167,9 +163,7 @@
 				.meta-content{
 					padding: 10px;
 					margin-bottom: -25px;
-					.hat {
-						transform: translateX(10px);
-					}
+				
 				}
 				figure {
 					.galeria-video {

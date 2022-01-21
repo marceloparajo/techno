@@ -14,7 +14,7 @@
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
-                background: rgba(0,0,0,.6);
+                background: $second-color;
                 line-height: 42px;
                 text-align: center;
                 .hasvideo {
@@ -29,11 +29,13 @@
                 text-transform: uppercase;
                 background: $color-brand;
                 color: white;
-                padding: 3px 5px;
+                padding: 3px 8px;
                 margin: 0 0 5px 0;
                 font-family: $font-titulos-nowebfont;
                 font-size: .85rem;
                 letter-spacing: 0;
+                border-radius: 3px;
+
             }
             h2 {
                 letter-spacing: -0.07em;
@@ -66,18 +68,22 @@
 
 .wf-loaded {
     .articulo {
+        border-radius: 10px;
         a {
             .meta-content {
                 .hat {
                     font-family: $font-titulos;
-                    font-size: .9rem;
-                    letter-spacing: .05em;
+                    font-size: .8rem;
+                    letter-spacing: 1px;
+                    font-weight: 500;
                 }
                 h2 {
                     font-size: 1.2rem;
                     letter-spacing: -0.02em;
                     line-height: 1.1em; 
-                    text-align: center;  
+                    text-align: center; 
+                    font-weight: 600; 
+                    padding: 10px;
                 }
             }
         }
