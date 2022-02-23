@@ -136,10 +136,6 @@
 					@include('news.show.partials.social-top', ['shareText' => __('share')] )
 
 					<div class="news-content">
-
-						{{-- Más Noticias (para los crawlers) --}}
-						{{--@include('news.show.partials.more-news-crawlers')--}}
-
 						{!! $body !!}
 
 						{{-- Embed Code --}}
@@ -189,7 +185,7 @@
 				{{-- / Facebook Comments --}}
 
 				{{-- Noticias sugeridas de otros sitios/revistas --}}
-				<!-- <x-suggested-site-news /> -->
+				<x-suggested-site-news />
 
 				{{-- Outbrain --}}
 				@if (env('OUTBRAIN_ENABLE', false))
@@ -208,9 +204,9 @@
 
 		</div><!-- noticia -->
 
-		{{-- <aside class="sidebar">
+		<aside class="sidebar">
 			<x-sidebar />
-		</aside> --}}
+		</aside>
 
 	</main> <!-- maincontainer -->
 

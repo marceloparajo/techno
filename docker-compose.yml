@@ -2,11 +2,11 @@ version: '3'
 services:
 
   #PHP
-  carasv2:
+  exitoinav2:
     image: fedemramato/laravel-php7.3:latest
-    container_name: carasv2-site
+    container_name: exitoinav2-site
     environment:
-      VIRTUAL_HOST: dev-new-caras.perfil.com
+      VIRTUAL_HOST: dev-new-exitoina.perfil.com
     restart: unless-stopped
     expose:
       - "80"

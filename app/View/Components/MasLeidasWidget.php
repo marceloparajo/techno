@@ -28,7 +28,7 @@ class MasLeidasWidget extends Component
      */
     public function __construct(BlockDistributionsHelper $blockDistributionsHelper, int $rows = 5)
     {
-        $this->news = $blockDistributionsHelper->getMostViewed('caras');
+        $this->news = $blockDistributionsHelper->getMostViewed('exitoina');
 
         $this->rows = $rows;
     }
