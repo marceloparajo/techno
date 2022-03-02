@@ -27,7 +27,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: start;
-        background-color: #dd0202;
+        background-color: white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
         height: 44px;
         position: fixed;
@@ -44,17 +44,18 @@
         height: 27px;
     }
     .hamburger_wrapper #hamburger {
-        width: 30px;
+        width: 26px;
         margin: auto;
         cursor: pointer;
         outline: none;
+        padding-top: 5px
     }
     .hamburger_wrapper #hamburger span {
         display: block;
         width: 100%;
         height: 2px;
-        background: white;
-        margin: 8px 0 0 0;
+        background: #313131;
+        margin: 6px 0 0 0;
     }
     .hamburger_wrapper #hamburger span:first-of-type {
         margin-top: 0;
@@ -80,7 +81,7 @@
     footer .logo {
         margin: 0;
         padding: 10px;
-        background: #dd0202;
+        background: #313131;
     }
     .container {
         padding: 15px;

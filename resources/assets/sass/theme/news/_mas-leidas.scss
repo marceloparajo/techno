@@ -1,46 +1,49 @@
 .masvistas {
     width: 100%;
     border-bottom: $borde;
+    padding: 1rem;
     &__titulo {
-        background: $color-brand;
-        color: white;
+        color: $second-color;
         text-transform: uppercase;
         font-family: $font-titulos;
-        font-size: 1.4rem;
+        font-size: 2rem;
         padding: .2em .4em;
+        font-weight: bold;
         letter-spacing: -0.02em;
-        margin: 0 0 .2em 0;
+        margin: 0 0 .2rem 0;
+        line-height: 1;
+       // border-left: 5px solid $second-color;
         a {
-            color: white;
+            color: $negro;
         }
     }
     &__nota {
-        padding: .2em 0;
+        padding: 0.5rem 0;
         border-top: $borde;
-        background: $gris-muy-claro;
+        background: white;
         transition: ease .3s;
         .enlace {
             .rankOrder {
-                background: $color-brand;
-                color: white;
+               
                 text-align: center;
                 font-family: $font-titulos;
-                padding: .4em 0;
-                font-weight: bold;
-                font-size: 2rem;
+                padding: 2px 0;
+                font-weight: 600;
+                font-size: 2.8rem;
+                border-bottom: 5px solid $second-color;
+                margin-right: 10px;
             }
             &__titulo {
                 padding: 0 .4em;
-                text-transform: uppercase;
                 font-family: $font-titulos;
                 font-weight: bold;
                 letter-spacing: -0.02em;
-                line-height: 1.1em;
+                line-height:   .9rem;
             }
 
         }
         &:hover {
-            background: white;
+            background: $second-color;
         }
     }
 }
@@ -50,6 +53,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding: 0px;
         &__titulo {
             width: 100%;
         }
@@ -69,14 +73,14 @@
         &__nota {
             .enlace {
                 &__titulo {
-                    font-size: .9rem;
+                 font-size: .9rem;
                 }
             }
         }
     }
 }
 
-@include media-breakpoint-up(xxl) {
+/* @include media-breakpoint-up(xxl) {
     .masvistas {
         &__nota {
             .enlace {
@@ -86,4 +90,4 @@
             }
         }
     }
-}
+} */

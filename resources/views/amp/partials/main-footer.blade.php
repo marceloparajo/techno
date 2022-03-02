@@ -1,10 +1,10 @@
 <footer>
     <div class="logo">
         <a href="{{ route('home.index') }}">
-            <amp-img src="{{ asset('img/logo.webp') }}"
+            <amp-img src="{{ asset('img/logo_gris.png') }}"
                      alt="Exitoina"
-                     height="27"
-                     width="60"
+                     height="22"
+                     width="160"
                      layout="fixed">
             </amp-img>
         </a>
