@@ -42,7 +42,7 @@ return [
 	],
 	[
 		'id' => 'destacada-extra',
-		'template' => 'destacada'
+		'template' => 'cobertura'
 	],
 	[
 		'id' => 'bloque-extra',

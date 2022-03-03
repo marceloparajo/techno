@@ -1,14 +1,7 @@
 .cobertura {
-    border-top: 1px solid $gris-oscuro;
-    border-bottom: 1px solid $gris-oscuro;
+  
     margin-bottom: 20px;
-    background:{
-        color: #fff;
-        image: radial-gradient(circle, $color-brand 1%, transparent 10%), radial-gradient(circle, $color-brand 1%, transparent 10%);
-        size: 20px 20px;
-        position: 0 0, 20px 20px;
-    }
-
+    background:$gris-claro;
     &__titulo {
 
         font:{
@@ -16,12 +9,12 @@
             size: 2rem;
             weight: bold;
         }
-        color: $color-brand;
+        color: $negro;
         padding: 5px 10px;
         margin: 0;
         text-align: right;
         letter-spacing: -0.02em;
-        background: white;
+        
     }
     .articulo {
         padding: 0 20px 10px 10px;
@@ -29,7 +22,7 @@
         background: transparent;
         figure {
             margin: 0 auto;
-            box-shadow: 10px 10px 0 0 $color-brand;
+            box-shadow: 10px 10px 0 0 $second-color;
             padding-bottom: 56.2%;
             height: 0;
             overflow: hidden;
@@ -58,6 +51,7 @@
 
 @include media-breakpoint-up(md) {
     .cobertura {
+        
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
