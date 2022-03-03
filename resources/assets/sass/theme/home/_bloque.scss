@@ -1,7 +1,7 @@
 .bloque {
 	margin-bottom: 20px;
 	.articulo {
-		padding-bottom: 10px;
+	
 	
 		a {
 			figure {
@@ -25,7 +25,7 @@
 			.meta-content {
 				display: flex;
 				flex-direction: column;
-				padding: 0 30px;
+				padding: 0 10px;
 				transform: translateY(-20px);
 				.hat {
 					margin: auto;
@@ -38,7 +38,7 @@
 			a {
 				.meta-content {
 					.hat {
-						background: $gris-oscuro;
+						background: $second-color;
 					}
 					h2 {
 						color: white;

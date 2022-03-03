@@ -84,9 +84,9 @@
 		@endforeach
 
 	</div>
-	{{-- <aside class="sidebar">
+	 <aside class="sidebar">
 		<x-sidebar />
-	</aside> --}}
+	</aside> 
 
 </main>
 
