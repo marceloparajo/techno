@@ -44,6 +44,13 @@
 
 @include media-breakpoint-up(lg) {
     
+	.destacada-medio {
+		align-items: start;
+	display: grid;
+	grid-gap: 18px;
+	//grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: minmax(200px, 2fr) 1fr 1fr;
+	}
 	.destacada {
 		align-items: start;
 	display: grid;

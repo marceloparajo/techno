@@ -1,0 +1,79 @@
+.destacada-medio {
+	padding: 30px;
+	background-color: $gris-claro;
+	
+	.articulo {
+		background: $gris-oscuro;
+		border-radius: 10px;
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+		text-align: left;
+		
+		a {
+			.meta-content {
+				padding: 1rem 2rem;
+				
+				h2 {
+					font-weight: 500;
+					font-size: 1.6rem;
+					letter-spacing: -.02em;
+					line-height: 1.1em;
+					padding:10px 0 ;
+					text-align: left;
+					color:white
+				}
+			}
+		}
+		
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.destacada-medio {
+		.articulo {
+			min-height: 100%;
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.destacada-medio {
+		.articulo {
+			
+				a {
+					>figure {
+						height: 100%;
+						>picture {
+							
+							height: 100%;
+							img {
+								object-fit: cover;
+							}
+						}
+					}
+				}
+			
+		
+		}
+	
+	}
+}
+
+
+@include media-breakpoint-up(xl) {
+	.destacada {
+		.articulo {
+			&.nota-0,
+			.nota-1,
+			.nota-2  {
+				height: auto;
+				a {
+					.meta-content {
+						h2 {
+							font-size: 1.6rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
