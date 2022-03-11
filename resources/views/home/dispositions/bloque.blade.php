@@ -2,7 +2,7 @@
 @if (isset($news) && count($news) > 0)
 	<!-- Bloque -->
 	<div class="seccion bloque">
-		@foreach(array_slice($news, 0, 14) as $new)
+		@foreach(array_slice($news, 0, 13) as $new)
 			@if ($new['channel']['slug'] == 'tapas' && !isset($tapa))
 				@php ($tapa = $new)
 			@else
