@@ -66,7 +66,7 @@
 		<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ad-300x250" />
 
 		<section class="bloque-sidebar">
-
+			
 			@if (isset($tapa))
 
 				<article class="tapa">
@@ -89,9 +89,7 @@
 
 
 				<div class="placa-home">
-					<a href="/seccion/salud" title="Caras Salud" rel="noreferrer">
-						<img src="{{ asset('images/caras_salud.png') }}" alt="{{ env('APP_NAME') }}">
-					</a>
+					@include('sidebar.modules.most-viewed', ['site' => env('SITE_CODE',''), 'title' => $title])
 				</div>
 
 
@@ -102,7 +100,7 @@
 				</div>
 
 			@else
-				
+			 {{-- <x-sidebar />  --}}
 				<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" />
 
 			@endif
