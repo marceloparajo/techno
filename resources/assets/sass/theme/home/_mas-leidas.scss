@@ -1,28 +1,29 @@
 .masvistas {
     background: white;
     box-shadow: $box-shadow;
-    padding: 10px;
+    padding: 10px 18px;
     margin-bottom: 20px;
     &__titulo {
-        background: $color-brand;
-        color: white;
+        //background: $color-brand;
+        color: $negro;
         font-family: $font-titulos;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         text-transform: uppercase;
         padding: 5px;
-        text-align: center;
+       border-left: 4px solid $second-color;
         margin-bottom: 10px;
+        font-weight: 700;
         a {
-            color: white;
+            color: $negro;
         }
     }
     &__articulos {
         padding: 0;
-        margin: 0;
+        margin-bottom: 10px;
         .nota {
             position: relative;
             padding: 10px 0;
-            border-bottom: 1px solid $gris-claro;
+            margin-bottom: 10px;
             .enlace {
                 display: flex;
                 justify-content: space-between;

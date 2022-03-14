@@ -100,8 +100,8 @@
 				</div>
 
 			@else
-			 {{-- <x-sidebar />  --}}
-				<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" />
+			<x-mas-leidas-widget :rows="5" />
+				{{-- <x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" /> --}}
 
 			@endif
 

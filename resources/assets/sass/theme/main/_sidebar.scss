@@ -1,10 +1,17 @@
 .masvistas {
     width: 100%;
+    margin-bottom: 7px;
+    &__titulo { 
+        background: white;
+        color: $negro;
+        border-bottom: 1px solid $linea;
+    }
     &__nota {
         .enlace {
             display: flex;
+            .rankOrder { font-size: 1.5rem;}
             picture {
-                width: 40%;
+                width: 30%;
                 height: 0;
                 padding-bottom: 24%;
                 position: relative;
@@ -20,7 +27,12 @@
                 width: 10%;
             }
             &__titulo {
-                width: 50%;
+                width: 70%;
+                margin: 0 1% 2% 4%;
+                font-size: 14px;
+                line-height: 17px;
+                font-weight: 500;
+
             }
         }
     }

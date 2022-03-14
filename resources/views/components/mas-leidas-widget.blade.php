@@ -16,7 +16,7 @@
                     max-width="700"
                     :play-button="$new['has_video']"
                     :camera-button="$new['has_gallery']" />
-            <span class="enlace__titulo"> {{ $new['title'] }}</span>
+            <div class="enlace__titulo"> {{ $new['title'] }}</div>
             </a>
         </article>
     @endforeach
