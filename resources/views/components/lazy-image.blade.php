@@ -26,9 +26,9 @@
         <picture>
             <source srcset="{{ asset('images/hasvideo.webp') }}" type="image/webp">
             <source srcset="{{ asset('images/hasvideo.png') }}" type="image/png">
-            <img src="{{ asset('images/hasvideo.png') }}" class="hasvideo" alt="video" width="14" height="14" loading="lazy" style="width: 20px; height: 18px;">
+            <img src="{{ asset('images/hasvideo.png') }}" class="hasvideo" alt="video" width="14" height="14" loading="lazy" style="width: 20px; height: 20px;">
         </picture>
-    </div>
+    </div>        
 @endif
 @if ($camera_button)
     <div class="galeria-video">
