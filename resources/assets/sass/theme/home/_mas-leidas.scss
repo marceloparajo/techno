@@ -76,9 +76,10 @@
 @include media-breakpoint-up(sm) {
     .masvistas {
         &__articulos {
-            display: flex;
+            display: grid;
             justify-content: space-between;
             flex-wrap: wrap;
+            flex-direction: column;
             .nota {
                 width: 48%;
                 .enlace {
@@ -108,7 +109,7 @@
         &__articulos {
             .nota {
                 width: 18%;
-                border-bottom: none;
+              
                 &:first-of-type {
                     width: 18%;
                 }
