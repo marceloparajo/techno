@@ -210,7 +210,7 @@
         @include media-breakpoint-up(xl) {
             .articulo-header {
                 h1 {
-                    font-size: 3.6rem;
+                    
                     letter-spacing: -0.04em;
                 }
                 h2 {
@@ -222,7 +222,7 @@
         @include media-breakpoint-up(xxl) {
             .articulo-header {
                 h1 {
-                    font-size: 3.4rem;
+                    
                     letter-spacing: -0.04em;
                     line-height: 1.05em;
                 }
