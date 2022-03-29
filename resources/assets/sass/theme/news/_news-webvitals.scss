@@ -23,15 +23,15 @@
         }
         h1 {
             letter-spacing: -0.04em;
-            line-height: 1.1rem;
-            font-size: 1.3rem;
+            line-height: 1.1;
+            font-size: 1.8rem;
             margin: 0 0 .5em 0; 
          /*    font-size: 2rem;
                 letter-spacing: -0.04em;
                 line-height: 0.09em; */
         }
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             letter-spacing: -0.07em;
             font-weight: normal;
             margin: 0 0 20px 0;
@@ -100,7 +100,7 @@
     @include media-breakpoint-up(md) {
         .articulo-header {
             h1 {
-                font-size: 2.4rem;
+                font-size: 2.2rem;
             }
         }
     }
@@ -116,8 +116,9 @@
                 text-align: center;
             }
             h1 {
-                font-size: 2.7rem;
+                font-size: 1.1rem;
                 letter-spacing: -0.08em;
+                line-height: 1.1;
             }
             h2 {
                 letter-spacing: -0.08em;
@@ -128,9 +129,8 @@
     @include media-breakpoint-up(xl) {
         .articulo-header {
             h1 {
-                font-size: 3.2rem;
-                letter-spacing: -0.08em;
-                margin-bottom: .3em;
+                font-size: 2.9rem;
+                letter-spacing: -0.085em;
             }
         }
     }
@@ -138,9 +138,9 @@
     @include media-breakpoint-up(xxl) {
         .articulo-header {
             h1 {
-                font-size: 3.6rem;
+                font-size: 2.9rem;
                 letter-spacing: -0.085em;
-                line-height: 1.19em;
+                line-height: 1.1;
             }
             h2 {
                 font-size: 1.8rem;
@@ -159,12 +159,12 @@
                 font-size: 1rem;
             }
             h1 {
-                font-size: 2.1rem;
+                font-size: 1.7rem;
                 letter-spacing: -0.04em;
                 line-height: 1.1;
             }
             h2 {
-                font-size: 1.4rem;
+                font-size: 1.5rem;
                 letter-spacing: -0.02em;
                 line-height: 1.2em;
             }
@@ -201,8 +201,9 @@
         @include media-breakpoint-up(lg) {
             .articulo-header {
                 h1 {
-                    font-size: 3rem;
-                    letter-spacing: -0.04em;
+                    font-size: 2.8rem;
+                    letter-spacing: -0.085em;
+                    
                 }
                 h2 {
                     letter-spacing: -0.02em;
@@ -227,7 +228,7 @@
                 h1 {
                     
                     letter-spacing: -0.04em;
-                    line-height: 1.05em;
+                   
                 }
                 h2 {
                     font-size: 1.5rem;
@@ -236,4 +237,4 @@
             }
         }
     }
-}
+} 
