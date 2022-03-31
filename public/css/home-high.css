@@ -496,6 +496,10 @@ figure img {
 
   .main-header .navbar {
     top: 76px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 
   .main-header .navbar .container {

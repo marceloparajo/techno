@@ -22,10 +22,10 @@
             }
         }
         h1 {
-            letter-spacing: -0.04em;
-            line-height: 1.1;
-            font-size: 1.8rem;
-            margin: 0 0 .5em 0; 
+            letter-spacing: -0.075em;
+            line-height: 1.08;
+            font-size: 2rem;
+            margin: 0 0 15px 0; 
          /*    font-size: 2rem;
                 letter-spacing: -0.04em;
                 line-height: 0.09em; */
@@ -82,7 +82,7 @@
             order: 0;
             padding: 0;
             h1 {
-                font-size: 2rem;
+                font-size: 2.4rem;
             }
         }
         figure {
@@ -100,7 +100,7 @@
     @include media-breakpoint-up(md) {
         .articulo-header {
             h1 {
-                font-size: 2.2rem;
+                font-size: 2.6rem;
             }
         }
     }
@@ -116,41 +116,37 @@
                 text-align: center;
             }
             h1 {
-                font-size: 1.1rem;
-                letter-spacing: -0.08em;
-                line-height: 1.1;
+                font-size: 2.9rem;
             }
-            h2 {
+          /*   h2 {
                 letter-spacing: -0.08em;
-            }
+            } */
         }
     }
 
     @include media-breakpoint-up(xl) {
         .articulo-header {
-            h1 {
-                font-size: 2.9rem;
-                letter-spacing: -0.085em;
-            }
+      /*       h1 {
+                font-size: 3rem;
+               
+            } */
         }
     }
 
     @include media-breakpoint-up(xxl) {
         .articulo-header {
-            h1 {
-                font-size: 2.9rem;
-                letter-spacing: -0.085em;
-                line-height: 1.1;
-            }
-            h2 {
+            // h1 {
+                
+            // }
+     /*        h2 {
                 font-size: 1.8rem;
                 letter-spacing: -0.08em;
-            }
+            } */
         }
     }
 }
 
-.wf-loaded {
+ .wf-loaded {
     .noticia {
         .articulo-header {
             .hat {
@@ -159,9 +155,10 @@
                 font-size: 1rem;
             }
             h1 {
-                font-size: 1.7rem;
+                font-size: 2rem;
                 letter-spacing: -0.04em;
                 line-height: 1.1;
+                margin-bottom: 15px;
             }
             h2 {
                 font-size: 1.5rem;
@@ -185,7 +182,7 @@
         @include media-breakpoint-up(sm) {
             .articulo-header {
                 h1 {
-                    font-size: 2.2rem;
+                    font-size: 2.4rem;
                 }
             }
         }
@@ -215,7 +212,7 @@
             .articulo-header {
                 h1 {
                     
-                    letter-spacing: -0.04em;
+                   
                 }
                 h2 {
                     font-size: 1.6rem;
@@ -227,7 +224,6 @@
             .articulo-header {
                 h1 {
                     
-                    letter-spacing: -0.04em;
                    
                 }
                 h2 {
@@ -237,4 +233,4 @@
             }
         }
     }
-} 
+}  
