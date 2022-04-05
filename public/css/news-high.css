@@ -825,7 +825,7 @@ figure img {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  padding: 10px;
+  padding: 1.2rem;
 }
 
 .noticia .articulo-header .hat {
@@ -850,21 +850,18 @@ figure img {
 }
 
 .noticia .articulo-header h1 {
-  letter-spacing: -0.055em;
-  line-height: 1.08;
-  font-size: 2rem;
   margin: 0 0 15px 0;
-  /*    font-size: 2rem;
-                letter-spacing: -0.04em;
-                line-height: 0.09em; */
+  font-size: 2rem;
+  letter-spacing: -0.075em;
+  line-height: 1;
 }
 
 .noticia .articulo-header h2 {
-  font-size: 1.6rem;
-  letter-spacing: -0.01em;
-  font-weight: normal;
-  margin: 0 0 20px 0;
-  line-height: 1;
+  font-size: 1.54rem;
+  margin: 0 0 15px 0;
+  letter-spacing: -0.030em;
+  line-height: 1.08;
+  font-weight: 400;
 }
 
 .noticia .articulo-header h2 .abrirgaleria {
@@ -917,6 +914,10 @@ figure img {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 576px) {
@@ -963,9 +964,6 @@ figure img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    /*   h2 {
-                letter-spacing: -0.08em;
-            } */
   }
 
   .noticia .articulo-header .hat {
@@ -980,24 +978,6 @@ figure img {
   }
 }
 
-@media (min-width: 1295px) {
-  .noticia .articulo-header {
-    /*       h1 {
-                font-size: 3rem;
-               
-            } */
-  }
-}
-
-@media (min-width: 1360px) {
-  .noticia .articulo-header {
-    /*        h2 {
-                font-size: 1.8rem;
-                letter-spacing: -0.08em;
-            } */
-  }
-}
-
 .wf-loaded .noticia .articulo-header .hat {
   font-family: "Poppins", sans-serif;
   letter-spacing: -0.02em;
@@ -1005,16 +985,15 @@ figure img {
 }
 
 .wf-loaded .noticia .articulo-header h1 {
-  font-size: 2rem;
-  letter-spacing: -0.04em;
+  font-size: 1.9rem;
+  letter-spacing: -0.087em;
   line-height: 1.1;
-  margin-bottom: 15px;
 }
 
 .wf-loaded .noticia .articulo-header h2 {
-  font-size: 1.5rem;
-  letter-spacing: -0.02em;
-  line-height: 1.2em;
+  font-size: 1.438rem;
+  line-height: 1.1;
+  letter-spacing: -0.055em;
 }
 
 .wf-loaded .noticia figure .figure-caption {
