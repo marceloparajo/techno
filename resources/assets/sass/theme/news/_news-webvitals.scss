@@ -8,7 +8,7 @@
         .hat {
             text-transform: uppercase;
             font-family: $font-titulos-nowebfont;
-            letter-spacing: -0.05em;
+            letter-spacing: -0.03em;
             margin: 0 0 10px 0;
             font-size: .95rem;
             line-height: 1;
@@ -21,22 +21,24 @@
                 margin-left: 5px;
                 border-left: $borde;
                 color: $gris-medio;
+                font-size: 0.95rem;
+                line-height: 1;
             }
         }
         h1 {
            
-            margin: 0 0 15px 0;  
-            font-size: 2rem;
-            letter-spacing: -0.075em;
-            line-height: 1.1;
-        
-        
+           // margin: 0 0 15px 0;  
+            font-size:1.8rem;
+           letter-spacing: -0.045em;
+           // line-height: 1.1;
+           line-height: 1.2em;
         }
+
         h2 {
-            font-size: 1.54rem;
+            font-size: 1.4rem;
             margin: 0 0 15px 0;
-            letter-spacing: -0.030em;
-            line-height: 1.08;
+            letter-spacing: -0.025em;
+            line-height: 1.2em;
             font-weight: 400;
 
             .abrirgaleria {
@@ -121,7 +123,7 @@
                 text-align: center;
             }
             h1 {
-                font-size: 2.9rem;
+                font-size: 2.8rem;
             }
         
         }
@@ -136,19 +138,19 @@
             .hat {
                 font-family: $font-titulos;
                 letter-spacing: -0.02em;
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
             h1 {
               
-                font-size: 1.9rem;
-                letter-spacing: -0.087em;
-                line-height: 1.1;
+                font-size: 1.8rem;
+                letter-spacing: -0.065em;
+               
 
             }
           h2 {
-              font-size: 1.438rem;
+              font-size: 1.4rem;
             line-height: 1.1;
-            letter-spacing: -0.055em;
+            letter-spacing: -0.02em;
               
             } 
         }
@@ -165,7 +167,7 @@
             } 
         }
 
-        @include media-breakpoint-up(sm) {
+/*         @include media-breakpoint-up(sm) {
             .articulo-header {
                 h1 {
                     font-size: 2.4rem;
@@ -179,13 +181,13 @@
                     font-size: 2.6rem;
                 }
             }
-        }
+        } */
 
         @include media-breakpoint-up(lg) {
             .articulo-header {
                 h1 {
                     font-size: 2.8rem;
-                    letter-spacing: -0.065em;
+                    letter-spacing: -0.075em;
                     
                 }
                 h2 {
@@ -207,7 +209,7 @@
             .articulo-header {
                
                 h2 {
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                     letter-spacing: -0.02em;
                 }
             }
