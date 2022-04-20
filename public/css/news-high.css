@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Tahoma, "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Roboto", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Poppins", Tahoma, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Roboto", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: normal;
   color: #333;
@@ -853,16 +853,16 @@ figure img {
 
 .noticia .articulo-header h1 {
   margin: 0 0 5px 0;
-  font-size: 1.8rem;
-  letter-spacing: -0.040em;
-  line-height: 1.2em;
+  font-size: 1.9em;
+  letter-spacing: -0.06em;
+  line-height: 1.06em;
 }
 
 .noticia .articulo-header h2 {
   font-size: 1.5em;
   margin: 0 0 15px 0;
-  letter-spacing: -0.015em;
-  line-height: 1.2em;
+  letter-spacing: -0.045em;
+  line-height: 1.1em;
   font-weight: 400;
 }
 
@@ -977,6 +977,12 @@ figure img {
   .noticia .articulo-header h1 {
     font-size: 2.8rem;
   }
+
+  .noticia .articulo-header h2 {
+    font-size: 1.6em;
+    letter-spacing: -0.03em;
+    line-height: 1.13em;
+  }
 }
 
 .wf-loaded .noticia .articulo-header .hat {
@@ -987,11 +993,13 @@ figure img {
 .wf-loaded .noticia .articulo-header h1 {
   font-weight: 800;
   letter-spacing: -0.065em;
+  font-size: 1.9em;
 }
 
 .wf-loaded .noticia .articulo-header h2 {
-  font-size: 1.4rem;
-  letter-spacing: -0.02em;
+  font-size: 1.4em;
+  letter-spacing: -0.06em;
+  line-height: 1.2em;
 }
 
 .wf-loaded .noticia figure .figure-caption {
@@ -1010,22 +1018,25 @@ figure img {
   .wf-loaded .noticia .articulo-header h1 {
     font-size: 2.8rem;
     letter-spacing: -0.075em;
+    line-height: 1.07em;
   }
 
   .wf-loaded .noticia .articulo-header h2 {
+    font-size: 1.5em;
     letter-spacing: -0.02em;
+    line-height: 1.2em;
   }
 }
 
 @media (min-width: 1295px) {
   .wf-loaded .noticia .articulo-header h2 {
-    font-size: 1.6rem;
+    font-size: 1.5em;
   }
 }
 
 @media (min-width: 1360px) {
   .wf-loaded .noticia .articulo-header h2 {
-    font-size: 1.4rem;
+    font-size: 1.5em;
     letter-spacing: -0.02em;
   }
 }

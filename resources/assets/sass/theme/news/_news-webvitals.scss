@@ -28,17 +28,17 @@
         h1 {
            
            margin: 0 0 5px 0;  
-            font-size:1.8rem;
-           letter-spacing: -0.040em;
+            font-size:1.9em;
+           letter-spacing: -0.06em;
            // line-height: 1.1;
-           line-height: 1.2em;
+           line-height: 1.06em;
         }
 
         h2 {
             font-size: 1.5em;
             margin: 0 0 15px 0;
-            letter-spacing: -0.015em;
-            line-height: 1.2em;
+            letter-spacing: -0.045em;
+            line-height: 1.1em;
             font-weight: 400;
 
             .abrirgaleria {
@@ -125,6 +125,14 @@
             h1 {
                 font-size: 2.8rem;
             }
+         
+             h2 {
+                    font-size: 1.6em;
+                    letter-spacing: -0.03em;
+                    line-height: 1.13em;
+            } 
+
+            
         
         }
     }
@@ -143,13 +151,13 @@
             h1 {
                 font-weight: 800;
                 letter-spacing: -0.065em;
+                font-size: 1.9em
             }
           h2 {
-              font-size: 1.4rem;
-       
-            letter-spacing: -0.02em;
-              
-            } 
+            font-size: 1.4em;
+            letter-spacing: -0.06em;
+            line-height: 1.2em;
+             } 
         }
         figure {
             .figure-caption {
@@ -170,10 +178,13 @@
                 h1 {
                     font-size: 2.8rem;
                     letter-spacing: -0.075em;
+                    line-height: 1.07em;
                     
                 }
                 h2 {
+                    font-size: 1.5em;
                     letter-spacing: -0.02em;
+                    line-height: 1.2em;
                 }
             }
         }
@@ -182,7 +193,7 @@
             .articulo-header {
                
                 h2 {
-                    font-size: 1.6rem;
+                    font-size: 1.5em;
                 }
             }
         }
@@ -191,7 +202,7 @@
             .articulo-header {
                
                 h2 {
-                    font-size: 1.4rem;
+                    font-size: 1.5em;
                     letter-spacing: -0.02em;
                 }
             }
