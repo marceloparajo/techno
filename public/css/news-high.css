@@ -856,9 +856,9 @@ figure img {
 
 .noticia .articulo-header h1 {
   margin: 0 0 5px 0;
-  font-size: 1.85em;
+  font-size: 1.80em;
   letter-spacing: -0.05em;
-  line-height: 1.15em;
+  line-height: 1.03em;
   font-family: Tahoma, Helvetica, Roboto, sans-serif;
 }
 
@@ -999,9 +999,10 @@ figure img {
 
 .wf-loaded .noticia .articulo-header h1 {
   font-weight: 800;
-  letter-spacing: -0.065em;
-  font-size: 1.9em;
+  letter-spacing: -0.055em;
+  font-size: 1.75em;
   font-family: "Poppins", sans-serif;
+  line-height: 1.1em;
 }
 
 .wf-loaded .noticia .articulo-header h2 {
