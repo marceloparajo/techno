@@ -84,6 +84,13 @@
     .main-article {
         order: 3;
         flex-direction: column;
+        p {   font-family: $font-titulos-nowebfont;
+            margin: 1em;
+                    font-size: 1.2rem;
+                    line-height: 1.6em;
+                    color: $negro;
+                    letter-spacing: -0.02em;
+        }
     }
 
     @include media-breakpoint-up(sm) {
@@ -102,6 +109,8 @@
         }
         .main-article {
             order: 0;
+
+          
         }
     }
 
@@ -176,7 +185,9 @@
                 }               
             } 
         }
-
+        .main-article {
+            font-family: $font-titulos;
+        }
 
         @include media-breakpoint-up(lg) {
             .articulo-header {
