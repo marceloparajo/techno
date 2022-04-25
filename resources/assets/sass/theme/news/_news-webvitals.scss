@@ -8,7 +8,7 @@
        
         .hat {
             text-transform: uppercase;
-            font-family: $font-titulos-nowebfont;
+            
             letter-spacing: -0.03em;
             margin: 0 0 10px 0;
             font-size: .95rem;
@@ -24,6 +24,7 @@
                 color: $gris-medio;
                 font-size: 0.95rem;
                 line-height: 1;
+                font-family: $font-titulos-nowebfont;
             }
         }
         h1 {
@@ -77,6 +78,7 @@
             line-height: 1.38em;
             .credito-foto {
                 font-weight: normal;
+                font-family: $font-titulos-nowebfont;
             }
         }
     }
@@ -84,12 +86,13 @@
     .main-article {
         order: 3;
         flex-direction: column;
-        p {   font-family: $font-titulos-nowebfont;
+        p {   
+            font-family: $font-titulos-nowebfont;
             margin: 1em;
-                    font-size: 1.2rem;
-                    line-height: 1.6em;
-                    color: $negro;
-                    letter-spacing: -0.02em;
+             font-size: 1.2rem;
+             line-height: 1.6em;
+            
+                 
         }
     }
 
@@ -158,6 +161,9 @@
                 font-family: $font-titulos;
                 letter-spacing: -0.02em;
                 font-size: 0.95rem;
+                &__fecha { 
+                    font-family: $font-titulos;
+                }
             }
              h1 {
                 font-weight: 800;
@@ -182,11 +188,17 @@
                 padding: 5px;
                 .credito-foto {
                     font-weight: normal;
+                    font-family: $font-titulos;
                 }               
             } 
         }
         .main-article {
             font-family: $font-titulos;
+            p { 
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                font-family: $font-titulos;
+            }
         }
 
         @include media-breakpoint-up(lg) {

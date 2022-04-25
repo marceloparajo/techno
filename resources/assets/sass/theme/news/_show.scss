@@ -47,6 +47,7 @@
                 padding: 10px;
                 z-index: 9;
                 margin-left: 120px;
+                flex-direction: row;
                 ul {
                     display: flex;
                     list-style: none;
@@ -299,9 +300,14 @@
                     background: $gris-muy-claro;
                     position: static;
                     justify-content: space-between;
+                    flex-direction: row;
                     p {
                         color: $gris-oscuro;
                         margin-bottom: 0;
+                        line-height: 1.6em;
+                        font-family: $font-titulos;
+                     
+
                     }
                 }
                 .news-content {
