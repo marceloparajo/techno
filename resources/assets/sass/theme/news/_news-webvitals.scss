@@ -39,7 +39,7 @@
         h2 {
             font-size: 1.5em;
             margin: 0 0 15px 0;
-            letter-spacing: -0.045em;
+            letter-spacing: -0.040em;
             line-height: 1.1em;
             font-weight: 400;
             font-family: $font-titulos-nowebfont;
@@ -86,13 +86,30 @@
     .main-article {
         order: 3;
         flex-direction: column;
-        p {   
+        .news-content {
+            p {   
             font-family: $font-titulos-nowebfont;
             margin: 1em;
-             font-size: 1.2rem;
-             line-height: 1.6em;
-            
-                 
+            font-size: 1.15em;
+            line-height: 1.68em;
+            letter-spacing: -0.04em;
+            img {
+                display:block;
+                height: auto;
+            }
+            }
+            h2 {
+                line-height: 1.05em;
+                font-size: 1.8rem;
+                margin: 1em .7em;
+                font-family: $font-titulos-nowebfont;
+            }
+            >p:first-of-type:first-letter {
+                color: $color-brand;
+                font-size: 1.8em;
+                font-weight: bold;
+                font-family: $font-titulos-nowebfont;
+            }
         }
         .social-topsharing {
             position: sticky;
@@ -124,6 +141,15 @@
             p {
                 display: none;
             }
+        }
+
+        &:before {
+            content: ""; 
+            display: block;
+            //margin: 0 10px 20px 10px;
+            background: $gris-muy-claro;
+            height: 1px;
+            clear: both;
         }
     }
 
@@ -225,11 +251,21 @@
         }
         .main-article {
             font-family: $font-titulos;
-            p { 
-                font-size: 1.2rem;
-                line-height: 1.6rem;
+            .news-content {
+                p { 
+                font-size: 1.1em;
+                line-height: 1.8em;
                 font-family: $font-titulos;
-            }
+                }
+                h2 {
+                    line-height: 1.05em;
+                    font-size: 1.8rem;
+                    font-family: $font-titulos;
+                }
+                >p:first-of-type:first-letter {
+                    font-family: $font-titulos;
+                }
+             }
         }
 
         @include media-breakpoint-up(lg) {
