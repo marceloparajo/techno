@@ -1,4 +1,5 @@
  .relacionadas {
+     display: none;
     width: 100%;
     padding: 0 .5em;
     &__titulo {
@@ -27,6 +28,7 @@
             display: flex;
             justify-content: space-between;
             color: $gris-oscuro;
+            flex-direction: row;
             figure {
                 width: 40%;
                 align-self: flex-start;

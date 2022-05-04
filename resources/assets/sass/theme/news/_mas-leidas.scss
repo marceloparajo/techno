@@ -2,6 +2,7 @@
     width: 100%;
     border-bottom: $borde;
     padding: 1rem;
+    
     &__titulo {
         color: $second-color;
         text-transform: uppercase;
@@ -21,7 +22,13 @@
       
         background: white;
         transition: ease .3s;
+       
         .enlace {
+            flex-direction: row;
+            display: flex;
+            padding: 10px 0px;
+            margin-bottom: 0px;
+            border-bottom: 1px solid #eee;
             .rankOrder {
                
                 text-align: center;
@@ -38,7 +45,13 @@
                 font-weight: bold;
                 letter-spacing: -0.02em;
                 line-height:   .9rem;
+                width: 85%;
+                font-size: 12px;
+                margin: 0 1% 2% 4%;
             }
+            figure {
+                width: 38%;
+                height: 60px;}
 
         }
         &:hover {
