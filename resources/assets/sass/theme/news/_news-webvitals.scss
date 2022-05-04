@@ -32,9 +32,9 @@
         h1 {
            
            margin: 0 0 5px 0;  
-           font-size: 1.78em;
+           font-size: 1.79em;
            letter-spacing: -0.055em;
-           line-height: 1.08em;
+           line-height: 1.07em;
            font-family: $font-titulos-nowebfont;
         }
 
@@ -145,14 +145,18 @@
                     list-style: none;
                     padding: 0;
                     margin: 0;
-                    display: flex;
+                  /*   display: flex;
                     flex-wrap: wrap;
-                    justify-content: flex-start;
+                    justify-content: flex-start; */
                     label {
                         font-size: .9rem;
                         text-transform: uppercase;
                         font-weight: bold;
-                        padding: .2em 1em;
+                        line-height: normal;
+                       
+                    }
+                    ul {
+                        margin: 0px;
                     }
                     li {
                         display: inline-block;
@@ -160,6 +164,7 @@
                         font-size: .8rem;
                         text-transform: uppercase;
                         display: none;
+                        line-height: 1.6em;
                         a {
                             background: $gris-muy-claro;
                             border: $borde;
