@@ -1,5 +1,4 @@
  .relacionadas {
-     display: none;
     width: 100%;
     padding: 0 .5em;
     &__titulo {
@@ -35,8 +34,9 @@
             }
             .relacionada-titulo-nota {
                 width: 60%;
-                padding: .5em;
+                padding: 0.1em .7em;
                 font-weight: 600;
+                font-size: 0.8em;
             }
         }
     }
@@ -52,11 +52,12 @@
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        flex-direction: row;
         text-transform: uppercase;
         letter-spacing: -0.03em;
         img {
             margin-left: 5px;
+            margin-bottom: -5px;
         }
     }
     &__nota {
@@ -65,6 +66,8 @@
         box-shadow: $box-shadow;
         background: white;
         padding: 10px 0 0 0;
+        display: flex;
+        flex-direction: column;
         .logo-revista {
             display: block;
             text-indent: -9999px;
@@ -74,11 +77,11 @@
         }
         &__titulo {
             display: block;
-            font-size: 1.1rem;
+            font-size: 1.1em;
             font-family: $font-titulos;
-            font-weight: bold;
+            font-weight: 500;
             line-height: 1em;
-            padding: .2em 1em .8em 1em;
+            padding: 1em;
         }
         &.noticias {
             background: #004e94;

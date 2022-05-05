@@ -7,7 +7,7 @@
         color: $second-color;
         text-transform: uppercase;
         font-family: $font-titulos;
-        font-size: 2rem;
+        font-size: 1.5em;
         padding: .2em .4em;
         font-weight: bold;
         letter-spacing: -0.02em;
@@ -68,6 +68,7 @@
         padding: 0px;
         &__titulo {
             width: 100%;
+            font-size: 1.8em;
         }
         &__nota {
             width: 49%;
