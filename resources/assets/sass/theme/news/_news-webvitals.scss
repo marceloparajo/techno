@@ -31,18 +31,27 @@
         h1 {
            
            margin: 0 0 5px 0;  
-           font-size: 1.79em;
-           letter-spacing: -0.055em;
-           line-height: 1.069em;
+           //font-size: 1.79em;
+           //letter-spacing: -0.055em;
+           //line-height: 1.069em;
            font-family: $font-titulos-nowebfont;
+           font-size: 1.79em;
+            letter-spacing: -0.058em;
+            line-height: 1.069em;
         }
 
         h2 {
-            font-size: 1.5em;
+          /*   font-size: 1.5em;
             margin: 0 0 15px 0;
             letter-spacing: -0.040em;
             line-height: 1.1em;
+            font-weight: 400; */
+            font-size: 1.5em;
+            margin: 0 0 15px;
+            letter-spacing: -.0285em;
+            line-height: 1.1em;
             font-weight: 400;
+            letter-spacing: -0.04em;
             font-family: $font-titulos-nowebfont;
 
             .abrirgaleria {
@@ -100,8 +109,8 @@
             }
             h2 {
                 line-height: 1.05em;
-                font-size: 1.8rem;
-                margin: 1em .7em;
+                font-size: 1.6em;
+                margin: 1em;
                 font-family: $font-titulos-nowebfont;
             }
            /*  >p:first-of-type:first-letter {
@@ -187,6 +196,7 @@
 
             }
         }
+        
         .social-topsharing {
             position: sticky;
             top: 0;
@@ -218,6 +228,17 @@
                 display: none;
             }
         }
+        .mas-en-perfil {
+            &__nota {
+                &__titulo {
+                    //font-family: $font-titulos;
+                    font-family: $font-titulos-nowebfont;
+                    font-size: 1.2em;
+                    letter-spacing: 0.03em;
+                    
+                }
+             }
+        }
 
         &:before {
             content: ""; 
@@ -245,8 +266,7 @@
         }
         .main-article {
             order: 0;
-
-          
+           
         }
     }
 
@@ -303,14 +323,14 @@
              h1 {
                 font-weight: 800;
                 letter-spacing: -0.057em;
-                font-size: 1.75em;
+                font-size: 1.73em;
                 font-family: $font-titulos;
                 line-height: 1.1em;
             } 
           h2 {
             font-size: 1.4em;
-            letter-spacing: -0.06em;
-            line-height: 1.2em;
+            letter-spacing: -0.069em;
+            line-height: 1.1em;
             font-family: $font-titulos;
              } 
         }
@@ -329,6 +349,15 @@
         }
         .main-article {
             font-family: $font-titulos;
+            .mas-en-perfil {
+                &__nota {
+                    &__titulo {
+                        font-family: $font-titulos;
+                        font-size: 1.17em;
+                        letter-spacing: -0.03em;
+                    }
+                 }
+            }
             .news-content {
               /*   p { 
                 font-size: 1.1em;
@@ -337,8 +366,9 @@
                 } */
                 h2 {
                     line-height: 1.05em;
-                    font-size: 1.8rem;
+                    font-size: 1.6em;
                     font-family: $font-titulos;
+
                 }
               /*   >p:first-of-type:first-letter {
                     font-family: $font-titulos;
@@ -352,6 +382,7 @@
 
                     }
                 }
+                
              }
         }
 
