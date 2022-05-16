@@ -244,6 +244,13 @@
                 line-height: 1.2em;
                 letter-spacing: -0.02em;
             }
+            &__nota {
+
+                .relacionada-titulo-nota { 
+                    font-family: $font-titulos-nowebfont;
+                    font-size: 0.77em;
+                }
+            }
         }
         .mas-en-perfil {
             &__nota {
@@ -353,8 +360,8 @@
         }
         figure {
             .figure-caption {
-                font-size: .69em;
-                letter-spacing: -0.01em;
+                font-size: .68em;
+                letter-spacing: -0.04em;
                 font-family: $font-titulos;
                // line-height: 1.2em;
                 
@@ -374,6 +381,13 @@
                     font-family: $font-titulos;
                     font-size: 1.18em;
                   
+                }
+                &__nota {
+
+                    .relacionada-titulo-nota { 
+                        font-family: $font-titulos;
+                        font-size: 0.75em;
+                    }
                 }
             }
             .mas-en-perfil {
@@ -395,6 +409,7 @@
                     line-height: 1.05em;
                     font-size: 1.6em;
                     font-family: $font-titulos;
+                    letter-spacing: -0.04em;
 
                 }
               /*   >p:first-of-type:first-letter {

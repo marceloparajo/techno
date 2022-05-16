@@ -1,1 +1,271 @@
-.masvistas__titulo{background:#fff;color:#333}.masvistas__nota .enlace .rankOrder{font-size:1.5rem}.masvistas__nota .enlace picture{width:38%;height:60px;position:relative;overflow:hidden}.masvistas__nota .enlace picture img{height:100%;display:block;position:absolute;top:0;-o-object-fit:cover;object-fit:cover}.masvistas__nota .enlace .rankOrder{width:10%}.masvistas__nota .enlace__titulo{line-height:15px;font-weight:600}.placa-home{border:1px solid #eee;width:100%;padding:10px 0;text-align:center}.placa-home a img{width:100%;max-width:300px}.masleidas{padding-top:10px}.masleidas h1{width:100%;text-transform:uppercase;font-weight:400}.masleidas .articulo{border:1px solid #eee;position:relative}.masleidas .articulo a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%}.masleidas .articulo a .meta-content{padding-top:0}.masleidas .articulo a .meta-content h2{color:#313133;font-size:1.2rem}.masleidas .articulo__ordenleidas{position:absolute;left:10px;top:10px;color:#fff;font-family:Poppins,sans-serif;font-size:4rem;text-shadow:0 3px 5px #000;z-index:2;letter-spacing:-.04em;opacity:.7;-webkit-transition:.3s ease;transition:.3s ease}@media (min-width:768px){.masleidas{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.masleidas .articulo{width:48%;margin-bottom:20px}.masleidas .articulo,.masleidas .articulo .meta-content h2{-webkit-transition:.3s ease;transition:.3s ease}.masleidas .articulo:hover{-webkit-box-shadow:0 3px 7px 0 rgba(0,0,0,.2);box-shadow:0 3px 7px 0 rgba(0,0,0,.2)}.masleidas .articulo:hover .meta-content h2{color:#333}.masleidas .articulo:hover .articulo__ordenleidas{opacity:1}}@media (min-width:1360px){.masleidas .articulo{width:32%}}.masvistas{width:100%;border-bottom:1px solid #eee;padding:1rem}.masvistas__titulo{color:#f1df0f;text-transform:uppercase;font-family:Poppins,sans-serif;font-size:1.5em;padding:.2em .4em;font-weight:700;letter-spacing:-.02em;margin:0 0 .2rem;line-height:1}.masvistas__titulo a{color:#333}.masvistas__nota{background:#fff;-webkit-transition:.3s ease;transition:.3s ease}.masvistas__nota .enlace{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;display:-webkit-box;display:-ms-flexbox;display:flex;padding:10px 0;margin-bottom:0;border-bottom:1px solid #eee}.masvistas__nota .enlace .rankOrder{text-align:center;font-family:Poppins,sans-serif;padding:2px 0;font-weight:600;font-size:2.8rem;border-bottom:5px solid #f1df0f;margin-right:10px}.masvistas__nota .enlace__titulo{padding:0 .4em;font-family:Poppins,sans-serif;letter-spacing:-.02em;line-height:.9rem;width:85%;font-size:12px;margin:0 1% 2% 4%}.masvistas__nota .enlace figure{width:38%;height:60px}.masvistas__nota:hover{background:#f1df0f}@media (min-width:768px) and (max-width:1019.98px){.masvistas{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:0}.masvistas__titulo{width:100%;font-size:1.8em}.masvistas__nota{width:49%}.masvistas__nota .enlace__titulo{font-size:.9rem}}@media (min-width:1020px){.masvistas__nota .enlace__titulo{font-size:.9rem}}
+.masvistas {
+  width: 100%;
+}
+
+.masvistas__titulo {
+  background: white;
+  color: #333;
+}
+
+.masvistas__nota .enlace {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #eee;
+}
+
+.masvistas__nota .enlace .rankOrder {
+  font-size: 1.5rem;
+}
+
+.masvistas__nota .enlace picture {
+  width: 38%;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.masvistas__nota .enlace picture img {
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.masvistas__nota .enlace .rankOrder {
+  width: 10%;
+}
+
+.masvistas__nota .enlace__titulo {
+  width: 85%;
+  margin: 0 1% 2% 4%;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+}
+
+.placa-home {
+  border: 1px solid #eee;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.placa-home a img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.masleidas {
+  padding-top: 10px;
+}
+
+.masleidas h1 {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.masleidas .articulo {
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.masleidas .articulo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.masleidas .articulo a .meta-content {
+  padding-top: 0;
+}
+
+.masleidas .articulo a .meta-content h2 {
+  color: #313133;
+  font-size: 1.2rem;
+}
+
+.masleidas .articulo__ordenleidas {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  text-shadow: 0 3px 5px black;
+  z-index: 2;
+  letter-spacing: -.04em;
+  opacity: .7;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+@media (min-width: 768px) {
+  .masleidas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .masleidas .articulo {
+    width: 48%;
+    margin-bottom: 20px;
+    -webkit-transition: ease .3s;
+    transition: ease .3s;
+  }
+
+  .masleidas .articulo .meta-content h2 {
+    -webkit-transition: ease .3s;
+    transition: ease .3s;
+  }
+
+  .masleidas .articulo:hover {
+    -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .masleidas .articulo:hover .meta-content h2 {
+    color: #333;
+  }
+
+  .masleidas .articulo:hover .articulo__ordenleidas {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1360px) {
+  .masleidas .articulo {
+    width: 32%;
+  }
+}
+
+.masvistas {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding: 1rem;
+}
+
+.masvistas__titulo {
+  color: #f1df0f;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  padding: .2em .4em;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  margin: 0 0 .2rem 0;
+  line-height: 1;
+}
+
+.masvistas__titulo a {
+  color: #333;
+}
+
+.masvistas__nota {
+  background: white;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.masvistas__nota .enlace {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #eee;
+}
+
+.masvistas__nota .enlace .rankOrder {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 2px 0;
+  font-weight: 600;
+  font-size: 2.8rem;
+  border-bottom: 5px solid #f1df0f;
+  margin-right: 10px;
+}
+
+.masvistas__nota .enlace__titulo {
+  padding: 0 .4em;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.02em;
+  line-height: .9rem;
+  width: 85%;
+  font-size: 12px;
+  margin: 0 1% 2% 4%;
+}
+
+.masvistas__nota .enlace figure {
+  width: 38%;
+  height: 60px;
+}
+
+.masvistas__nota:hover {
+  background: #f1df0f;
+}
+
+@media (min-width: 768px) and (max-width: 1019.98px) {
+  .masvistas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0px;
+  }
+
+  .masvistas__titulo {
+    width: 100%;
+    font-size: 1.8em;
+  }
+
+  .masvistas__nota {
+    width: 49%;
+  }
+
+  .masvistas__nota .enlace__titulo {
+    font-size: .9rem;
+  }
+}
+
+@media (min-width: 1020px) {
+  .masvistas__nota .enlace__titulo {
+    font-size: .9rem;
+  }
+}
+
+/* @include media-breakpoint-up(xxl) {
+    .masvistas {
+        &__nota {
+            .enlace {
+                &__titulo {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+} */
+
