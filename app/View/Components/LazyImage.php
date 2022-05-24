@@ -126,7 +126,10 @@ class LazyImage extends Component
      */
     public function internalImage()
     {
-        return ! $this->external_image || Str::contains($this->src, env('IMAGES_SERVER', 'https://fotos.perfil.com'));
+        if ($this->external_image)
+            return false;
+
+        return Str::contains($this->src, 'fotos.perfil.com');
     }
 
     /**
