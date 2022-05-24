@@ -9,8 +9,8 @@
 return [
 
 	[
-		'id' => 'alerta',
-		'template' => 'alerta'
+		'id' => 'destacada-medio',
+		'template' => 'destacada-medio'
 	],
 	[
 		'id' => 'coronavirus-contador',

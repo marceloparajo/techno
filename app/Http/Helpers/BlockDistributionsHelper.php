@@ -332,7 +332,7 @@ class BlockDistributionsHelper
             ],
             [
                 'id' => 'destacada-medio',
-                'template' => 'destacada'
+                'template' => 'destacada-medio'
             ],
             [
                 'id' => 'destacada-inferior',

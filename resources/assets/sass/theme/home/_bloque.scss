@@ -32,7 +32,17 @@
 				}
 			}
 		}
-	
+		&.nota-0, &.nota-1, &.nota-2, &.nota-3, &.nota-4, &.nota-5 { 
+			a {
+				.meta-content {
+					h2 {
+						font-size: 1.4rem;
+						text-align: left;
+						line-height: 1.1;
+					}
+				}
+			}
+		}
 		&.nota-2 {
 			background: $color-brand;
 			a {
@@ -42,6 +52,8 @@
 					}
 					h2 {
 						color: white;
+						font-size: 1.4rem;
+						text-align: left;
 					
 					}
 					.firma-home {
@@ -105,9 +117,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+
 		.articulo {
 			box-shadow: $box-shadow;
-			width: 48%;
+			width: 100%;
 			&.nota-0,
 			&.nota-1,
 			&.nota-2 {
@@ -146,6 +159,7 @@
 			'e f sidebar';
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
+		
 		.articulo {
 			&.nota-0,
 			&.nota-1,
@@ -185,6 +199,8 @@
 			&.nota-4 {
 				grid-area: f;
 			}
+
+			
 		}
 
 		.ad-300x250 {

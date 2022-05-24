@@ -4,11 +4,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="@yield('page-description', 'Portal web de la Revista Caras de Editorial Perfil. Información de los famosos de Argentina y el mundo. Todo lo que pasa en la televisión, el teatro, la música y el entretenimiento.')">
+        <meta name="description" content="@yield('page-description', 'Web de espectáculos de Perfil.com. Información de los famosos de Argentina y el mundo. Todo lo que pasa en la televisión, el teatro, la música y el entretenimiento.')">
         <meta property="fb:admins"              content="{{ env('FACEBOOK_ADMINS', '') }}">
         <meta property="fb:app_id"              content="{{ env('FACEBOOK_APP_ID', '') }}">
         <meta property="fb:pages"               content="{{ env('FACEBOOK_PAGE_ID', '') }}">
-        <title>@yield('page-title', env('APP_ALTER_NAME', 'Perfil'))</title>
+        <title>@yield('page-title', env('APP_ALTER_NAME', 'Exitoína'))</title>
 
         @shared()
 
@@ -46,7 +46,7 @@
         @yield('head-top')
 
         {{-- Font --}}
-        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet" media="print" onload="this.media='all';">
          {{-- /Font --}}
 
         @yield('head-css')

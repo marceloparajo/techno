@@ -2,7 +2,7 @@
 @if (isset($news) && count($news) > 0)
 	<!-- Bloque -->
 	<div class="seccion bloque">
-		@foreach(array_slice($news, 0, 6) as $new)
+		@foreach(array_slice($news, 0, 13) as $new)
 			@if ($new['channel']['slug'] == 'tapas' && !isset($tapa))
 				@php ($tapa = $new)
 			@else
@@ -66,7 +66,7 @@
 		<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ad-300x250" />
 
 		<section class="bloque-sidebar">
-
+			
 			@if (isset($tapa))
 
 				<article class="tapa">
@@ -89,9 +89,7 @@
 
 
 				<div class="placa-home">
-					<a href="/seccion/salud" title="Caras Salud" rel="noreferrer">
-						<img src="{{ asset('images/caras_salud.png') }}" alt="{{ env('APP_NAME') }}">
-					</a>
+					@include('sidebar.modules.most-viewed', ['site' => env('SITE_CODE',''), 'title' => $title])
 				</div>
 
 
@@ -102,8 +100,8 @@
 				</div>
 
 			@else
-				
-				<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" />
+			<x-mas-leidas-widget :rows="5" />
+				{{-- <x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" /> --}}
 
 			@endif
 

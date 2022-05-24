@@ -1,6 +1,6 @@
 @if (isset($news) && count($news) > 0)
 	<!-- Destacada -->
-	<div class="seccion destacada">
+	<div class="destacada-medio">
 
 		@foreach(array_slice($news, 0, 3) as $new)
 
@@ -11,7 +11,7 @@
 					@else
 						<figure>
 							@if($loop->first)
-								<x-lazy-image :lazy-load="false"
+								<x-lazy-image
 										:src="$new['main_image']['srcs']['original']"
 										:alt="$new['main_image']['title']"
 										:sizes="[['v' => 320, 'w' => 540, 'h' => 324], ['v' => 768, 'w' => 728, 'h' => 410], ['v' => 1024, 'w' => 720, 'h' => 405]]"
@@ -20,7 +20,7 @@
 										:play-button="$new['has_video']"
 										:camera-button="$new['has_gallery']" />
 							@else
-								<x-lazy-image :lazy-load="false"
+								<x-lazy-image
 										:src="$new['main_image']['srcs']['original']"
 										:alt="$new['main_image']['title']"
 										:sizes="[['v' => 320, 'w' => 540, 'h' => 324], ['v' => 768, 'w' => 350, 'h' => 210], ['v' => 1024, 'w' => 252, 'h' => 151], ['v' => 1366, 'w' => 300, 'h' => 180]]"

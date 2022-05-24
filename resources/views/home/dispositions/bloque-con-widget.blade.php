@@ -16,7 +16,7 @@
 		</div>
 
 
-		@foreach(array_slice($news, 0, 6) as $new)
+		@foreach(array_slice($news, 0,6) as $new)
 			<article class="articulo nota-{{ $loop->index }}" >
 				<a href="{{ $new['permalink'] }}">
 					@if ($new['embed_code_original'] != '' && (strpos($new['embed_code_original'], 'rudo') || strpos($new['embed_code_original'], 'tube')))
