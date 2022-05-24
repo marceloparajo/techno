@@ -1,7 +1,5 @@
 <div class="content-sidebar">
 
-    <x-ad-space id="300x250x-pos-" width="300" height="250" margin-top="0" max-height="600" />
-
     @foreach ($content as $item)
 
         @switch($item['id'])
@@ -23,21 +21,9 @@
                     @include('sidebar.dispositions.' . $item['template'], ['news' => $item['news']])
                 @endif
 
-        @endswitch 
-        
-        {{--
-            @if ($loop->iteration % 2 && $loop->iteration < 11)
-                <x-ad-space id="sidebar_300x250x-pos-" width="300" height="250" />
-            @endif
-        --}}
+        @endswitch
 
     @endforeach
 
-   
-
-    <x-ad-space id="300x250x-pos-" width="300" height="250" margin-top="0" max-height="600" />
-
-  
-
-
+    <x-ad-space id="300x600x-pos-" width="300" height="600" margin-top="0" max-height="600" />
 </div>

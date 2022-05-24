@@ -86,11 +86,10 @@
 					<h2 class="headline">
 						{{ $noticia['headline'] }}
 						@if (count($noticia['gallery']) > 1)
-						<a href="#" role="button" class="abrirgaleria" title="Ver fotogaleria"><img src="/images/glyph/hasgallerytext.png" width="20" height="16" alt="Galería de fotos">Galería de fotos</a>
-					@endif
+							<a href="#" role="button" class="abrirgaleria" title="Ver fotogaleria"><img src="/images/glyph/hasgallerytext.png" width="20" height="16" alt="Galería de fotos">Galería de fotos</a>
+						@endif
 					</h2>
 				@endif
-
 			</header>
 
 
@@ -113,11 +112,8 @@
 				</figure>
 			@endif
 
-
-
 			<article class="main-article">
 
-				<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" min-height="90" max-height="280" />
 				<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-lg-none" min-height="250" max-height="250" margin-bottom="20" />
 
 				{{-- Article Body --}}
@@ -131,7 +127,6 @@
 						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
 							<div class="autor">{{ $noticia['credit'] }}</div>
 						@endif
-
 
 					@include('news.show.partials.social-top', ['shareText' => __('share')] )
 
@@ -165,7 +160,7 @@
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
 
-						<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" />
+						{{--<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" />--}}
 						<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-xl-none" />
 
 						@include('news.show.partials.news-tags')

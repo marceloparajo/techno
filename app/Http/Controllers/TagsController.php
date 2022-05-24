@@ -82,7 +82,7 @@ class TagsController extends Controller
         ]);
 
         $view_content = view('tags.index', compact('noticias', 'tag', 'tag_title', 'sectionTitle', 'page_description'));
-        return response($view_content)->header('Cache-Control', 'max-age=300, public');
+        return response($view_content)->header('Cache-Control', 'max-age=1800, public');//300
     }
 
     /**
