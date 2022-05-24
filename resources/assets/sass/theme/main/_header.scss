@@ -274,6 +274,7 @@
 		margin-bottom: 15px;
 		.navbar {
 			top: 76px;
+			flex-direction: row;
 			.container {
 				grid-template-areas:
 					'a a b b c c'
@@ -465,11 +466,12 @@
 				}
 				.social-top {
 					margin: 0;
-					padding-right: 0;
+					padding-right: 0.8rem;
 					background: transparent;
 					border-top: none;
 					height: 55px;
 					grid-area: c;
+					justify-content: end;
 					a {
 						margin: 0 0 0 20px;
 					}

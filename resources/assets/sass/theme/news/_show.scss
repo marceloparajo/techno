@@ -41,12 +41,13 @@
                 }
             }
 
-            .social-topsharing {
+           /*  .social-topsharing {
                 position: sticky;
                 top: 0;
                 padding: 10px;
                 z-index: 9;
                 margin-left: 120px;
+                flex-direction: row;
                 ul {
                     display: flex;
                     list-style: none;
@@ -70,14 +71,14 @@
                 p {
                     display: none;
                 }
-            }
+            } */
 
             .news-content {
-                p,
-                ul,
+                // p,
+                //ul,
                 ol,
-                li,
-                h2,
+               // li,
+                //h2,
                 h3,
                 h4,
                 h5,
@@ -91,12 +92,12 @@
                         color: $link;
                     }
                 }
-                h2 {
+               /*  h2 {
                     line-height: 1.05em;
                     font-size: 1.8rem;
                     margin: 1em .7em;
-                }
-                >p:first-of-type:first-letter {
+                } */
+                /* >p:first-of-type:first-letter {
                     color: $color-brand;
                     float: left;
                     font-size: 3.2rem;
@@ -105,8 +106,8 @@
                     font-family: $font-titulos;
                     margin: 24px 10px 10px 0;
                     transform: translateY(-10px);
-                }
-                figure {
+                } */
+              /*   figure {
                     img {
                         display: block;
                         height: auto;
@@ -122,8 +123,8 @@
                         line-height: 1em;
                         text-align: left;;
                     }
-                }
-                .tags {
+                } */
+              /*   .tags {
                     width: 100%;
                     border-top: $borde;
                     padding: 1em;
@@ -169,7 +170,7 @@
                         }
                     }
 
-                }
+                } */
 
                 .galeria-fotos {
                     padding: 10px;
@@ -198,14 +199,7 @@
                     }
                 }
 
-                &:before {
-                    content: "";
-                    display: block;
-                    margin: 0 10px 20px 10px;
-                    background: $gris-medio;
-                    height: 1px;
-                    clear: both;
-                }
+              
             }
         }
 
@@ -299,9 +293,14 @@
                     background: $gris-muy-claro;
                     position: static;
                     justify-content: space-between;
+                    flex-direction: row;
                     p {
                         color: $gris-oscuro;
                         margin-bottom: 0;
+                        line-height: 1.6em;
+                        font-family: $font-titulos;
+                     
+
                     }
                 }
                 .news-content {

@@ -1,12 +1,14 @@
 .masvistas {
+   
     width: 100%;
     border-bottom: $borde;
     padding: 1rem;
+    
     &__titulo {
         color: $second-color;
         text-transform: uppercase;
         font-family: $font-titulos;
-        font-size: 2rem;
+        font-size: 1.3em;
         padding: .2em .4em;
         font-weight: bold;
         letter-spacing: -0.02em;
@@ -21,7 +23,13 @@
       
         background: white;
         transition: ease .3s;
+       
         .enlace {
+            flex-direction: row;
+            display: flex;
+            padding: 10px 0px;
+            margin-bottom: 0px;
+            border-bottom: 1px solid #eee;
             .rankOrder {
                
                 text-align: center;
@@ -35,10 +43,16 @@
             &__titulo {
                 padding: 0 .4em;
                 font-family: $font-titulos;
-                font-weight: bold;
+                //font-weight: bold;
                 letter-spacing: -0.02em;
                 line-height:   .9rem;
+                width: 85%;
+                font-size: 12px;
+                margin: 0 1% 2% 4%;
             }
+            figure {
+                width: 38%;
+                height: 60px;}
 
         }
         &:hover {
@@ -55,6 +69,7 @@
         padding: 0px;
         &__titulo {
             width: 100%;
+            font-size: 1.8em;
         }
         &__nota {
             width: 49%;
