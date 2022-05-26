@@ -10,7 +10,7 @@
 </div>
 
 <header class="main-header">
-	{{--<x-ad-space id="float-header" width="320" height="50" class="ads d-md-none" min-height="50" max-height="50" margin-bottom="20" />--}}
+	<x-ad-space id="float-header" width="320" height="50" class="ads d-md-none" min-height="50" max-height="50" margin-bottom="20" />
     <div class="container margin-auto">
 		<button class="hamburguer" id="burguer" onclick="abreMenu()" title="menu">
 				<div class="bar-1"></div>
