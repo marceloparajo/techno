@@ -138,7 +138,7 @@ class NewsController extends Controller
         }
 
         $view_content = view($view, compact('noticia', 'jsonStructured', 'body', 'displayAuthor'));
-        return response($view_content)->header('Cache-Control', 'max-age=7200, public');//300
+        return response($view_content)->header('Cache-Control', 'max-age=1800, public');//300
     }
 
     /**
@@ -185,7 +185,7 @@ class NewsController extends Controller
         $body = str_replace('-eplanning_sec-', 'new_amp', $body);
 
         $view_content = view('amp.news', compact('noticia', 'jsonStructured', 'body'));
-        return response($view_content)->header('Cache-Control', 'max-age=7200, public');//300
+        return response($view_content)->header('Cache-Control', 'max-age=1800, public');//300
 
     }
 
