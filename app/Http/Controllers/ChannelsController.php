@@ -81,7 +81,7 @@ class ChannelsController extends Controller
         ]);
 
         $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle'));
-        return response($view_content)->header('Cache-Control', 'max-age=300, public');
+        return response($view_content)->header('Cache-Control', 'max-age=1800, public'); //300
     }
 
     /**
@@ -126,7 +126,7 @@ class ChannelsController extends Controller
         }));
 
         $view_content = view('channels.columnistas', compact('authors'));
-        return response($view_content)->header('Cache-Control', 'max-age=600, public');
+        return response($view_content)->header('Cache-Control', 'max-age=1800, public');//300
     }
 
 

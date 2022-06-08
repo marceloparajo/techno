@@ -34,9 +34,5 @@
 				<img src="/images/glyph/share/mail.svg" width="30" height="30" alt="Compartila por Email">
 			</a>
 		</li>
-
-		{{--
-		<li class="pinterest"><a href="http://pinterest.com/pin/create/button/?url={{ $noticia['permalink'] }}&media={{ $noticia['main_image']['src'] }}&description={{ urlencode($noticia['title']) }}" target="_blank" rel="noreferrer"><i class="fab fa-pinterest"></i></a></li>
-		--}}
 	</ul>
 </div>

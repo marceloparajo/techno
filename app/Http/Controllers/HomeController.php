@@ -55,7 +55,7 @@ class HomeController extends Controller
         ]);
 
         $view_content = view('home.index', compact('home_content'));
-        return response($view_content)->header('Cache-Control', 'max-age=120, public');
+        return response($view_content)->header('Cache-Control', 'max-age=300, public');//120
     }
 
     /*public function amp()

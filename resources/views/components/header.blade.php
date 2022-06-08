@@ -1,4 +1,3 @@
-
 <div class="pre-header">
 	<div class="container max-width margin-auto">
 		<div class="time-top">{{ $current_date->isoFormat('dddd DD [de] MMMM [del] YYYY') }}</div>
@@ -10,13 +9,8 @@
 	</div>
 </div>
 
-
-
-
-
 <header class="main-header">
-
-
+	<x-ad-space id="float-header" width="320" height="50" class="ads d-md-none" min-height="50" max-height="50" margin-bottom="20" />
     <div class="container margin-auto">
 		<button class="hamburguer" id="burguer" onclick="abreMenu()" title="menu">
 				<div class="bar-1"></div>
@@ -30,15 +24,11 @@
 		</div>
 	</div>
 
-
-		
 	<nav class="navbar" id="main-menu">
 		<div class="container">
 			<ul class="nav main-menu">
 
                 @foreach ($main_menu as $item)
-
-
                     @if (isset($item['children']) && count($item['children']) > 0)
 						<li class="has-children">
 						<a role="button" href="#" class="has-children-a {{ $item['class'] }}" data-toggle="dropdown">{{ $item['text'] }}</a>
@@ -53,8 +43,6 @@
     				@endif
                 @endforeach
 			</ul>
-
-
 			
 			<ul class="nav topics">
                 @foreach ($topics as $item)
@@ -66,13 +54,10 @@
                 @endforeach
             </ul>
 
-			
-
 			<form method="get" action="{{ route('search.index') }}" class="search-form">
 				<input class="search-form__input" name="q" type="text" placeholder="{{ __('search') }}" aria-label="Buscar" value="{{ Request::get('q') }}">
 				<button class="search-form__btn" type="submit"><img src="/images/glyph/search.png" alt="Buscar" width="20" height="20"></button>
 			</form>
-
 
 			<div class="social-top">
 				<a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" title="{{  ucfirst(env("APP_NAME")) }} {{ __("in instagram") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/instagram.svg" class="instagram" alt="Instagram" width="30"></a>
@@ -84,9 +69,6 @@
 		</div>
 	</nav>
 </header>
-
-
-
 
 <script>
 	function abreMenu() {

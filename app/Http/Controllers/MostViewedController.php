@@ -68,7 +68,7 @@ class MostViewedController extends Controller
         ]);
 
         $view_content = view('channels.most-viewed', compact('channel', 'noticias'));
-        return response($view_content)->header('Cache-Control', 'max-age=120, public');
+        return response($view_content)->header('Cache-Control', 'max-age=1800, public');//300
     }
 
     /**

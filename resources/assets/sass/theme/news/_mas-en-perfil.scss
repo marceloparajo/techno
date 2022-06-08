@@ -1,7 +1,7 @@
  .relacionadas {
     width: 100%;
-    padding: 0 .5em;
-    &__titulo {
+    
+    /* &__titulo {
         font-family: $font-titulos;
         font-weight: bold;
         font-size: 1.3rem;
@@ -10,7 +10,7 @@
         padding: 0 0 .1em 0;
         color: $color-brand;
         border-bottom: 1px solid $color-brand;
-    }
+    } */
     &__noticias {
         width: 100%;
     }
@@ -27,14 +27,16 @@
             display: flex;
             justify-content: space-between;
             color: $gris-oscuro;
+            flex-direction: row;
             figure {
                 width: 40%;
                 align-self: flex-start;
             }
             .relacionada-titulo-nota {
                 width: 60%;
-                padding: .5em;
+                padding: 0.1em .7em;
                 font-weight: 600;
+                font-size: 0.75em;
             }
         }
     }
@@ -46,15 +48,16 @@
     &__titulo {
         font-family: $font-titulos;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.2em;
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        flex-direction: row;
         text-transform: uppercase;
         letter-spacing: -0.03em;
         img {
             margin-left: 5px;
+            margin-bottom: -5px;
         }
     }
     &__nota {
@@ -63,6 +66,8 @@
         box-shadow: $box-shadow;
         background: white;
         padding: 10px 0 0 0;
+        display: flex;
+        flex-direction: column;
         .logo-revista {
             display: block;
             text-indent: -9999px;
@@ -72,11 +77,12 @@
         }
         &__titulo {
             display: block;
-            font-size: 1.1rem;
-            font-family: $font-titulos;
-            font-weight: bold;
+           // font-size: 1.17em;
+           // font-family: $font-titulos;
+           // font-weight: 500;
             line-height: 1em;
-            padding: .2em 1em .8em 1em;
+            padding: 1em;
+           // letter-spacing: -0.03em;
         }
         &.noticias {
             background: #004e94;
@@ -133,7 +139,7 @@
             width: 100%;
             display: grid;
             gap: 1rem;
-            grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+            grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) );
         }
         &__titulo {
             width: 100%;

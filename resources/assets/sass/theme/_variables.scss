@@ -24,12 +24,12 @@ $borde: 1px solid $gris-claro;
 
 // -- Caras tipografías
 
-$font-size: 1rem;
+$font-size: 1.2rem;
 $line-height-base: 1.6;
-$font-base: 'Poppins',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-$font-titulos-nowebfont: Arial, Helvetica, Roboto, sans-serif;
+$font-base: 'Poppins',Tahoma, -apple-system,BlinkMacSystemFont,"Segoe UI", Arial, "Roboto","Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$font-titulos-nowebfont: Tahoma, Helvetica, Roboto, sans-serif;
 $font-titulos: 'Poppins', sans-serif;
-$condensada: 'Oswald', sans-serif;
+//$condensada: 'Oswald', sans-serif;
 
 
 // -- Paywall

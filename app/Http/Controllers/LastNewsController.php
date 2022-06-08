@@ -77,7 +77,7 @@ class LastNewsController extends Controller
         ]);
 
         $view_content = view('channels.index', compact('channel', 'noticias', 'sectionTitle', 'page_description'));
-        return response($view_content)->header('Cache-Control', 'max-age=120, public');
+        return response($view_content)->header('Cache-Control', 'max-age=1800, public');//300
     }
 
     /**

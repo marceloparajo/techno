@@ -19,7 +19,9 @@
         @endforeach
     </picture>
 @else
-    <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $loadingImage() }}" data-src="{{ $src }}" @if ($lazy_load) loading="lazy" @endif>
+    <picture class="{{ $picture_class }}">
+        <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $src }}" style="width: 100%;" @if ($lazy_load) loading="lazy" @endif>
+    </picture>
 @endif
 @if ($play_button)
     <div class="galeria-video">

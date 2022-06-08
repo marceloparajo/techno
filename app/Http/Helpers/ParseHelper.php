@@ -478,7 +478,7 @@ class ParseHelper
             $imagen = 'http://fotos.perfil.com/2016/07/26/default.jpg';
 
         // Url
-        $url = ($site == strtolower(env('APP_NAME', 'www'))) ? asset(ltrim($item['pagePath']?? '')) : $sites_urls[$site] . $item['pagePath']?? '';
+        $url = $item['url']; //($site == strtolower(env('APP_NAME', 'www'))) ? asset(ltrim($item['pagePath']?? '')) : $sites_urls[$site] . $item['pagePath']?? '';
 
         return [
             'title' => $item['pageTitle']?? '',

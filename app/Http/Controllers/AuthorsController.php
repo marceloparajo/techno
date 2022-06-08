@@ -91,7 +91,9 @@ class AuthorsController extends Controller
 
         $sectionTitle = __('news of') ." ". $author['firstname']." ". $author['lastname'];
 
-        return view('authors.show', compact('noticias', 'author', 'sectionTitle'));
+
+        $view = view('authors.show', compact('noticias', 'author', 'sectionTitle'));
+        return response($view)->header('Cache-Control', 'max-age=1800, public'); //300
     }
 
     /*public function amp(Route $route, BloquesHelper $bloquesHelper)

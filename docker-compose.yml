@@ -6,7 +6,7 @@ services:
     image: fedemramato/laravel-php7.3:latest
     container_name: exitoinav2-site
     environment:
-      VIRTUAL_HOST: dev-new-exitoina.perfil.com
+      VIRTUAL_HOST: dev-exitoina.perfil.com
     restart: unless-stopped
     expose:
       - "80"

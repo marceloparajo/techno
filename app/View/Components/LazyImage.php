@@ -74,13 +74,14 @@ class LazyImage extends Component
      */
     public function __construct(string $src, string $alt = '', string $class = '', bool $playButton = false, bool $cameraButton = false, int $maxWidth = null, bool $cleanSource = false, array $sizes = [['v' => 260, 'w' => 360, 'h' => 205], ['v' => 414, 'w' => 414, 'h' => 236]], bool $externalImage = false, bool $vertical = false, bool $lazyLoad = true, string $pictureClass = 'cls-optimized')
     {
+        $this->external_image = $externalImage;
+        $this->src = $src;
         $this->src = ($cleanSource) ? $this->_cleanSource($src) : $src;
         $this->alt = $alt;
         $this->class = $class;
         $this->play_button = $playButton;
         $this->camera_button = $cameraButton;
         $this->max_width = $maxWidth;
-        $this->external_image = $externalImage;
         $this->lazy_load = $lazyLoad;
         $this->sizes = $sizes;
         $this->picture_class = $pictureClass;
@@ -126,7 +127,10 @@ class LazyImage extends Component
      */
     public function internalImage()
     {
-        return ! $this->external_image || Str::contains($this->src, env('IMAGES_SERVER', 'https://fotos.perfil.com'));
+        if ($this->external_image)
+            return false;
+
+        return Str::contains($this->src, 'fotos.perfil.com');
     }
 
     /**

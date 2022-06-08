@@ -86,16 +86,14 @@
 					<h2 class="headline">
 						{{ $noticia['headline'] }}
 						@if (count($noticia['gallery']) > 1)
-						<a href="#" role="button" class="abrirgaleria" title="Ver fotogaleria"><img src="/images/glyph/hasgallerytext.png" width="20" height="16" alt="Galería de fotos">Galería de fotos</a>
-					@endif
+							<a href="#" role="button" class="abrirgaleria" title="Ver fotogaleria"><img src="/images/glyph/hasgallerytext.png" width="20" height="16" alt="Galería de fotos">Galería de fotos</a>
+						@endif
 					</h2>
 				@endif
-
 			</header>
 
 
 			{{-- Featured Image or Video --}}
-			
 			@if ($noticia['featured_content'] == 'embed_code')
 				<div class="media embed-responsive embed-responsive-16by9 videoContainer">
 					{!! $noticia['embed_code'] !!}
@@ -112,12 +110,10 @@
 					<figcaption class="figure-caption">{{ $noticia['main_image']['caption'] }}<span class="credito-foto"> | {{ $noticia['main_image']['credit']}}</span></figcaption>
 				</figure>
 			@endif
-
-
+			<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-lg-flex" min-height="90" max-height="250" margin-bottom="20" />
 
 			<article class="main-article">
 
-				<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" min-height="90" max-height="280" />
 				<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-lg-none" min-height="250" max-height="250" margin-bottom="20" />
 
 				{{-- Article Body --}}
@@ -131,7 +127,6 @@
 						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
 							<div class="autor">{{ $noticia['credit'] }}</div>
 						@endif
-
 
 					@include('news.show.partials.social-top', ['shareText' => __('share')] )
 
@@ -164,8 +159,7 @@
 						{{--  /Gallery --}}
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
-
-						<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" />
+						<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-lg-flex" min-height="90" max-height="250" margin-bottom="20" />
 						<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-xl-none" />
 
 						@include('news.show.partials.news-tags')
@@ -192,7 +186,7 @@
 					<div class="comments">
 						<div class="col-12">
 							<h4></h4>
-							<div class="OUTBRAIN" data-src="{{ $noticia['permalink'] }}" data-widget-id="AR_1" data-ob-template="carasperfil"></div>
+							<div class="OUTBRAIN" data-src="{{ $noticia['permalink'] }}" data-widget-id="AR_1" data-ob-template="exitoina"></div>
 							<script defer type="text/javascript" src="https://widgets.outbrain.com/outbrain.js"></script>
 							<style type="text/css" media="screen">.AR_1.ob-widget .ob_what {top: -30px !important;} .AR_1.ob-widget {padding-left: 0 !important;}</style>
 						</div>
@@ -216,4 +210,7 @@
 		</a>
 	@endif
 
+	<x-ad-space id="inline" width="1" height="1" class="ads" min-height="1" max-height="1" />
+	<x-ad-space id="interscroller" width="1" height="1" class="ads" min-height="1" max-height="1" />
+	<x-ad-space id="teads" width="1" height="1" class="ads" min-height="1" max-height="1" />
 @endsection
