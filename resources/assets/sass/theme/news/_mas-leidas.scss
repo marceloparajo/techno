@@ -1,66 +1,66 @@
-.masvistas {
-   
-    width: 100%;
-    border-bottom: $borde;
-    padding: 1rem;
+// .masvistas {
+//    display:none;
+//     width: 100%;
+//     border-bottom: $borde;
+//     padding: 1rem;
     
-    &__titulo {
-        color: $second-color;
-        text-transform: uppercase;
-        font-family: $font-titulos;
-        font-size: 1.3em;
-        padding: .2em .4em;
-        font-weight: bold;
-        letter-spacing: -0.02em;
-        margin: 0 0 .2rem 0;
-        line-height: 1;
-       // border-left: 5px solid $second-color;
-        a {
-            color: $negro;
-        }
-    }
-    &__nota {
+//     &__titulo {
+//         color: $second-color;
+//         text-transform: uppercase;
+//         font-family: $font-titulos;
+//         font-size: 1.3em;
+//         padding: .2em .4em;
+//         font-weight: bold;
+//         letter-spacing: -0.02em;
+//         margin: 0 0 .2rem 0;
+//         line-height: 1;
       
-        background: white;
-        transition: ease .3s;
+//         a {
+//             color: $negro;
+//         }
+//     }
+//     &__nota {
+      
+//         background: white;
+//         transition: ease .3s;
        
-        .enlace {
-            flex-direction: row;
-            display: flex;
-            padding: 10px 0px;
-            margin-bottom: 0px;
-            border-bottom: 1px solid #eee;
-            .rankOrder {
+//         .enlace {
+//             flex-direction: row;
+//             display: flex;
+//             padding: 10px 0px;
+//             margin-bottom: 0px;
+//             border-bottom: 1px solid #eee;
+//             .rankOrder {
                
-                text-align: center;
-                font-family: $font-titulos;
-                padding: 2px 0;
-                font-weight: 600;
-                font-size: 2.8rem;
-                border-bottom: 5px solid $second-color;
-                margin-right: 10px;
-            }
-            &__titulo {
-                padding: 0 .4em;
-                font-family: $font-titulos;
-                //font-weight: bold;
-                letter-spacing: -0.02em;
-                line-height:   .9rem;
-                width: 85%;
-                font-size: 12px;
-                margin: 0 1% 2% 4%;
-            }
-            figure {
-                width: 38%;
-                height: 60px;}
+//                 text-align: center;
+//                 font-family: $font-titulos;
+//                 padding: 2px 0;
+//                 font-weight: 600;
+//                 font-size: 2.8rem;
+//                 border-bottom: 5px solid $second-color;
+//                 margin-right: 10px;
+//             }
+//             &__titulo {
+//                 padding: 0 .4em;
+//                 font-family: $font-titulos;
+//                 //font-weight: bold;
+//                 letter-spacing: -0.02em;
+//                 line-height:   .9rem;
+//                 width: 85%;
+//                 font-size: 12px;
+//                 margin: 0 1% 2% 4%;
+//             }
+//             figure {
+//                 width: 38%;
+//                 height: 60px;}
 
-        }
-        &:hover {
-            background: $second-color;
-        }
-    }
-}
-
+//         }
+//         &:hover {
+//             background: $second-color;
+//         }
+//     }
+// }
+/* 
 @include media-breakpoint-only(md) {
     .masvistas {
         display: flex;
@@ -92,7 +92,7 @@
             }
         }
     }
-}
+} */
 
 /* @include media-breakpoint-up(xxl) {
     .masvistas {
