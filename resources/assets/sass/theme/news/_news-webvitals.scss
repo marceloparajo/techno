@@ -315,7 +315,10 @@
                 text-align: center;
             }
             h1 {
-                font-size: 2.8rem;
+                font-family: $font-titulos-nowebfont;
+                font-size: 2,6em;
+                 letter-spacing: -0.058em;
+                 line-height: 1.069em;
             }
          
              h2 {
@@ -331,10 +334,90 @@
 
  
 }
+.masvistas {
+    &__titulo {
+        color: $negro;
+        font-family: $font-titulos-nowebfont;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding-left: 15px;
+       border-left: 4px solid $second-color;
+       margin-bottom: 10px;
+        font-weight: 700;
+      
+    }
+   
+    &__nota {
+      
+        background: white;
+        transition: ease .3s;
+       
+        .enlace {
+            flex-direction: row;
+            display: flex;
+            padding: 10px 0px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 0px;
+         
+            .rankOrder {
+               
+                text-align: center;
+              font-family: $font-titulos-nowebfont;
+                padding: 2px 0;
+               font-weight: 500;
+                font-size: 2.8rem; 
+            
+                margin-right: 10px;
+                line-height: 1;
+                width: 10%;
+                
+            }
+            &__titulo {
+                padding: 0 .4em;
+                font-family: $font-titulos-nowebfont;
+                //font-weight: bold;
+                letter-spacing: 0.02em;
+                line-height:   1.11em;
+                width: 85%;
+                font-size: 0.91em;
+                margin: 0 1% 2% 4%;
+            }
+            picture {
+                width: 38%;
+                height: 60px;}
 
-
+        }
+        &:hover {
+            background: $second-color;
+        }
+    }
+}
 
  .wf-loaded {
+
+    .masvistas    {
+        &__titulo {
+            font-family: $font-titulos;
+            line-height: 1.15em;
+
+        }
+        .rankOrder {
+           
+            font-family: $font-titulos;
+    
+        }
+        .enlace {
+     
+            &__titulo {
+            font-family: $font-titulos;
+            font-size: 0.88em;
+             letter-spacing: -0.03em;
+             line-height: 1.15em;
+            
+            }
+        }
+    }
+
     .noticia {
         .articulo-header {
             .hat {
@@ -355,7 +438,7 @@
           h2 {
             font-size: 1.38em;
             letter-spacing: -0.068em;
-            line-height: 1.1em;
+            line-height: 1.12em;
             font-family: $font-titulos;
              } 
         }
@@ -397,6 +480,7 @@
                         font-family: $font-titulos;
                         font-size: 1.17em;
                         letter-spacing: -0.01em;
+                        line-height:   1.1em;
                     }
                  }
             }
@@ -432,9 +516,10 @@
         @include media-breakpoint-up(lg) {
             .articulo-header {
                 h1 {
-                    font-size: 2.8rem;
-                    letter-spacing: -0.075em;
-                    line-height: 1.07em;
+                    font-size: 2.5rem;
+                    letter-spacing: -0.05em;
+                    line-height: 1.1em;
+                    font-family: $font-titulos;
                     
                 }
                 h2 {

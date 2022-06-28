@@ -1,38 +1,48 @@
 .bloque {
 	margin-bottom: 20px;
+
 	.articulo {
-	
-	
+
+
 		a {
 			figure {
 				.galeria-video {
 					right: 25px;
 					top: 25px;
 				}
+
 				padding-bottom: 56.2%;
 				height: 0;
 				overflow: hidden;
+
 				>picture img {
 					display: block;
 					position: absolute;
 					top: 0;
-					left:0;
-					right:0;
-					bottom:0;
+					left: 0;
+					right: 0;
+					bottom: 0;
 					width: 100%;
 				}
 			}
+
 			.meta-content {
 				display: flex;
 				flex-direction: column;
 				padding: 0 10px;
 				transform: translateY(-20px);
+
 				.hat {
 					margin: auto;
 				}
 			}
 		}
-		&.nota-0, &.nota-1, &.nota-2, &.nota-3, &.nota-4 { 
+
+		&.nota-0,
+		&.nota-1,
+		&.nota-2,
+		&.nota-3,
+		&.nota-4 {
 			a {
 				.meta-content {
 					h2 {
@@ -43,19 +53,23 @@
 				}
 			}
 		}
+
 		&.nota-2 {
 			background: $color-brand;
+
 			a {
 				.meta-content {
 					.hat {
 						background: $second-color;
 					}
+
 					h2 {
 						color: white;
 						font-size: 1.4rem;
 						text-align: left;
-					
+
 					}
+
 					.firma-home {
 						color: white;
 					}
@@ -66,18 +80,22 @@
 
 	.bloque-sidebar {
 		width: 100%;
+
 		.tapa {
 			background: $gris-claro;
 			padding: 10px;
+
 			figure {
 				width: 100%;
 				max-width: 300px;
 				margin: 0 auto;
+
 				picture.cls-optimized {
 					width: 100%;
 					height: auto;
 					overflow: visible;
 					padding: 0;
+
 					img {
 						position: static;
 						width: 100%;
@@ -85,12 +103,14 @@
 					}
 				}
 			}
+
 			.suscripcion-kiosco {
 				display: block;
 				width: 100%;
 				max-width: 300px;
 				padding: 10px 0;
 				margin: 0 auto;
+
 				a {
 					display: block;
 					width: 100%;
@@ -104,10 +124,71 @@
 				}
 			}
 		}
+
 		.placa-home {
 			width: 100%;
 			max-width: 300px;
 			margin: 15px auto;
+		}
+	}
+
+	.masvistas {
+		&__titulo {
+			color: $negro;
+			font-family: $font-titulos;
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			padding: 5px;
+			border-left: 4px solid $second-color;
+			margin-bottom: 10px;
+			font-weight: 700;
+			margin-top: 2rem;
+		}
+
+		&__nota {
+
+			background: white;
+			transition: ease .3s;
+
+			.enlace {
+				flex-direction: row;
+				display: flex;
+				padding: 10px 0px;
+				margin-bottom: 0px;
+				border-bottom: 1px solid #eee;
+
+				.rankOrder {
+
+					text-align: center;
+					font-family: $font-titulos;
+					padding: 2px 0;
+					font-weight: 500;
+					font-size: 2.8rem;
+					border-bottom: 5px solid $second-color;
+					margin-right: 10px;
+				}
+
+				&__titulo {
+					padding: 0 .4em;
+					font-family: $font-titulos;
+					//font-weight: bold;
+					letter-spacing: -0.02em;
+					line-height: 1.1rem;
+					width: 85%;
+					font-size: 13px;
+					margin: 0 1% 2% 4%;
+				}
+
+				figure {
+					width: 88%;
+					height: 60px;
+				}
+
+			}
+
+			&:hover {
+				background: $second-color;
+			}
 		}
 	}
 }
@@ -121,31 +202,39 @@
 		.articulo {
 			box-shadow: $box-shadow;
 			width: 100%;
+
 			&.nota-0,
 			&.nota-1,
 			&.nota-2 {
 				width: 32%;
-				margin: 20px 0; 
-				.meta-content{
+				margin: 20px 0;
+
+				.meta-content {
 					padding: 10px;
 					margin-bottom: -25px;
-				
+
 				}
+
 				&:after {
 					content: none;
 				}
 			}
 		}
+
 		.bloque-sidebar {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
+
 			.tapa {
 				width: 100%;
 			}
+
 			.placa-home {
 				width: 300px;
-			};
+			}
+
+			;
 		}
 	}
 }
@@ -159,8 +248,9 @@
 			'e f sidebar';
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
-		
+
 		.articulo {
+
 			&.nota-0,
 			&.nota-1,
 			&.nota-2,
@@ -169,14 +259,17 @@
 			&.nota-5 {
 				width: 100%;
 				margin: 0;
+
 				&:after {
 					content: none;
 				}
-				.meta-content{
+
+				.meta-content {
 					padding: 10px;
 					margin-bottom: -25px;
-				
+
 				}
+
 				figure {
 					.galeria-video {
 						top: 10px;
@@ -184,28 +277,34 @@
 					}
 				}
 			}
+
 			&.nota-0 {
 				grid-area: a;
 			}
+
 			&.nota-1 {
 				grid-area: b;
 			}
+
 			&.nota-2 {
 				grid-area: c;
 			}
+
 			&.nota-3 {
 				grid-area: e;
 			}
+
 			&.nota-4 {
 				grid-area: f;
 			}
 
-			
+
 		}
 
 		.ad-300x250 {
 			grid-area: d;
 		}
+
 		.bloque-sidebar {
 			grid-area: sidebar;
 			display: block;
@@ -218,6 +317,6 @@
 		grid-template-areas:
 			'a b c sidebar'
 			'd e f sidebar';
-		grid-template-columns: repeat(4,1fr);
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
