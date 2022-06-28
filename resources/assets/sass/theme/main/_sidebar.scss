@@ -1,46 +1,88 @@
 /* .masvistas {
-    width: 100%;
-  
-    &__titulo { 
-        background: white;
+    &__titulo {
         color: $negro;
-        
+        font-family: $font-titulos-nowebfont;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding-left: 15px;
+       border-left: 4px solid $second-color;
+       margin-bottom: 10px;
+        font-weight: 700;
+      
     }
+   
     &__nota {
+      
+        background: white;
+        transition: ease .3s;
+       
         .enlace {
+            flex-direction: row;
             display: flex;
             padding: 10px 0px;
+            border-bottom: 1px solid #eee;
             margin-bottom: 0px;
-            border-bottom: 1px solid $gris-claro;
-        
-            .rankOrder { font-size: 1.5rem;}
-            picture {
-                width: 38%;
-                height: 60px;
-                position: relative;
-                overflow: hidden;
-                img {
-                    height: 100%;
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    object-fit: cover;
-                }
-            }
+         
             .rankOrder {
+               
+                text-align: center;
+              font-family: $font-titulos-nowebfont;
+                padding: 2px 0;
+               font-weight: 500;
+                font-size: 2.8rem; 
+            
+                margin-right: 10px;
+                line-height: 1;
                 width: 10%;
+                
             }
             &__titulo {
+                padding: 0 .4em;
+                font-family: $font-titulos-nowebfont;
+                //font-weight: bold;
+                letter-spacing: 0.02em;
+                line-height:   1.11em;
                 width: 85%;
+                font-size: 0.91em;
                 margin: 0 1% 2% 4%;
-                font-size: 12px;
-                line-height: 15px;
-                font-weight: 600;
+            }
+            picture {
+                width: 38%;
+                height: 60px;}
 
+        }
+        &:hover {
+            background: $second-color;
+        }
+    }
+}
+
+ .wf-loaded {
+
+    .masvistas    {
+        &__titulo {
+            font-family: $font-titulos;
+            line-height: 1.15em;
+
+        }
+        .rankOrder {
+           
+            font-family: $font-titulos;
+    
+        }
+        .enlace {
+     
+            &__titulo {
+            font-family: $font-titulos;
+            font-size: 0.88em;
+             letter-spacing: -0.03em;
+             line-height: 1.15em;
+            
             }
         }
     }
-} */
+
+}    */
 
 .placa-home {
     border: $borde;
