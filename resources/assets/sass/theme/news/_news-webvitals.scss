@@ -337,13 +337,14 @@
 .masvistas {
     &__titulo {
         color: $negro;
-        font-family: $font-titulos;
+        font-family: $font-titulos-nowebfont;
         font-size: 1.2rem;
         text-transform: uppercase;
         padding-left: 15px;
        border-left: 4px solid $second-color;
        margin-bottom: 10px;
         font-weight: 700;
+      
     }
    
     &__nota {
@@ -365,7 +366,7 @@
                 padding: 2px 0;
                font-weight: 500;
                 font-size: 2.8rem; 
-                border-bottom: 5px solid $second-color;
+            
                 margin-right: 10px;
                 line-height: 1;
                 width: 10%;
@@ -395,6 +396,11 @@
  .wf-loaded {
 
     .masvistas    {
+        &__titulo {
+            font-family: $font-titulos;
+            line-height: 1.15em;
+
+        }
         .rankOrder {
            
             font-family: $font-titulos;
