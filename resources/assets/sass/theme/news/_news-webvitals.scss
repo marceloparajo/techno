@@ -309,16 +309,16 @@
             display: flex;
             flex-direction: column;
             .hat {
-                padding: 0 3em .3em 3em;
-                border-bottom: 1px solid $gris-claro;
-                margin: 0 auto 1em auto;
-                text-align: center;
+                padding: 0 0.3em 0.3em;
+                border-bottom: 1px solid #eee;
+                margin-bottom: 1em;
             }
             h1 {
                 font-family: $font-titulos-nowebfont;
                 font-size: 2,6em;
                  letter-spacing: -0.058em;
                  line-height: 1.069em;
+                 margin: 0 0 0.3em 0;
             }
          
              h2 {
