@@ -25,11 +25,6 @@
 					<a href="https://www.instagram.com/{{ $author['instagram'] }}" itemprop="sameAs" target="_blank" rel="noreferrer"><img src="/images/glyph/share/instagram.svg" class="instagram" alt="ig" style="width:12px;height:12px;"></i>{{ $author['instagram'] }}</a>
 				</span>
 			@endif
-			@if ($author['blogsite'] != '')
-				<span>
-					<a href="{{ $author['blog'] }}" itemprop="sameAs" target="_blank">Web</a>
-				</span>
-			@endif
 		</p>
 	@endif
 </span>

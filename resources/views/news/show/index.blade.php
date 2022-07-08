@@ -118,15 +118,15 @@
 
 				{{-- Article Body --}}
 				<div class="news-body">
-						{{-- Author --}}
+						{{-- Author
 						@if ($noticia['signed'])
 							<div class="autor">
 								@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 							</div>
-						{{-- Credit --}}
 						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
 							<div class="autor">{{ $noticia['credit'] }}</div>
 						@endif
+						--}}
 
 					@include('news.show.partials.social-top', ['shareText' => __('share')] )
 

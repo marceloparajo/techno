@@ -40,7 +40,15 @@
 		<article class="articulo nota-{{ $loop->iteration }}">
 			<a href="{{ $noticia['permalink'] }}">
 				<figure>
-					<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['caption']" class="img-fluid" sizes="200,300" :play-button="$noticia['has_video']" :camera-button="$noticia['has_gallery']" clean-source="true" />
+					<x-lazy-image
+							:src="$noticia['main_image']['srcs']['original']"
+							:alt="$noticia['main_image']['caption']"
+							class="img-fluid"
+							:sizes="[['v' => 375, 'w' => 373, 'h' => 210], ['v' => 414, 'w' => 412, 'h' => 232], ['v' => 768, 'w' => 333, 'h' => 187], ['v' => 1024, 'w' => 286, 'h' => 161], ['v' => 1366, 'w' => 273, 'h' => 153]]"
+							:play-button="$noticia['has_video']"
+							:camera-button="$noticia['has_gallery']"
+							clean-source="true"
+					/>
 				</figure>
 				<div class="meta-content">
 					<h2>{{ $noticia['home_title'] }}</h2>
