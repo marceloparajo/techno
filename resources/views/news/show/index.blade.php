@@ -178,9 +178,6 @@
 				</div>
 				{{-- / Facebook Comments --}}
 
-				{{-- Noticias sugeridas de otros sitios/revistas --}}
-				<x-suggested-site-news />
-
 				{{-- Outbrain --}}
 				@if (env('OUTBRAIN_ENABLE', false))
 					<div class="comments">
@@ -193,6 +190,9 @@
 					</div>
 				@endif
 				{{-- /Outbrain --}}
+
+				{{-- Noticias sugeridas de otros sitios/revistas --}}
+				<x-suggested-site-news />
 
 			</article>
 
