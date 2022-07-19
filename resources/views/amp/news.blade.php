@@ -15,8 +15,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
          {{-- /Font --}}
 
-
-
         <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
         <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
@@ -35,9 +33,7 @@
         <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
         <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
 
-        <script type="application/ld+json">
-            {!! json_encode($jsonStructured) !!}
-        </script>
+        <x-structured-data :noticia="$noticia" />
 
         @include('amp.partials.styles')
 
@@ -45,6 +41,14 @@
 
     <body>
         <x-google-tag-manager category="nota" format="amp" :info="$noticia" />
+
+        @if (config('services.marfeel.enable'))
+            <amp-analytics config="https://events.newsroom.bi/amp.v1.json" data-credentials="include">
+                <script type="application/json" >
+                    {"vars" : {"accountId": "1740"}}
+                </script>
+            </amp-analytics>
+        @endif
 
         @if (env('NAVEGG_ENABLE', false))
             <amp-analytics type="navegg" id="navegg56362">

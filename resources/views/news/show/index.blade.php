@@ -55,9 +55,7 @@
 @endsection
 
 @section('head-bottom')
-	<script type="application/ld+json">
-		{!! json_encode($jsonStructured) !!}
-	</script>
+	<x-structured-data :noticia="$noticia" />
 	<noscript>
 		<img src="http://b.scorecardresearch.com/p?c1=2&c2=6906401&cv=2.0&cj=1" />
 	</noscript>
