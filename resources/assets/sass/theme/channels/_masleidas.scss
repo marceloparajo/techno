@@ -4,7 +4,8 @@
     h1 {
         width: 100%;
         text-transform: uppercase;
-        font-weight: normal;
+        font-weight: 700;
+        font-family: $font-titulos-nowebfont;
     }
 
     .articulo {
@@ -18,7 +19,13 @@
                 padding-top: 0;
                 h2 {
                     color: $gris-oscuro;
-                    font-size: 1.2rem;
+                    padding: 1rem;
+                    color: #313133;
+                    font-size: 1.1rem;
+                    line-height: 1.3rem;
+                    font-weight: 500;
+                    font-family: $font-titulos-nowebfont;
+                
                 }
             }
         } 
@@ -73,4 +80,60 @@
             width: 32%;
         }
     }
+}
+
+
+.wf-loaded { 
+    .masleidas {
+        padding-top: 10px;
+    
+        h1 {
+          
+            font-family: $font-titulos;
+        }
+    
+        .articulo {
+          
+            a {
+                
+                .meta-content {
+                   
+                    h2 {
+                        font-family: $font-titulos;
+                        font-size: 1rem;
+                        line-height: 1.3rem;
+                        font-weight: 500;
+                      
+                    
+                    }
+                }
+            } 
+            &__ordenleidas {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                color: white;
+                font-family: $font-titulos;
+                font-size: 4rem;
+                text-shadow: $text-shadow;
+                z-index: 2;
+                letter-spacing: -.04em;
+                opacity: .7;
+                transition: ease .3s;
+            }
+        }
+    }
+    
+  
+    @include media-breakpoint-up(xxl) {
+        .masleidas {
+            .articulo {
+                width: 32%;
+            }
+        }
+    }
+    
+
+
+
 }
