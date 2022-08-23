@@ -138,11 +138,10 @@
 			font-family: $font-titulos;
 			font-size: 1.2rem;
 			text-transform: uppercase;
-			padding: 5px;
-			border-left: 4px solid $second-color;
+			padding: 0px 10px;
+			border-left: 5px solid $color-brand;
 			margin-bottom: 10px;
 			font-weight: 700;
-			margin-top: 2rem;
 		}
 
 		&__nota {
@@ -188,6 +187,7 @@
 
 			&:hover {
 				background: $second-color;
+				a { color: white}
 			}
 		}
 	}

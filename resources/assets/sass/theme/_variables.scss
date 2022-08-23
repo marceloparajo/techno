@@ -6,9 +6,9 @@ $body-bg-2: #333;
 
 // -- Caras colores --//
 
-$color-brand: #e12111;
-$second-color: #f1df0f;
-$link: #e12111;
+$color-brand: #ed1b24;
+$second-color: #313131;
+$link: #ed1b24;
 $gris-oscuro: #313133;
 $gris-medio: #666;
 $gris-claro: #eee;
@@ -26,10 +26,10 @@ $borde: 1px solid $gris-claro;
 
 $font-size: 1.2rem;
 $line-height-base: 1.6;
-$font-base: 'Poppins',Tahoma, -apple-system,BlinkMacSystemFont,"Segoe UI", Arial, "Roboto","Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-$font-titulos-nowebfont: Tahoma, Helvetica, Roboto, sans-serif;
-$font-titulos: 'Poppins', sans-serif;
-//$condensada: 'Oswald', sans-serif;
+$font-base: 'Roboto', sans-serif, -apple-system,BlinkMacSystemFont,"Segoe UI", Arial, "Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$font-titulos-nowebfont: Arial,'Roboto', Helvetica, Roboto, sans-serif;
+$font-titulos: 'Roboto', sans-serif;
+$condensada: 'Roboto Condensed', sans-serif;
 
 
 // -- Paywall

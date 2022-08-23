@@ -19,7 +19,7 @@
 		</button>
 		<div class="logo">
 			<a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}">
-				<img src="{{ asset('img/logo.webp') }}" alt="{{ env('APP_NAME') }}">
+				<img src="{{ asset('img/logo-parabrisas.svg') }}" alt="{{ env('APP_NAME') }}">
 			</a>
 		</div>
 	</div>

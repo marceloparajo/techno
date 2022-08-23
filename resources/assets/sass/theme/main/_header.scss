@@ -5,7 +5,7 @@
 
 
 .main-header {
-	background: white;
+	background: $color-brand;
 	position: sticky;
 	top: 0;
 	z-index: 9;
@@ -52,8 +52,8 @@
 		}
 
 		.logo {
-			width: 150px;
-			height: 25px;
+			width: 230px;
+			height: 55px;
 			
 			
 			img {
@@ -99,7 +99,7 @@
 
 					a {
 						text-decoration: none;
-						color: $negro;
+						color: white;
 						display: block;
 						padding: 5px 10px;
 						&.has-children-a {
@@ -210,9 +210,10 @@
 
 	.main-header {
 		margin-bottom: 10px;
+		.main-menu { padding-top: 55px;}
 		.navbar {
 			.container {
-				background: white;
+				background: $color-brand;
 				box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .2);
 				display: grid;
 				grid-template-areas:
@@ -220,10 +221,12 @@
 					'a c'
 					'd e';
 				grid-template-columns: 1fr 1fr;
+			
 				ul.nav {
 					width: 100%;
 					padding: 0 1%;
 					box-shadow: none;
+					
 					&:nth-child(1) {
 						grid-area: a;
 					}
@@ -326,9 +329,9 @@
 		padding: 10px;
 		>.container {
 			.logo {
-				width: 200px;
+				width: 230px;
 				height: 30px;
-				padding: 8px 8px 8px 10px;
+				padding: 0px 8px;
 			}
 		}
 		.navbar {
@@ -343,8 +346,8 @@
 		 display:grid;
 		grid-template-areas:
 			'a b c d';
-		grid-template-columns: 0px 185px auto 0px; 
-		box-shadow: -6px 11px 22px -13px rgba(0, 0, 0, .6), 0 50px 0 0 $color-brand, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+		grid-template-columns: 0px 230px auto 0px; 
+		box-shadow: -6px 11px 22px -13px rgba(0, 0, 0, .6), 0 50px 0 0 $gris-claro, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 		>.container {
 			grid-area: b;
 			.hamburguer {
@@ -375,16 +378,16 @@
 						border-bottom: none;
 						width: auto;
 						display: inline-block;
-						font-family: $font-titulos;
-						font-size: .85rem;
-						letter-spacing: -0.03em;						
+						font-family: $condensada;
+						font-size: 0.95em;
+						letter-spacing: 0.01em;						
 						ul {
 							display: none;
 							li {
 								width: 180px;
 								background: $gris-muy-claro;
 								a {
-									color: $negro;
+									color: white;
 									padding: 10px;
 									border-bottom: 1px solid white;
 									border-left: 1px solid white;
@@ -436,13 +439,13 @@
 						}
 					}
 					&.topics {
-						transform: translateX(-190px);
+						transform: translateX(-230px);
 						height: 50px;
 						overflow: hidden;
 
 						li {
 							a {
-								color: white;
+								color: $second-color;
 								padding: 15px 0.6rem 0;
 								font-size: .9rem;
 								

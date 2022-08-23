@@ -18,19 +18,19 @@
                 transform: translateY(-10px);
 				h2 {
 					font-weight: 500;
-					font-size: 1.5rem;
+					font-size: 1.7rem;
 					letter-spacing: -.02em;
 					line-height: 1.1em;
 					padding:10px 0 ;
 					text-align: center;
 				}
                 .hat {
-					background-color: $second-color;
+					background-color: $color-brand;
                     margin: auto;
                     transform: translateX(15px);
 					border-radius: 2px;
-					font-size: 0.70rem;
-					color: $color-brand;
+					font-size: 0.80rem;
+					color: white;
 					font-weight: 700;
 					padding: 6px 9px 5px;
 					line-height: 1;
