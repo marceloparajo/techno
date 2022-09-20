@@ -138,7 +138,9 @@
 
         }
         &:hover {
-            background: $second-color;
+           // background: $second-color;
+           
+            a {  color: white; }
         }
     }
 }

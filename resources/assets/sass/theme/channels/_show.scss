@@ -21,7 +21,7 @@
                 padding:1.5em;
 
                 .hat {
-                    background: $color-brand;
+                    background: $gris-claro;
                     border-radius: 4px;
                     padding: 8px 15px;
                 
@@ -119,8 +119,8 @@
     .channel,
     .tag,
     .autor {
-       // display: flex;
-        //justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         .articulo {
             width: 48%;

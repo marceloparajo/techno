@@ -27,7 +27,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: start;
-        background-color: white;
+        background-color: #ed1b24;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
         height: 44px;
         position: fixed;

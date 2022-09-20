@@ -1,7 +1,7 @@
 <footer class="main-footer">
     <figure>
         <a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}" itemprop="url">
-            <img src="{{ asset('img/logo_gris.png') }}" alt="Exitoina">
+            <img src="{{ asset('img/logo-parabrisas.svg') }}" alt="Exitoina">
         </a>
     </figure>
     <div class="footer-redes">
