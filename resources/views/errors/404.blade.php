@@ -24,7 +24,7 @@
 
 
 @section('body')
-	<main class="main-container max-width margin-auto container-white error">
+	<main class="main-container max-width margin-auto  error">
 
 		<div class="error__number">404</div>
 		<div class="error__titulo">No hemos encontrado lo que estabas buscando.</div>

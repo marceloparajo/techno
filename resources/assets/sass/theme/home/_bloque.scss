@@ -2,7 +2,7 @@
 	margin-bottom: 20px;
 
 	.articulo {
-
+		
 
 		a {
 			figure {
@@ -37,7 +37,17 @@
 					color: $color-brand;
 					letter-spacing: normal;
 					font-weight: 900;
+					padding: 0.5em 8px 5px;
+					margin: 0px;
 					
+				}
+				h2 {
+					text-align: left;
+					padding: 0px 10px 0.5em;
+				}
+
+				.firma-home {
+					padding: 0px 10px 0.5em;
 				}
 			}
 		}
@@ -50,9 +60,10 @@
 			a {
 				.meta-content {
 					h2 {
-						font-size: 1.5rem;
+						font-size: 1.4rem;
 						text-align: left;
 						line-height: 1.2;
+						padding: 0 10px 0.5em;
 					}
 				}
 			}
@@ -63,14 +74,20 @@
 
 			a {
 				.meta-content {
+					padding: 0px;
 					.hat {
-						background: $second-color;
+						background: $gris-oscuro;
+						color: white;
+						padding: 10px 20px;
+						font-size: 0.8rem;
+						display: inline-block;
 					}
 
 					h2 {
 						color: white;
-						font-size: 1.4rem;
+						//font-size: 1.6rem;
 						text-align: left;
+						padding: 0.5em 20px;
 
 					}
 
@@ -167,7 +184,6 @@
 					padding: 2px 0;
 					font-weight: 500;
 					font-size: 2.8rem;
-					border-bottom: 5px solid $second-color;
 					margin-right: 10px;
 				}
 
@@ -190,7 +206,7 @@
 			}
 
 			&:hover {
-				background: $second-color;
+				background: $gris-oscuro;
 				a { color: white}
 			}
 		}
@@ -206,6 +222,8 @@
 		.articulo {
 			//box-shadow: $box-shadow;
 			width: 100%;
+			border: 1px solid #eee;
+		border-radius: 10px;
 
 			&.nota-0,
 			&.nota-1,
@@ -213,11 +231,6 @@
 				width: 32%;
 				margin: 20px 0;
 
-				.meta-content {
-					//padding: 10px;
-					//margin-bottom: -25px;
-
-				}
 
 				&:after {
 					content: none;

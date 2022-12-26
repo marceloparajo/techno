@@ -2,18 +2,16 @@
 
 // Body
 $body-bg: #e7e7e7;
-$body-bg-2: #333;
 
 // -- Caras colores --//
 
 $color-brand: #ed1b24;
-$second-color: #313131;
-$link: #ed1b24;
+$link: #6890ff;
 $gris-oscuro: #313133;
 $gris-medio: #666;
 $gris-claro: #eee;
 $gris-muy-claro: #e3ebf3;
-$negro: #333;
+$negro: #171717;
 $linea: #dfdfdf;
 
 // --sombras -- //
@@ -31,34 +29,25 @@ $borde: 1px solid $gris-claro;
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  
-  
-  @font-face {
-    font-family: "Crimson-fallback";
-    size-adjust: 98.82000000000002%;
-    ascent-override: 85%;
-    src: local("Times New Roman");
-  }
-  
-  
-  @font-face {
-      font-family: "Roboto-fallback";
-      size-adjust: 100.06%;
-      ascent-override: 96%;
-      src: local("Arial");
-  }
-  
-  $font-seccion: "Crimson Pro", "Crimson-fallback";
-  $font-seccion-b: "Roboto", "Roboto-fallback";
+}
 
-// -- Caras tipografías
+  
+@font-face {
+    font-family: "Roboto-fallback";
+    size-adjust: 100.06%;
+    ascent-override: 96%;
+    src: local("Arial");
+}
+
+$font-seccion-b: "Roboto", "Roboto-fallback";
+
+// -- Parabrisas tipografías
 
 $font-size: 1.2rem;
 $line-height-base: 1.6;
-$font-base: 'Roboto', sans-serif, -apple-system,BlinkMacSystemFont,"Segoe UI", Arial, "Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-$font-titulos-nowebfont: Arial,'Roboto', Helvetica, Roboto, sans-serif;
-$font-titulos: 'Roboto', sans-serif;
+$font-base: 'Roboto', "Roboto-fallback", -apple-system,BlinkMacSystemFont,"Segoe UI", Arial, "Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$font-titulos-nowebfont:  'Roboto', "Roboto-fallback", Helvetica, Roboto, sans-serif;
+$font-titulos:  'Roboto', "Roboto-fallback", sans-serif;
 $condensada: 'Roboto Condensed', sans-serif;
 
 

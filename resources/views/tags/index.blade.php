@@ -26,7 +26,7 @@
 
 @section('body')
 
-<main class="main-container max-width margin-auto container-white considebar">
+<main class="main-container max-width margin-auto  considebar">
 
 	<div class="seccion tag" id="{{ $tag_title }}">
 

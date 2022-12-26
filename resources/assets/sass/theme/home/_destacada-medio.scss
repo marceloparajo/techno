@@ -21,6 +21,14 @@
 					text-align: left;
 					color:white
 				}
+
+				.firma-home {
+				
+					color: $gris-claro;
+					&:before {
+						background: $gris-medio;
+					}
+				}
 			}
 		}
 		

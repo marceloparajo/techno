@@ -8,13 +8,6 @@
 }
 
 @font-face {
-  font-family: "Crimson-fallback";
-  size-adjust: 98.82000000000002%;
-  ascent-override: 85%;
-  src: local("Times New Roman");
-}
-
-@font-face {
   font-family: "Roboto-fallback";
   size-adjust: 100.06%;
   ascent-override: 96%;
@@ -108,12 +101,12 @@
 }    */
 
 .masvistas__titulo {
-  color: #333;
-  font-family: Arial, "Roboto", Helvetica, Roboto, sans-serif;
+  color: #171717;
+  font-family: "Roboto", "Roboto-fallback", Helvetica, Roboto, sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
   padding-left: 15px;
-  border-left: 4px solid #313131;
+  border-left: 4px solid #313133;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -139,7 +132,7 @@
 
 .masvistas__nota .enlace .rankOrder {
   text-align: center;
-  font-family: Arial, "Roboto", Helvetica, Roboto, sans-serif;
+  font-family: "Roboto", "Roboto-fallback", Helvetica, Roboto, sans-serif;
   padding: 2px 0;
   font-weight: 500;
   font-size: 2.8rem;
@@ -150,7 +143,7 @@
 
 .masvistas__nota .enlace__titulo {
   padding: 0 .4em;
-  font-family: Arial, "Roboto", Helvetica, Roboto, sans-serif;
+  font-family: "Roboto", "Roboto-fallback", Helvetica, Roboto, sans-serif;
   letter-spacing: 0.02em;
   line-height: 1.11em;
   width: 85%;
@@ -168,16 +161,16 @@
 }
 
 .wf-loaded .masvistas__titulo {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
   line-height: 1.15em;
 }
 
 .wf-loaded .masvistas .rankOrder {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
 }
 
 .wf-loaded .masvistas .enlace__titulo {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-size: 0.88em;
   letter-spacing: -0.03em;
   line-height: 1.15em;
@@ -195,9 +188,17 @@
   max-width: 300px;
 }
 
+aside div {
+  margin-bottom: 200px;
+}
+
+.destacada {
+  margin-bottom: 1em;
+}
+
 .destacada .articulo {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 0px;
   -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -210,6 +211,10 @@
 }
 
 @media (min-width: 1020px) {
+  .destacada .articulo {
+    border-radius: 10px;
+  }
+
   .destacada .articulo a > figure {
     height: 100%;
   }
@@ -265,6 +270,14 @@
   color: white;
 }
 
+.destacada-medio .articulo a .meta-content .firma-home {
+  color: #eee;
+}
+
+.destacada-medio .articulo a .meta-content .firma-home:before {
+  background: #666;
+}
+
 @media (min-width: 768px) {
   .destacada-medio .articulo {
     min-height: 100%;
@@ -306,10 +319,10 @@
 }
 
 .cobertura__titulo {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #171717;
   padding: 5px 10px;
   margin: 0;
   text-align: right;
@@ -324,8 +337,8 @@
 
 .cobertura .articulo figure {
   margin: 0 auto;
-  -webkit-box-shadow: 10px 10px 0 0 #313131;
-          box-shadow: 10px 10px 0 0 #313131;
+  -webkit-box-shadow: 10px 10px 0 0 #313133;
+          box-shadow: 10px 10px 0 0 #313133;
   padding-bottom: 56.2%;
   height: 0;
   overflow: hidden;
@@ -416,7 +429,7 @@
   margin-bottom: 20px;
   padding: 0;
   position: relative;
-  background-color: #333;
+  background-color: #171717;
   background-image: radial-gradient(circle, #ed1b24 1%, transparent 10%), radial-gradient(circle, #ed1b24 1%, transparent 10%);
   background-size: 20px 20px;
   background-position: 0 0, 20px 20px;
@@ -424,7 +437,7 @@
 
 .celebrities__titulo {
   position: relative;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-size: 2rem;
   background: #ed1b24;
   color: white;
@@ -481,7 +494,7 @@
   position: absolute;
   top: 48px;
   left: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
   z-index: 2;
   list-style: none;
   background: #e3ebf3;
@@ -530,7 +543,7 @@
 
 .celebrities .articulo a .meta-content .hat {
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
   text-align: center;
   display: block;
   letter-spacing: .05em;
@@ -604,7 +617,7 @@
   }
 
   .celebrities .articulo:hover a .meta-content h2 {
-    color: #333;
+    color: #171717;
   }
 }
 
@@ -639,7 +652,7 @@
     border: none;
     position: static;
     height: auto;
-    background: #333;
+    background: #171717;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -678,7 +691,7 @@
   .celebrities__nav.mostrar {
     position: static;
     height: auto;
-    background: #333;
+    background: #171717;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -729,7 +742,7 @@
 }
 
 .bloquewidget__encuesta .titulo-widget {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-size: 1.4rem;
   margin-bottom: 6px;
   color: white;

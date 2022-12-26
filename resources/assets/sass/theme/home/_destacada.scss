@@ -1,8 +1,9 @@
 .destacada {
+	margin-bottom: 1em;
 	.articulo {
 		
 		background-color: #fff;
-		border-radius: 10px;
+		border-radius: 0px;
 		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 		overflow: hidden; 
 	
@@ -21,7 +22,7 @@
 @include media-breakpoint-up(lg) {
 	.destacada {
 		.articulo {
-			
+			border-radius: 10px;
 				a {
 					>figure {
 						height: 100%;

@@ -91,7 +91,7 @@
         font-size: 1.2rem;
         text-transform: uppercase;
         padding-left: 15px;
-       border-left: 4px solid $second-color;
+       border-left: 4px solid $gris-oscuro;
        margin-bottom: 10px;
         font-weight: 700;
       
@@ -182,4 +182,8 @@
             max-width: 300px;
         }
     };
+}
+
+aside {
+    div { margin-bottom: 200px;}
 }

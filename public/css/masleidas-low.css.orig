@@ -1,0 +1,389 @@
+<<<<<<< HEAD
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Crimson-fallback";
+  size-adjust: 98.82000000000002%;
+  ascent-override: 85%;
+  src: local("Times New Roman");
+}
+
+@font-face {
+  font-family: "Roboto-fallback";
+  size-adjust: 100.06%;
+  ascent-override: 96%;
+  src: local("Arial");
+}
+
+=======
+>>>>>>> juli
+/* .masvistas {
+    &__titulo {
+        color: $negro;
+        font-family: $font-titulos-nowebfont;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding-left: 15px;
+       border-left: 4px solid $second-color;
+       margin-bottom: 10px;
+        font-weight: 700;
+      
+    }
+   
+    &__nota {
+      
+        background: white;
+        transition: ease .3s;
+       
+        .enlace {
+            flex-direction: row;
+            display: flex;
+            padding: 10px 0px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 0px;
+         
+            .rankOrder {
+               
+                text-align: center;
+              font-family: $font-titulos-nowebfont;
+                padding: 2px 0;
+               font-weight: 500;
+                font-size: 2.8rem; 
+            
+                margin-right: 10px;
+                line-height: 1;
+                width: 10%;
+                
+            }
+            &__titulo {
+                padding: 0 .4em;
+                font-family: $font-titulos-nowebfont;
+                //font-weight: bold;
+                letter-spacing: 0.02em;
+                line-height:   1.11em;
+                width: 85%;
+                font-size: 0.91em;
+                margin: 0 1% 2% 4%;
+            }
+            picture {
+                width: 38%;
+                height: 60px;}
+
+        }
+        &:hover {
+            background: $second-color;
+        }
+    }
+}
+
+ .wf-loaded {
+
+    .masvistas    {
+        &__titulo {
+            font-family: $font-titulos;
+            line-height: 1.15em;
+
+        }
+        .rankOrder {
+           
+            font-family: $font-titulos;
+    
+        }
+        .enlace {
+     
+            &__titulo {
+            font-family: $font-titulos;
+            font-size: 0.88em;
+             letter-spacing: -0.03em;
+             line-height: 1.15em;
+            
+            }
+        }
+    }
+
+}    */
+
+.masvistas__titulo {
+  color: #333;
+  font-family: Arial, "Roboto", Helvetica, Roboto, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding-left: 15px;
+  border-left: 4px solid #313131;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.masvistas__nota {
+  background: white;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.masvistas__nota .enlace {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0px;
+}
+
+.masvistas__nota .enlace .rankOrder {
+  text-align: center;
+  font-family: Arial, "Roboto", Helvetica, Roboto, sans-serif;
+  padding: 2px 0;
+  font-weight: 500;
+  font-size: 2.8rem;
+  margin-right: 10px;
+  line-height: 1;
+  width: 10%;
+}
+
+.masvistas__nota .enlace__titulo {
+  padding: 0 .4em;
+  font-family: Arial, "Roboto", Helvetica, Roboto, sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1.11em;
+  width: 85%;
+  font-size: 0.91em;
+  margin: 0 1% 2% 4%;
+}
+
+.masvistas__nota .enlace picture {
+  width: 38%;
+  height: 60px;
+}
+
+.masvistas__nota:hover a {
+  color: white;
+}
+
+.wf-loaded .masvistas__titulo {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.15em;
+}
+
+.wf-loaded .masvistas .rankOrder {
+  font-family: "Roboto", sans-serif;
+}
+
+.wf-loaded .masvistas .enlace__titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.88em;
+  letter-spacing: -0.03em;
+  line-height: 1.15em;
+}
+
+.placa-home {
+  border: 1px solid #eee;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.placa-home a img {
+  width: 100%;
+  max-width: 300px;
+}
+
+<<<<<<< HEAD
+=======
+aside div {
+  margin-bottom: 200px;
+}
+
+>>>>>>> juli
+.masleidas {
+  padding-top: 10px;
+}
+
+.masleidas h1 {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: Arial, "Roboto", Helvetica, Roboto, sans-serif;
+}
+
+.masleidas .articulo {
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.masleidas .articulo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.masleidas .articulo a .meta-content {
+  padding-top: 0;
+}
+
+.masleidas .articulo a .meta-content h2 {
+  color: #313133;
+  padding: 1rem;
+  color: #313133;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  font-weight: 500;
+  font-family: Arial, "Roboto", Helvetica, Roboto, sans-serif;
+}
+
+.masleidas .articulo__ordenleidas {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  text-shadow: 0 3px 5px black;
+  z-index: 2;
+  letter-spacing: -.04em;
+  opacity: .7;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+@media (min-width: 768px) {
+  .masleidas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .masleidas .articulo {
+    width: 48%;
+    margin-bottom: 20px;
+    -webkit-transition: ease .3s;
+    transition: ease .3s;
+  }
+
+  .masleidas .articulo .meta-content h2 {
+    -webkit-transition: ease .3s;
+    transition: ease .3s;
+  }
+
+  .masleidas .articulo:hover {
+    -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .masleidas .articulo:hover .meta-content h2 {
+    color: #333;
+  }
+
+  .masleidas .articulo:hover .articulo__ordenleidas {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1360px) {
+  .masleidas .articulo {
+    width: 32%;
+  }
+}
+
+.wf-loaded .masleidas {
+  padding-top: 10px;
+}
+
+.wf-loaded .masleidas h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+.wf-loaded .masleidas .articulo a .meta-content h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 500;
+}
+
+.wf-loaded .masleidas .articulo__ordenleidas {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  text-shadow: 0 3px 5px black;
+  z-index: 2;
+  letter-spacing: -.04em;
+  opacity: .7;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+@media (min-width: 1360px) {
+  .wf-loaded .masleidas .articulo {
+    width: 32%;
+  }
+}
+
+/* 
+@include media-breakpoint-only(md) {
+    .masvistas {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0px;
+        &__titulo {
+            width: 100%;
+            font-size: 1.8em;
+        }
+        &__nota {
+            width: 49%;
+            .enlace {
+                &__titulo {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .masvistas {
+        &__nota {
+            .enlace {
+                &__titulo {
+                 font-size: .9rem;
+                }
+            }
+        }
+    }
+} */
+
+/* @include media-breakpoint-up(xxl) {
+    .masvistas {
+        &__nota {
+            .enlace {
+                &__titulo {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+} */
+
