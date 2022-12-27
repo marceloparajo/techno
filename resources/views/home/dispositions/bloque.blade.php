@@ -1,65 +1,14 @@
 
 @if (isset($news) && count($news) > 0)
 	<!-- Bloque -->
-	<div class="seccion bloque">
+	<div class="row max-width bloque">
 		@foreach(array_slice($news, 0, 13) as $new)
 			@if ($new['channel']['slug'] == 'tapas' && !isset($tapa))
 				@php ($tapa = $new)
 			@else
 
-				<article class="articulo nota-{{ $loop->index }}" >
-					<a href="{{ $new['permalink'] }}">
-						@if ($new['embed_code_original'] != '' && (strpos($new['embed_code_original'], 'rudo') || strpos($new['embed_code_original'], 'tube')))
-							{!! $new['embed_code'] !!}
-						@else
-							<figure>
-								@if($loop->iteration < 4)
-									<x-lazy-image
-										:src="$new['main_image']['srcs']['original']"
-										:alt="$new['main_image']['title']"
-										:sizes="[['v' => 320, 'w' => 540, 'h' => 304], ['v' => 768, 'w' => 367, 'h' => 220]]"
-										class="img-fluid"
-										max-width="720"
-										:play-button="$new['has_video']"
-										:camera-button="$new['has_gallery']" />
-								@else
-									<x-lazy-image
-										:src="$new['main_image']['srcs']['original']"
-										:alt="$new['main_image']['title']"
-										:sizes="[['v' => 320, 'w' => 540, 'h' => 304], ['v' => 768, 'w' => 367, 'h' => 220]]"
-										class="img-fluid"
-										max-width="720"
-										:play-button="$new['has_video']"
-										:camera-button="$new['has_gallery']" />
-								@endif
-							</figure>
-						@endif
 
-						<div class="meta-content">
-
-							@if ($new['hat'] != '')
-								<span class="hat">{{ $new['hat'] }} </span>
-							@else
-								<span class="hat">{{ $new['channel']['name'] }}</span>
-							@endif
-
-							<h2>{{ $new['home_title'] }}</h2>
-
-							<p class="headline">{{ $new['headline'] }}</p>
-
-							@if ($new['signed'])
-								<span class="firma-home">
-                        {{ __('by') }} {{ $new['author']['fullname'] }}
-                    </span>
-							@elseif ($new['credit'] != '')
-								<span class="firma-home">
-                        {{ $new['credit'] }}
-                    </span>
-							@endif
-						</div>
-					</a>
-				</article>
-
+			@include('partials.articulo', array('clase' => 'news--card-rounded', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '367', 'height_tablet' => '220', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
 			@endif
 		@endforeach
 

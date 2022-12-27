@@ -6,11 +6,11 @@
 
 			@if($loop->first)
 
-				@include('partials.articulo', array('clase' => 'news--figure-rounded news--full-width news--centered news--text-over news--border-bottom', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '540', 'height_tablet' => '304', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
+				@include('partials.articulo', array('clase' => 'news--figure-rounded news--full-width news--centered news--hat-inverted news--text-over news--border-bottom', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '540', 'height_tablet' => '304', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
 
 			@else 
 
-				@include('partials.articulo', array('clase' => 'news--figure-rounded news--centered news--text-over news--border-bottom', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '540', 'height_tablet' => '304', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
+				@include('partials.articulo', array('clase' => 'news--figure-rounded news--centered news--hat-inverted news--text-over news--border-bottom', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '540', 'height_tablet' => '304', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
 			
 			@endif
 

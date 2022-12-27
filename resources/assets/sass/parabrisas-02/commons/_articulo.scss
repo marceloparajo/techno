@@ -16,12 +16,8 @@
     }
     
     &__hat {
-        display: inline-block;
-        text-transform: uppercase;
-        background: $color-brand;
-        color: white;
-        padding: 3px 8px;
-        font-size: .85rem;
+        color: $color-brand;
+        font-size: .95rem;
         font-weight: 700;
         border-radius: 3px;
 
@@ -34,6 +30,7 @@
     &__headline {
         font-size: .9rem;
         margin-top: .5rem;
+        display: none;
     }
     &__autor {
         font-size: .8rem;
@@ -78,6 +75,61 @@
     &--border-bottom {
         padding-bottom: 10px;
         border-bottom: 1px solid $gris-claro;
+    }
+
+    &--hat-inverted {
+        .news__hat {
+            display: inline-block;
+            text-transform: uppercase;
+            background: $color-brand;
+            color: white;
+            padding: 3px 8px;
+            letter-spacing: .08em;
+        }
+    }
+
+    &--card-rounded {
+        border: 1px solid $gris-claro;
+        border-radius: 6px;
+        overflow: hidden;
+        .news__meta {
+            padding: 10px;
+        }
+    }
+    &--shadow-bottom {
+        &:after,
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+            background: white;
+            box-shadow: 0 11px 15px 0 rgba(0,0,0,.15);
+            width: 70%;
+            height: 50px;
+            bottom: 17px;
+        }
+        &:before {
+            transform: rotate(-5deg);
+            left: 10px;
+        }
+        &:after {
+            transform: rotate(5deg);
+            right: 10px;
+        }
+
+    }
+
+    &:hover {
+        .news__media  {
+            >figure {
+                >picture {
+                    >img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -1127,12 +1127,8 @@ figure img {
 }
 
 .news__hat {
-  display: inline-block;
-  text-transform: uppercase;
-  background: #ed1b24;
-  color: white;
-  padding: 3px 8px;
-  font-size: .85rem;
+  color: #ed1b24;
+  font-size: .95rem;
   font-weight: 700;
   border-radius: 3px;
 }
@@ -1146,6 +1142,7 @@ figure img {
 .news__headline {
   font-size: .9rem;
   margin-top: .5rem;
+  display: none;
 }
 
 .news__autor {
@@ -1188,6 +1185,56 @@ figure img {
 .news--border-bottom {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
+}
+
+.news--hat-inverted .news__hat {
+  display: inline-block;
+  text-transform: uppercase;
+  background: #ed1b24;
+  color: white;
+  padding: 3px 8px;
+  letter-spacing: .08em;
+}
+
+.news--card-rounded {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.news--card-rounded .news__meta {
+  padding: 10px;
+}
+
+.news--shadow-bottom:after,
+.news--shadow-bottom:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  background: white;
+  -webkit-box-shadow: 0 11px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 11px 15px 0 rgba(0, 0, 0, 0.15);
+  width: 70%;
+  height: 50px;
+  bottom: 17px;
+}
+
+.news--shadow-bottom:before {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  left: 10px;
+}
+
+.news--shadow-bottom:after {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  right: 10px;
+}
+
+.news:hover .news__media > figure > picture > img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .galeria-video {
@@ -1241,6 +1288,12 @@ figure img {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+}
+
+.especial {
+  background: #171717;
+  margin: 2rem -1rem;
+  width: calc(100% + 2rem);
 }
 
 .bloque {
