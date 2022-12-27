@@ -1,11 +1,18 @@
 @if (isset($news) && count($news) > 0)
 	<!-- Destacada -->
-	<div class="seccion destacada">
+	<div class=" destacada row max-width">
 
 		@foreach(array_slice($news, 0, 3) as $new)
 
-			@include('partials.articulo', array('clase' => 'news--standard', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '540', 'height_tablet' => '304', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
+			@if($loop->first)
 
+				@include('partials.articulo', array('clase' => 'news--figure-rounded news--full-width news--centered news--text-over news--border-bottom', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '540', 'height_tablet' => '304', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
+
+			@else 
+
+				@include('partials.articulo', array('clase' => 'news--figure-rounded news--centered news--text-over news--border-bottom', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '540', 'height_tablet' => '304', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
+			
+			@endif
 
 			@if($loop->first)
 				<x-ad-space id="300x250x-pos-" class="d-md-none" width="300" height="250" min-height="250" max-height="250" />

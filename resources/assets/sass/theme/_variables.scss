@@ -1,17 +1,17 @@
-@import "theme/mixins/_breakpoints.scss";
+@import "parabrisas-02/mixins/_breakpoints";
 
 // Body
 $body-bg: #e7e7e7;
 
-// -- Caras colores --//
+// -- Parabrisas colores --//
 
 $color-brand: #ed1b24;
 $link: #6890ff;
+$negro: #171717;
 $gris-oscuro: #313133;
 $gris-medio: #666;
 $gris-claro: #eee;
 $gris-muy-claro: #e3ebf3;
-$negro: #171717;
 $linea: #dfdfdf;
 
 // --sombras -- //
@@ -71,4 +71,4 @@ $pf_whatsapp_color: #25D366;
 $pf_rss_color: #ee802f;
 
 
-@import "theme/mixins/_mixins.scss";
+@import "parabrisas-02/mixins/_mixins.scss";

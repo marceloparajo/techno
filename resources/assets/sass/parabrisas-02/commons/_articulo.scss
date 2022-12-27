@@ -1,0 +1,115 @@
+.news {
+    margin: 0 0 10px 0;
+    width: 100%;
+    position: relative;
+    background: white;
+    figure {
+        width: 100%;
+        position: relative;
+    }
+    &__media {
+        width: 100%;
+    }
+    &__meta {
+        position: relative;
+        padding: 10px 0;
+    }
+    
+    &__hat {
+        display: inline-block;
+        text-transform: uppercase;
+        background: $color-brand;
+        color: white;
+        padding: 3px 8px;
+        font-size: .85rem;
+        font-weight: 700;
+        border-radius: 3px;
+
+    }
+    &__title {
+        font-size: 1.3rem;
+        line-height: 1.23em;
+        margin-top: .5rem;         
+    }
+    &__headline {
+        font-size: .9rem;
+        margin-top: .5rem;
+    }
+    &__autor {
+        font-size: .8rem;
+        text-transform: uppercase;
+        margin-top: .5rem;
+        color: $color-brand;
+        &:before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: $gris-oscuro;
+            float: left;
+            margin: 5px 5px 0 0;
+        }
+    }
+
+    &--figure-rounded {
+        figure {
+            border-radius: 6px;
+            overflow: hidden;
+        }
+    }
+
+    &--centered {
+        .news__meta {
+            text-align: center;
+        }
+        .news__hat {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    &--text-over {
+        .news__meta {
+            margin-top: -1.5rem;
+            z-index: 1;
+        }
+    }
+    &--border-bottom {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gris-claro;
+    }
+}
+
+.galeria-video {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #424242ad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .hasvideo {
+        transform: translate(2px, 2px);
+    }
+}
+
+
+@include media-breakpoint-between(xs, md) {
+    .news {
+
+        &--full-width {
+            .news__media {
+                margin-left: -1rem;
+                margin-right: -1rem;
+                width: calc(100% + 2rem);
+            }
+            figure {
+                border-radius: 0;
+            }
+        }
+    }
+}

@@ -27,10 +27,10 @@
 
 @section('body')
 
-	<main class="main-container max-width margin-auto">
+	<main class="main container">
 		@foreach($home_content as $key => $value)
 			@if ($key != 'sidebar')
-				<section id="{{ $key }}" class="contenedor-general">
+				<section id="{{ $key }}" class="seccion row">
 					@foreach($value as $item)
 
 						@switch ($item['template'])

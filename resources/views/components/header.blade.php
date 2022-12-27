@@ -1,6 +1,6 @@
-<div class="pre-header">
-	<div class="container margin-auto">
-		<div class="time-top">{{ $current_date->isoFormat('dddd DD [de] MMMM [del] YYYY') }}</div>
+<div class="container pre-header bg-negro d-xs-none d-md-block">
+	<div class="max-width d-md-flex">
+		<time class="time-top" datetime="{{ $current_date->isoFormat('YYYY [-] MM [-] DD') }}" >{{ $current_date->isoFormat('dddd DD [de] MMMM [del] YYYY') }}</time>
 		<div class="perfil-logo">
 			<a href="https://www.perfil.com" target="_blank" title="Ir a Perfil.com" rel="noreferrer">
 				<img src="{{ asset('img/perfil.svg') }}" alt="Perfil" width="90" height="20">
@@ -10,21 +10,23 @@
 </div>
 <x-ad-space id="float-header" width="320" height="50" class="ads d-md-none" min-height="50" max-height="50" margin-bottom="20" />
 
-<header class="main-header">
-    <div class="container margin-auto">
-		<button class="hamburguer" id="burguer" onclick="abreMenu()" title="menu">
-				<div class="bar-1"></div>
-				<div class="bar-2"></div>
-				<div class="bar-3"></div>
+<header class="header container">
+    <div class="max-width d-xs-flex">
+
+
+		<button class="header__nav-toggler" id="burguer" onclick="abreMenu()" title="menu">
+			<span class="bar-1"></span>
+			<span class="bar-2"></span>
+			<span class="bar-3"></span>
 		</button>
-		<div class="logo">
+		<div class="header__logo">
 			<a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}">
-				<img src="{{ asset('img/logo-parabrisas.svg') }}" alt="{{ env('APP_NAME') }}">
+				<img src="{{ asset('img/logo-parabrisas.svg') }}" alt="{{ env('APP_NAME') }}" width="230" height="50"> 
 			</a>
 		</div>
 
 		<nav class="navbar" id="main-menu">
-			<div class="container">
+			<div class="max-width navbar__container">
 
 				<form method="get" action="{{ route('search.index') }}" class="search-form">
 					<input class="search-form__input" name="q" type="text" placeholder="{{ __('search') }}" aria-label="Buscar" value="{{ Request::get('q') }}">

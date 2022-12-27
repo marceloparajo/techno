@@ -1,0 +1,10 @@
+.destacada {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@include media-breakpoint-up(lg) {
+    .destacada {
+        flex-direction: row;
+    }
+}

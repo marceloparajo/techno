@@ -2196,19 +2196,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var handleToggleReperfilarMenu = function handleToggleReperfilarMenu() {
-	var _button = document.getElementById('btn-toggle-menu-reperfilar');
-	var _container = document.getElementById('reperfilar-nav');
-
-	if (_button === null) return 0;
-
-	_button.addEventListener('click', function (e) {
-		e.preventDefault();
-
-		_button.classList.toggle('change');
-		_container.classList.toggle('temuestro');
-	});
-};
 
 var handleToggleMainMenu = function handleToggleMainMenu() {
 	var _button = document.getElementById('hamburguesa');
@@ -2225,7 +2212,6 @@ var handleToggleMainMenu = function handleToggleMainMenu() {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (function () {
-	handleToggleReperfilarMenu();
 	handleToggleMainMenu();
 });
 
