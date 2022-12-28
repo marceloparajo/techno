@@ -2,15 +2,20 @@
 	<!-- Destacada -->
 	<div class="especial">
 
-		<div class="row max-width d-xs-grid">
+		<div class="especial__container row max-width d-lg-grid">
 
 			@foreach(array_slice($news, 0, 5) as $new)
 
-				@include('partials.articulo', array('clase' => 'news--standard', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '540', 'height_tablet' => '304', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
-
-
 				@if($loop->first)
+
+					@include('partials.articulo', array('clase' => 'news--tipo-especial news--hat-inverted', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '736', 'height_tablet' => '414', 'width_laptop' => '496', 'height_laptop' => '279', 'width_desktop' => '643', 'height_desktop' => '362'))
+
 					<x-ad-space id="300x250x-pos-" class="d-md-none" width="300" height="250" min-height="250" max-height="250" />
+
+				@else
+
+				@include('partials.articulo', array('clase' => 'news--tipo-especial news--hat-inverted', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '368', 'height_tablet' => '212', 'width_laptop' => '248', 'height_laptop' => '140', 'width_desktop' => '322', 'height_desktop' => '180'))
+
 				@endif
 
 			@endforeach

@@ -29,6 +29,14 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
 }
 
+.col-fixed {
+    width: 100%;
+}
+
+.col-fluid {
+    width: 100%;
+}
+
 .seccion {
     flex-direction: column;
 }
@@ -107,29 +115,22 @@ figure {
 
 }
 @include media-breakpoint-up(md) {
+
+    .col-fixed {
+        flex-basis: 300px;
+    }
+    .col-fluid {
+        flex: 1 1 0;
+    }
+    .sticky {
+        position: sticky;
+        top: 65px;
+    }
 }
 @include media-breakpoint-up(lg) {
     .main {
         padding-top: 20px;
         padding-bottom: 20px;
-    }
-    .considebar {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 2.5em;
-        .sidebar {
-            flex-basis: 30%;
-            min-width: 300px;
-        }
-        .noticia,
-        .autor,
-        .channel,
-        .tag,
-        .masleidas {
-            flex: 1 1 0;
-            padding-right: 30px;
-            max-width: 889px;
-        }
     }
 }
 @include media-breakpoint-up(xl) {

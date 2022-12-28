@@ -1,0 +1,35 @@
+.cobertura {
+    width: calc(100% + 2rem);
+    background: $gris-claro;
+    padding: 1rem 1.5rem 1rem 1rem;
+    margin: 2rem -1rem;
+    flex-direction: column;
+    gap: 1rem;
+    &__titulo {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $gris-oscuro;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .cobertura {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__titulo {
+            width: 100%;
+            font-size: 2rem;
+        }
+        .news {
+            flex-basis: 32%;
+        }
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .cobertura {
+        width: 100%;
+        margin: 2rem auto;
+    }
+}

@@ -1,0 +1,16 @@
+.bloque {
+    flex-direction: column;
+    &__notas-container {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .bloque {
+        flex-direction: row;
+        gap: 1rem;
+
+    }
+}

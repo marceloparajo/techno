@@ -1,4 +1,4 @@
-<div class="news {{ $clase }}">
+<article class="news {{ $clase }} news--{{ $loop->index }}">
     <a href="{{ $new['permalink'] }}">
         <div class="news__media">
             @if ($new['embed_code_original'] != '' && (strpos($new['embed_code_original'], 'rudo') || strpos($new['embed_code_original'], 'tube') || strpos($new['embed_code_original'], 'vimeo')))
@@ -42,4 +42,4 @@
             @endif
         </div>
     </a>
-</div>
+</article>

@@ -53,6 +53,14 @@ h6 {
   display: flex;
 }
 
+.col-fixed {
+  width: 100%;
+}
+
+.col-fluid {
+  width: 100%;
+}
+
 .seccion {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -125,38 +133,28 @@ figure img {
   color: white;
 }
 
+@media (min-width: 768px) {
+  .col-fixed {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+  }
+
+  .col-fluid {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 65px;
+  }
+}
+
 @media (min-width: 1020px) {
   .main {
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-
-  .considebar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-top: 2.5em;
-  }
-
-  .considebar .sidebar {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
-    min-width: 300px;
-  }
-
-  .considebar .noticia,
-  .considebar .autor,
-  .considebar .channel,
-  .considebar .tag,
-  .considebar .masleidas {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 0px;
-            flex: 1 1 0;
-    padding-right: 30px;
-    max-width: 889px;
   }
 }
 
@@ -688,7 +686,7 @@ figure img {
 .navbar {
   background: transparent;
   position: absolute;
-  top: 60px;
+  top: 53px;
   z-index: 9;
   width: 100%;
   right: 100%;
