@@ -9,7 +9,6 @@
         padding: .3em 0 0 0;
     }
     &__titulo {
-        font-family: $font-titulos;
         font-weight: bold;
         font-size: 1.6rem;
         line-height: 1.05em;
@@ -18,7 +17,6 @@
         padding: .2em 0;
     }
     &__subtitulo {
-        font-family: $font-titulos;
         font-size: 1.2rem;
         line-height: 1.05em;
         font-weight: normal;
@@ -29,7 +27,6 @@
 
     &__contenido {
         text-align: center;
-        font-family: $font-titulos;
         p.main-page {
             font-weight: bold;
             a {
@@ -42,7 +39,6 @@
             border-top: $borde;
             padding: 10px;
             p {
-                font-family: $font-titulos;
                 text-transform: uppercase;
                 font-weight: bold;
                 color: $gris-medio;

@@ -29,7 +29,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
 }
 
-.col-fixed {
+.col-fixed,
+.col-fixed-news {
     width: 100%;
 }
 
@@ -132,6 +133,9 @@ figure {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    .col-fixed-news {
+        flex-basis: 360px; 
+    }
 }
 @include media-breakpoint-up(xl) {
 
@@ -139,6 +143,9 @@ figure {
 @include media-breakpoint-up(xxl) {
     .max-width {
         max-width: 1300px;
+    }
+    .sticky {
+        top: 125px;
     }
 }
 

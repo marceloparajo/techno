@@ -324,7 +324,7 @@ class BlockDistributionsHelper
             ],
             [
                 'id' => 'bloque-medio',
-                'template' => 'bloque-con-widget'
+                'template' => 'bloque'
             ],
             [
                 'id' => 'bloque-inferior',

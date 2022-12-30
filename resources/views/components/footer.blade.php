@@ -53,7 +53,7 @@
     </nav>
 
     <div class="disclaimer">
-        <span itemprop="name">Caras - Editorial Perfil S.A.</span> | © Perfil.com 2006-{{ date('Y') }} - Todos los derechos reservados.<br />
+        <span itemprop="name">Parabrisas - Editorial Perfil S.A.</span> | © Perfil.com 2006-{{ date('Y') }} - Todos los derechos reservados.<br />
         Editor responsable: María José Bonacifa.<br>
         Registro de la propiedad intelectual número 5346433<br />
         <div class="d-none d-xl-block" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">

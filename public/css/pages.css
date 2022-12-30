@@ -40,7 +40,6 @@ h5,
 h6 {
   font-weight: 600;
   color: #171717;
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
 }
 
 .max-width {
@@ -257,7 +256,6 @@ figure img {
           box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
   list-style: none;
   padding: 3px 0 0 0;
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
 }
 
 .main-header .navbar .container ul.nav li {

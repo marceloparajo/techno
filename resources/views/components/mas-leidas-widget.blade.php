@@ -16,7 +16,7 @@
 						['v' => 375, 'w' => 89, 'h' => 89], 
 						['v' => 414, 'w' => 100, 'h' => 100], 
 						['v' => 768, 'w' => 112, 'h' => 60], 
-						['v' => 1366, 'w' => 86, 'h' => 86]]"
+						['v' => 1920, 'w' => 86, 'h' => 86]]"
 						class="img-fluid"
 						max-width="700"
 						:play-button="$new['has_video']"
@@ -27,5 +27,3 @@
 	@endforeach
 
 </div>
-
-<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads  d-md-none d-xl-flex" />

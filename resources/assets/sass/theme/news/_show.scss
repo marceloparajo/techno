@@ -92,92 +92,12 @@
                         color: $link;
                     }
                 }
-               /*  h2 {
-                    line-height: 1.05em;
-                    font-size: 1.8rem;
-                    margin: 1em .7em;
-                } */
-                /* >p:first-of-type:first-letter {
-                    color: $color-brand;
-                    float: left;
-                    font-size: 3.2rem;
-                    font-weight: bold;
-                    line-height: .2;
-                    font-family: $font-titulos;
-                    margin: 24px 10px 10px 0;
-                    transform: translateY(-10px);
-                } */
-              /*   figure {
-                    img {
-                        display: block;
-                        height: auto;
-                    }
-                    figcaption {
-                        font-size: .9rem;
-                        padding: .2em 1.3em .5em 1.3em;
-                        border-bottom: 2px solid $second-color;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                        font-family: $font-titulos;
-                        letter-spacing: -0.02em;
-                        line-height: 1em;
-                        text-align: left;;
-                    }
-                } */
-              /*   .tags {
-                    width: 100%;
-                    border-top: $borde;
-                    padding: 1em;
-                    &__titulo {
-                        width: 100%;
-                        padding: 0;
-                        margin: .5em 0;
-                        font-family: $font-titulos;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                        font-size: 1.3rem;
-                    }
-                    &__listado {
-                        list-style: none;
-                        padding: 0;
-                        margin: 0;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: flex-start;
-                        label {
-                            font-size: .9rem;
-                            text-transform: uppercase;
-                            font-weight: bold;
-                            padding: .2em 1em;
-                        }
-                        li {
-                            display: inline-block;
-                            margin: .5em 1em;
-                            font-size: .8rem;
-                            text-transform: uppercase;
-                            a {
-                                background: $gris-muy-claro;
-                                border: $borde;
-                                border-radius: 3px;
-                                display: block;
-                                padding: .2em .6em;
-                                color: $negro;
-                                &:hover {
-                                    background: white;
-                                    border: $borde;
-                                }
-                            }
-                        }
-                    }
-
-                } */
 
                 .galeria-fotos {
                     padding: 10px;
                     width: 100%;
                     margin: 20px 0;
                     &__title {
-                        font-family: $font-titulos;
                        font-size: 1.2rem;
                        font-weight: bold;color: $color-brand;
                         text-transform: uppercase;
@@ -259,7 +179,6 @@
                     p {
                         display: inline-block;
                         color: $gris-claro;
-                        font-family: $font-titulos;
                         font-weight: bold;
                         text-transform: uppercase;
                     }
@@ -298,7 +217,6 @@
                         color: $gris-oscuro;
                         margin-bottom: 0;
                         line-height: 1.6em;
-                        font-family: $font-titulos;
                      
 
                     }

@@ -1,37 +1,33 @@
-<div class="social-topsharing">
-	<p>Compartí esta nota</p>
+<div class="social__topsharing">
 	<ul>
-		<li class="share">
-			<img src="/images/glyph/share/share.svg" width="20" height="20" alt="Compartila">
-		</li>
 
-		<li class="facebook">
+		<li class="social__icon social__icon--facebook">
 			<a href="https://www.facebook.com/sharer/sharer.php?u={{ $noticia['permalink'] }}" target="_blank" rel="noreferrer">
-				<img src="/images/glyph/share/facebook.svg" width="30" height="30" alt="Compartila en Facebook">
+				<img src="/images/glyph/share/icon-facebook.svg" width="20" height="20" alt="Compartila en Facebook">
 			</a>
 		</li>
 		
-		<li class="twitter">
+		<li class="social__icon social__icon--twitter">
 			<a href="https://twitter.com/intent/tweet?text={{ urlencode($noticia['title']) }}&url={{ $noticia['permalink'] }}" target="_blank" rel="noreferrer">
-				<img src="/images/glyph/share/twitter.svg" width="30" height="30" alt="Compartila en Twitter">
+				<img src="/images/glyph/share/icon-twitter.svg" width="20" height="20" alt="Compartila en Twitter">
 			</a>
 		</li>
 		
-		<li class="whatsapp">
+		<li class="social__icon social__icon--whatsapp">
 			<a href="whatsapp://send?text={{ urlencode($noticia['title']) . ' ' . $noticia['permalink'] }}" data-action="share/whatsapp/share" target="_blank" rel="noreferrer">
-				<img src="/images/glyph/share/whatsapp.svg" width="30" height="30" alt="Compartila en Whatsapp">
+				<img src="/images/glyph/share/icon-whatsapp.svg" width="20" height="20" alt="Compartila en Whatsapp">
 			</a>
 		</li>
 
-		<li class="linkedin">
+		<li class="social__icon social__icon--linkedin">
 			<a href="https://www.linkedin.com/shareArticle?mini=true&url={{ $noticia['permalink'] }}&title={{ urlencode($noticia['title']) }}&source={{ url('/') }}" class="linkedin" title="Compartir en Linkedin" rel="noreferrer">
-				<img src="/images/glyph/share/linkedin.svg" width="30" height="30" alt="Compartila en LinkedIn">
+				<img src="/images/glyph/share/icon-linkedin.svg" width="20" height="20" alt="Compartila en LinkedIn">
 			</a>
 		</li>
 		
-		<li class="mailto">
+		<li class="social__icon social__icon--mailto">
 			<a href="mailto:?subjet=Perfil.com | {{ urlencode($noticia['title']) }}&body=Hola, vi este artículo que publicó Perfil.com y creo que te puede interesar. {{ $noticia['permalink'] }}" class="email" rel="noopener noreferrer" aria-label="Email" title="Compartir por email" rel="noreferrer">
-				<img src="/images/glyph/share/mail.svg" width="30" height="30" alt="Compartila por Email">
+				<img src="/images/glyph/share/icon-email.svg" width="20" height="20" alt="Compartila por Email">
 			</a>
 		</li>
 	</ul>

@@ -28,7 +28,6 @@
                 color: $gris-medio;
                 font-size: 0.95rem;
                 line-height: 1;
-                font-family: $font-titulos-nowebfont;
             }
         }
 
@@ -36,7 +35,6 @@
 
             margin: 0 0 10px 0;
 
-            font-family: $font-titulos-nowebfont;
             font-size: 2rem;
             line-height: 1.15em;
             letter-spacing: -0.08em;
@@ -49,7 +47,6 @@
             letter-spacing: -.0285em;
             line-height: 1.45em;
             font-weight: 400;
-            font-family: $font-titulos-nowebfont;
 
             .abrirgaleria {
                 display: inline-flex;
@@ -83,14 +80,12 @@
             border-bottom: 1px solid $gris-medio;
             //font-weight: bold;
             letter-spacing: -0.07em;
-            font-family: $font-titulos-nowebfont;
             text-transform: uppercase;
             color: $gris-oscuro;
             line-height: 1.38em;
 
             .credito-foto {
                 font-weight: normal;
-                font-family: $font-titulos-nowebfont;
             }
         }
     }
@@ -103,7 +98,6 @@
 
 
             p {
-                font-family: $font-titulos-nowebfont;
                 margin: 1em;
                 font-size: 1.16em;
                 line-height: 1.5em;
@@ -119,15 +113,7 @@
                 line-height: 1.05em;
                 font-size: 1.6em;
                 margin: 1em;
-                font-family: $font-titulos-nowebfont;
             }
-
-            /*  >p:first-of-type:first-letter {
-                color: $color-brand;
-                font-size: 1.8em;
-                font-weight: bold;
-                font-family: $font-titulos-nowebfont;
-            } */
             figure {
                 img {
                     display: block;
@@ -140,7 +126,6 @@
                     border-bottom: 5px solid $gris-oscuro;
                     font-weight: bold;
                     letter-spacing: -0.07em;
-                    font-family: $font-titulos-nowebfont;
                     text-transform: uppercase;
                     color: $gris-oscuro;
                     line-height: 1.38em;
@@ -156,8 +141,6 @@
                     width: 100%;
                     padding: 0;
                     margin: .5em 0;
-                    //font-family: $font-titulos;
-                    font-family: $font-titulos-nowebfont;
                     font-weight: bold;
                     text-transform: uppercase;
                     font-size: 1.3rem;
@@ -167,10 +150,6 @@
                     list-style: none;
                     padding: 0;
                     margin: 0;
-
-                    /*   display: flex;
-                    flex-wrap: wrap;
-                    justify-content: flex-start; */
                     label {
                         font-size: .9rem;
                         text-transform: uppercase;
@@ -185,10 +164,8 @@
 
                     li {
                         display: inline-block;
-                        // margin: .5em 1em;
                         font-size: .8rem;
                         text-transform: uppercase;
-                        // display: none;
                         line-height: 1.6em;
                         font-size: 0.7em;
                         line-height: 1.6em;
@@ -198,7 +175,6 @@
 
                         a {
                             background: $color-brand;
-                            //border: $borde;
                             border-radius: 3px;
                             display: block;
                             padding: .2em .6em;
@@ -259,7 +235,6 @@
 
             &__titulo {
 
-                font-family: $font-titulos-nowebfont;
                 font-weight: bold;
                 font-size: 1.15em;
                 text-transform: uppercase;
@@ -274,7 +249,6 @@
             &__nota {
 
                 .relacionada-titulo-nota {
-                    font-family: $font-titulos-nowebfont;
                     font-size: 0.77em;
                 }
             }
@@ -283,8 +257,6 @@
         .mas-en-perfil {
             &__nota {
                 &__titulo {
-                    //font-family: $font-titulos;
-                    font-family: $font-titulos-nowebfont;
                     font-size: 1.2em;
                     letter-spacing: 0.03em;
 
@@ -306,7 +278,6 @@
             width: 100%;
             margin: 20px 0;
             &__title {
-                font-family: $font-titulos;
                font-size: 1.2rem;
                font-weight: bold;color: $color-brand;
                 text-transform: uppercase;
@@ -374,7 +345,6 @@
             }
 
             h1 {
-                font-family: $font-titulos-nowebfont;
                 font-size: 3.438rem;
                 letter-spacing: -0.058em;
                 line-height: 3.813rem;
@@ -398,7 +368,6 @@
 .masvistas {
     &__titulo {
         color: $negro;
-        font-family: $font-titulos-nowebfont;
         font-size: 1.2rem;
         text-transform: uppercase;
         padding-left: 15px;
@@ -423,7 +392,6 @@
             .rankOrder {
 
                 text-align: center;
-                font-family: $font-titulos-nowebfont;
                 padding: 2px 0;
                 font-weight: 500;
                 font-size: 2.8rem;
@@ -436,10 +404,7 @@
 
             &__titulo {
                 padding: 0 .4em;
-                font-family: $font-titulos-nowebfont;
-                //font-weight: bold;
-                //letter-spacing: 0.02em;
-                //line-height:   1.11em;
+
                 width: 85%;
                 font-size: 1em;
                 margin: 0 1% 2% 4%;
@@ -467,21 +432,18 @@
 
     .masvistas {
         &__titulo {
-            font-family: $font-titulos;
             line-height: 1.15em;
 
         }
 
         .rankOrder {
 
-            font-family: $font-titulos;
 
         }
 
         .enlace {
 
             &__titulo {
-                font-family: $font-titulos;
                 font-size: 1em;
                 // letter-spacing: -0.03em;
                 line-height: 1.1;
@@ -493,12 +455,10 @@
     .noticia {
         .articulo-header {
             .hat {
-                font-family: $font-titulos;
                 letter-spacing: -0.02em;
                 font-size: 0.95rem;
 
                 &__fecha {
-                    font-family: $font-titulos;
                 }
             }
 
@@ -506,15 +466,12 @@
                 font-weight: 800;
                 letter-spacing: -0.05em;
                 font-size: 2rem;
-                font-family: $font-titulos;
                // line-height: 1.1em;
             }
 
             h2 {
                 font-size: 1.25rem;
                 letter-spacing: -0.02em;
-                //line-height: 1.3;
-                font-family: $font-titulos;
             }
         }
 
@@ -522,18 +479,14 @@
             .figure-caption {
                 font-size: .68em;
                 letter-spacing: -0.04em;
-                font-family: $font-titulos;
-                // line-height: 1.2em;
 
                 .credito-foto {
                     font-weight: normal;
-                    font-family: $font-titulos;
                 }
             }
         }
 
         .main-article {
-            font-family: $font-titulos;
 
             .relacionadas {
                 width: 100%;
@@ -541,7 +494,6 @@
 
                 &__titulo {
 
-                    font-family: $font-titulos;
                     font-size: 1.18em;
 
                 }
@@ -549,7 +501,6 @@
                 &__nota {
 
                     .relacionada-titulo-nota {
-                        font-family: $font-titulos;
                         font-size: 0.75em;
                     }
                 }
@@ -558,7 +509,6 @@
             .mas-en-perfil {
                 &__nota {
                     &__titulo {
-                        font-family: $font-titulos;
                         font-size: 1.17em;
                         letter-spacing: -0.01em;
                         line-height: 1.1em;
@@ -572,19 +522,15 @@
                 h2 {
                     line-height: 1.05em;
                     font-size: 1.6rem;
-                    font-family: $font-titulos;
                     letter-spacing: -0.04em;
 
                 }
 
-                /*   >p:first-of-type:first-letter {
-                    font-family: $font-titulos;
-                } */
+
                 figure {
                     figcaption {
                         font-size: .69em;
                         letter-spacing: -0.01em;
-                        font-family: $font-titulos;
 
                     }
                 }
@@ -599,7 +545,6 @@
                     line-height: 61px;
                     letter-spacing: -1px;
 
-                    font-family: $font-titulos;
 
                 }
 

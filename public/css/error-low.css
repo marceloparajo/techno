@@ -25,7 +25,6 @@
 }
 
 .error__titulo {
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-weight: bold;
   font-size: 1.6rem;
   line-height: 1.05em;
@@ -35,7 +34,6 @@
 }
 
 .error__subtitulo {
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-size: 1.2rem;
   line-height: 1.05em;
   font-weight: normal;
@@ -46,7 +44,6 @@
 
 .error__contenido {
   text-align: center;
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
 }
 
 .error__contenido p.main-page {
@@ -64,7 +61,6 @@
 }
 
 .error__contenido__sugerencias p {
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   color: #666;

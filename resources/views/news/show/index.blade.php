@@ -66,69 +66,90 @@
 @section('body')
 
 
-	<main class="main-container max-width margin-auto  considebar">
+	<main class="news main container row max-width margin-auto">
 
-		<div class="seccion noticia" id="noticia">
+		<div class="col-fluid d-xs-flex news__container" id="noticia">
 
-			<header class="articulo-header">
-				<div class="hat">
+
+		
+
+			<header class="news__header">
+				<div class="news__hat">
 					<a href="/seccion/{{ $noticia['channel']['slug']}}">{{ strtoupper($noticia['channel']['name']) }}</a>
-					<span class="hat__fecha">
-						{{ $noticia['date_available_human'] }}
-					</span>
 
 				</div>
 				{{-- Titulos --}}
-				<h1>{{ $noticia['title'] }}</h1>
+				<h1 class="news__title">{{ $noticia['title'] }}</h1>
+
 				@if($noticia['headline'] != '.')
-					<h2 class="headline">
+					<h2 class="news__headline">
 						{{ $noticia['headline'] }}
 						@if (count($noticia['gallery']) > 1)
-							<a href="#" role="button" class="abrirgaleria" title="Ver fotogaleria"><img src="/images/glyph/hasgallerytext.png" width="20" height="16" alt="Galería de fotos">Galería de fotos</a>
+							<a href="#" role="button" class="open-gallery" title="Ver fotogaleria">
+								<img src="/images/glyph/hasgallerytext.png" width="20" height="16" alt="Galería de fotos">Galería de fotos
+							</a>
 						@endif
 					</h2>
-				@endif
+				@endif			
 			</header>
-
 
 			{{-- Featured Image or Video --}}
 			@if ($noticia['featured_content'] == 'embed_code')
-				<div class="media embed-responsive embed-responsive-16by9 videoContainer">
+				<div class="news__media embed-responsive embed-responsive-16by9 videoContainer">
 					{!! $noticia['embed_code'] !!}
 				</div>
 			@else
-				<figure class="btn-open-gallery">
+				<figure class="news__media btn-open-gallery">
 					@if (count($noticia['gallery']) > 1)
 						<a href="#" role="button" class="btn-open-gallery fotogaleria" title="Ver fotogaleria"></a>
 					@endif
 						<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['title']"
-									  class="img-fluid"
-									  :sizes="[['v' => 320, 'w' => 320, 'h' => 180], ['v' => 360, 'w' => 360, 'h' => 202], ['v' => 375, 'w' => 375, 'h' => 211], ['v' => 414, 'w' => 414, 'h' => 233], ['v' => 768, 'w' => 720, 'h' => 405], ['v' => 1024, 'w' => 635, 'h' => 357], ['v' => 1366, 'w' => 950, 'h' => 534]]"
-									  :lazy-load="false" />
+									class="img-fluid"
+									:sizes="[['v' => 320, 'w' => 320, 'h' => 180], ['v' => 360, 'w' => 360, 'h' => 202], ['v' => 375, 'w' => 375, 'h' => 211], ['v' => 414, 'w' => 414, 'h' => 233], ['v' => 768, 'w' => 720, 'h' => 405], ['v' => 1024, 'w' => 635, 'h' => 357], ['v' => 1366, 'w' => 950, 'h' => 534]]"
+									:lazy-load="false" />
 					<figcaption class="figure-caption">{{ $noticia['main_image']['caption'] }}<span class="credito-foto"> | {{ $noticia['main_image']['credit']}}</span></figcaption>
 				</figure>
 			@endif
-			<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-lg-flex" min-height="90" max-height="250" margin-bottom="20" />
+			<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" min-height="90" max-height="250" margin-bottom="20" />
 
-			<article class="main-article">
+			<article class="news__main-article">
 
-				<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-lg-none" min-height="250" max-height="250" margin-bottom="20" />
+				<aside class="news__sharing">
+					@include('news.show.partials.social-top', ['shareText' => __('share')] )
 
-				{{-- Article Body --}}
-				<div class="news-body">
-						{{-- Author
+				</aside>
+
+				<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-md-none" min-height="250" max-height="250" margin-bottom="20" />
+
+				{{-- Article Body --}}	
+				
+				<div class="news__body">
+						{{-- Author --}}
 						@if ($noticia['signed'])
-							<div class="autor">
+							<div class="news__autor">
 								@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 							</div>
 						@elseif (! $noticia['signed'] && $noticia['credit'] != '')
-							<div class="autor">{{ $noticia['credit'] }}</div>
+							<div class="news__autor">
+								<div class="autor-nota__nombre">
+									{{ $noticia['credit'] }}
+								</div>
+							</div>
+						@else 
+							<div class="news__autor">
+								<div class="autor-nota__nombre">
+									Redacción Parabrisas
+								</div>
+							</div>
 						@endif
-						--}}
+						
 
-					@include('news.show.partials.social-top', ['shareText' => __('share')] )
+						<time class="news__date" datetime="{{ $noticia['date_available'] }}">{{ $noticia['date_available_human'] }}</time>
 
-					<div class="news-content">
+
+
+						
+					<div class="news__content">
 						{!! $body !!}
 
 						{{-- Embed Code --}}
@@ -157,7 +178,7 @@
 						{{--  /Gallery --}}
 
 						@include('news.show.partials.noticias-relacionadas', ['news' => $noticia['relacionadas']])
-						<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-lg-flex" min-height="90" max-height="250" margin-bottom="20" />
+						<x-ad-space id="728x90x-pos-" width="728" height="90" class="ads d-xs-none d-xl-flex" min-height="90" max-height="250" margin-bottom="20" />
 						<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-xl-none" />
 
 						@include('news.show.partials.news-tags')
@@ -166,6 +187,10 @@
 
 				</div>
 				{{-- /Article Body --}}
+
+			</article>
+
+			<aside class="news__comments-suggested">
 
 				{{-- Facebook Comments --}}
 				<div class="comments">
@@ -192,13 +217,13 @@
 				{{-- Noticias sugeridas de otros sitios/revistas --}}
 				<x-suggested-site-news />
 
-			</article>
+			</aside>
 
 		</div><!-- noticia -->
 
-		<aside class="sidebar">
+		<div class="col-fixed-news">
 			<x-sidebar />
-		</aside>
+						</div>
 
 	</main> <!-- maincontainer -->
 

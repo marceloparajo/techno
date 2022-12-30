@@ -14,95 +14,8 @@
   src: local("Arial");
 }
 
-/* .masvistas {
-    &__titulo {
-        color: $negro;
-        font-family: $font-titulos-nowebfont;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        padding-left: 15px;
-       border-left: 4px solid $second-color;
-       margin-bottom: 10px;
-        font-weight: 700;
-      
-    }
-   
-    &__nota {
-      
-        background: white;
-        transition: ease .3s;
-       
-        .enlace {
-            flex-direction: row;
-            display: flex;
-            padding: 10px 0px;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 0px;
-         
-            .rankOrder {
-               
-                text-align: center;
-              font-family: $font-titulos-nowebfont;
-                padding: 2px 0;
-               font-weight: 500;
-                font-size: 2.8rem; 
-            
-                margin-right: 10px;
-                line-height: 1;
-                width: 10%;
-                
-            }
-            &__titulo {
-                padding: 0 .4em;
-                font-family: $font-titulos-nowebfont;
-                //font-weight: bold;
-                letter-spacing: 0.02em;
-                line-height:   1.11em;
-                width: 85%;
-                font-size: 0.91em;
-                margin: 0 1% 2% 4%;
-            }
-            picture {
-                width: 38%;
-                height: 60px;}
-
-        }
-        &:hover {
-            background: $second-color;
-        }
-    }
-}
-
- .wf-loaded {
-
-    .masvistas    {
-        &__titulo {
-            font-family: $font-titulos;
-            line-height: 1.15em;
-
-        }
-        .rankOrder {
-           
-            font-family: $font-titulos;
-    
-        }
-        .enlace {
-     
-            &__titulo {
-            font-family: $font-titulos;
-            font-size: 0.88em;
-             letter-spacing: -0.03em;
-             line-height: 1.15em;
-            
-            }
-        }
-    }
-
-}    */
-
 .masvistas__titulo {
   color: #171717;
-  font-family: "Roboto", "Roboto-fallback", Helvetica, Roboto, sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
   padding-left: 15px;
@@ -132,7 +45,6 @@
 
 .masvistas__nota .enlace .rankOrder {
   text-align: center;
-  font-family: "Roboto", "Roboto-fallback", Helvetica, Roboto, sans-serif;
   padding: 2px 0;
   font-weight: 500;
   font-size: 2.8rem;
@@ -143,7 +55,6 @@
 
 .masvistas__nota .enlace__titulo {
   padding: 0 .4em;
-  font-family: "Roboto", "Roboto-fallback", Helvetica, Roboto, sans-serif;
   letter-spacing: 0.02em;
   line-height: 1.11em;
   width: 85%;
@@ -161,16 +72,10 @@
 }
 
 .wf-loaded .masvistas__titulo {
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
   line-height: 1.15em;
 }
 
-.wf-loaded .masvistas .rankOrder {
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
-}
-
 .wf-loaded .masvistas .enlace__titulo {
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-size: 0.88em;
   letter-spacing: -0.03em;
   line-height: 1.15em;
@@ -200,7 +105,6 @@ aside div {
   width: 100%;
   text-transform: uppercase;
   font-weight: 700;
-  font-family: "Roboto", "Roboto-fallback", Helvetica, Roboto, sans-serif;
 }
 
 .masleidas .articulo {
@@ -230,7 +134,6 @@ aside div {
   font-size: 1.1rem;
   line-height: 1.3rem;
   font-weight: 500;
-  font-family: "Roboto", "Roboto-fallback", Helvetica, Roboto, sans-serif;
 }
 
 .masleidas .articulo__ordenleidas {
@@ -238,7 +141,6 @@ aside div {
   left: 10px;
   top: 10px;
   color: white;
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-size: 4rem;
   text-shadow: 0 3px 5px black;
   z-index: 2;
@@ -296,12 +198,7 @@ aside div {
   padding-top: 10px;
 }
 
-.wf-loaded .masleidas h1 {
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
-}
-
 .wf-loaded .masleidas .articulo a .meta-content h2 {
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-size: 1rem;
   line-height: 1.3rem;
   font-weight: 500;
@@ -312,7 +209,6 @@ aside div {
   left: 10px;
   top: 10px;
   color: white;
-  font-family: "Roboto", "Roboto-fallback", sans-serif;
   font-size: 4rem;
   text-shadow: 0 3px 5px black;
   z-index: 2;

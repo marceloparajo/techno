@@ -1,4 +1,3 @@
-
 @if (isset($news) && count($news) > 0)
 	<!-- Bloque -->
 	<div class="row max-width bloque">
@@ -20,30 +19,14 @@
 
 		<div class="col-fixed">
 			
-			@if (isset($tapa))
+			@if ( $item['id'] == 'ultimas-noticias' )
 
-				<article class="tapa">
+				<x-mas-leidas-perfil-widget :rows="5" />
+				<div class="sticky">
+				<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" /> 
 
-					<figure>
-						<a href="{{ $tapa['permalink'] }}" title="{{ $tapa['home_title'] }}">
-							<x-lazy-image
-									:src="$tapa['main_image']['srcs']['original']"
-									:alt="$tapa['main_image']['title']"
-									:sizes="[['v' => 320, 'w' => 300, 'h' => 420]]"
-									class="img-fluid" />
-						</a>
-					</figure>
-
-					<span class="suscripcion-kiosco">
-						<a href="//kioscoperfil.com/" target="_blank" rel="noreferrer">Suscribite</a>
-					</span>
-
-				</article>
-
-
-				<div class="placa-home">
-					@include('sidebar.modules.most-viewed', ['site' => env('SITE_CODE',''), 'title' => $title])
 				</div>
+
 
 			@else
 				<x-mas-leidas-widget :rows="5" />

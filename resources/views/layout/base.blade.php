@@ -191,8 +191,8 @@
             <script defer id="js-eplvideo" async type="text/javascript" src="https://hls.e-planning.video/video/js/eplvideo.js" data-client="ut/2b79"></script>
         @endif
 
-        <x-ad-space id="layer" height="1" width="1" margin-top="0" margin-bottom="0"></x-ad-space>
-        <x-ad-space id="anuncioprevio" height="1" width="1" margin-top="0" margin-bottom="0"></x-ad-space>
+        <x-ad-space id="layer" height="0" width="1" margin-top="0" margin-bottom="0"></x-ad-space>
+        <x-ad-space id="anuncioprevio" height="0" width="1" margin-top="0" margin-bottom="0"></x-ad-space>
 
     </body>
 </html>

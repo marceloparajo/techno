@@ -1,11 +1,8 @@
 @import "parabrisas-02/commons/_variables";
 @import "parabrisas-02/commons/_commons";
 @import "parabrisas-02/commons/_header";
-@import "theme/main/_header";
-@import "theme/main/_footer";
-//@import "theme/main/_paywall";
-@import "theme/news/_news-webvitals";
-//@import "theme/main/_sidebar";
-//@import "theme/news/$font-base";
-//@import "theme/news/_mas-leidas";
+@import "parabrisas-02/commons/_footer";
+@import "parabrisas-02/commons/_ads";
+@import "parabrisas-02/aside/_mas-leidas";
+@import "parabrisas-02/news/_news";
 @import "theme/news/_mas-en-perfil";

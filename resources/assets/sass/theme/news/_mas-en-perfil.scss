@@ -1,16 +1,7 @@
  .relacionadas {
     width: 100%;
     
-    /* &__titulo {
-        font-family: $font-titulos;
-        font-weight: bold;
-        font-size: 1.3rem;
-        text-transform: uppercase;
-        margin: 0 0 .5em 0;
-        padding: 0 0 .1em 0;
-        color: $color-brand;
-        border-bottom: 1px solid $color-brand;
-    } */
+
     &__noticias {
         width: 100%;
     }
@@ -19,7 +10,6 @@
         padding: 0 0 .3em 0;
         margin: 0 0 .3em 0;
         font-size: 1rem;
-        font-family: $font-titulos;
         font-weight: bold;
         line-height: 1.05em;
         border-bottom: $borde;
@@ -46,7 +36,6 @@
     width: 100%;
     padding: 0 .5em;
     &__titulo {
-        font-family: $font-titulos;
         font-weight: bold;
         font-size: 1.2em;
         width: 100%;
@@ -77,9 +66,7 @@
         }
         &__titulo {
             display: block;
-           // font-size: 1.17em;
-           // font-family: $font-titulos;
-           // font-weight: 500;
+
             line-height: 1em;
             padding: 1em;
            // letter-spacing: -0.03em;

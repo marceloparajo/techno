@@ -12,7 +12,6 @@
     &__titulo {
         position: relative;
         font:{
-            family: $font-titulos;
             size: 2rem;
         }
         background: $color-brand;
@@ -64,7 +63,6 @@
         position: absolute;
         top: 48px;
         left: 10px;
-        font-family: $font-titulos;
         z-index: 2;
         list-style: none;
         background: $gris-muy-claro;
@@ -102,7 +100,6 @@
                 margin-bottom: 0;
                 .hat {
                     text-transform: uppercase;
-                    font-family: $font-titulos;
                     text-align: center;
                     display: block;
                     letter-spacing: .05em;
