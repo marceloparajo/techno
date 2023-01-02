@@ -1,5 +1,6 @@
 
 .masvistas {
+    margin: 0 0 2rem 0;
     &__titulo {
         font-size: 1.2rem;
         text-transform: uppercase;
@@ -20,7 +21,6 @@
             flex: 1 1 0;
         }
         &:hover {
-           
             a {  
                 color: $color-brand; 
             }

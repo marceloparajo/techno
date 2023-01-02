@@ -335,6 +335,7 @@
 
 @media (min-width: 768px) {
   .social__topsharing {
+    margin-top: -1rem;
     position: sticky;
     top: 65px;
     padding: 0;
@@ -350,7 +351,52 @@
 
   .social__topsharing ul li {
     margin-left: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: white;
+  }
+
+  .social__icon:hover img {
+    -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+  }
+
+  .social__icon--facebook:hover {
+    background-color: #1877f2;
+  }
+
+  .social__icon--twitter:hover {
+    background-color: #4295DA;
+  }
+
+  .social__icon--whatsapp:hover {
+    background-color: #25D366;
+  }
+
+  .social__icon--linkedin:hover {
+    background-color: #007bb6;
+  }
+
+  .social__icon--mailto:hover {
+    background-color: #cc2127;
+  }
+}
+
+@media (min-width: 1360px) {
+  .social__topsharing {
+    top: 125px;
   }
 }
 
