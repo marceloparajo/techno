@@ -1206,17 +1206,13 @@ figure img {
   text-transform: uppercase;
   margin-top: .8rem;
   color: #ed1b24;
+  display: inline-block;
 }
 
 .news__autor:before {
-  content: '';
-  display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #666;
-  float: left;
-  margin: 5px 5px 0 0;
+  content: 'Por ';
+  display: inline-block;
+  margin: 5px 0 0;
 }
 
 .news--figure-rounded figure {
@@ -1600,6 +1596,10 @@ figure img {
     width: 100%;
     margin: 2rem auto;
   }
+}
+
+.masvistas {
+  margin: 0 0 2rem 0;
 }
 
 .masvistas__titulo {
