@@ -1,5 +1,5 @@
 <div id="mas-leidas" class="masvistas">
-	<div class="masvistas__titulo">
+	<div class="masvistas__titulo news__aside-title">
 		<a href="{{ route('mostviewed.show') }}">Las más leídas</a>
 	</div>
 

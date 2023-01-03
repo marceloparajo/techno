@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	transition: ease .3s;
-	font-family: $font-base;
 }
 
 body {
@@ -135,6 +134,7 @@ figure {
     }
     .col-fixed-news {
         flex-basis: 360px; 
+        width: 360px;
     }
 }
 @include media-breakpoint-up(xl) {

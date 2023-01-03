@@ -30,15 +30,54 @@
 @include media-breakpoint-up(md) {
 	.social {
 		&__topsharing {
-			position: sticky;
-			top: 65px;
+			margin-top: -1rem;
 			padding: 0;
 			ul {
 				margin-right: auto;
 				flex-direction: column;
 				li {
 					margin-left: 0;
-					margin-bottom: 2rem;
+					margin-bottom: 0.5rem;
+					padding: 0.5rem;
+					border-radius: 50%;
+					width: 50px;
+					height: 50px;
+					justify-content: center;
+					align-items: center;
+					display: flex;
+					background: white;
+				}
+			}
+		}
+		&__icon {
+			&:hover {
+				img {
+					filter: brightness(0) invert(1);
+				}
+			}
+			&--facebook {
+				&:hover {
+					background-color: $pf_facebook_color;
+				}
+			}	
+			&--twitter {
+				&:hover {
+					background-color: $pf_twitter_color;
+				}
+			}	
+			&--whatsapp {
+				&:hover {
+					background-color: $pf_whatsapp_color;
+				}
+			}		
+			&--linkedin {
+				&:hover {
+					background-color: $pf_linkedin_color;
+				}
+			}		
+			&--mailto {
+				&:hover {
+					background-color: $pf_pinterest_color;
 				}
 			}
 		}

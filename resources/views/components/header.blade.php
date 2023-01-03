@@ -1,6 +1,6 @@
 <div class="container pre-header bg-negro d-xs-none d-md-block">
 	<div class="max-width d-md-flex">
-		<time class="time-top" datetime="{{ $current_date->isoFormat('YYYY [-] MM [-] DD') }}" >{{ $current_date->isoFormat('dddd DD [de] MMMM [del] YYYY') }}</time>
+		<time class="time-top" datetime="{{ $current_date->isoFormat('YYYY [-] MM [-] DD') }}" >{{ $current_date->isoFormat('dddd DD [de] MMMM [de] YYYY') }}</time>
 		<div class="perfil-logo">
 			<a href="https://www.perfil.com" target="_blank" title="Ir a Perfil.com" rel="noreferrer">
 				<img src="{{ asset('img/perfil.svg') }}" alt="Perfil" width="90" height="20">

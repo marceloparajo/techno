@@ -12,7 +12,7 @@
         {{-- JPG --}}
         @foreach ($images() as $image)
             @if ($loop->last)
-                <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $image['src'] }}" style="width: 100%" @if ($lazy_load) loading="lazy" @endif>
+                <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $image['src'] }}"  @if ($lazy_load) loading="lazy" @endif>
             @else
                 <source media="(max-width: {{ $image['viewport'] }}px)" srcset="{{ $image['src'] }}" />
             @endif
@@ -20,7 +20,7 @@
     </picture>
 @else
     <picture class="{{ $picture_class }}">
-        <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $src }}" style="width: 100%;" @if ($lazy_load) loading="lazy" @endif>
+        <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $src }}" @if ($lazy_load) loading="lazy" @endif>
     </picture>
 @endif
 @if ($play_button)

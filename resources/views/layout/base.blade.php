@@ -39,6 +39,7 @@
         <meta name="theme-color" content="#ffffff">
         {{-- /Favicons --}}
 
+        <link rel="preload" as="image" href="{{ asset('img/logo-parabrisas.svg') }}">
         <link rel="preconnect" href="https://ads.us.e-planning.net">
         <link rel="preconnect" href="https://libs.lavoz.com.ar">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,15 +126,6 @@
             <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{ env('FACEBOOK_PIXEL_ID') }}&ev=PageView&noscript=1"/></noscript>
         @endif
         /Facebook Pixel --}}
-
-
-        {{-- Webfont is loaded --}}
-        <script type="text/javascript">
-            document.fonts.onloadingdone = function () {
-              document.getElementsByTagName("body")[0].classList.add("wf-loaded");
-            };
-        </script>
-        {{-- /Webfont is loaded --}}
 
         {{-- MARFEEL --}}
         @if (config('services.marfeel.enable'))

@@ -1,0 +1,28 @@
+.channel {
+    flex-direction: column;
+    &__container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    &__title {
+        text-transform: capitalize;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .channel {
+        &__container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .channel {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+}

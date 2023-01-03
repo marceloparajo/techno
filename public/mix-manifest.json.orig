@@ -1,28 +1,23 @@
 {
     "/js/mi-perfil.js": "/js/mi-perfil.js?id=f09503e4a1293f48ff8d",
-    "/js/channels-show.js": "/js/channels-show.js?id=62e3d2e75b3e8614ef5b",
+    "/js/channels-show.js": "/js/channels-show.js?id=f364c0fe1a6d137fdf35",
 <<<<<<< HEAD
-    "/css/home-high.css": "/css/home-high.css?id=b287204910cc82753a0a",
-    "/css/home-low.css": "/css/home-low.css?id=875e4ebf45b112af9c19",
-    "/css/news-high.css": "/css/news-high.css?id=8b40e677cbb79f0c5566",
-    "/css/news-low.css": "/css/news-low.css?id=feb449517c6859131896",
-    "/css/channels-high.css": "/css/channels-high.css?id=29ee4a8f9c112f7fe001",
-    "/css/channels-low.css": "/css/channels-low.css?id=a226be3103a1d4871afe",
-    "/css/masleidas-low.css": "/css/masleidas-low.css?id=2517353fb1c5833cd04b",
-    "/css/error-low.css": "/css/error-low.css?id=52caf518d3731224c340",
-    "/css/pages.css": "/css/pages.css?id=678830c761d83c5ec884",
+    "/css/home-high.css": "/css/home-high.css?id=41c311b20d80cec80676",
+    "/css/home-low.css": "/css/home-low.css?id=b82b361349dc13c7e39e",
+    "/css/news-high.css": "/css/news-high.css?id=9a4cc967a08ce58e7668",
+    "/css/news-low.css": "/css/news-low.css?id=b82b361349dc13c7e39e",
 =======
-    "/css/home-high.css": "/css/home-high.css?id=7d4619563f28b2e949c9",
-    "/css/home-low.css": "/css/home-low.css?id=d6ef657fde6de552ea37",
-    "/css/news-high.css": "/css/news-high.css?id=b47c95d074c36ad624da",
-    "/css/news-low.css": "/css/news-low.css?id=6f26489bb1444019d0e2",
-    "/css/channels-high.css": "/css/channels-high.css?id=915741429660f75ec96f",
-    "/css/channels-low.css": "/css/channels-low.css?id=d41d8cd98f00b204e980",
-    "/css/masleidas-low.css": "/css/masleidas-low.css?id=772946e08d3bc2fb375f",
-    "/css/error-low.css": "/css/error-low.css?id=7fd43511b6b6e4b0ebbd",
-    "/css/pages.css": "/css/pages.css?id=1c9e45e437515839d38c",
->>>>>>> juli
-    "/js/news-show.js": "/js/news-show.js?id=f1281b1dc212b3c98425",
+    "/css/home-high.css": "/css/home-high.css?id=3fdf69e7fd7e47e8922e",
+    "/css/home-low.css": "/css/home-low.css?id=b82b361349dc13c7e39e",
+    "/css/news-high.css": "/css/news-high.css?id=8719815e072dcc4b8013",
+    "/css/news-low.css": "/css/news-low.css?id=eac5c4e14edf5ab06c5d",
+>>>>>>> dc3dd90d034a75eec8634d1e773ff50414ddb98c
+    "/css/channels-high.css": "/css/channels-high.css?id=9764923efda635c3b97d",
+    "/css/channels-low.css": "/css/channels-low.css?id=b82b361349dc13c7e39e",
+    "/css/masleidas-low.css": "/css/masleidas-low.css?id=b9169f91efe9560e6295",
+    "/css/error-low.css": "/css/error-low.css?id=3e14901dd5c5140ef1d5",
+    "/css/pages.css": "/css/pages.css?id=f682d2695913acb306d4",
+    "/js/news-show.js": "/js/news-show.js?id=bbd7b9d4ded07db738ef",
     "/js/eplanning.js": "/js/eplanning.js?id=b0acca5292d016c989b6",
-    "/js/home.js": "/js/home.js?id=67e70a331c419d8d90b5"
+    "/js/home.js": "/js/home.js?id=3dc0a17f442386211474"
 }

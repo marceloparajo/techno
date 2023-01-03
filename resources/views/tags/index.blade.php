@@ -26,21 +26,30 @@
 
 @section('body')
 
-<main class="main-container max-width margin-auto  considebar">
+<main class="channel main container row max-width margin-auto">
 
-	<div class="seccion tag" id="{{ $tag_title }}">
+	<div class="col-fluid d-xs-flex channel__container" id="{{ $tag_title }}">
 
-		<h1 class="seccion-titulo {{ $tag_title }}">{{ $tag_title }}</h1>
+		<h1 class="channel__title {{ $tag_title }}">{{ $tag_title }}</h1>
 
-		@foreach ($noticias as $noticia)
+		@foreach ($noticias as $new)
 
-			@include('channels.partials.articulo')
+			@if($loop->first || $loop->index % 5 == 0)
+
+				@include('partials.articulo', array('clase' => 'news--tipo-especial news--tipo-especial-main news--hat-inverted', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '728', 'height_tablet' => '410', 'width_laptop' => '536', 'height_laptop' => '404', 'width_desktop' => '626', 'height_desktop' => '353'))
+
+			@else 
+
+				@include('partials.articulo', array('clase' => 'news--card-rounded news--half-size', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '728', 'height_tablet' => '410', 'width_laptop' => '196', 'height_laptop' => '110', 'width_desktop' => '305', 'height_desktop' => '172'))
+			
+			@endif
 
 		@endforeach
 
 	</div>
 
-	<div class="sidebar">
+	<div class="col-fixed-news">
+		<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-xs-block" min-height="250" max-height="250" margin-bottom="40" />
 		<x-sidebar />
 	</div>
 

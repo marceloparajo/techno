@@ -160,7 +160,8 @@
         .news__autor {
             color: white;
         }
-        &.news--0 {
+        &.news--0,
+        &-main {
             .news__headline {
                 display: block;
                 color: white;
@@ -211,6 +212,19 @@
             }
             figure {
                 border-radius: 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .news {
+        &--half-size {
+            width: 48%;
+        }
+        &--tipo-especial-main {
+            .news__title {
+                font-size: 2em;
             }
         }
     }

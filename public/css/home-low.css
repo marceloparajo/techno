@@ -14,3 +14,73 @@
   src: local("Arial");
 }
 
+.main-footer {
+  background: #313133;
+  padding: 10px 0;
+}
+
+.main-footer figure {
+  margin: 10px auto;
+  width: 160px;
+  height: 34px;
+  background: #ed1b24;
+  border-radius: 2px;
+}
+
+.main-footer figure img {
+  width: 100%;
+}
+
+.main-footer .footer-redes {
+  background: #313133;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-footer .footer-redes a {
+  margin: 10px;
+}
+
+.main-footer .nav-footer {
+  background: #313133;
+}
+
+.main-footer .nav-footer ul {
+  list-style: none;
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 1px solid #171717;
+}
+
+.main-footer .nav-footer ul li {
+  padding: 5px 10px;
+}
+
+.main-footer .nav-footer ul li a {
+  color: white;
+}
+
+.main-footer .disclaimer {
+  background: #171717;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: .9rem;
+}
+
+.main-footer .disclaimer a {
+  color: #eee;
+}
+

@@ -1,0 +1,14 @@
+.news {
+	&__aside {
+		width: 100%;
+		margin: 2rem 0;
+	}
+
+	&__aside-title {
+		font-size: 1.2rem;
+		font-weight: bold;
+		border-top: 3px solid $color-brand;
+		text-transform: uppercase;
+		padding: .5rem 0;
+	}
+}

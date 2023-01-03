@@ -1,4 +1,4 @@
-<div class="social__topsharing">
+<div class="social__topsharing sticky">
 	<ul>
 
 		<li class="social__icon social__icon--facebook">

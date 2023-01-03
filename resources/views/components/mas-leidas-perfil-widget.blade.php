@@ -1,5 +1,5 @@
 <div id="mas-leidas-perfil" class="masvistas">
-    <header class="masvistas__titulo">
+    <header class="masvistas__titulo news__aside-title">
         <a href="https://www.perfil.com/mas-leidas">Más leídas de Perfil</a>
     </header>
 
