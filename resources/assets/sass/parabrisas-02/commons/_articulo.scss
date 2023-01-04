@@ -147,6 +147,21 @@
         }
     }
 
+    &--brand-color {
+        background: $color-brand;
+        .news__title,
+        .news__autor,
+        .news__hat {
+            color: white;
+        }
+        .news__hat {
+            display: block;
+            margin: -.7rem -.6rem 0 -.6rem;
+            background: $negro;
+            padding: .2rem .5rem;
+        }
+    }
+
     &--tipo-especial {
         position: relative;
         margin: 0;

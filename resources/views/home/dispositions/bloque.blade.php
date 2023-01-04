@@ -5,11 +5,10 @@
 	<div class="col-fluid bloque__notas-container">
 
 		@foreach(array_slice($news, 0, 13) as $new)
-			@if ($new['channel']['slug'] == 'tapas' && !isset($tapa))
-				@php ($tapa = $new)
+			@if($loop->index == 3 || $loop->index == 8)
+				@include('partials.articulo', array('clase' => 'news--brand-color news--card-rounded', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '367', 'height_tablet' => '220', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
 			@else
-
-			@include('partials.articulo', array('clase' => 'news--card-rounded', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '367', 'height_tablet' => '220', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
+				@include('partials.articulo', array('clase' => 'news--card-rounded', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '367', 'height_tablet' => '220', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
 			@endif
 		@endforeach
 

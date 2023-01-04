@@ -62,7 +62,7 @@
 
 @include media-breakpoint-up(xxl) {
     .especial {
-        width: 100%;
-        margin: 2rem auto;
+        width: calc(100% + 2rem);
+        margin: 2rem -1rem;
     }
 }

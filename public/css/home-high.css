@@ -1266,6 +1266,23 @@ figure img {
   color: white;
 }
 
+.news--brand-color {
+  background: #ed1b24;
+}
+
+.news--brand-color .news__title,
+.news--brand-color .news__autor,
+.news--brand-color .news__hat {
+  color: white;
+}
+
+.news--brand-color .news__hat {
+  display: block;
+  margin: -.7rem -.6rem 0 -.6rem;
+  background: #171717;
+  padding: .2rem .5rem;
+}
+
 .news--tipo-especial {
   position: relative;
   margin: 0;
@@ -1494,8 +1511,8 @@ figure img {
 
 @media (min-width: 1360px) {
   .especial {
-    width: 100%;
-    margin: 2rem auto;
+    width: calc(100% + 2rem);
+    margin: 2rem -1rem;
   }
 }
 
