@@ -15,7 +15,7 @@
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/channels-high.css') }}">
 
-	<link rel="stylesheet" href="{{ mix('css/masleidas-low.css') }}" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="{{ mix('css/channels-low.css') }}" media="print" onload="this.media='all'">
 @endsection
 
 @section('body-class', 'pf-channel-show')
@@ -28,42 +28,21 @@
 
 
 
-<main class="main-container max-width margin-auto  considebar">
+<main class="channel main container row max-width margin-auto">
 
-	<div class="seccion masleidas" id="masleidas">
+	<div class="col-fluid d-xs-flex channel__container" id="masleidas">
 
-		<h1 class="seccion-titulo">Las más leídas</h1>
+		<h1 class="channel__title max-width">Las más leídas</h1>
 
-
-		@foreach ($noticias as $noticia)
-
-		<article class="articulo nota-{{ $loop->iteration }}">
-			<a href="{{ $noticia['permalink'] }}">
-				<figure>
-					<x-lazy-image
-							:src="$noticia['main_image']['srcs']['original']"
-							:alt="$noticia['main_image']['caption']"
-							class="img-fluid"
-							:sizes="[['v' => 375, 'w' => 373, 'h' => 210], ['v' => 414, 'w' => 412, 'h' => 232], ['v' => 768, 'w' => 333, 'h' => 187], ['v' => 1024, 'w' => 286, 'h' => 161], ['v' => 1366, 'w' => 273, 'h' => 153]]"
-							:play-button="$noticia['has_video']"
-							:camera-button="$noticia['has_gallery']"
-							clean-source="true"
-					/>
-				</figure>
-				<div class="meta-content">
-					<h2>{{ $noticia['home_title'] }}</h2>
-				</div>
-				<span class="articulo__ordenleidas">
-					{{ $loop-> index + 1 }}
-				</span>
-			</a>
-		</article>
+		@foreach ($noticias as $new)
+			@include('channels.partials.articulo-mas-leidas', array('clase' => 'news--card-rounded news--half-size', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '728', 'height_tablet' => '410', 'width_laptop' => '196', 'height_laptop' => '110', 'width_desktop' => '305', 'height_desktop' => '172'))
 		@endforeach
 	</div>
 
-	<aside class="sidebar">
+	<div class="col-fixed-news">
+		<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-xs-block" min-height="250" max-height="250" margin-bottom="40" />
 		<x-sidebar />
-	</aside>
+	</div>
 
 </main>
 @endsection

@@ -16,22 +16,22 @@
 
 .main-footer {
   background: #313133;
-  padding: 10px 0;
+  padding: 1rem 0 0 0;
 }
 
-.main-footer figure {
-  margin: 10px auto;
+.main-footer__logo {
+  margin: 1rem auto;
   width: 160px;
   height: 34px;
   background: #ed1b24;
   border-radius: 2px;
 }
 
-.main-footer figure img {
+.main-footer__logo img {
   width: 100%;
 }
 
-.main-footer .footer-redes {
+.main-footer__redes {
   background: #313133;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,17 +41,16 @@
           justify-content: center;
 }
 
-.main-footer .footer-redes a {
+.main-footer__redes a {
   margin: 10px;
 }
 
-.main-footer .nav-footer {
+.main-footer__nav {
   background: #313133;
 }
 
-.main-footer .nav-footer ul {
+.main-footer__nav ul {
   list-style: none;
-  width: 100%;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,23 +63,24 @@
   border-top: 1px solid #171717;
 }
 
-.main-footer .nav-footer ul li {
+.main-footer__nav ul li {
   padding: 5px 10px;
 }
 
-.main-footer .nav-footer ul li a {
+.main-footer__nav ul li a {
   color: white;
 }
 
-.main-footer .disclaimer {
+.main-footer__disclaimer {
   background: #171717;
-  padding: 10px;
+  padding: 1rem;
   color: white;
   text-align: center;
   font-size: .9rem;
+  line-height: 1.5em;
 }
 
-.main-footer .disclaimer a {
+.main-footer__disclaimer a {
   color: #eee;
 }
 

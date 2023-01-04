@@ -14,7 +14,7 @@
 	&__hat {
         display: inline-block;;
         text-transform: uppercase;
-        margin: 1rem auto 0 0;
+        margin: 0 auto 0 0;
         font-size: .95rem;
         line-height: 1;
         color: $color-brand;
@@ -162,7 +162,8 @@
 
 	&__content {
 
-		p {
+		p,
+		li {
             margin: 1em 0;
             font-size: 1.16rem;
             line-height: 1.6em;
@@ -171,6 +172,10 @@
                 margin: 1em 0
             }
 
+		}
+
+		ul {
+			padding-left: 1.3rem;
 		}
 
 		h2 {
@@ -210,34 +215,35 @@
                 padding: 0;
                 margin: 0;
                 label {
-                        font-size: .9rem;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        line-height: normal;
+					font-size: .9rem;
+					text-transform: uppercase;
+					font-weight: bold;
+					line-height: normal;
                 }
 
                 ul {
-                        margin: 0px;
-                        display: flex;
-                        gap: .5rem;
+					margin: 0px;
+					display: flex;
+					gap: .5rem;
                 }
 
                 li {
-                        line-height: 1.6em;
-                        font-size: 0.7em;
-                        line-height: 1.6em;
+					line-height: 1.6em;
+					font-size: 0.75rem;
+					line-height: 1.6em;
+					margin: .3em 0;
 
-                        a {
-                                border-radius: 30px;
-                                display: block;
-                                padding: .2rem .8rem;
-                                border: $borde;
+					a {
+						border-radius: 30px;
+						display: block;
+						padding: .2rem .8rem;
+						border: $borde;
+						background: white;
 
-                                &:hover {
-                                        background: $color-brand;
-                                        color: white;
-                                }
-                        }
+						&:hover {
+							box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .1);
+						}
+					}
                 }
             }
 
@@ -262,21 +268,21 @@
 
 @include media-breakpoint-up(md) {
 	.news {
-		&__title {
-				font-size: 2.6rem;
-		}
-		&__main-article {
-				flex-direction: row;
-				gap: 1rem;
-				padding-top: 2rem;
-		}
-		&__sharing {
-				flex-basis: 90px;
-		}
-		&__body {
-				flex: 1 1 0;
-		}
-        &__media {
+                &__title {
+                                font-size: 2.6rem;
+                }
+                &__main-article {
+                                flex-direction: row;
+                                gap: 1rem;
+                                padding-top: 2rem;
+                }
+                &__sharing {
+                                flex-basis: 90px;
+                }
+                &__body {
+                                flex: 1 1 0;
+                }
+                &__media {
             
             a.fotogaleria {
                 z-index: 1;

@@ -29,7 +29,7 @@
 <main class="channel main container row max-width margin-auto">
 
 
-	<div class="col-fluid d-md-flex channel__container" id="{{ $sectionTitle }}">
+	<div class="col-fluid d-xs-flex channel__container" id="{{ $sectionTitle }}">
 
 		<h1 class="channel__title {{ $sectionTitle }}">{{ $sectionTitle }}</h1>
 

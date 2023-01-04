@@ -21,7 +21,16 @@
             width: 100%;
             font-size: 2rem;
         }
-        .news {
+        .news:not(.news--0) {
+            flex-basis: 48%;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .cobertura {
+        .news,
+        .news:not(.news--0) {
             flex-basis: 32%;
         }
     }

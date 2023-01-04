@@ -1,11 +1,11 @@
-<div class="autor__indice">
+<div class="channel__autor">
 	<figure>
-		<img class="autor__indice__img" src="{{ $author['image'] }}" alt="{{ $author['fullname'] }}" itemprop="image">
+		<img class="channel__autor-img" src="{{ $author['image'] }}" alt="{{ $author['fullname'] }}" itemprop="image">
 	</figure>
-	<div class="autor__indice__data">
-		<span class="autor__indice__nombre">{{ $author['fullname'] }}</span>
+	<div class="channel__autor-data">
+		<span class="channel__autor-nombre">{{ $author['fullname'] }}</span>
 		@if ( $author['about'] != '')
-			<p class="autor__indice__about">{!! $author['about'] !!}
+			<p class="channel__autor-about">{!! $author['about'] !!}
 				
 				<br />
 					

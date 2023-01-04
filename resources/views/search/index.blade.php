@@ -22,6 +22,7 @@
 
 @section('js')
 	<script type="text/javascript" src="{{ mix('js/channels-show.js') }}"></script>
+	@include('search.partials.search-styles')
 @endsection
 
 @section('body')

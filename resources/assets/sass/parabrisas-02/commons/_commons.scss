@@ -18,9 +18,15 @@ h1, h2, h3, h4, h5, h6 {
 	color: $negro;
 }
 
+.main {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 .container {
     width: 100%;
-    padding: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .row {
@@ -115,7 +121,10 @@ figure {
 
 }
 @include media-breakpoint-up(md) {
-
+    .home {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
     .col-fixed {
         flex-basis: 300px;
     }
@@ -128,10 +137,6 @@ figure {
     }
 }
 @include media-breakpoint-up(lg) {
-    .main {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
     .col-fixed-news {
         flex-basis: 360px; 
         width: 360px;

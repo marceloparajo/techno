@@ -316,6 +316,7 @@
 					overflow-y: hidden;
 					li {
 						margin: 0;
+						padding-top: 10px;
 						background: transparent;
 						&:first-of-type {
 							display: inline-block;
@@ -323,9 +324,14 @@
 						a {
 							font-family: $font-condensada;
 							color: $gris-oscuro;
-							padding: 17px 0.6rem 0;
+							padding: 7px 0.6rem;
 							font-size: .8rem;
 							white-space: nowrap;
+							border: 1px solid transparent;
+							border-radius: 20px;
+							&:hover {
+								border-color: #ed1b242b;
+							}
 						}
 					}
 					&::-webkit-scrollbar {

@@ -27,7 +27,7 @@
 
 @section('body')
 
-	<main class="main container">
+	<main class="home container">
 		@foreach($home_content as $key => $value)
 			@if ($key != 'sidebar')
 				<section id="{{ $key }}" class="seccion row">

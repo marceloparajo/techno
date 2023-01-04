@@ -38,9 +38,15 @@ h6 {
   color: #171717;
 }
 
+.main {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .container {
   width: 100%;
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .row {
@@ -132,6 +138,11 @@ figure img {
 }
 
 @media (min-width: 768px) {
+  .home {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .col-fixed {
     -ms-flex-preferred-size: 300px;
         flex-basis: 300px;
@@ -150,11 +161,6 @@ figure img {
 }
 
 @media (min-width: 1020px) {
-  .main {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
   .col-fixed-news {
     -ms-flex-preferred-size: 360px;
         flex-basis: 360px;
@@ -990,6 +996,7 @@ figure img {
 
   .navbar__container ul.nav.topics li {
     margin: 0;
+    padding-top: 10px;
     background: transparent;
   }
 
@@ -1000,9 +1007,15 @@ figure img {
   .navbar__container ul.nav.topics li a {
     font-family: "Roboto Condensed", "Roboto Condensed-fallback", sans-serif;
     color: #313133;
-    padding: 17px 0.6rem 0;
+    padding: 7px 0.6rem;
     font-size: .8rem;
     white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: 20px;
+  }
+
+  .navbar__container ul.nav.topics li a:hover {
+    border-color: #ed1b242b;
   }
 
   .navbar__container ul.nav.topics::-webkit-scrollbar {
@@ -1183,7 +1196,7 @@ figure img {
 .news__hat {
   display: inline-block;
   text-transform: uppercase;
-  margin: 1rem auto 0 0;
+  margin: 0 auto 0 0;
   font-size: .95rem;
   line-height: 1;
   color: #ed1b24;
@@ -1347,14 +1360,20 @@ figure img {
   display: block;
 }
 
-.news__content p {
+.news__content p,
+.news__content li {
   margin: 1em 0;
   font-size: 1.16rem;
   line-height: 1.6em;
 }
 
-.news__content p img {
+.news__content p img,
+.news__content li img {
   margin: 1em 0;
+}
+
+.news__content ul {
+  padding-left: 1.3rem;
 }
 
 .news__content h2 {
@@ -1416,8 +1435,9 @@ figure img {
 
 .news__content .tags__listado li {
   line-height: 1.6em;
-  font-size: 0.7em;
+  font-size: 0.75rem;
   line-height: 1.6em;
+  margin: .3em 0;
 }
 
 .news__content .tags__listado li a {
@@ -1425,11 +1445,12 @@ figure img {
   display: block;
   padding: .2rem .8rem;
   border: 1px solid #eee;
+  background: white;
 }
 
 .news__content .tags__listado li a:hover {
-  background: #ed1b24;
-  color: white;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
 .news__content > p:first-of-type:first-letter {

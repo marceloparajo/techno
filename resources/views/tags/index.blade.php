@@ -30,7 +30,7 @@
 
 	<div class="col-fluid d-xs-flex channel__container" id="{{ $tag_title }}">
 
-		<h1 class="channel__title {{ $tag_title }}">{{ $tag_title }}</h1>
+		<h1 class="channel__title {{ $tag_title }} max-width">{{ $tag_title }}</h1>
 
 		@foreach ($noticias as $new)
 
