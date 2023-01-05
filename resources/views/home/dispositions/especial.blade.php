@@ -8,7 +8,7 @@
 
 				@if($loop->first)
 
-					@include('partials.articulo', array('clase' => 'news--tipo-especial news--hat-inverted', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '736', 'height_tablet' => '414', 'width_laptop' => '496', 'height_laptop' => '279', 'width_desktop' => '643', 'height_desktop' => '362'))
+					@include('partials.articulo', array('clase' => 'news--tipo-especial news--tipo-especial-main news--hat-inverted', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '736', 'height_tablet' => '414', 'width_laptop' => '496', 'height_laptop' => '279', 'width_desktop' => '643', 'height_desktop' => '362'))
 
 					<x-ad-space id="300x250x-pos-" class="d-md-none" width="300" height="250" min-height="250" max-height="250" />
 

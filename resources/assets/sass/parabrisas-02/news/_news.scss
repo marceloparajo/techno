@@ -172,6 +172,16 @@
                 margin: 1em 0
             }
 
+            a {
+                color: black;
+                background: rgba(255, 212, 0, 0);                   
+                border-bottom: 3px solid rgba(255, 212, 0, 1);
+                &:hover {
+                    background: rgba(255, 212, 0, 0.5);                   
+                    border-bottom: 3px solid rgba(255, 212, 0, 0);
+                }
+            }
+
 		}
 
 		ul {

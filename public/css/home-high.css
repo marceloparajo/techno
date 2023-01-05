@@ -1552,6 +1552,11 @@ figure img {
     width: 100%;
     margin: 2rem auto;
   }
+
+  .destacada-medio .news:not(.news--0) .news__headline {
+    display: block;
+    color: white;
+  }
 }
 
 .cobertura {
@@ -1590,17 +1595,9 @@ figure img {
     font-size: 2rem;
   }
 
-  .cobertura .news:not(.news--0) {
-    -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
-  }
-}
-
-@media (min-width: 1020px) {
-  .cobertura .news,
-  .cobertura .news:not(.news--0) {
-    -ms-flex-preferred-size: 32%;
-        flex-basis: 32%;
+  .cobertura .news {
+    -ms-flex-preferred-size: 31.5%;
+        flex-basis: 31.5%;
   }
 }
 

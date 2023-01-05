@@ -12,7 +12,6 @@
 
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/channels-high.css') }}">
-
 	<link rel="stylesheet" href="{{ mix('css/channels-low.css') }}" media="print" onload="this.media='all'">
 @endsection
 

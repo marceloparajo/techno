@@ -29,5 +29,13 @@
     .destacada-medio {
         width: 100%;
         margin: 2rem auto;
+        .news {
+            &:not(.news--0) {
+                .news__headline {
+                    display: block;
+                    color: white;
+                }
+            }
+        }
     }
 }

@@ -1372,6 +1372,19 @@ figure img {
   margin: 1em 0;
 }
 
+.news__content p a,
+.news__content li a {
+  color: black;
+  background: rgba(255, 212, 0, 0);
+  border-bottom: 3px solid #ffd400;
+}
+
+.news__content p a:hover,
+.news__content li a:hover {
+  background: rgba(255, 212, 0, 0.5);
+  border-bottom: 3px solid rgba(255, 212, 0, 0);
+}
+
 .news__content ul {
   padding-left: 1.3rem;
 }
