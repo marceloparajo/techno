@@ -99,37 +99,6 @@
         padding-top: 0.5rem;
 	}
 
-	&__autor {
-        margin: 2rem 0 0 0;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        .autor-nota {
-                &__img {
-                        flex-basis: 60px;
-                        border-radius: 6px;
-                        border: 1px solid rgba(0,0,0,.2);
-                        overflow: hidden;
-                        img {
-                                width: 100%;
-                                display: block;
-                        }
-                }
-                &__data {
-                        flex: 1 1 0;
-                }
-                &__nombre {
-                        font-weight: bold;
-                        font-size: .9rem;
-                }
-                &__about {
-                        font-size: .9rem;
-                        font-weight: normal;
-                        padding-top: .5px;
-                }
-        }
-	}
-
 	&__main-article {
 		display: flex;
 		flex-direction: column;
@@ -174,11 +143,11 @@
 
             a {
                 color: black;
-                background: rgba(255, 212, 0, 0);                   
-                border-bottom: 3px solid rgba(255, 212, 0, 1);
+                background: rgba(77, 144, 254, 0);                   
+                border-bottom: 3px solid rgba(77, 144, 254, 1);
                 &:hover {
-                    background: rgba(255, 212, 0, 0.5);                   
-                    border-bottom: 3px solid rgba(255, 212, 0, 0);
+                    background: rgba(77, 144, 254, 0.4);                   
+                    border-bottom: 3px solid rgba(77, 144, 254, 0);
                 }
             }
 
@@ -269,30 +238,87 @@
             transform: translateY(-10px);
 		}
 	}
-
-	&__comments-suggested {
-		order: 4;
-	}
 }
 
+.suggested-news {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1em 0;
+    border-top: $borde;
+    position: relative;
+    background: white;
+
+    a {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__media {
+        width: 80px;
+        height: 80px;
+        flex-basis: 80px;
+        border-radius: 6px;
+        overflow: hidden;
+        img {
+            display: block;
+        }
+    }
+    &__content {
+        flex: 1 1 0;
+    }
+    &__hat {
+        font-size: .9rem;
+        font-weight: bold;
+        color: $color-brand;
+    }
+    &__title {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding-top: .4rem;
+    }
+    &:before,
+    &:after {
+        content: "";
+        width: 60%;
+        position: absolute;
+        background: white;
+        z-index: -1;
+        height: 20px;
+        bottom: 18px;
+        box-shadow: 0 13px 18px 0 rgba(0,0,0,.2);
+    }
+
+    &:before {
+        transform: rotate(-3deg);
+        left: 10px;
+    }
+
+    &:after {
+        transform: rotate(3deg);
+        right: 10px;
+    }
+
+}
 
 @include media-breakpoint-up(md) {
 	.news {
-                &__title {
-                                font-size: 2.6rem;
-                }
-                &__main-article {
-                                flex-direction: row;
-                                gap: 1rem;
-                                padding-top: 2rem;
-                }
-                &__sharing {
-                                flex-basis: 90px;
-                }
-                &__body {
-                                flex: 1 1 0;
-                }
-                &__media {
+        &__title {
+            font-size: 2.6rem;
+        }
+        &__main-article {
+            flex-direction: row;
+            gap: 1rem;
+            padding-top: 2rem;
+        }
+        &__sharing {
+            flex-basis: 90px;
+        }
+        &__body {
+            flex: 1 1 0;
+        }
+        &__media {
             
             a.fotogaleria {
                 z-index: 1;
@@ -331,6 +357,14 @@
 			}
 		}
 	}
+}
+
+@include media-breakpoint-up(xl) {
+    .news {
+        &__container {
+            max-width: 876px;
+        }
+    }
 }
 
 @include media-breakpoint-up(xxl) {

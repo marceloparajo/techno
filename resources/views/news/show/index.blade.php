@@ -67,12 +67,7 @@
 
 
 	<main class="news main container row max-width margin-auto">
-
 		<div class="col-fluid d-xs-flex news__container" id="noticia">
-
-
-		
-
 			<header class="news__header">
 				<div class="news__hat">
 					<a href="/seccion/{{ $noticia['channel']['slug']}}">{{ strtoupper($noticia['channel']['name']) }}</a>
@@ -94,7 +89,14 @@
 					@endif
 					<x-lazy-image :src="$noticia['main_image']['srcs']['original']" :alt="$noticia['main_image']['title']"
 						class="img-fluid"
-						:sizes="[['v' => 320, 'w' => 320, 'h' => 180], ['v' => 360, 'w' => 360, 'h' => 202], ['v' => 375, 'w' => 375, 'h' => 211], ['v' => 414, 'w' => 414, 'h' => 233], ['v' => 768, 'w' => 720, 'h' => 405], ['v' => 1024, 'w' => 635, 'h' => 357], ['v' => 1366, 'w' => 950, 'h' => 534]]"
+						:sizes="[['v' => 320, 'w' => 720, 'h' => 405], 
+						['v' => 360, 'w' => 720, 'h' => 405], 
+						['v' => 375, 'w' => 720, 'h' => 405], 
+						['v' => 414, 'w' => 720, 'h' => 405], 
+						['v' => 768, 'w' => 720, 'h' => 405], 
+						['v' => 1024, 'w' => 600, 'h' => 337], 
+						['v' => 1280, 'w' => 856, 'h' => 481], 
+						['v' => 1366, 'w' => 876, 'h' => 492]]"
 						:lazy-load="false" />
 					<figcaption class="figure-caption">{{ $noticia['main_image']['caption'] }}<span class="credito-foto"> | {{ $noticia['main_image']['credit']}}</span></figcaption>
 				</figure>
@@ -127,17 +129,17 @@
 					
 					{{-- Author --}}
 					@if ($noticia['signed'])
-						<div class="news__autor">
+						<div class="autor">
 							@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 						</div>
 					@elseif (! $noticia['signed'] && $noticia['credit'] != '')
-						<div class="news__autor">
+						<div class="autor">
 							<div class="autor-nota__nombre">
 								{{ $noticia['credit'] }}
 							</div>
 						</div>
 					@else 
-						<div class="news__autor">
+						<div class="autor">
 							<div class="autor-nota__nombre">
 								Redacción Parabrisas
 							</div>
@@ -150,6 +152,7 @@
 						
 					<div class="news__content">
 						{!! $body !!}
+
 
 						{{-- Embed Code --}}
 						@if ($noticia['embed_code'] != '' && $noticia['featured_content'] != 'embed_code')
@@ -210,6 +213,9 @@
 
 				{{-- Noticias sugeridas de otros sitios/revistas --}}
 				<x-suggested-site-news />
+
+				@include('news.show.partials.more-news-crawlers')
+
 
 			</aside>
 

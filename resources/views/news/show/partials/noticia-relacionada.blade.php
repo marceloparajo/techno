@@ -1,11 +1,12 @@
-<div class="media noticia-relacionada">
+<aside class="suggested-news">
    	<a href="{{ $url }}" title="{{ $title }}">
 		@if ($type == '')
-			<figure>
-				<img src="{{ $image }}" class="lazyload mr-2 float-left" alt="{{ $title }}">
+			<figure class="suggested-news__media">
+				<img src="{{ $image }}" class="lazyload" alt="{{ $title }}">
 			</figure>
 		@endif
-		<div class="leermas">LEER MÁS...</div>
-		<div class="titulorelacionada">{{ $title }}</div>
+		<div class="sugested-news__content">
+		<span class="suggested-news__hat">Leé también</span>		<span class="suggested-news__title">{{ $title }}</span>
+		</div>
 	</a>
-</div>
+</aside>

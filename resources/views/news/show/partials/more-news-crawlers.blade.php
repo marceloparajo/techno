@@ -1,10 +1,10 @@
 @if ( isset($noticia['previous_news']) && count($noticia['previous_news']) > 0 )
-<div class="previous_news">
-	<div class="previous-titulo">{{ __('previous news of') }} "{{ ucfirst($noticia['channel']['name']) }}"</div>
-	<ul>
+<aside class="news__aside">
+	<div class="news__aside-title">{{ __('previous news of') }} "{{ ucfirst($noticia['channel']['name']) }}"</div>
+	<div class="noticias-crawlers">
 		@foreach ($noticia['previous_news'] as $new)
-		<li><a href="{{ asset($new['permalink']) }}">{{ $new['title'] }}</a></li>
+		<article><a href="{{ asset($new['permalink']) }}">{{ $new['title'] }}</a></article>
 		@endforeach
-	</ul>
-</div>
+	</div>
+</aside>
 @endif

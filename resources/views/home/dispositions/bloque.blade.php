@@ -14,9 +14,9 @@
 
 	</div>
 
-		<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ad-300x250" />
-
 		<div class="col-fixed">
+
+			<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ad-300x250" />
 			
 			@if ( $item['id'] == 'ultimas-noticias' )
 
