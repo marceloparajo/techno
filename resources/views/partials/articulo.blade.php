@@ -9,9 +9,7 @@
                 :src="$new['main_image']['srcs']['original']" 
                 :alt="$new['main_image']['title']" 
                 class="img-fluid" 
-                width="$width_mobile"
-                height="hight_mobile"
-                :sizes="[['v' => 414, 'w' => $width_mobile ? $width_mobile : $width_mobile = '375', 'h' => $height_mobile ? $height_mobile : $height_mobile = '211'], 
+                :sizes="[['v' => 414, 'w' => $width_mobile, 'h' => $height_mobile], 
                         ['v' => 768, 'w' => $width_tablet, 'h' => $height_tablet], 
                         ['v' => 1024, 'w' => $width_laptop, 'h' => $height_laptop], 
                         ['v' => 1366, 'w' => $width_desktop, 'h' => $height_desktop]]" 

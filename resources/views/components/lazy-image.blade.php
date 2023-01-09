@@ -12,7 +12,7 @@
         {{-- JPG --}}
         @foreach ($images() as $image)
             @if ($loop->last)
-                <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $image['src'] }}"  @if ($lazy_load) loading="lazy" @endif>
+                <img alt="{{ $alt }}" class="{{ $class }}" src="{{ $image['src'] }}" width="360" height="203"  @if ($lazy_load) loading="lazy" @endif>
             @else
                 <source media="(max-width: {{ $image['viewport'] }}px)" srcset="{{ $image['src'] }}" />
             @endif

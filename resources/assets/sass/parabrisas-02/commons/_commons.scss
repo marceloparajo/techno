@@ -70,7 +70,7 @@ a {
     iframe.clicked {
         pointer-events: auto;
     }
-    }
+}
 
 figure {
 	picture {
@@ -93,6 +93,10 @@ figure {
 	img {
 		width: 100%;
 	}
+}
+
+img {
+    height: auto;
 }
 
 .embed-responsive-16by9 {

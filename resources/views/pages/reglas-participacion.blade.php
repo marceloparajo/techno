@@ -7,9 +7,13 @@
 @endsection
 
 @section('body')
-    <div class="container">
-        <div class="content">
-            <h1>Reglamento para el uso de los Espacios de Opinión en Perfil.com</h1>
+
+
+<main class="pages main container row max-width margin-auto">
+
+    <div class="pages__container">
+            <h1 class="channel__title">Reglamento para el uso de los Espacios de Opinión en Perfil.com</h1>
+
 
             <p>El uso de los denominados "Espacios de Opinión Pública" de Perfil.com, tales como: foros, comentarios a las notas, Periodismo Ciudadano, blogs y/o fotologs y todo espacio existente o futuro que este abierto a la participación del público en general, los cuales en adelante se denominarán genéricamente "Los Servicios" implica la aceptación de todos y cada uno de los términos y condiciones que se establecen en el presente Reglamento. El Usuario de "Los Servicios" se compromete a respetar y cumplir tanto el Reglamento General de Perfil.com como así también los presentes términos y condiciones. El Usuario deberá utilizar "Los Servicios" de forma responsable, correcta y cumpliendo la legislación y la normativa vigente.</p>
 
@@ -173,5 +177,5 @@
 
             <p>SI UD. NO ESTA DE ACUERDO CON CUALQUIERA DE LOS TERMINOS Y CONDICIONES DEL PRESENTE REGLAMENTO Y/O DEL REGLAMENTO GENERAL DEL SITIO Perfil.com, NO ACCEDA NI UTILICE "LOS SERVICIOS".</p>
         </div>
-    </div>
+</main>
 @endsection

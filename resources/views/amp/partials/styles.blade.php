@@ -14,7 +14,7 @@
     }
 
     body {
-        font-family: "Open Sans",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+        font-family: "Roboto",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
         font-size: 1rem;
         margin: 0;
         padding: 0;
@@ -28,13 +28,17 @@
         align-items: center;
         justify-content: start;
         background-color: #ed1b24;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-        height: 44px;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+        height: 50px;
         position: fixed;
         transition: top 0.5s ease-in-out;
         top:0;
         width: 100%;
         z-index: 99999;
+    }
+
+    .header .logo {
+        margion-top: 3px;
     }
 
     .hamburger_wrapper {
@@ -54,7 +58,7 @@
         display: block;
         width: 100%;
         height: 2px;
-        background: #313131;
+        background: white;
         margin: 6px 0 0 0;
     }
     .hamburger_wrapper #hamburger span:first-of-type {
@@ -200,7 +204,6 @@
 
     .body h2 {
         font-size: 1.6rem;
-        font-family: "Roboto Condensed", Helvetica, sans-serif;
         font-weight: 700;
         line-height: 1.2em;
         margin: 1em 0 0 0;
@@ -230,7 +233,6 @@
         margin: 0;
         padding: 10px 15px;
         letter-spacing: normal;
-        font-family: "Roboto Condensed",Helvetica,Arial,sans-serif;
     }
 
     .relacionadas ul {
@@ -251,10 +253,9 @@
     }
 
     .sidebar {
-        margin: 45px 0 0 0;
+        margin: 50px 0 0 0;
         padding: 0;
         background: white;
-        font-family: "Roboto Condensed",Helvetica,Arial,sans-serif;
     }
 
     .sidebar ul {

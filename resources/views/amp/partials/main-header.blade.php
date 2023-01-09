@@ -37,9 +37,9 @@
     <div class="logo">
         <a href="{{ route('home.index') }}">
             <amp-img src="{{ asset('img/logo-parabrisas.svg') }}"
-                     alt="Exitoina"
-                     height="50"
-                     width="150"
+                     alt="Parabrisas"
+                     height="43"
+                     width="200"
                      layout="fixed">
             </amp-img>
         </a>

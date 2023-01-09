@@ -28,8 +28,6 @@ mix.sass('resources/assets/sass/home-high.scss', 'public/css')
 	.sass('resources/assets/sass/news-low.scss', 'public/css')
 	.sass('resources/assets/sass/channels-high.scss', 'public/css')
 	.sass('resources/assets/sass/channels-low.scss', 'public/css')
-	.sass('resources/assets/sass/masleidas-low.scss', 'public/css')
-	.sass('resources/assets/sass/error-low.scss', 'public/css')
 	.sass('resources/assets/sass/pages.scss', 'public/css')
 
 
@@ -46,8 +44,6 @@ mix.version([
 	'public/css/news-low.css',
 	'public/css/channels-high.css',
 	'public/css/channels-low.css',
-	'public/css/masleidas-low.css',
-	'public/css/error-low.css',
 	'public/css/pages.css',
 	'public/js/channels-show.js',
 	'public/js/home.js',

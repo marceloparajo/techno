@@ -1,27 +1,27 @@
 <footer class="main-footer">
     <figure class="main-footer__logo">
         <a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}" itemprop="url">
-            <img src="{{ asset('img/logo-parabrisas.svg') }}" alt="Parabrisas">
-        </a>
+            <img src="{{ asset('img/logo-parabrisas.svg') }}" alt="Parabrisas" width="160" height="35">
+        </a> 
     </figure>
     <div class="main-footer__redes">
-        <a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" title="{{  ucfirst(env("APP_NAME")) }} {{ __("in instagram") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/instagram.svg" class="instagram" alt="Instagram" width="30"></a>
-		<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in facebook") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/facebook.svg" class="facebook" alt="Facebook" width="30"></a>
-		<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in twitter") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/twitter.svg" class="twitter" alt="twitter" width="30"></a>
-		<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in youtube") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/youtube.svg" class="youtube" alt="Youtube" width="30"></a>
+        <a href="https://www.instagram.com/{{ env('INSTAGRAM_PAGE', '') }}/" target="_blank" title="{{  ucfirst(env("APP_NAME")) }} {{ __("in instagram") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/instagram.svg" class="instagram" alt="Instagram" width="30" height="30"></a>
+		<a href="https://www.facebook.com/{{ env('FACEBOOK_PAGE', '') }}/" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in facebook") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/facebook.svg" class="facebook" alt="Facebook" width="30" height="30"></a>
+		<a href="https://twitter.com/{{ env('TWITTER_PAGE', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in twitter") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/twitter.svg" class="twitter" alt="twitter" width="30" height="30"></a>
+		<a href="https://www.youtube.com/channel/{{ env('YOUTUBE_CHANNEL', '') }}" target="_blank" title="{{ ucfirst(env("APP_NAME")) }} {{ __("in youtube") }}" rel="noreferrer nofollow"><img src="/images/glyph/share/youtube.svg" class="youtube" alt="Youtube" width="30" height="30"></a>
 
 
         <a href="{{ route('feeds.channel', '') }}" rel="noreferrer nofollow"
         target="_blank"
         class="link-social-rss">
             <img src="/images/glyph/share/rss.svg"
-                alt="RSS" width="30" alt="rss" />
+                alt="RSS" width="30" height="30" alt="rss" />
         </a>
 
         <a href="{{ route('sitemaps.index') }}" rel="noreferrer nofollow"
         target="_blank"
         class="link-social-sitemap">
-            <img src="/images/glyph/share/sitemap.svg" width="30"
+            <img src="/images/glyph/share/sitemap.svg" width="30" height="30"
                 alt="Sitemap" />
         </a>
 

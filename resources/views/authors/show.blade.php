@@ -36,11 +36,11 @@
 
 			@if($loop->first || $loop->index % 5 == 0)
 
-				@include('partials.articulo', array('clase' => 'news--tipo-especial news--tipo-especial-main news--hat-inverted', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '728', 'height_tablet' => '410', 'width_laptop' => '536', 'height_laptop' => '404', 'width_desktop' => '626', 'height_desktop' => '353'))
+				@include('partials.articulo', array('clase' => 'news--tipo-especial news--tipo-especial-main news--hat-inverted', 'width_mobile' => '382', 'height_mobile' => '215', 'width_tablet' => '736', 'height_tablet' => '415', 'width_laptop' => '986', 'height_laptop' => '743', 'width_desktop' => '876', 'height_desktop' => '474'))
 
 			@else 
 
-				@include('partials.articulo', array('clase' => 'news--card-rounded news--half-size', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '728', 'height_tablet' => '410', 'width_laptop' => '196', 'height_laptop' => '110', 'width_desktop' => '305', 'height_desktop' => '172'))
+				@include('partials.articulo', array('clase' => 'news--card-rounded news--half-size', 'width_mobile' => '380', 'height_mobile' => '214', 'width_tablet' => '733', 'height_tablet' => '413', 'width_laptop' => '472', 'height_laptop' => '265', 'width_desktop' => '305', 'height_desktop' => '172'))
 
 			@endif
 		@endforeach

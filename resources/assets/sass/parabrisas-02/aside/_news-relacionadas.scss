@@ -105,17 +105,18 @@
 		font-size: 1rem;
 		padding: .5rem 0;
 		border-top: $borde;
+		&:before {
+			content: "";
+			display: block;
+			float: left;
+			border-left: 6px solid #a5a5a5;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+			margin-top: 5px;
+		}
 		a {
-			padding-left: 10px;
-			&:before {
-				content: "";
-				display: block;
-				float: left;
-				border-left: 6px solid #a5a5a5;
-				border-top: 4px solid transparent;
-				border-bottom: 4px solid transparent;
-				margin-top: 5px;
-			}
+			padding-left: 15px;
+			display: block;
 			&:hover {
 				color: $color-brand;
 			}

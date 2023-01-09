@@ -24,16 +24,33 @@
         background: $gris-oscuro;
         ul {
             list-style: none;
-            padding: 10px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            border-top: 1px solid $negro;;
+            border-top: 1px solid $negro;
             li {
-                padding: 5px 10px;
                 a {
+                    display: block;
                     color: white;
+                    white-space: nowrap;
                 }
+            }
+
+        }
+    }
+    &__fijas {
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+            a {
+                padding: 10px;
+            }
+        }
+    }
+    &__revistas {
+        overflow-x: auto;
+        li {
+            a {
+                padding: 2rem 1rem;
             }
         }
     }
@@ -46,6 +63,54 @@
         line-height: 1.5em;
         a {
             color: $gris-claro;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .main-footer {
+        &__revistas {
+
+            justify-content: center;
+            
+            &::-webkit-scrollbar {
+                width: 6px;
+                height: 6px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 8px;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 8px;
+                background-color: transparent;
+            }
+
+            &:hover {
+                &::-webkit-scrollbar-thumb {
+                    background-color: #535353;
+
+                    &:hover {
+                        background-color: #353535;
+                    }
+                }
+
+                &::-webkit-scrollbar-track {
+                    background-color: rgba(0, 0, 0, .13);
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .main-footer {
+        &__revistas {
+            justify-content: center;
         }
     }
 }

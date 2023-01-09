@@ -7,16 +7,22 @@
 @endsection
 
 @section('body')
-    <div class="container">
-        <div class="content">
-            <h1>Canales RSS de Perfil.com</h1>
+
+
+
+
+
+<main class="pages main container row max-width margin-auto">
+
+    <div class="pages__container">
+            <h1 class="channel__title">Canales RSS de Perfil.com</h1>
 
             <p>
                 <strong>Perfil.com</strong> se especializa en noticias, por eso, le ofrecemos las mejores opciones para incluir la actualidad argentina e internacional en su weblog; intranet; página personal, barrial o municipal. Los canales RSS de <strong>Perfil.com</strong> le permiten agregar noticias en su sitio del modo que le resulte más conveniente.
                 El <strong>RSS ("Really Simple Syndication")</strong> es un formato que permite emitir contenidos desde un sitio para que sean agregados fácilmente en aplicaciones o sitios web. Los contenidos que se publican en este formato incluyen titulares y sumarios. Perfil.com le ofrece en formato RSS todos los títulos de las noticias con link a la nota completa:
             </p>
 
-            <h3>Términos y condiciones de utilización del servicio RSS de Perfil.com</h3>
+            <h2>Términos y condiciones de utilización del servicio RSS de Perfil.com</h2>
 
             <p>
                 Mediante la utilización del servicio RSS de Perfil.com (el "Servicio"), Usted está consintiendo quedar alcanzado por los términos y condiciones que regulan la utilización del servicio y que se detallan seguidamente.
@@ -58,7 +64,7 @@
                 </li>
             </ol>
 
-            <h3>Canales RSS disponibles</h3>
+            <h2>Canales RSS disponibles</h2>
 
             <ul class="feeds">
                 <li>XML Último Momento - <a href="{{ route('feeds.channel', '') }}">{{ route('feeds.channel', '') }}</a></li>
@@ -75,5 +81,5 @@
                 <li>XML Tecnología - <a href="{{ route('feeds.channel', 'tecnologia') }}">{{ route('feeds.channel', 'tecnologia') }}</a></li>
             </ul>
         </div>
-    </div>
+    </main>
 @endsection

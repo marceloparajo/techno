@@ -5,8 +5,6 @@
 	<div class="autor-nota__data">
 		<span class="autor-nota__nombre">{{ $author['fullname'] }}</span>
 
-
-
 		
 		@php
 

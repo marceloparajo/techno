@@ -1,35 +1,20 @@
-@extends('layout.base')
-
-@section('page-title', ucwords($tag))
-
-@section('google-tag-manager')
-	<x-google-tag-manager category="vitrina de notas" />
-@endsection
-
-@section('ads-sec', 'seccion')
-
-@section('body-class', 'pf-channel-show')
+@include('channels.partials.channel-template-header-top')
 
 @section('head-css')
 	<link rel="stylesheet" href="{{ mix('css/channels-high.css') }}">
 	<link rel="stylesheet" href="{{ mix('css/channels-low.css') }}" media="print" onload="this.media='all'">
 @endsection
 
-@section('body-class', 'pf-channel-show')
-
-@section('js')
-	<script defer type="text/javascript" src="{{ mix('js/channels-show.js') }}"></script>
-@endsection
-
-
+@include('channels.partials.channel-template-header-bottom')
 
 @section('body')
 
 <main class="channel main container row max-width margin-auto">
 
-	<div class="col-fluid d-xs-flex channel__container" id="{{ $tag_title }}">
 
-		<h1 class="channel__title {{ $tag_title }} max-width">{{ $tag_title }}</h1>
+	<div class="col-fluid d-xs-flex channel__container" id="{{ $sectionTitle }}">
+
+		<h1 class="channel__title {{ $sectionTitle }}">{{ $sectionTitle }}</h1>
 
 		@foreach ($noticias as $new)
 
@@ -40,7 +25,7 @@
 			@else 
 
 				@include('partials.articulo', array('clase' => 'news--card-rounded news--half-size', 'width_mobile' => '380', 'height_mobile' => '214', 'width_tablet' => '733', 'height_tablet' => '413', 'width_laptop' => '472', 'height_laptop' => '265', 'width_desktop' => '305', 'height_desktop' => '172'))
-
+			
 			@endif
 
 		@endforeach
@@ -53,4 +38,5 @@
 	</div>
 
 </main>
+
 @endsection
