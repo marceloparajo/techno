@@ -1,6 +1,6 @@
 @if (isset($news) && count($news) > 0)
 	<!-- Destacada -->
-	<div class="especial">
+	<div class="especial full-bg-dark">
 
 		<div class="especial__container row max-width d-lg-grid">
 

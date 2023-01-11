@@ -307,14 +307,6 @@ class BlockDistributionsHelper
     {
         return collect([
             [
-                'id' => 'cobertura-casacaras',
-                'template' => 'cobertura'
-            ],
-            [
-                'id' => 'coronavirus-contador',
-                'template' => 'coronavirus'
-            ],
-            [
                 'id' => 'destacada-superior',
                 'template' => 'destacada'
             ],
@@ -339,20 +331,8 @@ class BlockDistributionsHelper
                 'template' => 'destacada'
             ],
             [
-                'id' => 'destacada-extra',
-                'template' => 'destacada'
-            ],
-            [
-                'id' => 'bloque-extra',
-                'template' => 'bloque'
-            ],
-            [
                 'id' => 'especiales',
                 'template' => 'especial'
-            ],
-            [
-                'id' => 'cobertura-yelmo',
-                'template' => 'cobertura'
             ],
             [
                 'id' => 'cobertura-extra',
