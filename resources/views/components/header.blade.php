@@ -21,7 +21,7 @@
 		</button>
 		<div class="header__logo">
 			<a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}">
-				<img src="{{ asset('img/logo-parabrisas.svg') }}" alt="{{ env('APP_NAME') }}" width="230" height="50"> 
+				<img src="{{ asset('img/logo-fortuna.svg') }}" alt="{{ env('APP_NAME') }}" width="230" height="45"> 
 			</a>
 		</div>
 
@@ -48,6 +48,13 @@
 						@else
 							<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
 						@endif
+
+
+						@if ($loop->index == 5)
+							@break
+						@endif
+
+
 					@endforeach
 				</ul>
 				

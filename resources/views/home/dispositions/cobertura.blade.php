@@ -12,7 +12,7 @@
 		@foreach(array_slice($news, 0, $mostrarnotas) as $new)
 
 
-		@include('partials.articulo', array('clase' => 'news--figure-hard-shadow news--centered news--text-over news--data-shadow', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '540', 'height_tablet' => '304', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
+		@include('partials.articulo', array('clase' => 'news--hat-inverted news--meta-over', 'width_mobile' => '375', 'height_mobile' => '211', 'width_tablet' => '540', 'height_tablet' => '304', 'width_laptop' => '309', 'height_laptop' => '174', 'width_desktop' => '423', 'height_desktop' => '238'))
 
 
 

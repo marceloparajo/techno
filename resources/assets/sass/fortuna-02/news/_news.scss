@@ -27,7 +27,7 @@
 	}
 
 	&__title {
-        font-family: $font-condensada;
+        
         padding: .5rem 0 0 0;
         font-size: 2rem;
         line-height: 1.1em;
@@ -60,10 +60,11 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        margin: 0 -1rem;
-        width: calc(100% + 2rem);
+        margin: 0 -.5rem 1rem;
+        width: calc(100% + 1rem);
         height: auto;
         padding: 0;
+
 
         picture {
             img {
@@ -79,6 +80,7 @@
             color: $gris-oscuro;
             line-height: 1.3em;
             font-weight: bold;
+            font-family: $font-secundaria;
 
             .credito-foto {
                 font-weight: normal;
@@ -97,6 +99,7 @@
         display: block;
         border-top: $borde;
         padding-top: 0.5rem;
+        font-family: $font-secundaria;
 	}
 
 	&__main-article {
@@ -354,7 +357,7 @@
 
 		&__media {
             width: 100%;
-            margin: 1rem 0 0;
+            margin: 1rem 0;
 			.figure-caption {
 				padding: 5px 0;
 			}

@@ -1,0 +1,45 @@
+.full-bg {
+    margin: 1rem -.5rem;
+    width: calc(100% + 1rem);
+    padding: 1rem .5rem;
+    &-dark {
+        background: $negro;
+    }
+}
+
+.col-xl-fixed {
+    gap: 1rem;
+}
+
+@include media-breakpoint-up(md) {
+    .flex-md-doble {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem 2%;
+        > article {
+            width: 49%;
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .col-xl-fixed {
+        width: 300px;
+        flex-basis: 300px;
+        flex-direction: column;
+    }
+    .flex-xl-single {
+        flex-wrap: nowrap;
+        > article {
+            width: 100%;
+        }
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .full-bg {
+        width: calc(100% + 2rem);
+        margin: 2rem -1rem;
+    }
+}

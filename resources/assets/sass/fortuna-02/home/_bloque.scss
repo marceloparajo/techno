@@ -1,0 +1,26 @@
+.bloque {
+    flex-direction: column;
+    margin-bottom: 2rem;
+    &__title {
+        width: 100%;
+        padding: .3rem 0 1rem;
+        border-top: 3px solid $color-brand;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .bloque {
+        flex-direction: row;
+        gap: 0 1rem;
+    }
+}
+@include media-breakpoint-up(xl) {
+    .bloque {
+        gap: 1.5rem;
+        &__container {
+            gap: 0 2rem;
+            flex-wrap: wrap;
+        }
+    }
+}

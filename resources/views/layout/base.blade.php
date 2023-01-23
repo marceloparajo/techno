@@ -39,7 +39,7 @@
         <meta name="theme-color" content="#ffffff">
         {{-- /Favicons --}}
 
-        <link rel="preload" as="image" href="{{ asset('img/logo-parabrisas.svg') }}">
+        <link rel="preload" as="image" href="{{ asset('img/logo-fortuna.svg') }}">
         <link rel="preconnect" href="https://ads.us.e-planning.net">
         <link rel="preconnect" href="https://libs.lavoz.com.ar">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,9 +49,8 @@
         {{-- Font --}}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-       
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
          {{-- /Font --}}
 
         @yield('head-css')

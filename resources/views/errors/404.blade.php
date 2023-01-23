@@ -34,7 +34,7 @@
 
 		<figure class="main-footer__logo">
 			<a href="http://dev-parabrisas.perfil.com/" title="Ir a la Home de parabrisas" itemprop="url">
-				<img src="http://dev-parabrisas.perfil.com/img/logo-parabrisas.svg" alt="Parabrisas">
+				<img src="http://dev-parabrisas.perfil.com/img/logo-fortuna.svg" alt="Parabrisas">
 			</a>
 		</figure>
 

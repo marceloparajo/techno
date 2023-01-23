@@ -8,3 +8,13 @@
         flex-direction: row;
     }
 }
+
+
+@include media-breakpoint-up(xl) {
+    .destacada {
+        gap: 1.5rem;
+        &__container {
+            gap: 2rem;
+        }
+    }
+}
