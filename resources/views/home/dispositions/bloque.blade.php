@@ -4,10 +4,10 @@
 
 	<div class="col-fluid d-xl-flex bloque__container">
 
-		@if ( $item['id'] == 'bloque-medio' )
-			<div class="bloque__title">Internacional</div>
-		@else 
+		@if ( $item['id'] == 'bloque-superior' )
 			<div class="bloque__title">Argentina</div>
+		@else 
+			<div class="bloque__title">Internacional</div>
 		@endif
 
 		<div class="col-fluid flex-md-doble">
@@ -30,9 +30,8 @@
 
 			<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ad-300x250" />
 			
-			@if ( $item['id'] == 'bloque-medio' )
-
-				<x-mas-leidas-perfil-widget :rows="5" />
+			@if ( $item['id'] == 'bloque-superior' )
+				<x-mas-leidas-widget :rows="5" />
 				<div class="sticky">
 				<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ads"/> 
 
@@ -40,10 +39,10 @@
 
 
 			@else
-				<x-mas-leidas-widget :rows="5" />
+				<x-mas-leidas-perfil-widget :rows="5" />
+				<x-divisas-widget :rows="5" />
 				<div class="sticky">
 				<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ads" /> 
-
 				</div>
 
 			@endif
