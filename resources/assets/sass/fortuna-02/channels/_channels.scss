@@ -25,6 +25,7 @@
     justify-content: flex-start;
     gap: 1rem;
     text-align: center;
+    padding-top: 4rem;
     &__titulo {
         font-weight: bold;
         font-size: 1.6rem;
@@ -72,7 +73,7 @@
     .channel {
         flex-direction: row;
         gap: 2rem;
-        align-items: flex-start;
+        align-items: initial;
     }
 
     .error {

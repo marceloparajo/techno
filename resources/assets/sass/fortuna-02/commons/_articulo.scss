@@ -57,6 +57,21 @@
         padding-left: 1rem;
     }
 
+    &:hover {
+        .news__media  {
+            >figure {
+                >picture {
+                    >img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        .news__title {
+            color: $color-secondary;
+        }
+    }
+
     &--figure-rounded {
         figure {
             border-radius: 6px;
@@ -106,7 +121,7 @@
     }
 
     &--bg-dark {
-        background: $negro;
+        background: $gris-oscuro;
         color: white;
         border: none;
         .news__title {
@@ -114,6 +129,11 @@
         }
         .news__autor {
             color:white;
+        }
+        &:hover {
+            .news__title {
+                color: white;
+            }
         }
     }
 
@@ -152,14 +172,14 @@
         .news__autor {
             color: white;
         }
-        &-main {
-            .news__headline {
-                display: none;
-            }
-        }
         &-poster {
             .news__title {
                 font-size: 1.5em;
+            }
+        }
+        &:hover {
+            .news__title {
+                color: white;
             }
         }
     }
@@ -171,9 +191,6 @@
         }
         .news__title {
             font-size: 1.5rem;
-        }
-        .news__headline {
-            display: block;
         }
         .news__media {
             margin-top: .5rem;
@@ -219,18 +236,6 @@
             margin-top: -2.5rem;
         }
     }
-
-    &:hover {
-        .news__media  {
-            >figure {
-                >picture {
-                    >img {
-                        transform: scale(1.05);
-                    }
-                }
-            }
-        }
-    }
 }
 
 .galeria-video {
@@ -240,12 +245,13 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #424242ad;
+    background: $color-secondary;
     display: flex;
     align-items: center;
     justify-content: center;
     .hasvideo {
         transform: translateX(2px);
+        width: 22px;
     }
 }
 
@@ -315,6 +321,11 @@
                         padding-top: 45%;
                     }
                 }
+            }
+        }
+        &--tipo-destacada {
+            .news__headline {
+                display: block;
             }
         }
     }

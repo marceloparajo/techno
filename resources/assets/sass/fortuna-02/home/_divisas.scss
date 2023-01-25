@@ -1,0 +1,82 @@
+.divisas {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 1rem;
+    &__titulo {
+        width: 100%;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    &__content {
+        width: 100%;
+    }
+    .moneda {
+        display: flex;
+        justify-content: space-between;
+        padding: .2rem 0 .4rem 0;
+        &__venta, 
+        &__compra {
+            text-align: right;
+            font-weight: bold;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .divisas {
+        &__content {
+            transform: translateY(-22px);
+            margin-bottom: -22px;
+        }
+        .moneda {
+            &:not(.moneda--0) {
+                border-top: 1px solid rgba(0,0,0,.1);
+            }
+            &__nombre {
+                flex: 1 1 0;
+            }
+            &__venta,
+            &__compra {
+                flex-basis: 80px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .divisas {
+        &__content {
+            margin-top: .5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .moneda {
+            flex-direction: column;
+            width: 100%;
+            > div {
+                min-height: 30px;
+            }
+            &--0 {
+                .moneda__venta,
+                .moneda__compra {
+                    text-align: left;
+                }
+            }
+            &:not(.moneda--0) {
+                border-left: 1px solid rgba(0,0,0,.1);
+                .moneda__nombre {
+                    text-align: center;
+                }
+                .moneda__venta,
+                .moneda__compra {
+                    text-align: center;
+                    width: 90%;
+                    margin: 1px auto;
+                    background: rgba(255,255,255,.6);
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}

@@ -12,7 +12,7 @@
         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
         {{-- Font --}}
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
          {{-- /Font --}}
 
         <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -65,8 +65,6 @@
         @include('amp.partials.main-header')
 
         <article>
-            @include('amp.partials.main-image')
-
             <div class="container">
                 <div class="hat">
                     @if( $noticia['hat']  != '' )
@@ -77,21 +75,51 @@
                 </div>
                 <h1>{{ $noticia['title'] }}</h1>
                 <p class="headline">{{ $noticia['headline'] }}</p>
-                <div class="date">
-                    <span></span>
-                </div>
+
+            <figure>
+                <amp-img
+                        src="{{ $noticia['main_image']['srcs']['medium-wide'] }}"
+                        alt="{{ $noticia['main_image']['caption'] }}"
+                        height="513"
+                        width="912"
+                        layout="responsive"
+                        on="tap:lightbox-image"
+                        role="button"
+                        tabindex="0">
+                </amp-img>
+                <figcaption>{{ $noticia['main_image']['caption'] }}<span> Foto: {{ $noticia['main_image']['credit'] }}</span></figcaption>
+            </figure>
 
                 <amp-ad width=300 height=250
-                        type="eplanning"
-                        data-epl_si="{{ env('ADS_CLIENT', '279a3') }}"
-                        data-epl_sv="https://ads.us.e-planning.net"
-                        data-epl_isv="https://us.img.e-planning.net"
-                        data-epl_sec="new_amp"
-                        data-epl_kvs='{}'
-                        data-epl_e="300x250x1">
+                    type="eplanning"
+                    data-epl_si="{{ env('ADS_CLIENT', '279a3') }}"
+                    data-epl_sv="https://ads.us.e-planning.net"
+                    data-epl_isv="https://us.img.e-planning.net"
+                    data-epl_sec="new_amp"
+                    data-epl_kvs='{}'
+                    data-epl_e="300x250x1">
                 </amp-ad>
 
 
+
+                <div class="author-date">
+							
+                    @if ($noticia['signed'])
+                    <div class="autor">
+                        <a href="{{ route('authors.show', $noticia['author']['username']) }}">{{ $noticia['author']['fullname'] }}</a>
+                    </div>
+                    {{-- Credit --}}
+                    @elseif (! $noticia['signed'] && $noticia['credit'] != '')
+                        <div class="autor">{{ $noticia['credit'] }}</div>
+                    @else
+                        <div class="autor">Redacción <span class="autor__fortuna">Fortuna</span></div>
+                    @endif
+
+                    <div class="date" datetime="{{ $noticia['date_available']->isoFormat('YYYY[-]MM[-]DD[T]hh[:]mm[:]ss[-03:00]') }}">
+                    {{ $noticia['date_available']->locale('es-ES')->isoFormat('dddd DD [de] MMMM [de] YYYY') }}
+                    </div>
+
+                </div>
                 <div class="body">
                     {!! $body !!}
                 </div>

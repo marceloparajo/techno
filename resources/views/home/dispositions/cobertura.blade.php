@@ -3,7 +3,7 @@
 	<!-- Cobertura -->
 	<div class="cobertura row max-width">
 
-		<div class="cobertura__titulo">{{ $news[0]['hat'] ?? '' }}</div>
+		<div class="cobertura__titulo news__aside-title">{{ $news[0]['hat'] ?? '' }}</div>
 
 		@php 
 			$mostrarnotas = (count($news) < 6 ) ? 3 : 6;
@@ -20,6 +20,6 @@
 
 	</div><!-- cobertura -->
 
-	<x-ad-space id="300x250x-pos-" width="300" height="250" class="d-md-none" />
+	<x-ad-space id="300x250x-pos-" width="300" height="250" class="ads d-md-none" />
 
 @endif

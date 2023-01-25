@@ -180,8 +180,11 @@
 			padding: 3px 0;
 	
 			.time-top {
+				font-family: $font-secundaria;
 				font-size: .8rem;
-				text-transform: uppercase;
+				&::first-letter {
+					text-transform: capitalize;
+				}
 			}
 	
 			.perfil-logo {

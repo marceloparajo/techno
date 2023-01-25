@@ -6,6 +6,7 @@
 
 		@if ( $item['id'] == 'bloque-superior' )
 			<div class="bloque__title">Argentina</div>
+			<x-divisas-widget />
 		@else 
 			<div class="bloque__title">Internacional</div>
 		@endif
@@ -40,7 +41,6 @@
 
 			@else
 				<x-mas-leidas-perfil-widget :rows="5" />
-				<x-divisas-widget :rows="5" />
 				<div class="sticky">
 				<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ads" /> 
 				</div>

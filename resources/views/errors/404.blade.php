@@ -27,14 +27,14 @@
 
 	<main class="error main container row max-width margin-auto">
 
-		<img src="/images/404.jpg" alt="Error 404" width="300" height="352">
+		<img src="/images/404.jpg" alt="Error 404" width="300" height="254">
 		<div class="error__titulo">No hemos encontrado lo que estabas buscando.</div>
 		<div class="error__subtitulo">Esto puede deberse a que hayas seguido un enlace roto o que el contenido haya sido eliminado.</div>
 		<div class="error__subtitulo">Podés seguir navegando en nuestros contenidos</div>
 
 		<figure class="main-footer__logo">
-			<a href="http://dev-parabrisas.perfil.com/" title="Ir a la Home de parabrisas" itemprop="url">
-				<img src="http://dev-parabrisas.perfil.com/img/logo-fortuna.svg" alt="Parabrisas">
+			<a href="/" title="Ir a la Home de parabrisas" itemprop="url">
+				<img src="/img/logo-fortuna.svg" alt="Parabrisas">
 			</a>
 		</figure>
 

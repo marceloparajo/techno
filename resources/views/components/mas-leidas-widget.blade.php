@@ -6,7 +6,7 @@
 	@foreach(array_slice($news, 0, $rows) as $new)
 		<article class="masvistas__nota masvistas__nota--{{$loop->index}}">
 			<a href="{{ $new['permalink'] }}" class="masvistas__link">
-				<span class="masvistas__ranking" style="opacity:{{ ( 10 - $loop->index ) / 10 }}">{{ $loop->iteration }}</span>
+				<span class="masvistas__ranking">{{ $loop->iteration }}</span>
 					<x-lazy-image
 						:src="$new['main_image']['srcs']['small-wide']"
 						clean-source="true"

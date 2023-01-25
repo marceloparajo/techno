@@ -4,10 +4,10 @@
 	<div class="opinion">
 
 		<div class="opinion__title news__aside-title">
-			Opinión
+			Opinión<a href="/seccion/opinion" class="news__aside-title-mas">Ver más <span> &#10140;</span></a>
 		</div>
 
-		<div class="opinion__container bg-gray">
+		<div class="opinion__container bg-economy">
 
 			@foreach(array_slice($news, 0, 8) as $new)
 

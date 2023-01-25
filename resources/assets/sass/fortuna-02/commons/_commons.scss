@@ -124,6 +124,9 @@ img {
 .bg-gray {
     background: $gris-claro;
 }
+.bg-economy {
+    background: $economy;
+}
 
 @include media-breakpoint-up(sm) {
 
