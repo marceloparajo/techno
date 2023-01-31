@@ -319,16 +319,8 @@ class BlockDistributionsHelper
                 'template' => 'bloque'
             ],
             [
-                'id' => 'bloque-inferior',
-                'template' => 'bloque'
-            ],
-            [
                 'id' => 'destacada-medio',
                 'template' => 'destacada-medio'
-            ],
-            [
-                'id' => 'destacada-inferior',
-                'template' => 'destacada'
             ],
             [
                 'id' => 'especiales',
@@ -339,8 +331,8 @@ class BlockDistributionsHelper
                 'template' => 'cobertura'
             ],
             [
-                'id' => 'cobertura-moderada',
-                'template' => 'cobertura'
+                'id' => 'cobertura-verano',
+                'template' => 'especial'
             ],
             [
                 'id' => 'cobertura-general',
@@ -349,6 +341,10 @@ class BlockDistributionsHelper
             [
                 'id' => 'ultimas-noticias',
                 'template' => 'bloque'
+            ],
+            [
+                'id' => 'celebridades',
+                'template' => 'cobertura'
             ]
         ]);
     }

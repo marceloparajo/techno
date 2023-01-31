@@ -36,10 +36,10 @@
     </div>
     <div class="logo">
         <a href="{{ route('home.index') }}">
-            <amp-img src="{{ asset('img/logo-parabrisas.svg') }}"
-                     alt="Parabrisas"
-                     height="43"
-                     width="200"
+            <amp-img src="{{ asset('img/logo-fortuna.svg') }}"
+                     alt="Fortuna"
+                     height="42"
+                     width="160"
                      layout="fixed">
             </amp-img>
         </a>

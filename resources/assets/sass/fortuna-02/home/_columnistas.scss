@@ -1,0 +1,88 @@
+.opinion {
+    margin: 2rem -.5rem;
+    width: calc(100% + 1rem);
+    &__title {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+    &__container {
+        display: flex;
+        overflow: auto;
+        padding: .5rem;
+    }
+    &__news {
+        border-radius: 3px;
+        min-width: 200px;
+        width: 200px;
+        padding: .5rem;
+        text-align: center;
+        background: rgba(2555,255,255,.6);
+        z-index: 0;
+        a {
+            display: flex;
+            flex-direction: column;
+        }
+        &:hover {
+            background: rgba(255,255,255,1);
+            box-shadow: 0 3px 15px 0 rgba(0,0,0,.2);
+            z-index: 1;
+            .opinion__subject {
+                color: $color-secondary;
+            }
+        }
+        &:not(&--0) {
+            margin-left: .5rem;
+        }
+
+    }
+    &__media {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: .5rem auto;
+        box-shadow: 0 3px 20px 0 rgba(0,0,0,.1);
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__subject {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: .5rem 0;
+    }
+    &__autor {
+        font-size: .9rem;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .opinion {
+        margin: 2rem auto;
+        width: 100%;
+        max-width: 1300px;
+
+        &__title {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__container {
+            &::-webkit-scrollbar {
+                width: 6px;
+                height: 6px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 8px;
+                background-color: #535353;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: transparent;
+                border-radius: 8px;
+            }
+        }   
+    }
+}

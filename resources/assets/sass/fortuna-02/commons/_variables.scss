@@ -1,9 +1,11 @@
-@import "parabrisas-02/mixins/_breakpoints.scss";
+@import "fortuna-02/mixins/_breakpoints.scss";
 
 
 // -- Parabrisas colores --//
 
-$color-brand: #ed1b24;
+$color-brand: #e3120b;
+$color-secondary: #142680;
+$economy: #f5f4ef;
 $link: #6890ff;
 $gris-oscuro: #313133;
 $gris-medio: #666;
@@ -20,16 +22,16 @@ $borde: 1px solid $gris-claro;
 
   
 @font-face {
-    font-family: "Roboto-fallback";
-    size-adjust: 100.06%;
-    ascent-override: 96%;
-    src: local("Arial");
+    font-family: "Faustina-fallback";
+    size-adjust: 103.06%;
+    ascent-override: 93%;
+    src: local("Times New Roman");
 }
 
 @font-face {
-    font-family: "Roboto Condensed-fallback";
-    size-adjust: 88.94%;
-    ascent-override: 110%;
+    font-family: "Fira-fallback";
+    size-adjust: 102.56%;
+    ascent-override: 94%;
     src: local("Arial");
 }
 
@@ -38,8 +40,8 @@ $borde: 1px solid $gris-claro;
 
 $font-size: 1.2rem;
 $line-height-base: 1.6;
-$font-base: 'Roboto', "Roboto-fallback", -apple-system,BlinkMacSystemFont,"Segoe UI", Arial, "Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-$font-condensada: "Roboto Condensed", "Roboto Condensed-fallback",sans-serif;
+$font-base: 'Faustina', "Faustina-fallback", Times, serif;
+$font-secundaria: "Fira Sans", "Fira-fallback",Helvetica,Arial,sans-serif;
 
 // -- Paywall
 
@@ -61,4 +63,4 @@ $pf_whatsapp_color: #25D366;
 $pf_rss_color: #ee802f;
 
 
-@import "parabrisas-02/mixins/_mixins.scss";
+@import "fortuna-02/mixins/_mixins.scss";

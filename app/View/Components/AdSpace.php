@@ -71,7 +71,7 @@ class AdSpace extends Component
      * @param int|null $minHeight
      * @param int|null $maxHeight
      */
-    public function __construct(int $width = 1, int $height = 1, bool $reload = false, string $id = '', string $class = '', int $marginTop = 10, int $marginBottom = 10, string $styleWidth = '100%', int $minHeight = null, int $maxHeight = null)
+    public function __construct(int $width = 1, int $height = 1, bool $reload = false, string $id = '', string $class = '', int $marginTop = 0, int $marginBottom = 20, string $styleWidth = '100%', int $minHeight = null, int $maxHeight = null)
     {
         $this->width = $width;
         $this->height = $height;

@@ -23,5 +23,5 @@
 
 @endforeach
 <div class="sticky">
-    <x-ad-space id="300x600x-pos-" width="300" height="600" margin-top="0" max-height="600" />
+    <x-ad-space id="300x600x-pos-" width="300" height="600" margin-top="0" max-height="600" class="ads" />
 </div>

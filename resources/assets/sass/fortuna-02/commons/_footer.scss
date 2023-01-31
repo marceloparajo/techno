@@ -1,11 +1,9 @@
 .main-footer {
-    background: $gris-oscuro;
     padding: 1rem 0 0 0;
     &__logo {
         margin: 1rem auto;
         width: 160px;
         height: 34px;
-        background: $color-brand;
         border-radius: 2px;
 
         img {
@@ -13,7 +11,6 @@
         }
     }
     &__redes {
-        background: $gris-oscuro;
         display: flex;
         justify-content: center;
         a {

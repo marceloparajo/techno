@@ -133,7 +133,7 @@
 							@include('news.show.partials.author', ['author' => $noticia['author'], 'displayAuthor'=>$displayAuthor  ])
 						</div>
 					@elseif (! $noticia['signed'] && $noticia['credit'] != '')
-						<div class="autor">
+						<div class="autor autor--credito">
 							<div class="autor-nota__nombre">
 								{{ $noticia['credit'] }}
 							</div>
@@ -141,7 +141,7 @@
 					@else 
 						<div class="autor">
 							<div class="autor-nota__nombre">
-								Redacción Parabrisas
+								Redacción Fortuna
 							</div>
 						</div>
 					@endif

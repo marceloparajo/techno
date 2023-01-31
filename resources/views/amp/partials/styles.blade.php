@@ -10,16 +10,16 @@
         padding: 0;
     }
     article {
-        margin-top: 45px;
+        margin-top: 50px;
     }
 
     body {
-        font-family: "Roboto",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+        font-family: "Faustina",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
         font-size: 1rem;
         margin: 0;
         padding: 0;
         width: auto;
-        color: #171717;
+        color: darkslategray;
     }
 
     header {
@@ -27,7 +27,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: start;
-        background-color: #ed1b24;
+        background-color: white;
         box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
         height: 50px;
         position: fixed;
@@ -39,6 +39,10 @@
 
     .header .logo {
         margion-top: 3px;
+    }
+
+    .header .logo a {
+        display: inline-block;
     }
 
     .hamburger_wrapper {
@@ -58,7 +62,7 @@
         display: block;
         width: 100%;
         height: 2px;
-        background: white;
+        background: darkslategray;
         margin: 6px 0 0 0;
     }
     .hamburger_wrapper #hamburger span:first-of-type {
@@ -67,7 +71,7 @@
 
 
     footer {
-        background-color: #171717;
+        background-color: darkslategray;
         color: white;
         padding: 0;
         bottom: 0;
@@ -79,30 +83,45 @@
         padding: 10px;
         font-size: 0.85em;
         margin: 0 0 5px 0;
-        letter-spacing: 0.02em;
     }
 
     footer .logo {
         margin: 0;
         padding: 10px;
-        background: #313131;
+        background: white;
     }
     .container {
-        padding: 15px;
+        padding: 8px;
     }
 
+    .author-date {
+        margin: 1rem 0;
+    }
+
+    .autor {
+        font-size: .9rem;
+        font-weight: bold;
+    }
+    .autor a {
+        color: darkslategray;
+        text-decoration: none;
+    }
+    .autor__fortuna {
+        color: firebrick;
+    }
     .date {
         border-top: 1px solid #b1b0b0;
-        color: gray;
-        font-size: 14px;
+        text-transform: uppercase;
+        font-size: .8rem;
         margin: 9px 0;
         padding: 5px 0;
         width: 100%;
+        font-family: 'Fira Sans',arial,sans-serif;
     }
 
 
     figure {
-        margin: 0;
+        margin: 0 0 1rem 0;
         padding: 0;
         position: relative;
     }
@@ -112,18 +131,11 @@
     }
 
     figcaption {
-        font-size: .85em;
-        color: white;
-        left: 0;
-        bottom: 0;
-        line-height: 15px;
-        position: absolute;
-        text-shadow: 1px 1px 3px black;
-        text-transform: uppercase;
+        font-size: .8em;
         width: 100%;
-        white-space: normal;
-        background-color: rgba(0,0,0,.4);
-        padding: 8px;
+        padding: 8px 0;
+        font-family: "Fira Sans", Arial, sans-serif;
+        border-bottom: 1px solid lightgray;
     }
 
     .main-image {
@@ -137,31 +149,27 @@
         line-height: 1.05em;
         margin: 0;
         padding: 10px 0;
-        font-family: "Roboto Condensed",Helvetica,sans-serif;
-        letter-spacing: -0.02em;
     }
 
     .hat {
-        background-color: transparent;
-        color: darkslategray;
-        font-size: .95rem;
+        color: firebrick;
+        font-size: .9rem;
         font-weight: 700;
-        text-transform: uppercase;
         padding: 2px 0;
         display: inline-block;
-        font-family: 'Oswald', sans-serif;
+        font-family: 'Fira Sans', arial, sans-serif;
+        border-bottom: 1px solid darkslategray;
     }
 
     .hat a {
-        color: darkslategray;
+        color: firebrick;
         text-decoration: none;
     }
 
     .headline {
-        font-size: 1.4rem;
+        margin: .5rem 0 1.5rem 0;
+        font-size: 1.2rem;
         line-height: 1.2em;
-        letter-spacing: -0.02em;
-        font-family: "Roboto Condensed",Helvetica,sans-serif;
     }
 
     .body {
@@ -171,17 +179,15 @@
     .body p {
         font-size: 1.2rem;
         line-height: 1.6em;
-        letter-spacing: -0.02em;
         margin: 20px 0;
         overflow-wrap: break-word;
     }
     .body>p:first-of-type:first-letter {
-        color: #dd0202;
+        color: firebrick;
         float: left;
         font-size: 4rem;
         font-weight: bold;
         line-height: .2;
-        font-family: "Roboto Condensed",Helvetica,sans-serif;
         margin: 24px 10px 10px 0;
         transform: translateY(-10px);
     }
@@ -199,7 +205,6 @@
         padding: 5px;
         font-size: .85rem;
         font-weight: normal;
-        letter-spacing: 0.03em;
     }
 
     .body h2 {
@@ -207,7 +212,6 @@
         font-weight: 700;
         line-height: 1.2em;
         margin: 1em 0 0 0;
-        letter-spacing: -0.02em;
     }
 
     .relacionadas {
@@ -219,11 +223,10 @@
             font-weight: bold;
             font-size: 1.1rem;
             text-transform: uppercase;
-            color: #171717;
+            color: darkslategray;
             margin: 5px 0;
             border-bottom: 2px solid #ccc;
             padding-bottom: 5px;
-           letter-spacing: normal;
     }
 
     .relacionadas h3 {
@@ -232,7 +235,6 @@
         line-height: 1.05em;
         margin: 0;
         padding: 10px 15px;
-        letter-spacing: normal;
     }
 
     .relacionadas ul {
@@ -249,13 +251,14 @@
 
     .relacionadas ul li a {
         text-decoration: none;
-        color: black;
+        color: darkslategray;
     }
 
     .sidebar {
         margin: 50px 0 0 0;
         padding: 0;
         background: white;
+        font-family: 'Fira Sans',Arial,sans-serif;
     }
 
     .sidebar ul {
@@ -279,8 +282,7 @@
 
     .sidebar a {
         text-transform: uppercase;
-        font-family: "Roboto Condensed",Helvetica,sans-serif;
-        color: #171717;
+        color: darkslategray;
         text-decoration: none;
     }
 
@@ -299,20 +301,17 @@
     }
     .tags__titulo {
         border-bottom: 1px solid lightgray;
-        letter-spacing: -0.02em;
         padding-bottom: 3px;
         margin-bottom:10px;
-        font-family: "Roboto Condensed", Helvetica, Arial,sans-serif;
         font-size: 1.4rem;
         font-weight: bold;
     }
     .tags label {   
         background: transparent;
         padding: 5px 0;
-        color: #171717;
+        color: darkslategray;
         text-transform: uppercase;
         font-size: 1rem;
-        font-family: "Roboto condensed",Helvetica,arial,sans-serif;
         font-weight: 700;
         margin: 0px 15px 15px 0;
     }
@@ -323,21 +322,19 @@
     .tags li { 
         margin: 0 15px 15px 0;
         list-style: none;
-        letter-spacing: normal;
         display: inline-block;
         padding: 4px 8px;
         font-size: 1rem;
         background: lightcyan;
         border: 1px solid lightgray;
         border-radius: 3px;
-        font-family: "Roboto Condensed",Helvetica, Arial, sans-serif;
     }
    .tags li a { 
        text-decoration: none; 
-       color: #171717;
+       color: darkslategray;
     }
    .tags li a:hover {
-       color:#dd0202; 
+       color:firebrick; 
     }
 
     .icon-expand {
@@ -348,9 +345,12 @@
     color: white;
     padding: 2px;
     font-size: 20px;
-    text-shadow: 1px 1px 3px black;
+    text-shadow: 1px 1px 3px darkslategray;
 }
 
+amp-ad {
+    margin: 1rem 0;
+}
 amp-social-share.twitter {
     background-color: transparent;
     background-image: url('/images/glyph/share/twitter.svg');
@@ -396,14 +396,14 @@ hr {
 
     .card-body .title {     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: normal; }
+}
     .card-body .title a { color:#000; text-decoration: none}
     .card-body ul {     margin: 10px 5px; padding: 0; }
     .card-body li { list-style: none }
     .card-body h5 {     padding: 10px 2px;
     margin: 0px 0px 20px;
     border-bottom: 1px solid #ccc;
-    letter-spacing: normal; }
+    }
     .card-body li a { color:#000; text-decoration: none; }
     .card-body li a:hover { color:#f4f4f4; text-decoration: none; }
     .position {font-size: 2em;
@@ -481,22 +481,14 @@ margin-bottom: 15px}
     font-size: 11px;}
   .social-topsharing  a {color:#0076ba;}
 
-   @media only screen and (min-device-width: 320px) and (max-device-width: 568px)
-and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
-{
-  .container { padding:5px; }
-  p, h1, .tags { padding:10px 20px; }
-  .hat { margin:5px 0px 0px 20px; font-size: 11px }
-}
+
 
 .list a {
     text-decoration: none;
 }
 .list a h2 {
-    font-family: 'Roboto Condensed',Helvetica,Arial,sans-serif;
-    color: #171717;
+    color: darkslategray;
     text-decoration: none;
-    letter-spacing: 0;
     margin: 0 10px 20px 10px;
     line-height: 1.1em;
 }

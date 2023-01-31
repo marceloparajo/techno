@@ -23,6 +23,10 @@
                 <span class="news__hat">
                     {{ $new['hat'] }}
                 </span>
+            @else
+                <span class="news__hat">
+                    {{ $new['channel']['name'] }}
+                </span>
             @endif
             <h2 class="news__title">
                 {{ $new['home_title'] }}

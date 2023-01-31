@@ -1,7 +1,7 @@
 <footer>
     <div class="logo">
         <a href="{{ route('home.index') }}">
-            <amp-img src="{{ asset('img/logo-parabrisas.svg') }}"
+            <amp-img src="{{ asset('img/logo-fortuna.svg') }}"
                      alt="Exitoina"
                      height="22"
                      width="160"

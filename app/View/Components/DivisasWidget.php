@@ -30,10 +30,25 @@ class DivisasWidget extends Component
         return view('components.divisas-widget');
     }
 
-    public function dolar_solidario()
+    /**
+     * @return string
+     */
+    public function dolar_ahorro()
     {
         $dolar_oficial = $this->content['oficial']['value_sell'];
         $percent = (65 * $dolar_oficial) / 100;
+        $total = $dolar_oficial + $percent;
+
+        return $this->format_number($total);
+    }
+
+    /**
+     * @return string
+     */
+    public function dolar_turismo()
+    {
+        $dolar_oficial = $this->content['oficial']['value_sell'];
+        $percent = (75 * $dolar_oficial) / 100;
         $total = $dolar_oficial + $percent;
 
         return $this->format_number($total);

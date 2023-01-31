@@ -5,10 +5,20 @@
 	}
 
 	&__aside-title {
+		position: relative;
 		font-size: 1.2rem;
 		font-weight: bold;
 		border-top: 3px solid $color-brand;
 		text-transform: uppercase;
 		padding: .5rem 0;
+	}
+	&__aside-title-mas {
+		position: absolute;
+		right: 0;
+		top: .6rem;
+		font-size: .9rem;
+		font-weight: normal;
+		text-transform: none;
+		font-family: $font-secundaria;
 	}
 }

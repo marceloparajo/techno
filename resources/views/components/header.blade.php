@@ -21,7 +21,7 @@
 		</button>
 		<div class="header__logo">
 			<a href="{{ asset('') }}" title="Ir a la Home de {{ env('APP_NAME') }}">
-				<img src="{{ asset('img/logo-parabrisas.svg') }}" alt="{{ env('APP_NAME') }}" width="230" height="50"> 
+				<img src="{{ asset('img/logo-fortuna.svg') }}" alt="{{ env('APP_NAME') }}" width="230" height="45"> 
 			</a>
 		</div>
 
@@ -38,7 +38,7 @@
 					@foreach ($main_menu as $item)
 						@if (isset($item['children']) && count($item['children']) > 0)
 							<li class="has-children">
-							<a role="button" href="#" class="has-children-a {{ $item['class'] }}" data-toggle="dropdown">{{ $item['text'] }}</a>
+							<a role="button" href="#" class="has-children-a main-menu__{{ $item['class'] }}" data-toggle="dropdown">{{ $item['text'] }}</a>
 							<ul>
 								@foreach ($item['children'] as $children)
 									<li><a href="{{ $children['href'] }}" target="{{ $children['target'] }}" rel="noreferrer">{{ $children['text'] }}</a></li>
@@ -46,8 +46,15 @@
 							</ul>
 						</li>
 						@else
-							<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
+							<li><a href="{{ $item['href'] }}" target="{{ $item['target'] }}" class="main-menu__{{ $item['class'] }}" title="{{ $item['title'] }}" rel="noreferrer">{{ $item['text'] }}</a></li>
 						@endif
+
+
+						@if ($loop->index == 5)
+							@break
+						@endif
+
+
 					@endforeach
 				</ul>
 				
