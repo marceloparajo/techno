@@ -208,12 +208,30 @@
     }
 
     .body h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 700;
         line-height: 1.2em;
         margin: 1em 0 0 0;
     }
-
+    .body p.destacadoNota {
+        font-size: 1.3em;
+        font-weight: bold;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-left: 10px solid rgba(20, 38, 128, .3);
+        border-right: 2px solid rgba(20, 38, 128, .3);
+        color: darkslategray;
+        line-height: 1.2em;
+    }
+    .body p.destacadoNota a {
+        border-bottom: none;
+        color: darkslategray;
+    }
+    .body p.destacadoNota u {
+        color: rgba(20,38,128,.5);
+        font-size: .8em;
+        text-decoration: none;
+    }
     .relacionadas {
         padding: 10px;
         background: #f4f4f4;

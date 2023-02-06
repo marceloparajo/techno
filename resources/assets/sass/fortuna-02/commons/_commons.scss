@@ -160,6 +160,10 @@ img {
     .sticky {
         top: 125px;
     }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @include generate-display-and-visibility-elements()
