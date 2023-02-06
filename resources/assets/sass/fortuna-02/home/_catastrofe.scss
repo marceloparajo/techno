@@ -1,5 +1,8 @@
 .poster {
     margin-top: 0;
+    margin-bottom: 2rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 @include media-breakpoint-up(md) {
     .poster {

@@ -4,12 +4,15 @@
 
 	<div class="col-fluid d-xl-flex bloque__container">
 
+
+	{{--
 		@if ( $item['id'] == 'bloque-superior' )
 			<div class="bloque__title">Argentina</div>
 			<x-divisas-widget />
 		@else 
 			<div class="bloque__title">Internacional</div>
 		@endif
+	--}}
 
 		<div class="col-fluid flex-md-doble">
 		@foreach(array_slice($news, 0, 6) as $new)
@@ -34,17 +37,17 @@
 			@if ( $item['id'] == 'bloque-superior' )
 				<x-mas-leidas-widget :rows="5" />
 				<div class="sticky">
-				<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ads"/> 
-
+					<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ads"/> 
 				</div>
-
-
-			@else
+			@elseif ( $item['id'] == 'bloque-medio' )
 				<x-mas-leidas-perfil-widget :rows="5" />
 				<div class="sticky">
-				<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ads" /> 
+					<x-ad-space id="300x250x-pos-" width="300" height="250" min-height="250" max-height="250" class="ads" /> 
 				</div>
-
+			@else
+				<div class="sticky">
+					<x-ad-space id="300x600x-pos-" width="300" height="600" min-height="300" max-height="600" class="ads" /> 
+				</div>
 			@endif
 
 		</div>

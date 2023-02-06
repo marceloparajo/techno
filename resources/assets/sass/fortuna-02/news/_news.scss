@@ -240,22 +240,29 @@
 		}
 
         p.destacadoNota {
-            font-size: 1.8em;
-            font-weight: normal;
-            padding: 1em;
-            color: $color-secondary;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding-top: .5rem;
+            padding-bottom: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-top: 1px solid rgba(20, 38, 128, .3);
+            border-bottom: 1px solid rgba(20, 38, 128, .3);
+            color: $gris-oscuro;
             line-height: 1.2em;
-            br {
-                display: none;
-            }
             a {
                 border-bottom: none;
-                color: $color-secondary;
+                color: $gris-oscuro;
                 &:hover {
                     color: $color-brand;
                     background: transparent;
                     text-decoration: underline;
                 }
+            }
+            u {
+                color: rgba(20,38,128,.5);
+                font-size: .8em;
+                text-decoration: none;
             }
         }
 	}
@@ -361,7 +368,8 @@
 
         &__content {
             p.destacadoNota {
-                padding: 1em 3em;
+                margin-left: 3rem;
+                margin-right: 3rem;
             }
         }
 	}
@@ -389,7 +397,14 @@
 @include media-breakpoint-up(xl) {
     .news {
         &__container {
-            max-width: 876px;
+            max-width: 908px;
+        }
+
+        &__content {
+            p.destacadoNota {
+                margin-left: 6rem;
+                margin-right: 6rem;
+            }
         }
     }
 }

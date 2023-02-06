@@ -115,7 +115,7 @@
                         <div class="autor">Redacción <span class="autor__fortuna">Fortuna</span></div>
                     @endif
 
-                    <div class="date" datetime="{{ $noticia['date_available']->isoFormat('YYYY[-]MM[-]DD[T]hh[:]mm[:]ss[-03:00]') }}">
+                    <div class="date">
                     {{ $noticia['date_available']->locale('es-ES')->isoFormat('dddd DD [de] MMMM [de] YYYY') }}
                     </div>
 
