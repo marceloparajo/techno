@@ -250,6 +250,9 @@
             border-bottom: 1px solid rgba(20, 38, 128, .3);
             color: $gris-oscuro;
             line-height: 1.2em;
+            position: relative;
+            background: white;
+            box-shadow: 0 15px 15px -15px  rgba(0,0,0,.2);
             a {
                 border-bottom: none;
                 color: $gris-oscuro;
@@ -263,6 +266,17 @@
                 color: rgba(20,38,128,.5);
                 font-size: .8em;
                 text-decoration: none;
+            }
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                background: rgba(20, 38, 128, .3);
+                height: 3px;
+                left: 30%;
+                right: 30%;
+                top: -4px;
+                border-radius: 3px 3px 0 0;
             }
         }
 	}

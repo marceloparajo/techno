@@ -339,10 +339,6 @@ class BlockDistributionsHelper
                 'template' => 'cobertura'
             ],
             [
-                'id' => 'ultimas-noticias',
-                'template' => 'bloque'
-            ],
-            [
                 'id' => 'celebridades',
                 'template' => 'cobertura'
             ]
