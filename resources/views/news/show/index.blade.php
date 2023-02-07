@@ -147,7 +147,7 @@
 					@endif
 					
 
-					<time class="news__date" datetime="{{ $noticia['date_available']->isoFormat('YYYY[-]MM[-]DD[T]hh[:]mm[:]ss[-03:00]') }}">{{ $noticia['date_available']->locale('es-ES')->isoFormat('dddd DD [de] MMMM [de] YYYY') }}</time>
+					<time class="news__date" datetime="{{ $noticia['date_available']->isoFormat('YYYY[-]MM[-]DD[T]hh[:]mm[:]ss[-03:00]') }}">{{ $noticia['date_available']->locale('es-ES')->isoFormat('dddd DD [de] MMMM [de] YYYY [ | ] hh[:]mm') }}</time>
 
 						
 					<div class="news__content">
