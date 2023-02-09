@@ -5,14 +5,9 @@
 	<div class="col-fluid d-xl-flex bloque__container">
 
 
-	{{--
 		@if ( $item['id'] == 'bloque-superior' )
-			<div class="bloque__title">Argentina</div>
 			<x-divisas-widget />
-		@else 
-			<div class="bloque__title">Internacional</div>
 		@endif
-	--}}
 
 		<div class="col-fluid flex-md-doble">
 		@foreach(array_slice($news, 0, 6) as $new)
