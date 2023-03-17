@@ -23,4 +23,9 @@
             flex-wrap: wrap;
         }
     }
+    .col-xl-sticky {
+        position: sticky;
+        top: 8rem;
+        align-self: flex-start;
+    }
 }
