@@ -3,10 +3,10 @@ services:
 
   #PHP
   exitoinav2:
-    image: fedemramato/laravel-php7.3:latest
-    container_name: exitoinav2-site
+    image: fedemramato/laravel-php7.4:latest
+    container_name: fortunav2-site
     environment:
-      VIRTUAL_HOST: dev-exitoina.perfil.com
+      VIRTUAL_HOST: dev-fortuna.perfil.com
     restart: unless-stopped
     expose:
       - "80"
