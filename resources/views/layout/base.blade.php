@@ -8,7 +8,7 @@
         <meta property="fb:admins"              content="{{ env('FACEBOOK_ADMINS', '') }}">
         <meta property="fb:app_id"              content="{{ env('FACEBOOK_APP_ID', '') }}">
         <meta property="fb:pages"               content="{{ env('FACEBOOK_PAGE_ID', '') }}">
-        <title>@yield('page-title', env('APP_ALTER_NAME', 'Exitoína'))</title>
+        <title>@yield('page-title', env('APP_ALTER_NAME', 'Fortuna'))</title>
 
         @shared()
 
@@ -74,24 +74,6 @@
 
         {{-- Google Tag Manager --}}
         @yield('google-tag-manager')
-
-        {{-- Titan PUSH --}}
-        @if (env('TITAN_PUSH_ENABLE', false) && env('TITAN_PUSH_ID', '') != '')
-            <script type="text/javascript">
-                if(!window['_WPN']) {
-                    (function(j,l,p,v,n,t,pu){j['_WPN']=n;j[n]=j[n]||function(){(j[n].q=j[n].q
-                        ||[]).push(arguments)},j[n].l=1*new
-                    Date();t=l.createElement(p),pu=l.getElementsByTagName(p)[0];t.async=1;
-                        t.src=v;pu.parentNode.insertBefore(t,pu);})(window,document,'script',
-                        'https://d12zyq17vm1xwx.cloudfront.net/v2/wpn.min.js','wpn');
-
-                    wpn('initialize', {{ env('TITAN_PUSH_ID') }});
-                    wpn('checkSubscription');
-                    wpn('pageView');
-                }
-            </script>
-        @endif
-        {{-- / Titan PUSH --}}
 
         {{-- Navegg --}}
         @if (env('NAVEGG_ENABLE', false))
