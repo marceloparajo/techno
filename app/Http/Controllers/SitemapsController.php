@@ -138,8 +138,8 @@ class SitemapsController extends Controller
 
             $news->addChild('news:publication_date', $date_update);
 
-            $news->addChild('news:title', $noticia['title']);
-            $news->addChild('news:keywords', $noticia['tags']);
+            $news->addChildWithCDATA('news:title', $noticia['title']);
+            $news->addChildWithCDATA('news:keywords', $noticia['tags']);
 
         }
 
