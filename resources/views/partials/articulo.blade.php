@@ -13,6 +13,7 @@
                         ['v' => 768, 'w' => $width_tablet, 'h' => $height_tablet], 
                         ['v' => 1024, 'w' => $width_laptop, 'h' => $height_laptop], 
                         ['v' => 1366, 'w' => $width_desktop, 'h' => $height_desktop]]" 
+                :lazy-load="$lazy_load ?? 'TRUE' "
                 :play-button="$new['has_video']" 
                 :camera-button="$new['has_gallery']" />
             </figure>

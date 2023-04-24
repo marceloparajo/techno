@@ -47,11 +47,8 @@
         @yield('head-top')
 
         {{-- Font --}}
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
-         {{-- /Font --}}
+        <link rel="preload" href="/fonts/Faustina-Bold.woff2" as="font" type="font/woff2" crossorigin> 
+        {{-- /Font --}}
 
         @yield('head-css')
 

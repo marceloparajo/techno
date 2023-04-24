@@ -20,28 +20,6 @@ $box-shadow: 0 3px 12px 0 rgba(0,0,0,.2);
 $text-shadow: 0 3px 5px black;
 $borde: 1px solid $gris-claro;
 
-  
-@font-face {
-    font-family: "Faustina-fallback";
-    size-adjust: 103.06%;
-    ascent-override: 93%;
-    src: local("Times New Roman");
-}
-
-@font-face {
-    font-family: "Fira-fallback";
-    size-adjust: 102.56%;
-    ascent-override: 94%;
-    src: local("Arial");
-}
-
-
-// -- Parabrisas tipografías
-
-$font-size: 1.2rem;
-$line-height-base: 1.6;
-$font-base: 'Faustina', "Faustina-fallback", Times, serif;
-$font-secundaria: "Fira Sans", "Fira-fallback",Helvetica,Arial,sans-serif;
 
 // -- Paywall
 
