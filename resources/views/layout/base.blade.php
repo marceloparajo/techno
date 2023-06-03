@@ -69,8 +69,9 @@
         </script>
         /Config Paywall --}}
 
-        {{-- Google Tag Manager --}}
         @yield('google-tag-manager')
+        <x-comscore />
+        <x-marfeel />
 
         {{-- Navegg --}}
         @if (env('NAVEGG_ENABLE', false))
@@ -105,14 +106,6 @@
         @endif
         /Facebook Pixel --}}
 
-        {{-- MARFEEL --}}
-        @if (config('services.marfeel.enable'))
-            <script type="text/javascript">
-              function e(e){var t=!(arguments.length>1&&void 0!==arguments[1])||arguments[1],c=document.createElement("script");c.src=e,t?c.type="module":(c.async=!0,c.type="text/javascript",c.setAttribute("nomodule",""));var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(c,n)}function t(t,c,n){var a,o,r;null!==(a=t.marfeel)&&void 0!==a||(t.marfeel={}),null!==(o=(r=t.marfeel).cmd)&&void 0!==o||(r.cmd=[]),t.marfeel.config=n,t.marfeel.config.accountId=c;var i="https://sdk.mrf.io/statics";e("".concat(i,"/marfeel-sdk.js?id=").concat(c),!0),e("".concat(i,"/marfeel-sdk.es5.js?id=").concat(c),!1)}!function(e,c){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};t(e,c,n)}(window,1740,{} /*config*/);
-            </script>
-        @endif
-        {{-- /MARFEEL --}}
-
 
     </head>
 
@@ -131,23 +124,6 @@
         {{--<script defer type="text/javascript" src="{{ mix('js/mi-perfil.js') }}"></script>--}}
 
         @yield('js')
-
-        {{-- Comscore --}}
-        @if (env('COMSCORE_ENABLE', false) && env('COMSCORE_CLIENT_ID', '') != '')
-        <script>
-            var _comscore = _comscore || [];
-            _comscore.push({ c1: "2", c2: "{{ env('COMSCORE_CLIENT_ID', '6906401') }}" });
-            (function() {
-                var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.defer = true;
-                s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-                el.parentNode.insertBefore(s, el);
-            })();
-        </script>
-        <noscript>
-            <img src="https://b.scorecardresearch.com/p?c1=2&c2={{ env('COMSCORE_CLIENT_ID', '6906401') }}&cv=2.0&cj=1" />
-        </noscript>
-        @endif
-        {{-- /Comscore --}}
 
         {{-- DMP --}}
         <script type="text/javascript">

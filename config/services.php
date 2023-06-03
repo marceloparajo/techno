@@ -35,8 +35,14 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'comscore' => [
+        'enable' => env('COMSCORE_ENABLE', true),
+        'client_id' => env('COMSCORE_CLIENT_ID', '6906401')
+    ],
+
     'marfeel' => [
-        'enable' => env('MARFEEL_ENABLE', false)
+        'enable' => env('MARFEEL_ENABLE', false),
+        'client_id' => env('MARFEEL_CLIENT_ID', 1740)
     ]
 
 ];

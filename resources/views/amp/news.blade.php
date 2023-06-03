@@ -41,14 +41,8 @@
 
     <body>
         <x-google-tag-manager category="nota" format="amp" :info="$noticia" />
-
-        @if (config('services.marfeel.enable'))
-            <amp-analytics config="https://events.newsroom.bi/amp.v1.json" data-credentials="include">
-                <script type="application/json" >
-                    {"vars" : {"accountId": "1740"}}
-                </script>
-            </amp-analytics>
-        @endif
+        <x-comscore format="amp" />
+        <x-marfeel format="amp" />
 
         @if (env('NAVEGG_ENABLE', false))
             <amp-analytics type="navegg" id="navegg56362">
