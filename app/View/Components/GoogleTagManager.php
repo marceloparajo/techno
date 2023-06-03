@@ -32,15 +32,8 @@ class GoogleTagManager extends Component
      */
     public $gtm_id;
 
-    /**
-     * @var mixed
-     */
-    public $gtm_amp_id;
-
-    /**
-     * @var mixed
-     */
-    public $gtm_fbia_id;
+    /** @var string  */
+    public $ga4_id;
 
     /**
      * @var bool
@@ -65,12 +58,12 @@ class GoogleTagManager extends Component
         $this->format = $format;
         $this->info = $info;
         $this->gtm_id = env('ANALYTICS_GTM_ID','');
-        $this->gtm_amp_id = env('ANALYTICS_GTM_AMP_ID', '');
-        $this->gtm_fbia_id = env('ANALYTICS_GTM_FBIA_ID', '');
+        $this->ga4_id = env('ANALYTICS_MEASUREMENT_ID', '');
         $this->widget_enable = env('ANALYTICS_ENABLE', false);
 
         $this->content = [
             'brand' => env('SITE_CODE', 'perfil'),
+            'brandPretty' => env('APP_ALTER_NAME', 'Perfil'),
             'environment' => (env('APP_ENV', 'local') != 'production') ? "testing" : "main",
             'pageCategory' => $this->category,
             'articleFormat' => $this->format

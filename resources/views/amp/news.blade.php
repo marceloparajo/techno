@@ -65,7 +65,7 @@
         @include('amp.partials.main-header')
 
         <article>
-            <div class="container">
+            <div class="container" id="article-container">
                 <div class="hat">
                     @if( $noticia['hat']  != '' )
                         {{ $noticia['hat'] }}
