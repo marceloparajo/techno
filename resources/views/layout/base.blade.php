@@ -41,9 +41,7 @@
 
         <link rel="preload" as="image" href="{{ asset('img/logo-fortuna.svg') }}">
         <link rel="preconnect" href="https://ads.us.e-planning.net">
-        <link rel="preconnect" href="https://libs.lavoz.com.ar">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
         @yield('head-top')
 
         {{-- Font --}}
