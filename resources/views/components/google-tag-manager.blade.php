@@ -1,7 +1,7 @@
 @if ($widget_enable)
     <!-- Google Tag Manager -->
     @if ($format == 'amp')
-        <amp-analytics type="googleanalytics" config="https://amp.perfil.com/ga4.json" data-credentials="include">
+        <amp-analytics type="googleanalytics" config="https://amp.perfil.com/ga4.json">
             <script type="application/json">
                 {
                   "vars": {
