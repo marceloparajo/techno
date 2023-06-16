@@ -41,6 +41,7 @@
 
     <body>
         <x-google-tag-manager category="nota" format="amp" :info="$noticia" />
+        <x-google-tag-manager category="nota" format="amp" :info="$noticia" prop="unique" />
         <x-comscore format="amp" />
         <x-marfeel format="amp" />
 

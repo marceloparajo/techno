@@ -40,6 +40,13 @@ return [
         'client_id' => env('COMSCORE_CLIENT_ID', '6906401')
     ],
 
+    'google_analytics' => [
+        'enable' => env('ANALYTICS_ENABLE', false),
+        'gtm_id' => env('ANALYTICS_GTM_ID', ''),
+        'global_id' => env('ANALYTICS_GLOBAL_MEASUREMENT_ID', ''),
+        'property_id' => env('ANALYTICS_MEASUREMENT_ID', '')
+    ],
+
     'marfeel' => [
         'enable' => env('MARFEEL_ENABLE', false),
         'client_id' => env('MARFEEL_CLIENT_ID', 1740)

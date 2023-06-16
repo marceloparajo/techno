@@ -51,20 +51,24 @@ class GoogleTagManager extends Component
      *
      * @param string $format
      * @param array $info
+     * @param string $prop
      */
-    public function __construct(string $category, string $format = 'estandar', array $info = [])
+    public function __construct(string $category, string $format = 'estandar', array $info = [], string $prop = 'global')
     {
+        $this->ga4_id = ($prop == 'global')
+            ? config('services.google_analytics.global_id')
+            : config('services.google_analytics.property_id');
+
         $this->category = $category;
         $this->format = $format;
         $this->info = $info;
-        $this->gtm_id = env('ANALYTICS_GTM_ID','');
-        $this->ga4_id = env('ANALYTICS_MEASUREMENT_ID', '');
-        $this->widget_enable = env('ANALYTICS_ENABLE', false);
+        $this->gtm_id = config('services.google_analytics.gtm_id');
+        $this->widget_enable = config('services.google_analytics.enable');
 
         $this->content = [
-            'brand' => env('SITE_CODE', 'perfil'),
-            'brandPretty' => env('APP_ALTER_NAME', 'Perfil'),
-            'environment' => (env('APP_ENV', 'local') != 'production') ? "testing" : "main",
+            'brand' => config('app.site_code'),
+            'brandPretty' => config('app.alter_name'),
+            'environment' => (config('app.env') != 'production') ? "testing" : "main",
             'pageCategory' => $this->category,
             'articleFormat' => $this->format
         ];
@@ -156,16 +160,12 @@ class GoogleTagManager extends Component
         ];
     }
 
-
-
-
-
     /**
      * Get the view / contents that represent the component.
      *
-     * @return View|string
+     * @return View
      */
-    public function render()
+    public function render(): View
     {
         return view('components.google-tag-manager');
     }
