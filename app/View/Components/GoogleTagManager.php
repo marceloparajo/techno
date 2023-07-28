@@ -107,9 +107,9 @@ class GoogleTagManager extends Component
             'articleTags' => str_replace( ',', '|', $this->info['tags']),
 
             // Fechas
-            'articleLastUpdate' => $this->info['date_update']->toDateTimeString(),
+            'articleLastUpdate' => $this->info['date_update']->format('d-m-Y'),
             'articlePublicationDateLegacy' => $this->info['date_available']->locale('en')->isoFormat('MMMM, DD YYYY HH:mm:ss ZZ'),
-            'articlePublicationDate' => $this->info['date_available']->toDateTimeString(),
+            'articlePublicationDate' => $this->info['date_available']->format('d-m-Y'),
             'articleLastUpdateLegacy' => $this->info['date_update']->locale('en')->isoFormat('MMMM, DD YYYY HH:mm:ss ZZ'),
 
             // Home Zone and Position

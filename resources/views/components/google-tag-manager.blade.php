@@ -24,16 +24,9 @@
                       },
                       "extraUrlParams": {
                         "event__num_article_id": {{ $info['id'] }},
-                        "event__str_article_title": "{{ $info['title'] }}",
                         "event__str_article_category": "{{ $info['channel']['slug'] }}",
-                        "event__num_article_author_id": {{ $info['author']['id'] }},
                         "event__str_article_author_user_name": "{{ $info['author']['username'] ?? '' }}",
-                        "event__str_article_author_name": "{{ $info['author']['fullname'] ?? '' }}",
-                        "event__num_article_editor_id": {{ $info['editor']['id'] ?? 0 }},
-                        "event__str_article_editor_user_name": "{{ $info['editor']['username'] ?? '' }}",
-                        "event__str_article_editor_name": "{{ $info['editor']['fullname'] ?? '' }}",
-                        "event__str_article_last_update": "{{ $info['date_update']->toDateTimeString() }}",
-                        "event__str_article_publication_date": "{{ $info['date_available']->toDateTimeString() }}",
+                        "event__str_article_publication_date": "{{ $info['date_available']->format('d-m-Y') }}",
                         "event__str_article_signed": "{{ $info['signed'] == 1 }}",
                         "event__str_brand": "{{ env('SITE_CODE', 'perfil') }}",
                         "event__str_page_format": "amp"
