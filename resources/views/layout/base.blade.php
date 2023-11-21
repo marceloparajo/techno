@@ -8,7 +8,7 @@
         <meta property="fb:admins"              content="{{ env('FACEBOOK_ADMINS', '') }}">
         <meta property="fb:app_id"              content="{{ env('FACEBOOK_APP_ID', '') }}">
         <meta property="fb:pages"               content="{{ env('FACEBOOK_PAGE_ID', '') }}">
-        <title>@yield('page-title', env('APP_ALTER_NAME', 'Exitoína'))</title>
+        <title>@yield('page-title', env('APP_ALTER_NAME', 'Fortuna'))</title>
 
         @shared()
 
@@ -41,17 +41,12 @@
 
         <link rel="preload" as="image" href="{{ asset('img/logo-fortuna.svg') }}">
         <link rel="preconnect" href="https://ads.us.e-planning.net">
-        <link rel="preconnect" href="https://libs.lavoz.com.ar">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
         @yield('head-top')
 
         {{-- Font --}}
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
-         {{-- /Font --}}
+        <link rel="preload" href="/fonts/Faustina-Bold.woff2" as="font" type="font/woff2" crossorigin> 
+        {{-- /Font --}}
 
         @yield('head-css')
 
@@ -72,26 +67,9 @@
         </script>
         /Config Paywall --}}
 
-        {{-- Google Tag Manager --}}
         @yield('google-tag-manager')
-
-        {{-- Titan PUSH --}}
-        @if (env('TITAN_PUSH_ENABLE', false) && env('TITAN_PUSH_ID', '') != '')
-            <script type="text/javascript">
-                if(!window['_WPN']) {
-                    (function(j,l,p,v,n,t,pu){j['_WPN']=n;j[n]=j[n]||function(){(j[n].q=j[n].q
-                        ||[]).push(arguments)},j[n].l=1*new
-                    Date();t=l.createElement(p),pu=l.getElementsByTagName(p)[0];t.async=1;
-                        t.src=v;pu.parentNode.insertBefore(t,pu);})(window,document,'script',
-                        'https://d12zyq17vm1xwx.cloudfront.net/v2/wpn.min.js','wpn');
-
-                    wpn('initialize', {{ env('TITAN_PUSH_ID') }});
-                    wpn('checkSubscription');
-                    wpn('pageView');
-                }
-            </script>
-        @endif
-        {{-- / Titan PUSH --}}
+        <x-comscore />
+        <x-marfeel />
 
         {{-- Navegg --}}
         @if (env('NAVEGG_ENABLE', false))
@@ -126,14 +104,6 @@
         @endif
         /Facebook Pixel --}}
 
-        {{-- MARFEEL --}}
-        @if (config('services.marfeel.enable'))
-            <script type="text/javascript">
-              function e(e){var t=!(arguments.length>1&&void 0!==arguments[1])||arguments[1],c=document.createElement("script");c.src=e,t?c.type="module":(c.async=!0,c.type="text/javascript",c.setAttribute("nomodule",""));var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(c,n)}function t(t,c,n){var a,o,r;null!==(a=t.marfeel)&&void 0!==a||(t.marfeel={}),null!==(o=(r=t.marfeel).cmd)&&void 0!==o||(r.cmd=[]),t.marfeel.config=n,t.marfeel.config.accountId=c;var i="https://sdk.mrf.io/statics";e("".concat(i,"/marfeel-sdk.js?id=").concat(c),!0),e("".concat(i,"/marfeel-sdk.es5.js?id=").concat(c),!1)}!function(e,c){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};t(e,c,n)}(window,1740,{} /*config*/);
-            </script>
-        @endif
-        {{-- /MARFEEL --}}
-
 
     </head>
 
@@ -152,23 +122,6 @@
         {{--<script defer type="text/javascript" src="{{ mix('js/mi-perfil.js') }}"></script>--}}
 
         @yield('js')
-
-        {{-- Comscore --}}
-        @if (env('COMSCORE_ENABLE', false) && env('COMSCORE_CLIENT_ID', '') != '')
-        <script>
-            var _comscore = _comscore || [];
-            _comscore.push({ c1: "2", c2: "{{ env('COMSCORE_CLIENT_ID', '6906401') }}" });
-            (function() {
-                var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.defer = true;
-                s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-                el.parentNode.insertBefore(s, el);
-            })();
-        </script>
-        <noscript>
-            <img src="https://b.scorecardresearch.com/p?c1=2&c2={{ env('COMSCORE_CLIENT_ID', '6906401') }}&cv=2.0&cj=1" />
-        </noscript>
-        @endif
-        {{-- /Comscore --}}
 
         {{-- DMP --}}
         <script type="text/javascript">

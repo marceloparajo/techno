@@ -137,7 +137,7 @@ class StructuredData extends Component
                 'name' => env( 'APP_ALTER_NAME', env('APP_NAME') ),
                 'logo' => [
                     '@type' => 'ImageObject',
-                    'url' => asset('images/logo_perfil.png')
+                    'url' => asset('img/logo-fortuna.png')
                 ]
             ],
             "isAccessibleForFree" => true, //$this->_is_news_accessible_for_free($noticia),

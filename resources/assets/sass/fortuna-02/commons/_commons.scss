@@ -1,8 +1,77 @@
+
+@font-face {
+    font-family: "Faustina";
+    src: url("/fonts/Faustina-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+ }
+ @font-face {
+	 font-family: "Faustina";
+	 src: url("/fonts/Faustina-Bold.woff2") format("woff2");
+	 font-style: normal;
+	 font-display: swap;
+	 font-weight: 700;
+  }
+ @font-face {
+	 font-family: "Faustina";
+	 src: url("/fonts/Faustina-Italic.woff2") format("woff2");
+	 font-style: italic;
+	 font-display: swap;
+	 font-weight: 400;
+}
+@font-face {
+    font-family: "Faustina";
+    src: url("/fonts/Faustina-BoldItalic.woff2") format("woff2");
+    font-style: italic;
+    font-display: swap;
+    font-weight: 700;
+}
+@font-face {
+	 font-family: "Fira Sans";
+	 src: url("/fonts/FiraSans-Regular.woff2") format("woff2");
+	 font-style: normal;
+	 font-display: swap;
+	 font-weight: 400;
+}
+@font-face {
+	 font-family: "Fira Sans";
+	 src: url("/fonts/FiraSans-Italic.woff2") format("woff2");
+	 font-style: italic;
+	 font-display: swap;
+	 font-weight: 400;
+}
+  
+@font-face {
+    font-family: "Faustina-fallback";
+    size-adjust: 103.06%;
+    ascent-override: 93%;
+    src: local("Times New Roman");
+}
+
+@font-face {
+    font-family: "Fira-fallback";
+    size-adjust: 102.56%;
+    ascent-override: 94%;
+    src: local("Arial");
+}
+
+$font-base: 'Faustina', "Faustina-fallback", Times, serif;
+$font-secundaria: "Fira Sans", "Fira-fallback",Helvetica,Arial,sans-serif;
+$font-size: 1.2rem;
+$line-height-base: 1.6;
+
+
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	transition: ease .3s;
+}
+
+.ads-space {
+    transition: none;
 }
 
 body {
@@ -14,7 +83,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 600;
+	font-weight: bold;
 	color: $negro;
 }
 

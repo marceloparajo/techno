@@ -32,15 +32,8 @@ class GoogleTagManager extends Component
      */
     public $gtm_id;
 
-    /**
-     * @var mixed
-     */
-    public $gtm_amp_id;
-
-    /**
-     * @var mixed
-     */
-    public $gtm_fbia_id;
+    /** @var string  */
+    public $ga4_id;
 
     /**
      * @var bool
@@ -58,20 +51,24 @@ class GoogleTagManager extends Component
      *
      * @param string $format
      * @param array $info
+     * @param string $prop
      */
-    public function __construct(string $category, string $format = 'estandar', array $info = [])
+    public function __construct(string $category, string $format = 'estandar', array $info = [], string $prop = 'global')
     {
+        $this->ga4_id = ($prop == 'global')
+            ? config('services.google_analytics.global_id')
+            : config('services.google_analytics.property_id');
+
         $this->category = $category;
         $this->format = $format;
         $this->info = $info;
-        $this->gtm_id = env('ANALYTICS_GTM_ID','');
-        $this->gtm_amp_id = env('ANALYTICS_GTM_AMP_ID', '');
-        $this->gtm_fbia_id = env('ANALYTICS_GTM_FBIA_ID', '');
-        $this->widget_enable = env('ANALYTICS_ENABLE', false);
+        $this->gtm_id = config('services.google_analytics.gtm_id');
+        $this->widget_enable = config('services.google_analytics.enable');
 
         $this->content = [
-            'brand' => env('SITE_CODE', 'perfil'),
-            'environment' => (env('APP_ENV', 'local') != 'production') ? "testing" : "main",
+            'brand' => config('app.site_code'),
+            'brandPretty' => config('app.alter_name'),
+            'environment' => (config('app.env') != 'production') ? "testing" : "main",
             'pageCategory' => $this->category,
             'articleFormat' => $this->format
         ];
@@ -110,9 +107,9 @@ class GoogleTagManager extends Component
             'articleTags' => str_replace( ',', '|', $this->info['tags']),
 
             // Fechas
-            'articleLastUpdate' => $this->info['date_update']->toDateTimeString(),
+            'articleLastUpdate' => $this->info['date_update']->format('d-m-Y'),
             'articlePublicationDateLegacy' => $this->info['date_available']->locale('en')->isoFormat('MMMM, DD YYYY HH:mm:ss ZZ'),
-            'articlePublicationDate' => $this->info['date_available']->toDateTimeString(),
+            'articlePublicationDate' => $this->info['date_available']->format('d-m-Y'),
             'articleLastUpdateLegacy' => $this->info['date_update']->locale('en')->isoFormat('MMMM, DD YYYY HH:mm:ss ZZ'),
 
             // Home Zone and Position
@@ -163,16 +160,12 @@ class GoogleTagManager extends Component
         ];
     }
 
-
-
-
-
     /**
      * Get the view / contents that represent the component.
      *
-     * @return View|string
+     * @return View
      */
-    public function render()
+    public function render(): View
     {
         return view('components.google-tag-manager');
     }

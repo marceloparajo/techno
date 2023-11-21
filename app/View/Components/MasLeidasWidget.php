@@ -40,6 +40,7 @@ class MasLeidasWidget extends Component
      */
     public function render()
     {
+        return '';
         return view('components.mas-leidas-widget');
     }
 }
